@@ -1,0 +1,385 @@
+{
+  "metadata": {
+    "timestamp": "105721",
+    "intrinsics": {
+      "fx": 2618.860821044143,
+      "fy": 2618.860821044143,
+      "cx": 1512.0,
+      "cy": 2016.0
+    },
+    "models": [
+      "GRiT",
+      "FasterRCNN",
+      "DETR",
+      "Pix2Seq",
+      "SGSG",
+      "Pix2SG"
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_0_GRiT",
+      "label": "hood",
+      "conf": 0.674759566783905,
+      "bbox": [
+        1066,
+        1612,
+        1945,
+        2768
+      ],
+      "coordinates_3d": {
+        "x": -0.012,
+        "y": 0.295,
+        "z": 4.444
+      },
+      "depth_map_path": "objects/IMG_1117_obj_0_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "a young boy wearing a blue jacket with a hood"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_1_GRiT",
+      "label": "boards",
+      "conf": 0.7172055244445801,
+      "bbox": [
+        4,
+        363,
+        1288,
+        2245
+      ],
+      "coordinates_3d": {
+        "x": -0.446,
+        "y": -0.366,
+        "z": 1.347
+      },
+      "depth_map_path": "objects/IMG_1117_obj_1_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "fence made of wooden boards"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_2_GRiT",
+      "label": "ground",
+      "conf": 0.5578747391700745,
+      "bbox": [
+        8,
+        1569,
+        3023,
+        4032
+      ],
+      "coordinates_3d": {
+        "x": 0.005,
+        "y": 1.352,
+        "z": 4.516
+      },
+      "depth_map_path": "objects/IMG_1117_obj_2_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "the child is sitting on the ground"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_3_GRiT",
+      "label": "building",
+      "conf": 0.6036024689674377,
+      "bbox": [
+        2502,
+        3,
+        3019,
+        1549
+      ],
+      "coordinates_3d": {
+        "x": 0.164,
+        "y": -0.163,
+        "z": 0.344
+      },
+      "depth_map_path": "objects/IMG_1117_obj_3_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "a red brick building"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_4_GRiT",
+      "label": "wall",
+      "conf": 0.5626581907272339,
+      "bbox": [
+        443,
+        79,
+        1626,
+        1444
+      ],
+      "coordinates_3d": {
+        "x": -0.072,
+        "y": -0.189,
+        "z": 0.395
+      },
+      "depth_map_path": "objects/IMG_1117_obj_4_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "a tree behind a wall"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_5_GRiT",
+      "label": "jacket",
+      "conf": 0.5838301777839661,
+      "bbox": [
+        1102,
+        2107,
+        1914,
+        2720
+      ],
+      "coordinates_3d": {
+        "x": -0.006,
+        "y": 0.623,
+        "z": 4.11
+      },
+      "depth_map_path": "objects/IMG_1117_obj_5_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "child wearing a blue jacket"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_6_GRiT",
+      "label": "boy",
+      "conf": 0.6695402264595032,
+      "bbox": [
+        1258,
+        1616,
+        1734,
+        2242
+      ],
+      "coordinates_3d": {
+        "x": -0.028,
+        "y": -0.151,
+        "z": 4.551
+      },
+      "depth_map_path": "objects/IMG_1117_obj_6_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "the head of a boy"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_7_GRiT",
+      "label": "jacket",
+      "conf": 0.49727463722229004,
+      "bbox": [
+        779,
+        1508,
+        2306,
+        2982
+      ],
+      "coordinates_3d": {
+        "x": 0.047,
+        "y": 0.359,
+        "z": 4.11
+      },
+      "depth_map_path": "objects/IMG_1117_obj_7_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "a boy wearing a jacket"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_8_GRiT",
+      "label": "building",
+      "conf": 0.4868825674057007,
+      "bbox": [
+        7,
+        4,
+        478,
+        700
+      ],
+      "coordinates_3d": {
+        "x": -0.206,
+        "y": -0.27,
+        "z": 0.424
+      },
+      "depth_map_path": "objects/IMG_1117_obj_8_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "a window on a building"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_9_FasterRCNN",
+      "label": "person",
+      "conf": 0.9974195957183838,
+      "bbox": [
+        1071,
+        1640,
+        2196,
+        2769
+      ],
+      "coordinates_3d": {
+        "x": 0.195,
+        "y": 0.304,
+        "z": 4.23
+      },
+      "depth_map_path": "objects/IMG_1117_obj_9_FasterRCNN_depth.png",
+      "sources": {
+        "FasterRCNN": {
+          "caption": "person"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_10_DETR",
+      "label": "sports ball",
+      "conf": 0.517731249332428,
+      "bbox": [
+        1321,
+        2667,
+        1460,
+        2759
+      ],
+      "coordinates_3d": {
+        "x": -0.205,
+        "y": 1.169,
+        "z": 4.391
+      },
+      "depth_map_path": "objects/IMG_1117_obj_10_DETR_depth.png",
+      "sources": {
+        "DETR": {
+          "caption": "sports ball"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_11_DETR",
+      "label": "person",
+      "conf": 0.9986496567726135,
+      "bbox": [
+        1086,
+        1634,
+        2211,
+        2759
+      ],
+      "coordinates_3d": {
+        "x": 0.22,
+        "y": 0.291,
+        "z": 4.23
+      },
+      "depth_map_path": "objects/IMG_1117_obj_11_DETR_depth.png",
+      "sources": {
+        "DETR": {
+          "caption": "person"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_12_DETR",
+      "label": "scissors",
+      "conf": 0.755237340927124,
+      "bbox": [
+        1430,
+        2209,
+        1526,
+        2568
+      ],
+      "coordinates_3d": {
+        "x": -0.054,
+        "y": 0.587,
+        "z": 4.13
+      },
+      "depth_map_path": "objects/IMG_1117_obj_12_DETR_depth.png",
+      "sources": {
+        "DETR": {
+          "caption": "scissors"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    }
+  ]
+}

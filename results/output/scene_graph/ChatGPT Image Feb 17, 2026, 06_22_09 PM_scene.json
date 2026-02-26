@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "timestamp": "140657",
+    "intrinsics": {
+      "fx": 886.8100134752654,
+      "fy": 886.8100134752654,
+      "cx": 512.0,
+      "cy": 768.0
+    },
+    "model": "Depth Anything V2 + DETR"
+  },
+  "objects": [
+    {
+      "label": "vase",
+      "conf": 0.8937146067619324,
+      "bbox": [
+        919,
+        591,
+        1020,
+        780
+      ],
+      "caption": "A vase",
+      "id": "obj_0",
+      "coordinates_3d": {
+        "x": 0.934,
+        "y": -0.17,
+        "z": 1.812
+      },
+      "relations": [
+        {
+          "predicate": "close_to",
+          "target_id": "obj_1"
+        },
+        {
+          "predicate": "below",
+          "target_id": "obj_1"
+        }
+      ]
+    },
+    {
+      "label": "potted plant",
+      "conf": 0.6650978326797485,
+      "bbox": [
+        856,
+        315,
+        1023,
+        784
+      ],
+      "caption": "A potted plant",
+      "id": "obj_1",
+      "coordinates_3d": {
+        "x": 0.665,
+        "y": -0.341,
+        "z": 1.382
+      },
+      "relations": [
+        {
+          "predicate": "close_to",
+          "target_id": "obj_0"
+        },
+        {
+          "predicate": "above",
+          "target_id": "obj_0"
+        }
+      ]
+    }
+  ]
+}

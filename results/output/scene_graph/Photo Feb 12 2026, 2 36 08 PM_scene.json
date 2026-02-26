@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "timestamp": "140610",
+    "intrinsics": {
+      "fx": 1662.7687752661227,
+      "fy": 1662.7687752661227,
+      "cx": 960.0,
+      "cy": 540.0
+    },
+    "model": "Depth Anything V2 + DETR"
+  },
+  "objects": [
+    {
+      "label": "tie",
+      "conf": 0.9016433954238892,
+      "bbox": [
+        1568,
+        784,
+        1619,
+        842
+      ],
+      "caption": "A tie",
+      "id": "obj_0",
+      "coordinates_3d": {
+        "x": 3.132,
+        "y": 1.351,
+        "z": 8.226
+      },
+      "relations": []
+    },
+    {
+      "label": "person",
+      "conf": 0.9967273473739624,
+      "bbox": [
+        1395,
+        354,
+        1814,
+        858
+      ],
+      "caption": "A person",
+      "id": "obj_1",
+      "coordinates_3d": {
+        "x": 3.765,
+        "y": 0.386,
+        "z": 9.722
+      },
+      "relations": []
+    }
+  ]
+}

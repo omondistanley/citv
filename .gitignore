@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.zip
+
+# Large third-party repos (add back when needed or use submodules)
+# GRiT/
+# detectron2/
+# pix2seq/
+# sam2/

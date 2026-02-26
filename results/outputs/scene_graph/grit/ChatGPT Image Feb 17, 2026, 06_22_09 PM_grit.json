@@ -1,0 +1,146 @@
+[
+  {
+    "label": "jacket",
+    "conf": 0.6108651757240295,
+    "bbox": [
+      125,
+      176,
+      919,
+      1412
+    ],
+    "caption": "the brown suit jacket",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "it",
+    "conf": 0.6817688345909119,
+    "bbox": [
+      829,
+      310,
+      1023,
+      771
+    ],
+    "caption": "a white vase with yellow flowers in it",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "tie",
+    "conf": 0.6144844889640808,
+    "bbox": [
+      339,
+      200,
+      687,
+      409
+    ],
+    "caption": "a brown bow tie",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "towel",
+    "conf": 0.39986568689346313,
+    "bbox": [
+      879,
+      960,
+      1023,
+      1526
+    ],
+    "caption": "white towel",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "shelf",
+    "conf": 0.5661053657531738,
+    "bbox": [
+      923,
+      578,
+      1023,
+      765
+    ],
+    "caption": "white vase on a shelf",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "belt",
+    "conf": 0.4609290361404419,
+    "bbox": [
+      330,
+      203,
+      686,
+      705
+    ],
+    "caption": "brown necktie with brown belt",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "shirt",
+    "conf": 0.46052294969558716,
+    "bbox": [
+      496,
+      328,
+      561,
+      391
+    ],
+    "caption": "a white tag on a shirt",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "square",
+    "conf": 0.4464254379272461,
+    "bbox": [
+      259,
+      901,
+      346,
+      999
+    ],
+    "caption": "the brown pocket square",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "suit",
+    "conf": 0.47178319096565247,
+    "bbox": [
+      551,
+      829,
+      592,
+      871
+    ],
+    "caption": "black button on the mans suit",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "floor",
+    "conf": 0.5638480186462402,
+    "bbox": [
+      0,
+      1352,
+      1014,
+      1531
+    ],
+    "caption": "carpeting on the floor",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "shirt",
+    "conf": 0.5118740797042847,
+    "bbox": [
+      543,
+      1006,
+      585,
+      1050
+    ],
+    "caption": "black button on the white shirt",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "man",
+    "conf": 0.454878032207489,
+    "bbox": [
+      617,
+      927,
+      744,
+      1024
+    ],
+    "caption": "the brown belt of the man",
+    "source_model": "GRiT"
+  }
+]

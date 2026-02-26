@@ -1,0 +1,473 @@
+{
+  "metadata": {
+    "timestamp": "185419",
+    "intrinsics": {
+      "fx": 3491.8144280588576,
+      "fy": 3491.8144280588576,
+      "cx": 2016.0,
+      "cy": 1512.0
+    },
+    "model": "DA-V2 + GRiT + SGSG + Pix2SG"
+  },
+  "objects": [
+    {
+      "id": "obj_0",
+      "label": "bottle",
+      "conf": 0.6880420446395874,
+      "bbox": [
+        536,
+        337,
+        1921,
+        2002
+      ],
+      "coordinates_3d": {
+        "x": -1.19,
+        "y": -0.518,
+        "z": 5.274
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "the child is holding a bottle"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_1",
+      "label": "bottle",
+      "conf": 0.6744072437286377,
+      "bbox": [
+        1332,
+        1086,
+        1534,
+        1420
+      ],
+      "coordinates_3d": {
+        "x": -1.065,
+        "y": -0.473,
+        "z": 6.381
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "the man is holding a bottle"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_2",
+      "label": "bag",
+      "conf": 0.517333984375,
+      "bbox": [
+        2255,
+        1874,
+        3755,
+        2872
+      ],
+      "coordinates_3d": {
+        "x": 2.093,
+        "y": 1.822,
+        "z": 7.389
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "a white plastic bag"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_3",
+      "label": "asphalt",
+      "conf": 0.5400614142417908,
+      "bbox": [
+        0,
+        541,
+        4032,
+        3017
+      ],
+      "coordinates_3d": {
+        "x": 0.0,
+        "y": 0.401,
+        "z": 5.24
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "the ground is made of asphalt"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_4",
+      "label": "stroller",
+      "conf": 0.5890998840332031,
+      "bbox": [
+        1510,
+        102,
+        1685,
+        479
+      ],
+      "coordinates_3d": {
+        "x": -0.08,
+        "y": -0.234,
+        "z": 0.67
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "a child in a stroller"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_5",
+      "label": "pants",
+      "conf": 0.5314969420433044,
+      "bbox": [
+        2122,
+        0,
+        2289,
+        226
+      ],
+      "coordinates_3d": {
+        "x": 0.006,
+        "y": -0.045,
+        "z": 0.111
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "man wearing brown pants"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_6",
+      "label": "strap",
+      "conf": 0.542144238948822,
+      "bbox": [
+        1117,
+        1605,
+        1458,
+        1867
+      ],
+      "coordinates_3d": {
+        "x": -1.16,
+        "y": 0.356,
+        "z": 5.557
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "brown bag with brown strap"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_7",
+      "label": "street",
+      "conf": 0.6194573044776917,
+      "bbox": [
+        1715,
+        721,
+        2296,
+        867
+      ],
+      "coordinates_3d": {
+        "x": -0.005,
+        "y": -0.345,
+        "z": 1.68
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "metal grate in street"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_8",
+      "label": "shoe",
+      "conf": 0.4722389280796051,
+      "bbox": [
+        532,
+        1702,
+        1063,
+        1994
+      ],
+      "coordinates_3d": {
+        "x": -2.18,
+        "y": 0.601,
+        "z": 6.244
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "a brown shoe"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_9",
+      "label": "boy",
+      "conf": 0.627268373966217,
+      "bbox": [
+        1223,
+        347,
+        1731,
+        1010
+      ],
+      "coordinates_3d": {
+        "x": -0.939,
+        "y": -1.453,
+        "z": 6.082
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "the head of a boy"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_10",
+      "label": "shirt",
+      "conf": 0.5806192755699158,
+      "bbox": [
+        1043,
+        843,
+        1903,
+        1504
+      ],
+      "coordinates_3d": {
+        "x": -0.992,
+        "y": -0.619,
+        "z": 6.38
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "the boy is wearing a red plaid shirt"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_11",
+      "label": "planter",
+      "conf": 0.5573650002479553,
+      "bbox": [
+        144,
+        5,
+        1411,
+        451
+      ],
+      "coordinates_3d": {
+        "x": -0.444,
+        "y": -0.46,
+        "z": 1.25
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "green shrubbery in a planter"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_12",
+      "label": "sidewalk",
+      "conf": 0.49128827452659607,
+      "bbox": [
+        2508,
+        1887,
+        3393,
+        2328
+      ],
+      "coordinates_3d": {
+        "x": 1.735,
+        "y": 1.105,
+        "z": 6.486
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "a white rag on the sidewalk"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_13",
+      "label": "park",
+      "conf": 0.5252894163131714,
+      "bbox": [
+        2739,
+        0,
+        4016,
+        455
+      ],
+      "coordinates_3d": {
+        "x": 0.428,
+        "y": -0.404,
+        "z": 1.098
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "green shrubbery in a park"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_14",
+      "label": "benches",
+      "conf": 0.4211639165878296,
+      "bbox": [
+        10,
+        2,
+        4018,
+        476
+      ],
+      "coordinates_3d": {
+        "x": -0.0,
+        "y": -0.053,
+        "z": 0.146
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "green bushes behind the benches"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_15",
+      "label": "ground",
+      "conf": 0.4930752217769623,
+      "bbox": [
+        1546,
+        2232,
+        2407,
+        2870
+      ],
+      "coordinates_3d": {
+        "x": -0.093,
+        "y": 2.423,
+        "z": 8.142
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "a gray brick on the ground"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_16",
+      "label": "ground",
+      "conf": 0.5344058275222778,
+      "bbox": [
+        699,
+        2219,
+        1609,
+        2863
+      ],
+      "coordinates_3d": {
+        "x": -2.001,
+        "y": 2.389,
+        "z": 8.106
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "grey brick on ground"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "label": "person",
+    "conf": 0.5634273290634155,
+    "bbox": [
+      1995,
+      0,
+      2070,
+      114
+    ],
+    "caption": "person",
+    "source_model": "DETR"
+  },
+  {
+    "label": "person",
+    "conf": 0.5967580676078796,
+    "bbox": [
+      1629,
+      28,
+      1752,
+      142
+    ],
+    "caption": "person",
+    "source_model": "DETR"
+  },
+  {
+    "label": "bottle",
+    "conf": 0.9909476637840271,
+    "bbox": [
+      1341,
+      1091,
+      1502,
+      1430
+    ],
+    "caption": "bottle",
+    "source_model": "DETR"
+  },
+  {
+    "label": "person",
+    "conf": 0.9678710699081421,
+    "bbox": [
+      1751,
+      26,
+      1840,
+      137
+    ],
+    "caption": "person",
+    "source_model": "DETR"
+  },
+  {
+    "label": "person",
+    "conf": 0.8043308258056641,
+    "bbox": [
+      2424,
+      0,
+      2490,
+      165
+    ],
+    "caption": "person",
+    "source_model": "DETR"
+  },
+  {
+    "label": "person",
+    "conf": 0.9968340992927551,
+    "bbox": [
+      1511,
+      116,
+      1672,
+      458
+    ],
+    "caption": "person",
+    "source_model": "DETR"
+  },
+  {
+    "label": "person",
+    "conf": 0.9996284246444702,
+    "bbox": [
+      528,
+      346,
+      1894,
+      1984
+    ],
+    "caption": "person",
+    "source_model": "DETR"
+  },
+  {
+    "label": "person",
+    "conf": 0.995055079460144,
+    "bbox": [
+      2146,
+      0,
+      2273,
+      228
+    ],
+    "caption": "person",
+    "source_model": "DETR"
+  }
+]

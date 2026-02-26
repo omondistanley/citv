@@ -1,0 +1,38 @@
+[
+  {
+    "label": "sports ball",
+    "conf": 0.517731249332428,
+    "bbox": [
+      1321,
+      2667,
+      1460,
+      2759
+    ],
+    "caption": "sports ball",
+    "source_model": "DETR"
+  },
+  {
+    "label": "person",
+    "conf": 0.9986496567726135,
+    "bbox": [
+      1086,
+      1634,
+      2211,
+      2759
+    ],
+    "caption": "person",
+    "source_model": "DETR"
+  },
+  {
+    "label": "scissors",
+    "conf": 0.755237340927124,
+    "bbox": [
+      1430,
+      2209,
+      1526,
+      2568
+    ],
+    "caption": "scissors",
+    "source_model": "DETR"
+  }
+]

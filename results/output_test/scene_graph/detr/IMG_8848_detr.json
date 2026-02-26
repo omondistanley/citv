@@ -1,0 +1,14 @@
+[
+  {
+    "label": "person",
+    "conf": 0.9995741248130798,
+    "bbox": [
+      1836,
+      1487,
+      2529,
+      2697
+    ],
+    "caption": "person",
+    "source_model": "DETR"
+  }
+]

@@ -1,0 +1,311 @@
+{
+  "metadata": {
+    "timestamp": "185337",
+    "intrinsics": {
+      "fx": 1662.7687752661227,
+      "fy": 1662.7687752661227,
+      "cx": 960.0,
+      "cy": 540.0
+    },
+    "model": "DA-V2 + GRiT + SGSG + Pix2SG"
+  },
+  "objects": [
+    {
+      "id": "obj_0",
+      "label": "shirt",
+      "conf": 0.6443619132041931,
+      "bbox": [
+        1384,
+        337,
+        1791,
+        854
+      ],
+      "coordinates_3d": {
+        "x": 3.663,
+        "y": 0.321,
+        "z": 9.715
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "man in a white shirt"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_1",
+      "label": "background",
+      "conf": 0.5645375847816467,
+      "bbox": [
+        1,
+        5,
+        1920,
+        1066
+      ],
+      "coordinates_3d": {
+        "x": 0.0,
+        "y": -0.023,
+        "z": 7.754
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "advertisement in the background"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_2",
+      "label": "letters",
+      "conf": 0.5888454914093018,
+      "bbox": [
+        1435,
+        122,
+        1843,
+        231
+      ],
+      "coordinates_3d": {
+        "x": 2.829,
+        "y": -1.517,
+        "z": 6.928
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "white sign with black letters"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_3",
+      "label": "cloth",
+      "conf": 0.5337199568748474,
+      "bbox": [
+        671,
+        134,
+        745,
+        223
+      ],
+      "coordinates_3d": {
+        "x": -1.217,
+        "y": -1.748,
+        "z": 8.028
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "white symbol on blue cloth"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_4",
+      "label": "shirt",
+      "conf": 0.5406017303466797,
+      "bbox": [
+        1442,
+        671,
+        1731,
+        847
+      ],
+      "coordinates_3d": {
+        "x": 2.878,
+        "y": 1.007,
+        "z": 7.644
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "white collar of shirt"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_5",
+      "label": "man",
+      "conf": 0.6331818699836731,
+      "bbox": [
+        1443,
+        354,
+        1712,
+        718
+      ],
+      "coordinates_3d": {
+        "x": 3.383,
+        "y": -0.022,
+        "z": 9.117
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "the head of a man"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_6",
+      "label": "wall",
+      "conf": 0.4834285080432892,
+      "bbox": [
+        112,
+        302,
+        1080,
+        516
+      ],
+      "coordinates_3d": {
+        "x": -1.758,
+        "y": -0.633,
+        "z": 8.03
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "white lettering on the blue wall"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_7",
+      "label": "white",
+      "conf": 0.6744124889373779,
+      "bbox": [
+        442,
+        583,
+        473,
+        621
+      ],
+      "coordinates_3d": {
+        "x": -2.548,
+        "y": 0.314,
+        "z": 8.423
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "the letter is white"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_8",
+      "label": "wall",
+      "conf": 0.5235241651535034,
+      "bbox": [
+        161,
+        802,
+        607,
+        950
+      ],
+      "coordinates_3d": {
+        "x": -3.095,
+        "y": 1.806,
+        "z": 8.935
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "white writing on the blue wall"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_9",
+      "label": "man",
+      "conf": 0.6192165613174438,
+      "bbox": [
+        1548,
+        603,
+        1657,
+        658
+      ],
+      "coordinates_3d": {
+        "x": 3.693,
+        "y": 0.518,
+        "z": 9.565
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "the mouth of a man"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_10",
+      "label": "sign",
+      "conf": 0.5432359576225281,
+      "bbox": [
+        131,
+        303,
+        207,
+        395
+      ],
+      "coordinates_3d": {
+        "x": -4.138,
+        "y": -0.999,
+        "z": 8.699
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "the letter a on the sign"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    }
+  ]
+}

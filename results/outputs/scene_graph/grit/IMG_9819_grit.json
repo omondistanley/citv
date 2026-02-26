@@ -1,0 +1,134 @@
+[
+  {
+    "label": "standing",
+    "conf": 0.538465142250061,
+    "bbox": [
+      3078,
+      1360,
+      3569,
+      2840
+    ],
+    "caption": "the child standing",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "plate",
+    "conf": 0.4927252233028412,
+    "bbox": [
+      1050,
+      2715,
+      1807,
+      3020
+    ],
+    "caption": "a round yellow plate",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "shirt",
+    "conf": 0.5622463226318359,
+    "bbox": [
+      3183,
+      1615,
+      3533,
+      2117
+    ],
+    "caption": "a blue and white shirt",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "boy",
+    "conf": 0.5584325790405273,
+    "bbox": [
+      3183,
+      2607,
+      3532,
+      2818
+    ],
+    "caption": "blue shoes on the boy",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "color",
+    "conf": 0.609046459197998,
+    "bbox": [
+      3218,
+      2079,
+      3551,
+      2655
+    ],
+    "caption": "the pants are grey in color",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "water",
+    "conf": 0.526741623878479,
+    "bbox": [
+      12,
+      23,
+      4032,
+      3024
+    ],
+    "caption": "the trees near the water",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "ground",
+    "conf": 0.5758635401725769,
+    "bbox": [
+      17,
+      2081,
+      1940,
+      3018
+    ],
+    "caption": "a fallen tree on the ground",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "green",
+    "conf": 0.4774845838546753,
+    "bbox": [
+      19,
+      8,
+      4032,
+      1424
+    ],
+    "caption": "the trees are green",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "brown",
+    "conf": 0.5071637034416199,
+    "bbox": [
+      505,
+      2407,
+      3915,
+      2980
+    ],
+    "caption": "the dirt is brown",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "boy",
+    "conf": 0.6344993114471436,
+    "bbox": [
+      3161,
+      1372,
+      3449,
+      1656
+    ],
+    "caption": "the head of a boy",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "creek",
+    "conf": 0.4771179258823395,
+    "bbox": [
+      976,
+      995,
+      1757,
+      2252
+    ],
+    "caption": "waterfall on the side of the creek",
+    "source_model": "GRiT"
+  }
+]

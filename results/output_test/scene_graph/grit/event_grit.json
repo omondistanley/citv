@@ -1,0 +1,86 @@
+[
+  {
+    "label": "billboard",
+    "conf": 0.6920174360275269,
+    "bbox": [
+      883,
+      321,
+      1316,
+      771
+    ],
+    "caption": "picture of a man on a billboard",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "face",
+    "conf": 0.5341948866844177,
+    "bbox": [
+      1027,
+      475,
+      1194,
+      543
+    ],
+    "caption": "glasses on the face",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "shirt",
+    "conf": 0.5502856373786926,
+    "bbox": [
+      887,
+      580,
+      1296,
+      769
+    ],
+    "caption": "the man is wearing a shirt",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "screen",
+    "conf": 0.4617217779159546,
+    "bbox": [
+      40,
+      88,
+      2080,
+      1604
+    ],
+    "caption": "white box on white screen",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "sign",
+    "conf": 0.47824496030807495,
+    "bbox": [
+      1417,
+      873,
+      1559,
+      927
+    ],
+    "caption": "a black informational sign",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "wall",
+    "conf": 0.5217779278755188,
+    "bbox": [
+      95,
+      172,
+      2002,
+      883
+    ],
+    "caption": "a poster on a wall",
+    "source_model": "GRiT"
+  },
+  {
+    "label": "background",
+    "conf": 0.4966091215610504,
+    "bbox": [
+      1406,
+      359,
+      1952,
+      726
+    ],
+    "caption": "black lettering on white background",
+    "source_model": "GRiT"
+  }
+]

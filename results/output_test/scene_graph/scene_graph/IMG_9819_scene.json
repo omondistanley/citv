@@ -1,0 +1,385 @@
+{
+  "metadata": {
+    "timestamp": "105643",
+    "intrinsics": {
+      "fx": 3491.8144280588576,
+      "fy": 3491.8144280588576,
+      "cx": 2016.0,
+      "cy": 1512.0
+    },
+    "models": [
+      "GRiT",
+      "FasterRCNN",
+      "DETR",
+      "Pix2Seq",
+      "SGSG",
+      "Pix2SG"
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_0_GRiT",
+      "label": "standing",
+      "conf": 0.538465142250061,
+      "bbox": [
+        3078,
+        1360,
+        3569,
+        2840
+      ],
+      "coordinates_3d": {
+        "x": 2.409,
+        "y": 1.084,
+        "z": 6.436
+      },
+      "depth_map_path": "objects/IMG_9819_obj_0_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "the child standing"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_1_GRiT",
+      "label": "plate",
+      "conf": 0.4927252233028412,
+      "bbox": [
+        1050,
+        2715,
+        1807,
+        3020
+      ],
+      "coordinates_3d": {
+        "x": -1.081,
+        "y": 2.49,
+        "z": 6.417
+      },
+      "depth_map_path": "objects/IMG_9819_obj_1_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "a round yellow plate"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_2_GRiT",
+      "label": "shirt",
+      "conf": 0.5622463226318359,
+      "bbox": [
+        3183,
+        1615,
+        3533,
+        2117
+      ],
+      "coordinates_3d": {
+        "x": 2.497,
+        "y": 0.659,
+        "z": 6.498
+      },
+      "depth_map_path": "objects/IMG_9819_obj_2_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "a blue and white shirt"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_3_GRiT",
+      "label": "boy",
+      "conf": 0.5584325790405273,
+      "bbox": [
+        3183,
+        2607,
+        3532,
+        2818
+      ],
+      "coordinates_3d": {
+        "x": 2.65,
+        "y": 2.371,
+        "z": 6.899
+      },
+      "depth_map_path": "objects/IMG_9819_obj_3_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "blue shoes on the boy"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_4_GRiT",
+      "label": "color",
+      "conf": 0.609046459197998,
+      "bbox": [
+        3218,
+        2079,
+        3551,
+        2655
+      ],
+      "coordinates_3d": {
+        "x": 2.625,
+        "y": 1.64,
+        "z": 6.699
+      },
+      "depth_map_path": "objects/IMG_9819_obj_4_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "the pants are grey in color"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_5_GRiT",
+      "label": "water",
+      "conf": 0.526741623878479,
+      "bbox": [
+        12,
+        23,
+        4032,
+        3024
+      ],
+      "coordinates_3d": {
+        "x": 0.006,
+        "y": 0.01,
+        "z": 3.238
+      },
+      "depth_map_path": "objects/IMG_9819_obj_5_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "the trees near the water"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_6_GRiT",
+      "label": "ground",
+      "conf": 0.5758635401725769,
+      "bbox": [
+        17,
+        2081,
+        1940,
+        3018
+      ],
+      "coordinates_3d": {
+        "x": -1.346,
+        "y": 1.344,
+        "z": 4.527
+      },
+      "depth_map_path": "objects/IMG_9819_obj_6_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "a fallen tree on the ground"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_7_GRiT",
+      "label": "green",
+      "conf": 0.4774845838546753,
+      "bbox": [
+        19,
+        8,
+        4032,
+        1424
+      ],
+      "coordinates_3d": {
+        "x": 0.012,
+        "y": -1.102,
+        "z": 4.836
+      },
+      "depth_map_path": "objects/IMG_9819_obj_7_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "the trees are green"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_8_GRiT",
+      "label": "brown",
+      "conf": 0.5071637034416199,
+      "bbox": [
+        505,
+        2407,
+        3915,
+        2980
+      ],
+      "coordinates_3d": {
+        "x": 0.322,
+        "y": 1.96,
+        "z": 5.795
+      },
+      "depth_map_path": "objects/IMG_9819_obj_8_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "the dirt is brown"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_9_GRiT",
+      "label": "boy",
+      "conf": 0.6344993114471436,
+      "bbox": [
+        3161,
+        1372,
+        3449,
+        1656
+      ],
+      "coordinates_3d": {
+        "x": 2.414,
+        "y": 0.004,
+        "z": 6.538
+      },
+      "depth_map_path": "objects/IMG_9819_obj_9_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "the head of a boy"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_10_GRiT",
+      "label": "creek",
+      "conf": 0.4771179258823395,
+      "bbox": [
+        976,
+        995,
+        1757,
+        2252
+      ],
+      "coordinates_3d": {
+        "x": -0.2,
+        "y": 0.034,
+        "z": 1.075
+      },
+      "depth_map_path": "objects/IMG_9819_obj_10_GRiT_depth.png",
+      "sources": {
+        "GRiT": {
+          "caption": "waterfall on the side of the creek"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_11_FasterRCNN",
+      "label": "person",
+      "conf": 0.9996522665023804,
+      "bbox": [
+        3118,
+        1387,
+        3524,
+        2808
+      ],
+      "coordinates_3d": {
+        "x": 2.403,
+        "y": 1.077,
+        "z": 6.429
+      },
+      "depth_map_path": "objects/IMG_9819_obj_11_FasterRCNN_depth.png",
+      "sources": {
+        "FasterRCNN": {
+          "caption": "person"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_12_DETR",
+      "label": "person",
+      "conf": 0.9997538924217224,
+      "bbox": [
+        3077,
+        1375,
+        3554,
+        2808
+      ],
+      "coordinates_3d": {
+        "x": 2.387,
+        "y": 1.064,
+        "z": 6.418
+      },
+      "depth_map_path": "objects/IMG_9819_obj_12_DETR_depth.png",
+      "sources": {
+        "DETR": {
+          "caption": "person"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    }
+  ]
+}

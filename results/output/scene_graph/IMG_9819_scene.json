@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "timestamp": "140724",
+    "intrinsics": {
+      "fx": 3491.8144280588576,
+      "fy": 3491.8144280588576,
+      "cx": 2016.0,
+      "cy": 1512.0
+    },
+    "model": "Depth Anything V2 + DETR"
+  },
+  "objects": [
+    {
+      "label": "person",
+      "conf": 0.9997528195381165,
+      "bbox": [
+        3078,
+        1375,
+        3554,
+        2808
+      ],
+      "caption": "A person",
+      "id": "obj_0",
+      "coordinates_3d": {
+        "x": 2.389,
+        "y": 1.064,
+        "z": 6.418
+      },
+      "relations": []
+    }
+  ]
+}

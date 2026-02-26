@@ -1,0 +1,26 @@
+[
+  {
+    "label": "chair",
+    "conf": 0.9137585759162903,
+    "bbox": [
+      883,
+      1029,
+      1024,
+      1503
+    ],
+    "caption": "chair",
+    "source_model": "FasterRCNN"
+  },
+  {
+    "label": "tie",
+    "conf": 0.754509687423706,
+    "bbox": [
+      313,
+      283,
+      741,
+      1363
+    ],
+    "caption": "tie",
+    "source_model": "FasterRCNN"
+  }
+]

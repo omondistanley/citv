@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "timestamp": "185323",
+    "intrinsics": {
+      "fx": 1364.8560363642757,
+      "fy": 1364.8560363642757,
+      "cx": 788.0,
+      "cy": 854.0
+    },
+    "model": "DA-V2 + GRiT + SGSG + Pix2SG"
+  },
+  "objects": [
+    {
+      "id": "obj_0",
+      "label": "shirt",
+      "conf": 0.6445749998092651,
+      "bbox": [
+        733,
+        764,
+        884,
+        980
+      ],
+      "coordinates_3d": {
+        "x": 0.045,
+        "y": 0.04,
+        "z": 3.045
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "a man wearing a blue shirt"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_1",
+      "label": "case",
+      "conf": 0.5262007117271423,
+      "bbox": [
+        2,
+        666,
+        1570,
+        1695
+      ],
+      "coordinates_3d": {
+        "x": -0.008,
+        "y": 1.262,
+        "z": 5.283
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "a large gray stair case"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_2",
+      "label": "leafy",
+      "conf": 0.6398764848709106,
+      "bbox": [
+        1,
+        11,
+        1570,
+        1111
+      ],
+      "coordinates_3d": {
+        "x": -0.002,
+        "y": -0.212,
+        "z": 0.986
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "the trees are leafy"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_3",
+      "label": "shirt",
+      "conf": 0.49426230788230896,
+      "bbox": [
+        89,
+        1051,
+        168,
+        1125
+      ],
+      "coordinates_3d": {
+        "x": -0.525,
+        "y": 0.186,
+        "z": 1.086
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "person wearing green shirt"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_4",
+      "label": "blue",
+      "conf": 0.4749385118484497,
+      "bbox": [
+        739,
+        833,
+        822,
+        924
+      ],
+      "coordinates_3d": {
+        "x": -0.018,
+        "y": 0.055,
+        "z": 3.125
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "the shirt is blue"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_5",
+      "label": "man",
+      "conf": 0.5447083115577698,
+      "bbox": [
+        753,
+        774,
+        812,
+        836
+      ],
+      "coordinates_3d": {
+        "x": -0.013,
+        "y": -0.109,
+        "z": 3.045
+      },
+      "sources": {
+        "GRiT": {
+          "caption": "the head of a man"
+        },
+        "SGSG": {
+          "relations": []
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    }
+  ]
+}

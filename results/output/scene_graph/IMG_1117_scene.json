@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "timestamp": "140808",
+    "intrinsics": {
+      "fx": 2618.860821044143,
+      "fy": 2618.860821044143,
+      "cx": 1512.0,
+      "cy": 2016.0
+    },
+    "model": "Depth Anything V2 + DETR"
+  },
+  "objects": [
+    {
+      "label": "sports ball",
+      "conf": 0.5300604701042175,
+      "bbox": [
+        1321,
+        2667,
+        1460,
+        2760
+      ],
+      "caption": "A sports ball",
+      "id": "obj_0",
+      "coordinates_3d": {
+        "x": -0.205,
+        "y": 1.169,
+        "z": 4.393
+      },
+      "relations": [
+        {
+          "predicate": "close_to",
+          "target_id": "obj_1"
+        },
+        {
+          "predicate": "below",
+          "target_id": "obj_1"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_2"
+        },
+        {
+          "predicate": "below",
+          "target_id": "obj_2"
+        }
+      ]
+    },
+    {
+      "label": "person",
+      "conf": 0.9986652135848999,
+      "bbox": [
+        1087,
+        1634,
+        2210,
+        2758
+      ],
+      "caption": "A person",
+      "id": "obj_1",
+      "coordinates_3d": {
+        "x": 0.22,
+        "y": 0.291,
+        "z": 4.232
+      },
+      "relations": [
+        {
+          "predicate": "close_to",
+          "target_id": "obj_0"
+        },
+        {
+          "predicate": "above",
+          "target_id": "obj_0"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_2"
+        },
+        {
+          "predicate": "above",
+          "target_id": "obj_2"
+        }
+      ]
+    },
+    {
+      "label": "scissors",
+      "conf": 0.7428499460220337,
+      "bbox": [
+        1429,
+        2207,
+        1526,
+        2571
+      ],
+      "caption": "A scissors",
+      "id": "obj_2",
+      "coordinates_3d": {
+        "x": -0.055,
+        "y": 0.588,
+        "z": 4.126
+      },
+      "relations": [
+        {
+          "predicate": "close_to",
+          "target_id": "obj_0"
+        },
+        {
+          "predicate": "above",
+          "target_id": "obj_0"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_1"
+        },
+        {
+          "predicate": "below",
+          "target_id": "obj_1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "metadata": {
+    "timestamp": "140632",
+    "intrinsics": {
+      "fx": 3491.8144280588576,
+      "fy": 3491.8144280588576,
+      "cx": 2016.0,
+      "cy": 1512.0
+    },
+    "model": "Depth Anything V2 + DETR"
+  },
+  "objects": [
+    {
+      "label": "person",
+      "conf": 0.5348886847496033,
+      "bbox": [
+        1995,
+        0,
+        2070,
+        113
+      ],
+      "caption": "A person",
+      "id": "obj_0",
+      "coordinates_3d": {
+        "x": 0.0,
+        "y": -0.01,
+        "z": 0.023
+      },
+      "relations": [
+        {
+          "predicate": "close_to",
+          "target_id": "obj_1"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_3"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_4"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_5"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_7"
+        }
+      ]
+    },
+    {
+      "label": "person",
+      "conf": 0.604071319103241,
+      "bbox": [
+        1629,
+        28,
+        1751,
+        142
+      ],
+      "caption": "A person",
+      "id": "obj_1",
+      "coordinates_3d": {
+        "x": -0.002,
+        "y": -0.01,
+        "z": 0.023
+      },
+      "relations": [
+        {
+          "predicate": "close_to",
+          "target_id": "obj_0"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_3"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_4"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_5"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_7"
+        }
+      ]
+    },
+    {
+      "label": "bottle",
+      "conf": 0.9908213019371033,
+      "bbox": [
+        1341,
+        1091,
+        1502,
+        1430
+      ],
+      "caption": "A bottle",
+      "id": "obj_2",
+      "coordinates_3d": {
+        "x": -1.074,
+        "y": -0.455,
+        "z": 6.305
+      },
+      "relations": []
+    },
+    {
+      "label": "person",
+      "conf": 0.9684522151947021,
+      "bbox": [
+        1751,
+        26,
+        1840,
+        137
+      ],
+      "caption": "A person",
+      "id": "obj_3",
+      "coordinates_3d": {
+        "x": -0.001,
+        "y": -0.01,
+        "z": 0.023
+      },
+      "relations": [
+        {
+          "predicate": "close_to",
+          "target_id": "obj_0"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_1"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_4"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_5"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_7"
+        }
+      ]
+    },
+    {
+      "label": "person",
+      "conf": 0.8012580871582031,
+      "bbox": [
+        2424,
+        0,
+        2490,
+        165
+      ],
+      "caption": "A person",
+      "id": "obj_4",
+      "coordinates_3d": {
+        "x": 0.003,
+        "y": -0.01,
+        "z": 0.023
+      },
+      "relations": [
+        {
+          "predicate": "close_to",
+          "target_id": "obj_0"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_1"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_3"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_5"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_7"
+        }
+      ]
+    },
+    {
+      "label": "person",
+      "conf": 0.9968172311782837,
+      "bbox": [
+        1511,
+        117,
+        1672,
+        458
+      ],
+      "caption": "A person",
+      "id": "obj_5",
+      "coordinates_3d": {
+        "x": -0.082,
+        "y": -0.235,
+        "z": 0.67
+      },
+      "relations": [
+        {
+          "predicate": "close_to",
+          "target_id": "obj_0"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_1"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_3"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_4"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_7"
+        }
+      ]
+    },
+    {
+      "label": "person",
+      "conf": 0.9996265172958374,
+      "bbox": [
+        528,
+        346,
+        1895,
+        1984
+      ],
+      "caption": "A person",
+      "id": "obj_6",
+      "coordinates_3d": {
+        "x": -1.216,
+        "y": -0.524,
+        "z": 5.274
+      },
+      "relations": []
+    },
+    {
+      "label": "person",
+      "conf": 0.9949848651885986,
+      "bbox": [
+        2146,
+        0,
+        2273,
+        228
+      ],
+      "caption": "A person",
+      "id": "obj_7",
+      "coordinates_3d": {
+        "x": 0.007,
+        "y": -0.049,
+        "z": 0.122
+      },
+      "relations": [
+        {
+          "predicate": "close_to",
+          "target_id": "obj_0"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_1"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_3"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_4"
+        },
+        {
+          "predicate": "close_to",
+          "target_id": "obj_5"
+        }
+      ]
+    }
+  ]
+}

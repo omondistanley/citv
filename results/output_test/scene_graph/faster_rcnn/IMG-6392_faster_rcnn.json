@@ -1,0 +1,14 @@
+[
+  {
+    "label": "person",
+    "conf": 0.9969639182090759,
+    "bbox": [
+      743,
+      767,
+      870,
+      971
+    ],
+    "caption": "person",
+    "source_model": "FasterRCNN"
+  }
+]
