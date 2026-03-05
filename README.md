@@ -11,7 +11,7 @@ To SSH into the Google Cloud instance, run the provided helper script:
 Or manually run:
 
 ```bash
-gcloud compute ssh --zone "us-east1-d" "instance-20260218-192000" --project "speedy-sunspot-472820-d8"
+gcloud compute ssh --zone "zone here" "instance here" --project "name"
 ```
 
 ## Running the Project
