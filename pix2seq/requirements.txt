@@ -1,6 +1,0 @@
-tensorflow
-ml-collections
-matplotlib
-tensorflow-datasets
-pycocotools
-scikit-image

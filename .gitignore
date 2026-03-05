@@ -5,8 +5,40 @@ __pycache__/
 .env
 *.zip
 
-# Large third-party repos (add back when needed or use submodules)
-# GRiT/
-# detectron2/
-# pix2seq/
-# sam2/
+# Large third-party repos — clone separately, do NOT push to your repo
+GRiT/
+sam2/
+depth-anything-v2-large/
+detectron2/
+
+# Model weights and checkpoints
+*.pth
+*.pt
+*.safetensors
+*.bin
+*.ckpt
+*.pkl
+
+# Large output directories
+output_scene/
+output/
+
+# Test inputs (sample images OK; bulk datasets not)
+# images/   ← uncomment if you don't want to push sample images
+
+# NumPy depth arrays (large per-image files)
+*.npy
+
+# YOLO weights (downloaded by ultralytics automatically)
+yolov8*.pt
+
+# Scratch / test artifacts
+dummy_test.png
+
+# HuggingFace cache
+.cache/
+
+# OS / IDE
+.DS_Store
+*.swp
+*.swo

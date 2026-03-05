@@ -1,9 +1,30 @@
+# Core
 numpy
 tqdm
-torch
-torchvision
 pillow
 opencv-python
-transformers
-accelerate
-timm
+
+# PyTorch — install separately with correct CUDA version:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# Listed here for pip install -r compatibility (gets CPU build if no --index-url)
+torch
+torchvision
+
+# HuggingFace stack
+transformers>=4.40.0
+accelerate>=0.27.0
+huggingface_hub>=0.22.0
+timm>=0.9.0
+safetensors
+
+# Grounding DINO / GroundedSAM2
+# These are installed from the sam2 subdir (pip install -e ./sam2)
+# and GRiT/third_party/CenterNet2 (pip install -e ./GRiT/third_party/CenterNet2)
+# See setup.sh for the full install sequence.
+
+# YOLO (secondary label fallback)
+ultralytics>=8.0.0
+
+# Misc
+scipy
+matplotlib
