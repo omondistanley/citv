@@ -1,0 +1,5218 @@
+{
+  "metadata": {
+    "image_path": "/home/stanleyomondi/citv/images/P1010106.JPG",
+    "image_stem": "P1010106",
+    "timestamp": "2026-03-05 04:45:53",
+    "image_size": [
+      1280,
+      960
+    ],
+    "matching_mode": "B"
+  },
+  "depth": {
+    "depth_map_path": "depth/P1010106_depth_metric.npy",
+    "depth_map_image_path": "scene_graph/P1010106_depth_map.png",
+    "depth_min": 4.439213752746582,
+    "depth_max": 30.056331634521484,
+    "depth_mean": 11.296231269836426
+  },
+  "segmentation": {
+    "model": "SAM2",
+    "mode": "automatic_mask_generator",
+    "segmentation_map_image_path": "scene_graph/P1010106_sam2_segmentation.png",
+    "num_auto_masks": 91,
+    "match_strategy": "iou_with_detection_bbox"
+  },
+  "depth_mask": {
+    "mapping_image_path": "scene_graph/P1010106_depth_mask_mapping_B.png",
+    "objects": [
+      {
+        "id": "obj_0_GroundingDINO",
+        "label": "clothing",
+        "bbox": [
+          410.87347412109375,
+          327.9936828613281,
+          969.0014038085938,
+          921.801513671875
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 0,
+        "mask_path": "scene_graph/masks/P1010106_obj_0_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_0_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.8291,
+          "max": 12.9205,
+          "mean": 9.3898,
+          "median": 9.8574,
+          "std": 1.7778,
+          "num_pixels": 163251,
+          "z_val": 10.4275,
+          "z_val_pixels": 68376,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.7784
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.273,
+          "y": 1.58,
+          "z": 10.427
+        },
+        "mask_centroid_2d": [
+          669,
+          648
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.7584,
+          "max": 12.8816,
+          "mean": 9.3278,
+          "median": 9.6554,
+          "std": 1.7796,
+          "num_pixels": 176068,
+          "z_val": 10.4001,
+          "z_val_pixels": 79565,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6434
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.281,
+          "y": 1.623,
+          "z": 10.4
+        },
+        "mask_centroid_2d_no_erosion": [
+          670,
+          653
+        ]
+      },
+      {
+        "id": "obj_1_GroundingDINO",
+        "label": "furniture",
+        "bbox": [
+          0.343017578125,
+          90.44769287109375,
+          1279.8724365234375,
+          952.838623046875
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 1,
+        "mask_path": "scene_graph/masks/P1010106_obj_1_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_1_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.8095,
+          "max": 16.9322,
+          "mean": 11.5327,
+          "median": 11.4649,
+          "std": 2.5221,
+          "num_pixels": 562194,
+          "z_val": 11.9042,
+          "z_val_pixels": 123637,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1751
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.783,
+          "y": -0.054,
+          "z": 11.904
+        },
+        "mask_centroid_2d": [
+          806,
+          475
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.755,
+          "max": 17.0048,
+          "mean": 11.5297,
+          "median": 11.4657,
+          "std": 2.5717,
+          "num_pixels": 576770,
+          "z_val": 11.9338,
+          "z_val_pixels": 129132,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1505
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.776,
+          "y": -0.022,
+          "z": 11.934
+        },
+        "mask_centroid_2d_no_erosion": [
+          805,
+          478
+        ]
+      },
+      {
+        "id": "obj_2_GroundingDINO",
+        "label": "person",
+        "bbox": [
+          403.62554931640625,
+          208.13558959960938,
+          992.9224243164062,
+          948.9234619140625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 2,
+        "mask_path": "scene_graph/masks/P1010106_obj_2_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_2_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.3012,
+          "max": 13.6873,
+          "mean": 9.393,
+          "median": 9.6503,
+          "std": 2.1473,
+          "num_pixels": 221291,
+          "z_val": 10.4247,
+          "z_val_pixels": 102262,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2868
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.376,
+          "y": 1.646,
+          "z": 10.425
+        },
+        "mask_centroid_2d": [
+          680,
+          655
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.3012,
+          "max": 13.7003,
+          "mean": 9.3832,
+          "median": 9.6331,
+          "std": 2.1626,
+          "num_pixels": 227934,
+          "z_val": 10.4041,
+          "z_val_pixels": 105635,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.083
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.385,
+          "y": 1.661,
+          "z": 10.404
+        },
+        "mask_centroid_2d_no_erosion": [
+          681,
+          657
+        ]
+      },
+      {
+        "id": "obj_3_GroundingDINO",
+        "label": "electronics",
+        "bbox": [
+          0.37741661071777344,
+          882.1296997070312,
+          151.5024871826172,
+          959.1324462890625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 3,
+        "mask_path": "scene_graph/masks/P1010106_obj_3_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_3_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 4.4489,
+          "max": 5.03,
+          "mean": 4.7228,
+          "median": 4.7088,
+          "std": 0.1222,
+          "num_pixels": 9355,
+          "z_val": 4.8052,
+          "z_val_pixels": 4252,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3859
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.475,
+          "y": 1.942,
+          "z": 4.805
+        },
+        "mask_centroid_2d": [
+          69,
+          928
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.4392,
+          "max": 5.0579,
+          "mean": 4.7259,
+          "median": 4.7105,
+          "std": 0.1256,
+          "num_pixels": 9512,
+          "z_val": 4.8065,
+          "z_val_pixels": 4331,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4223
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.476,
+          "y": 1.938,
+          "z": 4.806
+        },
+        "mask_centroid_2d_no_erosion": [
+          69,
+          927
+        ]
+      },
+      {
+        "id": "obj_4_GRiT+YOLO",
+        "label": "umbrella",
+        "bbox": [
+          0.7672786712646484,
+          436.60382080078125,
+          218.99929809570312,
+          756.9779663085938
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 4,
+        "mask_path": "scene_graph/masks/P1010106_obj_4_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_4_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8478,
+          "max": 10.7824,
+          "mean": 9.8545,
+          "median": 9.9466,
+          "std": 0.4462,
+          "num_pixels": 50364,
+          "z_val": 9.9336,
+          "z_val_pixels": 25186,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3441
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.848,
+          "y": 0.977,
+          "z": 9.934
+        },
+        "mask_centroid_2d": [
+          99,
+          589
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8337,
+          "max": 10.8281,
+          "mean": 9.8648,
+          "median": 9.9527,
+          "std": 0.4543,
+          "num_pixels": 52149,
+          "z_val": 9.9375,
+          "z_val_pixels": 26075,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4801
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.841,
+          "y": 0.968,
+          "z": 9.938
+        },
+        "mask_centroid_2d_no_erosion": [
+          100,
+          588
+        ]
+      },
+      {
+        "id": "obj_5_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          0.0,
+          91.60746002197266,
+          336.5268249511719,
+          230.1341094970703
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 5,
+        "mask_path": "scene_graph/masks/P1010106_obj_5_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_5_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 15.4003,
+          "max": 17.1376,
+          "mean": 16.2226,
+          "median": 16.2032,
+          "std": 0.3732,
+          "num_pixels": 34319,
+          "z_val": 16.1083,
+          "z_val_pixels": 15748,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1342
+        },
+        "coordinates_3d_from_mask": {
+          "x": -7.397,
+          "y": -4.752,
+          "z": 16.108
+        },
+        "mask_centroid_2d": [
+          131,
+          153
+        ],
+        "depth_stats_no_erosion": {
+          "min": 15.3787,
+          "max": 17.1638,
+          "mean": 16.2265,
+          "median": 16.2052,
+          "std": 0.3778,
+          "num_pixels": 35115,
+          "z_val": 16.1163,
+          "z_val_pixels": 16155,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5817
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -7.386,
+          "y": -4.754,
+          "z": 16.116
+        },
+        "mask_centroid_2d_no_erosion": [
+          132,
+          153
+        ]
+      },
+      {
+        "id": "obj_6_GRiT+YOLO",
+        "label": "cap",
+        "bbox": [
+          412.304443359375,
+          330.4971618652344,
+          839.651123046875,
+          686.9446411132812
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 6,
+        "mask_path": "scene_graph/masks/P1010106_obj_6_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_6_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.3284,
+          "max": 12.1445,
+          "mean": 10.7315,
+          "median": 10.828,
+          "std": 0.6707,
+          "num_pixels": 93046,
+          "z_val": 10.9941,
+          "z_val_pixels": 44522,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0169
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.278,
+          "y": 0.476,
+          "z": 10.994
+        },
+        "mask_centroid_2d": [
+          612,
+          528
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.2762,
+          "max": 12.1932,
+          "mean": 10.7196,
+          "median": 10.8087,
+          "std": 0.6857,
+          "num_pixels": 98184,
+          "z_val": 11.0016,
+          "z_val_pixels": 48289,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2274
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.278,
+          "y": 0.496,
+          "z": 11.002
+        },
+        "mask_centroid_2d_no_erosion": [
+          612,
+          530
+        ]
+      },
+      {
+        "id": "obj_7_GRiT+YOLO",
+        "label": "kite",
+        "bbox": [
+          1024.0,
+          595.0,
+          1279.0,
+          957.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 7,
+        "mask_path": "scene_graph/masks/P1010106_obj_7_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_7_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.4756,
+          "max": 11.9328,
+          "mean": 8.3678,
+          "median": 8.2282,
+          "std": 1.6127,
+          "num_pixels": 44858,
+          "z_val": 6.9227,
+          "z_val_pixels": 20642,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9881
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.516,
+          "y": 1.649,
+          "z": 6.923
+        },
+        "mask_centroid_2d": [
+          1203,
+          744
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.393,
+          "max": 12.0515,
+          "mean": 8.3987,
+          "median": 8.2488,
+          "std": 1.6521,
+          "num_pixels": 46659,
+          "z_val": 7.9619,
+          "z_val_pixels": 21464,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9597
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.037,
+          "y": 1.896,
+          "z": 7.962
+        },
+        "mask_centroid_2d_no_erosion": [
+          1202,
+          744
+        ]
+      },
+      {
+        "id": "obj_8_GRiT+YOLO",
+        "label": "Band_Aid",
+        "bbox": [
+          685.0,
+          600.0,
+          1267.0,
+          957.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 8,
+        "mask_path": "scene_graph/masks/P1010106_obj_8_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_8_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.0312,
+          "max": 11.123,
+          "mean": 7.0562,
+          "median": 6.7723,
+          "std": 1.4977,
+          "num_pixels": 85608,
+          "z_val": 5.7173,
+          "z_val_pixels": 30353,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5718
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.919,
+          "y": 1.883,
+          "z": 5.717
+        },
+        "mask_centroid_2d": [
+          1012,
+          845
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.0312,
+          "max": 11.192,
+          "mean": 7.0592,
+          "median": 6.7659,
+          "std": 1.5095,
+          "num_pixels": 90700,
+          "z_val": 5.7153,
+          "z_val_pixels": 32447,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5435
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.908,
+          "y": 1.887,
+          "z": 5.715
+        },
+        "mask_centroid_2d_no_erosion": [
+          1010,
+          846
+        ]
+      },
+      {
+        "id": "obj_9_GRiT+YOLO",
+        "label": "light",
+        "bbox": [
+          658.0,
+          854.0,
+          764.0,
+          959.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 9,
+        "mask_path": "scene_graph/masks/P1010106_obj_9_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_9_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.3012,
+          "max": 5.8619,
+          "mean": 5.5346,
+          "median": 5.4984,
+          "std": 0.1473,
+          "num_pixels": 8169,
+          "z_val": 5.3733,
+          "z_val_pixels": 4083,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2432
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.344,
+          "y": 2.099,
+          "z": 5.373
+        },
+        "mask_centroid_2d": [
+          711,
+          913
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.3012,
+          "max": 5.883,
+          "mean": 5.5412,
+          "median": 5.5079,
+          "std": 0.1508,
+          "num_pixels": 8524,
+          "z_val": 5.3746,
+          "z_val_pixels": 4261,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2706
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.344,
+          "y": 2.099,
+          "z": 5.375
+        },
+        "mask_centroid_2d_no_erosion": [
+          711,
+          913
+        ]
+      },
+      {
+        "id": "obj_10_GRiT+YOLO",
+        "label": "ping-pong_ball",
+        "bbox": [
+          760.0,
+          595.0,
+          833.0,
+          667.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 10,
+        "mask_path": "scene_graph/masks/P1010106_obj_10_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_10_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.7029,
+          "max": 9.4244,
+          "mean": 9.056,
+          "median": 9.0431,
+          "std": 0.1687,
+          "num_pixels": 3352,
+          "z_val": 9.0656,
+          "z_val_pixels": 1678,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1363
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.3,
+          "y": 1.227,
+          "z": 9.066
+        },
+        "mask_centroid_2d": [
+          799,
+          630
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.7029,
+          "max": 9.4473,
+          "mean": 9.0643,
+          "median": 9.05,
+          "std": 0.1731,
+          "num_pixels": 3498,
+          "z_val": 9.0679,
+          "z_val_pixels": 1747,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1611
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.301,
+          "y": 1.219,
+          "z": 9.068
+        },
+        "mask_centroid_2d_no_erosion": [
+          799,
+          629
+        ]
+      },
+      {
+        "id": "obj_11_GRiT+YOLO",
+        "label": "tick",
+        "bbox": [
+          585.0,
+          527.0,
+          657.0,
+          583.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 11,
+        "mask_path": "scene_graph/masks/P1010106_obj_11_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_11_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.1701,
+          "max": 10.601,
+          "mean": 10.3787,
+          "median": 10.3703,
+          "std": 0.1032,
+          "num_pixels": 3145,
+          "z_val": 10.4007,
+          "z_val_pixels": 1570,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0415
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.178,
+          "y": 0.713,
+          "z": 10.401
+        },
+        "mask_centroid_2d": [
+          621,
+          556
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.1701,
+          "max": 10.6167,
+          "mean": 10.3852,
+          "median": 10.3736,
+          "std": 0.1085,
+          "num_pixels": 3274,
+          "z_val": 10.4006,
+          "z_val_pixels": 1635,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0432
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.188,
+          "y": 0.704,
+          "z": 10.401
+        },
+        "mask_centroid_2d_no_erosion": [
+          620,
+          555
+        ]
+      },
+      {
+        "id": "obj_12_GRiT+YOLO",
+        "label": "dark",
+        "bbox": [
+          837.0,
+          837.0,
+          1014.0,
+          921.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 12,
+        "mask_path": "scene_graph/masks/P1010106_obj_12_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_12_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.5132,
+          "max": 6.1012,
+          "mean": 5.7979,
+          "median": 5.809,
+          "std": 0.1439,
+          "num_pixels": 8761,
+          "z_val": 5.9027,
+          "z_val_pixels": 3875,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2085
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.619,
+          "y": 2.167,
+          "z": 5.903
+        },
+        "mask_centroid_2d": [
+          944,
+          887
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.5132,
+          "max": 6.1291,
+          "mean": 5.8055,
+          "median": 5.8187,
+          "std": 0.148,
+          "num_pixels": 9298,
+          "z_val": 5.9002,
+          "z_val_pixels": 4114,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2487
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.613,
+          "y": 2.166,
+          "z": 5.9
+        },
+        "mask_centroid_2d_no_erosion": [
+          943,
+          887
+        ]
+      },
+      {
+        "id": "obj_13_GRiT+YOLO",
+        "label": "air",
+        "bbox": [
+          568.0,
+          411.0,
+          661.0,
+          487.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 13,
+        "mask_path": "scene_graph/masks/P1010106_obj_13_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_13_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.8171,
+          "max": 11.1803,
+          "mean": 10.9953,
+          "median": 10.9884,
+          "std": 0.0696,
+          "num_pixels": 3534,
+          "z_val": 10.9492,
+          "z_val_pixels": 1442,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1008
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.247,
+          "y": -0.257,
+          "z": 10.949
+        },
+        "mask_centroid_2d": [
+          615,
+          454
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.8101,
+          "max": 11.1961,
+          "mean": 10.9989,
+          "median": 10.9908,
+          "std": 0.0725,
+          "num_pixels": 3764,
+          "z_val": 10.9875,
+          "z_val_pixels": 1559,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1143
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.258,
+          "y": -0.268,
+          "z": 10.988
+        },
+        "mask_centroid_2d_no_erosion": [
+          614,
+          453
+        ]
+      },
+      {
+        "id": "obj_14_GRiT+YOLO",
+        "label": "white",
+        "bbox": [
+          510.0,
+          924.0,
+          677.0,
+          959.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 14,
+        "mask_path": "scene_graph/masks/P1010106_obj_14_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_14_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 4.8884,
+          "max": 5.4321,
+          "mean": 5.0608,
+          "median": 5.0248,
+          "std": 0.1257,
+          "num_pixels": 3910,
+          "z_val": 4.9441,
+          "z_val_pixels": 1247,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2844
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.156,
+          "y": 2.083,
+          "z": 4.944
+        },
+        "mask_centroid_2d": [
+          605,
+          947
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.8884,
+          "max": 5.4321,
+          "mean": 5.0608,
+          "median": 5.0248,
+          "std": 0.1257,
+          "num_pixels": 3910,
+          "z_val": 4.9441,
+          "z_val_pixels": 1247,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2844
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.156,
+          "y": 2.083,
+          "z": 4.944
+        },
+        "mask_centroid_2d_no_erosion": [
+          605,
+          947
+        ]
+      },
+      {
+        "id": "obj_15_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          646.0,
+          482.0,
+          704.0,
+          504.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 15,
+        "mask_path": "scene_graph/masks/P1010106_obj_15_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_15_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.9838,
+          "max": 11.1778,
+          "mean": 11.0752,
+          "median": 11.0711,
+          "std": 0.0436,
+          "num_pixels": 350,
+          "z_val": 11.071,
+          "z_val_pixels": 174,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0416
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.16,
+          "y": 0.13,
+          "z": 11.071
+        },
+        "mask_centroid_2d": [
+          656,
+          493
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.9838,
+          "max": 11.1778,
+          "mean": 11.0752,
+          "median": 11.0711,
+          "std": 0.0436,
+          "num_pixels": 350,
+          "z_val": 11.071,
+          "z_val_pixels": 174,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0416
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.16,
+          "y": 0.13,
+          "z": 11.071
+        },
+        "mask_centroid_2d_no_erosion": [
+          656,
+          493
+        ]
+      },
+      {
+        "id": "obj_16_GRiT+YOLO",
+        "label": "clouds",
+        "bbox": [
+          585.0,
+          483.0,
+          613.0,
+          512.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 16,
+        "mask_path": "scene_graph/masks/P1010106_obj_16_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_16_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.8463,
+          "max": 11.0382,
+          "mean": 10.9489,
+          "median": 10.9566,
+          "std": 0.0401,
+          "num_pixels": 648,
+          "z_val": 10.9555,
+          "z_val_pixels": 320,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0157
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.395,
+          "y": 0.168,
+          "z": 10.956
+        },
+        "mask_centroid_2d": [
+          600,
+          497
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.8463,
+          "max": 11.0382,
+          "mean": 10.9489,
+          "median": 10.9566,
+          "std": 0.0401,
+          "num_pixels": 648,
+          "z_val": 10.9555,
+          "z_val_pixels": 320,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0157
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.395,
+          "y": 0.168,
+          "z": 10.956
+        },
+        "mask_centroid_2d_no_erosion": [
+          600,
+          497
+        ]
+      },
+      {
+        "id": "obj_17_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          647.0,
+          482.0,
+          666.0,
+          503.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 17,
+        "mask_path": "scene_graph/masks/P1010106_obj_17_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_17_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.9982,
+          "max": 11.1609,
+          "mean": 11.0729,
+          "median": 11.0706,
+          "std": 0.0389,
+          "num_pixels": 320,
+          "z_val": 11.0754,
+          "z_val_pixels": 158,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0081
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.16,
+          "y": 0.13,
+          "z": 11.075
+        },
+        "mask_centroid_2d": [
+          656,
+          493
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.9982,
+          "max": 11.1609,
+          "mean": 11.0729,
+          "median": 11.0706,
+          "std": 0.0389,
+          "num_pixels": 320,
+          "z_val": 11.0754,
+          "z_val_pixels": 158,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0081
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.16,
+          "y": 0.13,
+          "z": 11.075
+        },
+        "mask_centroid_2d_no_erosion": [
+          656,
+          493
+        ]
+      },
+      {
+        "id": "obj_18_GRiT+YOLO",
+        "label": "plant",
+        "bbox": [
+          564.0,
+          469.0,
+          764.0,
+          637.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 18,
+        "mask_path": "scene_graph/masks/P1010106_obj_18_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_18_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.7751,
+          "max": 11.3797,
+          "mean": 10.5067,
+          "median": 10.4343,
+          "std": 0.3491,
+          "num_pixels": 17770,
+          "z_val": 10.3891,
+          "z_val_pixels": 8852,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0653
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.169,
+          "y": 0.703,
+          "z": 10.389
+        },
+        "mask_centroid_2d": [
+          658,
+          555
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.7193,
+          "max": 11.4325,
+          "mean": 10.5127,
+          "median": 10.4385,
+          "std": 0.3759,
+          "num_pixels": 19595,
+          "z_val": 10.3832,
+          "z_val_pixels": 9765,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0016
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.178,
+          "y": 0.703,
+          "z": 10.383
+        },
+        "mask_centroid_2d_no_erosion": [
+          659,
+          555
+        ]
+      },
+      {
+        "id": "obj_19_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          584.0,
+          466.0,
+          613.0,
+          512.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 19,
+        "mask_path": "scene_graph/masks/P1010106_obj_19_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_19_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.823,
+          "max": 11.0411,
+          "mean": 10.944,
+          "median": 10.955,
+          "std": 0.0451,
+          "num_pixels": 689,
+          "z_val": 10.9551,
+          "z_val_pixels": 345,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0357
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.395,
+          "y": 0.168,
+          "z": 10.955
+        },
+        "mask_centroid_2d": [
+          600,
+          497
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.823,
+          "max": 11.0411,
+          "mean": 10.944,
+          "median": 10.955,
+          "std": 0.0451,
+          "num_pixels": 689,
+          "z_val": 10.9551,
+          "z_val_pixels": 345,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0357
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.395,
+          "y": 0.168,
+          "z": 10.955
+        },
+        "mask_centroid_2d_no_erosion": [
+          600,
+          497
+        ]
+      },
+      {
+        "id": "obj_20_GRiT+YOLO",
+        "label": "head",
+        "bbox": [
+          686.0,
+          409.0,
+          741.0,
+          466.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 20,
+        "mask_path": "scene_graph/masks/P1010106_obj_20_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_20_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.9801,
+          "max": 11.5415,
+          "mean": 11.2731,
+          "median": 11.2773,
+          "std": 0.1433,
+          "num_pixels": 1499,
+          "z_val": 11.2148,
+          "z_val_pixels": 459,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0682
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.728,
+          "y": -0.384,
+          "z": 11.215
+        },
+        "mask_centroid_2d": [
+          712,
+          442
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.9813,
+          "max": 11.5415,
+          "mean": 11.2763,
+          "median": 11.2797,
+          "std": 0.1429,
+          "num_pixels": 1645,
+          "z_val": 11.2399,
+          "z_val_pixels": 548,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0696
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.72,
+          "y": -0.395,
+          "z": 11.24
+        },
+        "mask_centroid_2d_no_erosion": [
+          711,
+          441
+        ]
+      },
+      {
+        "id": "obj_21_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          633.0,
+          440.0,
+          659.0,
+          464.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 21,
+        "mask_path": "scene_graph/masks/P1010106_obj_21_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_21_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.8594,
+          "max": 11.151,
+          "mean": 10.9886,
+          "median": 10.9805,
+          "std": 0.0696,
+          "num_pixels": 466,
+          "z_val": 10.9126,
+          "z_val_pixels": 232,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.129
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.049,
+          "y": -0.276,
+          "z": 10.913
+        },
+        "mask_centroid_2d": [
+          645,
+          452
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.8594,
+          "max": 11.151,
+          "mean": 10.9886,
+          "median": 10.9805,
+          "std": 0.0696,
+          "num_pixels": 466,
+          "z_val": 10.9126,
+          "z_val_pixels": 232,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.129
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.049,
+          "y": -0.276,
+          "z": 10.913
+        },
+        "mask_centroid_2d_no_erosion": [
+          645,
+          452
+        ]
+      },
+      {
+        "id": "obj_22_GRiT+YOLO",
+        "label": "brush",
+        "bbox": [
+          525.0,
+          805.0,
+          764.0,
+          959.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 22,
+        "mask_path": "scene_graph/masks/P1010106_obj_22_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_22_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.3012,
+          "max": 5.852,
+          "mean": 5.5322,
+          "median": 5.4954,
+          "std": 0.146,
+          "num_pixels": 7971,
+          "z_val": 5.3731,
+          "z_val_pixels": 3981,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2213
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.344,
+          "y": 2.099,
+          "z": 5.373
+        },
+        "mask_centroid_2d": [
+          711,
+          913
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.3012,
+          "max": 5.8949,
+          "mean": 5.5454,
+          "median": 5.5157,
+          "std": 0.1533,
+          "num_pixels": 8688,
+          "z_val": 5.3753,
+          "z_val_pixels": 4345,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3208
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.344,
+          "y": 2.095,
+          "z": 5.375
+        },
+        "mask_centroid_2d_no_erosion": [
+          711,
+          912
+        ]
+      },
+      {
+        "id": "obj_23_GRiT+YOLO",
+        "label": "phone",
+        "bbox": [
+          0.0,
+          722.0,
+          674.0,
+          959.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 23,
+        "mask_path": "scene_graph/masks/P1010106_obj_23_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_23_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 4.6915,
+          "max": 7.3375,
+          "mean": 5.7001,
+          "median": 5.6231,
+          "std": 0.5629,
+          "num_pixels": 114657,
+          "z_val": 5.3133,
+          "z_val_pixels": 48150,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5825
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.611,
+          "y": 1.821,
+          "z": 5.313
+        },
+        "mask_centroid_2d": [
+          304,
+          860
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.6915,
+          "max": 7.4137,
+          "mean": 5.7042,
+          "median": 5.6213,
+          "std": 0.5803,
+          "num_pixels": 118296,
+          "z_val": 5.304,
+          "z_val_pixels": 49763,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.0645
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.603,
+          "y": 1.823,
+          "z": 5.304
+        },
+        "mask_centroid_2d_no_erosion": [
+          305,
+          861
+        ]
+      },
+      {
+        "id": "obj_24_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          0.0,
+          892.0,
+          113.0,
+          959.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 24,
+        "mask_path": "scene_graph/masks/P1010106_obj_24_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_24_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 4.5601,
+          "max": 4.9565,
+          "mean": 4.7566,
+          "median": 4.7548,
+          "std": 0.0908,
+          "num_pixels": 5551,
+          "z_val": 4.8701,
+          "z_val_pixels": 2716,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0398
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.614,
+          "y": 1.964,
+          "z": 4.87
+        },
+        "mask_centroid_2d": [
+          45,
+          927
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.5601,
+          "max": 4.9627,
+          "mean": 4.7592,
+          "median": 4.7569,
+          "std": 0.0925,
+          "num_pixels": 5667,
+          "z_val": 4.8709,
+          "z_val_pixels": 2776,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0475
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.61,
+          "y": 1.964,
+          "z": 4.871
+        },
+        "mask_centroid_2d_no_erosion": [
+          46,
+          927
+        ]
+      },
+      {
+        "id": "obj_25_GRiT+YOLO",
+        "label": "orange",
+        "bbox": [
+          465.0,
+          638.0,
+          519.0,
+          711.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 25,
+        "mask_path": "scene_graph/masks/P1010106_obj_25_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_25_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.0228,
+          "max": 9.6727,
+          "mean": 9.3445,
+          "median": 9.362,
+          "std": 0.117,
+          "num_pixels": 2248,
+          "z_val": 9.3347,
+          "z_val_pixels": 1056,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0004
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.246,
+          "y": 1.65,
+          "z": 9.335
+        },
+        "mask_centroid_2d": [
+          492,
+          676
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.0288,
+          "max": 9.6809,
+          "mean": 9.3524,
+          "median": 9.3669,
+          "std": 0.1176,
+          "num_pixels": 2377,
+          "z_val": 9.3346,
+          "z_val_pixels": 1122,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0135
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.255,
+          "y": 1.642,
+          "z": 9.335
+        },
+        "mask_centroid_2d_no_erosion": [
+          491,
+          675
+        ]
+      },
+      {
+        "id": "obj_26_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          121.0,
+          669.0,
+          490.0,
+          760.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 26,
+        "mask_path": "scene_graph/masks/P1010106_obj_26_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_26_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.2631,
+          "max": 11.1492,
+          "mean": 10.2465,
+          "median": 10.2191,
+          "std": 0.4738,
+          "num_pixels": 16835,
+          "z_val": 9.7292,
+          "z_val_pixels": 5046,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.229
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.879,
+          "y": 1.957,
+          "z": 9.729
+        },
+        "mask_centroid_2d": [
+          312,
+          703
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.216,
+          "max": 11.1844,
+          "mean": 10.2367,
+          "median": 10.2102,
+          "std": 0.4949,
+          "num_pixels": 17804,
+          "z_val": 10.2972,
+          "z_val_pixels": 5380,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4188
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.047,
+          "y": 2.072,
+          "z": 10.297
+        },
+        "mask_centroid_2d_no_erosion": [
+          312,
+          703
+        ]
+      },
+      {
+        "id": "obj_27_GRiT+YOLO",
+        "label": "bear",
+        "bbox": [
+          27.0,
+          537.0,
+          121.0,
+          630.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 27,
+        "mask_path": "scene_graph/masks/P1010106_obj_27_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_27_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.5236,
+          "max": 10.0942,
+          "mean": 9.783,
+          "median": 9.7587,
+          "std": 0.1503,
+          "num_pixels": 5459,
+          "z_val": 9.7026,
+          "z_val_pixels": 2732,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0965
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.937,
+          "y": 0.902,
+          "z": 9.703
+        },
+        "mask_centroid_2d": [
+          76,
+          583
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.5236,
+          "max": 10.1072,
+          "mean": 9.7892,
+          "median": 9.7662,
+          "std": 0.1539,
+          "num_pixels": 5839,
+          "z_val": 9.7026,
+          "z_val_pixels": 2921,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1046
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.937,
+          "y": 0.902,
+          "z": 9.703
+        },
+        "mask_centroid_2d_no_erosion": [
+          76,
+          583
+        ]
+      },
+      {
+        "id": "obj_28_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          73.0,
+          758.0,
+          95.0,
+          782.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 28,
+        "mask_path": "scene_graph/masks/P1010106_obj_28_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_28_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.0026,
+          "max": 6.1532,
+          "mean": 6.0747,
+          "median": 6.0785,
+          "std": 0.0319,
+          "num_pixels": 426,
+          "z_val": 6.1025,
+          "z_val_pixels": 212,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0058
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.055,
+          "y": 1.607,
+          "z": 6.102
+        },
+        "mask_centroid_2d": [
+          85,
+          772
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.0026,
+          "max": 6.1532,
+          "mean": 6.0747,
+          "median": 6.0785,
+          "std": 0.0319,
+          "num_pixels": 426,
+          "z_val": 6.1025,
+          "z_val_pixels": 212,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0058
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.055,
+          "y": 1.607,
+          "z": 6.102
+        },
+        "mask_centroid_2d_no_erosion": [
+          85,
+          772
+        ]
+      },
+      {
+        "id": "obj_29_GRiT+YOLO",
+        "label": "parachute",
+        "bbox": [
+          490.0,
+          649.0,
+          764.0,
+          921.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 29,
+        "mask_path": "scene_graph/masks/P1010106_obj_29_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_29_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.7529,
+          "max": 8.48,
+          "mean": 7.0483,
+          "median": 6.9327,
+          "std": 0.6161,
+          "num_pixels": 29514,
+          "z_val": 6.7776,
+          "z_val_pixels": 14279,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1004
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.263,
+          "y": 1.853,
+          "z": 6.778
+        },
+        "mask_centroid_2d": [
+          597,
+          783
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.6687,
+          "max": 8.5609,
+          "mean": 7.0549,
+          "median": 6.9329,
+          "std": 0.6604,
+          "num_pixels": 32046,
+          "z_val": 6.7845,
+          "z_val_pixels": 15439,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2867
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.245,
+          "y": 1.867,
+          "z": 6.785
+        },
+        "mask_centroid_2d_no_erosion": [
+          600,
+          785
+        ]
+      },
+      {
+        "id": "obj_30_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          326.0,
+          867.0,
+          676.0,
+          959.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 30,
+        "mask_path": "scene_graph/masks/P1010106_obj_30_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_30_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 4.6455,
+          "max": 6.0201,
+          "mean": 5.2786,
+          "median": 5.146,
+          "std": 0.3448,
+          "num_pixels": 17944,
+          "z_val": 5.1214,
+          "z_val_pixels": 7414,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1807
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.517,
+          "y": 2.061,
+          "z": 5.121
+        },
+        "mask_centroid_2d": [
+          528,
+          926
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.6455,
+          "max": 6.0354,
+          "mean": 5.2849,
+          "median": 5.1501,
+          "std": 0.3495,
+          "num_pixels": 18758,
+          "z_val": 5.1271,
+          "z_val_pixels": 7814,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2323
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.518,
+          "y": 2.063,
+          "z": 5.127
+        },
+        "mask_centroid_2d_no_erosion": [
+          528,
+          926
+        ]
+      },
+      {
+        "id": "obj_31_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          36.0,
+          518.0,
+          87.0,
+          555.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 31,
+        "mask_path": "scene_graph/masks/P1010106_obj_31_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_31_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.8398,
+          "max": 10.3232,
+          "mean": 10.0921,
+          "median": 10.1092,
+          "std": 0.1046,
+          "num_pixels": 1129,
+          "z_val": 10.1083,
+          "z_val_pixels": 514,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0503
+        },
+        "coordinates_3d_from_mask": {
+          "x": -5.271,
+          "y": 0.502,
+          "z": 10.108
+        },
+        "mask_centroid_2d": [
+          62,
+          535
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.8398,
+          "max": 10.3232,
+          "mean": 10.0921,
+          "median": 10.1092,
+          "std": 0.1046,
+          "num_pixels": 1129,
+          "z_val": 10.1083,
+          "z_val_pixels": 514,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0503
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -5.271,
+          "y": 0.502,
+          "z": 10.108
+        },
+        "mask_centroid_2d_no_erosion": [
+          62,
+          535
+        ]
+      },
+      {
+        "id": "obj_32_GRiT+YOLO",
+        "label": "hatchet",
+        "bbox": [
+          995.0,
+          117.0,
+          1279.0,
+          366.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 32,
+        "mask_path": "scene_graph/masks/P1010106_obj_32_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_32_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 15.7798,
+          "max": 17.112,
+          "mean": 16.4054,
+          "median": 16.326,
+          "std": 0.2813,
+          "num_pixels": 36652,
+          "z_val": 16.1514,
+          "z_val_pixels": 15656,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.7234
+        },
+        "coordinates_3d_from_mask": {
+          "x": 7.139,
+          "y": -4.225,
+          "z": 16.151
+        },
+        "mask_centroid_2d": [
+          1130,
+          190
+        ],
+        "depth_stats_no_erosion": {
+          "min": 15.6811,
+          "max": 17.2826,
+          "mean": 16.436,
+          "median": 16.3478,
+          "std": 0.3161,
+          "num_pixels": 38607,
+          "z_val": 16.1506,
+          "z_val_pixels": 16525,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5622
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 7.095,
+          "y": -4.196,
+          "z": 16.151
+        },
+        "mask_centroid_2d_no_erosion": [
+          1127,
+          192
+        ]
+      },
+      {
+        "id": "obj_33_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          1022.0,
+          241.0,
+          1279.0,
+          374.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 33,
+        "mask_path": "scene_graph/masks/P1010106_obj_33_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_33_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.8707,
+          "max": 13.4736,
+          "mean": 12.0293,
+          "median": 11.9927,
+          "std": 0.6607,
+          "num_pixels": 22146,
+          "z_val": 11.391,
+          "z_val_pixels": 9379,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.297
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.282,
+          "y": -1.891,
+          "z": 11.391
+        },
+        "mask_centroid_2d": [
+          1154,
+          296
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.8707,
+          "max": 13.6119,
+          "mean": 12.0399,
+          "median": 11.9972,
+          "std": 0.6786,
+          "num_pixels": 22857,
+          "z_val": 11.4077,
+          "z_val_pixels": 9706,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.8107
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 5.279,
+          "y": -1.894,
+          "z": 11.408
+        },
+        "mask_centroid_2d_no_erosion": [
+          1153,
+          296
+        ]
+      },
+      {
+        "id": "obj_34_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          1033.0,
+          325.0,
+          1279.0,
+          524.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 34,
+        "mask_path": "scene_graph/masks/P1010106_obj_34_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_34_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.1558,
+          "max": 11.727,
+          "mean": 10.7551,
+          "median": 10.666,
+          "std": 0.3771,
+          "num_pixels": 28933,
+          "z_val": 10.572,
+          "z_val_pixels": 14457,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6097
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.312,
+          "y": -0.677,
+          "z": 10.572
+        },
+        "mask_centroid_2d": [
+          1197,
+          409
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.1558,
+          "max": 11.8234,
+          "mean": 10.7757,
+          "median": 10.6828,
+          "std": 0.3951,
+          "num_pixels": 30485,
+          "z_val": 10.5669,
+          "z_val_pixels": 15242,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6595
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 5.291,
+          "y": -0.677,
+          "z": 10.567
+        },
+        "mask_centroid_2d_no_erosion": [
+          1195,
+          409
+        ]
+      },
+      {
+        "id": "obj_35_GRiT+YOLO",
+        "label": "Band_Aid",
+        "bbox": [
+          1013.0,
+          242.0,
+          1279.0,
+          616.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 35,
+        "mask_path": "scene_graph/masks/P1010106_obj_35_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_35_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.1558,
+          "max": 13.272,
+          "mean": 11.4414,
+          "median": 11.3041,
+          "std": 0.8066,
+          "num_pixels": 87338,
+          "z_val": 10.5705,
+          "z_val_pixels": 43424,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.3399
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.006,
+          "y": -0.496,
+          "z": 10.57
+        },
+        "mask_centroid_2d": [
+          1165,
+          428
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.1558,
+          "max": 13.3661,
+          "mean": 11.4721,
+          "median": 11.3252,
+          "std": 0.8292,
+          "num_pixels": 89786,
+          "z_val": 10.5732,
+          "z_val_pixels": 44730,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.2614
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.998,
+          "y": -0.496,
+          "z": 10.573
+        },
+        "mask_centroid_2d_no_erosion": [
+          1164,
+          428
+        ]
+      },
+      {
+        "id": "obj_36_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          558.0,
+          0.0,
+          790.0,
+          58.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 36,
+        "mask_path": "scene_graph/masks/P1010106_obj_36_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_36_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 21.6801,
+          "max": 26.4614,
+          "mean": 24.099,
+          "median": 23.9502,
+          "std": 0.8073,
+          "num_pixels": 8649,
+          "z_val": 23.8763,
+          "z_val_pixels": 2376,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 6.9369
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.077,
+          "y": -9.93,
+          "z": 23.876
+        },
+        "mask_centroid_2d": [
+          690,
+          19
+        ],
+        "depth_stats_no_erosion": {
+          "min": 21.5601,
+          "max": 26.55,
+          "mean": 24.1144,
+          "median": 23.954,
+          "std": 0.8296,
+          "num_pixels": 8721,
+          "z_val": 23.8688,
+          "z_val_pixels": 2384,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 7.2646
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.055,
+          "y": -9.926,
+          "z": 23.869
+        },
+        "mask_centroid_2d_no_erosion": [
+          689,
+          19
+        ]
+      },
+      {
+        "id": "obj_37_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          995.0,
+          118.0,
+          1279.0,
+          476.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 37,
+        "mask_path": "scene_graph/masks/P1010106_obj_37_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_37_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 15.7861,
+          "max": 17.1001,
+          "mean": 16.4026,
+          "median": 16.324,
+          "std": 0.2783,
+          "num_pixels": 36482,
+          "z_val": 16.1612,
+          "z_val_pixels": 15567,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6225
+        },
+        "coordinates_3d_from_mask": {
+          "x": 7.158,
+          "y": -4.228,
+          "z": 16.161
+        },
+        "mask_centroid_2d": [
+          1131,
+          190
+        ],
+        "depth_stats_no_erosion": {
+          "min": 15.7168,
+          "max": 17.2277,
+          "mean": 16.4287,
+          "median": 16.3441,
+          "std": 0.3069,
+          "num_pixels": 38457,
+          "z_val": 16.1532,
+          "z_val_pixels": 16463,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.322
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 7.111,
+          "y": -4.197,
+          "z": 16.153
+        },
+        "mask_centroid_2d_no_erosion": [
+          1128,
+          192
+        ]
+      },
+      {
+        "id": "obj_38_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          789.0,
+          0.0,
+          992.0,
+          112.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 38,
+        "mask_path": "scene_graph/masks/P1010106_obj_38_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_38_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 22.0997,
+          "max": 23.6392,
+          "mean": 22.8816,
+          "median": 22.9415,
+          "std": 0.3197,
+          "num_pixels": 19406,
+          "z_val": 23.0277,
+          "z_val_pixels": 9265,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6244
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.256,
+          "y": -8.953,
+          "z": 23.028
+        },
+        "mask_centroid_2d": [
+          893,
+          49
+        ],
+        "depth_stats_no_erosion": {
+          "min": 22.0639,
+          "max": 23.6684,
+          "mean": 22.8747,
+          "median": 22.9367,
+          "std": 0.3317,
+          "num_pixels": 19858,
+          "z_val": 23.0848,
+          "z_val_pixels": 9484,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.9365
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 5.29,
+          "y": -8.976,
+          "z": 23.085
+        },
+        "mask_centroid_2d_no_erosion": [
+          894,
+          49
+        ]
+      },
+      {
+        "id": "obj_39_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          1075.0,
+          32.0,
+          1279.0,
+          89.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 39,
+        "mask_path": "scene_graph/masks/P1010106_obj_39_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_39_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 20.6238,
+          "max": 21.2001,
+          "mean": 20.9041,
+          "median": 20.9006,
+          "std": 0.1254,
+          "num_pixels": 9569,
+          "z_val": 20.9099,
+          "z_val_pixels": 3460,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.144
+        },
+        "coordinates_3d_from_mask": {
+          "x": 10.111,
+          "y": -7.922,
+          "z": 20.91
+        },
+        "mask_centroid_2d": [
+          1176,
+          60
+        ],
+        "depth_stats_no_erosion": {
+          "min": 20.6106,
+          "max": 21.2007,
+          "mean": 20.8985,
+          "median": 20.8969,
+          "std": 0.1288,
+          "num_pixels": 9835,
+          "z_val": 20.9117,
+          "z_val_pixels": 3588,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1492
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 10.111,
+          "y": -7.923,
+          "z": 20.912
+        },
+        "mask_centroid_2d_no_erosion": [
+          1176,
+          60
+        ]
+      },
+      {
+        "id": "obj_40_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          863.0,
+          108.0,
+          995.0,
+          218.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 40,
+        "mask_path": "scene_graph/masks/P1010106_obj_40_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_40_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 15.9758,
+          "max": 17.4518,
+          "mean": 16.6847,
+          "median": 16.7163,
+          "std": 0.2273,
+          "num_pixels": 6182,
+          "z_val": 16.8119,
+          "z_val_pixels": 2915,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2623
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.626,
+          "y": -5.096,
+          "z": 16.812
+        },
+        "mask_centroid_2d": [
+          945,
+          144
+        ],
+        "depth_stats_no_erosion": {
+          "min": 15.6283,
+          "max": 17.8473,
+          "mean": 16.7005,
+          "median": 16.7187,
+          "std": 0.3103,
+          "num_pixels": 6709,
+          "z_val": 16.8129,
+          "z_val_pixels": 3117,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0394
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.626,
+          "y": -5.081,
+          "z": 16.813
+        },
+        "mask_centroid_2d_no_erosion": [
+          945,
+          145
+        ]
+      },
+      {
+        "id": "obj_41_GRiT+YOLO",
+        "label": "sheets",
+        "bbox": [
+          1023.0,
+          241.0,
+          1279.0,
+          494.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 41,
+        "mask_path": "scene_graph/masks/P1010106_obj_41_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_41_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.1558,
+          "max": 13.0444,
+          "mean": 11.3446,
+          "median": 11.2347,
+          "std": 0.7405,
+          "num_pixels": 46579,
+          "z_val": 10.5633,
+          "z_val_pixels": 23268,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.953
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.089,
+          "y": -1.22,
+          "z": 10.563
+        },
+        "mask_centroid_2d": [
+          1174,
+          352
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.1558,
+          "max": 13.1519,
+          "mean": 11.3641,
+          "median": 11.243,
+          "std": 0.7649,
+          "num_pixels": 48623,
+          "z_val": 10.5654,
+          "z_val_pixels": 24303,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.1781
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 5.08,
+          "y": -1.201,
+          "z": 10.565
+        },
+        "mask_centroid_2d_no_erosion": [
+          1173,
+          354
+        ]
+      },
+      {
+        "id": "obj_42_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          979.0,
+          0.0,
+          1016.0,
+          123.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 42,
+        "mask_path": "scene_graph/masks/P1010106_obj_42_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_42_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 21.3342,
+          "max": 23.6358,
+          "mean": 22.4416,
+          "median": 22.4278,
+          "std": 0.5205,
+          "num_pixels": 2621,
+          "z_val": 22.4605,
+          "z_val_pixels": 857,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3303
+        },
+        "coordinates_3d_from_mask": {
+          "x": 7.274,
+          "y": -8.591,
+          "z": 22.46
+        },
+        "mask_centroid_2d": [
+          999,
+          56
+        ],
+        "depth_stats_no_erosion": {
+          "min": 21.3342,
+          "max": 23.6358,
+          "mean": 22.4416,
+          "median": 22.4278,
+          "std": 0.5205,
+          "num_pixels": 2621,
+          "z_val": 22.4605,
+          "z_val_pixels": 857,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3303
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 7.274,
+          "y": -8.591,
+          "z": 22.46
+        },
+        "mask_centroid_2d_no_erosion": [
+          999,
+          56
+        ]
+      },
+      {
+        "id": "obj_43_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          792.0,
+          0.0,
+          889.0,
+          107.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 43,
+        "mask_path": "scene_graph/masks/P1010106_obj_43_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_43_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 22.3139,
+          "max": 23.4875,
+          "mean": 22.8845,
+          "median": 22.8662,
+          "std": 0.247,
+          "num_pixels": 6633,
+          "z_val": 22.6664,
+          "z_val_pixels": 3185,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4387
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.171,
+          "y": -8.915,
+          "z": 22.666
+        },
+        "mask_centroid_2d": [
+          844,
+          44
+        ],
+        "depth_stats_no_erosion": {
+          "min": 22.2768,
+          "max": 23.5487,
+          "mean": 22.8896,
+          "median": 22.8689,
+          "std": 0.2571,
+          "num_pixels": 7029,
+          "z_val": 22.6684,
+          "z_val_pixels": 3431,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.4917
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.172,
+          "y": -8.895,
+          "z": 22.668
+        },
+        "mask_centroid_2d_no_erosion": [
+          844,
+          45
+        ]
+      },
+      {
+        "id": "obj_44_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          1036.0,
+          2.0,
+          1083.0,
+          114.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 44,
+        "mask_path": "scene_graph/masks/P1010106_obj_44_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_44_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 20.1963,
+          "max": 21.07,
+          "mean": 20.723,
+          "median": 20.7455,
+          "std": 0.2046,
+          "num_pixels": 3327,
+          "z_val": 20.9757,
+          "z_val_pixels": 1283,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1651
+        },
+        "coordinates_3d_from_mask": {
+          "x": 7.928,
+          "y": -7.91,
+          "z": 20.976
+        },
+        "mask_centroid_2d": [
+          1059,
+          62
+        ],
+        "depth_stats_no_erosion": {
+          "min": 20.1813,
+          "max": 21.0865,
+          "mean": 20.7238,
+          "median": 20.7474,
+          "std": 0.2083,
+          "num_pixels": 3488,
+          "z_val": 20.9754,
+          "z_val_pixels": 1359,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1723
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 7.909,
+          "y": -7.909,
+          "z": 20.975
+        },
+        "mask_centroid_2d_no_erosion": [
+          1058,
+          62
+        ]
+      },
+      {
+        "id": "obj_45_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          1001.0,
+          0.0,
+          1078.0,
+          115.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 45,
+        "mask_path": "scene_graph/masks/P1010106_obj_45_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_45_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 20.1529,
+          "max": 21.7874,
+          "mean": 20.9605,
+          "median": 21.0146,
+          "std": 0.2858,
+          "num_pixels": 4053,
+          "z_val": 21.1338,
+          "z_val_pixels": 1525,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0571
+        },
+        "coordinates_3d_from_mask": {
+          "x": 7.416,
+          "y": -8.103,
+          "z": 21.134
+        },
+        "mask_centroid_2d": [
+          1029,
+          55
+        ],
+        "depth_stats_no_erosion": {
+          "min": 20.135,
+          "max": 21.8547,
+          "mean": 20.9701,
+          "median": 21.0211,
+          "std": 0.2944,
+          "num_pixels": 4187,
+          "z_val": 21.1073,
+          "z_val_pixels": 1593,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1118
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 7.388,
+          "y": -8.092,
+          "z": 21.107
+        },
+        "mask_centroid_2d_no_erosion": [
+          1028,
+          55
+        ]
+      },
+      {
+        "id": "obj_46_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          788.0,
+          0.0,
+          839.0,
+          92.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 46,
+        "mask_path": "scene_graph/masks/P1010106_obj_46_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_46_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 22.2631,
+          "max": 23.3906,
+          "mean": 22.7733,
+          "median": 22.7811,
+          "std": 0.2369,
+          "num_pixels": 1494,
+          "z_val": 22.5941,
+          "z_val_pixels": 621,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.7422
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.302,
+          "y": -9.152,
+          "z": 22.594
+        },
+        "mask_centroid_2d": [
+          802,
+          31
+        ],
+        "depth_stats_no_erosion": {
+          "min": 22.2034,
+          "max": 23.4222,
+          "mean": 22.7824,
+          "median": 22.7864,
+          "std": 0.2456,
+          "num_pixels": 1578,
+          "z_val": 22.5908,
+          "z_val_pixels": 663,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.0054
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 3.281,
+          "y": -9.15,
+          "z": 22.591
+        },
+        "mask_centroid_2d_no_erosion": [
+          801,
+          31
+        ]
+      },
+      {
+        "id": "obj_47_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          531.0,
+          285.0,
+          619.0,
+          302.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 47,
+        "mask_path": "scene_graph/masks/P1010106_obj_47_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_47_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 12.5868,
+          "max": 12.8669,
+          "mean": 12.7273,
+          "median": 12.7318,
+          "std": 0.0833,
+          "num_pixels": 237,
+          "z_val": 12.7892,
+          "z_val_pixels": 114,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1429
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.108,
+          "y": -2.111,
+          "z": 12.789
+        },
+        "mask_centroid_2d": [
+          544,
+          297
+        ],
+        "depth_stats_no_erosion": {
+          "min": 12.5868,
+          "max": 12.8669,
+          "mean": 12.7273,
+          "median": 12.7318,
+          "std": 0.0833,
+          "num_pixels": 237,
+          "z_val": 12.7892,
+          "z_val_pixels": 114,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1429
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.108,
+          "y": -2.111,
+          "z": 12.789
+        },
+        "mask_centroid_2d_no_erosion": [
+          544,
+          297
+        ]
+      },
+      {
+        "id": "obj_48_GRiT+YOLO",
+        "label": "orange",
+        "bbox": [
+          491.0,
+          217.0,
+          661.0,
+          394.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 48,
+        "mask_path": "scene_graph/masks/P1010106_obj_48_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_48_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 12.264,
+          "max": 12.8403,
+          "mean": 12.5344,
+          "median": 12.5203,
+          "std": 0.124,
+          "num_pixels": 23673,
+          "z_val": 12.5434,
+          "z_val_pixels": 11823,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2421
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.724,
+          "y": -1.969,
+          "z": 12.543
+        },
+        "mask_centroid_2d": [
+          576,
+          306
+        ],
+        "depth_stats_no_erosion": {
+          "min": 12.2052,
+          "max": 12.9297,
+          "mean": 12.5486,
+          "median": 12.528,
+          "std": 0.1421,
+          "num_pixels": 25080,
+          "z_val": 12.5269,
+          "z_val_pixels": 12539,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3818
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.757,
+          "y": -1.955,
+          "z": 12.527
+        },
+        "mask_centroid_2d_no_erosion": [
+          573,
+          307
+        ]
+      },
+      {
+        "id": "obj_49_GRiT+YOLO",
+        "label": "trees",
+        "bbox": [
+          0.0,
+          219.0,
+          498.0,
+          427.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 49,
+        "mask_path": "scene_graph/masks/P1010106_obj_49_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_49_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 11.0401,
+          "max": 13.2297,
+          "mean": 12.0099,
+          "median": 11.9657,
+          "std": 0.5442,
+          "num_pixels": 40133,
+          "z_val": 11.2039,
+          "z_val_pixels": 15110,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4989
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.417,
+          "y": -1.981,
+          "z": 11.204
+        },
+        "mask_centroid_2d": [
+          203,
+          284
+        ],
+        "depth_stats_no_erosion": {
+          "min": 11.0325,
+          "max": 13.3682,
+          "mean": 12.0354,
+          "median": 11.9891,
+          "std": 0.5772,
+          "num_pixels": 42683,
+          "z_val": 11.1928,
+          "z_val_pixels": 15995,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.8521
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.342,
+          "y": -1.969,
+          "z": 11.193
+        },
+        "mask_centroid_2d_no_erosion": [
+          210,
+          285
+        ]
+      },
+      {
+        "id": "obj_50_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          441.0,
+          0.0,
+          564.0,
+          51.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 50,
+        "mask_path": "scene_graph/masks/P1010106_obj_50_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_50_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 21.2223,
+          "max": 23.4355,
+          "mean": 22.2892,
+          "median": 22.2797,
+          "std": 0.3505,
+          "num_pixels": 5057,
+          "z_val": 22.2083,
+          "z_val_pixels": 2159,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.5856
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.825,
+          "y": -9.216,
+          "z": 22.208
+        },
+        "mask_centroid_2d": [
+          499,
+          20
+        ],
+        "depth_stats_no_erosion": {
+          "min": 21.2223,
+          "max": 23.4517,
+          "mean": 22.2953,
+          "median": 22.282,
+          "std": 0.3548,
+          "num_pixels": 5110,
+          "z_val": 22.2083,
+          "z_val_pixels": 2171,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.626
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.845,
+          "y": -9.216,
+          "z": 22.208
+        },
+        "mask_centroid_2d_no_erosion": [
+          498,
+          20
+        ]
+      },
+      {
+        "id": "obj_51_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          13.0,
+          35.0,
+          129.0,
+          67.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 51,
+        "mask_path": "scene_graph/masks/P1010106_obj_51_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_51_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 22.5658,
+          "max": 23.3692,
+          "mean": 23.0196,
+          "median": 23.0328,
+          "std": 0.1871,
+          "num_pixels": 3595,
+          "z_val": 23.1353,
+          "z_val_pixels": 1415,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1661
+        },
+        "coordinates_3d_from_mask": {
+          "x": -11.834,
+          "y": -8.933,
+          "z": 23.135
+        },
+        "mask_centroid_2d": [
+          73,
+          52
+        ],
+        "depth_stats_no_erosion": {
+          "min": 22.5658,
+          "max": 23.3692,
+          "mean": 23.0196,
+          "median": 23.0328,
+          "std": 0.1871,
+          "num_pixels": 3595,
+          "z_val": 23.1353,
+          "z_val_pixels": 1415,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1661
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -11.834,
+          "y": -8.933,
+          "z": 23.135
+        },
+        "mask_centroid_2d_no_erosion": [
+          73,
+          52
+        ]
+      },
+      {
+        "id": "obj_52_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          0.0,
+          218.0,
+          307.0,
+          250.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 52,
+        "mask_path": "scene_graph/masks/P1010106_obj_52_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_52_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 11.9047,
+          "max": 14.4628,
+          "mean": 12.8902,
+          "median": 12.8067,
+          "std": 0.3169,
+          "num_pixels": 5013,
+          "z_val": 12.9676,
+          "z_val_pixels": 996,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.1571
+        },
+        "coordinates_3d_from_mask": {
+          "x": -5.826,
+          "y": -2.866,
+          "z": 12.968
+        },
+        "mask_centroid_2d": [
+          142,
+          235
+        ],
+        "depth_stats_no_erosion": {
+          "min": 11.9047,
+          "max": 14.4628,
+          "mean": 12.8902,
+          "median": 12.8067,
+          "std": 0.3169,
+          "num_pixels": 5013,
+          "z_val": 12.9676,
+          "z_val_pixels": 996,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.1571
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -5.826,
+          "y": -2.866,
+          "z": 12.968
+        },
+        "mask_centroid_2d_no_erosion": [
+          142,
+          235
+        ]
+      },
+      {
+        "id": "obj_53_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          364.0,
+          0.0,
+          436.0,
+          78.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 53,
+        "mask_path": "scene_graph/masks/P1010106_obj_53_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_53_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 20.7984,
+          "max": 22.99,
+          "mean": 21.8013,
+          "median": 21.702,
+          "std": 0.3181,
+          "num_pixels": 4653,
+          "z_val": 21.6607,
+          "z_val_pixels": 2328,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.9493
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.748,
+          "y": -8.754,
+          "z": 21.661
+        },
+        "mask_centroid_2d": [
+          397,
+          32
+        ],
+        "depth_stats_no_erosion": {
+          "min": 20.7984,
+          "max": 22.9847,
+          "mean": 21.7994,
+          "median": 21.702,
+          "std": 0.3162,
+          "num_pixels": 4740,
+          "z_val": 21.6607,
+          "z_val_pixels": 2373,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.9624
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.768,
+          "y": -8.754,
+          "z": 21.661
+        },
+        "mask_centroid_2d_no_erosion": [
+          396,
+          32
+        ]
+      },
+      {
+        "id": "obj_54_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          487.0,
+          0.0,
+          565.0,
+          42.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 54,
+        "mask_path": "scene_graph/masks/P1010106_obj_54_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_54_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 20.9963,
+          "max": 23.5932,
+          "mean": 22.258,
+          "median": 22.2717,
+          "std": 0.3785,
+          "num_pixels": 2956,
+          "z_val": 22.3514,
+          "z_val_pixels": 1431,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.725
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.359,
+          "y": -9.295,
+          "z": 22.351
+        },
+        "mask_centroid_2d": [
+          523,
+          19
+        ],
+        "depth_stats_no_erosion": {
+          "min": 20.9963,
+          "max": 23.5932,
+          "mean": 22.2566,
+          "median": 22.271,
+          "std": 0.3783,
+          "num_pixels": 3003,
+          "z_val": 22.3514,
+          "z_val_pixels": 1447,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.7153
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.379,
+          "y": -9.295,
+          "z": 22.351
+        },
+        "mask_centroid_2d_no_erosion": [
+          522,
+          19
+        ]
+      },
+      {
+        "id": "obj_55_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          128.0,
+          35.0,
+          241.0,
+          68.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 55,
+        "mask_path": "scene_graph/masks/P1010106_obj_55_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_55_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 23.0408,
+          "max": 23.6405,
+          "mean": 23.3412,
+          "median": 23.3554,
+          "std": 0.1358,
+          "num_pixels": 3542,
+          "z_val": 23.3935,
+          "z_val_pixels": 1364,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.076
+        },
+        "coordinates_3d_from_mask": {
+          "x": -9.623,
+          "y": -9.032,
+          "z": 23.394
+        },
+        "mask_centroid_2d": [
+          184,
+          52
+        ],
+        "depth_stats_no_erosion": {
+          "min": 23.0408,
+          "max": 23.6405,
+          "mean": 23.3412,
+          "median": 23.3554,
+          "std": 0.1358,
+          "num_pixels": 3542,
+          "z_val": 23.3935,
+          "z_val_pixels": 1364,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.076
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -9.623,
+          "y": -9.032,
+          "z": 23.394
+        },
+        "mask_centroid_2d_no_erosion": [
+          184,
+          52
+        ]
+      },
+      {
+        "id": "obj_56_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          242.0,
+          37.0,
+          336.0,
+          69.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 56,
+        "mask_path": "scene_graph/masks/P1010106_obj_56_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_56_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 22.1733,
+          "max": 23.5622,
+          "mean": 22.8737,
+          "median": 22.8845,
+          "std": 0.3331,
+          "num_pixels": 2966,
+          "z_val": 22.8024,
+          "z_val_pixels": 1256,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0901
+        },
+        "coordinates_3d_from_mask": {
+          "x": -7.22,
+          "y": -8.783,
+          "z": 22.802
+        },
+        "mask_centroid_2d": [
+          289,
+          53
+        ],
+        "depth_stats_no_erosion": {
+          "min": 22.1733,
+          "max": 23.5622,
+          "mean": 22.8737,
+          "median": 22.8845,
+          "std": 0.3331,
+          "num_pixels": 2966,
+          "z_val": 22.8024,
+          "z_val_pixels": 1256,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0901
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -7.22,
+          "y": -8.783,
+          "z": 22.802
+        },
+        "mask_centroid_2d_no_erosion": [
+          289,
+          53
+        ]
+      },
+      {
+        "id": "obj_57_GRiT+YOLO",
+        "label": "light",
+        "bbox": [
+          440.0,
+          0.0,
+          498.0,
+          51.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 57,
+        "mask_path": "scene_graph/masks/P1010106_obj_57_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_57_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 21.511,
+          "max": 23.3538,
+          "mean": 22.3368,
+          "median": 22.2861,
+          "std": 0.3349,
+          "num_pixels": 2121,
+          "z_val": 22.3082,
+          "z_val_pixels": 1053,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.702
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.482,
+          "y": -9.217,
+          "z": 22.308
+        },
+        "mask_centroid_2d": [
+          467,
+          22
+        ],
+        "depth_stats_no_erosion": {
+          "min": 21.4145,
+          "max": 23.3923,
+          "mean": 22.3479,
+          "median": 22.2904,
+          "std": 0.3497,
+          "num_pixels": 2185,
+          "z_val": 22.3093,
+          "z_val_pixels": 1093,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.5716
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.502,
+          "y": -9.217,
+          "z": 22.309
+        },
+        "mask_centroid_2d_no_erosion": [
+          466,
+          22
+        ]
+      },
+      {
+        "id": "obj_58_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          0.0,
+          0.0,
+          367.0,
+          91.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 58,
+        "mask_path": "scene_graph/masks/P1010106_obj_58_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_58_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 21.3016,
+          "max": 22.845,
+          "mean": 22.0618,
+          "median": 22.0817,
+          "std": 0.3892,
+          "num_pixels": 13216,
+          "z_val": 22.4242,
+          "z_val_pixels": 2868,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0368
+        },
+        "coordinates_3d_from_mask": {
+          "x": -8.881,
+          "y": -9.285,
+          "z": 22.424
+        },
+        "mask_centroid_2d": [
+          201,
+          21
+        ],
+        "depth_stats_no_erosion": {
+          "min": 21.2537,
+          "max": 22.8805,
+          "mean": 22.0699,
+          "median": 22.0902,
+          "std": 0.3954,
+          "num_pixels": 13817,
+          "z_val": 22.4251,
+          "z_val_pixels": 3019,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1563
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -8.84,
+          "y": -9.286,
+          "z": 22.425
+        },
+        "mask_centroid_2d_no_erosion": [
+          203,
+          21
+        ]
+      },
+      {
+        "id": "obj_59_GRiT+YOLO",
+        "label": "tick",
+        "bbox": [
+          612.0,
+          411.0,
+          642.0,
+          440.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 59,
+        "mask_path": "scene_graph/masks/P1010106_obj_59_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_59_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.9328,
+          "max": 11.3267,
+          "mean": 11.1095,
+          "median": 11.1026,
+          "std": 0.0848,
+          "num_pixels": 558,
+          "z_val": 11.1157,
+          "z_val_pixels": 273,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1066
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.12,
+          "y": -0.552,
+          "z": 11.116
+        },
+        "mask_centroid_2d": [
+          628,
+          425
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.9328,
+          "max": 11.3267,
+          "mean": 11.1095,
+          "median": 11.1026,
+          "std": 0.0848,
+          "num_pixels": 558,
+          "z_val": 11.1157,
+          "z_val_pixels": 273,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1066
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.12,
+          "y": -0.552,
+          "z": 11.116
+        },
+        "mask_centroid_2d_no_erosion": [
+          628,
+          425
+        ]
+      },
+      {
+        "id": "obj_60_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          128.0,
+          36.0,
+          334.0,
+          67.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 60,
+        "mask_path": "scene_graph/masks/P1010106_obj_60_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_60_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 23.0174,
+          "max": 23.6548,
+          "mean": 23.3399,
+          "median": 23.3545,
+          "std": 0.1379,
+          "num_pixels": 3518,
+          "z_val": 23.378,
+          "z_val_pixels": 1362,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2477
+        },
+        "coordinates_3d_from_mask": {
+          "x": -9.617,
+          "y": -9.026,
+          "z": 23.378
+        },
+        "mask_centroid_2d": [
+          184,
+          52
+        ],
+        "depth_stats_no_erosion": {
+          "min": 23.0174,
+          "max": 23.6548,
+          "mean": 23.3399,
+          "median": 23.3545,
+          "std": 0.1379,
+          "num_pixels": 3518,
+          "z_val": 23.378,
+          "z_val_pixels": 1362,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2477
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -9.617,
+          "y": -9.026,
+          "z": 23.378
+        },
+        "mask_centroid_2d_no_erosion": [
+          184,
+          52
+        ]
+      },
+      {
+        "id": "obj_61_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          0.0,
+          34.0,
+          339.0,
+          97.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 61,
+        "mask_path": "scene_graph/masks/P1010106_obj_61_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_61_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 21.2668,
+          "max": 23.9759,
+          "mean": 23.0527,
+          "median": 23.1078,
+          "std": 0.3704,
+          "num_pixels": 19561,
+          "z_val": 23.3471,
+          "z_val_pixels": 5975,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.2422
+        },
+        "coordinates_3d_from_mask": {
+          "x": -9.941,
+          "y": -8.762,
+          "z": 23.347
+        },
+        "mask_centroid_2d": [
+          168,
+          64
+        ],
+        "depth_stats_no_erosion": {
+          "min": 21.2338,
+          "max": 23.9759,
+          "mean": 23.0455,
+          "median": 23.1001,
+          "std": 0.3732,
+          "num_pixels": 19921,
+          "z_val": 23.3471,
+          "z_val_pixels": 6129,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.2294
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -9.941,
+          "y": -8.783,
+          "z": 23.347
+        },
+        "mask_centroid_2d_no_erosion": [
+          168,
+          63
+        ]
+      },
+      {
+        "id": "obj_62_GRiT+YOLO",
+        "label": "bird",
+        "bbox": [
+          235.0,
+          34.0,
+          905.0,
+          262.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 62,
+        "mask_path": "scene_graph/masks/P1010106_obj_62_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_62_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.6716,
+          "max": 11.8945,
+          "mean": 11.2415,
+          "median": 11.1843,
+          "std": 0.257,
+          "num_pixels": 101982,
+          "z_val": 11.0729,
+          "z_val_pixels": 39484,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6507
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.759,
+          "y": -3.326,
+          "z": 11.073
+        },
+        "mask_centroid_2d": [
+          564,
+          147
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.5981,
+          "max": 12.0084,
+          "mean": 11.2638,
+          "median": 11.1978,
+          "std": 0.2796,
+          "num_pixels": 106013,
+          "z_val": 11.0739,
+          "z_val_pixels": 41779,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.0355
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.759,
+          "y": -3.327,
+          "z": 11.074
+        },
+        "mask_centroid_2d_no_erosion": [
+          564,
+          147
+        ]
+      },
+      {
+        "id": "obj_63_GRiT+YOLO",
+        "label": "parachute",
+        "bbox": [
+          471.0,
+          217.0,
+          660.0,
+          707.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 63,
+        "mask_path": "scene_graph/masks/P1010106_obj_63_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_63_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 12.2677,
+          "max": 12.8371,
+          "mean": 12.5336,
+          "median": 12.5196,
+          "std": 0.1237,
+          "num_pixels": 23684,
+          "z_val": 12.5478,
+          "z_val_pixels": 11821,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2249
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.724,
+          "y": -1.97,
+          "z": 12.548
+        },
+        "mask_centroid_2d": [
+          576,
+          306
+        ],
+        "depth_stats_no_erosion": {
+          "min": 12.2052,
+          "max": 12.9453,
+          "mean": 12.5497,
+          "median": 12.5283,
+          "std": 0.144,
+          "num_pixels": 25095,
+          "z_val": 12.5269,
+          "z_val_pixels": 12545,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2344
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.757,
+          "y": -1.955,
+          "z": 12.527
+        },
+        "mask_centroid_2d_no_erosion": [
+          573,
+          307
+        ]
+      },
+      {
+        "id": "obj_64_GRiT+YOLO",
+        "label": "wool",
+        "bbox": [
+          652.0,
+          169.0,
+          1025.0,
+          629.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 64,
+        "mask_path": "scene_graph/masks/P1010106_obj_64_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_64_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 11.3699,
+          "max": 13.5039,
+          "mean": 12.3396,
+          "median": 12.2728,
+          "std": 0.4891,
+          "num_pixels": 102954,
+          "z_val": 11.9387,
+          "z_val_pixels": 48808,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.8484
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.553,
+          "y": -0.969,
+          "z": 11.939
+        },
+        "mask_centroid_2d": [
+          877,
+          390
+        ],
+        "depth_stats_no_erosion": {
+          "min": 11.3699,
+          "max": 13.6072,
+          "mean": 12.3618,
+          "median": 12.2926,
+          "std": 0.51,
+          "num_pixels": 106344,
+          "z_val": 11.9442,
+          "z_val_pixels": 50695,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.1825
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.554,
+          "y": -0.97,
+          "z": 11.944
+        },
+        "mask_centroid_2d_no_erosion": [
+          877,
+          390
+        ]
+      },
+      {
+        "id": "obj_65_GRiT+YOLO",
+        "label": "pillow",
+        "bbox": [
+          0.0,
+          219.0,
+          513.0,
+          667.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 65,
+        "mask_path": "scene_graph/masks/P1010106_obj_65_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_65_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.4318,
+          "max": 12.6897,
+          "mean": 11.153,
+          "median": 10.9422,
+          "std": 0.5976,
+          "num_pixels": 145385,
+          "z_val": 10.5931,
+          "z_val_pixels": 62206,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.8719
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.756,
+          "y": -0.545,
+          "z": 10.593
+        },
+        "mask_centroid_2d": [
+          247,
+          423
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.4318,
+          "max": 12.7711,
+          "mean": 11.1731,
+          "median": 10.9563,
+          "std": 0.6164,
+          "num_pixels": 149307,
+          "z_val": 10.5969,
+          "z_val_pixels": 64364,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.0139
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.757,
+          "y": -0.545,
+          "z": 10.597
+        },
+        "mask_centroid_2d_no_erosion": [
+          247,
+          423
+        ]
+      },
+      {
+        "id": "obj_66_GRiT+YOLO",
+        "label": "air",
+        "bbox": [
+          302.0,
+          169.0,
+          1025.0,
+          629.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 66,
+        "mask_path": "scene_graph/masks/P1010106_obj_66_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_66_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 11.3699,
+          "max": 13.5043,
+          "mean": 12.3394,
+          "median": 12.2724,
+          "std": 0.4892,
+          "num_pixels": 102960,
+          "z_val": 11.9374,
+          "z_val_pixels": 48786,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.8543
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.552,
+          "y": -0.969,
+          "z": 11.937
+        },
+        "mask_centroid_2d": [
+          877,
+          390
+        ],
+        "depth_stats_no_erosion": {
+          "min": 11.3699,
+          "max": 13.6089,
+          "mean": 12.3618,
+          "median": 12.2921,
+          "std": 0.5104,
+          "num_pixels": 106362,
+          "z_val": 11.9445,
+          "z_val_pixels": 50669,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.185
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.554,
+          "y": -0.97,
+          "z": 11.944
+        },
+        "mask_centroid_2d_no_erosion": [
+          877,
+          390
+        ]
+      },
+      {
+        "id": "obj_67_GRiT+YOLO",
+        "label": "ibex",
+        "bbox": [
+          0.0,
+          219.0,
+          757.0,
+          667.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 67,
+        "mask_path": "scene_graph/masks/P1010106_obj_67_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_67_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.4318,
+          "max": 12.7085,
+          "mean": 11.157,
+          "median": 10.9418,
+          "std": 0.6034,
+          "num_pixels": 145408,
+          "z_val": 10.5936,
+          "z_val_pixels": 61977,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.8361
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.756,
+          "y": -0.545,
+          "z": 10.594
+        },
+        "mask_centroid_2d": [
+          247,
+          423
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.4318,
+          "max": 12.7892,
+          "mean": 11.1773,
+          "median": 10.9575,
+          "std": 0.6213,
+          "num_pixels": 149629,
+          "z_val": 10.5978,
+          "z_val_pixels": 64540,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9827
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.757,
+          "y": -0.545,
+          "z": 10.598
+        },
+        "mask_centroid_2d_no_erosion": [
+          247,
+          423
+        ]
+      },
+      {
+        "id": "obj_68_GRiT+YOLO",
+        "label": "velvet",
+        "bbox": [
+          234.0,
+          34.0,
+          904.0,
+          410.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 68,
+        "mask_path": "scene_graph/masks/P1010106_obj_68_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_68_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.6643,
+          "max": 11.8968,
+          "mean": 11.2415,
+          "median": 11.1839,
+          "std": 0.2573,
+          "num_pixels": 102538,
+          "z_val": 11.0735,
+          "z_val_pixels": 39698,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6637
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.769,
+          "y": -3.327,
+          "z": 11.074
+        },
+        "mask_centroid_2d": [
+          563,
+          147
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.6142,
+          "max": 11.9916,
+          "mean": 11.2612,
+          "median": 11.1965,
+          "std": 0.2766,
+          "num_pixels": 106281,
+          "z_val": 11.0691,
+          "z_val_pixels": 41739,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.1101
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.769,
+          "y": -3.325,
+          "z": 11.069
+        },
+        "mask_centroid_2d_no_erosion": [
+          563,
+          147
+        ]
+      },
+      {
+        "id": "obj_69_GRiT+YOLO",
+        "label": "spread",
+        "bbox": [
+          252.0,
+          600.0,
+          1266.0,
+          957.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 69,
+        "mask_path": "scene_graph/masks/P1010106_obj_69_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_69_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.0312,
+          "max": 11.1586,
+          "mean": 7.0734,
+          "median": 6.7899,
+          "std": 1.5061,
+          "num_pixels": 84711,
+          "z_val": 5.7243,
+          "z_val_pixels": 30202,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5649
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.926,
+          "y": 1.875,
+          "z": 5.724
+        },
+        "mask_centroid_2d": [
+          1013,
+          843
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.0312,
+          "max": 11.2261,
+          "mean": 7.0759,
+          "median": 6.7826,
+          "std": 1.5178,
+          "num_pixels": 89780,
+          "z_val": 5.7211,
+          "z_val_pixels": 32244,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5666
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.915,
+          "y": 1.884,
+          "z": 5.721
+        },
+        "mask_centroid_2d_no_erosion": [
+          1011,
+          845
+        ]
+      },
+      {
+        "id": "obj_70_GRiT+YOLO",
+        "label": "parachute",
+        "bbox": [
+          490.0,
+          641.0,
+          998.0,
+          921.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 70,
+        "mask_path": "scene_graph/masks/P1010106_obj_70_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_70_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.7561,
+          "max": 9.2887,
+          "mean": 7.5233,
+          "median": 7.5058,
+          "std": 0.8772,
+          "num_pixels": 76253,
+          "z_val": 8.0473,
+          "z_val_pixels": 28418,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0261
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.559,
+          "y": 2.054,
+          "z": 8.047
+        },
+        "mask_centroid_2d": [
+          717,
+          763
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.6923,
+          "max": 9.3468,
+          "mean": 7.5138,
+          "median": 7.4901,
+          "std": 0.8992,
+          "num_pixels": 80742,
+          "z_val": 8.3956,
+          "z_val_pixels": 30782,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0437
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.591,
+          "y": 2.159,
+          "z": 8.396
+        },
+        "mask_centroid_2d_no_erosion": [
+          718,
+          765
+        ]
+      },
+      {
+        "id": "obj_71_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          1037.0,
+          0.0,
+          1279.0,
+          116.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 71,
+        "mask_path": "scene_graph/masks/P1010106_obj_71_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_71_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 20.179,
+          "max": 21.2915,
+          "mean": 20.7608,
+          "median": 20.7979,
+          "std": 0.2427,
+          "num_pixels": 23150,
+          "z_val": 20.9105,
+          "z_val_pixels": 11256,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0805
+        },
+        "coordinates_3d_from_mask": {
+          "x": 10.13,
+          "y": -7.96,
+          "z": 20.911
+        },
+        "mask_centroid_2d": [
+          1177,
+          58
+        ],
+        "depth_stats_no_erosion": {
+          "min": 20.1772,
+          "max": 21.3023,
+          "mean": 20.7612,
+          "median": 20.7968,
+          "std": 0.2429,
+          "num_pixels": 23512,
+          "z_val": 20.9105,
+          "z_val_pixels": 11431,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0657
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 10.13,
+          "y": -7.942,
+          "z": 20.911
+        },
+        "mask_centroid_2d_no_erosion": [
+          1177,
+          59
+        ]
+      },
+      {
+        "id": "obj_72_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          862.0,
+          109.0,
+          1002.0,
+          296.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 72,
+        "mask_path": "scene_graph/masks/P1010106_obj_72_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_72_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 16.016,
+          "max": 17.3949,
+          "mean": 16.6827,
+          "median": 16.7153,
+          "std": 0.2189,
+          "num_pixels": 6080,
+          "z_val": 16.8119,
+          "z_val_pixels": 2869,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2218
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.626,
+          "y": -5.096,
+          "z": 16.812
+        },
+        "mask_centroid_2d": [
+          945,
+          144
+        ],
+        "depth_stats_no_erosion": {
+          "min": 15.7113,
+          "max": 17.7377,
+          "mean": 16.6943,
+          "median": 16.7171,
+          "std": 0.2889,
+          "num_pixels": 6614,
+          "z_val": 16.8173,
+          "z_val_pixels": 3088,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.098
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.627,
+          "y": -5.082,
+          "z": 16.817
+        },
+        "mask_centroid_2d_no_erosion": [
+          945,
+          145
+        ]
+      },
+      {
+        "id": "obj_73_GRiT+YOLO",
+        "label": "clear",
+        "bbox": [
+          1017.0,
+          395.0,
+          1279.0,
+          956.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 73,
+        "mask_path": "scene_graph/masks/P1010106_obj_73_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_73_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.4811,
+          "max": 11.8962,
+          "mean": 8.3687,
+          "median": 8.2311,
+          "std": 1.6059,
+          "num_pixels": 44453,
+          "z_val": 7.0123,
+          "z_val_pixels": 20488,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9519
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.568,
+          "y": 1.664,
+          "z": 7.012
+        },
+        "mask_centroid_2d": [
+          1204,
+          743
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.4499,
+          "max": 12.0112,
+          "mean": 8.3978,
+          "median": 8.2499,
+          "std": 1.6435,
+          "num_pixels": 46229,
+          "z_val": 7.0147,
+          "z_val_pixels": 21295,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9795
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 3.556,
+          "y": 1.671,
+          "z": 7.015
+        },
+        "mask_centroid_2d_no_erosion": [
+          1202,
+          744
+        ]
+      },
+      {
+        "id": "obj_74_GRiT+YOLO",
+        "label": "air",
+        "bbox": [
+          512.0,
+          595.0,
+          833.0,
+          666.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 74,
+        "mask_path": "scene_graph/masks/P1010106_obj_74_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_74_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.7029,
+          "max": 9.4307,
+          "mean": 9.059,
+          "median": 9.0456,
+          "std": 0.17,
+          "num_pixels": 3371,
+          "z_val": 9.0679,
+          "z_val_pixels": 1690,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1524
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.301,
+          "y": 1.227,
+          "z": 9.068
+        },
+        "mask_centroid_2d": [
+          799,
+          630
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.697,
+          "max": 9.4539,
+          "mean": 9.0669,
+          "median": 9.0517,
+          "std": 0.1743,
+          "num_pixels": 3518,
+          "z_val": 9.0188,
+          "z_val_pixels": 1757,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1842
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.294,
+          "y": 1.212,
+          "z": 9.019
+        },
+        "mask_centroid_2d_no_erosion": [
+          799,
+          629
+        ]
+      },
+      {
+        "id": "obj_75_GRiT+YOLO",
+        "label": "air",
+        "bbox": [
+          169.0,
+          722.0,
+          547.0,
+          839.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 75,
+        "mask_path": "scene_graph/masks/P1010106_obj_75_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_75_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.203,
+          "max": 8.0487,
+          "mean": 7.6056,
+          "median": 7.6104,
+          "std": 0.1243,
+          "num_pixels": 9461,
+          "z_val": 7.6171,
+          "z_val_pixels": 2187,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3354
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.034,
+          "y": 1.835,
+          "z": 7.617
+        },
+        "mask_centroid_2d": [
+          344,
+          747
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.0135,
+          "max": 8.2792,
+          "mean": 7.6012,
+          "median": 7.6073,
+          "std": 0.1775,
+          "num_pixels": 10422,
+          "z_val": 7.6108,
+          "z_val_pixels": 2386,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3712
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.012,
+          "y": 1.84,
+          "z": 7.611
+        },
+        "mask_centroid_2d_no_erosion": [
+          347,
+          748
+        ]
+      },
+      {
+        "id": "obj_76_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          685.0,
+          479.0,
+          712.0,
+          501.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 76,
+        "mask_path": "scene_graph/masks/P1010106_obj_76_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_76_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 11.2488,
+          "max": 11.5588,
+          "mean": 11.4087,
+          "median": 11.4135,
+          "std": 0.0688,
+          "num_pixels": 351,
+          "z_val": 11.4565,
+          "z_val_pixels": 175,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0605
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.579,
+          "y": 0.103,
+          "z": 11.457
+        },
+        "mask_centroid_2d": [
+          696,
+          490
+        ],
+        "depth_stats_no_erosion": {
+          "min": 11.2488,
+          "max": 11.5588,
+          "mean": 11.4087,
+          "median": 11.4135,
+          "std": 0.0688,
+          "num_pixels": 351,
+          "z_val": 11.4565,
+          "z_val_pixels": 175,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0605
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.579,
+          "y": 0.103,
+          "z": 11.457
+        },
+        "mask_centroid_2d_no_erosion": [
+          696,
+          490
+        ]
+      },
+      {
+        "id": "obj_77_GRiT+YOLO",
+        "label": "flying",
+        "bbox": [
+          667.0,
+          837.0,
+          1014.0,
+          921.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 77,
+        "mask_path": "scene_graph/masks/P1010106_obj_77_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_77_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.5132,
+          "max": 6.0995,
+          "mean": 5.7971,
+          "median": 5.8071,
+          "std": 0.1439,
+          "num_pixels": 8697,
+          "z_val": 5.9011,
+          "z_val_pixels": 3823,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.199
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.618,
+          "y": 2.167,
+          "z": 5.901
+        },
+        "mask_centroid_2d": [
+          944,
+          887
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.5132,
+          "max": 6.1244,
+          "mean": 5.8047,
+          "median": 5.8171,
+          "std": 0.1479,
+          "num_pixels": 9234,
+          "z_val": 5.9014,
+          "z_val_pixels": 4063,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2412
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.613,
+          "y": 2.167,
+          "z": 5.901
+        },
+        "mask_centroid_2d_no_erosion": [
+          943,
+          887
+        ]
+      },
+      {
+        "id": "obj_78_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          1009.0,
+          11.0,
+          1025.0,
+          77.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 78,
+        "mask_path": "scene_graph/masks/P1010106_obj_78_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_78_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 20.8263,
+          "max": 21.4699,
+          "mean": 21.1419,
+          "median": 21.1227,
+          "std": 0.1326,
+          "num_pixels": 589,
+          "z_val": 21.1316,
+          "z_val_pixels": 170,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1899
+        },
+        "coordinates_3d_from_mask": {
+          "x": 7.187,
+          "y": -8.331,
+          "z": 21.132
+        },
+        "mask_centroid_2d": [
+          1017,
+          43
+        ],
+        "depth_stats_no_erosion": {
+          "min": 20.8263,
+          "max": 21.4699,
+          "mean": 21.1419,
+          "median": 21.1227,
+          "std": 0.1326,
+          "num_pixels": 589,
+          "z_val": 21.1316,
+          "z_val_pixels": 170,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1899
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 7.187,
+          "y": -8.331,
+          "z": 21.132
+        },
+        "mask_centroid_2d_no_erosion": [
+          1017,
+          43
+        ]
+      },
+      {
+        "id": "obj_79_GRiT+YOLO",
+        "label": "clouds",
+        "bbox": [
+          0.0,
+          549.0,
+          186.0,
+          759.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 79,
+        "mask_path": "scene_graph/masks/P1010106_obj_79_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_79_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6044,
+          "max": 10.0024,
+          "mean": 9.291,
+          "median": 9.2784,
+          "std": 0.2939,
+          "num_pixels": 18111,
+          "z_val": 9.3513,
+          "z_val_pixels": 9056,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3424
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.808,
+          "y": 1.653,
+          "z": 9.351
+        },
+        "mask_centroid_2d": [
+          70,
+          676
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.5721,
+          "max": 10.0714,
+          "mean": 9.3073,
+          "median": 9.2944,
+          "std": 0.3115,
+          "num_pixels": 19211,
+          "z_val": 9.3556,
+          "z_val_pixels": 9598,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2978
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.802,
+          "y": 1.654,
+          "z": 9.356
+        },
+        "mask_centroid_2d_no_erosion": [
+          71,
+          676
+        ]
+      },
+      {
+        "id": "obj_80_GRiT+YOLO",
+        "label": "flagpole",
+        "bbox": [
+          48.0,
+          129.0,
+          1025.0,
+          629.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 80,
+        "mask_path": "scene_graph/masks/P1010106_obj_80_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_80_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 11.3699,
+          "max": 13.5039,
+          "mean": 12.3395,
+          "median": 12.2727,
+          "std": 0.4894,
+          "num_pixels": 103084,
+          "z_val": 11.9352,
+          "z_val_pixels": 48866,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.8908
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.552,
+          "y": -0.958,
+          "z": 11.935
+        },
+        "mask_centroid_2d": [
+          877,
+          391
+        ],
+        "depth_stats_no_erosion": {
+          "min": 11.2327,
+          "max": 13.6494,
+          "mean": 12.3692,
+          "median": 12.298,
+          "std": 0.5176,
+          "num_pixels": 106860,
+          "z_val": 11.9306,
+          "z_val_pixels": 50993,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.8983
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.54,
+          "y": -0.969,
+          "z": 11.931
+        },
+        "mask_centroid_2d_no_erosion": [
+          876,
+          390
+        ]
+      },
+      {
+        "id": "obj_81_GRiT+YOLO",
+        "label": "board",
+        "bbox": [
+          171.0,
+          456.0,
+          215.0,
+          557.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 81,
+        "mask_path": "scene_graph/masks/P1010106_obj_81_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_81_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.2517,
+          "max": 10.5626,
+          "mean": 10.4,
+          "median": 10.4074,
+          "std": 0.0624,
+          "num_pixels": 925,
+          "z_val": 10.4354,
+          "z_val_pixels": 453,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0843
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.246,
+          "y": -0.009,
+          "z": 10.435
+        },
+        "mask_centroid_2d": [
+          189,
+          479
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.2386,
+          "max": 10.5867,
+          "mean": 10.4022,
+          "median": 10.408,
+          "std": 0.0705,
+          "num_pixels": 1013,
+          "z_val": 10.4367,
+          "z_val_pixels": 503,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0935
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.256,
+          "y": -0.009,
+          "z": 10.437
+        },
+        "mask_centroid_2d_no_erosion": [
+          188,
+          479
+        ]
+      },
+      {
+        "id": "obj_82_GRiT+YOLO",
+        "label": "tick",
+        "bbox": [
+          567.0,
+          463.0,
+          595.0,
+          487.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 82,
+        "mask_path": "scene_graph/masks/P1010106_obj_82_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_82_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.7411,
+          "max": 11.0431,
+          "mean": 10.8931,
+          "median": 10.8973,
+          "std": 0.0664,
+          "num_pixels": 536,
+          "z_val": 10.8896,
+          "z_val_pixels": 266,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0619
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.57,
+          "y": -0.029,
+          "z": 10.89
+        },
+        "mask_centroid_2d": [
+          582,
+          477
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.7411,
+          "max": 11.0431,
+          "mean": 10.8931,
+          "median": 10.8973,
+          "std": 0.0664,
+          "num_pixels": 536,
+          "z_val": 10.8896,
+          "z_val_pixels": 266,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0619
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.57,
+          "y": -0.029,
+          "z": 10.89
+        },
+        "mask_centroid_2d_no_erosion": [
+          582,
+          477
+        ]
+      },
+      {
+        "id": "obj_83_GRiT+YOLO",
+        "label": "building",
+        "bbox": [
+          917.0,
+          843.0,
+          990.0,
+          920.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 83,
+        "mask_path": "scene_graph/masks/P1010106_obj_83_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_83_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.5712,
+          "max": 5.8745,
+          "mean": 5.7244,
+          "median": 5.7322,
+          "std": 0.0748,
+          "num_pixels": 2994,
+          "z_val": 5.7575,
+          "z_val_pixels": 1421,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0507
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.672,
+          "y": 2.119,
+          "z": 5.758
+        },
+        "mask_centroid_2d": [
+          962,
+          888
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.5712,
+          "max": 5.8815,
+          "mean": 5.7288,
+          "median": 5.7386,
+          "std": 0.0767,
+          "num_pixels": 3167,
+          "z_val": 5.7628,
+          "z_val_pixels": 1507,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0523
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.669,
+          "y": 2.121,
+          "z": 5.763
+        },
+        "mask_centroid_2d_no_erosion": [
+          961,
+          888
+        ]
+      },
+      {
+        "id": "obj_84_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          162.0,
+          486.0,
+          195.0,
+          542.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 84,
+        "mask_path": "scene_graph/masks/P1010106_obj_84_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_84_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.092,
+          "max": 10.4655,
+          "mean": 10.2707,
+          "median": 10.287,
+          "std": 0.0747,
+          "num_pixels": 913,
+          "z_val": 10.3091,
+          "z_val_pixels": 457,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0197
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.278,
+          "y": 0.288,
+          "z": 10.309
+        },
+        "mask_centroid_2d": [
+          180,
+          511
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.092,
+          "max": 10.4655,
+          "mean": 10.2707,
+          "median": 10.287,
+          "std": 0.0747,
+          "num_pixels": 913,
+          "z_val": 10.3091,
+          "z_val_pixels": 457,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0197
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.278,
+          "y": 0.288,
+          "z": 10.309
+        },
+        "mask_centroid_2d_no_erosion": [
+          180,
+          511
+        ]
+      },
+      {
+        "id": "obj_85_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          44.0,
+          939.0,
+          74.0,
+          959.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 85,
+        "mask_path": "scene_graph/masks/P1010106_obj_85_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_85_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 4.4977,
+          "max": 4.7348,
+          "mean": 4.6403,
+          "median": 4.6457,
+          "std": 0.0556,
+          "num_pixels": 481,
+          "z_val": 4.6442,
+          "z_val_pixels": 224,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0367
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.434,
+          "y": 1.965,
+          "z": 4.644
+        },
+        "mask_centroid_2d": [
+          59,
+          949
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.4977,
+          "max": 4.7348,
+          "mean": 4.6403,
+          "median": 4.6457,
+          "std": 0.0556,
+          "num_pixels": 481,
+          "z_val": 4.6442,
+          "z_val_pixels": 224,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0367
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.434,
+          "y": 1.965,
+          "z": 4.644
+        },
+        "mask_centroid_2d_no_erosion": [
+          59,
+          949
+        ]
+      },
+      {
+        "id": "obj_86_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          1078.0,
+          5.0,
+          1279.0,
+          89.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 86,
+        "mask_path": "scene_graph/masks/P1010106_obj_86_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_86_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 20.623,
+          "max": 21.2026,
+          "mean": 20.9053,
+          "median": 20.9023,
+          "std": 0.1266,
+          "num_pixels": 9356,
+          "z_val": 20.9093,
+          "z_val_pixels": 3384,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1369
+        },
+        "coordinates_3d_from_mask": {
+          "x": 10.148,
+          "y": -7.922,
+          "z": 20.909
+        },
+        "mask_centroid_2d": [
+          1178,
+          60
+        ],
+        "depth_stats_no_erosion": {
+          "min": 20.6088,
+          "max": 21.2034,
+          "mean": 20.8992,
+          "median": 20.898,
+          "std": 0.13,
+          "num_pixels": 9835,
+          "z_val": 20.9108,
+          "z_val_pixels": 3619,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1654
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 10.13,
+          "y": -7.923,
+          "z": 20.911
+        },
+        "mask_centroid_2d_no_erosion": [
+          1177,
+          60
+        ]
+      },
+      {
+        "id": "obj_87_GRiT+YOLO",
+        "label": "tree",
+        "bbox": [
+          521.0,
+          425.0,
+          832.0,
+          656.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 87,
+        "mask_path": "scene_graph/masks/P1010106_obj_87_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_87_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.7226,
+          "max": 11.3779,
+          "mean": 10.4919,
+          "median": 10.4218,
+          "std": 0.3559,
+          "num_pixels": 18818,
+          "z_val": 10.3899,
+          "z_val_pixels": 9367,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0991
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.178,
+          "y": 0.712,
+          "z": 10.39
+        },
+        "mask_centroid_2d": [
+          659,
+          556
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.6552,
+          "max": 11.4397,
+          "mean": 10.5043,
+          "median": 10.4308,
+          "std": 0.3907,
+          "num_pixels": 20576,
+          "z_val": 10.3838,
+          "z_val_pixels": 10265,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0021
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.178,
+          "y": 0.712,
+          "z": 10.384
+        },
+        "mask_centroid_2d_no_erosion": [
+          659,
+          556
+        ]
+      },
+      {
+        "id": "obj_88_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          70.0,
+          905.0,
+          143.0,
+          959.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 88,
+        "mask_path": "scene_graph/masks/P1010106_obj_88_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_88_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 4.4921,
+          "max": 4.6908,
+          "mean": 4.589,
+          "median": 4.589,
+          "std": 0.0457,
+          "num_pixels": 1845,
+          "z_val": 4.5341,
+          "z_val_pixels": 804,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0449
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.168,
+          "y": 1.861,
+          "z": 4.534
+        },
+        "mask_centroid_2d": [
+          110,
+          935
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.4915,
+          "max": 4.7018,
+          "mean": 4.5951,
+          "median": 4.5935,
+          "std": 0.0498,
+          "num_pixels": 1989,
+          "z_val": 4.5338,
+          "z_val_pixels": 872,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0482
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.168,
+          "y": 1.857,
+          "z": 4.534
+        },
+        "mask_centroid_2d_no_erosion": [
+          110,
+          934
+        ]
+      },
+      {
+        "id": "obj_89_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          347.0,
+          0.0,
+          436.0,
+          91.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 89,
+        "mask_path": "scene_graph/masks/P1010106_obj_89_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_89_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 21.0933,
+          "max": 22.8123,
+          "mean": 21.7785,
+          "median": 21.6984,
+          "std": 0.2697,
+          "num_pixels": 4439,
+          "z_val": 21.6667,
+          "z_val_pixels": 2220,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0034
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.769,
+          "y": -8.757,
+          "z": 21.667
+        },
+        "mask_centroid_2d": [
+          396,
+          32
+        ],
+        "depth_stats_no_erosion": {
+          "min": 20.8655,
+          "max": 22.9285,
+          "mean": 21.7937,
+          "median": 21.7019,
+          "std": 0.2991,
+          "num_pixels": 4678,
+          "z_val": 21.6635,
+          "z_val_pixels": 2340,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.2827
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.768,
+          "y": -8.755,
+          "z": 21.663
+        },
+        "mask_centroid_2d_no_erosion": [
+          396,
+          32
+        ]
+      },
+      {
+        "id": "obj_90_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          26.0,
+          535.0,
+          203.0,
+          631.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 90,
+        "mask_path": "scene_graph/masks/P1010106_obj_90_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/P1010106_obj_90_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.5236,
+          "max": 10.4511,
+          "mean": 9.9585,
+          "median": 9.9715,
+          "std": 0.245,
+          "num_pixels": 9529,
+          "z_val": 10.1153,
+          "z_val_pixels": 4757,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1002
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.928,
+          "y": 0.931,
+          "z": 10.115
+        },
+        "mask_centroid_2d": [
+          100,
+          582
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.5236,
+          "max": 10.4688,
+          "mean": 9.964,
+          "median": 9.9764,
+          "std": 0.2478,
+          "num_pixels": 10148,
+          "z_val": 10.1245,
+          "z_val_pixels": 5068,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1361
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.932,
+          "y": 0.932,
+          "z": 10.124
+        },
+        "mask_centroid_2d_no_erosion": [
+          100,
+          582
+        ]
+      }
+    ]
+  }
+}

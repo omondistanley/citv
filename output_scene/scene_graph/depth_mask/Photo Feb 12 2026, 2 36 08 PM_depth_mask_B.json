@@ -1,0 +1,6187 @@
+{
+  "metadata": {
+    "image_path": "/home/stanleyomondi/citv/images/Photo Feb 12 2026, 2 36 08 PM.png",
+    "image_stem": "Photo Feb 12 2026, 2 36 08 PM",
+    "timestamp": "2026-03-05 04:47:37",
+    "image_size": [
+      1280,
+      720
+    ],
+    "matching_mode": "B"
+  },
+  "depth": {
+    "depth_map_path": "depth/Photo Feb 12 2026, 2 36 08 PM_depth_metric.npy",
+    "depth_map_image_path": "scene_graph/Photo Feb 12 2026, 2 36 08 PM_depth_map.png",
+    "depth_min": 6.264196395874023,
+    "depth_max": 12.255126953125,
+    "depth_mean": 8.573348999023438
+  },
+  "segmentation": {
+    "model": "SAM2",
+    "mode": "automatic_mask_generator",
+    "segmentation_map_image_path": "scene_graph/Photo Feb 12 2026, 2 36 08 PM_sam2_segmentation.png",
+    "num_auto_masks": 108,
+    "match_strategy": "iou_with_detection_bbox"
+  },
+  "depth_mask": {
+    "mapping_image_path": "scene_graph/Photo Feb 12 2026, 2 36 08 PM_depth_mask_mapping_B.png",
+    "objects": [
+      {
+        "id": "obj_0_GroundingDINO",
+        "label": "person",
+        "bbox": [
+          924.6008911132812,
+          233.87588500976562,
+          1201.908447265625,
+          570.8738403320312
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 0,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_0_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_0_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.96,
+          "max": 11.9899,
+          "mean": 11.1669,
+          "median": 11.2466,
+          "std": 0.4445,
+          "num_pixels": 50175,
+          "z_val": 11.7112,
+          "z_val_pixels": 21343,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5571
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.395,
+          "y": 0.486,
+          "z": 11.711
+        },
+        "mask_centroid_2d": [
+          1056,
+          406
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.8819,
+          "max": 12.019,
+          "mean": 11.1493,
+          "median": 11.2279,
+          "std": 0.4613,
+          "num_pixels": 52864,
+          "z_val": 11.7151,
+          "z_val_pixels": 22769,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6277
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.396,
+          "y": 0.497,
+          "z": 11.715
+        },
+        "mask_centroid_2d_no_erosion": [
+          1056,
+          407
+        ]
+      },
+      {
+        "id": "obj_1_GroundingDINO",
+        "label": "clothing",
+        "bbox": [
+          924.4281005859375,
+          454.1809387207031,
+          1201.466796875,
+          569.104736328125
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 1,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_1_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_1_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.0542,
+          "max": 11.506,
+          "mean": 10.2,
+          "median": 10.1262,
+          "std": 0.5208,
+          "num_pixels": 9852,
+          "z_val": 10.0251,
+          "z_val_pixels": 1621,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0132
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.771,
+          "y": 1.646,
+          "z": 10.025
+        },
+        "mask_centroid_2d": [
+          1057,
+          542
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.0021,
+          "max": 11.5572,
+          "mean": 10.2106,
+          "median": 10.1419,
+          "std": 0.5417,
+          "num_pixels": 10973,
+          "z_val": 10.0793,
+          "z_val_pixels": 2037,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0212
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 3.819,
+          "y": 1.518,
+          "z": 10.079
+        },
+        "mask_centroid_2d_no_erosion": [
+          1060,
+          527
+        ]
+      },
+      {
+        "id": "obj_2_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          885.0,
+          280.0,
+          1136.0,
+          527.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 2,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_2_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_2_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.6076,
+          "max": 11.8371,
+          "mean": 11.3047,
+          "median": 11.4002,
+          "std": 0.3438,
+          "num_pixels": 26520,
+          "z_val": 10.9877,
+          "z_val_pixels": 13250,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0105
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.104,
+          "y": 0.287,
+          "z": 10.988
+        },
+        "mask_centroid_2d": [
+          1054,
+          389
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.6105,
+          "max": 11.9121,
+          "mean": 11.3071,
+          "median": 11.4021,
+          "std": 0.3413,
+          "num_pixels": 28255,
+          "z_val": 10.9877,
+          "z_val_pixels": 14117,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0405
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.104,
+          "y": 0.287,
+          "z": 10.988
+        },
+        "mask_centroid_2d_no_erosion": [
+          1054,
+          389
+        ]
+      },
+      {
+        "id": "obj_3_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          961.0,
+          280.0,
+          1136.0,
+          526.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 3,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_3_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_3_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.6074,
+          "max": 11.8371,
+          "mean": 11.3048,
+          "median": 11.4003,
+          "std": 0.344,
+          "num_pixels": 26444,
+          "z_val": 10.9877,
+          "z_val_pixels": 13208,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0094
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.104,
+          "y": 0.287,
+          "z": 10.988
+        },
+        "mask_centroid_2d": [
+          1054,
+          389
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.6106,
+          "max": 11.9121,
+          "mean": 11.3073,
+          "median": 11.4022,
+          "std": 0.3414,
+          "num_pixels": 28182,
+          "z_val": 10.9877,
+          "z_val_pixels": 14082,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0626
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.104,
+          "y": 0.287,
+          "z": 10.988
+        },
+        "mask_centroid_2d_no_erosion": [
+          1054,
+          389
+        ]
+      },
+      {
+        "id": "obj_4_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          1177.0,
+          265.0,
+          1237.0,
+          496.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 4,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_4_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_4_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8645,
+          "max": 10.1912,
+          "mean": 9.5282,
+          "median": 9.5282,
+          "std": 0.3269,
+          "num_pixels": 8160,
+          "z_val": 9.3065,
+          "z_val_pixels": 3155,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0097
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.777,
+          "y": 0.235,
+          "z": 9.307
+        },
+        "mask_centroid_2d": [
+          1209,
+          388
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8666,
+          "max": 10.2186,
+          "mean": 9.5422,
+          "median": 9.542,
+          "std": 0.3321,
+          "num_pixels": 8457,
+          "z_val": 9.1521,
+          "z_val_pixels": 3283,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0391
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.69,
+          "y": 0.231,
+          "z": 9.152
+        },
+        "mask_centroid_2d_no_erosion": [
+          1208,
+          388
+        ]
+      },
+      {
+        "id": "obj_5_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          666.0,
+          448.0,
+          687.0,
+          480.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 5,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_5_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_5_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.1315,
+          "max": 8.529,
+          "mean": 8.3373,
+          "median": 8.3396,
+          "std": 0.1004,
+          "num_pixels": 446,
+          "z_val": 8.3696,
+          "z_val_pixels": 123,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0023
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.272,
+          "y": 0.785,
+          "z": 8.37
+        },
+        "mask_centroid_2d": [
+          676,
+          464
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.1315,
+          "max": 8.529,
+          "mean": 8.3373,
+          "median": 8.3396,
+          "std": 0.1004,
+          "num_pixels": 446,
+          "z_val": 8.3696,
+          "z_val_pixels": 123,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0023
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.272,
+          "y": 0.785,
+          "z": 8.37
+        },
+        "mask_centroid_2d_no_erosion": [
+          676,
+          464
+        ]
+      },
+      {
+        "id": "obj_6_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          1051.0,
+          524.0,
+          1069.0,
+          553.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 6,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_6_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_6_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.3413,
+          "max": 10.9692,
+          "mean": 10.7061,
+          "median": 10.7102,
+          "std": 0.1416,
+          "num_pixels": 345,
+          "z_val": 10.7086,
+          "z_val_pixels": 164,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0752
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.067,
+          "y": 1.7,
+          "z": 10.709
+        },
+        "mask_centroid_2d": [
+          1061,
+          536
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.3413,
+          "max": 10.9692,
+          "mean": 10.7061,
+          "median": 10.7102,
+          "std": 0.1416,
+          "num_pixels": 345,
+          "z_val": 10.7086,
+          "z_val_pixels": 164,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0752
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.067,
+          "y": 1.7,
+          "z": 10.709
+        },
+        "mask_centroid_2d_no_erosion": [
+          1061,
+          536
+        ]
+      },
+      {
+        "id": "obj_7_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          622.0,
+          389.0,
+          638.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 7,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_7_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_7_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.5793,
+          "max": 8.6589,
+          "mean": 8.6185,
+          "median": 8.6189,
+          "std": 0.0175,
+          "num_pixels": 327,
+          "z_val": 8.6155,
+          "z_val_pixels": 131,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.017
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.07,
+          "y": 0.326,
+          "z": 8.615
+        },
+        "mask_centroid_2d": [
+          631,
+          402
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.5793,
+          "max": 8.6589,
+          "mean": 8.6185,
+          "median": 8.6189,
+          "std": 0.0175,
+          "num_pixels": 327,
+          "z_val": 8.6155,
+          "z_val_pixels": 131,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.017
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.07,
+          "y": 0.326,
+          "z": 8.615
+        },
+        "mask_centroid_2d_no_erosion": [
+          631,
+          402
+        ]
+      },
+      {
+        "id": "obj_8_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          933.0,
+          456.0,
+          1162.0,
+          555.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 8,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_8_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_8_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.1108,
+          "max": 11.7414,
+          "mean": 10.9049,
+          "median": 10.8403,
+          "std": 0.3831,
+          "num_pixels": 5272,
+          "z_val": 10.7494,
+          "z_val_pixels": 1110,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0019
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.918,
+          "y": 1.464,
+          "z": 10.749
+        },
+        "mask_centroid_2d": [
+          1044,
+          511
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.0727,
+          "max": 11.7703,
+          "mean": 10.9151,
+          "median": 10.8574,
+          "std": 0.4019,
+          "num_pixels": 6095,
+          "z_val": 10.7256,
+          "z_val_pixels": 1318,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1008
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 3.938,
+          "y": 1.461,
+          "z": 10.726
+        },
+        "mask_centroid_2d_no_erosion": [
+          1047,
+          511
+        ]
+      },
+      {
+        "id": "obj_9_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          822.0,
+          390.0,
+          838.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 9,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_9_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_9_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8286,
+          "max": 9.0779,
+          "mean": 8.9506,
+          "median": 8.9356,
+          "std": 0.0631,
+          "num_pixels": 240,
+          "z_val": 8.9804,
+          "z_val_pixels": 30,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0044
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.572,
+          "y": 0.348,
+          "z": 8.98
+        },
+        "mask_centroid_2d": [
+          834,
+          403
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8286,
+          "max": 9.0779,
+          "mean": 8.9506,
+          "median": 8.9356,
+          "std": 0.0631,
+          "num_pixels": 240,
+          "z_val": 8.9804,
+          "z_val_pixels": 30,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0044
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.572,
+          "y": 0.348,
+          "z": 8.98
+        },
+        "mask_centroid_2d_no_erosion": [
+          834,
+          403
+        ]
+      },
+      {
+        "id": "obj_10_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          766.0,
+          389.0,
+          792.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 10,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_10_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_10_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6427,
+          "max": 8.8055,
+          "mean": 8.726,
+          "median": 8.7209,
+          "std": 0.0401,
+          "num_pixels": 227,
+          "z_val": 8.7077,
+          "z_val_pixels": 79,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0109
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.076,
+          "y": 0.322,
+          "z": 8.708
+        },
+        "mask_centroid_2d": [
+          777,
+          401
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.6427,
+          "max": 8.8055,
+          "mean": 8.726,
+          "median": 8.7209,
+          "std": 0.0401,
+          "num_pixels": 227,
+          "z_val": 8.7077,
+          "z_val_pixels": 79,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0109
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.076,
+          "y": 0.322,
+          "z": 8.708
+        },
+        "mask_centroid_2d_no_erosion": [
+          777,
+          401
+        ]
+      },
+      {
+        "id": "obj_11_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          732.0,
+          389.0,
+          742.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 11,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_11_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_11_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6008,
+          "max": 8.6591,
+          "mean": 8.632,
+          "median": 8.6319,
+          "std": 0.0154,
+          "num_pixels": 126,
+          "z_val": 8.6145,
+          "z_val_pixels": 36,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0005
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.738,
+          "y": 0.303,
+          "z": 8.615
+        },
+        "mask_centroid_2d": [
+          735,
+          399
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.6008,
+          "max": 8.6591,
+          "mean": 8.632,
+          "median": 8.6319,
+          "std": 0.0154,
+          "num_pixels": 126,
+          "z_val": 8.6145,
+          "z_val_pixels": 36,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0005
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.738,
+          "y": 0.303,
+          "z": 8.615
+        },
+        "mask_centroid_2d_no_erosion": [
+          735,
+          399
+        ]
+      },
+      {
+        "id": "obj_12_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          751.0,
+          390.0,
+          811.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 12,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_12_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_12_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6398,
+          "max": 8.8055,
+          "mean": 8.7288,
+          "median": 8.7257,
+          "std": 0.0409,
+          "num_pixels": 255,
+          "z_val": 8.7051,
+          "z_val_pixels": 91,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0208
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.076,
+          "y": 0.322,
+          "z": 8.705
+        },
+        "mask_centroid_2d": [
+          777,
+          401
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.6398,
+          "max": 8.8055,
+          "mean": 8.7288,
+          "median": 8.7257,
+          "std": 0.0409,
+          "num_pixels": 255,
+          "z_val": 8.7051,
+          "z_val_pixels": 91,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0208
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.076,
+          "y": 0.322,
+          "z": 8.705
+        },
+        "mask_centroid_2d_no_erosion": [
+          777,
+          401
+        ]
+      },
+      {
+        "id": "obj_13_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          302.0,
+          283.0,
+          335.0,
+          335.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 13,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_13_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_13_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8381,
+          "max": 9.2646,
+          "mean": 9.0686,
+          "median": 9.0952,
+          "std": 0.1009,
+          "num_pixels": 820,
+          "z_val": 9.0714,
+          "z_val_pixels": 252,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0247
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.627,
+          "y": -0.475,
+          "z": 9.071
+        },
+        "mask_centroid_2d": [
+          319,
+          302
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8381,
+          "max": 9.2646,
+          "mean": 9.0686,
+          "median": 9.0952,
+          "std": 0.1009,
+          "num_pixels": 820,
+          "z_val": 9.0714,
+          "z_val_pixels": 252,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0247
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.627,
+          "y": -0.475,
+          "z": 9.071
+        },
+        "mask_centroid_2d_no_erosion": [
+          319,
+          302
+        ]
+      },
+      {
+        "id": "obj_14_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          398.0,
+          283.0,
+          429.0,
+          335.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 14,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_14_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_14_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.9174,
+          "max": 9.2192,
+          "mean": 9.0717,
+          "median": 9.0656,
+          "std": 0.0825,
+          "num_pixels": 1001,
+          "z_val": 9.0408,
+          "z_val_pixels": 428,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0468
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.876,
+          "y": -0.383,
+          "z": 9.041
+        },
+        "mask_centroid_2d": [
+          410,
+          313
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.9174,
+          "max": 9.2192,
+          "mean": 9.0717,
+          "median": 9.0656,
+          "std": 0.0825,
+          "num_pixels": 1001,
+          "z_val": 9.0408,
+          "z_val_pixels": 428,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0468
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.876,
+          "y": -0.383,
+          "z": 9.041
+        },
+        "mask_centroid_2d_no_erosion": [
+          410,
+          313
+        ]
+      },
+      {
+        "id": "obj_15_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          94.0,
+          282.0,
+          128.0,
+          336.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 15,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_15_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_15_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.5602,
+          "max": 8.984,
+          "mean": 8.7976,
+          "median": 8.8,
+          "std": 0.0897,
+          "num_pixels": 1161,
+          "z_val": 8.8577,
+          "z_val_pixels": 331,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.003
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.219,
+          "y": -0.416,
+          "z": 8.858
+        },
+        "mask_centroid_2d": [
+          112,
+          308
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.5602,
+          "max": 8.984,
+          "mean": 8.7976,
+          "median": 8.8,
+          "std": 0.0897,
+          "num_pixels": 1161,
+          "z_val": 8.8577,
+          "z_val_pixels": 331,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.003
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.219,
+          "y": -0.416,
+          "z": 8.858
+        },
+        "mask_centroid_2d_no_erosion": [
+          112,
+          308
+        ]
+      },
+      {
+        "id": "obj_16_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          253.0,
+          297.0,
+          281.0,
+          336.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 16,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_16_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_16_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.825,
+          "max": 9.1994,
+          "mean": 9.0215,
+          "median": 9.0135,
+          "std": 0.0934,
+          "num_pixels": 763,
+          "z_val": 9.0102,
+          "z_val_pixels": 239,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0294
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.032,
+          "y": -0.358,
+          "z": 9.01
+        },
+        "mask_centroid_2d": [
+          267,
+          316
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.825,
+          "max": 9.1994,
+          "mean": 9.0215,
+          "median": 9.0135,
+          "std": 0.0934,
+          "num_pixels": 763,
+          "z_val": 9.0102,
+          "z_val_pixels": 239,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0294
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.032,
+          "y": -0.358,
+          "z": 9.01
+        },
+        "mask_centroid_2d_no_erosion": [
+          267,
+          316
+        ]
+      },
+      {
+        "id": "obj_17_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          433.0,
+          297.0,
+          461.0,
+          336.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 17,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_17_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_17_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.7698,
+          "max": 9.1394,
+          "mean": 8.9545,
+          "median": 8.9576,
+          "std": 0.0912,
+          "num_pixels": 775,
+          "z_val": 8.8755,
+          "z_val_pixels": 249,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0344
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.545,
+          "y": -0.344,
+          "z": 8.875
+        },
+        "mask_centroid_2d": [
+          447,
+          317
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.7698,
+          "max": 9.1394,
+          "mean": 8.9545,
+          "median": 8.9576,
+          "std": 0.0912,
+          "num_pixels": 775,
+          "z_val": 8.8755,
+          "z_val_pixels": 249,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0344
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.545,
+          "y": -0.344,
+          "z": 8.875
+        },
+        "mask_centroid_2d_no_erosion": [
+          447,
+          317
+        ]
+      },
+      {
+        "id": "obj_18_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          215.0,
+          297.0,
+          248.0,
+          336.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 18,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_18_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_18_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.7606,
+          "max": 9.1306,
+          "mean": 8.9511,
+          "median": 8.9686,
+          "std": 0.0977,
+          "num_pixels": 912,
+          "z_val": 8.9225,
+          "z_val_pixels": 312,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0337
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.292,
+          "y": -0.354,
+          "z": 8.922
+        },
+        "mask_centroid_2d": [
+          231,
+          316
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.7606,
+          "max": 9.1306,
+          "mean": 8.9511,
+          "median": 8.9686,
+          "std": 0.0977,
+          "num_pixels": 912,
+          "z_val": 8.9225,
+          "z_val_pixels": 312,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0337
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.292,
+          "y": -0.354,
+          "z": 8.922
+        },
+        "mask_centroid_2d_no_erosion": [
+          231,
+          316
+        ]
+      },
+      {
+        "id": "obj_19_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          396.0,
+          390.0,
+          412.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 19,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_19_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_19_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.3279,
+          "max": 8.5934,
+          "mean": 8.4547,
+          "median": 8.4406,
+          "std": 0.0707,
+          "num_pixels": 242,
+          "z_val": 8.4425,
+          "z_val_pixels": 34,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0084
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.828,
+          "y": 0.327,
+          "z": 8.443
+        },
+        "mask_centroid_2d": [
+          400,
+          403
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.3279,
+          "max": 8.5934,
+          "mean": 8.4547,
+          "median": 8.4406,
+          "std": 0.0707,
+          "num_pixels": 242,
+          "z_val": 8.4425,
+          "z_val_pixels": 34,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0084
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.828,
+          "y": 0.327,
+          "z": 8.443
+        },
+        "mask_centroid_2d_no_erosion": [
+          400,
+          403
+        ]
+      },
+      {
+        "id": "obj_20_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          218.0,
+          297.0,
+          281.0,
+          336.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 20,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_20_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_20_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8201,
+          "max": 9.1994,
+          "mean": 9.0146,
+          "median": 9.01,
+          "std": 0.0925,
+          "num_pixels": 686,
+          "z_val": 9.0026,
+          "z_val_pixels": 209,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0199
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.029,
+          "y": -0.349,
+          "z": 9.003
+        },
+        "mask_centroid_2d": [
+          267,
+          317
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8221,
+          "max": 9.1994,
+          "mean": 9.0228,
+          "median": 9.0178,
+          "std": 0.0921,
+          "num_pixels": 817,
+          "z_val": 9.0045,
+          "z_val_pixels": 259,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0034
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.046,
+          "y": -0.357,
+          "z": 9.004
+        },
+        "mask_centroid_2d_no_erosion": [
+          265,
+          316
+        ]
+      },
+      {
+        "id": "obj_21_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          201.0,
+          597.0,
+          219.0,
+          621.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 21,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_21_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_21_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.2357,
+          "max": 7.5033,
+          "mean": 7.3802,
+          "median": 7.38,
+          "std": 0.069,
+          "num_pixels": 256,
+          "z_val": 7.3525,
+          "z_val_pixels": 127,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0344
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.852,
+          "y": 1.658,
+          "z": 7.352
+        },
+        "mask_centroid_2d": [
+          210,
+          610
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.2357,
+          "max": 7.5033,
+          "mean": 7.3802,
+          "median": 7.38,
+          "std": 0.069,
+          "num_pixels": 256,
+          "z_val": 7.3525,
+          "z_val_pixels": 127,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0344
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.852,
+          "y": 1.658,
+          "z": 7.352
+        },
+        "mask_centroid_2d_no_erosion": [
+          210,
+          610
+        ]
+      },
+      {
+        "id": "obj_22_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          297.0,
+          389.0,
+          313.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 22,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_22_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_22_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.3149,
+          "max": 8.5151,
+          "mean": 8.4147,
+          "median": 8.4104,
+          "std": 0.0481,
+          "num_pixels": 362,
+          "z_val": 8.4096,
+          "z_val_pixels": 177,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0019
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.534,
+          "y": 0.319,
+          "z": 8.41
+        },
+        "mask_centroid_2d": [
+          306,
+          402
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.3149,
+          "max": 8.5151,
+          "mean": 8.4147,
+          "median": 8.4104,
+          "std": 0.0481,
+          "num_pixels": 362,
+          "z_val": 8.4096,
+          "z_val_pixels": 177,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0019
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.534,
+          "y": 0.319,
+          "z": 8.41
+        },
+        "mask_centroid_2d_no_erosion": [
+          306,
+          402
+        ]
+      },
+      {
+        "id": "obj_23_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          402.0,
+          448.0,
+          419.0,
+          480.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 23,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_23_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_23_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.9087,
+          "max": 8.2141,
+          "mean": 8.0455,
+          "median": 8.0459,
+          "std": 0.0787,
+          "num_pixels": 330,
+          "z_val": 8.0618,
+          "z_val_pixels": 66,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0091
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.636,
+          "y": 0.778,
+          "z": 8.062
+        },
+        "mask_centroid_2d": [
+          415,
+          467
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.9087,
+          "max": 8.2141,
+          "mean": 8.0455,
+          "median": 8.0459,
+          "std": 0.0787,
+          "num_pixels": 330,
+          "z_val": 8.0618,
+          "z_val_pixels": 66,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0091
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.636,
+          "y": 0.778,
+          "z": 8.062
+        },
+        "mask_centroid_2d_no_erosion": [
+          415,
+          467
+        ]
+      },
+      {
+        "id": "obj_24_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          398.0,
+          283.0,
+          460.0,
+          335.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 24,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_24_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_24_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.9174,
+          "max": 9.2192,
+          "mean": 9.0656,
+          "median": 9.0563,
+          "std": 0.082,
+          "num_pixels": 897,
+          "z_val": 9.04,
+          "z_val_pixels": 378,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0483
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.876,
+          "y": -0.383,
+          "z": 9.04
+        },
+        "mask_centroid_2d": [
+          410,
+          313
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.9174,
+          "max": 9.2192,
+          "mean": 9.0716,
+          "median": 9.0658,
+          "std": 0.082,
+          "num_pixels": 1024,
+          "z_val": 9.0407,
+          "z_val_pixels": 440,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0092
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.876,
+          "y": -0.383,
+          "z": 9.041
+        },
+        "mask_centroid_2d_no_erosion": [
+          410,
+          313
+        ]
+      },
+      {
+        "id": "obj_25_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          115.0,
+          457.0,
+          125.0,
+          480.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 25,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_25_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_25_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.6048,
+          "max": 7.8466,
+          "mean": 7.7412,
+          "median": 7.7431,
+          "std": 0.0679,
+          "num_pixels": 146,
+          "z_val": 7.7403,
+          "z_val_pixels": 47,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0098
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.645,
+          "y": 0.74,
+          "z": 7.74
+        },
+        "mask_centroid_2d": [
+          118,
+          466
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.6048,
+          "max": 7.8466,
+          "mean": 7.7412,
+          "median": 7.7431,
+          "std": 0.0679,
+          "num_pixels": 146,
+          "z_val": 7.7403,
+          "z_val_pixels": 47,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0098
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.645,
+          "y": 0.74,
+          "z": 7.74
+        },
+        "mask_centroid_2d_no_erosion": [
+          118,
+          466
+        ]
+      },
+      {
+        "id": "obj_26_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          211.0,
+          550.0,
+          226.0,
+          575.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 26,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_26_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_26_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.535,
+          "max": 7.6022,
+          "mean": 7.5692,
+          "median": 7.5693,
+          "std": 0.0159,
+          "num_pixels": 303,
+          "z_val": 7.5717,
+          "z_val_pixels": 146,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0192
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.889,
+          "y": 1.393,
+          "z": 7.572
+        },
+        "mask_centroid_2d": [
+          217,
+          564
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.535,
+          "max": 7.6022,
+          "mean": 7.5692,
+          "median": 7.5693,
+          "std": 0.0159,
+          "num_pixels": 303,
+          "z_val": 7.5717,
+          "z_val_pixels": 146,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0192
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.889,
+          "y": 1.393,
+          "z": 7.572
+        },
+        "mask_centroid_2d_no_erosion": [
+          217,
+          564
+        ]
+      },
+      {
+        "id": "obj_27_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          203.0,
+          457.0,
+          221.0,
+          481.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 27,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_27_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_27_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.7166,
+          "max": 8.0076,
+          "mean": 7.8731,
+          "median": 7.888,
+          "std": 0.0813,
+          "num_pixels": 333,
+          "z_val": 7.8831,
+          "z_val_pixels": 130,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0286
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.044,
+          "y": 0.768,
+          "z": 7.883
+        },
+        "mask_centroid_2d": [
+          212,
+          468
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.7166,
+          "max": 8.0076,
+          "mean": 7.8731,
+          "median": 7.888,
+          "std": 0.0813,
+          "num_pixels": 333,
+          "z_val": 7.8831,
+          "z_val_pixels": 130,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0286
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.044,
+          "y": 0.768,
+          "z": 7.883
+        },
+        "mask_centroid_2d_no_erosion": [
+          212,
+          468
+        ]
+      },
+      {
+        "id": "obj_28_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          440.0,
+          381.0,
+          458.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 28,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_28_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_28_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.3565,
+          "max": 8.5375,
+          "mean": 8.438,
+          "median": 8.4378,
+          "std": 0.0423,
+          "num_pixels": 447,
+          "z_val": 8.4436,
+          "z_val_pixels": 227,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0173
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.447,
+          "y": 0.312,
+          "z": 8.444
+        },
+        "mask_centroid_2d": [
+          450,
+          401
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.3565,
+          "max": 8.5375,
+          "mean": 8.438,
+          "median": 8.4378,
+          "std": 0.0423,
+          "num_pixels": 447,
+          "z_val": 8.4436,
+          "z_val_pixels": 227,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0173
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.447,
+          "y": 0.312,
+          "z": 8.444
+        },
+        "mask_centroid_2d_no_erosion": [
+          450,
+          401
+        ]
+      },
+      {
+        "id": "obj_29_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          156.0,
+          596.0,
+          172.0,
+          621.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 29,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_29_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_29_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.1718,
+          "max": 7.4338,
+          "mean": 7.3125,
+          "median": 7.3253,
+          "std": 0.0785,
+          "num_pixels": 250,
+          "z_val": 7.3353,
+          "z_val_pixels": 44,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0106
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.123,
+          "y": 1.648,
+          "z": 7.335
+        },
+        "mask_centroid_2d": [
+          168,
+          609
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.1718,
+          "max": 7.4338,
+          "mean": 7.3125,
+          "median": 7.3253,
+          "std": 0.0785,
+          "num_pixels": 250,
+          "z_val": 7.3353,
+          "z_val_pixels": 44,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0106
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.123,
+          "y": 1.648,
+          "z": 7.335
+        },
+        "mask_centroid_2d_no_erosion": [
+          168,
+          609
+        ]
+      },
+      {
+        "id": "obj_30_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          349.0,
+          597.0,
+          364.0,
+          620.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 30,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_30_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_30_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.4259,
+          "max": 7.694,
+          "mean": 7.5861,
+          "median": 7.592,
+          "std": 0.0636,
+          "num_pixels": 252,
+          "z_val": 7.5909,
+          "z_val_pixels": 122,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0361
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.952,
+          "y": 1.685,
+          "z": 7.591
+        },
+        "mask_centroid_2d": [
+          355,
+          606
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.4259,
+          "max": 7.694,
+          "mean": 7.5861,
+          "median": 7.592,
+          "std": 0.0636,
+          "num_pixels": 252,
+          "z_val": 7.5909,
+          "z_val_pixels": 122,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0361
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.952,
+          "y": 1.685,
+          "z": 7.591
+        },
+        "mask_centroid_2d_no_erosion": [
+          355,
+          606
+        ]
+      },
+      {
+        "id": "obj_31_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          448.0,
+          457.0,
+          465.0,
+          489.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 31,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_31_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_31_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.8042,
+          "max": 8.1614,
+          "mean": 8.004,
+          "median": 7.9986,
+          "std": 0.107,
+          "num_pixels": 386,
+          "z_val": 7.9487,
+          "z_val_pixels": 113,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0074
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.327,
+          "y": 0.825,
+          "z": 7.949
+        },
+        "mask_centroid_2d": [
+          455,
+          475
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.8042,
+          "max": 8.1614,
+          "mean": 8.004,
+          "median": 7.9986,
+          "std": 0.107,
+          "num_pixels": 386,
+          "z_val": 7.9487,
+          "z_val_pixels": 113,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0074
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.327,
+          "y": 0.825,
+          "z": 7.949
+        },
+        "mask_centroid_2d_no_erosion": [
+          455,
+          475
+        ]
+      },
+      {
+        "id": "obj_32_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          492.0,
+          448.0,
+          540.0,
+          481.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 32,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_32_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_32_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.9236,
+          "max": 8.2328,
+          "mean": 8.0831,
+          "median": 8.0833,
+          "std": 0.073,
+          "num_pixels": 1279,
+          "z_val": 8.0249,
+          "z_val_pixels": 634,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0152
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.905,
+          "y": 0.738,
+          "z": 8.025
+        },
+        "mask_centroid_2d": [
+          515,
+          462
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.9236,
+          "max": 8.2328,
+          "mean": 8.0831,
+          "median": 8.0833,
+          "std": 0.073,
+          "num_pixels": 1279,
+          "z_val": 8.0249,
+          "z_val_pixels": 634,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0152
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.905,
+          "y": 0.738,
+          "z": 8.025
+        },
+        "mask_centroid_2d_no_erosion": [
+          515,
+          462
+        ]
+      },
+      {
+        "id": "obj_33_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          259.0,
+          556.0,
+          273.0,
+          575.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 33,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_33_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_33_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.6819,
+          "max": 7.7432,
+          "mean": 7.714,
+          "median": 7.7138,
+          "std": 0.0138,
+          "num_pixels": 263,
+          "z_val": 7.7177,
+          "z_val_pixels": 130,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0122
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.597,
+          "y": 1.427,
+          "z": 7.718
+        },
+        "mask_centroid_2d": [
+          267,
+          565
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.6819,
+          "max": 7.7432,
+          "mean": 7.714,
+          "median": 7.7138,
+          "std": 0.0138,
+          "num_pixels": 263,
+          "z_val": 7.7177,
+          "z_val_pixels": 130,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0122
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.597,
+          "y": 1.427,
+          "z": 7.718
+        },
+        "mask_centroid_2d_no_erosion": [
+          267,
+          565
+        ]
+      },
+      {
+        "id": "obj_34_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          962.0,
+          92.0,
+          1221.0,
+          146.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 34,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_34_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_34_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.0503,
+          "max": 10.5696,
+          "mean": 10.3202,
+          "median": 10.3303,
+          "std": 0.1161,
+          "num_pixels": 13980,
+          "z_val": 10.4212,
+          "z_val_pixels": 4804,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1386
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.259,
+          "y": -2.266,
+          "z": 10.421
+        },
+        "mask_centroid_2d": [
+          1093,
+          119
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.048,
+          "max": 10.5694,
+          "mean": 10.3198,
+          "median": 10.3297,
+          "std": 0.1158,
+          "num_pixels": 14294,
+          "z_val": 10.4112,
+          "z_val_pixels": 4935,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1425
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.255,
+          "y": -2.263,
+          "z": 10.411
+        },
+        "mask_centroid_2d_no_erosion": [
+          1093,
+          119
+        ]
+      },
+      {
+        "id": "obj_35_GRiT+YOLO",
+        "label": "parachute",
+        "bbox": [
+          967.0,
+          236.0,
+          1132.0,
+          363.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 35,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_35_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_35_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.9089,
+          "max": 11.7176,
+          "mean": 11.3298,
+          "median": 11.3534,
+          "std": 0.1836,
+          "num_pixels": 7381,
+          "z_val": 11.4129,
+          "z_val_pixels": 2236,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0388
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.118,
+          "y": -0.855,
+          "z": 11.413
+        },
+        "mask_centroid_2d": [
+          1040,
+          277
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.898,
+          "max": 11.7327,
+          "mean": 11.3297,
+          "median": 11.3528,
+          "std": 0.19,
+          "num_pixels": 8102,
+          "z_val": 11.4135,
+          "z_val_pixels": 2471,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0681
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.129,
+          "y": -0.844,
+          "z": 11.414
+        },
+        "mask_centroid_2d_no_erosion": [
+          1041,
+          278
+        ]
+      },
+      {
+        "id": "obj_36_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          742.0,
+          92.0,
+          1221.0,
+          146.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 36,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_36_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_36_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.0524,
+          "max": 10.5687,
+          "mean": 10.3206,
+          "median": 10.3305,
+          "std": 0.1157,
+          "num_pixels": 13925,
+          "z_val": 10.4145,
+          "z_val_pixels": 4788,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1376
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.256,
+          "y": -2.264,
+          "z": 10.415
+        },
+        "mask_centroid_2d": [
+          1093,
+          119
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.0473,
+          "max": 10.5714,
+          "mean": 10.3202,
+          "median": 10.33,
+          "std": 0.1158,
+          "num_pixels": 14244,
+          "z_val": 10.4212,
+          "z_val_pixels": 4925,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1833
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.259,
+          "y": -2.266,
+          "z": 10.421
+        },
+        "mask_centroid_2d_no_erosion": [
+          1093,
+          119
+        ]
+      },
+      {
+        "id": "obj_37_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          621.0,
+          207.0,
+          651.0,
+          259.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 37,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_37_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_37_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.1514,
+          "max": 9.3054,
+          "mean": 9.232,
+          "median": 9.2328,
+          "std": 0.0359,
+          "num_pixels": 1000,
+          "z_val": 9.2715,
+          "z_val_pixels": 318,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0257
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.075,
+          "y": -1.062,
+          "z": 9.272
+        },
+        "mask_centroid_2d": [
+          631,
+          233
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.1514,
+          "max": 9.3054,
+          "mean": 9.232,
+          "median": 9.2328,
+          "std": 0.0359,
+          "num_pixels": 1000,
+          "z_val": 9.2715,
+          "z_val_pixels": 318,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0257
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.075,
+          "y": -1.062,
+          "z": 9.272
+        },
+        "mask_centroid_2d_no_erosion": [
+          631,
+          233
+        ]
+      },
+      {
+        "id": "obj_38_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          678.0,
+          221.0,
+          711.0,
+          274.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 38,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_38_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_38_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.0557,
+          "max": 9.2898,
+          "mean": 9.1736,
+          "median": 9.1686,
+          "std": 0.058,
+          "num_pixels": 1135,
+          "z_val": 9.2125,
+          "z_val_pixels": 348,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0141
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.399,
+          "y": -0.964,
+          "z": 9.213
+        },
+        "mask_centroid_2d": [
+          688,
+          244
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.0557,
+          "max": 9.2898,
+          "mean": 9.1736,
+          "median": 9.1686,
+          "std": 0.058,
+          "num_pixels": 1135,
+          "z_val": 9.2125,
+          "z_val_pixels": 348,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0141
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.399,
+          "y": -0.964,
+          "z": 9.213
+        },
+        "mask_centroid_2d_no_erosion": [
+          688,
+          244
+        ]
+      },
+      {
+        "id": "obj_39_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          586.0,
+          221.0,
+          613.0,
+          260.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 39,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_39_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_39_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.041,
+          "max": 9.2394,
+          "mean": 9.1403,
+          "median": 9.1412,
+          "std": 0.0459,
+          "num_pixels": 763,
+          "z_val": 9.1545,
+          "z_val_pixels": 233,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0275
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.339,
+          "y": -0.983,
+          "z": 9.154
+        },
+        "mask_centroid_2d": [
+          599,
+          241
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.041,
+          "max": 9.2394,
+          "mean": 9.1403,
+          "median": 9.1412,
+          "std": 0.0459,
+          "num_pixels": 763,
+          "z_val": 9.1545,
+          "z_val_pixels": 233,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0275
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.339,
+          "y": -0.983,
+          "z": 9.154
+        },
+        "mask_centroid_2d_no_erosion": [
+          599,
+          241
+        ]
+      },
+      {
+        "id": "obj_40_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          1059.0,
+          102.0,
+          1117.0,
+          136.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 40,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_40_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_40_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.2661,
+          "max": 10.481,
+          "mean": 10.3895,
+          "median": 10.4091,
+          "std": 0.057,
+          "num_pixels": 620,
+          "z_val": 10.4324,
+          "z_val_pixels": 286,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0379
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.113,
+          "y": -2.259,
+          "z": 10.432
+        },
+        "mask_centroid_2d": [
+          1077,
+          120
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.2661,
+          "max": 10.481,
+          "mean": 10.3895,
+          "median": 10.4091,
+          "std": 0.057,
+          "num_pixels": 620,
+          "z_val": 10.4324,
+          "z_val_pixels": 286,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0379
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.113,
+          "y": -2.259,
+          "z": 10.432
+        },
+        "mask_centroid_2d_no_erosion": [
+          1077,
+          120
+        ]
+      },
+      {
+        "id": "obj_41_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          585.0,
+          221.0,
+          650.0,
+          260.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 41,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_41_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_41_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.041,
+          "max": 9.2366,
+          "mean": 9.1399,
+          "median": 9.1419,
+          "std": 0.0449,
+          "num_pixels": 675,
+          "z_val": 9.1563,
+          "z_val_pixels": 198,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0312
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.33,
+          "y": -0.983,
+          "z": 9.156
+        },
+        "mask_centroid_2d": [
+          600,
+          241
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.0378,
+          "max": 9.2464,
+          "mean": 9.1423,
+          "median": 9.1431,
+          "std": 0.0473,
+          "num_pixels": 793,
+          "z_val": 9.1558,
+          "z_val_pixels": 248,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0411
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.33,
+          "y": -0.983,
+          "z": 9.156
+        },
+        "mask_centroid_2d_no_erosion": [
+          600,
+          241
+        ]
+      },
+      {
+        "id": "obj_42_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          1096.0,
+          102.0,
+          1122.0,
+          136.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 42,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_42_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_42_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.2912,
+          "max": 10.5248,
+          "mean": 10.4178,
+          "median": 10.4201,
+          "std": 0.0457,
+          "num_pixels": 593,
+          "z_val": 10.4161,
+          "z_val_pixels": 246,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0433
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.379,
+          "y": -2.293,
+          "z": 10.416
+        },
+        "mask_centroid_2d": [
+          1106,
+          116
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.2912,
+          "max": 10.5248,
+          "mean": 10.4178,
+          "median": 10.4201,
+          "std": 0.0457,
+          "num_pixels": 593,
+          "z_val": 10.4161,
+          "z_val_pixels": 246,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0433
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.379,
+          "y": -2.293,
+          "z": 10.416
+        },
+        "mask_centroid_2d_no_erosion": [
+          1106,
+          116
+        ]
+      },
+      {
+        "id": "obj_43_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          1156.0,
+          111.0,
+          1178.0,
+          137.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 43,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_43_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_43_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.2773,
+          "max": 10.4943,
+          "mean": 10.3737,
+          "median": 10.372,
+          "std": 0.0557,
+          "num_pixels": 476,
+          "z_val": 10.3703,
+          "z_val_pixels": 203,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0258
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.93,
+          "y": -2.198,
+          "z": 10.37
+        },
+        "mask_centroid_2d": [
+          1167,
+          125
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.2773,
+          "max": 10.4943,
+          "mean": 10.3737,
+          "median": 10.372,
+          "std": 0.0557,
+          "num_pixels": 476,
+          "z_val": 10.3703,
+          "z_val_pixels": 203,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0258
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.93,
+          "y": -2.198,
+          "z": 10.37
+        },
+        "mask_centroid_2d_no_erosion": [
+          1167,
+          125
+        ]
+      },
+      {
+        "id": "obj_44_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          767.0,
+          389.0,
+          785.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 44,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_44_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_44_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6398,
+          "max": 8.8055,
+          "mean": 8.7241,
+          "median": 8.7181,
+          "std": 0.0403,
+          "num_pixels": 205,
+          "z_val": 8.7037,
+          "z_val_pixels": 66,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0106
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.076,
+          "y": 0.33,
+          "z": 8.704
+        },
+        "mask_centroid_2d": [
+          777,
+          402
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.6398,
+          "max": 8.8055,
+          "mean": 8.7241,
+          "median": 8.7181,
+          "std": 0.0403,
+          "num_pixels": 205,
+          "z_val": 8.7037,
+          "z_val_pixels": 66,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0106
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.076,
+          "y": 0.33,
+          "z": 8.704
+        },
+        "mask_centroid_2d_no_erosion": [
+          777,
+          402
+        ]
+      },
+      {
+        "id": "obj_45_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          732.0,
+          389.0,
+          758.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 45,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_45_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_45_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.5994,
+          "max": 8.6591,
+          "mean": 8.6317,
+          "median": 8.6325,
+          "std": 0.0154,
+          "num_pixels": 138,
+          "z_val": 8.6429,
+          "z_val_pixels": 43,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0143
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.741,
+          "y": 0.304,
+          "z": 8.643
+        },
+        "mask_centroid_2d": [
+          735,
+          399
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.5994,
+          "max": 8.6591,
+          "mean": 8.6317,
+          "median": 8.6325,
+          "std": 0.0154,
+          "num_pixels": 138,
+          "z_val": 8.6429,
+          "z_val_pixels": 43,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0143
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.741,
+          "y": 0.304,
+          "z": 8.643
+        },
+        "mask_centroid_2d_no_erosion": [
+          735,
+          399
+        ]
+      },
+      {
+        "id": "obj_46_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          656.0,
+          114.0,
+          684.0,
+          135.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 46,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_46_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_46_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.2273,
+          "max": 9.3738,
+          "mean": 9.3058,
+          "median": 9.3111,
+          "std": 0.0344,
+          "num_pixels": 224,
+          "z_val": 9.314,
+          "z_val_pixels": 76,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0054
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.26,
+          "y": -1.975,
+          "z": 9.314
+        },
+        "mask_centroid_2d": [
+          671,
+          125
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.2273,
+          "max": 9.3738,
+          "mean": 9.3058,
+          "median": 9.3111,
+          "std": 0.0344,
+          "num_pixels": 224,
+          "z_val": 9.314,
+          "z_val_pixels": 76,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0054
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.26,
+          "y": -1.975,
+          "z": 9.314
+        },
+        "mask_centroid_2d_no_erosion": [
+          671,
+          125
+        ]
+      },
+      {
+        "id": "obj_47_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          445.0,
+          221.0,
+          476.0,
+          259.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 47,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_47_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_47_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8501,
+          "max": 9.0047,
+          "mean": 8.9246,
+          "median": 8.9212,
+          "std": 0.0321,
+          "num_pixels": 870,
+          "z_val": 8.9146,
+          "z_val_pixels": 233,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0402
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.488,
+          "y": -0.981,
+          "z": 8.915
+        },
+        "mask_centroid_2d": [
+          455,
+          238
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8501,
+          "max": 9.0047,
+          "mean": 8.9246,
+          "median": 8.9212,
+          "std": 0.0321,
+          "num_pixels": 870,
+          "z_val": 8.9146,
+          "z_val_pixels": 233,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0402
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.488,
+          "y": -0.981,
+          "z": 8.915
+        },
+        "mask_centroid_2d_no_erosion": [
+          455,
+          238
+        ]
+      },
+      {
+        "id": "obj_48_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          251.0,
+          211.0,
+          272.0,
+          260.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 48,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_48_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_48_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8218,
+          "max": 9.0326,
+          "mean": 8.9214,
+          "median": 8.9084,
+          "std": 0.0465,
+          "num_pixels": 642,
+          "z_val": 8.8937,
+          "z_val_pixels": 216,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0402
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.041,
+          "y": -1.011,
+          "z": 8.894
+        },
+        "mask_centroid_2d": [
+          261,
+          234
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8218,
+          "max": 9.0326,
+          "mean": 8.9214,
+          "median": 8.9084,
+          "std": 0.0465,
+          "num_pixels": 642,
+          "z_val": 8.8937,
+          "z_val_pixels": 216,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0402
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.041,
+          "y": -1.011,
+          "z": 8.894
+        },
+        "mask_centroid_2d_no_erosion": [
+          261,
+          234
+        ]
+      },
+      {
+        "id": "obj_49_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          523.0,
+          222.0,
+          553.0,
+          260.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 49,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_49_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_49_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8604,
+          "max": 9.0155,
+          "mean": 8.9396,
+          "median": 8.9418,
+          "std": 0.0355,
+          "num_pixels": 848,
+          "z_val": 8.9572,
+          "z_val_pixels": 206,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0353
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.873,
+          "y": -0.953,
+          "z": 8.957
+        },
+        "mask_centroid_2d": [
+          532,
+          242
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8604,
+          "max": 9.0155,
+          "mean": 8.9396,
+          "median": 8.9418,
+          "std": 0.0355,
+          "num_pixels": 848,
+          "z_val": 8.9572,
+          "z_val_pixels": 206,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0353
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.873,
+          "y": -0.953,
+          "z": 8.957
+        },
+        "mask_centroid_2d_no_erosion": [
+          532,
+          242
+        ]
+      },
+      {
+        "id": "obj_50_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          215.0,
+          221.0,
+          245.0,
+          259.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 50,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_50_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_50_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8476,
+          "max": 9.0197,
+          "mean": 8.9276,
+          "median": 8.9235,
+          "std": 0.0389,
+          "num_pixels": 853,
+          "z_val": 8.9194,
+          "z_val_pixels": 227,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0463
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.347,
+          "y": -0.982,
+          "z": 8.919
+        },
+        "mask_centroid_2d": [
+          224,
+          238
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8476,
+          "max": 9.0197,
+          "mean": 8.9276,
+          "median": 8.9235,
+          "std": 0.0389,
+          "num_pixels": 853,
+          "z_val": 8.9194,
+          "z_val_pixels": 227,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0463
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.347,
+          "y": -0.982,
+          "z": 8.919
+        },
+        "mask_centroid_2d_no_erosion": [
+          224,
+          238
+        ]
+      },
+      {
+        "id": "obj_51_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          342.0,
+          221.0,
+          374.0,
+          274.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 51,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_51_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_51_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8076,
+          "max": 9.1294,
+          "mean": 8.9508,
+          "median": 8.9476,
+          "std": 0.0735,
+          "num_pixels": 1101,
+          "z_val": 8.9961,
+          "z_val_pixels": 336,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.039
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.345,
+          "y": -0.958,
+          "z": 8.996
+        },
+        "mask_centroid_2d": [
+          351,
+          242
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8076,
+          "max": 9.1294,
+          "mean": 8.9508,
+          "median": 8.9476,
+          "std": 0.0735,
+          "num_pixels": 1101,
+          "z_val": 8.9961,
+          "z_val_pixels": 336,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.039
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.345,
+          "y": -0.958,
+          "z": 8.996
+        },
+        "mask_centroid_2d_no_erosion": [
+          351,
+          242
+        ]
+      },
+      {
+        "id": "obj_52_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          302.0,
+          221.0,
+          334.0,
+          260.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 52,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_52_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_52_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8665,
+          "max": 9.0441,
+          "mean": 8.9527,
+          "median": 8.953,
+          "std": 0.0425,
+          "num_pixels": 913,
+          "z_val": 8.9333,
+          "z_val_pixels": 320,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0412
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.603,
+          "y": -0.967,
+          "z": 8.933
+        },
+        "mask_centroid_2d": [
+          317,
+          240
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8665,
+          "max": 9.0441,
+          "mean": 8.9527,
+          "median": 8.953,
+          "std": 0.0425,
+          "num_pixels": 913,
+          "z_val": 8.9333,
+          "z_val_pixels": 320,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0412
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.603,
+          "y": -0.967,
+          "z": 8.933
+        },
+        "mask_centroid_2d_no_erosion": [
+          317,
+          240
+        ]
+      },
+      {
+        "id": "obj_53_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          483.0,
+          221.0,
+          516.0,
+          260.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 53,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_53_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_53_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8406,
+          "max": 9.0315,
+          "mean": 8.9349,
+          "median": 8.9302,
+          "std": 0.044,
+          "num_pixels": 908,
+          "z_val": 8.9271,
+          "z_val_pixels": 301,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0309
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.136,
+          "y": -0.966,
+          "z": 8.927
+        },
+        "mask_centroid_2d": [
+          499,
+          240
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8406,
+          "max": 9.0315,
+          "mean": 8.9349,
+          "median": 8.9302,
+          "std": 0.044,
+          "num_pixels": 908,
+          "z_val": 8.9271,
+          "z_val_pixels": 301,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0309
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.136,
+          "y": -0.966,
+          "z": 8.927
+        },
+        "mask_centroid_2d_no_erosion": [
+          499,
+          240
+        ]
+      },
+      {
+        "id": "obj_54_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          72.0,
+          91.0,
+          105.0,
+          120.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 54,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_54_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_54_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6308,
+          "max": 8.9662,
+          "mean": 8.7977,
+          "median": 8.7836,
+          "std": 0.0824,
+          "num_pixels": 699,
+          "z_val": 8.7412,
+          "z_val_pixels": 346,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0211
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.353,
+          "y": -1.987,
+          "z": 8.741
+        },
+        "mask_centroid_2d": [
+          88,
+          108
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.6308,
+          "max": 8.9662,
+          "mean": 8.7977,
+          "median": 8.7836,
+          "std": 0.0824,
+          "num_pixels": 699,
+          "z_val": 8.7412,
+          "z_val_pixels": 346,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0211
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.353,
+          "y": -1.987,
+          "z": 8.741
+        },
+        "mask_centroid_2d_no_erosion": [
+          88,
+          108
+        ]
+      },
+      {
+        "id": "obj_55_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          340.0,
+          297.0,
+          371.0,
+          336.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 55,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_55_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_55_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.9042,
+          "max": 9.2418,
+          "mean": 9.0879,
+          "median": 9.1025,
+          "std": 0.0891,
+          "num_pixels": 1064,
+          "z_val": 9.1133,
+          "z_val_pixels": 503,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0176
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.327,
+          "y": -0.354,
+          "z": 9.113
+        },
+        "mask_centroid_2d": [
+          357,
+          317
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.9042,
+          "max": 9.2418,
+          "mean": 9.0879,
+          "median": 9.1025,
+          "std": 0.0891,
+          "num_pixels": 1064,
+          "z_val": 9.1133,
+          "z_val_pixels": 503,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0176
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.327,
+          "y": -0.354,
+          "z": 9.113
+        },
+        "mask_centroid_2d_no_erosion": [
+          357,
+          317
+        ]
+      },
+      {
+        "id": "obj_56_GRiT+YOLO",
+        "label": "bright",
+        "bbox": [
+          487.0,
+          222.0,
+          553.0,
+          260.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 56,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_56_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_56_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8604,
+          "max": 9.0155,
+          "mean": 8.9396,
+          "median": 8.9418,
+          "std": 0.0355,
+          "num_pixels": 849,
+          "z_val": 8.9572,
+          "z_val_pixels": 208,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.031
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.873,
+          "y": -0.953,
+          "z": 8.957
+        },
+        "mask_centroid_2d": [
+          532,
+          242
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8604,
+          "max": 9.0155,
+          "mean": 8.9396,
+          "median": 8.9418,
+          "std": 0.0355,
+          "num_pixels": 849,
+          "z_val": 8.9572,
+          "z_val_pixels": 208,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.031
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.873,
+          "y": -0.953,
+          "z": 8.957
+        },
+        "mask_centroid_2d_no_erosion": [
+          532,
+          242
+        ]
+      },
+      {
+        "id": "obj_57_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          645.0,
+          381.0,
+          662.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 57,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_57_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_57_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.5842,
+          "max": 8.6765,
+          "mean": 8.6272,
+          "median": 8.6213,
+          "std": 0.0247,
+          "num_pixels": 310,
+          "z_val": 8.6185,
+          "z_val_pixels": 45,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.008
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.07,
+          "y": 0.303,
+          "z": 8.619
+        },
+        "mask_centroid_2d": [
+          649,
+          399
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.5842,
+          "max": 8.6765,
+          "mean": 8.6272,
+          "median": 8.6213,
+          "std": 0.0247,
+          "num_pixels": 310,
+          "z_val": 8.6185,
+          "z_val_pixels": 45,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.008
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.07,
+          "y": 0.303,
+          "z": 8.619
+        },
+        "mask_centroid_2d_no_erosion": [
+          649,
+          399
+        ]
+      },
+      {
+        "id": "obj_58_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          452.0,
+          97.0,
+          466.0,
+          107.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 58,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_58_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_58_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.0889,
+          "max": 9.239,
+          "mean": 9.1594,
+          "median": 9.1579,
+          "std": 0.0368,
+          "num_pixels": 118,
+          "z_val": 9.1611,
+          "z_val_pixels": 59,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0385
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.496,
+          "y": -2.132,
+          "z": 9.161
+        },
+        "mask_centroid_2d": [
+          459,
+          102
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.0889,
+          "max": 9.239,
+          "mean": 9.1594,
+          "median": 9.1579,
+          "std": 0.0368,
+          "num_pixels": 118,
+          "z_val": 9.1611,
+          "z_val_pixels": 59,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0385
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.496,
+          "y": -2.132,
+          "z": 9.161
+        },
+        "mask_centroid_2d_no_erosion": [
+          459,
+          102
+        ]
+      },
+      {
+        "id": "obj_59_GRiT+YOLO",
+        "label": "bright",
+        "bbox": [
+          308.0,
+          221.0,
+          374.0,
+          273.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 59,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_59_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_59_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8076,
+          "max": 9.1241,
+          "mean": 8.9489,
+          "median": 8.9475,
+          "std": 0.0705,
+          "num_pixels": 966,
+          "z_val": 8.9618,
+          "z_val_pixels": 243,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0381
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.336,
+          "y": -0.954,
+          "z": 8.962
+        },
+        "mask_centroid_2d": [
+          351,
+          242
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8076,
+          "max": 9.1255,
+          "mean": 8.9483,
+          "median": 8.9457,
+          "std": 0.0709,
+          "num_pixels": 1091,
+          "z_val": 8.9627,
+          "z_val_pixels": 336,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.04
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.337,
+          "y": -0.954,
+          "z": 8.963
+        },
+        "mask_centroid_2d_no_erosion": [
+          351,
+          242
+        ]
+      },
+      {
+        "id": "obj_60_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          92.0,
+          207.0,
+          142.0,
+          259.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 60,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_60_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_60_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6491,
+          "max": 8.9401,
+          "mean": 8.81,
+          "median": 8.8292,
+          "std": 0.0762,
+          "num_pixels": 1192,
+          "z_val": 8.8635,
+          "z_val_pixels": 500,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0113
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.174,
+          "y": -0.983,
+          "z": 8.864
+        },
+        "mask_centroid_2d": [
+          118,
+          237
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.6367,
+          "max": 8.9422,
+          "mean": 8.8069,
+          "median": 8.8285,
+          "std": 0.081,
+          "num_pixels": 1363,
+          "z_val": 8.8551,
+          "z_val_pixels": 598,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0098
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.178,
+          "y": -0.991,
+          "z": 8.855
+        },
+        "mask_centroid_2d_no_erosion": [
+          117,
+          236
+        ]
+      },
+      {
+        "id": "obj_61_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          405.0,
+          130.0,
+          413.0,
+          145.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 61,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_61_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_61_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.0147,
+          "max": 9.2057,
+          "mean": 9.1307,
+          "median": 9.1437,
+          "std": 0.0593,
+          "num_pixels": 128,
+          "z_val": 9.0865,
+          "z_val_pixels": 58,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0018
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.894,
+          "y": -1.82,
+          "z": 9.086
+        },
+        "mask_centroid_2d": [
+          409,
+          138
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.0147,
+          "max": 9.2057,
+          "mean": 9.1307,
+          "median": 9.1437,
+          "std": 0.0593,
+          "num_pixels": 128,
+          "z_val": 9.0865,
+          "z_val_pixels": 58,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0018
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.894,
+          "y": -1.82,
+          "z": 9.086
+        },
+        "mask_centroid_2d_no_erosion": [
+          409,
+          138
+        ]
+      },
+      {
+        "id": "obj_62_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          687.0,
+          408.0,
+          692.0,
+          418.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 62,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_62_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_62_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6269,
+          "max": 8.6755,
+          "mean": 8.651,
+          "median": 8.649,
+          "std": 0.0124,
+          "num_pixels": 52,
+          "z_val": 8.6425,
+          "z_val_pixels": 24,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0132
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.382,
+          "y": 0.413,
+          "z": 8.643
+        },
+        "mask_centroid_2d": [
+          689,
+          413
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.6269,
+          "max": 8.6755,
+          "mean": 8.651,
+          "median": 8.649,
+          "std": 0.0124,
+          "num_pixels": 52,
+          "z_val": 8.6425,
+          "z_val_pixels": 24,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0132
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.382,
+          "y": 0.413,
+          "z": 8.643
+        },
+        "mask_centroid_2d_no_erosion": [
+          689,
+          413
+        ]
+      },
+      {
+        "id": "obj_63_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          537.0,
+          113.0,
+          561.0,
+          136.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 63,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_63_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_63_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.0207,
+          "max": 9.2272,
+          "mean": 9.1327,
+          "median": 9.1489,
+          "std": 0.0542,
+          "num_pixels": 273,
+          "z_val": 9.1489,
+          "z_val_pixels": 267,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0009
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.693,
+          "y": -1.973,
+          "z": 9.149
+        },
+        "mask_centroid_2d": [
+          556,
+          121
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.0207,
+          "max": 9.2272,
+          "mean": 9.1327,
+          "median": 9.1489,
+          "std": 0.0542,
+          "num_pixels": 273,
+          "z_val": 9.1489,
+          "z_val_pixels": 267,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0009
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.693,
+          "y": -1.973,
+          "z": 9.149
+        },
+        "mask_centroid_2d_no_erosion": [
+          556,
+          121
+        ]
+      },
+      {
+        "id": "obj_64_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          346.0,
+          102.0,
+          362.0,
+          119.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 64,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_64_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_64_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.1555,
+          "max": 9.3799,
+          "mean": 9.286,
+          "median": 9.3103,
+          "std": 0.0639,
+          "num_pixels": 186,
+          "z_val": 9.3127,
+          "z_val_pixels": 87,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.005
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.42,
+          "y": -2.092,
+          "z": 9.313
+        },
+        "mask_centroid_2d": [
+          352,
+          111
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.1555,
+          "max": 9.3799,
+          "mean": 9.286,
+          "median": 9.3103,
+          "std": 0.0639,
+          "num_pixels": 186,
+          "z_val": 9.3127,
+          "z_val_pixels": 87,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.005
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.42,
+          "y": -2.092,
+          "z": 9.313
+        },
+        "mask_centroid_2d_no_erosion": [
+          352,
+          111
+        ]
+      },
+      {
+        "id": "obj_65_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          165.0,
+          130.0,
+          178.0,
+          145.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 65,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_65_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_65_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8353,
+          "max": 9.0405,
+          "mean": 8.9387,
+          "median": 8.9319,
+          "std": 0.0522,
+          "num_pixels": 103,
+          "z_val": 8.9289,
+          "z_val_pixels": 44,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0066
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.778,
+          "y": -1.78,
+          "z": 8.929
+        },
+        "mask_centroid_2d": [
+          171,
+          139
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8353,
+          "max": 9.0405,
+          "mean": 8.9387,
+          "median": 8.9319,
+          "std": 0.0522,
+          "num_pixels": 103,
+          "z_val": 8.9289,
+          "z_val_pixels": 44,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0066
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.778,
+          "y": -1.78,
+          "z": 8.929
+        },
+        "mask_centroid_2d_no_erosion": [
+          171,
+          139
+        ]
+      },
+      {
+        "id": "obj_66_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          352.0,
+          130.0,
+          369.0,
+          145.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 66,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_66_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_66_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.0406,
+          "max": 9.2551,
+          "mean": 9.1777,
+          "median": 9.1957,
+          "std": 0.0595,
+          "num_pixels": 76,
+          "z_val": 9.1591,
+          "z_val_pixels": 21,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0322
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.289,
+          "y": -1.859,
+          "z": 9.159
+        },
+        "mask_centroid_2d": [
+          363,
+          135
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.0406,
+          "max": 9.2551,
+          "mean": 9.1777,
+          "median": 9.1957,
+          "std": 0.0595,
+          "num_pixels": 76,
+          "z_val": 9.1591,
+          "z_val_pixels": 21,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0322
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.289,
+          "y": -1.859,
+          "z": 9.159
+        },
+        "mask_centroid_2d_no_erosion": [
+          363,
+          135
+        ]
+      },
+      {
+        "id": "obj_67_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          120.0,
+          127.0,
+          137.0,
+          145.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 67,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_67_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_67_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.7486,
+          "max": 9.0385,
+          "mean": 8.8896,
+          "median": 8.8805,
+          "std": 0.0741,
+          "num_pixels": 300,
+          "z_val": 8.8426,
+          "z_val_pixels": 151,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0067
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.084,
+          "y": -1.787,
+          "z": 8.843
+        },
+        "mask_centroid_2d": [
+          128,
+          136
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.7486,
+          "max": 9.0385,
+          "mean": 8.8896,
+          "median": 8.8805,
+          "std": 0.0741,
+          "num_pixels": 300,
+          "z_val": 8.8426,
+          "z_val_pixels": 151,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0067
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.084,
+          "y": -1.787,
+          "z": 8.843
+        },
+        "mask_centroid_2d_no_erosion": [
+          128,
+          136
+        ]
+      },
+      {
+        "id": "obj_68_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          306.0,
+          102.0,
+          310.0,
+          119.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 68,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_68_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_68_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.1432,
+          "max": 9.4224,
+          "mean": 9.3323,
+          "median": 9.3716,
+          "std": 0.0872,
+          "num_pixels": 63,
+          "z_val": 9.3681,
+          "z_val_pixels": 19,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0385
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.806,
+          "y": -2.104,
+          "z": 9.368
+        },
+        "mask_centroid_2d": [
+          308,
+          111
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.1432,
+          "max": 9.4224,
+          "mean": 9.3323,
+          "median": 9.3716,
+          "std": 0.0872,
+          "num_pixels": 63,
+          "z_val": 9.3681,
+          "z_val_pixels": 19,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0385
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.806,
+          "y": -2.104,
+          "z": 9.368
+        },
+        "mask_centroid_2d_no_erosion": [
+          308,
+          111
+        ]
+      },
+      {
+        "id": "obj_69_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          878.0,
+          210.0,
+          1237.0,
+          509.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 69,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_69_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_69_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.0747,
+          "max": 11.5326,
+          "mean": 10.2898,
+          "median": 10.2918,
+          "std": 0.576,
+          "num_pixels": 44327,
+          "z_val": 11.5004,
+          "z_val_pixels": 124,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0917
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.177,
+          "y": 0.062,
+          "z": 11.5
+        },
+        "mask_centroid_2d": [
+          1139,
+          366
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.0205,
+          "max": 11.6001,
+          "mean": 10.2932,
+          "median": 10.2867,
+          "std": 0.6084,
+          "num_pixels": 48303,
+          "z_val": 11.4818,
+          "z_val_pixels": 609,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0241
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 5.096,
+          "y": 0.228,
+          "z": 11.482
+        },
+        "mask_centroid_2d_no_erosion": [
+          1132,
+          382
+        ]
+      },
+      {
+        "id": "obj_70_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          177.0,
+          207.0,
+          207.0,
+          259.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 70,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_70_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_70_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.7254,
+          "max": 8.9668,
+          "mean": 8.8375,
+          "median": 8.8286,
+          "std": 0.0579,
+          "num_pixels": 1206,
+          "z_val": 8.7865,
+          "z_val_pixels": 435,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0458
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.575,
+          "y": -1.015,
+          "z": 8.787
+        },
+        "mask_centroid_2d": [
+          189,
+          232
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.7254,
+          "max": 8.9668,
+          "mean": 8.8375,
+          "median": 8.8286,
+          "std": 0.0579,
+          "num_pixels": 1206,
+          "z_val": 8.7865,
+          "z_val_pixels": 435,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0458
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.575,
+          "y": -1.015,
+          "z": 8.787
+        },
+        "mask_centroid_2d_no_erosion": [
+          189,
+          232
+        ]
+      },
+      {
+        "id": "obj_71_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          1137.0,
+          269.0,
+          1237.0,
+          497.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 71,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_71_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_71_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8527,
+          "max": 10.4089,
+          "mean": 9.5829,
+          "median": 9.5816,
+          "std": 0.3475,
+          "num_pixels": 8685,
+          "z_val": 9.1406,
+          "z_val_pixels": 3290,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2458
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.667,
+          "y": 0.256,
+          "z": 9.141
+        },
+        "mask_centroid_2d": [
+          1206,
+          391
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8013,
+          "max": 10.5009,
+          "mean": 9.5888,
+          "median": 9.5863,
+          "std": 0.3633,
+          "num_pixels": 9373,
+          "z_val": 9.1503,
+          "z_val_pixels": 3574,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2838
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.672,
+          "y": 0.256,
+          "z": 9.15
+        },
+        "mask_centroid_2d_no_erosion": [
+          1206,
+          391
+        ]
+      },
+      {
+        "id": "obj_72_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          975.0,
+          103.0,
+          1015.0,
+          135.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 72,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_72_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_72_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.1168,
+          "max": 10.3777,
+          "mean": 10.2506,
+          "median": 10.2492,
+          "std": 0.0605,
+          "num_pixels": 913,
+          "z_val": 10.2921,
+          "z_val_pixels": 452,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.011
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.296,
+          "y": -2.21,
+          "z": 10.292
+        },
+        "mask_centroid_2d": [
+          995,
+          122
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.1168,
+          "max": 10.3777,
+          "mean": 10.2506,
+          "median": 10.2492,
+          "std": 0.0605,
+          "num_pixels": 913,
+          "z_val": 10.2921,
+          "z_val_pixels": 452,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.011
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 3.296,
+          "y": -2.21,
+          "z": 10.292
+        },
+        "mask_centroid_2d_no_erosion": [
+          995,
+          122
+        ]
+      },
+      {
+        "id": "obj_73_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          405.0,
+          221.0,
+          439.0,
+          260.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 73,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_73_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_73_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8466,
+          "max": 9.0409,
+          "mean": 8.9403,
+          "median": 8.9322,
+          "std": 0.0471,
+          "num_pixels": 1036,
+          "z_val": 8.9228,
+          "z_val_pixels": 471,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0183
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.763,
+          "y": -0.966,
+          "z": 8.923
+        },
+        "mask_centroid_2d": [
+          421,
+          240
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8466,
+          "max": 9.0409,
+          "mean": 8.9403,
+          "median": 8.9322,
+          "std": 0.0471,
+          "num_pixels": 1036,
+          "z_val": 8.9228,
+          "z_val_pixels": 471,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0183
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.763,
+          "y": -0.966,
+          "z": 8.923
+        },
+        "mask_centroid_2d_no_erosion": [
+          421,
+          240
+        ]
+      },
+      {
+        "id": "obj_74_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          452.0,
+          97.0,
+          492.0,
+          145.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 74,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_74_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_74_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.0374,
+          "max": 9.3307,
+          "mean": 9.1999,
+          "median": 9.2118,
+          "std": 0.0672,
+          "num_pixels": 1454,
+          "z_val": 9.2421,
+          "z_val_pixels": 725,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0521
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.401,
+          "y": -2.018,
+          "z": 9.242
+        },
+        "mask_centroid_2d": [
+          472,
+          118
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.0347,
+          "max": 9.3307,
+          "mean": 9.1988,
+          "median": 9.2076,
+          "std": 0.0666,
+          "num_pixels": 1557,
+          "z_val": 9.2287,
+          "z_val_pixels": 783,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0522
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.399,
+          "y": -2.015,
+          "z": 9.229
+        },
+        "mask_centroid_2d_no_erosion": [
+          472,
+          118
+        ]
+      },
+      {
+        "id": "obj_75_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          379.0,
+          283.0,
+          390.0,
+          335.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 75,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_75_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_75_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.9262,
+          "max": 9.2427,
+          "mean": 9.1079,
+          "median": 9.1258,
+          "std": 0.0924,
+          "num_pixels": 531,
+          "z_val": 9.0806,
+          "z_val_pixels": 174,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0334
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.089,
+          "y": -0.418,
+          "z": 9.081
+        },
+        "mask_centroid_2d": [
+          385,
+          309
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.9262,
+          "max": 9.2427,
+          "mean": 9.1079,
+          "median": 9.1258,
+          "std": 0.0924,
+          "num_pixels": 531,
+          "z_val": 9.0806,
+          "z_val_pixels": 174,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0334
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.089,
+          "y": -0.418,
+          "z": 9.081
+        },
+        "mask_centroid_2d_no_erosion": [
+          385,
+          309
+        ]
+      },
+      {
+        "id": "obj_76_GRiT+YOLO",
+        "label": "plane",
+        "bbox": [
+          91.0,
+          538.0,
+          104.0,
+          637.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 76,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_76_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_76_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.0887,
+          "max": 7.5985,
+          "mean": 7.3788,
+          "median": 7.4005,
+          "std": 0.1152,
+          "num_pixels": 1345,
+          "z_val": 7.396,
+          "z_val_pixels": 394,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0224
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.623,
+          "y": 1.508,
+          "z": 7.396
+        },
+        "mask_centroid_2d": [
+          97,
+          586
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.0887,
+          "max": 7.5985,
+          "mean": 7.3788,
+          "median": 7.4005,
+          "std": 0.1152,
+          "num_pixels": 1345,
+          "z_val": 7.396,
+          "z_val_pixels": 394,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0224
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.623,
+          "y": 1.508,
+          "z": 7.396
+        },
+        "mask_centroid_2d_no_erosion": [
+          97,
+          586
+        ]
+      },
+      {
+        "id": "obj_77_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          139.0,
+          207.0,
+          151.0,
+          259.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 77,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_77_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_77_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.7621,
+          "max": 8.9597,
+          "mean": 8.8588,
+          "median": 8.8559,
+          "std": 0.0474,
+          "num_pixels": 657,
+          "z_val": 8.8602,
+          "z_val_pixels": 243,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0266
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.956,
+          "y": -1.015,
+          "z": 8.86
+        },
+        "mask_centroid_2d": [
+          145,
+          233
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.7621,
+          "max": 8.9597,
+          "mean": 8.8588,
+          "median": 8.8559,
+          "std": 0.0474,
+          "num_pixels": 657,
+          "z_val": 8.8602,
+          "z_val_pixels": 243,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0266
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.956,
+          "y": -1.015,
+          "z": 8.86
+        },
+        "mask_centroid_2d_no_erosion": [
+          145,
+          233
+        ]
+      },
+      {
+        "id": "obj_78_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          133.0,
+          297.0,
+          167.0,
+          336.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 78,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_78_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_78_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6351,
+          "max": 8.9856,
+          "mean": 8.8436,
+          "median": 8.859,
+          "std": 0.0958,
+          "num_pixels": 1044,
+          "z_val": 8.9493,
+          "z_val_pixels": 484,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.001
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.964,
+          "y": -0.355,
+          "z": 8.949
+        },
+        "mask_centroid_2d": [
+          149,
+          316
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.6351,
+          "max": 8.9856,
+          "mean": 8.8436,
+          "median": 8.859,
+          "std": 0.0958,
+          "num_pixels": 1044,
+          "z_val": 8.9493,
+          "z_val_pixels": 484,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.001
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.964,
+          "y": -0.355,
+          "z": 8.949
+        },
+        "mask_centroid_2d_no_erosion": [
+          149,
+          316
+        ]
+      },
+      {
+        "id": "obj_79_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          173.0,
+          297.0,
+          193.0,
+          335.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 79,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_79_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_79_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6763,
+          "max": 9.0076,
+          "mean": 8.8589,
+          "median": 8.8796,
+          "std": 0.0926,
+          "num_pixels": 512,
+          "z_val": 8.8263,
+          "z_val_pixels": 188,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0257
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.663,
+          "y": -0.366,
+          "z": 8.826
+        },
+        "mask_centroid_2d": [
+          180,
+          314
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.6763,
+          "max": 9.0076,
+          "mean": 8.8589,
+          "median": 8.8796,
+          "std": 0.0926,
+          "num_pixels": 512,
+          "z_val": 8.8263,
+          "z_val_pixels": 188,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0257
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.663,
+          "y": -0.366,
+          "z": 8.826
+        },
+        "mask_centroid_2d_no_erosion": [
+          180,
+          314
+        ]
+      },
+      {
+        "id": "obj_80_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          930.0,
+          470.0,
+          1052.0,
+          563.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 80,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_80_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_80_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.1637,
+          "max": 10.6705,
+          "mean": 9.8755,
+          "median": 9.8523,
+          "std": 0.3231,
+          "num_pixels": 2932,
+          "z_val": 9.9619,
+          "z_val_pixels": 1450,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.018
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.957,
+          "y": 1.438,
+          "z": 9.962
+        },
+        "mask_centroid_2d": [
+          969,
+          520
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.0918,
+          "max": 10.7396,
+          "mean": 9.877,
+          "median": 9.8527,
+          "std": 0.3525,
+          "num_pixels": 3287,
+          "z_val": 9.9652,
+          "z_val_pixels": 1636,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1004
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.967,
+          "y": 1.438,
+          "z": 9.965
+        },
+        "mask_centroid_2d_no_erosion": [
+          970,
+          520
+        ]
+      },
+      {
+        "id": "obj_81_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          142.0,
+          297.0,
+          207.0,
+          335.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 81,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_81_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_81_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6763,
+          "max": 9.0076,
+          "mean": 8.859,
+          "median": 8.8796,
+          "std": 0.0928,
+          "num_pixels": 518,
+          "z_val": 8.8201,
+          "z_val_pixels": 190,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0323
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.66,
+          "y": -0.366,
+          "z": 8.82
+        },
+        "mask_centroid_2d": [
+          180,
+          314
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.6763,
+          "max": 9.0076,
+          "mean": 8.859,
+          "median": 8.8796,
+          "std": 0.0928,
+          "num_pixels": 518,
+          "z_val": 8.8201,
+          "z_val_pixels": 190,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0323
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.66,
+          "y": -0.366,
+          "z": 8.82
+        },
+        "mask_centroid_2d_no_erosion": [
+          180,
+          314
+        ]
+      },
+      {
+        "id": "obj_82_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          381.0,
+          221.0,
+          400.0,
+          259.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 82,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_82_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_82_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8115,
+          "max": 9.0443,
+          "mean": 8.9017,
+          "median": 8.8858,
+          "std": 0.0645,
+          "num_pixels": 501,
+          "z_val": 8.896,
+          "z_val_pixels": 191,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0246
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.022,
+          "y": -0.987,
+          "z": 8.896
+        },
+        "mask_centroid_2d": [
+          388,
+          237
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8115,
+          "max": 9.0443,
+          "mean": 8.9017,
+          "median": 8.8858,
+          "std": 0.0645,
+          "num_pixels": 501,
+          "z_val": 8.896,
+          "z_val_pixels": 191,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0246
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.022,
+          "y": -0.987,
+          "z": 8.896
+        },
+        "mask_centroid_2d_no_erosion": [
+          388,
+          237
+        ]
+      },
+      {
+        "id": "obj_83_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          659.0,
+          204.0,
+          670.0,
+          215.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 83,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_83_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_83_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.219,
+          "max": 9.333,
+          "mean": 9.2703,
+          "median": 9.2674,
+          "std": 0.0291,
+          "num_pixels": 121,
+          "z_val": 9.265,
+          "z_val_pixels": 60,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0152
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.201,
+          "y": -1.254,
+          "z": 9.265
+        },
+        "mask_centroid_2d": [
+          664,
+          210
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.219,
+          "max": 9.333,
+          "mean": 9.2703,
+          "median": 9.2674,
+          "std": 0.0291,
+          "num_pixels": 121,
+          "z_val": 9.265,
+          "z_val_pixels": 60,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0152
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.201,
+          "y": -1.254,
+          "z": 9.265
+        },
+        "mask_centroid_2d_no_erosion": [
+          664,
+          210
+        ]
+      },
+      {
+        "id": "obj_84_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          322.0,
+          549.0,
+          398.0,
+          575.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 84,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_84_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_84_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.6422,
+          "max": 7.8419,
+          "mean": 7.7537,
+          "median": 7.761,
+          "std": 0.0464,
+          "num_pixels": 1900,
+          "z_val": 7.7482,
+          "z_val_pixels": 804,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0333
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.964,
+          "y": 1.412,
+          "z": 7.748
+        },
+        "mask_centroid_2d": [
+          359,
+          562
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.6422,
+          "max": 7.8419,
+          "mean": 7.7537,
+          "median": 7.761,
+          "std": 0.0464,
+          "num_pixels": 1900,
+          "z_val": 7.7482,
+          "z_val_pixels": 804,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0333
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.964,
+          "y": 1.412,
+          "z": 7.748
+        },
+        "mask_centroid_2d_no_erosion": [
+          359,
+          562
+        ]
+      },
+      {
+        "id": "obj_85_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          1059.0,
+          102.0,
+          1091.0,
+          136.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 85,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_85_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_85_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.2661,
+          "max": 10.4839,
+          "mean": 10.3899,
+          "median": 10.4099,
+          "std": 0.0564,
+          "num_pixels": 642,
+          "z_val": 10.4307,
+          "z_val_pixels": 311,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0591
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.093,
+          "y": -2.249,
+          "z": 10.431
+        },
+        "mask_centroid_2d": [
+          1075,
+          121
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.2661,
+          "max": 10.4839,
+          "mean": 10.3899,
+          "median": 10.4099,
+          "std": 0.0564,
+          "num_pixels": 642,
+          "z_val": 10.4307,
+          "z_val_pixels": 311,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0591
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.093,
+          "y": -2.249,
+          "z": 10.431
+        },
+        "mask_centroid_2d_no_erosion": [
+          1075,
+          121
+        ]
+      },
+      {
+        "id": "obj_86_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          622.0,
+          221.0,
+          711.0,
+          274.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 86,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_86_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_86_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.0583,
+          "max": 9.3063,
+          "mean": 9.1822,
+          "median": 9.1816,
+          "std": 0.0603,
+          "num_pixels": 1285,
+          "z_val": 9.1802,
+          "z_val_pixels": 616,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0047
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.447,
+          "y": -0.961,
+          "z": 9.18
+        },
+        "mask_centroid_2d": [
+          694,
+          244
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.0603,
+          "max": 9.3077,
+          "mean": 9.1853,
+          "median": 9.1848,
+          "std": 0.0606,
+          "num_pixels": 1406,
+          "z_val": 9.182,
+          "z_val_pixels": 683,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0172
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.431,
+          "y": -0.961,
+          "z": 9.182
+        },
+        "mask_centroid_2d_no_erosion": [
+          692,
+          244
+        ]
+      },
+      {
+        "id": "obj_87_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          250.0,
+          211.0,
+          283.0,
+          260.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 87,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_87_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_87_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8254,
+          "max": 9.0418,
+          "mean": 8.9282,
+          "median": 8.9163,
+          "std": 0.049,
+          "num_pixels": 671,
+          "z_val": 8.9038,
+          "z_val_pixels": 237,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0433
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.036,
+          "y": -0.996,
+          "z": 8.904
+        },
+        "mask_centroid_2d": [
+          262,
+          236
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8254,
+          "max": 9.0418,
+          "mean": 8.9282,
+          "median": 8.9163,
+          "std": 0.049,
+          "num_pixels": 671,
+          "z_val": 8.9038,
+          "z_val_pixels": 237,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0433
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.036,
+          "y": -0.996,
+          "z": 8.904
+        },
+        "mask_centroid_2d_no_erosion": [
+          262,
+          236
+        ]
+      },
+      {
+        "id": "obj_88_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          372.0,
+          389.0,
+          392.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 88,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_88_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_88_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.306,
+          "max": 8.564,
+          "mean": 8.4314,
+          "median": 8.429,
+          "std": 0.0723,
+          "num_pixels": 389,
+          "z_val": 8.3908,
+          "z_val_pixels": 167,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0104
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.968,
+          "y": 0.318,
+          "z": 8.391
+        },
+        "mask_centroid_2d": [
+          380,
+          402
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.306,
+          "max": 8.564,
+          "mean": 8.4314,
+          "median": 8.429,
+          "std": 0.0723,
+          "num_pixels": 389,
+          "z_val": 8.3908,
+          "z_val_pixels": 167,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0104
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.968,
+          "y": 0.318,
+          "z": 8.391
+        },
+        "mask_centroid_2d_no_erosion": [
+          380,
+          402
+        ]
+      },
+      {
+        "id": "obj_89_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          660.0,
+          221.0,
+          669.0,
+          259.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 89,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_89_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_89_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.1921,
+          "max": 9.3406,
+          "mean": 9.2701,
+          "median": 9.2786,
+          "std": 0.0356,
+          "num_pixels": 382,
+          "z_val": 9.2863,
+          "z_val_pixels": 145,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0183
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.201,
+          "y": -1.005,
+          "z": 9.286
+        },
+        "mask_centroid_2d": [
+          664,
+          240
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.1921,
+          "max": 9.3406,
+          "mean": 9.2701,
+          "median": 9.2786,
+          "std": 0.0356,
+          "num_pixels": 382,
+          "z_val": 9.2863,
+          "z_val_pixels": 145,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0183
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.201,
+          "y": -1.005,
+          "z": 9.286
+        },
+        "mask_centroid_2d_no_erosion": [
+          664,
+          240
+        ]
+      },
+      {
+        "id": "obj_90_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          91.0,
+          448.0,
+          111.0,
+          480.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 90,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_90_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_90_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.5487,
+          "max": 7.8562,
+          "mean": 7.7076,
+          "median": 7.7157,
+          "std": 0.0767,
+          "num_pixels": 455,
+          "z_val": 7.6941,
+          "z_val_pixels": 231,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0206
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.755,
+          "y": 0.694,
+          "z": 7.694
+        },
+        "mask_centroid_2d": [
+          99,
+          460
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.5487,
+          "max": 7.8562,
+          "mean": 7.7076,
+          "median": 7.7157,
+          "std": 0.0767,
+          "num_pixels": 455,
+          "z_val": 7.6941,
+          "z_val_pixels": 231,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0206
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.755,
+          "y": 0.694,
+          "z": 7.694
+        },
+        "mask_centroid_2d_no_erosion": [
+          99,
+          460
+        ]
+      },
+      {
+        "id": "obj_91_GRiT+YOLO",
+        "label": "bright",
+        "bbox": [
+          133.0,
+          297.0,
+          182.0,
+          336.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 91,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_91_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_91_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6367,
+          "max": 8.9832,
+          "mean": 8.8383,
+          "median": 8.8489,
+          "std": 0.0929,
+          "num_pixels": 1018,
+          "z_val": 8.7934,
+          "z_val_pixels": 501,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0068
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.887,
+          "y": -0.349,
+          "z": 8.793
+        },
+        "mask_centroid_2d": [
+          150,
+          316
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.6367,
+          "max": 8.9856,
+          "mean": 8.8412,
+          "median": 8.8535,
+          "std": 0.0941,
+          "num_pixels": 1114,
+          "z_val": 8.7934,
+          "z_val_pixels": 549,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0184
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.887,
+          "y": -0.349,
+          "z": 8.793
+        },
+        "mask_centroid_2d_no_erosion": [
+          150,
+          316
+        ]
+      },
+      {
+        "id": "obj_92_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          610.0,
+          448.0,
+          632.0,
+          481.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 92,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_92_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_92_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.0445,
+          "max": 8.4812,
+          "mean": 8.2674,
+          "median": 8.2479,
+          "std": 0.1291,
+          "num_pixels": 327,
+          "z_val": 8.2035,
+          "z_val_pixels": 32,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0025
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.192,
+          "y": 0.77,
+          "z": 8.204
+        },
+        "mask_centroid_2d": [
+          614,
+          464
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.0445,
+          "max": 8.4812,
+          "mean": 8.2674,
+          "median": 8.2479,
+          "std": 0.1291,
+          "num_pixels": 327,
+          "z_val": 8.2035,
+          "z_val_pixels": 32,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0025
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.192,
+          "y": 0.77,
+          "z": 8.204
+        },
+        "mask_centroid_2d_no_erosion": [
+          614,
+          464
+        ]
+      },
+      {
+        "id": "obj_93_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          520.0,
+          448.0,
+          539.0,
+          480.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 93,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_93_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_93_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.9664,
+          "max": 8.2328,
+          "mean": 8.1163,
+          "median": 8.1218,
+          "std": 0.0645,
+          "num_pixels": 406,
+          "z_val": 8.0995,
+          "z_val_pixels": 173,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0198
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.818,
+          "y": 0.731,
+          "z": 8.1
+        },
+        "mask_centroid_2d": [
+          528,
+          460
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.9664,
+          "max": 8.2328,
+          "mean": 8.1163,
+          "median": 8.1218,
+          "std": 0.0645,
+          "num_pixels": 406,
+          "z_val": 8.0995,
+          "z_val_pixels": 173,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0198
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.818,
+          "y": 0.731,
+          "z": 8.1
+        },
+        "mask_centroid_2d_no_erosion": [
+          528,
+          460
+        ]
+      },
+      {
+        "id": "obj_94_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          575.0,
+          451.0,
+          585.0,
+          481.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 94,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_94_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_94_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.9842,
+          "max": 8.3007,
+          "mean": 8.1705,
+          "median": 8.1825,
+          "std": 0.0909,
+          "num_pixels": 203,
+          "z_val": 8.154,
+          "z_val_pixels": 65,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0091
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.441,
+          "y": 0.772,
+          "z": 8.154
+        },
+        "mask_centroid_2d": [
+          580,
+          465
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.9842,
+          "max": 8.3007,
+          "mean": 8.1705,
+          "median": 8.1825,
+          "std": 0.0909,
+          "num_pixels": 203,
+          "z_val": 8.154,
+          "z_val_pixels": 65,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0091
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.441,
+          "y": 0.772,
+          "z": 8.154
+        },
+        "mask_centroid_2d_no_erosion": [
+          580,
+          465
+        ]
+      },
+      {
+        "id": "obj_95_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          125.0,
+          549.0,
+          163.0,
+          575.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 95,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_95_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_95_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.426,
+          "max": 7.5153,
+          "mean": 7.4724,
+          "median": 7.4732,
+          "std": 0.0189,
+          "num_pixels": 676,
+          "z_val": 7.4761,
+          "z_val_pixels": 338,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.012
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.365,
+          "y": 1.362,
+          "z": 7.476
+        },
+        "mask_centroid_2d": [
+          141,
+          562
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.426,
+          "max": 7.5153,
+          "mean": 7.4724,
+          "median": 7.4732,
+          "std": 0.0189,
+          "num_pixels": 676,
+          "z_val": 7.4761,
+          "z_val_pixels": 338,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.012
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.365,
+          "y": 1.362,
+          "z": 7.476
+        },
+        "mask_centroid_2d_no_erosion": [
+          141,
+          562
+        ]
+      },
+      {
+        "id": "obj_96_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          294.0,
+          448.0,
+          304.0,
+          480.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 96,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_96_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_96_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.8569,
+          "max": 8.1679,
+          "mean": 8.034,
+          "median": 8.0509,
+          "std": 0.0851,
+          "num_pixels": 210,
+          "z_val": 8.0673,
+          "z_val_pixels": 73,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.012
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.482,
+          "y": 0.742,
+          "z": 8.067
+        },
+        "mask_centroid_2d": [
+          299,
+          462
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.8569,
+          "max": 8.1679,
+          "mean": 8.034,
+          "median": 8.0509,
+          "std": 0.0851,
+          "num_pixels": 210,
+          "z_val": 8.0673,
+          "z_val_pixels": 73,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.012
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.482,
+          "y": 0.742,
+          "z": 8.067
+        },
+        "mask_centroid_2d_no_erosion": [
+          299,
+          462
+        ]
+      },
+      {
+        "id": "obj_97_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          117.0,
+          207.0,
+          151.0,
+          259.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 97,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_97_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_97_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.7621,
+          "max": 8.9597,
+          "mean": 8.8584,
+          "median": 8.8553,
+          "std": 0.048,
+          "num_pixels": 639,
+          "z_val": 8.8531,
+          "z_val_pixels": 227,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0279
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.953,
+          "y": -1.014,
+          "z": 8.853
+        },
+        "mask_centroid_2d": [
+          145,
+          233
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.7621,
+          "max": 8.9597,
+          "mean": 8.8584,
+          "median": 8.8553,
+          "std": 0.048,
+          "num_pixels": 639,
+          "z_val": 8.8531,
+          "z_val_pixels": 227,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0279
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.953,
+          "y": -1.014,
+          "z": 8.853
+        },
+        "mask_centroid_2d_no_erosion": [
+          145,
+          233
+        ]
+      },
+      {
+        "id": "obj_98_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          210.0,
+          550.0,
+          242.0,
+          574.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 98,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_98_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_98_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.527,
+          "max": 7.6188,
+          "mean": 7.5694,
+          "median": 7.5689,
+          "std": 0.017,
+          "num_pixels": 330,
+          "z_val": 7.5825,
+          "z_val_pixels": 170,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0053
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.887,
+          "y": 1.395,
+          "z": 7.582
+        },
+        "mask_centroid_2d": [
+          218,
+          564
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.527,
+          "max": 7.6188,
+          "mean": 7.5694,
+          "median": 7.5689,
+          "std": 0.017,
+          "num_pixels": 330,
+          "z_val": 7.5825,
+          "z_val_pixels": 170,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0053
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.887,
+          "y": 1.395,
+          "z": 7.582
+        },
+        "mask_centroid_2d_no_erosion": [
+          218,
+          564
+        ]
+      },
+      {
+        "id": "obj_99_GRiT+YOLO",
+        "label": "bright",
+        "bbox": [
+          342.0,
+          221.0,
+          418.0,
+          260.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 99,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_99_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_99_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.8115,
+          "max": 9.0492,
+          "mean": 8.9058,
+          "median": 8.8931,
+          "std": 0.0652,
+          "num_pixels": 463,
+          "z_val": 8.8974,
+          "z_val_pixels": 172,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0211
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.031,
+          "y": -0.979,
+          "z": 8.897
+        },
+        "mask_centroid_2d": [
+          387,
+          238
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8115,
+          "max": 9.0443,
+          "mean": 8.9026,
+          "median": 8.8859,
+          "std": 0.0646,
+          "num_pixels": 551,
+          "z_val": 8.8403,
+          "z_val_pixels": 208,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0166
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.026,
+          "y": -0.981,
+          "z": 8.84
+        },
+        "mask_centroid_2d_no_erosion": [
+          386,
+          237
+        ]
+      },
+      {
+        "id": "obj_100_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          89.0,
+          381.0,
+          113.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 100,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_100_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_100_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.9812,
+          "max": 8.3172,
+          "mean": 8.1451,
+          "median": 8.1368,
+          "std": 0.0808,
+          "num_pixels": 427,
+          "z_val": 8.1351,
+          "z_val_pixels": 209,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0198
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.956,
+          "y": 0.286,
+          "z": 8.135
+        },
+        "mask_centroid_2d": [
+          101,
+          399
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.9812,
+          "max": 8.3172,
+          "mean": 8.1451,
+          "median": 8.1368,
+          "std": 0.0808,
+          "num_pixels": 427,
+          "z_val": 8.1351,
+          "z_val_pixels": 209,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0198
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.956,
+          "y": 0.286,
+          "z": 8.135
+        },
+        "mask_centroid_2d_no_erosion": [
+          101,
+          399
+        ]
+      },
+      {
+        "id": "obj_101_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          534.0,
+          380.0,
+          544.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 101,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_101_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_101_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.3519,
+          "max": 8.4261,
+          "mean": 8.3878,
+          "median": 8.387,
+          "std": 0.0188,
+          "num_pixels": 199,
+          "z_val": 8.3891,
+          "z_val_pixels": 66,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0039
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.772,
+          "y": 0.265,
+          "z": 8.389
+        },
+        "mask_centroid_2d": [
+          538,
+          395
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.3519,
+          "max": 8.4261,
+          "mean": 8.3878,
+          "median": 8.387,
+          "std": 0.0188,
+          "num_pixels": 199,
+          "z_val": 8.3891,
+          "z_val_pixels": 66,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0039
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.772,
+          "y": 0.265,
+          "z": 8.389
+        },
+        "mask_centroid_2d_no_erosion": [
+          538,
+          395
+        ]
+      },
+      {
+        "id": "obj_102_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          232.0,
+          556.0,
+          273.0,
+          574.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 102,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_102_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_102_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.6809,
+          "max": 7.7439,
+          "mean": 7.7126,
+          "median": 7.7117,
+          "std": 0.0142,
+          "num_pixels": 279,
+          "z_val": 7.709,
+          "z_val_pixels": 135,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0238
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.608,
+          "y": 1.426,
+          "z": 7.709
+        },
+        "mask_centroid_2d": [
+          265,
+          565
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.6809,
+          "max": 7.7439,
+          "mean": 7.7126,
+          "median": 7.7117,
+          "std": 0.0142,
+          "num_pixels": 279,
+          "z_val": 7.709,
+          "z_val_pixels": 135,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0238
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.608,
+          "y": 1.426,
+          "z": 7.709
+        },
+        "mask_centroid_2d_no_erosion": [
+          265,
+          565
+        ]
+      },
+      {
+        "id": "obj_103_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          258.0,
+          556.0,
+          282.0,
+          574.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 103,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_103_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_103_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.6809,
+          "max": 7.7439,
+          "mean": 7.7136,
+          "median": 7.7135,
+          "std": 0.0142,
+          "num_pixels": 277,
+          "z_val": 7.7139,
+          "z_val_pixels": 142,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0041
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.603,
+          "y": 1.427,
+          "z": 7.714
+        },
+        "mask_centroid_2d": [
+          266,
+          565
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.6809,
+          "max": 7.7439,
+          "mean": 7.7136,
+          "median": 7.7135,
+          "std": 0.0142,
+          "num_pixels": 277,
+          "z_val": 7.7139,
+          "z_val_pixels": 142,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0041
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.603,
+          "y": 1.427,
+          "z": 7.714
+        },
+        "mask_centroid_2d_no_erosion": [
+          266,
+          565
+        ]
+      },
+      {
+        "id": "obj_104_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          419.0,
+          389.0,
+          435.0,
+          413.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 104,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_104_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_104_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.3927,
+          "max": 8.6135,
+          "mean": 8.5023,
+          "median": 8.51,
+          "std": 0.0593,
+          "num_pixels": 274,
+          "z_val": 8.5148,
+          "z_val_pixels": 60,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0223
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.605,
+          "y": 0.307,
+          "z": 8.515
+        },
+        "mask_centroid_2d": [
+          431,
+          400
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.3927,
+          "max": 8.6135,
+          "mean": 8.5023,
+          "median": 8.51,
+          "std": 0.0593,
+          "num_pixels": 274,
+          "z_val": 8.5148,
+          "z_val_pixels": 60,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0223
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.605,
+          "y": 0.307,
+          "z": 8.515
+        },
+        "mask_centroid_2d_no_erosion": [
+          431,
+          400
+        ]
+      },
+      {
+        "id": "obj_105_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          206.0,
+          389.0,
+          225.0,
+          422.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 105,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_105_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_105_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.179,
+          "max": 8.467,
+          "mean": 8.3041,
+          "median": 8.2822,
+          "std": 0.0758,
+          "num_pixels": 575,
+          "z_val": 8.2336,
+          "z_val_pixels": 285,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0041
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.149,
+          "y": 0.334,
+          "z": 8.234
+        },
+        "mask_centroid_2d": [
+          216,
+          405
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.179,
+          "max": 8.467,
+          "mean": 8.3041,
+          "median": 8.2822,
+          "std": 0.0758,
+          "num_pixels": 575,
+          "z_val": 8.2336,
+          "z_val_pixels": 285,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0041
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.149,
+          "y": 0.334,
+          "z": 8.234
+        },
+        "mask_centroid_2d_no_erosion": [
+          216,
+          405
+        ]
+      },
+      {
+        "id": "obj_106_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          432.0,
+          457.0,
+          466.0,
+          489.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 106,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_106_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_106_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.8042,
+          "max": 8.1666,
+          "mean": 8.0007,
+          "median": 7.9983,
+          "std": 0.1035,
+          "num_pixels": 501,
+          "z_val": 7.9516,
+          "z_val_pixels": 191,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0148
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.306,
+          "y": 0.818,
+          "z": 7.952
+        },
+        "mask_centroid_2d": [
+          458,
+          474
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.8042,
+          "max": 8.1666,
+          "mean": 8.0007,
+          "median": 7.9983,
+          "std": 0.1035,
+          "num_pixels": 501,
+          "z_val": 7.9516,
+          "z_val_pixels": 191,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0148
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.306,
+          "y": 0.818,
+          "z": 7.952
+        },
+        "mask_centroid_2d_no_erosion": [
+          458,
+          474
+        ]
+      },
+      {
+        "id": "obj_107_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          367.0,
+          597.0,
+          388.0,
+          621.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 107,
+        "mask_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_107_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/Photo Feb 12 2026, 2 36 08 PM_obj_107_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.2507,
+          "max": 7.6606,
+          "mean": 7.4587,
+          "median": 7.4596,
+          "std": 0.0998,
+          "num_pixels": 462,
+          "z_val": 7.4325,
+          "z_val_pixels": 215,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0065
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.763,
+          "y": 1.676,
+          "z": 7.433
+        },
+        "mask_centroid_2d": [
+          377,
+          610
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.2507,
+          "max": 7.6606,
+          "mean": 7.4587,
+          "median": 7.4596,
+          "std": 0.0998,
+          "num_pixels": 462,
+          "z_val": 7.4325,
+          "z_val_pixels": 215,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0065
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.763,
+          "y": 1.676,
+          "z": 7.433
+        },
+        "mask_centroid_2d_no_erosion": [
+          377,
+          610
+        ]
+      }
+    ]
+  }
+}

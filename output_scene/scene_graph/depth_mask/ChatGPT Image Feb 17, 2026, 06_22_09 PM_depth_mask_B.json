@@ -1,0 +1,5047 @@
+{
+  "metadata": {
+    "image_path": "/home/stanleyomondi/citv/images/ChatGPT Image Feb 17, 2026, 06_22_09 PM.png",
+    "image_stem": "ChatGPT Image Feb 17, 2026, 06_22_09 PM",
+    "timestamp": "2026-03-05 04:32:11",
+    "image_size": [
+      853,
+      1280
+    ],
+    "matching_mode": "B"
+  },
+  "depth": {
+    "depth_map_path": "depth/ChatGPT Image Feb 17, 2026, 06_22_09 PM_depth_metric.npy",
+    "depth_map_image_path": "scene_graph/ChatGPT Image Feb 17, 2026, 06_22_09 PM_depth_map.png",
+    "depth_min": 5.506046772003174,
+    "depth_max": 13.646622657775879,
+    "depth_mean": 8.760783195495605
+  },
+  "segmentation": {
+    "model": "SAM2",
+    "mode": "automatic_mask_generator",
+    "segmentation_map_image_path": "scene_graph/ChatGPT Image Feb 17, 2026, 06_22_09 PM_sam2_segmentation.png",
+    "num_auto_masks": 88,
+    "match_strategy": "iou_with_detection_bbox"
+  },
+  "depth_mask": {
+    "mapping_image_path": "scene_graph/ChatGPT Image Feb 17, 2026, 06_22_09 PM_depth_mask_mapping_B.png",
+    "objects": [
+      {
+        "id": "obj_0_GroundingDINO",
+        "label": "clothing",
+        "bbox": [
+          107.4894790649414,
+          168.75770568847656,
+          757.0042114257812,
+          1158.24365234375
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 0,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_0_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_0_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.8732,
+          "max": 8.6886,
+          "mean": 7.0766,
+          "median": 7.023,
+          "std": 0.6443,
+          "num_pixels": 483150,
+          "z_val": 6.9882,
+          "z_val_pixels": 241372,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3275
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.27,
+          "y": 0.889,
+          "z": 6.988
+        },
+        "mask_centroid_2d": [
+          455,
+          734
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.8732,
+          "max": 8.6995,
+          "mean": 7.0791,
+          "median": 7.0241,
+          "std": 0.6472,
+          "num_pixels": 490302,
+          "z_val": 6.993,
+          "z_val_pixels": 245077,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.2071
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.27,
+          "y": 0.89,
+          "z": 6.993
+        },
+        "mask_centroid_2d_no_erosion": [
+          455,
+          734
+        ]
+      },
+      {
+        "id": "obj_1_GRiT+YOLO",
+        "label": "trench_coat",
+        "bbox": [
+          113.15648651123047,
+          185.77804565429688,
+          757.0870361328125,
+          1150.2451171875
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 1,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_1_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_1_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.8732,
+          "max": 8.6894,
+          "mean": 7.0773,
+          "median": 7.025,
+          "std": 0.6448,
+          "num_pixels": 481734,
+          "z_val": 6.9882,
+          "z_val_pixels": 239916,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2705
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.27,
+          "y": 0.889,
+          "z": 6.988
+        },
+        "mask_centroid_2d": [
+          455,
+          734
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.8732,
+          "max": 8.6987,
+          "mean": 7.0792,
+          "median": 7.0248,
+          "std": 0.6471,
+          "num_pixels": 489671,
+          "z_val": 6.9851,
+          "z_val_pixels": 244624,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.1101
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.269,
+          "y": 0.889,
+          "z": 6.985
+        },
+        "mask_centroid_2d_no_erosion": [
+          455,
+          734
+        ]
+      },
+      {
+        "id": "obj_2_GroundingDINO",
+        "label": "furniture",
+        "bbox": [
+          736.6713256835938,
+          639.475341796875,
+          852.5903930664062,
+          895.4651489257812
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 2,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_2_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_2_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.4067,
+          "max": 9.9844,
+          "mean": 9.1571,
+          "median": 9.0846,
+          "std": 0.2808,
+          "num_pixels": 11535,
+          "z_val": 9.0389,
+          "z_val_pixels": 3396,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1689
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.533,
+          "y": 1.113,
+          "z": 9.039
+        },
+        "mask_centroid_2d": [
+          797,
+          731
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.3749,
+          "max": 10.0449,
+          "mean": 9.1644,
+          "median": 9.0925,
+          "std": 0.289,
+          "num_pixels": 12254,
+          "z_val": 9.0408,
+          "z_val_pixels": 3685,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0867
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.534,
+          "y": 1.126,
+          "z": 9.041
+        },
+        "mask_centroid_2d_no_erosion": [
+          797,
+          732
+        ]
+      },
+      {
+        "id": "obj_3_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          734.5741577148438,
+          823.8150634765625,
+          852.3442993164062,
+          1280.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 3,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_3_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_3_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.9039,
+          "max": 7.8801,
+          "mean": 6.591,
+          "median": 6.4558,
+          "std": 0.4251,
+          "num_pixels": 35440,
+          "z_val": 6.4554,
+          "z_val_pixels": 13409,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.7517
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.334,
+          "y": 3.635,
+          "z": 6.455
+        },
+        "mask_centroid_2d": [
+          808,
+          1056
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.9039,
+          "max": 8.0146,
+          "mean": 6.6124,
+          "median": 6.4589,
+          "std": 0.452,
+          "num_pixels": 36192,
+          "z_val": 6.452,
+          "z_val_pixels": 13765,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.9716
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 3.332,
+          "y": 3.642,
+          "z": 6.452
+        },
+        "mask_centroid_2d_no_erosion": [
+          808,
+          1057
+        ]
+      },
+      {
+        "id": "obj_4_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          691.597900390625,
+          258.48919677734375,
+          852.6640014648438,
+          500.91546630859375
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 4,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_4_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_4_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 11.5432,
+          "max": 12.8462,
+          "mean": 12.1827,
+          "median": 12.1549,
+          "std": 0.2984,
+          "num_pixels": 20705,
+          "z_val": 12.4359,
+          "z_val_pixels": 9626,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0111
+        },
+        "coordinates_3d_from_mask": {
+          "x": 6.052,
+          "y": -4.31,
+          "z": 12.436
+        },
+        "mask_centroid_2d": [
+          786,
+          384
+        ],
+        "depth_stats_no_erosion": {
+          "min": 11.5343,
+          "max": 12.8545,
+          "mean": 12.1847,
+          "median": 12.1592,
+          "std": 0.3049,
+          "num_pixels": 22155,
+          "z_val": 12.4255,
+          "z_val_pixels": 10361,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.011
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 6.03,
+          "y": -4.323,
+          "z": 12.425
+        },
+        "mask_centroid_2d_no_erosion": [
+          785,
+          383
+        ]
+      },
+      {
+        "id": "obj_5_GRiT+YOLO",
+        "label": "panpipe",
+        "bbox": [
+          731.3182983398438,
+          636.8872680664062,
+          848.2427368164062,
+          1273.664306640625
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 5,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_5_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_5_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.9174,
+          "max": 10.2267,
+          "mean": 9.1466,
+          "median": 9.085,
+          "std": 0.3386,
+          "num_pixels": 13128,
+          "z_val": 9.0417,
+          "z_val_pixels": 3412,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0881
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.535,
+          "y": 1.224,
+          "z": 9.042
+        },
+        "mask_centroid_2d": [
+          797,
+          740
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.8696,
+          "max": 10.2784,
+          "mean": 9.1432,
+          "median": 9.0903,
+          "std": 0.3702,
+          "num_pixels": 14036,
+          "z_val": 9.0467,
+          "z_val_pixels": 3505,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1362
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.525,
+          "y": 1.323,
+          "z": 9.047
+        },
+        "mask_centroid_2d_no_erosion": [
+          796,
+          748
+        ]
+      },
+      {
+        "id": "obj_6_GRiT+YOLO",
+        "label": "stoplight",
+        "bbox": [
+          690.0370483398438,
+          258.45233154296875,
+          851.7306518554688,
+          652.1600341796875
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 6,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_6_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_6_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.6617,
+          "max": 13.0145,
+          "mean": 11.9097,
+          "median": 11.9856,
+          "std": 0.5491,
+          "num_pixels": 30902,
+          "z_val": 11.9184,
+          "z_val_pixels": 10478,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1244
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.929,
+          "y": -3.162,
+          "z": 11.918
+        },
+        "mask_centroid_2d": [
+          794,
+          444
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.6277,
+          "max": 13.0145,
+          "mean": 11.9106,
+          "median": 11.9848,
+          "std": 0.5504,
+          "num_pixels": 33245,
+          "z_val": 11.9184,
+          "z_val_pixels": 11485,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1045
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 5.929,
+          "y": -3.162,
+          "z": 11.918
+        },
+        "mask_centroid_2d_no_erosion": [
+          794,
+          444
+        ]
+      },
+      {
+        "id": "obj_7_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          222.0,
+          1103.0,
+          248.0,
+          1279.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 7,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_7_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_7_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.0199,
+          "max": 8.7182,
+          "mean": 7.8043,
+          "median": 7.8148,
+          "std": 0.2209,
+          "num_pixels": 4598,
+          "z_val": 7.9255,
+          "z_val_pixels": 1344,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.3162
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.055,
+          "y": 5.954,
+          "z": 7.925
+        },
+        "mask_centroid_2d": [
+          235,
+          1195
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.0199,
+          "max": 8.7182,
+          "mean": 7.8043,
+          "median": 7.8148,
+          "std": 0.2209,
+          "num_pixels": 4598,
+          "z_val": 7.9255,
+          "z_val_pixels": 1344,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.3162
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.055,
+          "y": 5.954,
+          "z": 7.925
+        },
+        "mask_centroid_2d_no_erosion": [
+          235,
+          1195
+        ]
+      },
+      {
+        "id": "obj_8_GRiT+YOLO",
+        "label": "tick",
+        "bbox": [
+          221.0,
+          754.0,
+          285.0,
+          830.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 8,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_8_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_8_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.3044,
+          "max": 7.7681,
+          "mean": 7.5219,
+          "median": 7.5039,
+          "std": 0.1057,
+          "num_pixels": 3266,
+          "z_val": 7.4837,
+          "z_val_pixels": 1631,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0965
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.778,
+          "y": 1.57,
+          "z": 7.484
+        },
+        "mask_centroid_2d": [
+          251,
+          795
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.3044,
+          "max": 7.7899,
+          "mean": 7.5294,
+          "median": 7.5077,
+          "std": 0.1115,
+          "num_pixels": 3407,
+          "z_val": 7.4838,
+          "z_val_pixels": 1707,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1006
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.778,
+          "y": 1.57,
+          "z": 7.484
+        },
+        "mask_centroid_2d_no_erosion": [
+          251,
+          795
+        ]
+      },
+      {
+        "id": "obj_9_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          108.0,
+          874.0,
+          214.0,
+          950.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 9,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_9_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_9_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.1844,
+          "max": 7.5659,
+          "mean": 7.372,
+          "median": 7.3708,
+          "std": 0.0573,
+          "num_pixels": 6454,
+          "z_val": 7.3725,
+          "z_val_pixels": 3211,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.8649
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.63,
+          "y": 2.745,
+          "z": 7.373
+        },
+        "mask_centroid_2d": [
+          163,
+          915
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.0385,
+          "max": 7.7943,
+          "mean": 7.3741,
+          "median": 7.3716,
+          "std": 0.0663,
+          "num_pixels": 6638,
+          "z_val": 7.3725,
+          "z_val_pixels": 3296,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9914
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.63,
+          "y": 2.735,
+          "z": 7.373
+        },
+        "mask_centroid_2d_no_erosion": [
+          163,
+          914
+        ]
+      },
+      {
+        "id": "obj_10_GRiT+YOLO",
+        "label": "bear",
+        "bbox": [
+          112.0,
+          942.0,
+          294.0,
+          1164.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 10,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_10_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_10_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.8185,
+          "max": 10.4857,
+          "mean": 10.1454,
+          "median": 10.1447,
+          "std": 0.1382,
+          "num_pixels": 18311,
+          "z_val": 10.1509,
+          "z_val_pixels": 7278,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0444
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.621,
+          "y": 5.758,
+          "z": 10.151
+        },
+        "mask_centroid_2d": [
+          163,
+          1059
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.756,
+          "max": 10.5532,
+          "mean": 10.147,
+          "median": 10.1446,
+          "std": 0.1554,
+          "num_pixels": 20024,
+          "z_val": 10.1475,
+          "z_val_pixels": 8061,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.7205
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.606,
+          "y": 5.769,
+          "z": 10.147
+        },
+        "mask_centroid_2d_no_erosion": [
+          164,
+          1060
+        ]
+      },
+      {
+        "id": "obj_11_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          322.0,
+          837.0,
+          348.0,
+          863.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 11,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_11_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_11_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.9679,
+          "max": 7.1261,
+          "mean": 7.0503,
+          "median": 7.0489,
+          "std": 0.037,
+          "num_pixels": 592,
+          "z_val": 7.0145,
+          "z_val_pixels": 295,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0021
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.869,
+          "y": 1.994,
+          "z": 7.014
+        },
+        "mask_centroid_2d": [
+          335,
+          850
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.9679,
+          "max": 7.1261,
+          "mean": 7.0503,
+          "median": 7.0489,
+          "std": 0.037,
+          "num_pixels": 592,
+          "z_val": 7.0145,
+          "z_val_pixels": 295,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0021
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.869,
+          "y": 1.994,
+          "z": 7.014
+        },
+        "mask_centroid_2d_no_erosion": [
+          335,
+          850
+        ]
+      },
+      {
+        "id": "obj_12_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          328.0,
+          693.0,
+          351.0,
+          719.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 12,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_12_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_12_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.267,
+          "max": 7.5414,
+          "mean": 7.4243,
+          "median": 7.4136,
+          "std": 0.0615,
+          "num_pixels": 526,
+          "z_val": 7.3777,
+          "z_val_pixels": 265,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0725
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.864,
+          "y": 0.659,
+          "z": 7.378
+        },
+        "mask_centroid_2d": [
+          340,
+          706
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.267,
+          "max": 7.5414,
+          "mean": 7.4243,
+          "median": 7.4136,
+          "std": 0.0615,
+          "num_pixels": 526,
+          "z_val": 7.3777,
+          "z_val_pixels": 265,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0725
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.864,
+          "y": 0.659,
+          "z": 7.378
+        },
+        "mask_centroid_2d_no_erosion": [
+          340,
+          706
+        ]
+      },
+      {
+        "id": "obj_13_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          112.0,
+          823.0,
+          222.0,
+          884.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 13,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_13_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_13_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.393,
+          "max": 7.7473,
+          "mean": 7.5586,
+          "median": 7.5528,
+          "std": 0.0706,
+          "num_pixels": 5041,
+          "z_val": 7.5324,
+          "z_val_pixels": 2390,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2383
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.605,
+          "y": 2.213,
+          "z": 7.532
+        },
+        "mask_centroid_2d": [
+          171,
+          857
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.393,
+          "max": 7.876,
+          "mean": 7.5663,
+          "median": 7.558,
+          "std": 0.0786,
+          "num_pixels": 5248,
+          "z_val": 7.5332,
+          "z_val_pixels": 2490,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3652
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.626,
+          "y": 2.203,
+          "z": 7.533
+        },
+        "mask_centroid_2d_no_erosion": [
+          169,
+          856
+        ]
+      },
+      {
+        "id": "obj_14_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          100.0,
+          1222.0,
+          221.0,
+          1279.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 14,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_14_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_14_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.7531,
+          "max": 8.7934,
+          "mean": 8.2118,
+          "median": 8.1845,
+          "std": 0.2588,
+          "num_pixels": 3575,
+          "z_val": 8.1796,
+          "z_val_pixels": 1523,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1991
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.752,
+          "y": 6.876,
+          "z": 8.18
+        },
+        "mask_centroid_2d": [
+          178,
+          1261
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.7531,
+          "max": 8.813,
+          "mean": 8.2161,
+          "median": 8.1856,
+          "std": 0.2637,
+          "num_pixels": 3755,
+          "z_val": 8.1754,
+          "z_val_pixels": 1600,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2127
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.761,
+          "y": 6.873,
+          "z": 8.175
+        },
+        "mask_centroid_2d_no_erosion": [
+          177,
+          1261
+        ]
+      },
+      {
+        "id": "obj_15_GRiT+YOLO",
+        "label": "tick",
+        "bbox": [
+          457.0,
+          844.0,
+          483.0,
+          871.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 15,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_15_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_15_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.6177,
+          "max": 6.759,
+          "mean": 6.6911,
+          "median": 6.6913,
+          "std": 0.0305,
+          "num_pixels": 605,
+          "z_val": 6.6957,
+          "z_val_pixels": 303,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0054
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.394,
+          "y": 1.967,
+          "z": 6.696
+        },
+        "mask_centroid_2d": [
+          470,
+          857
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.6177,
+          "max": 6.759,
+          "mean": 6.6911,
+          "median": 6.6913,
+          "std": 0.0305,
+          "num_pixels": 605,
+          "z_val": 6.6957,
+          "z_val_pixels": 303,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0054
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.394,
+          "y": 1.967,
+          "z": 6.696
+        },
+        "mask_centroid_2d_no_erosion": [
+          470,
+          857
+        ]
+      },
+      {
+        "id": "obj_16_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          0.0,
+          1149.0,
+          275.0,
+          1279.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 16,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_16_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_16_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.5865,
+          "max": 10.1138,
+          "mean": 8.6596,
+          "median": 8.5762,
+          "std": 0.5962,
+          "num_pixels": 20733,
+          "z_val": 8.009,
+          "z_val_pixels": 9012,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.7701
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.377,
+          "y": 6.451,
+          "z": 8.009
+        },
+        "mask_centroid_2d": [
+          115,
+          1235
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.5865,
+          "max": 10.1532,
+          "mean": 8.6772,
+          "median": 8.5942,
+          "std": 0.6095,
+          "num_pixels": 21258,
+          "z_val": 7.8342,
+          "z_val_pixels": 9270,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9111
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.303,
+          "y": 6.31,
+          "z": 7.834
+        },
+        "mask_centroid_2d_no_erosion": [
+          115,
+          1235
+        ]
+      },
+      {
+        "id": "obj_17_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          464.0,
+          697.0,
+          488.0,
+          723.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 17,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_17_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_17_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.9127,
+          "max": 7.0051,
+          "mean": 6.96,
+          "median": 6.9627,
+          "std": 0.022,
+          "num_pixels": 564,
+          "z_val": 6.9553,
+          "z_val_pixels": 283,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0018
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.466,
+          "y": 0.659,
+          "z": 6.955
+        },
+        "mask_centroid_2d": [
+          476,
+          710
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.9127,
+          "max": 7.0051,
+          "mean": 6.96,
+          "median": 6.9627,
+          "std": 0.022,
+          "num_pixels": 564,
+          "z_val": 6.9553,
+          "z_val_pixels": 283,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0018
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.466,
+          "y": 0.659,
+          "z": 6.955
+        },
+        "mask_centroid_2d_no_erosion": [
+          476,
+          710
+        ]
+      },
+      {
+        "id": "obj_18_GRiT+YOLO",
+        "label": "grey",
+        "bbox": [
+          113.0,
+          840.0,
+          128.0,
+          864.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 18,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_18_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_18_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.5742,
+          "max": 7.785,
+          "mean": 7.7002,
+          "median": 7.7133,
+          "std": 0.0585,
+          "num_pixels": 319,
+          "z_val": 7.719,
+          "z_val_pixels": 161,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0661
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.192,
+          "y": 2.215,
+          "z": 7.719
+        },
+        "mask_centroid_2d": [
+          121,
+          852
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.5742,
+          "max": 7.785,
+          "mean": 7.7002,
+          "median": 7.7133,
+          "std": 0.0585,
+          "num_pixels": 319,
+          "z_val": 7.719,
+          "z_val_pixels": 161,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0661
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.192,
+          "y": 2.215,
+          "z": 7.719
+        },
+        "mask_centroid_2d_no_erosion": [
+          121,
+          852
+        ]
+      },
+      {
+        "id": "obj_19_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          0.0,
+          977.0,
+          28.0,
+          1020.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 19,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_19_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_19_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.4026,
+          "max": 10.1996,
+          "mean": 9.8003,
+          "median": 9.7688,
+          "std": 0.1992,
+          "num_pixels": 1201,
+          "z_val": 9.7517,
+          "z_val_pixels": 600,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0192
+        },
+        "coordinates_3d_from_mask": {
+          "x": -5.445,
+          "y": 4.726,
+          "z": 9.752
+        },
+        "mask_centroid_2d": [
+          14,
+          998
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.4026,
+          "max": 10.1996,
+          "mean": 9.8003,
+          "median": 9.7688,
+          "std": 0.1992,
+          "num_pixels": 1201,
+          "z_val": 9.7517,
+          "z_val_pixels": 600,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0192
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -5.445,
+          "y": 4.726,
+          "z": 9.752
+        },
+        "mask_centroid_2d_no_erosion": [
+          14,
+          998
+        ]
+      },
+      {
+        "id": "obj_20_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          0.0,
+          999.0,
+          31.0,
+          1191.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 20,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_20_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_20_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.133,
+          "max": 9.6875,
+          "mean": 9.4103,
+          "median": 9.4305,
+          "std": 0.122,
+          "num_pixels": 5586,
+          "z_val": 9.4584,
+          "z_val_pixels": 1564,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0865
+        },
+        "coordinates_3d_from_mask": {
+          "x": -5.269,
+          "y": 5.864,
+          "z": 9.458
+        },
+        "mask_centroid_2d": [
+          15,
+          1098
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.133,
+          "max": 9.6875,
+          "mean": 9.4103,
+          "median": 9.4305,
+          "std": 0.122,
+          "num_pixels": 5586,
+          "z_val": 9.4584,
+          "z_val_pixels": 1564,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0865
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -5.269,
+          "y": 5.864,
+          "z": 9.458
+        },
+        "mask_centroid_2d_no_erosion": [
+          15,
+          1098
+        ]
+      },
+      {
+        "id": "obj_21_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          374.0,
+          708.0,
+          404.0,
+          716.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 21,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_21_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_21_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.0328,
+          "max": 7.0951,
+          "mean": 7.0659,
+          "median": 7.0698,
+          "std": 0.0159,
+          "num_pixels": 183,
+          "z_val": 7.0708,
+          "z_val_pixels": 61,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0003
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.369,
+          "y": 0.68,
+          "z": 7.071
+        },
+        "mask_centroid_2d": [
+          388,
+          711
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.0328,
+          "max": 7.0951,
+          "mean": 7.0659,
+          "median": 7.0698,
+          "std": 0.0159,
+          "num_pixels": 183,
+          "z_val": 7.0708,
+          "z_val_pixels": 61,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0003
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.369,
+          "y": 0.68,
+          "z": 7.071
+        },
+        "mask_centroid_2d_no_erosion": [
+          388,
+          711
+        ]
+      },
+      {
+        "id": "obj_22_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          108.0,
+          830.0,
+          292.0,
+          1165.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 22,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_22_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_22_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.8166,
+          "max": 10.4808,
+          "mean": 10.1423,
+          "median": 10.1433,
+          "std": 0.1373,
+          "num_pixels": 18232,
+          "z_val": 10.1509,
+          "z_val_pixels": 7346,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0629
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.648,
+          "y": 5.744,
+          "z": 10.151
+        },
+        "mask_centroid_2d": [
+          161,
+          1058
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.772,
+          "max": 10.5356,
+          "mean": 10.1442,
+          "median": 10.1436,
+          "std": 0.1517,
+          "num_pixels": 19983,
+          "z_val": 10.1474,
+          "z_val_pixels": 8110,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.536
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.62,
+          "y": 5.756,
+          "z": 10.147
+        },
+        "mask_centroid_2d_no_erosion": [
+          163,
+          1059
+        ]
+      },
+      {
+        "id": "obj_23_GRiT+YOLO",
+        "label": "end",
+        "bbox": [
+          517.0,
+          776.0,
+          616.0,
+          850.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 23,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_23_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_23_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.6292,
+          "max": 7.093,
+          "mean": 6.855,
+          "median": 6.8623,
+          "std": 0.1132,
+          "num_pixels": 6489,
+          "z_val": 6.9031,
+          "z_val_pixels": 3241,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0033
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.332,
+          "y": 1.645,
+          "z": 6.903
+        },
+        "mask_centroid_2d": [
+          569,
+          816
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.6292,
+          "max": 7.0962,
+          "mean": 6.8559,
+          "median": 6.8628,
+          "std": 0.1138,
+          "num_pixels": 6663,
+          "z_val": 6.9031,
+          "z_val_pixels": 3334,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.004
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.332,
+          "y": 1.635,
+          "z": 6.903
+        },
+        "mask_centroid_2d_no_erosion": [
+          569,
+          815
+        ]
+      },
+      {
+        "id": "obj_24_GRiT+YOLO",
+        "label": "tail",
+        "bbox": [
+          619.0,
+          910.0,
+          753.0,
+          1008.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 24,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_24_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_24_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.0714,
+          "max": 6.4065,
+          "mean": 6.2388,
+          "median": 6.2404,
+          "std": 0.0802,
+          "num_pixels": 8796,
+          "z_val": 6.2457,
+          "z_val_pixels": 4194,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0175
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.194,
+          "y": 2.799,
+          "z": 6.246
+        },
+        "mask_centroid_2d": [
+          686,
+          971
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.0645,
+          "max": 6.4131,
+          "mean": 6.2386,
+          "median": 6.2404,
+          "std": 0.0817,
+          "num_pixels": 9240,
+          "z_val": 6.2363,
+          "z_val_pixels": 4423,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2511
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.191,
+          "y": 2.794,
+          "z": 6.236
+        },
+        "mask_centroid_2d_no_erosion": [
+          686,
+          971
+        ]
+      },
+      {
+        "id": "obj_25_GRiT+YOLO",
+        "label": "rectangular",
+        "bbox": [
+          619.0,
+          775.0,
+          753.0,
+          1008.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 25,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_25_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_25_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.0712,
+          "max": 6.4069,
+          "mean": 6.2388,
+          "median": 6.2403,
+          "std": 0.0803,
+          "num_pixels": 8814,
+          "z_val": 6.2457,
+          "z_val_pixels": 4199,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0217
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.194,
+          "y": 2.799,
+          "z": 6.246
+        },
+        "mask_centroid_2d": [
+          686,
+          971
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.0643,
+          "max": 6.4143,
+          "mean": 6.2386,
+          "median": 6.2403,
+          "std": 0.0818,
+          "num_pixels": 9258,
+          "z_val": 6.2363,
+          "z_val_pixels": 4422,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2576
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.191,
+          "y": 2.794,
+          "z": 6.236
+        },
+        "mask_centroid_2d_no_erosion": [
+          686,
+          971
+        ]
+      },
+      {
+        "id": "obj_26_GRiT+YOLO",
+        "label": "pole",
+        "bbox": [
+          612.0,
+          878.0,
+          713.0,
+          939.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 26,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_26_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_26_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.2354,
+          "max": 6.5398,
+          "mean": 6.3835,
+          "median": 6.396,
+          "std": 0.0686,
+          "num_pixels": 4970,
+          "z_val": 6.408,
+          "z_val_pixels": 2478,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.067
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.025,
+          "y": 2.351,
+          "z": 6.408
+        },
+        "mask_centroid_2d": [
+          660,
+          911
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.2275,
+          "max": 6.5557,
+          "mean": 6.3862,
+          "median": 6.3981,
+          "std": 0.0708,
+          "num_pixels": 5135,
+          "z_val": 6.4081,
+          "z_val_pixels": 2560,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0777
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.017,
+          "y": 2.351,
+          "z": 6.408
+        },
+        "mask_centroid_2d_no_erosion": [
+          659,
+          911
+        ]
+      },
+      {
+        "id": "obj_27_GRiT+YOLO",
+        "label": "square",
+        "bbox": [
+          699.0,
+          882.0,
+          759.0,
+          935.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 27,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_27_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_27_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.3653,
+          "max": 6.7327,
+          "mean": 6.5455,
+          "median": 6.5499,
+          "std": 0.0893,
+          "num_pixels": 2286,
+          "z_val": 6.5541,
+          "z_val_pixels": 1141,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3571
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.719,
+          "y": 2.396,
+          "z": 6.554
+        },
+        "mask_centroid_2d": [
+          733,
+          910
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.3453,
+          "max": 6.7556,
+          "mean": 6.5459,
+          "median": 6.5502,
+          "std": 0.0922,
+          "num_pixels": 2414,
+          "z_val": 6.4911,
+          "z_val_pixels": 1204,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3837
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.693,
+          "y": 2.364,
+          "z": 6.491
+        },
+        "mask_centroid_2d_no_erosion": [
+          733,
+          909
+        ]
+      },
+      {
+        "id": "obj_28_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          814.0,
+          707.0,
+          852.0,
+          850.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 28,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_28_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_28_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.1717,
+          "max": 10.0456,
+          "mean": 9.6522,
+          "median": 9.6844,
+          "std": 0.2142,
+          "num_pixels": 4812,
+          "z_val": 9.9026,
+          "z_val_pixels": 1882,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6753
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.463,
+          "y": 1.769,
+          "z": 9.903
+        },
+        "mask_centroid_2d": [
+          834,
+          772
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.1717,
+          "max": 10.0456,
+          "mean": 9.6522,
+          "median": 9.6844,
+          "std": 0.2142,
+          "num_pixels": 4812,
+          "z_val": 9.9026,
+          "z_val_pixels": 1882,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6753
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 5.463,
+          "y": 1.769,
+          "z": 9.903
+        },
+        "mask_centroid_2d_no_erosion": [
+          834,
+          772
+        ]
+      },
+      {
+        "id": "obj_29_GRiT+YOLO",
+        "label": "signal",
+        "bbox": [
+          560.0,
+          852.0,
+          686.0,
+          1144.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 29,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_29_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_29_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.942,
+          "max": 6.8267,
+          "mean": 6.3203,
+          "median": 6.3036,
+          "std": 0.2156,
+          "num_pixels": 20529,
+          "z_val": 6.0186,
+          "z_val_pixels": 8129,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1267
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.528,
+          "y": 3.169,
+          "z": 6.019
+        },
+        "mask_centroid_2d": [
+          614,
+          1029
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.942,
+          "max": 6.834,
+          "mean": 6.3237,
+          "median": 6.3069,
+          "std": 0.2171,
+          "num_pixels": 21417,
+          "z_val": 6.015,
+          "z_val_pixels": 8505,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2327
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.527,
+          "y": 3.159,
+          "z": 6.015
+        },
+        "mask_centroid_2d_no_erosion": [
+          614,
+          1028
+        ]
+      },
+      {
+        "id": "obj_30_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          679.0,
+          1002.0,
+          750.0,
+          1104.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 30,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_30_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_30_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.5809,
+          "max": 10.5579,
+          "mean": 10.0797,
+          "median": 10.1076,
+          "std": 0.2095,
+          "num_pixels": 5719,
+          "z_val": 10.2631,
+          "z_val_pixels": 2825,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9991
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.022,
+          "y": 5.738,
+          "z": 10.263
+        },
+        "mask_centroid_2d": [
+          716,
+          1053
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.3422,
+          "max": 10.7317,
+          "mean": 10.0665,
+          "median": 10.1013,
+          "std": 0.2316,
+          "num_pixels": 5897,
+          "z_val": 10.2564,
+          "z_val_pixels": 2928,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.6117
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.006,
+          "y": 5.72,
+          "z": 10.256
+        },
+        "mask_centroid_2d_no_erosion": [
+          715,
+          1052
+        ]
+      },
+      {
+        "id": "obj_31_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          679.0,
+          892.0,
+          762.0,
+          1105.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 31,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_31_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_31_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.5809,
+          "max": 10.5558,
+          "mean": 10.0781,
+          "median": 10.1089,
+          "std": 0.2098,
+          "num_pixels": 5549,
+          "z_val": 10.2631,
+          "z_val_pixels": 2742,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9121
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.008,
+          "y": 5.738,
+          "z": 10.263
+        },
+        "mask_centroid_2d": [
+          715,
+          1053
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.3623,
+          "max": 10.7085,
+          "mean": 10.0672,
+          "median": 10.1024,
+          "std": 0.2309,
+          "num_pixels": 5903,
+          "z_val": 10.2564,
+          "z_val_pixels": 2927,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.5539
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.006,
+          "y": 5.72,
+          "z": 10.256
+        },
+        "mask_centroid_2d_no_erosion": [
+          715,
+          1052
+        ]
+      },
+      {
+        "id": "obj_32_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          768.0,
+          1212.0,
+          801.0,
+          1279.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 32,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_32_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_32_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.2844,
+          "max": 8.2419,
+          "mean": 7.7329,
+          "median": 7.7437,
+          "std": 0.1874,
+          "num_pixels": 1409,
+          "z_val": 7.8116,
+          "z_val_pixels": 620,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1368
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.749,
+          "y": 6.503,
+          "z": 7.812
+        },
+        "mask_centroid_2d": [
+          781,
+          1255
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.2844,
+          "max": 8.2419,
+          "mean": 7.7329,
+          "median": 7.7437,
+          "std": 0.1874,
+          "num_pixels": 1409,
+          "z_val": 7.8116,
+          "z_val_pixels": 620,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1368
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 3.749,
+          "y": 6.503,
+          "z": 7.812
+        },
+        "mask_centroid_2d_no_erosion": [
+          781,
+          1255
+        ]
+      },
+      {
+        "id": "obj_33_GRiT+YOLO",
+        "label": "sink",
+        "bbox": [
+          781.0,
+          688.0,
+          816.0,
+          888.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 33,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_33_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_33_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.7463,
+          "max": 9.3246,
+          "mean": 9.0413,
+          "median": 9.0371,
+          "std": 0.0982,
+          "num_pixels": 5849,
+          "z_val": 9.0424,
+          "z_val_pixels": 1878,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1356
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.547,
+          "y": 1.665,
+          "z": 9.042
+        },
+        "mask_centroid_2d": [
+          798,
+          776
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.7463,
+          "max": 9.3246,
+          "mean": 9.0413,
+          "median": 9.0371,
+          "std": 0.0982,
+          "num_pixels": 5849,
+          "z_val": 9.0424,
+          "z_val_pixels": 1878,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1356
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.547,
+          "y": 1.665,
+          "z": 9.042
+        },
+        "mask_centroid_2d_no_erosion": [
+          798,
+          776
+        ]
+      },
+      {
+        "id": "obj_34_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          580.0,
+          1023.0,
+          737.0,
+          1170.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 34,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_34_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_34_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.3403,
+          "max": 10.6844,
+          "mean": 10.0064,
+          "median": 10.0474,
+          "std": 0.2382,
+          "num_pixels": 5093,
+          "z_val": 10.0876,
+          "z_val_pixels": 2194,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.1253
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.571,
+          "y": 6.828,
+          "z": 10.088
+        },
+        "mask_centroid_2d": [
+          688,
+          1140
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.8357,
+          "max": 11.0373,
+          "mean": 9.9995,
+          "median": 10.0441,
+          "std": 0.2714,
+          "num_pixels": 5555,
+          "z_val": 10.0907,
+          "z_val_pixels": 2369,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.3252
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 3.558,
+          "y": 6.843,
+          "z": 10.091
+        },
+        "mask_centroid_2d_no_erosion": [
+          687,
+          1141
+        ]
+      },
+      {
+        "id": "obj_35_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          671.0,
+          900.0,
+          696.0,
+          926.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 35,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_35_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_35_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.328,
+          "max": 6.4717,
+          "mean": 6.4026,
+          "median": 6.4086,
+          "std": 0.0355,
+          "num_pixels": 555,
+          "z_val": 6.3744,
+          "z_val_pixels": 276,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0248
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.222,
+          "y": 2.347,
+          "z": 6.374
+        },
+        "mask_centroid_2d": [
+          684,
+          912
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.328,
+          "max": 6.4717,
+          "mean": 6.4026,
+          "median": 6.4086,
+          "std": 0.0355,
+          "num_pixels": 555,
+          "z_val": 6.3744,
+          "z_val_pixels": 276,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0248
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.222,
+          "y": 2.347,
+          "z": 6.374
+        },
+        "mask_centroid_2d_no_erosion": [
+          684,
+          912
+        ]
+      },
+      {
+        "id": "obj_36_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          740.0,
+          649.0,
+          852.0,
+          689.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 36,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_36_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_36_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.393,
+          "max": 9.9005,
+          "mean": 9.1261,
+          "median": 9.1467,
+          "std": 0.3035,
+          "num_pixels": 3668,
+          "z_val": 8.8901,
+          "z_val_pixels": 1467,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3393
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.495,
+          "y": 0.373,
+          "z": 8.89
+        },
+        "mask_centroid_2d": [
+          800,
+          671
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.3698,
+          "max": 9.9569,
+          "mean": 9.1414,
+          "median": 9.156,
+          "std": 0.3197,
+          "num_pixels": 3826,
+          "z_val": 9.1238,
+          "z_val_pixels": 1548,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2137
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.601,
+          "y": 0.371,
+          "z": 9.124
+        },
+        "mask_centroid_2d_no_erosion": [
+          799,
+          670
+        ]
+      },
+      {
+        "id": "obj_37_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          570.0,
+          1103.0,
+          736.0,
+          1171.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 37,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_37_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_37_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.2718,
+          "max": 10.6999,
+          "mean": 9.9776,
+          "median": 10.0325,
+          "std": 0.261,
+          "num_pixels": 5496,
+          "z_val": 10.0871,
+          "z_val_pixels": 2281,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.1597
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.53,
+          "y": 6.855,
+          "z": 10.087
+        },
+        "mask_centroid_2d": [
+          685,
+          1142
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.7719,
+          "max": 11.0658,
+          "mean": 9.9801,
+          "median": 10.0338,
+          "std": 0.2888,
+          "num_pixels": 5733,
+          "z_val": 10.0907,
+          "z_val_pixels": 2354,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.3797
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 3.517,
+          "y": 6.857,
+          "z": 10.091
+        },
+        "mask_centroid_2d_no_erosion": [
+          684,
+          1142
+        ]
+      },
+      {
+        "id": "obj_38_GRiT+YOLO",
+        "label": "circle",
+        "bbox": [
+          744.0,
+          685.0,
+          786.0,
+          720.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 38,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_38_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_38_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.0833,
+          "max": 9.9454,
+          "mean": 9.6603,
+          "median": 9.6569,
+          "std": 0.1106,
+          "num_pixels": 1257,
+          "z_val": 9.6526,
+          "z_val_pixels": 631,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6631
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.397,
+          "y": 0.823,
+          "z": 9.653
+        },
+        "mask_centroid_2d": [
+          763,
+          703
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.0833,
+          "max": 9.9454,
+          "mean": 9.6603,
+          "median": 9.6569,
+          "std": 0.1106,
+          "num_pixels": 1257,
+          "z_val": 9.6526,
+          "z_val_pixels": 631,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6631
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.397,
+          "y": 0.823,
+          "z": 9.653
+        },
+        "mask_centroid_2d_no_erosion": [
+          763,
+          703
+        ]
+      },
+      {
+        "id": "obj_39_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          801.0,
+          1223.0,
+          852.0,
+          1279.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 39,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_39_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_39_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.2687,
+          "max": 8.3759,
+          "mean": 7.8901,
+          "median": 7.8932,
+          "std": 0.2219,
+          "num_pixels": 1979,
+          "z_val": 7.9013,
+          "z_val_pixels": 992,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6164
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.316,
+          "y": 6.631,
+          "z": 7.901
+        },
+        "mask_centroid_2d": [
+          830,
+          1260
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.1898,
+          "max": 8.3759,
+          "mean": 7.8806,
+          "median": 7.8891,
+          "std": 0.2311,
+          "num_pixels": 2087,
+          "z_val": 7.9013,
+          "z_val_pixels": 1045,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.7284
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.316,
+          "y": 6.621,
+          "z": 7.901
+        },
+        "mask_centroid_2d_no_erosion": [
+          830,
+          1259
+        ]
+      },
+      {
+        "id": "obj_40_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          737.0,
+          688.0,
+          783.0,
+          1094.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 40,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_40_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_40_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.5775,
+          "max": 10.8964,
+          "mean": 10.252,
+          "median": 10.3063,
+          "std": 0.2724,
+          "num_pixels": 6023,
+          "z_val": 10.5212,
+          "z_val_pixels": 1691,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.3911
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.85,
+          "y": 2.564,
+          "z": 10.521
+        },
+        "mask_centroid_2d": [
+          767,
+          820
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.3547,
+          "max": 11.0266,
+          "mean": 10.2246,
+          "median": 10.297,
+          "std": 0.3084,
+          "num_pixels": 6329,
+          "z_val": 10.5193,
+          "z_val_pixels": 1762,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.9269
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.849,
+          "y": 2.577,
+          "z": 10.519
+        },
+        "mask_centroid_2d_no_erosion": [
+          767,
+          821
+        ]
+      },
+      {
+        "id": "obj_41_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          832.0,
+          924.0,
+          852.0,
+          1215.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 41,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_41_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_41_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.9355,
+          "max": 6.5369,
+          "mean": 6.2336,
+          "median": 6.2622,
+          "std": 0.1397,
+          "num_pixels": 3845,
+          "z_val": 6.2867,
+          "z_val_pixels": 653,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0537
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.562,
+          "y": 3.574,
+          "z": 6.287
+        },
+        "mask_centroid_2d": [
+          845,
+          1060
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.9355,
+          "max": 6.5369,
+          "mean": 6.2336,
+          "median": 6.2622,
+          "std": 0.1397,
+          "num_pixels": 3845,
+          "z_val": 6.2867,
+          "z_val_pixels": 653,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0537
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 3.562,
+          "y": 3.574,
+          "z": 6.287
+        },
+        "mask_centroid_2d_no_erosion": [
+          845,
+          1060
+        ]
+      },
+      {
+        "id": "obj_42_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          376.0,
+          855.0,
+          408.0,
+          862.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 42,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_42_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_42_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.6772,
+          "max": 6.7985,
+          "mean": 6.7379,
+          "median": 6.7416,
+          "std": 0.0309,
+          "num_pixels": 225,
+          "z_val": 6.7388,
+          "z_val_pixels": 80,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0007
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.315,
+          "y": 1.989,
+          "z": 6.739
+        },
+        "mask_centroid_2d": [
+          392,
+          858
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.6772,
+          "max": 6.7985,
+          "mean": 6.7379,
+          "median": 6.7416,
+          "std": 0.0309,
+          "num_pixels": 225,
+          "z_val": 6.7388,
+          "z_val_pixels": 80,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0007
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.315,
+          "y": 1.989,
+          "z": 6.739
+        },
+        "mask_centroid_2d_no_erosion": [
+          392,
+          858
+        ]
+      },
+      {
+        "id": "obj_43_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          737.0,
+          959.0,
+          769.0,
+          1197.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 43,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_43_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_43_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.7814,
+          "max": 9.3164,
+          "mean": 7.8888,
+          "median": 7.7909,
+          "std": 0.5182,
+          "num_pixels": 5038,
+          "z_val": 7.7631,
+          "z_val_pixels": 1241,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5109
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.452,
+          "y": 4.834,
+          "z": 7.763
+        },
+        "mask_centroid_2d": [
+          755,
+          1100
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.7814,
+          "max": 9.3164,
+          "mean": 7.8888,
+          "median": 7.7909,
+          "std": 0.5182,
+          "num_pixels": 5038,
+          "z_val": 7.7631,
+          "z_val_pixels": 1241,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5109
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 3.452,
+          "y": 4.834,
+          "z": 7.763
+        },
+        "mask_centroid_2d_no_erosion": [
+          755,
+          1100
+        ]
+      },
+      {
+        "id": "obj_44_GRiT+YOLO",
+        "label": "white",
+        "bbox": [
+          273.0,
+          306.0,
+          405.0,
+          593.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 44,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_44_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_44_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.2363,
+          "max": 8.3083,
+          "mean": 7.7146,
+          "median": 7.6784,
+          "std": 0.2938,
+          "num_pixels": 20108,
+          "z_val": 7.6497,
+          "z_val_pixels": 9101,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1261
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.803,
+          "y": -2.071,
+          "z": 7.65
+        },
+        "mask_centroid_2d": [
+          349,
+          440
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.2098,
+          "max": 8.3208,
+          "mean": 7.7163,
+          "median": 7.6798,
+          "std": 0.2965,
+          "num_pixels": 20946,
+          "z_val": 7.6491,
+          "z_val_pixels": 9507,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.802,
+          "y": -2.061,
+          "z": 7.649
+        },
+        "mask_centroid_2d_no_erosion": [
+          349,
+          441
+        ]
+      },
+      {
+        "id": "obj_45_GRiT+YOLO",
+        "label": "white",
+        "bbox": [
+          418.0,
+          279.0,
+          461.0,
+          322.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 45,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_45_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_45_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6043,
+          "max": 8.9465,
+          "mean": 8.7675,
+          "median": 8.7609,
+          "std": 0.0755,
+          "num_pixels": 1707,
+          "z_val": 8.8171,
+          "z_val_pixels": 852,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1822
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.161,
+          "y": -4.034,
+          "z": 8.817
+        },
+        "mask_centroid_2d": [
+          440,
+          302
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.6002,
+          "max": 8.9672,
+          "mean": 8.7726,
+          "median": 8.7689,
+          "std": 0.0795,
+          "num_pixels": 1796,
+          "z_val": 8.8166,
+          "z_val_pixels": 900,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2054
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.161,
+          "y": -4.034,
+          "z": 8.817
+        },
+        "mask_centroid_2d_no_erosion": [
+          440,
+          302
+        ]
+      },
+      {
+        "id": "obj_46_GRiT+YOLO",
+        "label": "white",
+        "bbox": [
+          285.0,
+          184.0,
+          404.0,
+          335.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 46,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_46_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_46_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.2993,
+          "max": 9.2386,
+          "mean": 8.7459,
+          "median": 8.7072,
+          "std": 0.2338,
+          "num_pixels": 7231,
+          "z_val": 8.6601,
+          "z_val_pixels": 3507,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.561
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.991,
+          "y": -4.279,
+          "z": 8.66
+        },
+        "mask_centroid_2d": [
+          342,
+          275
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.2791,
+          "max": 9.3889,
+          "mean": 8.751,
+          "median": 8.7114,
+          "std": 0.2421,
+          "num_pixels": 7769,
+          "z_val": 8.6027,
+          "z_val_pixels": 3797,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9069
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.984,
+          "y": -4.251,
+          "z": 8.603
+        },
+        "mask_centroid_2d_no_erosion": [
+          342,
+          275
+        ]
+      },
+      {
+        "id": "obj_47_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          219.0,
+          97.0,
+          246.0,
+          310.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 47,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_47_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_47_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.3148,
+          "max": 10.6823,
+          "mean": 9.9221,
+          "median": 9.8763,
+          "std": 0.2111,
+          "num_pixels": 5439,
+          "z_val": 9.7144,
+          "z_val_pixels": 1505,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.8262
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.558,
+          "y": -5.734,
+          "z": 9.714
+        },
+        "mask_centroid_2d": [
+          232,
+          204
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.3148,
+          "max": 10.6823,
+          "mean": 9.9221,
+          "median": 9.8763,
+          "std": 0.2111,
+          "num_pixels": 5439,
+          "z_val": 9.7144,
+          "z_val_pixels": 1505,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.8262
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.558,
+          "y": -5.734,
+          "z": 9.714
+        },
+        "mask_centroid_2d_no_erosion": [
+          232,
+          204
+        ]
+      },
+      {
+        "id": "obj_48_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          139.0,
+          0.0,
+          217.0,
+          602.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 48,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_48_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_48_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.8865,
+          "max": 12.2048,
+          "mean": 11.5176,
+          "median": 11.4763,
+          "std": 0.2837,
+          "num_pixels": 32169,
+          "z_val": 11.4599,
+          "z_val_pixels": 8910,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2541
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.902,
+          "y": -6.376,
+          "z": 11.46
+        },
+        "mask_centroid_2d": [
+          175,
+          229
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.8663,
+          "max": 12.2061,
+          "mean": 11.5091,
+          "median": 11.4693,
+          "std": 0.2888,
+          "num_pixels": 32814,
+          "z_val": 11.4625,
+          "z_val_pixels": 9122,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2768
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.902,
+          "y": -6.362,
+          "z": 11.462
+        },
+        "mask_centroid_2d_no_erosion": [
+          175,
+          230
+        ]
+      },
+      {
+        "id": "obj_49_GRiT+YOLO",
+        "label": "parachute",
+        "bbox": [
+          380.0,
+          172.0,
+          482.0,
+          251.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 49,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_49_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_49_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6303,
+          "max": 9.0226,
+          "mean": 8.8141,
+          "median": 8.7963,
+          "std": 0.0826,
+          "num_pixels": 4620,
+          "z_val": 8.7257,
+          "z_val_pixels": 2065,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3877
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.112,
+          "y": -5.115,
+          "z": 8.726
+        },
+        "mask_centroid_2d": [
+          436,
+          207
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.5605,
+          "max": 9.1278,
+          "mean": 8.8311,
+          "median": 8.8084,
+          "std": 0.1025,
+          "num_pixels": 5007,
+          "z_val": 8.7248,
+          "z_val_pixels": 2233,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6458
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.089,
+          "y": -5.114,
+          "z": 8.725
+        },
+        "mask_centroid_2d_no_erosion": [
+          434,
+          207
+        ]
+      },
+      {
+        "id": "obj_50_GRiT+YOLO",
+        "label": "grey",
+        "bbox": [
+          380.0,
+          172.0,
+          537.0,
+          252.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 50,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_50_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_50_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.6279,
+          "max": 9.0239,
+          "mean": 8.815,
+          "median": 8.7972,
+          "std": 0.0836,
+          "num_pixels": 4654,
+          "z_val": 8.7257,
+          "z_val_pixels": 2067,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3831
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.112,
+          "y": -5.115,
+          "z": 8.726
+        },
+        "mask_centroid_2d": [
+          436,
+          207
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.563,
+          "max": 9.1227,
+          "mean": 8.8307,
+          "median": 8.8086,
+          "std": 0.1024,
+          "num_pixels": 5053,
+          "z_val": 8.7248,
+          "z_val_pixels": 2243,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.599
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.1,
+          "y": -5.114,
+          "z": 8.725
+        },
+        "mask_centroid_2d_no_erosion": [
+          435,
+          207
+        ]
+      },
+      {
+        "id": "obj_51_GRiT+YOLO",
+        "label": "yellow",
+        "bbox": [
+          219.0,
+          78.0,
+          519.0,
+          309.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 51,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_51_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_51_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.6231,
+          "max": 10.2091,
+          "mean": 9.8601,
+          "median": 9.8474,
+          "std": 0.1374,
+          "num_pixels": 4407,
+          "z_val": 9.703,
+          "z_val_pixels": 1200,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5696
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.555,
+          "y": -5.687,
+          "z": 9.703
+        },
+        "mask_centroid_2d": [
+          232,
+          207
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.3148,
+          "max": 10.6836,
+          "mean": 9.9234,
+          "median": 9.8768,
+          "std": 0.2125,
+          "num_pixels": 5432,
+          "z_val": 9.7109,
+          "z_val_pixels": 1501,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.6939
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.557,
+          "y": -5.745,
+          "z": 9.711
+        },
+        "mask_centroid_2d_no_erosion": [
+          232,
+          203
+        ]
+      },
+      {
+        "id": "obj_52_GRiT+YOLO",
+        "label": "sky",
+        "bbox": [
+          273.0,
+          307.0,
+          535.0,
+          592.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 52,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_52_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_52_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.2489,
+          "max": 8.2956,
+          "mean": 7.7108,
+          "median": 7.6748,
+          "std": 0.2899,
+          "num_pixels": 19064,
+          "z_val": 7.6305,
+          "z_val_pixels": 8574,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.064
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.801,
+          "y": -2.066,
+          "z": 7.63
+        },
+        "mask_centroid_2d": [
+          349,
+          440
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.1958,
+          "max": 8.3147,
+          "mean": 7.7137,
+          "median": 7.6768,
+          "std": 0.2959,
+          "num_pixels": 20803,
+          "z_val": 7.6548,
+          "z_val_pixels": 9403,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1463
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.793,
+          "y": -2.062,
+          "z": 7.655
+        },
+        "mask_centroid_2d_no_erosion": [
+          350,
+          441
+        ]
+      },
+      {
+        "id": "obj_53_GRiT+YOLO",
+        "label": "kite",
+        "bbox": [
+          286.0,
+          184.0,
+          546.0,
+          334.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 53,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_53_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_53_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.3154,
+          "max": 9.2124,
+          "mean": 8.7396,
+          "median": 8.7021,
+          "std": 0.2239,
+          "num_pixels": 6667,
+          "z_val": 8.6109,
+          "z_val_pixels": 3196,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2373
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.985,
+          "y": -4.243,
+          "z": 8.611
+        },
+        "mask_centroid_2d": [
+          342,
+          276
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.2112,
+          "max": 9.4079,
+          "mean": 8.7525,
+          "median": 8.7135,
+          "std": 0.2417,
+          "num_pixels": 7720,
+          "z_val": 8.6539,
+          "z_val_pixels": 3771,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9023
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.99,
+          "y": -4.276,
+          "z": 8.654
+        },
+        "mask_centroid_2d_no_erosion": [
+          342,
+          275
+        ]
+      },
+      {
+        "id": "obj_54_GRiT+YOLO",
+        "label": "wind",
+        "bbox": [
+          376.0,
+          240.0,
+          478.0,
+          501.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 54,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_54_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_54_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.3118,
+          "max": 9.4678,
+          "mean": 8.939,
+          "median": 8.9639,
+          "std": 0.2739,
+          "num_pixels": 13053,
+          "z_val": 9.0512,
+          "z_val_pixels": 4959,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4481
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.092,
+          "y": -3.713,
+          "z": 9.051
+        },
+        "mask_centroid_2d": [
+          419,
+          337
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.2496,
+          "max": 9.4678,
+          "mean": 8.9254,
+          "median": 8.9514,
+          "std": 0.2837,
+          "num_pixels": 13964,
+          "z_val": 9.0476,
+          "z_val_pixels": 5326,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6138
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.08,
+          "y": -3.711,
+          "z": 9.048
+        },
+        "mask_centroid_2d_no_erosion": [
+          420,
+          337
+        ]
+      },
+      {
+        "id": "obj_55_GRiT+YOLO",
+        "label": "blurry",
+        "bbox": [
+          773.0,
+          491.0,
+          852.0,
+          633.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 55,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_55_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_55_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 10.6118,
+          "max": 11.936,
+          "mean": 11.2306,
+          "median": 11.2001,
+          "std": 0.3037,
+          "num_pixels": 9222,
+          "z_val": 11.236,
+          "z_val_pixels": 4603,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3436
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.879,
+          "y": -1.019,
+          "z": 11.236
+        },
+        "mask_centroid_2d": [
+          813,
+          573
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.5739,
+          "max": 11.9792,
+          "mean": 11.2476,
+          "median": 11.2114,
+          "std": 0.3217,
+          "num_pixels": 9680,
+          "z_val": 11.1323,
+          "z_val_pixels": 4841,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3928
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 5.824,
+          "y": -1.025,
+          "z": 11.132
+        },
+        "mask_centroid_2d_no_erosion": [
+          813,
+          572
+        ]
+      },
+      {
+        "id": "obj_56_GRiT+YOLO",
+        "label": "dusk",
+        "bbox": [
+          384.0,
+          175.0,
+          567.0,
+          334.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 56,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_56_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_56_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.662,
+          "max": 8.7342,
+          "mean": 8.1883,
+          "median": 8.162,
+          "std": 0.2615,
+          "num_pixels": 9120,
+          "z_val": 8.1111,
+          "z_val_pixels": 4546,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1574
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.994,
+          "y": -4.074,
+          "z": 8.111
+        },
+        "mask_centroid_2d": [
+          517,
+          269
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.662,
+          "max": 8.8457,
+          "mean": 8.1938,
+          "median": 8.1695,
+          "std": 0.2724,
+          "num_pixels": 10259,
+          "z_val": 8.1146,
+          "z_val_pixels": 5111,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.8167
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.994,
+          "y": -4.086,
+          "z": 8.115
+        },
+        "mask_centroid_2d_no_erosion": [
+          517,
+          268
+        ]
+      },
+      {
+        "id": "obj_57_GRiT+YOLO",
+        "label": "long",
+        "bbox": [
+          376.0,
+          176.0,
+          559.0,
+          499.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 57,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_57_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_57_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.3432,
+          "max": 9.4678,
+          "mean": 8.9488,
+          "median": 8.9748,
+          "std": 0.2644,
+          "num_pixels": 11967,
+          "z_val": 9.0514,
+          "z_val_pixels": 4522,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.229
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.104,
+          "y": -3.725,
+          "z": 9.051
+        },
+        "mask_centroid_2d": [
+          418,
+          336
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.2611,
+          "max": 9.4678,
+          "mean": 8.9262,
+          "median": 8.9518,
+          "std": 0.2814,
+          "num_pixels": 13842,
+          "z_val": 9.05,
+          "z_val_pixels": 5299,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5407
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.092,
+          "y": -3.712,
+          "z": 9.05
+        },
+        "mask_centroid_2d_no_erosion": [
+          419,
+          337
+        ]
+      },
+      {
+        "id": "obj_58_GRiT+YOLO",
+        "label": "brown",
+        "bbox": [
+          502.0,
+          448.0,
+          602.0,
+          484.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 58,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_58_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_58_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.3837,
+          "max": 7.5885,
+          "mean": 7.499,
+          "median": 7.4996,
+          "std": 0.0365,
+          "num_pixels": 1306,
+          "z_val": 7.4929,
+          "z_val_pixels": 356,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0496
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.273,
+          "y": -1.785,
+          "z": 7.493
+        },
+        "mask_centroid_2d": [
+          552,
+          464
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.3837,
+          "max": 7.5885,
+          "mean": 7.499,
+          "median": 7.4996,
+          "std": 0.0365,
+          "num_pixels": 1306,
+          "z_val": 7.4929,
+          "z_val_pixels": 356,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0496
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.273,
+          "y": -1.785,
+          "z": 7.493
+        },
+        "mask_centroid_2d_no_erosion": [
+          552,
+          464
+        ]
+      },
+      {
+        "id": "obj_59_GRiT+YOLO",
+        "label": "brown",
+        "bbox": [
+          515.0,
+          240.0,
+          693.0,
+          467.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 59,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_59_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_59_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.374,
+          "max": 8.1983,
+          "mean": 7.6658,
+          "median": 7.5982,
+          "std": 0.1807,
+          "num_pixels": 11483,
+          "z_val": 7.5437,
+          "z_val_pixels": 4077,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0506
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.608,
+          "y": -2.849,
+          "z": 7.544
+        },
+        "mask_centroid_2d": [
+          584,
+          361
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.278,
+          "max": 8.2223,
+          "mean": 7.664,
+          "median": 7.5944,
+          "std": 0.1899,
+          "num_pixels": 13252,
+          "z_val": 7.5472,
+          "z_val_pixels": 4870,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1847
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.599,
+          "y": -2.84,
+          "z": 7.547
+        },
+        "mask_centroid_2d_no_erosion": [
+          583,
+          362
+        ]
+      },
+      {
+        "id": "obj_60_GRiT+YOLO",
+        "label": "bird",
+        "bbox": [
+          715.0,
+          333.0,
+          852.0,
+          490.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 60,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_60_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_60_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 11.607,
+          "max": 12.7222,
+          "mean": 12.1626,
+          "median": 12.1291,
+          "std": 0.2514,
+          "num_pixels": 12689,
+          "z_val": 11.916,
+          "z_val_pixels": 6251,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2144
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.976,
+          "y": -3.597,
+          "z": 11.916
+        },
+        "mask_centroid_2d": [
+          797,
+          417
+        ],
+        "depth_stats_no_erosion": {
+          "min": 11.5942,
+          "max": 12.7467,
+          "mean": 12.1683,
+          "median": 12.1343,
+          "std": 0.2601,
+          "num_pixels": 13256,
+          "z_val": 11.9173,
+          "z_val_pixels": 6536,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1735
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 5.977,
+          "y": -3.598,
+          "z": 11.917
+        },
+        "mask_centroid_2d_no_erosion": [
+          797,
+          417
+        ]
+      },
+      {
+        "id": "obj_61_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          340.0,
+          307.0,
+          567.0,
+          652.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 61,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_61_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_61_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.962,
+          "max": 7.7831,
+          "mean": 7.3392,
+          "median": 7.3438,
+          "std": 0.2126,
+          "num_pixels": 20291,
+          "z_val": 7.3699,
+          "z_val_pixels": 8246,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0457
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.424,
+          "y": -1.896,
+          "z": 7.37
+        },
+        "mask_centroid_2d": [
+          469,
+          450
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.962,
+          "max": 7.8054,
+          "mean": 7.3391,
+          "median": 7.3384,
+          "std": 0.2158,
+          "num_pixels": 22500,
+          "z_val": 7.3729,
+          "z_val_pixels": 9141,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2795
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.414,
+          "y": -1.866,
+          "z": 7.373
+        },
+        "mask_centroid_2d_no_erosion": [
+          468,
+          453
+        ]
+      },
+      {
+        "id": "obj_62_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          2.0,
+          1127.0,
+          852.0,
+          1279.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 62,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_62_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_62_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.4484,
+          "max": 10.0145,
+          "mean": 8.6754,
+          "median": 8.6483,
+          "std": 0.583,
+          "num_pixels": 84725,
+          "z_val": 9.0319,
+          "z_val_pixels": 28762,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6645
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.128,
+          "y": 7.152,
+          "z": 9.032
+        },
+        "mask_centroid_2d": [
+          416,
+          1225
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.4283,
+          "max": 10.0801,
+          "mean": 8.6939,
+          "median": 8.6631,
+          "std": 0.5981,
+          "num_pixels": 87697,
+          "z_val": 9.0435,
+          "z_val_pixels": 29636,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0712
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.141,
+          "y": 7.149,
+          "z": 9.043
+        },
+        "mask_centroid_2d_no_erosion": [
+          415,
+          1224
+        ]
+      },
+      {
+        "id": "obj_63_GRiT+YOLO",
+        "label": "grey",
+        "bbox": [
+          250.0,
+          1130.0,
+          850.0,
+          1279.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 63,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_63_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_63_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.4874,
+          "max": 9.9677,
+          "mean": 8.6886,
+          "median": 8.6751,
+          "std": 0.5805,
+          "num_pixels": 64244,
+          "z_val": 9.0237,
+          "z_val_pixels": 23806,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5283
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.971,
+          "y": 7.109,
+          "z": 9.024
+        },
+        "mask_centroid_2d": [
+          506,
+          1222
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.4556,
+          "max": 10.0309,
+          "mean": 8.7008,
+          "median": 8.685,
+          "std": 0.5929,
+          "num_pixels": 66296,
+          "z_val": 9.0394,
+          "z_val_pixels": 24448,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2515
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.985,
+          "y": 7.109,
+          "z": 9.039
+        },
+        "mask_centroid_2d_no_erosion": [
+          507,
+          1221
+        ]
+      },
+      {
+        "id": "obj_64_GRiT+YOLO",
+        "label": "bright",
+        "bbox": [
+          108.0,
+          837.0,
+          214.0,
+          949.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 64,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_64_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_64_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.1717,
+          "max": 7.5813,
+          "mean": 7.3718,
+          "median": 7.3709,
+          "std": 0.0573,
+          "num_pixels": 6289,
+          "z_val": 7.3725,
+          "z_val_pixels": 3131,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5633
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.64,
+          "y": 2.735,
+          "z": 7.373
+        },
+        "mask_centroid_2d": [
+          162,
+          914
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.0385,
+          "max": 7.8221,
+          "mean": 7.3742,
+          "median": 7.3717,
+          "std": 0.0663,
+          "num_pixels": 6654,
+          "z_val": 7.3725,
+          "z_val_pixels": 3314,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9219
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.63,
+          "y": 2.735,
+          "z": 7.373
+        },
+        "mask_centroid_2d_no_erosion": [
+          163,
+          914
+        ]
+      },
+      {
+        "id": "obj_65_GRiT+YOLO",
+        "label": "plunger",
+        "bbox": [
+          588.0,
+          257.0,
+          752.0,
+          1008.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 65,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_65_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_65_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.0683,
+          "max": 7.3558,
+          "mean": 6.6822,
+          "median": 6.6569,
+          "std": 0.2886,
+          "num_pixels": 70146,
+          "z_val": 6.7632,
+          "z_val_pixels": 24668,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.097
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.248,
+          "y": 0.385,
+          "z": 6.763
+        },
+        "mask_centroid_2d": [
+          672,
+          682
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.0596,
+          "max": 7.3716,
+          "mean": 6.685,
+          "median": 6.6609,
+          "std": 0.2942,
+          "num_pixels": 74042,
+          "z_val": 6.4137,
+          "z_val_pixels": 26213,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5253
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.131,
+          "y": 0.382,
+          "z": 6.414
+        },
+        "mask_centroid_2d_no_erosion": [
+          672,
+          684
+        ]
+      },
+      {
+        "id": "obj_66_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          222.0,
+          1102.0,
+          261.0,
+          1279.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 66,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_66_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_66_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.2747,
+          "max": 8.3499,
+          "mean": 7.8052,
+          "median": 7.8145,
+          "std": 0.1765,
+          "num_pixels": 4395,
+          "z_val": 7.9277,
+          "z_val_pixels": 1271,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.1606
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.044,
+          "y": 5.978,
+          "z": 7.928
+        },
+        "mask_centroid_2d": [
+          236,
+          1197
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.0267,
+          "max": 8.7027,
+          "mean": 7.8038,
+          "median": 7.8146,
+          "std": 0.2183,
+          "num_pixels": 4604,
+          "z_val": 7.932,
+          "z_val_pixels": 1338,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.2902
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.056,
+          "y": 5.959,
+          "z": 7.932
+        },
+        "mask_centroid_2d_no_erosion": [
+          235,
+          1195
+        ]
+      },
+      {
+        "id": "obj_67_GRiT+YOLO",
+        "label": "airship",
+        "bbox": [
+          473.0,
+          177.0,
+          568.0,
+          333.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 67,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_67_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_67_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.662,
+          "max": 8.7448,
+          "mean": 8.1909,
+          "median": 8.1668,
+          "std": 0.2654,
+          "num_pixels": 9521,
+          "z_val": 8.1112,
+          "z_val_pixels": 4747,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3758
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.994,
+          "y": -4.085,
+          "z": 8.111
+        },
+        "mask_centroid_2d": [
+          517,
+          268
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.662,
+          "max": 8.8074,
+          "mean": 8.1929,
+          "median": 8.1695,
+          "std": 0.2707,
+          "num_pixels": 10043,
+          "z_val": 8.1099,
+          "z_val_pixels": 4997,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.7613
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.994,
+          "y": -4.084,
+          "z": 8.11
+        },
+        "mask_centroid_2d_no_erosion": [
+          517,
+          268
+        ]
+      },
+      {
+        "id": "obj_68_GRiT+YOLO",
+        "label": "nail",
+        "bbox": [
+          464.0,
+          852.0,
+          686.0,
+          1144.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 68,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_68_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_68_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.8781,
+          "max": 6.8135,
+          "mean": 6.312,
+          "median": 6.2968,
+          "std": 0.2139,
+          "num_pixels": 19923,
+          "z_val": 6.0186,
+          "z_val_pixels": 7846,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0737
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.519,
+          "y": 3.177,
+          "z": 6.019
+        },
+        "mask_centroid_2d": [
+          613,
+          1030
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.8762,
+          "max": 6.8297,
+          "mean": 6.3156,
+          "median": 6.2993,
+          "std": 0.219,
+          "num_pixels": 21880,
+          "z_val": 6.0156,
+          "z_val_pixels": 8716,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1699
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.511,
+          "y": 3.176,
+          "z": 6.016
+        },
+        "mask_centroid_2d_no_erosion": [
+          612,
+          1030
+        ]
+      },
+      {
+        "id": "obj_69_GRiT+YOLO",
+        "label": "dog",
+        "bbox": [
+          161.0,
+          0.0,
+          852.0,
+          1092.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 69,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_69_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_69_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.7567,
+          "max": 13.1499,
+          "mean": 11.4508,
+          "median": 11.3245,
+          "std": 0.8459,
+          "num_pixels": 140868,
+          "z_val": 11.1049,
+          "z_val_pixels": 49850,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4545
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.428,
+          "y": -7.321,
+          "z": 11.105
+        },
+        "mask_centroid_2d": [
+          588,
+          153
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.7662,
+          "max": 13.1883,
+          "mean": 11.474,
+          "median": 11.3725,
+          "std": 0.8513,
+          "num_pixels": 149114,
+          "z_val": 11.1049,
+          "z_val_pixels": 53522,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.431
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.443,
+          "y": -7.261,
+          "z": 11.105
+        },
+        "mask_centroid_2d_no_erosion": [
+          589,
+          157
+        ]
+      },
+      {
+        "id": "obj_70_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          780.0,
+          687.0,
+          852.0,
+          888.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 70,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_70_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_70_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.7445,
+          "max": 9.3272,
+          "mean": 9.0424,
+          "median": 9.038,
+          "std": 0.0991,
+          "num_pixels": 5919,
+          "z_val": 9.0448,
+          "z_val_pixels": 1925,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1349
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.561,
+          "y": 1.665,
+          "z": 9.045
+        },
+        "mask_centroid_2d": [
+          799,
+          776
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.7353,
+          "max": 9.3592,
+          "mean": 9.0519,
+          "median": 9.0416,
+          "std": 0.11,
+          "num_pixels": 6173,
+          "z_val": 9.0417,
+          "z_val_pixels": 2005,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1983
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.547,
+          "y": 1.652,
+          "z": 9.042
+        },
+        "mask_centroid_2d_no_erosion": [
+          798,
+          775
+        ]
+      },
+      {
+        "id": "obj_71_GRiT+YOLO",
+        "label": "plane",
+        "bbox": [
+          109.0,
+          318.0,
+          247.0,
+          1035.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 71,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_71_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_71_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.2277,
+          "max": 8.4157,
+          "mean": 7.7976,
+          "median": 7.8377,
+          "std": 0.2695,
+          "num_pixels": 43157,
+          "z_val": 7.891,
+          "z_val_pixels": 14364,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4779
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.526,
+          "y": 0.406,
+          "z": 7.891
+        },
+        "mask_centroid_2d": [
+          190,
+          678
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.2123,
+          "max": 8.4442,
+          "mean": 7.8025,
+          "median": 7.8414,
+          "std": 0.2752,
+          "num_pixels": 44824,
+          "z_val": 7.8955,
+          "z_val_pixels": 14944,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.023
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.517,
+          "y": 0.406,
+          "z": 7.895
+        },
+        "mask_centroid_2d_no_erosion": [
+          191,
+          678
+        ]
+      },
+      {
+        "id": "obj_72_GRiT+YOLO",
+        "label": "brown",
+        "bbox": [
+          23.0,
+          0.0,
+          152.0,
+          1199.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 72,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_72_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_72_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.1538,
+          "max": 10.2997,
+          "mean": 9.5909,
+          "median": 9.5395,
+          "std": 0.2465,
+          "num_pixels": 123933,
+          "z_val": 9.3544,
+          "z_val_pixels": 29872,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4446
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.426,
+          "y": -0.912,
+          "z": 9.354
+        },
+        "mask_centroid_2d": [
+          77,
+          568
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.1538,
+          "max": 10.3304,
+          "mean": 9.5972,
+          "median": 9.5447,
+          "std": 0.2513,
+          "num_pixels": 127112,
+          "z_val": 9.3516,
+          "z_val_pixels": 30849,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.424,
+          "y": -0.911,
+          "z": 9.352
+        },
+        "mask_centroid_2d_no_erosion": [
+          77,
+          568
+        ]
+      },
+      {
+        "id": "obj_73_GRiT+YOLO",
+        "label": "white",
+        "bbox": [
+          161.0,
+          0.0,
+          852.0,
+          628.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 73,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_73_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_73_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.7428,
+          "max": 13.1374,
+          "mean": 11.4374,
+          "median": 11.2935,
+          "std": 0.8469,
+          "num_pixels": 137499,
+          "z_val": 11.1414,
+          "z_val_pixels": 49204,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4887
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.391,
+          "y": -7.435,
+          "z": 11.141
+        },
+        "mask_centroid_2d": [
+          585,
+          147
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.7618,
+          "max": 13.1766,
+          "mean": 11.4651,
+          "median": 11.3502,
+          "std": 0.8504,
+          "num_pixels": 146321,
+          "z_val": 11.1186,
+          "z_val_pixels": 52837,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1745
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.401,
+          "y": -7.33,
+          "z": 11.119
+        },
+        "mask_centroid_2d_no_erosion": [
+          586,
+          153
+        ]
+      },
+      {
+        "id": "obj_74_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          233.0,
+          37.0,
+          852.0,
+          125.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 74,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_74_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_74_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.447,
+          "max": 11.1628,
+          "mean": 9.774,
+          "median": 9.8655,
+          "std": 0.6823,
+          "num_pixels": 11588,
+          "z_val": 9.8033,
+          "z_val_pixels": 1615,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.7653
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.785,
+          "y": -7.432,
+          "z": 9.803
+        },
+        "mask_centroid_2d": [
+          561,
+          80
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.4157,
+          "max": 11.2793,
+          "mean": 9.8008,
+          "median": 9.8835,
+          "std": 0.6875,
+          "num_pixels": 13034,
+          "z_val": 9.8039,
+          "z_val_pixels": 1905,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.3458
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.798,
+          "y": -7.432,
+          "z": 9.804
+        },
+        "mask_centroid_2d_no_erosion": [
+          562,
+          80
+        ]
+      },
+      {
+        "id": "obj_75_GRiT+YOLO",
+        "label": "grey",
+        "bbox": [
+          744.0,
+          687.0,
+          852.0,
+          888.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 75,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_75_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_75_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 8.763,
+          "max": 9.3214,
+          "mean": 9.042,
+          "median": 9.0375,
+          "std": 0.0962,
+          "num_pixels": 5813,
+          "z_val": 9.0424,
+          "z_val_pixels": 1894,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1582
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.56,
+          "y": 1.652,
+          "z": 9.042
+        },
+        "mask_centroid_2d": [
+          799,
+          775
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.727,
+          "max": 9.3822,
+          "mean": 9.0574,
+          "median": 9.0436,
+          "std": 0.116,
+          "num_pixels": 6344,
+          "z_val": 9.0421,
+          "z_val_pixels": 2085,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1608
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 4.559,
+          "y": 1.64,
+          "z": 9.042
+        },
+        "mask_centroid_2d_no_erosion": [
+          799,
+          774
+        ]
+      },
+      {
+        "id": "obj_76_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          191.0,
+          829.0,
+          251.0,
+          1104.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 76,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_76_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_76_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 6.6564,
+          "max": 7.5239,
+          "mean": 7.0353,
+          "median": 7.0149,
+          "std": 0.2095,
+          "num_pixels": 7434,
+          "z_val": 6.8942,
+          "z_val_pixels": 1999,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.28
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.909,
+          "y": 3.154,
+          "z": 6.894
+        },
+        "mask_centroid_2d": [
+          222,
+          978
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.6564,
+          "max": 7.5737,
+          "mean": 7.0505,
+          "median": 7.0255,
+          "std": 0.221,
+          "num_pixels": 7780,
+          "z_val": 6.8945,
+          "z_val_pixels": 2111,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5364
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.918,
+          "y": 3.136,
+          "z": 6.895
+        },
+        "mask_centroid_2d_no_erosion": [
+          221,
+          976
+        ]
+      },
+      {
+        "id": "obj_77_GRiT+YOLO",
+        "label": "white",
+        "bbox": [
+          4.0,
+          0.0,
+          218.0,
+          1199.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 77,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_77_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_77_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.1538,
+          "max": 11.5466,
+          "mean": 9.901,
+          "median": 9.678,
+          "std": 0.6203,
+          "num_pixels": 173733,
+          "z_val": 9.3878,
+          "z_val_pixels": 41621,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4588
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.2,
+          "y": -0.94,
+          "z": 9.388
+        },
+        "mask_centroid_2d": [
+          96,
+          566
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.1538,
+          "max": 11.5727,
+          "mean": 9.9105,
+          "median": 9.6903,
+          "std": 0.6241,
+          "num_pixels": 179980,
+          "z_val": 9.3865,
+          "z_val_pixels": 43520,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3823
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.199,
+          "y": -0.889,
+          "z": 9.386
+        },
+        "mask_centroid_2d_no_erosion": [
+          96,
+          570
+        ]
+      },
+      {
+        "id": "obj_78_GRiT+YOLO",
+        "label": "tick",
+        "bbox": [
+          487.0,
+          542.0,
+          513.0,
+          570.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 78,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_78_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_78_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.1806,
+          "max": 7.3604,
+          "mean": 7.2653,
+          "median": 7.2605,
+          "std": 0.0426,
+          "num_pixels": 629,
+          "z_val": 7.2351,
+          "z_val_pixels": 315,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0113
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.73,
+          "y": -0.813,
+          "z": 7.235
+        },
+        "mask_centroid_2d": [
+          501,
+          557
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.1806,
+          "max": 7.3604,
+          "mean": 7.2653,
+          "median": 7.2605,
+          "std": 0.0426,
+          "num_pixels": 629,
+          "z_val": 7.2351,
+          "z_val_pixels": 315,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0113
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.73,
+          "y": -0.813,
+          "z": 7.235
+        },
+        "mask_centroid_2d_no_erosion": [
+          501,
+          557
+        ]
+      },
+      {
+        "id": "obj_79_GRiT+YOLO",
+        "label": "white",
+        "bbox": [
+          554.0,
+          851.0,
+          744.0,
+          1143.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 79,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_79_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_79_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 5.942,
+          "max": 6.8193,
+          "mean": 6.3159,
+          "median": 6.3003,
+          "std": 0.2126,
+          "num_pixels": 19565,
+          "z_val": 5.9958,
+          "z_val_pixels": 7669,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1083
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.522,
+          "y": 3.149,
+          "z": 5.996
+        },
+        "mask_centroid_2d": [
+          614,
+          1028
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.942,
+          "max": 6.836,
+          "mean": 6.3233,
+          "median": 6.3066,
+          "std": 0.2175,
+          "num_pixels": 21367,
+          "z_val": 6.0186,
+          "z_val_pixels": 8475,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1297
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.519,
+          "y": 3.153,
+          "z": 6.019
+        },
+        "mask_centroid_2d_no_erosion": [
+          613,
+          1027
+        ]
+      },
+      {
+        "id": "obj_80_GRiT+YOLO",
+        "label": "shower",
+        "bbox": [
+          249.0,
+          1112.0,
+          295.0,
+          1148.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 80,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_80_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_80_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.109,
+          "max": 11.042,
+          "mean": 10.1904,
+          "median": 10.2294,
+          "std": 0.2816,
+          "num_pixels": 1149,
+          "z_val": 10.2351,
+          "z_val_pixels": 565,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.497
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.21,
+          "y": 6.803,
+          "z": 10.235
+        },
+        "mask_centroid_2d": [
+          267,
+          1131
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.109,
+          "max": 11.042,
+          "mean": 10.1904,
+          "median": 10.2294,
+          "std": 0.2816,
+          "num_pixels": 1149,
+          "z_val": 10.2351,
+          "z_val_pixels": 565,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.497
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.21,
+          "y": 6.803,
+          "z": 10.235
+        },
+        "mask_centroid_2d_no_erosion": [
+          267,
+          1131
+        ]
+      },
+      {
+        "id": "obj_81_GRiT+YOLO",
+        "label": "white",
+        "bbox": [
+          111.0,
+          824.0,
+          223.0,
+          932.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 81,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_81_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_81_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.393,
+          "max": 7.744,
+          "mean": 7.5606,
+          "median": 7.5554,
+          "std": 0.071,
+          "num_pixels": 5055,
+          "z_val": 7.5181,
+          "z_val_pixels": 2386,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2142
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.61,
+          "y": 2.208,
+          "z": 7.518
+        },
+        "mask_centroid_2d": [
+          170,
+          857
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.3157,
+          "max": 7.8415,
+          "mean": 7.5694,
+          "median": 7.5608,
+          "std": 0.0821,
+          "num_pixels": 5485,
+          "z_val": 7.5324,
+          "z_val_pixels": 2597,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2728
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.636,
+          "y": 2.202,
+          "z": 7.532
+        },
+        "mask_centroid_2d_no_erosion": [
+          168,
+          856
+        ]
+      },
+      {
+        "id": "obj_82_GRiT+YOLO",
+        "label": "white",
+        "bbox": [
+          208.0,
+          1097.0,
+          296.0,
+          1149.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 82,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_82_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_82_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.6429,
+          "max": 10.7709,
+          "mean": 10.2152,
+          "median": 10.2395,
+          "std": 0.2243,
+          "num_pixels": 1094,
+          "z_val": 10.2402,
+          "z_val_pixels": 537,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9745
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.197,
+          "y": 6.806,
+          "z": 10.24
+        },
+        "mask_centroid_2d": [
+          268,
+          1131
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.1955,
+          "max": 11.042,
+          "mean": 10.2036,
+          "median": 10.2359,
+          "std": 0.2709,
+          "num_pixels": 1182,
+          "z_val": 10.2417,
+          "z_val_pixels": 580,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.3494
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.197,
+          "y": 6.807,
+          "z": 10.242
+        },
+        "mask_centroid_2d_no_erosion": [
+          268,
+          1131
+        ]
+      },
+      {
+        "id": "obj_83_GRiT+YOLO",
+        "label": "light",
+        "bbox": [
+          219.0,
+          47.0,
+          781.0,
+          310.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 83,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_83_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_83_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.6231,
+          "max": 10.1983,
+          "mean": 9.8601,
+          "median": 9.8485,
+          "std": 0.1364,
+          "num_pixels": 4268,
+          "z_val": 9.703,
+          "z_val_pixels": 1122,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.428
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.555,
+          "y": -5.674,
+          "z": 9.703
+        },
+        "mask_centroid_2d": [
+          232,
+          208
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.3777,
+          "max": 10.5398,
+          "mean": 9.9105,
+          "median": 9.8725,
+          "std": 0.1927,
+          "num_pixels": 5279,
+          "z_val": 9.7021,
+          "z_val_pixels": 1460,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.6048
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.555,
+          "y": -5.713,
+          "z": 9.702
+        },
+        "mask_centroid_2d_no_erosion": [
+          232,
+          205
+        ]
+      },
+      {
+        "id": "obj_84_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          0.0,
+          1147.0,
+          565.0,
+          1279.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 84,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_84_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_84_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.5865,
+          "max": 10.116,
+          "mean": 8.6586,
+          "median": 8.5765,
+          "std": 0.5961,
+          "num_pixels": 20822,
+          "z_val": 8.009,
+          "z_val_pixels": 9036,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.8479
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.377,
+          "y": 6.451,
+          "z": 8.009
+        },
+        "mask_centroid_2d": [
+          115,
+          1235
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.5865,
+          "max": 10.1542,
+          "mean": 8.6765,
+          "median": 8.5949,
+          "std": 0.6087,
+          "num_pixels": 21316,
+          "z_val": 7.8342,
+          "z_val_pixels": 9289,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9355
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.303,
+          "y": 6.31,
+          "z": 7.834
+        },
+        "mask_centroid_2d_no_erosion": [
+          115,
+          1235
+        ]
+      },
+      {
+        "id": "obj_85_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          0.0,
+          0.0,
+          27.0,
+          975.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 85,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_85_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_85_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.6033,
+          "max": 10.3167,
+          "mean": 9.961,
+          "median": 9.969,
+          "std": 0.1679,
+          "num_pixels": 25072,
+          "z_val": 9.7163,
+          "z_val_pixels": 3198,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2065
+        },
+        "coordinates_3d_from_mask": {
+          "x": -5.452,
+          "y": -1.841,
+          "z": 9.716
+        },
+        "mask_centroid_2d": [
+          12,
+          500
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.6033,
+          "max": 10.3167,
+          "mean": 9.961,
+          "median": 9.969,
+          "std": 0.1679,
+          "num_pixels": 25072,
+          "z_val": 9.7163,
+          "z_val_pixels": 3198,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2065
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -5.452,
+          "y": -1.841,
+          "z": 9.716
+        },
+        "mask_centroid_2d_no_erosion": [
+          12,
+          500
+        ]
+      },
+      {
+        "id": "obj_86_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          308.0,
+          537.0,
+          334.0,
+          564.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 86,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_86_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_86_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 7.7053,
+          "max": 7.8865,
+          "mean": 7.795,
+          "median": 7.787,
+          "std": 0.0435,
+          "num_pixels": 612,
+          "z_val": 7.7704,
+          "z_val_pixels": 306,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0053
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.11,
+          "y": -0.936,
+          "z": 7.77
+        },
+        "mask_centroid_2d": [
+          321,
+          551
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.7053,
+          "max": 7.8865,
+          "mean": 7.795,
+          "median": 7.787,
+          "std": 0.0435,
+          "num_pixels": 612,
+          "z_val": 7.7704,
+          "z_val_pixels": 306,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0053
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.11,
+          "y": -0.936,
+          "z": 7.77
+        },
+        "mask_centroid_2d_no_erosion": [
+          321,
+          551
+        ]
+      },
+      {
+        "id": "obj_87_GRiT+YOLO",
+        "label": "envelope",
+        "bbox": [
+          744.0,
+          687.0,
+          852.0,
+          708.0
+        ],
+        "source_model": "GRiT+YOLO",
+        "segmentor": "SAM2_AMG",
+        "sam2_mask_index": 87,
+        "mask_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_87_mask_B.png",
+        "masked_depth_path": "scene_graph/masks/ChatGPT Image Feb 17, 2026, 06_22_09 PM_obj_87_masked_depth_B.npy",
+        "depth_stats": {
+          "min": 9.1894,
+          "max": 9.5779,
+          "mean": 9.3911,
+          "median": 9.3904,
+          "std": 0.0835,
+          "num_pixels": 678,
+          "z_val": 9.4029,
+          "z_val_pixels": 328,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2085
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.187,
+          "y": 0.751,
+          "z": 9.403
+        },
+        "mask_centroid_2d": [
+          834,
+          699
+        ],
+        "depth_stats_no_erosion": {
+          "min": 9.1894,
+          "max": 9.5779,
+          "mean": 9.3911,
+          "median": 9.3904,
+          "std": 0.0835,
+          "num_pixels": 678,
+          "z_val": 9.4029,
+          "z_val_pixels": 328,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2085
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 5.187,
+          "y": 0.751,
+          "z": 9.403
+        },
+        "mask_centroid_2d_no_erosion": [
+          834,
+          699
+        ]
+      }
+    ]
+  }
+}
