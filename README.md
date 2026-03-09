@@ -73,6 +73,48 @@ Input image
               {stem}_scene.json
 ```
 
+## Output Format
+
+Each image produces `{stem}_scene.json`:
+
+```json
+{
+  "image": "images/living_room.jpg",
+  "scene_type": "indoor",
+  "objects": [
+    {
+      "id": "obj_0",
+      "label": "sofa",
+      "conf": 0.87,
+      "segmentor": "GroundedSAM2",
+      "bbox": [120, 80, 540, 410],
+      "mask_centroid_2d": [330, 245],
+      "coordinates_3d": {"x": -0.42, "y": 0.15, "z": 2.31},
+      "depth_stats": {
+        "z_val": 2.31,
+        "z_val_pixels": 2.31,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.89
+      },
+      "depth_stats_no_erosion": { "z_val": 2.28, "..." : "..." },
+      "coordinates_3d_no_erosion": {"x": -0.41, "y": 0.14, "z": 2.28},
+      "grounded_sam2_label": "sofa",
+      "grounded_sam2_confidence": 0.87
+    }
+  ],
+  "relations": [
+    {
+      "subject": "obj_0",
+      "predicate": "in front of",
+      "object": "obj_2",
+      "source_layer": "florence2"
+    }
+  ]
+}
+```
+
+Every object carries **dual depth stats** — one set computed with adaptive mask erosion, one without — so you can compare the effect of erosion on depth accuracy.
+
 ---
 
 ## Model Stack
