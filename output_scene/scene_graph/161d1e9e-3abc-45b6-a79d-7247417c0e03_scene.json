@@ -1,0 +1,4490 @@
+{
+  "metadata": {
+    "timestamp": "2026-03-09 01:09:53",
+    "segmentor": "SAM2",
+    "intrinsics": {
+      "fx": 665.1075101064489,
+      "fy": 665.1075101064489,
+      "cx": 384.0,
+      "cy": 512.0
+    },
+    "models": [
+      "GroundedSAM2",
+      "Florence-2",
+      "RAM++",
+      "Pix2SG"
+    ],
+    "rampp_tags": [
+      "beer",
+      "beer can",
+      "beverage",
+      "bottle",
+      "can",
+      "floor",
+      "food",
+      "grass"
+    ],
+    "gdino_query_used": "beer. beer can. beverage. bottle. can. floor. food. grass.",
+    "relation_sources": {
+      "Pix2SG": {
+        "active": true,
+        "backend": "spatial_scaffold",
+        "reason": "No precomputed triplets dir at /home/stanleyomondi/citv/pix2sg_triplets. Using spatial scaffold backend."
+      }
+    },
+    "relation_debug": {
+      "pix2sg": {
+        "input_triplets": 298,
+        "attached": 298,
+        "subject_id_matched": 298,
+        "subject_label_matched": 0,
+        "target_id_matched": 298,
+        "target_label_matched": 0,
+        "external_targets": 0,
+        "unmatched_subjects": 0
+      },
+      "mask_iou_match_thresh": 0.1,
+      "pix2sg_mask_overlap_thresh": 0.05,
+      "pix2sg_depth_near_threshold": 1.0,
+      "raw_triplets": {
+        "pix2sg": 298
+      },
+      "num_detected_objects": 28,
+      "num_mask_matched": 28
+    },
+    "depth_map": "scene_graph/161d1e9e-3abc-45b6-a79d-7247417c0e03_depth_map.png",
+    "segmentation_image": "scene_graph/161d1e9e-3abc-45b6-a79d-7247417c0e03_segmentation.png",
+    "sam2_segmentation_image": "scene_graph/161d1e9e-3abc-45b6-a79d-7247417c0e03_sam2_segmentation.png",
+    "sam2_tinted_overlay_image": "scene_graph/161d1e9e-3abc-45b6-a79d-7247417c0e03_sam2_tinted_overlay.png"
+  },
+  "objects": [
+    {
+      "id": "obj_0_GroundedSAM2",
+      "label": "grass",
+      "confidence": 0.4818,
+      "conf": 0.4818,
+      "bbox": [
+        1,
+        0,
+        767,
+        951
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 1.004,
+        "y": -0.31,
+        "z": 9.824
+      },
+      "depth_stats": {
+        "min": 6.0698,
+        "max": 24.8615,
+        "mean": 12.9293,
+        "median": 12.4128,
+        "std": 4.5778,
+        "num_pixels": 540384,
+        "z_val": 9.8239,
+        "z_val_pixels": 248847,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.3356
+      },
+      "mask_centroid_2d": [
+        452,
+        491
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 0.972,
+        "y": -0.28,
+        "z": 9.793
+      },
+      "depth_stats_no_erosion": {
+        "min": 5.6877,
+        "max": 25.0522,
+        "mean": 12.9169,
+        "median": 12.3743,
+        "std": 4.6004,
+        "num_pixels": 548546,
+        "z_val": 9.7931,
+        "z_val_pixels": 254771,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.5929
+      },
+      "mask_centroid_2d_no_erosion": [
+        450,
+        493
+      ],
+      "sam2_mask_index": 0,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "grass",
+          "label": "grass",
+          "confidence": 0.4818
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "object",
+          "caption": "object",
+          "tags": []
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_6_GroundedSAM2",
+              "target_label": "floor grass",
+              "target_caption": "floor grass",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_7_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.85
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_6_GroundedSAM2",
+              "target_label": "floor grass",
+              "target_caption": "floor grass",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_7_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_1_GroundedSAM2",
+      "label": "beer can",
+      "confidence": 0.6841,
+      "conf": 0.6841,
+      "bbox": [
+        286,
+        497,
+        403,
+        654
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -0.509,
+        "y": 0.818,
+        "z": 8.915
+      },
+      "depth_stats": {
+        "min": 8.6734,
+        "max": 9.2879,
+        "mean": 8.9324,
+        "median": 8.9311,
+        "std": 0.1056,
+        "num_pixels": 12427,
+        "z_val": 8.9148,
+        "z_val_pixels": 6219,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.0231
+      },
+      "mask_centroid_2d": [
+        346,
+        573
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.509,
+        "y": 0.818,
+        "z": 8.915
+      },
+      "depth_stats_no_erosion": {
+        "min": 8.6734,
+        "max": 9.5169,
+        "mean": 8.942,
+        "median": 8.934,
+        "std": 0.1207,
+        "num_pixels": 12945,
+        "z_val": 8.9148,
+        "z_val_pixels": 6485,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.3738
+      },
+      "mask_centroid_2d_no_erosion": [
+        346,
+        573
+      ],
+      "sam2_mask_index": 1,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "beer can",
+          "label": "beer can",
+          "confidence": 0.6841
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "object",
+          "caption": "object",
+          "tags": []
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_14_GroundedSAM2",
+              "target_label": "bird",
+              "target_caption": "bird | fly | green | insect | pigeon | screen | sky",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.85
+            },
+            {
+              "predicate": "below",
+              "target_id": "obj_10_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_14_GroundedSAM2",
+              "target_label": "bird",
+              "target_caption": "bird | fly | green | insect | pigeon | screen | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_2_GroundedSAM2",
+      "label": "beer beverage",
+      "confidence": 0.4848,
+      "conf": 0.4848,
+      "bbox": [
+        286,
+        496,
+        403,
+        655
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -0.509,
+        "y": 0.818,
+        "z": 8.915
+      },
+      "depth_stats": {
+        "min": 8.6734,
+        "max": 9.289,
+        "mean": 8.9325,
+        "median": 8.9311,
+        "std": 0.1057,
+        "num_pixels": 12430,
+        "z_val": 8.9148,
+        "z_val_pixels": 6221,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.0237
+      },
+      "mask_centroid_2d": [
+        346,
+        573
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.509,
+        "y": 0.818,
+        "z": 8.915
+      },
+      "depth_stats_no_erosion": {
+        "min": 8.6734,
+        "max": 9.5169,
+        "mean": 8.942,
+        "median": 8.934,
+        "std": 0.1207,
+        "num_pixels": 12948,
+        "z_val": 8.9148,
+        "z_val_pixels": 6489,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.3741
+      },
+      "mask_centroid_2d_no_erosion": [
+        346,
+        573
+      ],
+      "sam2_mask_index": 2,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "beer beverage",
+          "label": "beer beverage",
+          "confidence": 0.4848
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "object",
+          "caption": "object",
+          "tags": []
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_14_GroundedSAM2",
+              "target_label": "bird",
+              "target_caption": "bird | fly | green | insect | pigeon | screen | sky",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.85
+            },
+            {
+              "predicate": "below",
+              "target_id": "obj_10_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_14_GroundedSAM2",
+              "target_label": "bird",
+              "target_caption": "bird | fly | green | insect | pigeon | screen | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_3_GroundedSAM2",
+      "label": "floor",
+      "confidence": 0.1982,
+      "conf": 0.1982,
+      "bbox": [
+        1,
+        0,
+        767,
+        923
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 1.004,
+        "y": -0.31,
+        "z": 9.824
+      },
+      "depth_stats": {
+        "min": 6.0698,
+        "max": 24.8429,
+        "mean": 12.9313,
+        "median": 12.4159,
+        "std": 4.5742,
+        "num_pixels": 539806,
+        "z_val": 9.8239,
+        "z_val_pixels": 248489,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.3826
+      },
+      "mask_centroid_2d": [
+        452,
+        491
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 0.972,
+        "y": -0.28,
+        "z": 9.794
+      },
+      "depth_stats_no_erosion": {
+        "min": 6.0123,
+        "max": 25.0314,
+        "mean": 12.9197,
+        "median": 12.3798,
+        "std": 4.597,
+        "num_pixels": 547903,
+        "z_val": 9.7945,
+        "z_val_pixels": 254394,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.4552
+      },
+      "mask_centroid_2d_no_erosion": [
+        450,
+        493
+      ],
+      "sam2_mask_index": 3,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "floor",
+          "label": "floor",
+          "confidence": 0.1982
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "object",
+          "caption": "object",
+          "tags": []
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_6_GroundedSAM2",
+              "target_label": "floor grass",
+              "target_caption": "floor grass",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_7_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.85
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_6_GroundedSAM2",
+              "target_label": "floor grass",
+              "target_caption": "floor grass",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_7_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_4_GroundedSAM2",
+      "label": "beer beverage",
+      "confidence": 0.2161,
+      "conf": 0.2161,
+      "bbox": [
+        286,
+        498,
+        402,
+        654
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -0.509,
+        "y": 0.818,
+        "z": 8.915
+      },
+      "depth_stats": {
+        "min": 8.6734,
+        "max": 9.2875,
+        "mean": 8.9324,
+        "median": 8.9311,
+        "std": 0.1056,
+        "num_pixels": 12427,
+        "z_val": 8.9148,
+        "z_val_pixels": 6218,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.0238
+      },
+      "mask_centroid_2d": [
+        346,
+        573
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.509,
+        "y": 0.818,
+        "z": 8.915
+      },
+      "depth_stats_no_erosion": {
+        "min": 8.6734,
+        "max": 9.5151,
+        "mean": 8.9419,
+        "median": 8.9339,
+        "std": 0.1206,
+        "num_pixels": 12945,
+        "z_val": 8.9148,
+        "z_val_pixels": 6488,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.3741
+      },
+      "mask_centroid_2d_no_erosion": [
+        346,
+        573
+      ],
+      "sam2_mask_index": 4,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "beer beverage",
+          "label": "beer beverage",
+          "confidence": 0.2161
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "object",
+          "caption": "object",
+          "tags": []
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_14_GroundedSAM2",
+              "target_label": "bird",
+              "target_caption": "bird | fly | green | insect | pigeon | screen | sky",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.85
+            },
+            {
+              "predicate": "below",
+              "target_id": "obj_10_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_14_GroundedSAM2",
+              "target_label": "bird",
+              "target_caption": "bird | fly | green | insect | pigeon | screen | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_5_GroundedSAM2",
+      "label": "bottle",
+      "confidence": 0.3315,
+      "conf": 0.3315,
+      "bbox": [
+        287,
+        497,
+        404,
+        656
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -0.509,
+        "y": 0.818,
+        "z": 8.915
+      },
+      "depth_stats": {
+        "min": 8.6734,
+        "max": 9.2896,
+        "mean": 8.9326,
+        "median": 8.9311,
+        "std": 0.1058,
+        "num_pixels": 12437,
+        "z_val": 8.9148,
+        "z_val_pixels": 6227,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.0248
+      },
+      "mask_centroid_2d": [
+        346,
+        573
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.509,
+        "y": 0.818,
+        "z": 8.915
+      },
+      "depth_stats_no_erosion": {
+        "min": 8.6734,
+        "max": 9.5169,
+        "mean": 8.942,
+        "median": 8.934,
+        "std": 0.1207,
+        "num_pixels": 12955,
+        "z_val": 8.9148,
+        "z_val_pixels": 6491,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.3748
+      },
+      "mask_centroid_2d_no_erosion": [
+        346,
+        573
+      ],
+      "sam2_mask_index": 5,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "bottle",
+          "label": "bottle",
+          "confidence": 0.3315
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "object",
+          "caption": "object",
+          "tags": []
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_14_GroundedSAM2",
+              "target_label": "bird",
+              "target_caption": "bird | fly | green | insect | pigeon | screen | sky",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.85
+            },
+            {
+              "predicate": "below",
+              "target_id": "obj_10_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_14_GroundedSAM2",
+              "target_label": "bird",
+              "target_caption": "bird | fly | green | insect | pigeon | screen | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_6_GroundedSAM2",
+      "label": "floor grass",
+      "confidence": 0.3632,
+      "conf": 0.3632,
+      "bbox": [
+        0,
+        0,
+        768,
+        1019
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 1.004,
+        "y": -0.31,
+        "z": 9.821
+      },
+      "depth_stats": {
+        "min": 3.3702,
+        "max": 24.9354,
+        "mean": 12.9388,
+        "median": 12.4215,
+        "std": 4.5896,
+        "num_pixels": 540618,
+        "z_val": 9.8209,
+        "z_val_pixels": 248745,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.2334
+      },
+      "mask_centroid_2d": [
+        452,
+        491
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 0.79,
+        "y": -0.132,
+        "z": 7.958
+      },
+      "depth_stats_no_erosion": {
+        "min": 3.1966,
+        "max": 25.1576,
+        "mean": 12.8813,
+        "median": 12.3458,
+        "std": 4.6536,
+        "num_pixels": 551934,
+        "z_val": 7.9581,
+        "z_val_pixels": 255982,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 4.5891
+      },
+      "mask_centroid_2d_no_erosion": [
+        450,
+        501
+      ],
+      "sam2_mask_index": 6,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "floor grass",
+          "label": "floor grass",
+          "confidence": 0.3632
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "object",
+          "caption": "object",
+          "tags": []
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_7_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.85
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_7_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_7_GroundedSAM2",
+      "label": "floor",
+      "confidence": 0.2049,
+      "conf": 0.2049,
+      "bbox": [
+        0,
+        0,
+        768,
+        1022
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 1.004,
+        "y": -0.31,
+        "z": 9.824
+      },
+      "depth_stats": {
+        "min": 3.377,
+        "max": 24.9388,
+        "mean": 12.9395,
+        "median": 12.4222,
+        "std": 4.5897,
+        "num_pixels": 540567,
+        "z_val": 9.8239,
+        "z_val_pixels": 248710,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.2482
+      },
+      "mask_centroid_2d": [
+        452,
+        491
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 0.79,
+        "y": -0.144,
+        "z": 7.96
+      },
+      "depth_stats_no_erosion": {
+        "min": 3.1966,
+        "max": 25.1579,
+        "mean": 12.8849,
+        "median": 12.3493,
+        "std": 4.6511,
+        "num_pixels": 551696,
+        "z_val": 7.9601,
+        "z_val_pixels": 255875,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 4.5223
+      },
+      "mask_centroid_2d_no_erosion": [
+        450,
+        500
+      ],
+      "sam2_mask_index": 7,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "floor",
+          "label": "floor",
+          "confidence": 0.2049
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "object",
+          "caption": "object",
+          "tags": []
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_6_GroundedSAM2",
+              "target_label": "floor grass",
+              "target_caption": "floor grass",
+              "score": 0.85
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_6_GroundedSAM2",
+              "target_label": "floor grass",
+              "target_caption": "floor grass",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_8_GroundedSAM2",
+      "label": "profile",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        0,
+        447,
+        103,
+        574
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -3.822,
+        "y": 0.011,
+        "z": 7.411
+      },
+      "depth_stats": {
+        "min": 7.0266,
+        "max": 8.3173,
+        "mean": 7.6306,
+        "median": 7.5699,
+        "std": 0.2653,
+        "num_pixels": 8858,
+        "z_val": 7.4109,
+        "z_val_pixels": 4298,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.0633
+      },
+      "mask_centroid_2d": [
+        41,
+        513
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -3.813,
+        "y": 0.022,
+        "z": 7.415
+      },
+      "depth_stats_no_erosion": {
+        "min": 7.0266,
+        "max": 8.592,
+        "mean": 7.6501,
+        "median": 7.581,
+        "std": 0.2876,
+        "num_pixels": 9232,
+        "z_val": 7.415,
+        "z_val_pixels": 4524,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 3.2438
+      },
+      "mask_centroid_2d_no_erosion": [
+        42,
+        514
+      ],
+      "sam2_mask_index": 8,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "profile | green | man | screen",
+          "label": "profile",
+          "confidence": 0.9786
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "profile",
+          "caption": "profile | green | man | screen",
+          "tags": [
+            "profile",
+            "green",
+            "man",
+            "screen"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_10_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky | white",
+              "score": 0.75
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.7
+            },
+            {
+              "predicate": "above",
+              "target_id": "obj_21_GroundedSAM2",
+              "target_label": "flip",
+              "target_caption": "flip | fly | man | sky | trick",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.7
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_9_GroundedSAM2",
+      "label": "baseball bat",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        400,
+        0,
+        432,
+        44
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": 1.374,
+        "y": -20.401,
+        "z": 27.692
+      },
+      "depth_stats": {
+        "min": 26.8925,
+        "max": 28.8712,
+        "mean": 27.6927,
+        "median": 27.6883,
+        "std": 0.3316,
+        "num_pixels": 1335,
+        "z_val": 27.6918,
+        "z_val_pixels": 665,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.4238
+      },
+      "mask_centroid_2d": [
+        417,
+        22
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 1.374,
+        "y": -20.401,
+        "z": 27.692
+      },
+      "depth_stats_no_erosion": {
+        "min": 26.8925,
+        "max": 28.8712,
+        "mean": 27.6927,
+        "median": 27.6883,
+        "std": 0.3316,
+        "num_pixels": 1335,
+        "z_val": 27.6918,
+        "z_val_pixels": 665,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.4238
+      },
+      "mask_centroid_2d_no_erosion": [
+        417,
+        22
+      ],
+      "sam2_mask_index": 9,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "baseball bat | baseball glove | green | man | stand | tennis racket",
+          "label": "baseball bat",
+          "confidence": 0.945
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "baseball bat",
+          "caption": "baseball bat | baseball glove | green | man | stand | tennis racket",
+          "tags": [
+            "baseball bat",
+            "baseball glove",
+            "green",
+            "man",
+            "stand",
+            "tennis racket"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_17_GroundedSAM2",
+              "target_label": "baseball glove",
+              "target_caption": "baseball glove | green | man | stand",
+              "score": 0.75
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_25_GroundedSAM2",
+              "target_label": "baseball glove",
+              "target_caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_23_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | sky | stand",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_16_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | screen | sky",
+              "score": 0.7
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_10_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky | white",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_6_GroundedSAM2",
+              "target_label": "floor grass",
+              "target_caption": "floor grass",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_10_GroundedSAM2",
+      "label": "fly",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        260,
+        413,
+        357,
+        498
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -1.422,
+        "y": -0.835,
+        "z": 11.82
+      },
+      "depth_stats": {
+        "min": 11.151,
+        "max": 12.5416,
+        "mean": 11.8001,
+        "median": 11.7734,
+        "std": 0.2849,
+        "num_pixels": 3269,
+        "z_val": 11.8196,
+        "z_val_pixels": 1339,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.6256
+      },
+      "mask_centroid_2d": [
+        304,
+        465
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -1.423,
+        "y": -0.836,
+        "z": 11.832
+      },
+      "depth_stats_no_erosion": {
+        "min": 11.1253,
+        "max": 12.694,
+        "mean": 11.8583,
+        "median": 11.7979,
+        "std": 0.3323,
+        "num_pixels": 3710,
+        "z_val": 11.8323,
+        "z_val_pixels": 1552,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.6491
+      },
+      "mask_centroid_2d_no_erosion": [
+        304,
+        465
+      ],
+      "sam2_mask_index": 10,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "fly | green | screen | sky | white",
+          "label": "fly",
+          "confidence": 0.928
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "fly",
+          "caption": "fly | green | screen | sky | white",
+          "tags": [
+            "fly",
+            "green",
+            "screen",
+            "sky",
+            "white"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "above",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.7
+            },
+            {
+              "predicate": "above",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.7
+            },
+            {
+              "predicate": "above",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.7
+            },
+            {
+              "predicate": "above",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.7
+            },
+            {
+              "predicate": "above",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_6_GroundedSAM2",
+              "target_label": "floor grass",
+              "target_caption": "floor grass",
+              "score": 0.7
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_11_GroundedSAM2",
+      "label": "baseball glove",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        0,
+        993,
+        84,
+        1023
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -1.567,
+        "y": 2.204,
+        "z": 2.92
+      },
+      "depth_stats": {
+        "min": 2.7993,
+        "max": 3.3749,
+        "mean": 2.9766,
+        "median": 2.9358,
+        "std": 0.1183,
+        "num_pixels": 1290,
+        "z_val": 2.9196,
+        "z_val_pixels": 493,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.6254
+      },
+      "mask_centroid_2d": [
+        27,
+        1014
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -1.567,
+        "y": 2.204,
+        "z": 2.92
+      },
+      "depth_stats_no_erosion": {
+        "min": 2.7993,
+        "max": 3.3749,
+        "mean": 2.9766,
+        "median": 2.9358,
+        "std": 0.1183,
+        "num_pixels": 1290,
+        "z_val": 2.9196,
+        "z_val_pixels": 493,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.6254
+      },
+      "mask_centroid_2d_no_erosion": [
+        27,
+        1014
+      ],
+      "sam2_mask_index": 11,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+          "label": "baseball glove",
+          "confidence": 0.9617
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "baseball glove",
+          "caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+          "tags": [
+            "baseball glove",
+            "computer screen",
+            "green",
+            "man",
+            "selfie",
+            "stool",
+            "woman"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "below",
+              "target_id": "obj_21_GroundedSAM2",
+              "target_label": "flip",
+              "target_caption": "flip | fly | man | sky | trick",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_13_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | tear | wave | wind",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_24_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_12_GroundedSAM2",
+              "target_label": "beak",
+              "target_caption": "beak | brush | green | pigeon | screen | toothpaste",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_26_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | wave | wind",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_22_GroundedSAM2",
+              "target_label": "cigarette",
+              "target_caption": "cigarette | fly | green | screen | sky | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_8_GroundedSAM2",
+              "target_label": "profile",
+              "target_caption": "profile | green | man | screen",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_12_GroundedSAM2",
+      "label": "beak",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        160,
+        834,
+        348,
+        1023
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -0.969,
+        "y": 3.392,
+        "z": 5.116
+      },
+      "depth_stats": {
+        "min": 4.3398,
+        "max": 6.2042,
+        "mean": 5.1667,
+        "median": 5.1176,
+        "std": 0.4564,
+        "num_pixels": 19311,
+        "z_val": 5.1156,
+        "z_val_pixels": 9358,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.3504
+      },
+      "mask_centroid_2d": [
+        258,
+        953
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.978,
+        "y": 3.415,
+        "z": 5.162
+      },
+      "depth_stats_no_erosion": {
+        "min": 4.3398,
+        "max": 6.2508,
+        "mean": 5.1804,
+        "median": 5.1286,
+        "std": 0.4655,
+        "num_pixels": 20562,
+        "z_val": 5.162,
+        "z_val_pixels": 10014,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.372
+      },
+      "mask_centroid_2d_no_erosion": [
+        258,
+        952
+      ],
+      "sam2_mask_index": 12,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "beak | brush | green | pigeon | screen | toothpaste",
+          "label": "beak",
+          "confidence": 0.9578
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "beak",
+          "caption": "beak | brush | green | pigeon | screen | toothpaste",
+          "tags": [
+            "beak",
+            "brush",
+            "green",
+            "pigeon",
+            "screen",
+            "toothpaste"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_26_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | wave | wind",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_13_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | tear | wave | wind",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_24_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man",
+              "score": 0.85
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_22_GroundedSAM2",
+              "target_label": "cigarette",
+              "target_caption": "cigarette | fly | green | screen | sky | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.85
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_21_GroundedSAM2",
+              "target_label": "flip",
+              "target_caption": "flip | fly | man | sky | trick",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_11_GroundedSAM2",
+              "target_label": "baseball glove",
+              "target_caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_18_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | pillow | strip | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_13_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | tear | wave | wind",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_24_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_26_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | wave | wind",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_13_GroundedSAM2",
+      "label": "flag",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        61,
+        832,
+        349,
+        1023
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -0.987,
+        "y": 3.426,
+        "z": 5.167
+      },
+      "depth_stats": {
+        "min": 4.3398,
+        "max": 6.225,
+        "mean": 5.1726,
+        "median": 5.1236,
+        "std": 0.459,
+        "num_pixels": 19573,
+        "z_val": 5.167,
+        "z_val_pixels": 9527,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.3493
+      },
+      "mask_centroid_2d": [
+        257,
+        953
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.969,
+        "y": 3.377,
+        "z": 5.116
+      },
+      "depth_stats_no_erosion": {
+        "min": 4.3398,
+        "max": 6.2724,
+        "mean": 5.1867,
+        "median": 5.1371,
+        "std": 0.469,
+        "num_pixels": 20843,
+        "z_val": 5.1161,
+        "z_val_pixels": 10183,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.3222
+      },
+      "mask_centroid_2d_no_erosion": [
+        258,
+        951
+      ],
+      "sam2_mask_index": 13,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "flag | flag pole | green | man | screen | tear | wave | wind",
+          "label": "flag",
+          "confidence": 0.9571
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "flag",
+          "caption": "flag | flag pole | green | man | screen | tear | wave | wind",
+          "tags": [
+            "flag",
+            "flag pole",
+            "green",
+            "man",
+            "screen",
+            "tear",
+            "wave",
+            "wind"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_24_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_12_GroundedSAM2",
+              "target_label": "beak",
+              "target_caption": "beak | brush | green | pigeon | screen | toothpaste",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_26_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | wave | wind",
+              "score": 0.85
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_22_GroundedSAM2",
+              "target_label": "cigarette",
+              "target_caption": "cigarette | fly | green | screen | sky | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.85
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_21_GroundedSAM2",
+              "target_label": "flip",
+              "target_caption": "flip | fly | man | sky | trick",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_11_GroundedSAM2",
+              "target_label": "baseball glove",
+              "target_caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_18_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | pillow | strip | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_12_GroundedSAM2",
+              "target_label": "beak",
+              "target_caption": "beak | brush | green | pigeon | screen | toothpaste",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_24_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_26_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | wave | wind",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_14_GroundedSAM2",
+      "label": "bird",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        306,
+        567,
+        398,
+        648
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -0.35,
+        "y": 1.401,
+        "z": 8.958
+      },
+      "depth_stats": {
+        "min": 8.8444,
+        "max": 9.2086,
+        "mean": 8.9849,
+        "median": 8.9704,
+        "std": 0.0673,
+        "num_pixels": 3861,
+        "z_val": 8.9578,
+        "z_val_pixels": 1763,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.1745
+      },
+      "mask_centroid_2d": [
+        358,
+        616
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.35,
+        "y": 1.401,
+        "z": 8.957
+      },
+      "depth_stats_no_erosion": {
+        "min": 8.8444,
+        "max": 9.314,
+        "mean": 8.9878,
+        "median": 8.9698,
+        "std": 0.0746,
+        "num_pixels": 4224,
+        "z_val": 8.957,
+        "z_val_pixels": 1935,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.2253
+      },
+      "mask_centroid_2d_no_erosion": [
+        358,
+        616
+      ],
+      "sam2_mask_index": 14,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "bird | fly | green | insect | pigeon | screen | sky",
+          "label": "bird",
+          "confidence": 0.8653
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "bird",
+          "caption": "bird | fly | green | insect | pigeon | screen | sky",
+          "tags": [
+            "bird",
+            "fly",
+            "green",
+            "insect",
+            "pigeon",
+            "screen",
+            "sky"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.85
+            },
+            {
+              "predicate": "below",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.7
+            },
+            {
+              "predicate": "below",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.7
+            },
+            {
+              "predicate": "below",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_15_GroundedSAM2",
+      "label": "fly",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        313,
+        589,
+        390,
+        636
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -0.391,
+        "y": 1.441,
+        "z": 8.957
+      },
+      "depth_stats": {
+        "min": 8.8784,
+        "max": 9.1016,
+        "mean": 8.9861,
+        "median": 8.9713,
+        "std": 0.0503,
+        "num_pixels": 1854,
+        "z_val": 8.9569,
+        "z_val_pixels": 786,
+        "possibly_transparent": true,
+        "depth_separation_from_background": 0.0068
+      },
+      "mask_centroid_2d": [
+        355,
+        619
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.391,
+        "y": 1.427,
+        "z": 8.957
+      },
+      "depth_stats_no_erosion": {
+        "min": 8.8764,
+        "max": 9.1028,
+        "mean": 8.9862,
+        "median": 8.972,
+        "std": 0.0513,
+        "num_pixels": 1990,
+        "z_val": 8.9565,
+        "z_val_pixels": 843,
+        "possibly_transparent": true,
+        "depth_separation_from_background": 0.0149
+      },
+      "mask_centroid_2d_no_erosion": [
+        355,
+        618
+      ],
+      "sam2_mask_index": 15,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "fly | green | man | sky",
+          "label": "fly",
+          "confidence": 0.8491
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "fly",
+          "caption": "fly | green | man | sky",
+          "tags": [
+            "fly",
+            "green",
+            "man",
+            "sky"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_14_GroundedSAM2",
+              "target_label": "bird",
+              "target_caption": "bird | fly | green | insect | pigeon | screen | sky",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.85
+            },
+            {
+              "predicate": "below",
+              "target_id": "obj_20_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky",
+              "score": 0.7
+            },
+            {
+              "predicate": "below",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.7
+            },
+            {
+              "predicate": "below",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_14_GroundedSAM2",
+              "target_label": "bird",
+              "target_caption": "bird | fly | green | insect | pigeon | screen | sky",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_16_GroundedSAM2",
+      "label": "green",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        638,
+        0,
+        710,
+        44
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": 11.794,
+        "y": -20.079,
+        "z": 27.143
+      },
+      "depth_stats": {
+        "min": 25.1848,
+        "max": 30.1023,
+        "mean": 27.3581,
+        "median": 27.1545,
+        "std": 1.2154,
+        "num_pixels": 1509,
+        "z_val": 27.1434,
+        "z_val_pixels": 444,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.0015
+      },
+      "mask_centroid_2d": [
+        673,
+        20
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 11.763,
+        "y": -20.096,
+        "z": 27.166
+      },
+      "depth_stats_no_erosion": {
+        "min": 25.1848,
+        "max": 30.1505,
+        "mean": 27.387,
+        "median": 27.1716,
+        "std": 1.224,
+        "num_pixels": 1613,
+        "z_val": 27.1662,
+        "z_val_pixels": 489,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.1843
+      },
+      "mask_centroid_2d_no_erosion": [
+        672,
+        20
+      ],
+      "sam2_mask_index": 16,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "green | man | screen | sky",
+          "label": "green",
+          "confidence": 0.9349
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "green",
+          "caption": "green | man | screen | sky",
+          "tags": [
+            "green",
+            "man",
+            "screen",
+            "sky"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "right_of",
+              "target_id": "obj_25_GroundedSAM2",
+              "target_label": "baseball glove",
+              "target_caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_9_GroundedSAM2",
+              "target_label": "baseball bat",
+              "target_caption": "baseball bat | baseball glove | green | man | stand | tennis racket",
+              "score": 0.7
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_17_GroundedSAM2",
+              "target_label": "baseball glove",
+              "target_caption": "baseball glove | green | man | stand",
+              "score": 0.75
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_23_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | sky | stand",
+              "score": 0.7
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_6_GroundedSAM2",
+              "target_label": "floor grass",
+              "target_caption": "floor grass",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_7_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_17_GroundedSAM2",
+      "label": "baseball glove",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        310,
+        0,
+        357,
+        26
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -2.424,
+        "y": -23.166,
+        "z": 31.002
+      },
+      "depth_stats": {
+        "min": 29.8952,
+        "max": 33.524,
+        "mean": 31.1962,
+        "median": 31.055,
+        "std": 0.6172,
+        "num_pixels": 645,
+        "z_val": 31.0015,
+        "z_val_pixels": 90,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.8497
+      },
+      "mask_centroid_2d": [
+        332,
+        15
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -2.424,
+        "y": -23.166,
+        "z": 31.002
+      },
+      "depth_stats_no_erosion": {
+        "min": 29.8952,
+        "max": 33.524,
+        "mean": 31.1962,
+        "median": 31.055,
+        "std": 0.6172,
+        "num_pixels": 645,
+        "z_val": 31.0015,
+        "z_val_pixels": 90,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.8497
+      },
+      "mask_centroid_2d_no_erosion": [
+        332,
+        15
+      ],
+      "sam2_mask_index": 17,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "baseball glove | green | man | stand",
+          "label": "baseball glove",
+          "confidence": 0.894
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "baseball glove",
+          "caption": "baseball glove | green | man | stand",
+          "tags": [
+            "baseball glove",
+            "green",
+            "man",
+            "stand"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "right_of",
+              "target_id": "obj_23_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | sky | stand",
+              "score": 0.7
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_9_GroundedSAM2",
+              "target_label": "baseball bat",
+              "target_caption": "baseball bat | baseball glove | green | man | stand | tennis racket",
+              "score": 0.75
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_25_GroundedSAM2",
+              "target_label": "baseball glove",
+              "target_caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+              "score": 0.7
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_16_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | screen | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_10_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky | white",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_6_GroundedSAM2",
+              "target_label": "floor grass",
+              "target_caption": "floor grass",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_18_GroundedSAM2",
+      "label": "green",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        310,
+        812,
+        767,
+        1023
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": 0.892,
+        "y": 2.22,
+        "z": 3.371
+      },
+      "depth_stats": {
+        "min": 3.15,
+        "max": 4.4653,
+        "mean": 3.6895,
+        "median": 3.6508,
+        "std": 0.3092,
+        "num_pixels": 66754,
+        "z_val": 3.3715,
+        "z_val_pixels": 30475,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.6358
+      },
+      "mask_centroid_2d": [
+        560,
+        950
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 0.889,
+        "y": 2.221,
+        "z": 3.38
+      },
+      "depth_stats_no_erosion": {
+        "min": 3.15,
+        "max": 4.5008,
+        "mean": 3.7008,
+        "median": 3.6615,
+        "std": 0.3174,
+        "num_pixels": 68282,
+        "z_val": 3.3796,
+        "z_val_pixels": 31206,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.6416
+      },
+      "mask_centroid_2d_no_erosion": [
+        559,
+        949
+      ],
+      "sam2_mask_index": 18,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "green | man | pillow | strip | white",
+          "label": "green",
+          "confidence": 0.9878
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "green",
+          "caption": "green | man | pillow | strip | white",
+          "tags": [
+            "green",
+            "man",
+            "pillow",
+            "strip",
+            "white"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "left_of",
+              "target_id": "obj_19_GroundedSAM2",
+              "target_label": "baseball glove",
+              "target_caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_22_GroundedSAM2",
+              "target_label": "cigarette",
+              "target_caption": "cigarette | fly | green | screen | sky | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.85
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_12_GroundedSAM2",
+              "target_label": "beak",
+              "target_caption": "beak | brush | green | pigeon | screen | toothpaste",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_26_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | wave | wind",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_13_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | tear | wave | wind",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_24_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man",
+              "score": 0.7
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_19_GroundedSAM2",
+      "label": "baseball glove",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        745,
+        857,
+        767,
+        906
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": 2.966,
+        "y": 2.95,
+        "z": 5.26
+      },
+      "depth_stats": {
+        "min": 4.8417,
+        "max": 5.9832,
+        "mean": 5.3823,
+        "median": 5.3276,
+        "std": 0.221,
+        "num_pixels": 785,
+        "z_val": 5.2604,
+        "z_val_pixels": 363,
+        "possibly_transparent": true,
+        "depth_separation_from_background": 0.1349
+      },
+      "mask_centroid_2d": [
+        759,
+        885
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 2.966,
+        "y": 2.95,
+        "z": 5.26
+      },
+      "depth_stats_no_erosion": {
+        "min": 4.8417,
+        "max": 5.9832,
+        "mean": 5.3823,
+        "median": 5.3276,
+        "std": 0.221,
+        "num_pixels": 785,
+        "z_val": 5.2604,
+        "z_val_pixels": 363,
+        "possibly_transparent": true,
+        "depth_separation_from_background": 0.1349
+      },
+      "mask_centroid_2d_no_erosion": [
+        759,
+        885
+      ],
+      "sam2_mask_index": 19,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+          "label": "baseball glove",
+          "confidence": 0.9436
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "baseball glove",
+          "caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+          "tags": [
+            "baseball glove",
+            "computer screen",
+            "green",
+            "man",
+            "selfie",
+            "stool",
+            "woman"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "right_of",
+              "target_id": "obj_18_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | pillow | strip | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_22_GroundedSAM2",
+              "target_label": "cigarette",
+              "target_caption": "cigarette | fly | green | screen | sky | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.7
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_14_GroundedSAM2",
+              "target_label": "bird",
+              "target_caption": "bird | fly | green | insect | pigeon | screen | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_6_GroundedSAM2",
+              "target_label": "floor grass",
+              "target_caption": "floor grass",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_20_GroundedSAM2",
+      "label": "fly",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        289,
+        499,
+        395,
+        600
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -0.59,
+        "y": 0.523,
+        "z": 8.912
+      },
+      "depth_stats": {
+        "min": 8.6734,
+        "max": 9.2447,
+        "mean": 8.9031,
+        "median": 8.9002,
+        "std": 0.107,
+        "num_pixels": 7977,
+        "z_val": 8.9116,
+        "z_val_pixels": 3962,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.9213
+      },
+      "mask_centroid_2d": [
+        340,
+        551
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.589,
+        "y": 0.522,
+        "z": 8.91
+      },
+      "depth_stats_no_erosion": {
+        "min": 8.6734,
+        "max": 9.5169,
+        "mean": 8.9137,
+        "median": 8.9046,
+        "std": 0.1239,
+        "num_pixels": 8411,
+        "z_val": 8.91,
+        "z_val_pixels": 4197,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.3689
+      },
+      "mask_centroid_2d_no_erosion": [
+        340,
+        551
+      ],
+      "sam2_mask_index": 20,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "fly | green | screen | sky",
+          "label": "fly",
+          "confidence": 0.8709
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "fly",
+          "caption": "fly | green | screen | sky",
+          "tags": [
+            "fly",
+            "green",
+            "screen",
+            "sky"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.85
+            },
+            {
+              "predicate": "above",
+              "target_id": "obj_14_GroundedSAM2",
+              "target_label": "bird",
+              "target_caption": "bird | fly | green | insect | pigeon | screen | sky",
+              "score": 0.7
+            },
+            {
+              "predicate": "above",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.7
+            },
+            {
+              "predicate": "below",
+              "target_id": "obj_10_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "beer can",
+              "target_caption": "beer can",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "beer beverage",
+              "target_caption": "beer beverage",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_21_GroundedSAM2",
+      "label": "flip",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        0,
+        565,
+        292,
+        1023
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -1.903,
+        "y": 2.003,
+        "z": 4.442
+      },
+      "depth_stats": {
+        "min": 3.5573,
+        "max": 5.82,
+        "mean": 4.5811,
+        "median": 4.5478,
+        "std": 0.4351,
+        "num_pixels": 85569,
+        "z_val": 4.4416,
+        "z_val_pixels": 41389,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.0869
+      },
+      "mask_centroid_2d": [
+        99,
+        812
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -1.894,
+        "y": 2.001,
+        "z": 4.436
+      },
+      "depth_stats_no_erosion": {
+        "min": 3.4692,
+        "max": 5.9362,
+        "mean": 4.5951,
+        "median": 4.557,
+        "std": 0.4522,
+        "num_pixels": 88190,
+        "z_val": 4.4357,
+        "z_val_pixels": 42590,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.9353
+      },
+      "mask_centroid_2d_no_erosion": [
+        100,
+        812
+      ],
+      "sam2_mask_index": 21,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "flip | fly | man | sky | trick",
+          "label": "flip",
+          "confidence": 0.9762
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "flip",
+          "caption": "flip | fly | man | sky | trick",
+          "tags": [
+            "flip",
+            "fly",
+            "man",
+            "sky",
+            "trick"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "left_of",
+              "target_id": "obj_13_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | tear | wave | wind",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_24_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_12_GroundedSAM2",
+              "target_label": "beak",
+              "target_caption": "beak | brush | green | pigeon | screen | toothpaste",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_26_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | wave | wind",
+              "score": 0.7
+            },
+            {
+              "predicate": "above",
+              "target_id": "obj_11_GroundedSAM2",
+              "target_label": "baseball glove",
+              "target_caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+              "score": 0.7
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.85
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_22_GroundedSAM2",
+              "target_label": "cigarette",
+              "target_caption": "cigarette | fly | green | screen | sky | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "below",
+              "target_id": "obj_8_GroundedSAM2",
+              "target_label": "profile",
+              "target_caption": "profile | green | man | screen",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_22_GroundedSAM2",
+      "label": "cigarette",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        306,
+        893,
+        384,
+        1023
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -0.309,
+        "y": 3.407,
+        "z": 5.27
+      },
+      "depth_stats": {
+        "min": 4.7933,
+        "max": 5.9655,
+        "mean": 5.414,
+        "median": 5.4361,
+        "std": 0.2405,
+        "num_pixels": 3423,
+        "z_val": 5.27,
+        "z_val_pixels": 1363,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.5592
+      },
+      "mask_centroid_2d": [
+        345,
+        942
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.325,
+        "y": 3.411,
+        "z": 5.276
+      },
+      "depth_stats_no_erosion": {
+        "min": 4.7731,
+        "max": 5.98,
+        "mean": 5.4031,
+        "median": 5.426,
+        "std": 0.2514,
+        "num_pixels": 3632,
+        "z_val": 5.2759,
+        "z_val_pixels": 1446,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.541
+      },
+      "mask_centroid_2d_no_erosion": [
+        343,
+        942
+      ],
+      "sam2_mask_index": 22,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "cigarette | fly | green | screen | sky | white",
+          "label": "cigarette",
+          "confidence": 0.9289
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "cigarette",
+          "caption": "cigarette | fly | green | screen | sky | white",
+          "tags": [
+            "cigarette",
+            "fly",
+            "green",
+            "screen",
+            "sky",
+            "white"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "below",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_12_GroundedSAM2",
+              "target_label": "beak",
+              "target_caption": "beak | brush | green | pigeon | screen | toothpaste",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_26_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | wave | wind",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_13_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | tear | wave | wind",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_24_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_18_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | pillow | strip | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_21_GroundedSAM2",
+              "target_label": "flip",
+              "target_caption": "flip | fly | man | sky | trick",
+              "score": 0.7
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_23_GroundedSAM2",
+      "label": "green",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        240,
+        0,
+        271,
+        28
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -5.797,
+        "y": -22.6,
+        "z": 30.123
+      },
+      "depth_stats": {
+        "min": 29.3305,
+        "max": 31.3918,
+        "mean": 30.196,
+        "median": 30.1759,
+        "std": 0.351,
+        "num_pixels": 541,
+        "z_val": 30.1234,
+        "z_val_pixels": 247,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.0118
+      },
+      "mask_centroid_2d": [
+        256,
+        13
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -5.797,
+        "y": -22.6,
+        "z": 30.123
+      },
+      "depth_stats_no_erosion": {
+        "min": 29.3305,
+        "max": 31.3918,
+        "mean": 30.196,
+        "median": 30.1759,
+        "std": 0.351,
+        "num_pixels": 541,
+        "z_val": 30.1234,
+        "z_val_pixels": 247,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.0118
+      },
+      "mask_centroid_2d_no_erosion": [
+        256,
+        13
+      ],
+      "sam2_mask_index": 23,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "green | man | sky | stand",
+          "label": "green",
+          "confidence": 0.917
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "green",
+          "caption": "green | man | sky | stand",
+          "tags": [
+            "green",
+            "man",
+            "sky",
+            "stand"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "left_of",
+              "target_id": "obj_17_GroundedSAM2",
+              "target_label": "baseball glove",
+              "target_caption": "baseball glove | green | man | stand",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_9_GroundedSAM2",
+              "target_label": "baseball bat",
+              "target_caption": "baseball bat | baseball glove | green | man | stand | tennis racket",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_25_GroundedSAM2",
+              "target_label": "baseball glove",
+              "target_caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_16_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | screen | sky",
+              "score": 0.7
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_10_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | screen | sky | white",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_6_GroundedSAM2",
+              "target_label": "floor grass",
+              "target_caption": "floor grass",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_24_GroundedSAM2",
+      "label": "green",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        156,
+        829,
+        442,
+        1023
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -0.987,
+        "y": 3.427,
+        "z": 5.169
+      },
+      "depth_stats": {
+        "min": 4.3398,
+        "max": 6.2005,
+        "mean": 5.1643,
+        "median": 5.1177,
+        "std": 0.4541,
+        "num_pixels": 19700,
+        "z_val": 5.1687,
+        "z_val_pixels": 9583,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.3419
+      },
+      "mask_centroid_2d": [
+        257,
+        953
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.969,
+        "y": 3.385,
+        "z": 5.117
+      },
+      "depth_stats_no_erosion": {
+        "min": 4.3398,
+        "max": 6.2449,
+        "mean": 5.1788,
+        "median": 5.1286,
+        "std": 0.4642,
+        "num_pixels": 20969,
+        "z_val": 5.1175,
+        "z_val_pixels": 10248,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.3268
+      },
+      "mask_centroid_2d_no_erosion": [
+        258,
+        952
+      ],
+      "sam2_mask_index": 24,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "green | man",
+          "label": "green",
+          "confidence": 0.9081
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "green",
+          "caption": "green | man",
+          "tags": [
+            "green",
+            "man"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_13_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | tear | wave | wind",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_12_GroundedSAM2",
+              "target_label": "beak",
+              "target_caption": "beak | brush | green | pigeon | screen | toothpaste",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_26_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | wave | wind",
+              "score": 0.85
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_22_GroundedSAM2",
+              "target_label": "cigarette",
+              "target_caption": "cigarette | fly | green | screen | sky | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.85
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_21_GroundedSAM2",
+              "target_label": "flip",
+              "target_caption": "flip | fly | man | sky | trick",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_11_GroundedSAM2",
+              "target_label": "baseball glove",
+              "target_caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_18_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | pillow | strip | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_12_GroundedSAM2",
+              "target_label": "beak",
+              "target_caption": "beak | brush | green | pigeon | screen | toothpaste",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_13_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | tear | wave | wind",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_26_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | wave | wind",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_25_GroundedSAM2",
+      "label": "baseball glove",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        535,
+        0,
+        551,
+        35
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": 7.036,
+        "y": -21.681,
+        "z": 29.249
+      },
+      "depth_stats": {
+        "min": 27.1538,
+        "max": 31.8684,
+        "mean": 29.2807,
+        "median": 29.2545,
+        "std": 0.8496,
+        "num_pixels": 433,
+        "z_val": 29.2494,
+        "z_val_pixels": 185,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.5002
+      },
+      "mask_centroid_2d": [
+        544,
+        19
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 7.036,
+        "y": -21.681,
+        "z": 29.249
+      },
+      "depth_stats_no_erosion": {
+        "min": 27.1538,
+        "max": 31.8684,
+        "mean": 29.2807,
+        "median": 29.2545,
+        "std": 0.8496,
+        "num_pixels": 433,
+        "z_val": 29.2494,
+        "z_val_pixels": 185,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.5002
+      },
+      "mask_centroid_2d_no_erosion": [
+        544,
+        19
+      ],
+      "sam2_mask_index": 25,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+          "label": "baseball glove",
+          "confidence": 0.8942
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "baseball glove",
+          "caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+          "tags": [
+            "baseball glove",
+            "computer screen",
+            "green",
+            "man",
+            "selfie",
+            "stool",
+            "woman"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "right_of",
+              "target_id": "obj_9_GroundedSAM2",
+              "target_label": "baseball bat",
+              "target_caption": "baseball bat | baseball glove | green | man | stand | tennis racket",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_16_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | screen | sky",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_17_GroundedSAM2",
+              "target_label": "baseball glove",
+              "target_caption": "baseball glove | green | man | stand",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_23_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | sky | stand",
+              "score": 0.7
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "grass",
+              "target_caption": "grass",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_6_GroundedSAM2",
+              "target_label": "floor grass",
+              "target_caption": "floor grass",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_7_GroundedSAM2",
+              "target_label": "floor",
+              "target_caption": "floor",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_26_GroundedSAM2",
+      "label": "flag",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        0,
+        829,
+        457,
+        1023
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -0.969,
+        "y": 3.392,
+        "z": 5.115
+      },
+      "depth_stats": {
+        "min": 4.3398,
+        "max": 6.1984,
+        "mean": 5.1657,
+        "median": 5.1192,
+        "std": 0.4542,
+        "num_pixels": 19703,
+        "z_val": 5.1154,
+        "z_val_pixels": 9583,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.3421
+      },
+      "mask_centroid_2d": [
+        258,
+        953
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.979,
+        "y": 3.417,
+        "z": 5.165
+      },
+      "depth_stats_no_erosion": {
+        "min": 4.3398,
+        "max": 6.249,
+        "mean": 5.1808,
+        "median": 5.1315,
+        "std": 0.465,
+        "num_pixels": 20983,
+        "z_val": 5.1655,
+        "z_val_pixels": 10245,
+        "possibly_transparent": true,
+        "depth_separation_from_background": 0.0585
+      },
+      "mask_centroid_2d_no_erosion": [
+        258,
+        952
+      ],
+      "sam2_mask_index": 26,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "flag | flag pole | green | man | screen | wave | wind",
+          "label": "flag",
+          "confidence": 0.8898
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "flag",
+          "caption": "flag | flag pole | green | man | screen | wave | wind",
+          "tags": [
+            "flag",
+            "flag pole",
+            "green",
+            "man",
+            "screen",
+            "wave",
+            "wind"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_12_GroundedSAM2",
+              "target_label": "beak",
+              "target_caption": "beak | brush | green | pigeon | screen | toothpaste",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_13_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | tear | wave | wind",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_24_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man",
+              "score": 0.85
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_22_GroundedSAM2",
+              "target_label": "cigarette",
+              "target_caption": "cigarette | fly | green | screen | sky | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.85
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_21_GroundedSAM2",
+              "target_label": "flip",
+              "target_caption": "flip | fly | man | sky | trick",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_11_GroundedSAM2",
+              "target_label": "baseball glove",
+              "target_caption": "baseball glove | computer screen | green | man | selfie | stool | woman",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_18_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | pillow | strip | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_12_GroundedSAM2",
+              "target_label": "beak",
+              "target_caption": "beak | brush | green | pigeon | screen | toothpaste",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_13_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | tear | wave | wind",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_24_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "ankle",
+              "target_caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_27_GroundedSAM2",
+      "label": "ankle",
+      "confidence": 0.7,
+      "conf": 0.7,
+      "bbox": [
+        0,
+        461,
+        767,
+        1023
+      ],
+      "segmentor": "SAM2_AMG",
+      "coordinates_3d": {
+        "x": -0.447,
+        "y": 2.681,
+        "z": 4.718
+      },
+      "depth_stats": {
+        "min": 2.9339,
+        "max": 5.8195,
+        "mean": 4.3195,
+        "median": 4.2958,
+        "std": 0.6465,
+        "num_pixels": 179764,
+        "z_val": 4.718,
+        "z_val_pixels": 51808,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.9297
+      },
+      "mask_centroid_2d": [
+        321,
+        890
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.447,
+        "y": 2.674,
+        "z": 4.718
+      },
+      "depth_stats_no_erosion": {
+        "min": 2.9216,
+        "max": 5.8662,
+        "mean": 4.3289,
+        "median": 4.3076,
+        "std": 0.6539,
+        "num_pixels": 183334,
+        "z_val": 4.7177,
+        "z_val_pixels": 53508,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.9315
+      },
+      "mask_centroid_2d_no_erosion": [
+        321,
+        889
+      ],
+      "sam2_mask_index": 27,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+          "label": "ankle",
+          "confidence": 0.8198
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "RAM++": {
+          "label": "ankle",
+          "caption": "ankle | cloth | foot | person | karate | man | sandal | wear",
+          "tags": [
+            "ankle",
+            "cloth",
+            "foot",
+            "person",
+            "karate",
+            "man",
+            "sandal",
+            "wear"
+          ]
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "above",
+              "target_id": "obj_22_GroundedSAM2",
+              "target_label": "cigarette",
+              "target_caption": "cigarette | fly | green | screen | sky | white",
+              "score": 0.7
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_12_GroundedSAM2",
+              "target_label": "beak",
+              "target_caption": "beak | brush | green | pigeon | screen | toothpaste",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_26_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | wave | wind",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_13_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | tear | wave | wind",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_24_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_21_GroundedSAM2",
+              "target_label": "flip",
+              "target_caption": "flip | fly | man | sky | trick",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_18_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | pillow | strip | white",
+              "score": 0.85
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_15_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | green | man | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_12_GroundedSAM2",
+              "target_label": "beak",
+              "target_caption": "beak | brush | green | pigeon | screen | toothpaste",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_13_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | tear | wave | wind",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_18_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man | pillow | strip | white",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_21_GroundedSAM2",
+              "target_label": "flip",
+              "target_caption": "flip | fly | man | sky | trick",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_24_GroundedSAM2",
+              "target_label": "green",
+              "target_caption": "green | man",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_26_GroundedSAM2",
+              "target_label": "flag",
+              "target_caption": "flag | flag pole | green | man | screen | wave | wind",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

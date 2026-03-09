@@ -3,51 +3,46 @@
 ## Overview
 
 Every mask needs a semantic label and the scene graph needs predicates between objects.
-Labelling uses a 4-model priority chain; relation prediction uses a two-layer system (Pix2SG
+Labelling uses a 3-stage priority chain; relation prediction uses a two-layer system (Pix2SG
 spatial scaffold enriched by Florence-2 semantic captions).
 
 ---
 
-## Labelling — 4-Priority Chain
+## Labelling — 3-Priority Chain
 
-`_label_mask()` in `scene_understanding.py` tries four sources in priority order, stopping at
+`_label_mask()` in `scene_understanding.py` tries three sources in priority order, stopping at
 the first that returns a non-generic label:
 
 ```
 Priority 1 — GroundingDINO label
-  if amg_entry["gdino_conf"] >= 0.30 and label != "object":
+  if label != "object":
       use GDINO label directly
       → most accurate; label came from the same model that drew the bbox
 
-Priority 2 — Florence-2 <OD>
+Priority 2 — Florence-2 (optional for labelling)
   crop = image[bbox]
   crop[~mask] = mean(full_image)    ← mean-fill background
   result = Florence2.label_crop(crop)
   if result["label"] != "object":
       use Florence-2 label
 
-Priority 3 — GRiT dense caption
-  result = GRiT.predict(crop)
-  label  = first_noun(result["caption"])
-
-Priority 4 — YOLOv8-cls
-  label, conf = YOLO.classify(crop)
-  if conf >= 0.30:
-      use YOLO label
+Priority 3 — RAM++
+  result = RAMPP.label_crop(crop)
+  if result["label"] != "object":
+      use RAM++ label
   else:
       label = "object"
 ```
 
-### Why Florence-2 Beats GRiT for Labelling
+### Florence-2 vs RAM++ for Labelling
 
-GRiT generates free-form captions: `"a wooden chair with armrests"`. The original code took
-the last word (`"armrests"`), which was correct only by coincidence. Florence-2 with task
-`<OD>` returns structured `{"labels": ["chair"], "bboxes": [...]}` directly — no parsing
-heuristic needed.
+Florence-2 provides richer local context and often better labels for visually complex crops,
+but it is slower and heavier. RAM++ is usually better as an open-vocabulary fallback when
+GroundingDINO and Florence-2 both return generic labels.
 
 ### Mean-Fill Background
 
-Out-of-mask pixels are set to the mean image colour before passing to Florence-2 or GRiT:
+Out-of-mask pixels are set to the mean image colour before passing to Florence-2 or RAM++:
 
 ```python
 bg_mean = img_bgr.mean(axis=(0, 1)).astype(np.uint8)
@@ -55,7 +50,7 @@ crop[~mask_resized] = bg_mean
 ```
 
 Setting background to black (zeros) creates an unnatural brightness/colour distribution.
-Mean-fill preserves natural image statistics so both Florence-2 and GRiT behave as trained.
+Mean-fill preserves natural image statistics so both Florence-2 and RAM++ behave as trained.
 
 ---
 

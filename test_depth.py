@@ -4,7 +4,7 @@ import numpy as np
 import argparse
 import torch
 from pathlib import Path
-from depth import DepthEstimator, Segmentor
+from depth import DepthEstimator
 from config import PreprocessConfig
 
 def main():
@@ -22,8 +22,7 @@ def main():
 
     # Setup output subdirectories
     depth_out_dir = output_dir / "depth"
-    seg_out_dir = output_dir / "segmentation"
-    
+
     # Configuration
     config = PreprocessConfig(
         device="cuda" if torch.cuda.is_available() else "cpu",
@@ -51,24 +50,7 @@ def main():
     except Exception as e:
         print(f"Depth estimation failed: {e}")
 
-    # 2. Segmentation
-    print("\n--- Testing Segmentation ---")
-    try:
-        segmentor = Segmentor(config)
-        # Mock flow dir for fallback if needed, though we prefer model-based segmentation
-        flow_dir = output_dir / "flow" # Assuming flow might be generated elsewhere or not needed if model works
-        os.makedirs(flow_dir, exist_ok=True)
-        
-        segmentor.segment_frames(
-            input_path=str(input_dir),
-            flow_dir=str(flow_dir),
-            output_dir=str(seg_out_dir)
-        )
-        print("Segmentation completed.")
-    except Exception as e:
-        print(f"Segmentation failed: {e}")
-
-    # 3. Scene Understanding (New)
+    # 2. Scene Understanding
     print("\n--- Testing Scene Understanding (GRiT Integration) ---")
     if estimator is None:
         print("Skipping Scene Understanding because DepthEstimator failed to initialize.")

@@ -1,7 +1,6 @@
 """
-scene_understanding.py
-Unified 3D Scene Graph Generation using Depth Estimator and Specific Scene Graph Models.
-Integrates Depth Anything V2 with SAM2, GRiT, and Pix2SG.
+scene_understanding.py — 3D scene graph generation pipeline.
+See docs/SEGMENTATION.md, docs/DEPTH_ACCURACY.md, docs/LABELLING_AND_RELATIONS.md.
 """
 # Ensure "import sam2" resolves to repo's sam2/sam2/ (not citv/sam2 as repo root) so build_sam check passes
 import sys
@@ -17,6 +16,7 @@ import cv2
 import gc
 import json
 import numpy as np
+import re
 import torch
 import importlib.util
 from pathlib import Path
@@ -32,6 +32,11 @@ try:
     _stc.auto_conversion = _disable_auto_conversion
 except Exception:
     pass
+
+# Suppress transformers deprecation warning that has a logging format bug
+# (passes FutureWarning as a format arg to a message with no %s → TypeError crash)
+import logging as _logging
+_logging.getLogger("transformers.modeling_attn_mask_utils").setLevel(_logging.ERROR)
 
 # Import existing DepthEstimator
 from depth import DepthEstimator
@@ -69,176 +74,244 @@ def _load_bgr_image(path: Path) -> np.ndarray:
     )
 
 # -----------------------------------------------------------------------------
-# GRiT Imports & Setup
+# 1. RAM++ Wrapper (Recognize Anything Model++)
 # -----------------------------------------------------------------------------
-import sys
-import os
-
-# Add GRiT paths so imports work correctly
-# We need to add the project root and the specific CenterNet2 path
-grit_root = Path("GRiT")
-centernet_path = grit_root / "third_party/CenterNet2/projects/CenterNet2/"
-
-# Add to sys.path if not already present
-if str(centernet_path.resolve()) not in sys.path:
-    sys.path.insert(0, str(centernet_path.resolve()))
-if str(grit_root.resolve()) not in sys.path:
-    sys.path.insert(0, str(grit_root.resolve()))
-
-try:
-    from detectron2.config import get_cfg
-    from detectron2.engine import DefaultPredictor
-    from detectron2.data.detection_utils import read_image
-    from centernet.config import add_centernet_config
-    from grit.config import add_grit_config
-except ImportError:
-    print("Warning: Could not import GRiT modules. Ensure detectron2 and GRiT requirements are installed.")
-    # Define dummy functions to prevent NameError if import fails
-    def get_cfg(): return None
-    def add_centernet_config(cfg): pass
-    def add_grit_config(cfg): pass
-    DefaultPredictor = None
-
-# -----------------------------------------------------------------------------
-# 1. GRiT Wrapper (Generative Region-to-Text Transformer)
-# -----------------------------------------------------------------------------
-class GRiTWrapper:
+class RAMPlusPlusWrapper:
     """
-    Wrapper for GRiT.
-    Provides: Dense captions, Bounding boxes, Object labels.
+    Optional RAM++ wrapper for open-vocabulary image tagging on masked crops.
+
+    Requires a local Recognize Anything (RAM) installation and RAM++ checkpoint.
+    If unavailable, wrapper stays inactive and returns generic labels.
     """
-    def __init__(self, device: torch.device):
+
+    _GENERIC_TAGS = {
+        "object", "objects", "thing", "things", "item", "items",
+        "entity", "entities", "scene", "image", "photo", "picture",
+    }
+
+    def __init__(
+        self,
+        device: torch.device,
+        checkpoint_path: Optional[str] = None,
+        repo_path: Optional[str] = None,
+        image_size: int = 384,
+        vit: str = "swin_l",
+        default_confidence: float = 0.70,
+        max_tags: int = 8,
+    ):
         self.device = device
-        print("Initializing GRiT...")
-        
-        # Check if GRiT imports succeeded
-        if get_cfg() is None:
-            print("GRiT initialization skipped: Dependencies not found.")
-            self.predictor = None
-            return
-
-        # Paths to config and weights
-        self.config_file = "GRiT/configs/GRiT_B_DenseCap_ObjectDet.yaml"
-        self.weights_file = "GRiT/models/grit_b_densecap_objectdet.pth"
-
-        if not os.path.exists(self.config_file) or not os.path.exists(self.weights_file):
-            print(f"Error: GRiT config or weights not found at {self.config_file} / {self.weights_file}")
-            self.predictor = None
-            return
-
-        # Initialize Config
-        self.cfg = self._setup_cfg()
-        if self.cfg:
-            self.predictor = DefaultPredictor(self.cfg)
-        else:
-            self.predictor = None
-
-    def _setup_cfg(self):
-        cfg = get_cfg()
-        if cfg is None:
-            return None
-            
-        if self.device.type == 'cpu':
-            cfg.MODEL.DEVICE = "cpu"
-        
-        add_centernet_config(cfg)
-        add_grit_config(cfg)
-        cfg.merge_from_file(self.config_file)
-        
-        # Set weights and confidence
-        cfg.MODEL.WEIGHTS = self.weights_file
-        cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
-        cfg.MODEL.PANOPTIC_FPN.COMBINE.INSTANCES_CONFIDENCE_THRESH = 0.5
-        
-        # Specific GRiT settings for DenseCap
-        cfg.MODEL.TEST_TASK = 'DenseCap'
-        cfg.MODEL.BEAM_SIZE = 1
-        cfg.MODEL.ROI_HEADS.SOFT_NMS_ENABLED = False
-        cfg.USE_ACT_CHECKPOINT = False
-        
-        cfg.freeze()
-        return cfg
-
-    def predict(self, image: np.ndarray) -> List[Dict[str, Any]]:
-        """
-        Runs GRiT inference on a BGR image (OpenCV format).
-        Returns list of objects with label, confidence, bbox, and caption.
-        """
-        if self.predictor is None:
-            return []
-        
-        # Predictor handles BGR -> RGB conversion internally if configured, 
-        # but Detectron2 DefaultPredictor expects BGR (OpenCV format) by default.
-        predictions = self.predictor(image)
-        
-        instances = predictions["instances"].to("cpu")
-        boxes = instances.pred_boxes.tensor.numpy()
-        scores = instances.scores.numpy()
-        
-        # GRiT stores captions in 'pred_object_descriptions'
-        # Note: Depending on the specific GRiT version, this might be a list or object
-        if hasattr(instances, 'pred_object_descriptions'):
-            captions = instances.pred_object_descriptions.data
-        else:
-            captions = ["unknown"] * len(boxes)
-
-        results = []
-        for i in range(len(boxes)):
-            box = boxes[i].astype(int).tolist() # [x1, y1, x2, y2]
-            score = float(scores[i])
-            caption = captions[i]
-            
-            # Simple heuristic to get a short "label" from the longer caption
-            label = caption.split()[-1] if caption else "object"
-            
-            # Ensure box coordinates are integers
-            box = [int(x) for x in box]
-            
-            results.append({
-                "label": label, 
-                "conf": score, 
-                "bbox": box, 
-                "caption": caption,
-                "source_model": "GRiT"
-            })
-            
-        return results
-
-# -----------------------------------------------------------------------------
-# 1b. YOLO Classification Wrapper (class-aware labelling per masked crop)
-# -----------------------------------------------------------------------------
-class YOLOClassifierWrapper:
-    """
-    Runs YOLOv8 classification on a masked image crop to produce a semantic class label.
-    Gives SAM2 masks a proper class from the ImageNet-1k taxonomy (1000 classes).
-    Falls back gracefully if ultralytics is not installed.
-    """
-    def __init__(self, model_name: str = "yolov8x-cls.pt", conf_thresh: float = 0.3):
-        self.conf_thresh = conf_thresh
         self.model = None
-        try:
-            from ultralytics import YOLO
-            self.model = YOLO(model_name)
-            print(f"YOLOClassifier ({model_name}) ready.")
-        except Exception as e:
-            print(f"YOLOClassifier init failed: {e}. Will fall back to GRiT labels.")
+        self.transform = None
+        self.inference_fn = None
+        self.active = False
+        self.default_confidence = float(default_confidence)
+        self.max_tags = int(max_tags)
 
-    def classify(self, crop_bgr: np.ndarray) -> Tuple[str, float]:
-        """
-        Run classification on a BGR crop. Returns (class_name, confidence).
-        Returns ("object", 0.0) if model unavailable or confidence below threshold.
-        """
-        if self.model is None or crop_bgr.size == 0:
-            return "object", 0.0
+        if repo_path:
+            repo = Path(repo_path).expanduser()
+            if not repo.is_absolute():
+                repo = Path.cwd() / repo
+            if repo.exists():
+                repo_str = str(repo.resolve())
+                if repo_str not in sys.path:
+                    sys.path.insert(0, repo_str)
+
+        # Compatibility shim: transformers 5.x moved/removed several APIs that
+        # RAM++ depends on. Inject them back without editing any installed files.
         try:
-            results = self.model(crop_bgr, verbose=False)
-            top1_conf = float(results[0].probs.top1conf)
-            if top1_conf >= self.conf_thresh:
-                top1_cls = results[0].names[results[0].probs.top1]
-                return top1_cls, top1_conf
-        except Exception:
-            pass
-        return "object", 0.0
+            import sys as _sys
+            import transformers.modeling_utils as _tmu
+            from transformers.modeling_utils import PreTrainedModel as _PTM
+
+            # 1. apply_chunking_to_forward moved to pytorch_utils
+            if not hasattr(_tmu, "apply_chunking_to_forward"):
+                from transformers.pytorch_utils import apply_chunking_to_forward as _actf
+                _tmu.apply_chunking_to_forward = _actf
+
+            # 2. find_pruneable_heads_and_indices — only used in pruning paths, not inference
+            if not hasattr(_tmu, "find_pruneable_heads_and_indices"):
+                def _find_pruneable_heads_and_indices(heads, n_heads, head_size, already_pruned):
+                    mask = torch.ones(n_heads, head_size)
+                    heads = set(heads) - already_pruned
+                    for head in heads:
+                        head -= sum(1 if h < head else 0 for h in already_pruned)
+                        mask[head] = 0
+                    mask = mask.view(-1).contiguous().eq(1)
+                    index = torch.arange(len(mask))[mask].long()
+                    return heads, index
+                _tmu.find_pruneable_heads_and_indices = _find_pruneable_heads_and_indices
+
+            # 3. prune_linear_layer — only used in pruning paths, not inference
+            if not hasattr(_tmu, "prune_linear_layer"):
+                def _prune_linear_layer(layer, index, dim=0):
+                    import torch.nn as _nn
+                    W = layer.weight.index_select(dim, index).clone().detach()
+                    b = layer.bias.index_select(0, index).clone().detach() if layer.bias is not None else None
+                    new_layer = _nn.Linear(W.size(1), W.size(0), bias=b is not None).to(layer.weight.device)
+                    new_layer.weight = torch.nn.Parameter(W)
+                    if b is not None:
+                        new_layer.bias = torch.nn.Parameter(b)
+                    return new_layer
+                _tmu.prune_linear_layer = _prune_linear_layer
+
+            # 4. all_tied_weights_keys must be a dict in transformers 5.x tie_weights().
+            # Use a property with a setter so that subclasses can override via instance
+            # assignment without hitting "can't set attribute" (Florence-2 does this).
+            if not hasattr(_PTM, "all_tied_weights_keys"):
+                def _all_tied_get(self):
+                    v = self.__dict__.get("_all_tied_weights_keys_override", None)
+                    if v is not None:
+                        return v
+                    return {k: k for k in (getattr(self, "_tied_weights_keys", None) or [])}
+                def _all_tied_set(self, value):
+                    self.__dict__["_all_tied_weights_keys_override"] = value
+                _PTM.all_tied_weights_keys = property(_all_tied_get, _all_tied_set)
+
+            # 5. get_head_mask removed from PreTrainedModel in transformers 5.x
+            if not hasattr(_PTM, "get_head_mask"):
+                def _get_head_mask(self, head_mask, num_hidden_layers, is_attention_chunked=False):
+                    if head_mask is not None:
+                        if head_mask.dim() == 1:
+                            head_mask = head_mask.unsqueeze(0).unsqueeze(0).unsqueeze(-1).unsqueeze(-1)
+                            head_mask = head_mask.expand(num_hidden_layers, -1, -1, -1, -1)
+                        elif head_mask.dim() == 2:
+                            head_mask = head_mask.unsqueeze(1).unsqueeze(-1).unsqueeze(-1)
+                        if is_attention_chunked:
+                            head_mask = head_mask.unsqueeze(-1)
+                    else:
+                        head_mask = [None] * num_hidden_layers
+                    return head_mask
+                _PTM.get_head_mask = _get_head_mask
+
+            # 6. BertTokenizer.additional_special_tokens_ids removed — patch init_tokenizer
+            #    in both ram.models.utils and ram.models.ram_plus (wildcard-imported copy).
+            import ram.models.utils as _rmu
+            import ram.models.ram_plus as _rmp_mod
+            def _patched_init_tokenizer(text_encoder_type="bert-base-uncased"):
+                from transformers import BertTokenizer as _BT
+                _tok = _BT.from_pretrained(text_encoder_type)
+                _tok.add_special_tokens({"bos_token": "[DEC]"})
+                _tok.add_special_tokens({"additional_special_tokens": ["[ENC]"]})
+                _tok.enc_token_id = _tok.convert_tokens_to_ids("[ENC]")
+                return _tok
+            _rmu.init_tokenizer = _patched_init_tokenizer
+            _sys.modules["ram.models.ram_plus"].init_tokenizer = _patched_init_tokenizer
+            _sys.modules["ram.models.utils"].init_tokenizer = _patched_init_tokenizer
+        except Exception as _shim_err:
+            print(f"  [RAM++] transformers shim warning: {_shim_err}")
+
+        print("Initializing RAM++...")
+        try:
+            from ram.models import ram_plus
+            from ram import get_transform, inference_ram as inference
+        except Exception as e:
+            print(f"RAM++ unavailable: {e}.")
+            return
+
+        ckpt: Optional[Path] = None
+        if checkpoint_path:
+            ckpt = Path(checkpoint_path).expanduser()
+            if not ckpt.is_absolute():
+                ckpt = Path.cwd() / ckpt
+            if not ckpt.exists():
+                print(f"RAM++ checkpoint not found at {ckpt}.")
+                return
+        else:
+            print("RAM++ checkpoint path not configured; RAM++ labelling disabled.")
+            return
+
+        try:
+            model = ram_plus(
+                pretrained=str(ckpt),
+                image_size=int(image_size),
+                vit=str(vit),
+            )
+            model.to(self.device)
+            model.eval()
+            self.model = model
+            self.transform = get_transform(image_size=int(image_size))
+            self.inference_fn = inference
+            self.active = True
+            print(f"RAM++ ready (ckpt={ckpt}).")
+        except Exception as e:
+            print(f"RAM++ init failed: {e}.")
+            self.active = False
+
+    @classmethod
+    def _parse_tags(cls, text: str, max_tags: int) -> List[str]:
+        if not text:
+            return []
+        normalized = str(text).strip().lower()
+        raw_parts = re.split(r"\s*\|\s*|,\s*|;\s*|\.\s*", normalized)
+        tags: List[str] = []
+        seen = set()
+        for part in raw_parts:
+            tag = " ".join(part.split()).strip()
+            if not tag or tag in cls._GENERIC_TAGS:
+                continue
+            if tag in seen:
+                continue
+            seen.add(tag)
+            tags.append(tag)
+            if len(tags) >= max_tags:
+                break
+        return tags
+
+    @staticmethod
+    def _extract_english_tags(result: Any) -> str:
+        if isinstance(result, dict):
+            for k in ("tags", "tag_en", "english", "labels"):
+                if k in result and result[k]:
+                    return str(result[k])
+        if isinstance(result, (list, tuple)):
+            if len(result) >= 1 and result[0]:
+                return str(result[0])
+            return ""
+        return str(result) if result is not None else ""
+
+    def tag_image(self, image_rgb: np.ndarray) -> Dict[str, Any]:
+        """
+        Run RAM++ on a full RGB image (numpy HxWx3). Returns: label, conf, caption, tags.
+        Same as label_crop but accepts RGB directly.
+        """
+        if image_rgb is None or image_rgb.size == 0:
+            return {"label": "object", "conf": 0.0, "caption": "object", "tags": []}
+        crop_bgr = cv2.cvtColor(image_rgb, cv2.COLOR_RGB2BGR)
+        return self.label_crop(crop_bgr)
+
+    def label_crop(self, crop_bgr: np.ndarray) -> Dict[str, Any]:
+        """
+        Run RAM++ on a masked crop. Returns: label, conf, caption, tags.
+        """
+        if (
+            not self.active
+            or self.model is None
+            or self.transform is None
+            or self.inference_fn is None
+            or crop_bgr is None
+            or crop_bgr.size == 0
+        ):
+            return {"label": "object", "conf": 0.0, "caption": "object", "tags": []}
+
+        try:
+            from PIL import Image as PILImage
+
+            crop_rgb = cv2.cvtColor(crop_bgr, cv2.COLOR_BGR2RGB)
+            pil_img = PILImage.fromarray(crop_rgb)
+            image = self.transform(pil_img).unsqueeze(0).to(self.device)
+
+            with torch.no_grad():
+                result = self.inference_fn(image, self.model)
+
+            tag_text = self._extract_english_tags(result)
+            tags = self._parse_tags(tag_text, self.max_tags)
+            label = tags[0] if tags else "object"
+            caption = tag_text if tag_text else label
+            conf = self.default_confidence if label != "object" else 0.0
+            return {"label": label, "conf": conf, "caption": caption, "tags": tags}
+        except Exception as e:
+            print(f"  [RAM++] label_crop failed: {e}")
+            return {"label": "object", "conf": 0.0, "caption": "object", "tags": []}
 
 
 
@@ -247,32 +320,10 @@ class YOLOClassifierWrapper:
 # -----------------------------------------------------------------------------
 class Pix2SGWrapper:
     """
-    Wrapper for Pix2SG spatial scaffold + Florence-2 semantic enrichment.
-
-    Fix 5.6 — Three-layer relation prediction:
-      Layer 1 (Spatial scaffold, always active):
-        Pixel mask IoU → overlapping
-        Depth difference → in_front_of / behind
-        Mask centroid direction → left_of / right_of / above / below
-
-      Layer 2 (Florence-2 semantic, when florence2 instance provided):
-        For object pairs with overlapping masks (IoU > relation_min_mask_overlap),
-        query Florence-2 with a color-coded crop:
-          "Describe the relationship between the red [sub] and the blue [obj]."
-        Maps free-form response to canonical OIv6-style predicates.
-        This adds action/functional predicates (holds, wears, rides, eats …)
-        that pure spatial reasoning cannot infer.
-
-      Layer 3 (Precomputed triplets, when pix2sg_triplets_dir exists):
-        Loads a pre-generated {stem}.json and skips both layers above.
-        Useful for offline/batch processing or hand-curated triplets.
-
-    Why this is better than SGTR alone (Fix 5.6 rationale):
-      SGTR requires cvpods C++ extensions, runs on full images (no masks),
-      and matches bboxes back to SAM2 objects via IoU — introducing matching
-      error. Florence-2 works directly on masked regions, requires no C++
-      extension, and shares the model already loaded for Fix 5.4 (zero extra
-      VRAM cost for the relation step).
+    Spatial relation scaffold + Florence-2 semantic enrichment.
+    Layer 1: pixel IoU / depth-axis / centroid direction.
+    Layer 2: Florence-2 RED/BLUE colour-overlay captions for overlapping pairs.
+    See docs/LABELLING_AND_RELATIONS.md for formulas and predicate table.
     """
     def __init__(
         self,
@@ -395,20 +446,7 @@ class Pix2SGWrapper:
         return "above" if dy > 0 else "below"
 
     def _spatial_predicate_mask(self, sub: Dict[str, Any], obj: Dict[str, Any]) -> str:
-        """Mask-native spatial predicate using pixel overlap and mask centroids.
-
-        Overlap detection: uses pixel mask intersection/union rather than bbox IoU.
-        Bbox IoU fires `overlapping` whenever two padded rectangles share area —
-        even for objects far apart in 3D whose pixels don't touch. Pixel
-        intersection/union measures actual foreground contact.
-
-        Directional predicates: uses mask_centroid_2d (centre-of-mass of the
-        object's foreground pixels) rather than the bbox midpoint, giving more
-        accurate left/right/above/below classification for asymmetric objects.
-
-        Falls back to bbox IoU for overlap detection and bbox center for
-        direction when one or both objects lack a matched mask.
-        """
+        """Return spatial predicate using pixel-mask IoU and depth-weighted centroids."""
         sub_mask = sub.get("_sam2_mask_array")
         obj_mask = obj.get("_sam2_mask_array")
 
@@ -425,8 +463,6 @@ class Pix2SGWrapper:
             if union > 0 and (inter / (union + 1e-8)) >= self._mask_overlap_thresh:
                 return "overlapping"
 
-        # --- Depth-gated direction: if objects are far apart in depth, the dominant
-        # relation is depth-axis (in_front_of / behind), not 2D image direction.
         sub_z = sub.get("coordinates_3d", {}).get("z")
         obj_z = obj.get("coordinates_3d", {}).get("z")
         if sub_z is not None and obj_z is not None:
@@ -434,7 +470,6 @@ class Pix2SGWrapper:
             if depth_diff >= self._depth_far_threshold:
                 return "in_front_of" if float(sub_z) < float(obj_z) else "behind"
 
-        # --- Directional from mask centroid (same 2D plane) ---
         sx, sy = self._get_centroid(sub)
         ox, oy = self._get_centroid(obj)
         dx, dy = ox - sx, oy - sy
@@ -602,36 +637,10 @@ class Pix2SGWrapper:
                     })
         return extra
 
-# -----------------------------------------------------------------------------
-# Fix 5.4: Florence-2 Wrapper
-# Replaces GRiT's unreliable "last-word" heuristic with structured OD output.
-#
-# Why Florence-2 instead of GRiT:
-#   - GRiT generates free-form captions; extracting a label requires heuristics
-#     (last word, first noun) that fail ~30% of the time.
-#   - Florence-2 with task "<OD>" returns structured {label, bbox} dicts directly.
-#     We pick the highest-confidence label from the crop — no parsing needed.
-#   - Florence-2 also supports "<DETAILED_CAPTION>" for rich descriptions and
-#     "<REGION_RELATION>" for pairwise relation queries (used in Fix 5.6).
-#   - Single model for both labelling and relation prediction: reduces total
-#     VRAM footprint vs. having GRiT + a separate VQA model.
-#
-# Memory strategy:
-#   Florence-2-large: ~900 MB VRAM.  Florence-2-base: ~500 MB VRAM.
-#   The model is loaded once and kept resident — re-loading per image is slow.
-#   It is shared between the labelling step (Fix 5.4) and the relation step
-#   (Fix 5.6) via the same wrapper instance.
-# -----------------------------------------------------------------------------
 class Florence2Wrapper:
     """
-    Microsoft Florence-2 wrapper for per-mask object labelling and pairwise
-    semantic relation prediction.
-
-    Tasks used:
-      "<OD>"              → structured {label, bbox} per crop → best label
-      "<DETAILED_CAPTION>"→ rich sentence description of crop (stored as caption)
-      "<REGION_RELATION>" → "What is the relationship between <region1> and <region2>?"
-                            Used in Fix 5.6 for mask-pair semantic relations.
+    Florence-2 wrapper for object labelling (<OD>) and relation prediction (<CAPTION>).
+    See docs/LABELLING_AND_RELATIONS.md for label priority and colour-overlay method.
     """
 
     def __init__(self, model_id: str = "microsoft/Florence-2-large", device: torch.device = None):
@@ -659,24 +668,30 @@ class Florence2Wrapper:
             from transformers import AutoProcessor, AutoModelForCausalLM
             # use_fast=False avoids the fast tokenizer backend that triggers the
             # additional_special_tokens AttributeError on tokenizers >= 0.20.
+            _dtype = torch.float16 if self.device.type == "cuda" else torch.float32
+            _proc_kwargs = dict(trust_remote_code=True)
             try:
-                self.processor = AutoProcessor.from_pretrained(
-                    model_id, trust_remote_code=True, use_fast=False
-                )
+                self.processor = AutoProcessor.from_pretrained(model_id, use_fast=False, **_proc_kwargs)
             except TypeError:
-                self.processor = AutoProcessor.from_pretrained(
-                    model_id, trust_remote_code=True
-                )
+                self.processor = AutoProcessor.from_pretrained(model_id, **_proc_kwargs)
+
+            # attn_implementation="eager" disables SDPA dispatch, which avoids
+            # the _supports_sdpa property being called before language_model is
+            # initialised (transformers 5.x + Florence-2 custom code incompatibility).
+            # The cached modeling_florence2.py is also patched for the two known bugs:
+            #   1. dpr linspace uses device="cpu" to avoid meta-tensor .item() error
+            #   2. _supports_sdpa property guards against uninitialised language_model
             self.model = AutoModelForCausalLM.from_pretrained(
                 model_id,
-                torch_dtype=torch.float16 if self.device.type == "cuda" else torch.float32,
+                dtype=_dtype,
                 trust_remote_code=True,
+                attn_implementation="eager",
             ).to(self.device)
             self.model.eval()
             self.active = True
             print(f"Florence-2 ready ({model_id}).")
         except Exception as e:
-            print(f"Florence-2 init failed: {e}. Falling back to GRiT label extraction.")
+            print(f"Florence-2 init failed: {e}.")
 
     def _run_task(self, task: str, pil_image, extra_text: str = "") -> Any:
         """Run a single Florence-2 task on a PIL image. Returns parsed result."""
@@ -697,6 +712,7 @@ class Florence2Wrapper:
                     **inputs,
                     max_new_tokens=256,
                     do_sample=False,
+                    use_cache=False,  # transformers 5.x EncoderDecoderCache is incompatible with Florence-2 custom code
                 )
             text_out = self.processor.batch_decode(generated, skip_special_tokens=False)[0]
             parsed = self.processor.post_process_generation(
@@ -709,19 +725,61 @@ class Florence2Wrapper:
             print(f"  [Florence2] task={task} failed: {e}")
             return {}
 
+    # Stopwords to skip when extracting a noun label from a Florence-2 caption.
+    # Articles, prepositions, common adjectives, and meta-words ("image", "photo")
+    # are all non-informative for an object label.
+    _CAPTION_STOPWORDS = {
+        # articles / determiners
+        "a", "an", "the", "some", "one", "two", "three",
+        # prepositions / conjunctions
+        "with", "on", "of", "in", "at", "by", "and", "or", "from", "to",
+        "for", "as", "up", "out", "into", "over", "under", "about", "around",
+        # verbs / auxiliaries
+        "is", "are", "was", "were", "be", "been", "being", "has", "have",
+        "can", "may", "will", "appears", "seems", "showing", "shows", "shown",
+        # pronouns
+        "this", "that", "these", "those", "it", "its", "there", "their",
+        # meta / photographic words
+        "image", "photo", "picture", "view", "close", "shot",
+        # positional / descriptive (these are adjectives, not nouns)
+        "side", "top", "front", "back", "left", "right", "center", "middle",
+        # common adjectives that precede the actual noun
+        "red", "blue", "green", "yellow", "white", "black", "brown", "grey",
+        "gray", "orange", "purple", "pink", "dark", "light", "bright",
+        "large", "small", "big", "little", "tiny", "tall", "short", "long",
+        "old", "new", "open", "closed", "empty", "full", "flat", "round",
+        "square", "wooden", "metal", "plastic", "glass", "stone", "brick",
+        "single", "double", "multiple", "various", "different", "same",
+        # filler adverbs
+        "very", "quite", "just", "also", "well",
+    }
+
+    @classmethod
+    def _extract_label_from_caption(cls, caption: str) -> str:
+        """
+        Extract the first meaningful noun from a Florence-2 caption.
+        Skips stopwords and punctuation. Returns "object" if nothing useful found.
+        """
+        if not caption or not isinstance(caption, str):
+            return "object"
+        for w in caption.lower().split():
+            w_clean = w.strip(".,;:!?\"'()")
+            if w_clean.isalpha() and len(w_clean) > 2 and w_clean not in cls._CAPTION_STOPWORDS:
+                return w_clean
+        return "object"
+
     def label_crop(self, crop_bgr: np.ndarray) -> Dict[str, Any]:
         """
-        Label a BGR crop image using Florence-2 <OD> task.
+        Label a BGR crop using Florence-2.
 
-        Returns dict with keys: label (str), conf (float), caption (str).
+        Primary: <MORE_DETAILED_CAPTION> — on a tight single-object crop this
+        reliably produces sentences like "a wooden dining chair with padded seat"
+        from which we extract the first meaningful noun ("chair").
 
-        How it works:
-          1. Convert crop to PIL RGB.
-          2. Run <OD> task → {"<OD>": {"labels": [...], "bboxes": [...]}}
-             Florence-2 OD on a single-object crop typically returns 1-3 items.
-             We pick the label with the largest bbox area (= dominant object).
-          3. Run <DETAILED_CAPTION> for the rich caption stored in scene JSON.
-          4. If OD returns nothing, fall back to <CAPTION> for label extraction.
+        Secondary: <OD> — if caption extraction still yields "object", run
+        detection on the crop and pick the label from the largest bbox.
+
+        Returns dict: label (str), conf (float), caption (str).
         """
         if not self.active or crop_bgr is None or crop_bgr.size == 0:
             return {"label": "object", "conf": 0.0, "caption": "object"}
@@ -729,41 +787,35 @@ class Florence2Wrapper:
         from PIL import Image as PILImage
         crop_rgb = cv2.cvtColor(crop_bgr, cv2.COLOR_BGR2RGB)
         pil_crop = PILImage.fromarray(crop_rgb)
-        cw, ch = pil_crop.width, pil_crop.height
 
-        # --- Object Detection task: gives structured labels ---
-        od_result = self._run_task("<OD>", pil_crop)
-        od_data = od_result.get("<OD>", {})
-        labels = od_data.get("labels", [])
-        bboxes = od_data.get("bboxes", [])
-
-        label = "object"
-        conf = 0.5  # Florence-2 OD doesn't provide per-box confidence in base output
-
-        if labels:
-            # Pick label from the largest bounding box — the dominant object in the crop
-            best_area = -1
-            for lbl, box in zip(labels, bboxes):
-                if len(box) >= 4:
-                    area = abs(box[2] - box[0]) * abs(box[3] - box[1])
-                    if area > best_area:
-                        best_area = area
-                        label = str(lbl).strip().lower()
-            conf = 0.80  # Florence-2 OD is reliable; assign high fixed confidence
-
-        # --- Detailed caption for scene JSON ---
-        cap_result = self._run_task("<DETAILED_CAPTION>", pil_crop)
-        caption = cap_result.get("<DETAILED_CAPTION>", label)
+        # --- Primary: rich caption → noun extraction ---
+        cap_result = self._run_task("<MORE_DETAILED_CAPTION>", pil_crop)
+        caption = cap_result.get("<MORE_DETAILED_CAPTION>", "")
         if not isinstance(caption, str):
             caption = str(caption)
 
-        # Fallback: if OD gave nothing, extract first noun from caption
-        if label == "object" and caption and caption != "object":
-            words = caption.lower().split()
-            stopwords = {"a", "an", "the", "with", "on", "of", "in", "at", "by", "and", "or", "is", "are"}
-            meaningful = [w for w in words if w.isalpha() and w not in stopwords]
-            if meaningful:
-                label = meaningful[0]
+        label = self._extract_label_from_caption(caption)
+        conf = 0.75
+
+        # --- Secondary: structured <OD> when caption gave nothing useful ---
+        if label == "object":
+            od_result = self._run_task("<OD>", pil_crop)
+            od_data = od_result.get("<OD>", {})
+            od_labels = od_data.get("labels", [])
+            od_bboxes = od_data.get("bboxes", [])
+            if od_labels:
+                best_area = -1
+                for lbl, box in zip(od_labels, od_bboxes):
+                    if len(box) >= 4:
+                        area = abs(box[2] - box[0]) * abs(box[3] - box[1])
+                        if area > best_area:
+                            best_area = area
+                            label = str(lbl).strip().lower()
+                if label != "object":
+                    conf = 0.80
+
+        if not caption:
+            caption = label
 
         return {"label": label, "conf": conf, "caption": caption}
 
@@ -775,25 +827,7 @@ class Florence2Wrapper:
         label_sub: str,
         label_obj: str,
     ) -> Optional[str]:
-        """
-        Predict semantic relation between two masked regions using Florence-2.
-
-        Strategy (Fix 5.6):
-          1. Compute union bbox of both masks.
-          2. Crop the full image to that union region.
-          3. Overlay masks with distinct colors (red=subject, blue=object).
-          4. Ask Florence-2: "<CAPTION> Describe the relationship between the
-             red [label_sub] and the blue [label_obj]."
-          5. Parse the response to extract a predicate.
-
-        Why union bbox + color overlay:
-          - Florence-2 doesn't have a native "region-pair relation" task, but
-            it understands color references in captions very well.
-          - Coloring the masks makes the two regions unambiguous.
-          - Cropping to union reduces context noise from unrelated objects.
-
-        Returns: predicate string or None if prediction fails/is uninformative.
-        """
+        """Predict relation via RED/BLUE colour overlay + Florence-2 caption. Returns predicate or None."""
         if not self.active:
             return None
         try:
@@ -825,12 +859,8 @@ class Florence2Wrapper:
 
             pil_crop = PILImage.fromarray(crop_rgb.astype(np.uint8))
 
-            prompt_text = (
-                f" Describe the relationship between the red {label_sub} "
-                f"and the blue {label_obj} in one short phrase."
-            )
-            result = self._run_task("<CAPTION>", pil_crop, extra_text=prompt_text)
-            raw = result.get("<CAPTION>", "")
+            result = self._run_task("<MORE_DETAILED_CAPTION>", pil_crop)
+            raw = result.get("<MORE_DETAILED_CAPTION>", "")
             if not isinstance(raw, str) or not raw.strip():
                 return None
 
@@ -842,12 +872,7 @@ class Florence2Wrapper:
 
     @staticmethod
     def _parse_relation_phrase(text: str) -> Optional[str]:
-        """
-        Map Florence-2 free-form relation description to a canonical predicate.
-
-        The mapping covers spatial, functional, and action predicates.
-        Returns None if no clear predicate is found (avoids noise triplets).
-        """
+        """Map free-form Florence-2 caption to a canonical predicate, or None if no match."""
         PHRASE_MAP = [
             # Spatial
             (["on top of", "resting on", "placed on", "sitting on", "standing on", "lying on"], "on"),
@@ -880,33 +905,7 @@ class Florence2Wrapper:
         return None
 
 
-# -----------------------------------------------------------------------------
-# Fix 5.3: Grounded-SAM2 Wrapper
-# Replaces SAM2 AMG (class-agnostic, part-level) with object-level segmentation.
-#
-# Architecture:
-#   GroundingDINO v2  →  open-vocabulary object detection (bboxes + labels)
-#         ↓
-#   SAM2 (prompted)   →  one high-quality mask per detected bbox
-#         ↓
-#   Result: object-level binary masks with semantic labels already attached
-#
-# Why this fixes the core accuracy problem (5.3):
-#   SAM2 AMG places a dense point grid and segments EVERY coherent region,
-#   producing part-level masks (car door, car wheel, car window = 3 masks for
-#   one car).  Grounding DINO detects at the ENTITY level: "car" = one bbox.
-#   SAM2 then generates one mask for that one entity.  This gives you the
-#   correct object-level instance segmentation your pipeline requires.
-#
-# Text query strategy:
-#   A broad category query ("person. vehicle. furniture. ...") covers all
-#   common scene graph objects without overfitting to a fixed class list.
-#   GDINO's open-vocabulary design handles unseen objects gracefully.
-#
-# Fallback:
-#   If GDINO fails to import or produces zero detections, the wrapper falls
-#   back to SAM2 AMG (original behavior) so the pipeline never fails silently.
-# -----------------------------------------------------------------------------
+# See docs/SEGMENTATION.md for GroundedSAM2 vs AMG architecture and fallback logic.
 class GroundedSAM2Wrapper:
     """
     Grounding DINO v2 + SAM2 prompted mode for object-level instance segmentation.
@@ -1154,6 +1153,10 @@ class GroundedSAM2Wrapper:
             })
         return results
 
+    def update_text_query(self, query: str) -> None:
+        """Update the GDINO text query (e.g. from RAM++ dynamic vocabulary)."""
+        self.text_query = query
+
 
 # -----------------------------------------------------------------------------
 # 7. SAM2 Automatic Mask Generator Wrapper
@@ -1315,6 +1318,173 @@ class SAM2AMGWrapper:
         return resized_anns
 
 # -----------------------------------------------------------------------------
+# 8. SAM3 Wrapper
+# Mirrors the GroundedSAM2Wrapper.generate() output format so it can slot into
+# the same depth / labelling / relation pipeline as a parallel segmentor.
+# Each mask dict gets "segmentor": "SAM3" for traceability.
+# -----------------------------------------------------------------------------
+class SAM3Wrapper:
+    """
+    SAM3 text-prompted segmentor.
+
+    Uses ``build_sam3_image_model`` + ``Sam3Processor`` from the local
+    ``sam3/`` repo (already cloned alongside this project).
+
+    Output format matches GroundedSAM2Wrapper.generate():
+      segmentation (bool HxW), bbox ([x,y,w,h] xywh), area (int),
+      predicted_iou (float), stability_score (float),
+      label (str), gdino_conf (float — here: SAM3 score),
+      source_model (str — "SAM3")
+    """
+
+    def __init__(
+        self,
+        device: torch.device,
+        text_query: str = (
+            "person. animal. vehicle. furniture. appliance. food. "
+            "clothing. container. tool. building. plant. electronics. object."
+        ),
+        confidence_threshold: float = 0.3,
+        checkpoint_path: Optional[str] = None,
+        load_from_hf: bool = True,
+    ):
+        self.device = device
+        self.text_query = text_query
+        self.confidence_threshold = confidence_threshold
+        self._model = None
+        self._processor = None
+        self.active = False
+
+        print("Initializing SAM3...")
+        try:
+            from sam3.model_builder import build_sam3_image_model
+            from sam3.model.sam3_image_processor import Sam3Processor
+
+            device_str = str(device) if hasattr(device, "__str__") else "cuda"
+            if hasattr(device, "type"):
+                device_str = device.type
+            self._model = build_sam3_image_model(
+                device=device_str,
+                eval_mode=True,
+                checkpoint_path=checkpoint_path,
+                load_from_HF=load_from_hf,
+                enable_segmentation=True,
+                enable_inst_interactivity=False,
+            )
+            self._processor = Sam3Processor(
+                self._model,
+                device=device_str,
+                confidence_threshold=confidence_threshold,
+            )
+            self.active = True
+            print("SAM3 ready.")
+        except Exception as e:
+            print(f"SAM3 init failed (will skip SAM3 pass): {e}")
+            self.active = False
+
+    def generate(self, image_rgb: np.ndarray) -> List[Dict[str, Any]]:
+        """
+        Run SAM3 on an RGB image with the configured text query.
+
+        Returns list of dicts in GroundedSAM2Wrapper format so the rest of the
+        pipeline (depth stats, labelling, relations) treats them identically.
+        Masks are full-resolution bool arrays (HxW).
+        """
+        if not self.active or self._processor is None:
+            return []
+
+        h, w = image_rgb.shape[:2]
+        results = []
+        try:
+            from PIL import Image as PILImage
+            pil_img = PILImage.fromarray(image_rgb)
+            state = self._processor.set_image(pil_img)
+
+            # Run one prompt per category phrase for finer recall, then
+            # aggregate. Alternatively run a single compound prompt — we do
+            # the single-prompt path here for efficiency.
+            state = self._processor.set_text_prompt(
+                prompt=self.text_query, state=state
+            )
+
+            masks_bool = state.get("masks")   # (N,1,H,W) bool tensor
+            boxes = state.get("boxes")         # (N,4) float tensor [x0,y0,x1,y1]
+            scores = state.get("scores")       # (N,) float tensor
+
+            if masks_bool is None or len(masks_bool) == 0:
+                print("  [SAM3] No masks returned.")
+                return []
+
+            masks_bool = masks_bool.cpu().numpy()   # (N,1,H,W)
+            boxes_np   = boxes.cpu().numpy()        # (N,4)
+            scores_np  = scores.cpu().numpy()       # (N,)
+
+            for i in range(len(masks_bool)):
+                m = masks_bool[i]
+                if m.ndim == 3:
+                    m = m[0]              # (H,W)
+                mask = m.astype(bool)
+                if mask.shape[:2] != (h, w):
+                    mask = cv2.resize(
+                        mask.astype(np.uint8), (w, h),
+                        interpolation=cv2.INTER_NEAREST
+                    ).astype(bool)
+
+                area = int(mask.sum())
+                if area == 0:
+                    continue
+
+                # Convert xyxy box → xywh (SAM2 convention used elsewhere)
+                x1, y1, x2, y2 = (
+                    float(boxes_np[i, 0]), float(boxes_np[i, 1]),
+                    float(boxes_np[i, 2]), float(boxes_np[i, 3]),
+                )
+                bw = max(0.0, x2 - x1)
+                bh = max(0.0, y2 - y1)
+                score = float(scores_np[i])
+
+                results.append({
+                    "segmentation": mask,
+                    "bbox": [x1, y1, bw, bh],   # xywh
+                    "area": area,
+                    "predicted_iou": score,
+                    "stability_score": score,    # SAM3 has no separate stability; use score
+                    "label": "object",           # SAM3 doesn't return per-mask labels; downstream labeller fills this
+                    "gdino_conf": score,
+                    "source_model": "SAM3",
+                })
+
+            print(f"  [SAM3] {len(results)} masks generated.")
+        except Exception as e:
+            print(f"  [SAM3] generate() failed: {e}")
+
+        return results
+
+    def unload(self) -> None:
+        """Delete model weights and free VRAM so SAM2 can run next."""
+        self._model = None
+        self._processor = None
+        self.active = False
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        gc.collect()
+        print("[SAM3] Model unloaded, VRAM freed.")
+
+
+# -----------------------------------------------------------------------------
+# Sentinel for SAM3-only mode (no SAM2 loaded)
+# -----------------------------------------------------------------------------
+class _Sam2OnlySentinel:
+    """Placeholder for sam2_wrapper when sam3_only=True; avoids loading SAM2."""
+
+    active = False
+    _amg_fallback = None
+
+    def generate(self, image_rgb: np.ndarray) -> List[Dict[str, Any]]:
+        return []
+
+
+# -----------------------------------------------------------------------------
 # Main Pipeline
 # -----------------------------------------------------------------------------
 class SceneUnderstandingPipeline:
@@ -1401,15 +1571,19 @@ class SceneUnderstandingPipeline:
             self._calibration = self._load_calibration(cal_file)
         self.apply_undistortion = bool(getattr(config, "apply_undistortion", True)) if config is not None else True
 
-        # Fix 5.4 — Florence-2 (shared for labelling + relations)
-        florence2_model_id = getattr(config, "florence2_model", "microsoft/Florence-2-large") if config is not None else "microsoft/Florence-2-large"
-        self.florence2 = Florence2Wrapper(model_id=florence2_model_id, device=self.device)
-
-        # GRiT kept as secondary fallback if Florence-2 fails
-        self.grit = GRiTWrapper(self.device)
-        yolo_cls_model = getattr(config, "yolo_cls_model", "yolov8x-cls.pt") if config is not None else "yolov8x-cls.pt"
-        yolo_cls_thresh = float(getattr(config, "yolo_cls_conf_thresh", 0.30)) if config is not None else 0.30
-        self.yolo_cls = YOLOClassifierWrapper(yolo_cls_model, yolo_cls_thresh)
+        # Labellers — lazy-loaded on first use, unloaded after Stage 5 to save VRAM
+        self._florence2_model_id = getattr(config, "florence2_model", "microsoft/Florence-2-large") if config is not None else "microsoft/Florence-2-large"
+        self._florence2_label_enabled = bool(getattr(config, "florence2_label_enabled", True)) if config is not None else True
+        self._rampp_enabled = bool(getattr(config, "rampp_enabled", True)) if config is not None else True
+        self._rampp_checkpoint_path = getattr(config, "rampp_checkpoint_path", None) if config is not None else None
+        self._rampp_repo_path = getattr(config, "rampp_repo_path", None) if config is not None else None
+        self._rampp_image_size = int(getattr(config, "rampp_image_size", 384)) if config is not None else 384
+        self._rampp_vit = str(getattr(config, "rampp_vit", "swin_l")) if config is not None else "swin_l"
+        self._rampp_default_conf = float(getattr(config, "rampp_default_confidence", 0.70)) if config is not None else 0.70
+        self._rampp_max_tags = int(getattr(config, "rampp_max_tags", 8)) if config is not None else 8
+        self.florence2: Optional[Florence2Wrapper] = None
+        self.rampp: Optional[RAMPlusPlusWrapper] = None
+        print("Labellers (Florence-2, RAM++) will load on first image.")
 
         # Fix 5.6 — Pix2SG with Florence-2 enrichment
         relation_min_mask_overlap = float(getattr(config, "relation_min_mask_overlap", 0.02)) if config is not None else 0.02
@@ -1420,60 +1594,96 @@ class SceneUnderstandingPipeline:
             mask_overlap_thresh=self.pix2sg_mask_overlap_thresh,
             depth_near_threshold=self.pix2sg_depth_near_threshold,
             depth_far_threshold=pix2sg_depth_far_threshold,
-            florence2=self.florence2 if (config is not None and getattr(config, "florence2_relation_enabled", True)) else None,
+            florence2=None,  # injected lazily at process_image() time after load
             relation_min_mask_overlap=relation_min_mask_overlap,
         )
         self._relation_source_status = self._collect_relation_source_status()
         self._print_relation_source_status()
         self._assert_relation_sources_or_fail()
 
-        # Fix 5.3 — GroundedSAM2 (replaces SAM2AMGWrapper)
-        if self.config is not None:
-            ckpt = getattr(self.config, "sam2_checkpoint_path", "sam2/checkpoints/sam2.1_hiera_large.pt")
-            cfg = getattr(self.config, "sam2_model_cfg", "configs/sam2.1/sam2.1_hiera_l")
-            gdino_model = getattr(self.config, "grounding_dino_model", "IDEA-Research/grounding-dino-base")
-            gdino_box_thresh = float(getattr(self.config, "grounding_dino_box_thresh", 0.30))
-            gdino_text_thresh = float(getattr(self.config, "grounding_dino_text_thresh", 0.25))
-            gdino_query = getattr(self.config, "grounding_dino_text_query",
-                "person. animal. vehicle. furniture. appliance. food. clothing. container. tool. building. plant. electronics. object.")
-            fallback_amg = bool(getattr(self.config, "grounded_sam2_fallback_to_amg", True))
-            pts = getattr(self.config, "sam2_amg_points_per_side", 32)
-            ppb = getattr(self.config, "sam2_amg_points_per_batch", 32)
-            iou = getattr(self.config, "sam2_amg_pred_iou_thresh", 0.80)
-            stab = getattr(self.config, "sam2_amg_stability_score_thresh", 0.92)
-            max_side = getattr(self.config, "sam2_amg_max_image_side", 1280)
-            min_region = int(getattr(self.config, "sam2_amg_min_mask_region_area", 1000))
-            use_m2m = bool(getattr(self.config, "sam2_amg_use_m2m", True))
-            box_nms = float(getattr(self.config, "sam2_amg_box_nms_thresh", 0.7))
-            self.sam2_wrapper = GroundedSAM2Wrapper(
-                device=self.device,
-                sam2_checkpoint_path=ckpt,
-                sam2_model_cfg=cfg,
-                gdino_model_id=gdino_model,
-                box_thresh=gdino_box_thresh,
-                text_thresh=gdino_text_thresh,
-                text_query=gdino_query,
-                max_image_side=max_side,
-                fallback_to_amg=fallback_amg,
-                points_per_side=pts,
-                points_per_batch=ppb,
-                pred_iou_thresh=iou,
-                stability_score_thresh=stab,
-                min_mask_region_area=min_region,
-                use_m2m=use_m2m,
-                box_nms_thresh=box_nms,
-            )
+        # SAM3-only mode: skip SAM2 entirely (Run 2 for SAM2 vs SAM3 comparison)
+        self._sam3_only = bool(getattr(config, "sam3_only", False)) if config is not None else False
+        self._sam3_only_use_existing_depth = (
+            bool(getattr(config, "sam3_only_use_existing_depth", False)) if config is not None else False
+        )
+
+        if self._sam3_only:
+            self.sam2_wrapper = _Sam2OnlySentinel()
+            self._run_sam3 = True
+            print("SAM3-only mode: SAM2 skipped; only depth + SAM3 will run.")
         else:
-            self.sam2_wrapper = GroundedSAM2Wrapper(
-                device=self.device,
-                sam2_checkpoint_path="sam2/checkpoints/sam2.1_hiera_large.pt",
-                sam2_model_cfg="configs/sam2.1/sam2.1_hiera_l",
+            # Fix 5.3 — GroundedSAM2 (replaces SAM2AMGWrapper)
+            if self.config is not None:
+                ckpt = getattr(self.config, "sam2_checkpoint_path", "sam2/checkpoints/sam2.1_hiera_large.pt")
+                cfg = getattr(self.config, "sam2_model_cfg", "configs/sam2.1/sam2.1_hiera_l")
+                gdino_model = getattr(self.config, "grounding_dino_model", "IDEA-Research/grounding-dino-base")
+                gdino_box_thresh = float(getattr(self.config, "grounding_dino_box_thresh", 0.30))
+                gdino_text_thresh = float(getattr(self.config, "grounding_dino_text_thresh", 0.25))
+                gdino_query = getattr(self.config, "grounding_dino_text_query",
+                    "person. man. woman. child. animal. dog. cat. car. truck. bicycle. motorcycle. bus. "
+                    "chair. table. desk. sofa. bed. shelf. cabinet. door. window. floor. wall. ceiling. "
+                    "bottle. cup. bowl. plate. glass. fork. knife. spoon. pot. pan. "
+                    "laptop. phone. keyboard. monitor. television. remote. camera. "
+                    "bag. backpack. suitcase. box. basket. "
+                    "book. paper. pen. clock. lamp. mirror. painting. "
+                    "tree. plant. flower. grass. sky. road. building. sign.")
+                fallback_amg = bool(getattr(self.config, "grounded_sam2_fallback_to_amg", True))
+                pts = getattr(self.config, "sam2_amg_points_per_side", 32)
+                ppb = getattr(self.config, "sam2_amg_points_per_batch", 32)
+                iou = getattr(self.config, "sam2_amg_pred_iou_thresh", 0.80)
+                stab = getattr(self.config, "sam2_amg_stability_score_thresh", 0.92)
+                max_side = getattr(self.config, "sam2_amg_max_image_side", 1280)
+                min_region = int(getattr(self.config, "sam2_amg_min_mask_region_area", 1000))
+                use_m2m = bool(getattr(self.config, "sam2_amg_use_m2m", True))
+                box_nms = float(getattr(self.config, "sam2_amg_box_nms_thresh", 0.7))
+                self.sam2_wrapper = GroundedSAM2Wrapper(
+                    device=self.device,
+                    sam2_checkpoint_path=ckpt,
+                    sam2_model_cfg=cfg,
+                    gdino_model_id=gdino_model,
+                    box_thresh=gdino_box_thresh,
+                    text_thresh=gdino_text_thresh,
+                    text_query=gdino_query,
+                    max_image_side=max_side,
+                    fallback_to_amg=fallback_amg,
+                    points_per_side=pts,
+                    points_per_batch=ppb,
+                    pred_iou_thresh=iou,
+                    stability_score_thresh=stab,
+                    min_mask_region_area=min_region,
+                    use_m2m=use_m2m,
+                    box_nms_thresh=box_nms,
+                )
+            else:
+                self.sam2_wrapper = GroundedSAM2Wrapper(
+                    device=self.device,
+                    sam2_checkpoint_path="sam2/checkpoints/sam2.1_hiera_large.pt",
+                    sam2_model_cfg="configs/sam2.1/sam2.1_hiera_l",
+                )
+            # Validate SAM2 predictor or AMG is available
+            if not self.sam2_wrapper.active and getattr(self.sam2_wrapper, "_amg_fallback", None) is None:
+                raise RuntimeError(
+                    "Both Grounded-SAM2 and SAM2 AMG fallback failed to initialize."
+                )
+
+            # SAM3 — optional segmentor; weights loaded lazily per-image to save VRAM
+            self._run_sam3 = bool(getattr(config, "run_sam3", False)) if config is not None else False
+
+        self.sam3_wrapper: Optional[SAM3Wrapper] = None
+        # Store config params — actual model load happens in process_image() after SAM2 unloads
+        if self._run_sam3:
+            self._sam3_text_query = getattr(
+                config, "sam3_text_query",
+                "person. animal. vehicle. furniture. appliance. food. "
+                "clothing. container. tool. building. plant. electronics. object.",
+            ) if config is not None else (
+                "person. animal. vehicle. furniture. appliance. food. "
+                "clothing. container. tool. building. plant. electronics. object."
             )
-        # Validate SAM2 predictor or AMG is available
-        if not self.sam2_wrapper.active and getattr(self.sam2_wrapper, "_amg_fallback", None) is None:
-            raise RuntimeError(
-                "Both Grounded-SAM2 and SAM2 AMG fallback failed to initialize."
-            )
+            self._sam3_conf = float(getattr(config, "sam3_confidence_threshold", 0.3)) if config is not None else 0.3
+            self._sam3_ckpt = getattr(config, "sam3_checkpoint_path", None) if config is not None else None
+            self._sam3_hf = bool(getattr(config, "sam3_load_from_hf", True)) if config is not None else True
+            print("SAM3 enabled — weights will load per-image after SAM2 completes.")
 
     def _collect_relation_source_status(self) -> Dict[str, Dict[str, Any]]:
         return {
@@ -1503,6 +1713,48 @@ class SceneUnderstandingPipeline:
             "No active relation source is available. "
             f"Disable strict check via require_any_relation_source=False, or fix dependencies. Details: {details}"
         )
+
+    def _load_labellers(self) -> None:
+        """Load Florence-2 and RAM++ into VRAM. Called once per image before Stage 4."""
+        need_florence = self._florence2_label_enabled or bool(getattr(self.config, "florence2_relation_enabled", True))
+        if need_florence and (self.florence2 is None or not self.florence2.active):
+            self.florence2 = Florence2Wrapper(model_id=self._florence2_model_id, device=self.device)
+
+        if self._rampp_enabled and (self.rampp is None or not self.rampp.active):
+            self.rampp = RAMPlusPlusWrapper(
+                device=self.device,
+                checkpoint_path=self._rampp_checkpoint_path,
+                repo_path=self._rampp_repo_path,
+                image_size=self._rampp_image_size,
+                vit=self._rampp_vit,
+                default_confidence=self._rampp_default_conf,
+                max_tags=self._rampp_max_tags,
+            )
+
+        # Inject loaded Florence-2 into Pix2SG so relations use it
+        if bool(getattr(self.config, "florence2_relation_enabled", True)) and self.florence2 is not None and self.florence2.active:
+            self.pix2sg._florence2 = self.florence2
+        else:
+            self.pix2sg._florence2 = None
+
+    def _unload_labellers(self) -> None:
+        """Unload Florence-2 and RAM++ to free VRAM after Stage 5."""
+        if self.florence2 is not None:
+            self.florence2.model = None
+            self.florence2.processor = None
+            self.florence2.active = False
+        self.florence2 = None
+        if self.rampp is not None:
+            self.rampp.model = None
+            self.rampp.transform = None
+            self.rampp.inference_fn = None
+            self.rampp.active = False
+        self.rampp = None
+        self.pix2sg._florence2 = None
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        gc.collect()
+        print("  [Labellers] Florence-2 / RAM++ unloaded, VRAM freed.")
 
     @staticmethod
     def _load_calibration(cal_file: str) -> Optional[Dict]:
@@ -1657,21 +1909,7 @@ class SceneUnderstandingPipeline:
         return out
 
     def _adaptive_erosion_kernel(self, mask_bin: np.ndarray) -> int:
-        """
-        Fix 5.7: Compute erosion kernel size adapted to the object's narrowest dimension.
-
-        Problem with fixed kernel:
-          A 5px erosion on a 3px-wide pole destroys the entire mask.
-          A 5px erosion on a large sofa (300px wide) is insufficient.
-
-        Strategy:
-          - Compute the bounding box of the mask.
-          - Narrowest dimension = min(bbox_w, bbox_h).
-          - Scale kernel: 0 for very thin objects, up to max for large objects.
-          - Cap at config's mask_erosion_kernel_size.
-
-        Returns kernel size (int); 0 means skip erosion.
-        """
+        """Return erosion kernel size scaled to the mask's narrowest dimension. 0 = skip erosion."""
         if not self.depth_adaptive_erosion or self.mask_erosion_kernel_size == 0:
             return self.mask_erosion_kernel_size
         ys, xs = np.where(mask_bin)
@@ -1701,21 +1939,10 @@ class SceneUnderstandingPipeline:
         use_erosion: bool = True,
     ) -> tuple:
         """
-        Compute depth stats and 3D from mask pixels only.
-
-        Fix 5.7 improvements over original:
-          1. Adaptive erosion (kernel sized to object narrowest dim).
-             Controlled by use_erosion — pass False to skip erosion entirely,
-             producing raw depth stats for comparison against the eroded version.
-          2. Depth outlier rejection (sigma-clipping removes background bleed).
-          3. Transparency check (compares mask depth to surrounding border).
-
-        Args:
-            use_erosion: If True (default), apply adaptive erosion before depth
-                         extraction. If False, skip erosion — produces
-                         depth_stats_no_erosion / coordinates_3d_no_erosion.
-
-        Returns (depth_stats_dict, coordinates_3d_from_mask, mask_centroid_2d).
+        Compute depth stats and 3D coords from mask pixels.
+        use_erosion=False skips adaptive erosion (for comparison stats).
+        Returns (depth_stats_dict, coordinates_3d, mask_centroid_2d).
+        See docs/DEPTH_ACCURACY.md for all formulas.
         """
         h, w = metric_depth.shape[:2]
         mask_bin = (np.asarray(mask) > 0)
@@ -1723,11 +1950,6 @@ class SceneUnderstandingPipeline:
             mask_bin = cv2.resize(mask_bin.astype(np.uint8), (w, h), interpolation=cv2.INTER_NEAREST)
             mask_bin = (mask_bin > 0)
 
-        # --- Fix 5.7a: Adaptive erosion ---
-        # Removes boundary pixels where the depth network blends fg+bg depths.
-        # Kernel is scaled to the object's narrowest dimension so thin objects
-        # (poles, wires) are not destroyed by an oversized kernel.
-        # Skipped entirely when use_erosion=False (comparison / no-erosion run).
         if use_erosion:
             kernel_size = self._adaptive_erosion_kernel(mask_bin)
             if kernel_size > 0 and int(mask_bin.sum()) > 4 * kernel_size * kernel_size:
@@ -1751,14 +1973,7 @@ class SceneUnderstandingPipeline:
             centroid = [w // 2, h // 2]
             return depth_stats, coords_3d, centroid
 
-        # --- Fix 5.7b: Depth outlier rejection (sigma clipping) ---
-        # Background pixels that bleed through transparent surfaces or
-        # thin mask boundaries have depth values far from the object's true depth.
-        # Reject pixels beyond N sigma from the mask mean.
-        #
-        # Example: a glass vase mask contains 200 pixels at ~0.8m (vase surface)
-        # and 50 pixels at ~2.5m (background seen through glass). The mean is
-        # ~1.0m, std ~0.4m. With sigma=2.0, the 2.5m pixels are rejected (>2σ).
+        # Sigma-clipping: reject |depth_i - mean| > sigma * std  (see docs/DEPTH_ACCURACY.md)
         sigma = self.depth_outlier_sigma
         if sigma > 0 and depth_at_mask.size >= 10:
             mean_d = float(np.mean(depth_at_mask))
@@ -1770,11 +1985,7 @@ class SceneUnderstandingPipeline:
                     ys_f = ys_f[inlier]
                     xs_f = xs_f[inlier]
 
-        # --- Fix 5.7c: Transparency detection ---
-        # Transparent objects (glass, water, plastic) produce masks where the
-        # depth inside the mask matches the background depth because the depth
-        # model sees through them. Detect this by comparing mask depth to a
-        # 3px dilated border ring around the mask.
+        # Transparency detection via 5px border ring (see docs/DEPTH_ACCURACY.md)
         possibly_transparent = False
         depth_separation = 0.0
         if self.depth_transparency_check and mask_bin.sum() > 0:
@@ -1792,9 +2003,7 @@ class SceneUnderstandingPipeline:
             except Exception:
                 pass
 
-        # --- Depth-weighted centroid ---
-        # Closer pixels get higher weight (1/depth) → centroid pulled toward
-        # the nearest visible surface face of the object.
+        # Depth-weighted centroid: w_i = 1/(depth_i + ε)  (see docs/DEPTH_ACCURACY.md)
         weights = 1.0 / (depth_at_mask + 1e-6)
         w_sum = float(weights.sum())
         cy_f = float(np.sum(ys_f * weights) / w_sum)
@@ -1806,7 +2015,7 @@ class SceneUnderstandingPipeline:
         cx = int(xs_f[anchor_idx])
         cy = int(ys_f[anchor_idx])
 
-        # --- z_val: histogram mode over inner-circle pixels ---
+        # z_val: histogram mode over inner-circle pixels  (see docs/DEPTH_ACCURACY.md)
         central_frac = self.depth_central_fraction
         if central_frac < 1.0:
             area = float(mask_bin.sum())
@@ -1848,43 +2057,25 @@ class SceneUnderstandingPipeline:
         amg_entry: Dict[str, Any],
     ) -> Dict[str, Any]:
         """
-        Fix 5.4: Label a SAM2/GroundedSAM2 mask region.
-
-        Priority order:
-          1. If GroundedSAM2 already attached a label (gdino_conf key present),
-             use it directly — GDINO is the most semantically accurate source.
-          2. Florence-2 <OD> on the masked crop — structured label extraction.
-          3. GRiT + YOLO fallback (original behavior) if Florence-2 unavailable.
-
-        Why Florence-2 beats GRiT here (Fix 5.4):
-          GRiT generates free-form text ("a wooden chair with armrests") and
-          the original code took the LAST word ("armrests") — correct only by
-          accident.  Florence-2 <OD> returns structured {"labels": ["chair"]}
-          directly; no parsing heuristic needed.
-
-        Mean-fill background is preserved for all crop-based models: replacing
-        out-of-mask pixels with the image mean colour preserves natural image
-        statistics (brightness, color distribution) so both Florence-2 and GRiT
-        behave as trained — black zeros create an unnatural distribution.
+        Label a mask via priority chain: GDINO → Florence-2 (optional) → RAM++.
         """
-        # Priority 1: GDINO label already attached by GroundedSAM2Wrapper
-        gdino_label = amg_entry.get("label")
-        gdino_conf = amg_entry.get("gdino_conf", 0.0)
-        if gdino_label and gdino_label != "object" and gdino_conf >= 0.30:
-            return {
-                "label": gdino_label,
-                "conf": gdino_conf,
-                "caption": gdino_label,
-                "source_model": "GroundingDINO",
-            }
-
-        # Build masked crop for Florence-2 / GRiT
         h_img, w_img = img_bgr.shape[:2]
         x, y, bw, bh = amg_entry.get("bbox", [0, 0, w_img, h_img])
         x1, y1 = max(0, int(x)), max(0, int(y))
         x2, y2 = min(w_img, int(x + bw)), min(h_img, int(y + bh))
+
         if x2 <= x1 or y2 <= y1:
-            return {"label": "object", "conf": 0.0, "caption": "object", "source_model": "fallback"}
+            return {
+                "label": "object",
+                "conf": 0.0,
+                "caption": "object",
+                "source_model": "fallback",
+                "florence2_label": "",
+                "florence2_caption": "",
+                "rampp_label": "",
+                "rampp_caption": "",
+                "rampp_tags": [],
+            }
 
         crop = img_bgr[y1:y2, x1:x2].copy()
         ch, cw = crop.shape[:2]
@@ -1895,34 +2086,81 @@ class SceneUnderstandingPipeline:
         crop_filled = crop.copy()
         crop_filled[~mask_resized] = bg_mean
 
-        # Priority 2: Florence-2 (Fix 5.4)
-        if self.florence2 is not None and self.florence2.active:
+        f2_label, f2_caption = "object", "object"
+        if (
+            self._florence2_label_enabled
+            and self.florence2 is not None
+            and self.florence2.active
+        ):
             f2_result = self.florence2.label_crop(crop_filled)
-            if f2_result.get("label", "object") != "object":
-                f2_result["source_model"] = "Florence-2"
-                return f2_result
-            # Florence-2 returned "object" — fall through to GRiT
-            caption = f2_result.get("caption", "object")
-        else:
-            caption = "object"
+            f2_label = str(f2_result.get("label", "object")).strip().lower() or "object"
+            f2_caption = str(f2_result.get("caption", "object"))
 
-        # Priority 3: GRiT + YOLO fallback
-        yolo_label, yolo_conf = self.yolo_cls.classify(crop_filled)
-        results = self.grit.predict(crop_filled)
-        if results:
-            best = max(results, key=lambda r: r.get("conf", 0.0))
-            grit_label = best.get("label", "object")
-            grit_conf = best.get("conf", 0.0)
-            caption = best.get("caption", caption)
-        else:
-            grit_label, grit_conf = "object", 0.0
+        rampp_label, rampp_caption, rampp_tags = "object", "object", []
 
-        if yolo_conf >= self.yolo_cls.conf_thresh and yolo_label != "object":
-            label, conf = yolo_label, yolo_conf
-        else:
-            label, conf = grit_label, grit_conf
+        # Priority 1: GDINO label (wins if specific — not "object")
+        gdino_label = str(amg_entry.get("label", "object")).strip().lower()
+        gdino_conf = float(amg_entry.get("gdino_conf", 0.0))
+        if gdino_label and gdino_label != "object":
+            return {
+                "label": gdino_label,
+                "conf": gdino_conf,
+                "caption": gdino_label,
+                "source_model": "GroundingDINO",
+                "florence2_label": f2_label,
+                "florence2_caption": f2_caption,
+                "rampp_label": rampp_label,
+                "rampp_caption": rampp_caption,
+                "rampp_tags": rampp_tags,
+            }
 
-        return {"label": label, "conf": conf, "caption": caption, "source_model": "GRiT+YOLO"}
+        # Priority 2: Florence-2
+        if f2_label != "object":
+            return {
+                "label": f2_label,
+                "conf": 0.75,
+                "caption": f2_caption,
+                "source_model": "Florence-2",
+                "florence2_label": f2_label,
+                "florence2_caption": f2_caption,
+                "rampp_label": rampp_label,
+                "rampp_caption": rampp_caption,
+                "rampp_tags": rampp_tags,
+            }
+
+        # Priority 3: RAM++
+        rampp_conf = 0.0
+        if self.rampp is not None and self.rampp.active:
+            rampp_result = self.rampp.label_crop(crop_filled)
+            rampp_label = str(rampp_result.get("label", "object")).strip().lower() or "object"
+            rampp_caption = str(rampp_result.get("caption", "object"))
+            rampp_tags = list(rampp_result.get("tags", []))
+            rampp_conf = float(rampp_result.get("conf", 0.0))
+
+        if rampp_label != "object":
+            return {
+                "label": rampp_label,
+                "conf": rampp_conf,
+                "caption": rampp_caption,
+                "source_model": "RAM++",
+                "florence2_label": f2_label,
+                "florence2_caption": f2_caption,
+                "rampp_label": rampp_label,
+                "rampp_caption": rampp_caption,
+                "rampp_tags": rampp_tags,
+            }
+
+        return {
+            "label": "object",
+            "conf": 0.0,
+            "caption": f2_caption if f2_caption else "object",
+            "source_model": "fallback",
+            "florence2_label": f2_label,
+            "florence2_caption": f2_caption,
+            "rampp_label": rampp_label,
+            "rampp_caption": rampp_caption,
+            "rampp_tags": rampp_tags,
+        }
 
     def _attach_relations_by_triplets(
         self,
@@ -1995,7 +2233,7 @@ class SceneUnderstandingPipeline:
                 _target_src = _target_obj.get("sources", {})
                 _target_caption = (
                     _target_src.get("GroundedSAM2", {}).get("caption")
-                    or _target_src.get("GRiT", {}).get("caption")
+                    or _target_src.get("RAM++", {}).get("caption")
                     or _target_src.get("Florence2", {}).get("caption")
                     or ""
                 )
@@ -2029,20 +2267,128 @@ class SceneUnderstandingPipeline:
             vis = cv2.applyColorMap(vis, cv2.COLORMAP_INFERNO)
         cv2.imwrite(str(path), vis)
 
-    def _save_sam2_segmentation_image(self, amg_masks: List[Dict], h: int, w: int, path: Path) -> None:
-        """Save RGB image with one color per AMG mask (all masks)."""
-        out = np.zeros((h, w, 3), dtype=np.uint8)
-        np.random.seed(42)
-        for idx, amg in enumerate(amg_masks):
-            seg = amg.get("segmentation")
-            if seg is None:
+    @staticmethod
+    def _mask_colour(seed: int) -> tuple:
+        """Deterministic BGR colour from integer seed."""
+        rng = np.random.RandomState(seed)
+        r, g, b = rng.randint(60, 230, 3)
+        return (int(b), int(g), int(r))  # BGR
+
+    @staticmethod
+    def _draw_label(canvas_bgr: np.ndarray, text: str, cx: int, cy: int, mask_area: int) -> None:
+        """Draw a label string with a dark pill background at (cx, cy)."""
+        if not text:
+            return
+        # Scale font with mask area (clamp between 0.35 and 0.7)
+        scale = float(np.clip(np.sqrt(mask_area) / 250.0, 0.35, 0.70))
+        thick = 1
+        (tw, th), baseline = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, scale, thick)
+        pad = 3
+        x0 = max(0, cx - tw // 2 - pad)
+        y0 = max(0, cy - th - pad)
+        x1 = min(canvas_bgr.shape[1] - 1, cx + tw // 2 + pad)
+        y1 = min(canvas_bgr.shape[0] - 1, cy + baseline + pad)
+        # Dark semi-transparent pill
+        roi = canvas_bgr[y0:y1, x0:x1].astype(np.float32)
+        roi[:] = roi * 0.35
+        canvas_bgr[y0:y1, x0:x1] = np.clip(roi, 0, 255).astype(np.uint8)
+        cv2.putText(canvas_bgr, text, (cx - tw // 2, cy),
+                    cv2.FONT_HERSHEY_SIMPLEX, scale, (255, 255, 255), thick, cv2.LINE_AA)
+
+    def _save_labelled_segmentation(
+        self,
+        objects_3d: List[Dict],
+        path: Path,
+    ) -> None:
+        """
+        Coloured segment map (one colour per object) with label text at each
+        mask centroid. Uses _sam2_mask_array from objects_3d (still present
+        before strip). Falls back to bbox if centroid unavailable.
+        """
+        if not objects_3d:
+            return
+        # Derive canvas size from first valid mask
+        h, w = 0, 0
+        for obj in objects_3d:
+            m = obj.get("_sam2_mask_array")
+            if m is not None:
+                h, w = np.asarray(m).shape[:2]
+                break
+        if h == 0 or w == 0:
+            return
+
+        canvas = np.zeros((h, w, 3), dtype=np.uint8)
+        for i, obj in enumerate(objects_3d):
+            mask = obj.get("_sam2_mask_array")
+            if mask is None:
                 continue
-            mask = np.asarray(seg) if not isinstance(seg, np.ndarray) else seg
+            mask = np.asarray(mask)
             if mask.shape[:2] != (h, w):
                 mask = cv2.resize(mask.astype(np.uint8), (w, h), interpolation=cv2.INTER_NEAREST)
-            color = tuple(int(x) for x in np.random.randint(50, 255, 3))
-            out[mask > 0] = color
-        cv2.imwrite(str(path), cv2.cvtColor(out, cv2.COLOR_RGB2BGR))
+            bin_mask = mask > 0
+            colour = self._mask_colour(i)
+            canvas[bin_mask] = colour[::-1]  # store as RGB then convert at save
+            # Contour in slightly brighter shade
+            contours, _ = cv2.findContours(bin_mask.astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            bright = tuple(min(255, c + 60) for c in colour[::-1])
+            cv2.drawContours(canvas, contours, -1, bright, 1)
+
+        # Draw labels after all fills so text is on top
+        for i, obj in enumerate(objects_3d):
+            label = str(obj.get("label", "object"))
+            mc = obj.get("mask_centroid_2d")
+            bbox = obj.get("bbox", [0, 0, 0, 0])
+            cx = int(mc[0]) if mc and len(mc) == 2 else (int(bbox[0]) + int(bbox[2])) // 2
+            cy = int(mc[1]) if mc and len(mc) == 2 else (int(bbox[1]) + int(bbox[3])) // 2
+            mask = obj.get("_sam2_mask_array")
+            area = int(np.sum(np.asarray(mask) > 0)) if mask is not None else 1000
+            # canvas is BGR already (colour stored as BGR above via colour flip)
+            self._draw_label(canvas, label, cx, cy, area)
+
+        cv2.imwrite(str(path), canvas)
+
+    def _save_labelled_tinted_overlay(
+        self,
+        objects_3d: List[Dict],
+        image_rgb: np.ndarray,
+        path: Path,
+        alpha: float = 0.45,
+    ) -> None:
+        """
+        Original photo with each mask as a semi-transparent colour tint and
+        label text drawn at the mask centroid.
+        """
+        if not objects_3d or image_rgb is None:
+            return
+        h, w = image_rgb.shape[:2]
+        out = image_rgb.copy().astype(np.float32)
+
+        for i, obj in enumerate(objects_3d):
+            mask = obj.get("_sam2_mask_array")
+            if mask is None:
+                continue
+            mask = np.asarray(mask)
+            if mask.shape[:2] != (h, w):
+                mask = cv2.resize(mask.astype(np.uint8), (w, h), interpolation=cv2.INTER_NEAREST)
+            bin_mask = mask > 0
+            colour_bgr = self._mask_colour(i)
+            colour_rgb = np.array([colour_bgr[2], colour_bgr[1], colour_bgr[0]], dtype=np.float32)
+            out[bin_mask] = out[bin_mask] * (1 - alpha) + colour_rgb * alpha
+
+        out_bgr = cv2.cvtColor(np.clip(out, 0, 255).astype(np.uint8), cv2.COLOR_RGB2BGR)
+
+        # Draw labels on top of tints
+        for i, obj in enumerate(objects_3d):
+            label = str(obj.get("label", "object"))
+            mc = obj.get("mask_centroid_2d")
+            bbox = obj.get("bbox", [0, 0, 0, 0])
+            cx = int(mc[0]) if mc and len(mc) == 2 else (int(bbox[0]) + int(bbox[2])) // 2
+            cy = int(mc[1]) if mc and len(mc) == 2 else (int(bbox[1]) + int(bbox[3])) // 2
+            mask = obj.get("_sam2_mask_array")
+            area = int(np.sum(np.asarray(mask) > 0)) if mask is not None else 1000
+            self._draw_label(out_bgr, label, cx, cy, area)
+
+        cv2.imwrite(str(path), out_bgr)
 
     def _save_sam2_outputs(
         self,
@@ -2053,64 +2399,84 @@ class SceneUnderstandingPipeline:
         path_stem: str,
         image_path: str,
         timestamp: str,
+        image_rgb: np.ndarray = None,
     ) -> Dict[str, str]:
         """
         Save SAM2 outputs independently of depth-mask outputs.
         Returns relative paths from out_dir for metadata wiring.
         """
-        sam2_dir = out_dir / "sam2"
-        sam2_masks_dir = sam2_dir / "masks"
-        sam2_dir.mkdir(parents=True, exist_ok=True)
-        sam2_masks_dir.mkdir(parents=True, exist_ok=True)
+        sam2_dir = out_dir
+        # Placeholder segmentation saved before labelling; overwritten after Stage 4
+        # with the labelled version. We still record its path here for metadata.
+        return {
+            "sam2_segmentation_image_path": f"scene_graph/{path_stem}_sam2_segmentation.png",
+            "sam2_tinted_overlay_image_path": f"scene_graph/{path_stem}_sam2_tinted_overlay.png",
+        }
 
-        seg_png_path = sam2_dir / f"{path_stem}_sam2_segmentation.png"
-        self._save_sam2_segmentation_image(amg_masks, h, w, seg_png_path)
+    def _save_sam3_outputs(
+        self,
+        sam3_masks: List[Dict[str, Any]],
+        h: int,
+        w: int,
+        out_dir: Path,
+        path_stem: str,
+        image_path: str,
+        timestamp: str,
+        image_rgb: np.ndarray = None,
+    ) -> Dict[str, str]:
+        """
+        Save SAM3 mask outputs to out_dir/sam3/ — mirrors _save_sam2_outputs.
+        Returns relative paths for metadata wiring.
+        """
+        sam3_dir = out_dir / "sam3"
+        sam3_dir.mkdir(parents=True, exist_ok=True)
 
         mask_records: List[Dict[str, Any]] = []
-        for idx, amg in enumerate(amg_masks):
-            seg = amg.get("segmentation")
+        for idx, m_dict in enumerate(sam3_masks):
+            seg = m_dict.get("segmentation")
             if seg is None:
                 continue
             mask = np.asarray(seg) if not isinstance(seg, np.ndarray) else seg
             if mask.shape[:2] != (h, w):
-                mask = cv2.resize(mask.astype(np.uint8), (w, h), interpolation=cv2.INTER_NEAREST)
-            mask_uint8 = (mask > 0).astype(np.uint8) * 255
-            mask_path = sam2_masks_dir / f"{path_stem}_sam2_mask_{idx:04d}.png"
-            cv2.imwrite(str(mask_path), mask_uint8)
+                mask = cv2.resize(
+                    mask.astype(np.uint8), (w, h), interpolation=cv2.INTER_NEAREST
+                )
             mask_records.append({
                 "mask_index": idx,
-                "mask_path": f"sam2/masks/{path_stem}_sam2_mask_{idx:04d}.png",
-                "bbox_xywh": [float(v) for v in amg.get("bbox", [0, 0, 0, 0])],
-                "area": int(amg.get("area", int(np.sum(mask > 0)))),
-                "predicted_iou": float(amg.get("predicted_iou", 0.0)),
-                "stability_score": float(amg.get("stability_score", 0.0)),
+                "mask_path": None,
+                "bbox_xywh": [float(v) for v in m_dict.get("bbox", [0, 0, 0, 0])],
+                "area": int(m_dict.get("area", int(np.sum(mask > 0)))),
+                "predicted_iou": float(m_dict.get("predicted_iou", 0.0)),
+                "stability_score": float(m_dict.get("stability_score", 0.0)),
+                "label": str(m_dict.get("label", "object")),
+                "sam3_score": float(m_dict.get("gdino_conf", 0.0)),
             })
 
-        sam2_json = {
+        sam3_json = {
             "metadata": {
                 "image_path": image_path,
                 "image_stem": path_stem,
                 "timestamp": timestamp,
                 "image_size": [w, h],
-                "model": "SAM2",
-                "mode": "automatic_mask_generator",
+                "model": "SAM3",
+                "mode": "text_prompted",
             },
             "summary": {
                 "num_masks": len(mask_records),
-                "segmentation_map_image_path": f"sam2/{path_stem}_sam2_segmentation.png",
-                "masks_dir": "sam2/masks",
+                "segmentation_map_image_path": f"sam3/{path_stem}_sam3_segmentation.png",
+                "masks_dir": "sam3/masks",
             },
             "masks": mask_records,
         }
 
-        sam2_json_path = sam2_dir / f"{path_stem}_sam2_masks.json"
-        with open(sam2_json_path, "w") as f:
-            json.dump(sam2_json, f, indent=2)
+        sam3_json_path = sam3_dir / f"{path_stem}_sam3_masks.json"
+        with open(sam3_json_path, "w") as f:
+            json.dump(sam3_json, f, indent=2)
 
         return {
-            "sam2_json_path": f"sam2/{path_stem}_sam2_masks.json",
-            "sam2_segmentation_image_path": f"sam2/{path_stem}_sam2_segmentation.png",
-            "sam2_masks_dir": "sam2/masks",
+            "sam3_json_path": f"sam3/{path_stem}_sam3_masks.json",
+            "sam3_segmentation_image_path": f"sam3/{path_stem}_sam3_segmentation.png",
+            "sam3_tinted_overlay_image_path": f"sam3/{path_stem}_sam3_tinted_overlay.png",
         }
 
     def _save_depth_mask_mapping_image(
@@ -2202,12 +2568,7 @@ class SceneUnderstandingPipeline:
         
         img_bgr = _load_bgr_image(path)
 
-        # Fix 5.2: Apply lens distortion correction before any processing.
-        # Undistortion must happen first: depth estimation, SAM2 segmentation,
-        # and back-projection all assume a pinhole camera model. Uncorrected
-        # barrel/pincushion distortion causes edge objects to back-project to
-        # wrong 3D positions proportional to their distance from image center.
-        img_bgr = self._undistort_image(img_bgr)
+        img_bgr = self._undistort_image(img_bgr)  # must run before depth/segmentation (see docs/CAMERA_CALIBRATION.md)
 
         img_rgb = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
         h, w = img_bgr.shape[:2]
@@ -2222,477 +2583,725 @@ class SceneUnderstandingPipeline:
             h, w = new_h, new_w
             print(f"  Resized to {w}x{h} (max_side={max_side})")
 
-        # 1. Intrinsics (Fix 5.2: calibration file > explicit values > FOV estimate)
+        # Intrinsics: calibration file > explicit values > FOV estimate (see docs/CAMERA_CALIBRATION.md)
         K = self.fixed_intrinsics if self.fixed_intrinsics else self._estimate_intrinsics(w, h)
 
-        # 2. Depth Estimation
-        # Fix 5.1: backend.infer() now returns RAW METRIC METERS from the
-        # Depth-Anything-V2-Metric model. depth_scale_factor is 1.0 in config
-        # so metric_depth = raw_meters * 1.0 = true metric depth.
-        # The old ×10 hack is no longer applied.
-        raw_depth = self.depth_estimator.backend.infer(img_rgb)
-        depth_full = cv2.resize(raw_depth, (w, h), interpolation=cv2.INTER_NEAREST)
-        metric_depth = depth_full * self.depth_scale_factor  # 1.0 for metric models
-
-        # Save Depth
+        # Depth: compute or reuse from Run 1 when sam3_only + sam3_only_use_existing_depth
         depth_dir = out / "depth"
         depth_dir.mkdir(parents=True, exist_ok=True)
-        np.save(depth_dir / f"{path.stem}_depth_metric.npy", metric_depth)
-
-        # 3. Object-level segmentation + labelling
-        # Fix 5.3: GroundedSAM2Wrapper runs Grounding DINO for object-level bbox
-        # detection, then SAM2 prompted mode for one clean mask per object.
-        # Fix 5.4: Labels come from GDINO (if available) or Florence-2 OD on crop.
-
-        # 3b. SAM2 AMG + Depth-Mask outputs (depth map image, SAM2 seg, depth+mask mapping + JSON per mode)
-        scene_graph_dir = out / "scene_graph"
-        scene_graph_dir.mkdir(parents=True, exist_ok=True)
-        depth_mask_dir = scene_graph_dir / "depth_mask"
-        masks_dir = scene_graph_dir / "masks"
-        save_per_object_masks = getattr(self.config, "save_per_object_masks", True) if self.config else True
-        save_masked_depth_npy = getattr(self.config, "save_masked_depth_npy", False) if self.config else False
-
-        self._save_depth_map_image(metric_depth, scene_graph_dir / f"{path.stem}_depth_map.png")
-        depth_map_image_rel = f"scene_graph/{path.stem}_depth_map.png"
-        depth_map_npy_rel = f"depth/{path.stem}_depth_metric.npy"
-        depth_global_min = float(np.min(metric_depth))
-        depth_global_max = float(np.max(metric_depth))
-        depth_global_mean = float(np.mean(metric_depth))
-
-        amg_masks = self.sam2_wrapper.generate(img_rgb)
-
-        # Dual-segmentor: run SAM2 AMG alongside GroundedSAM2 to capture
-        # part-level and small-object masks that GDINO may miss.
-        # AMG masks that overlap a GDINO mask by > iou_dedup are dropped
-        # (the GDINO-prompted mask is higher quality for that object).
-        # Remaining AMG masks cover: parts, small objects, background regions.
-        if (
-            getattr(self.config, "run_both_segmentors", False)
-            and getattr(self.sam2_wrapper, "_amg_fallback", None) is not None
-        ):
-            amg_only = self.sam2_wrapper._amg_fallback.generate(img_rgb)
-            iou_dedup = float(getattr(self.config, "run_both_segmentors_iou_dedup", 0.7))
-            gdino_bins = [np.asarray(m["segmentation"]) > 0 for m in amg_masks]
-            extra = []
-            for amg_m in amg_only:
-                seg_amg = amg_m.get("segmentation")
-                if seg_amg is None:
-                    continue
-                seg_bin = np.asarray(seg_amg) > 0
-                if seg_bin.sum() == 0:
-                    continue
-                duplicate = False
-                for gbin in gdino_bins:
-                    g = gbin
-                    if g.shape != seg_bin.shape:
-                        g = cv2.resize(g.astype(np.uint8), (seg_bin.shape[1], seg_bin.shape[0]),
-                                       interpolation=cv2.INTER_NEAREST).astype(bool)
-                    inter = int(np.logical_and(seg_bin, g).sum())
-                    union = int(np.logical_or(seg_bin, g).sum())
-                    if union > 0 and inter / union >= iou_dedup:
-                        duplicate = True
-                        break
-                if not duplicate:
-                    amg_m["source_model"] = "SAM2_AMG"
-                    extra.append(amg_m)
-            n_gdino = len(amg_masks)
-            amg_masks = amg_masks + extra
-            print(f"  [DualSegmentor] GroundedSAM2={n_gdino}, AMG-extra(non-dup)={len(extra)}, total={len(amg_masks)}")
-
-        seg_map_rel = f"scene_graph/{path.stem}_sam2_segmentation.png"
-        sam2_paths = self._save_sam2_outputs(
-            amg_masks=amg_masks,
-            h=h,
-            w=w,
-            out_dir=out,
-            path_stem=path.stem,
-            image_path=str(path.resolve()),
-            timestamp=timestamp,
-        )
-        if amg_masks:
-            self._save_sam2_segmentation_image(amg_masks, h, w, scene_graph_dir / f"{path.stem}_sam2_segmentation.png")
-
-        # Build all_detections: one entry per SAM2/AMG mask — NO filtering applied.
-        # All masks are kept: small objects, background regions, part-level masks
-        # (from AMG), and object-level masks (from GroundedSAM2).
-        # graph_id format: obj_{mask_index}_GroundedSAM2 to keep object IDs stable.
-        all_detections = []
-        for i, amg in enumerate(amg_masks):
-            seg = amg.get("segmentation")
-            mask_bin = (np.asarray(seg) > 0) if seg is not None else np.zeros((h, w), dtype=bool)
-            det = self._label_mask(img_bgr, mask_bin, amg)
-            det["graph_id"] = f"obj_{i}_GroundedSAM2"
-            det["sam2_mask_index"] = int(i)
-            det["grounded_sam2_label"] = str(amg.get("label", det.get("label", "object"))).strip().lower()
-            det["grounded_sam2_confidence"] = float(amg.get("gdino_conf", amg.get("predicted_iou", 0.0)))
-            det["bbox"] = self._xywh_to_xyxy(amg.get("bbox", [0, 0, w, h]))  # SAM2 bbox, viz only
-            det["segmentor"] = str(amg.get("source_model", "GroundedSAM2"))
-            all_detections.append(det)
-
-        print(f"Stage 3: {len(all_detections)} mask-objects labelled (no filtering — all masks kept)")
-        # Free GPU memory accumulated across many GRiT inference calls
-        if torch.cuda.is_available():
-            torch.cuda.empty_cache()
-        gc.collect()
-
-
-        # Pix2SG is deferred to after Stage 4 so objects_3d entries (carrying
-        # _sam2_mask_array and mask_centroid_2d) can be passed instead of all_detections.
-
-        # A-mode mapping keeps object IDs anchored to the original SAM2 mask index.
-        # This is robust even when some masks were filtered out in Stage 3.
-        matched_A_lookup: Dict[str, Dict[str, Any]] = {}
-        for det in all_detections:
-            idx = int(det.get("sam2_mask_index", -1))
-            if 0 <= idx < len(amg_masks):
-                seg = amg_masks[idx].get("segmentation")
-                mask = (np.asarray(seg) > 0) if seg is not None else np.zeros((h, w), dtype=bool)
+        if self._sam3_only and self._sam3_only_use_existing_depth:
+            depth_npy = depth_dir / f"{path.stem}_depth_metric.npy"
+            if depth_npy.exists():
+                metric_depth = np.load(str(depth_npy)).astype(np.float32)
+                if metric_depth.shape[:2] != (h, w):
+                    metric_depth = cv2.resize(metric_depth, (w, h), interpolation=cv2.INTER_NEAREST)
+                print(f"  [SAM3-only] Reusing depth from {depth_npy}")
             else:
-                idx = -1
-                mask = np.zeros((h, w), dtype=bool)
-            matched_A_lookup[det["graph_id"]] = {
-                "detection": det,
-                "mask": mask,
-                "sam2_mask_index": idx,
-                "mask_bbox_xyxy": det["bbox"],
-            }
+                backend = getattr(self.depth_estimator, "backend", None)
+                if backend is None:
+                    raise FileNotFoundError(
+                        f"Depth file {depth_npy} not found and depth backend was already unloaded (SAM3-only mode). "
+                        "Run the pipeline without --sam3-only first to generate depth for all images, then re-run with --sam3-only --use-existing-depth."
+                    )
+                raw_depth = backend.infer(img_rgb)
+                depth_full = cv2.resize(raw_depth, (w, h), interpolation=cv2.INTER_NEAREST)
+                metric_depth = depth_full * self.depth_scale_factor
+                np.save(depth_dir / f"{path.stem}_depth_metric.npy", metric_depth)
+        else:
+            raw_depth = self.depth_estimator.backend.infer(img_rgb)  # float32 metres
+            depth_full = cv2.resize(raw_depth, (w, h), interpolation=cv2.INTER_NEAREST)
+            metric_depth = depth_full * self.depth_scale_factor  # 1.0 for metric models
+            np.save(depth_dir / f"{path.stem}_depth_metric.npy", metric_depth)
 
-        for mode in self.depth_mask_modes:
-            if mode == "A":
-                matched = [matched_A_lookup[det["graph_id"]] for det in all_detections]
-            elif mode == "B":
-                matched = self._match_mask_first(
-                    amg_masks, all_detections, iou_thresh=self.mask_iou_match_thresh
-                ) if amg_masks else []
-            else:
-                continue
-            json_objects = []
-            for i, mobj in enumerate(matched):
-                det = mobj.get("detection")
-                mask = mobj.get("mask")
-                if mask is None:
+        if self._sam3_only:
+            K_serializable = {k: float(v) for k, v in K.items()} if K else None
+            scene_graph_dir = out / "scene_graph"
+            scene_graph_dir.mkdir(parents=True, exist_ok=True)
+            save_per_object_masks = False
+
+        # 3. Object-level segmentation + labelling (see docs/SEGMENTATION.md, docs/LABELLING_AND_RELATIONS.md)
+        if not self._sam3_only:
+            scene_graph_dir = out / "scene_graph"
+            scene_graph_dir.mkdir(parents=True, exist_ok=True)
+            sam2_sg_dir = scene_graph_dir
+            depth_mask_dir = sam2_sg_dir / "depth_mask"
+            masks_dir = sam2_sg_dir / "masks"
+            save_per_object_masks = False
+            save_masked_depth_npy = getattr(self.config, "save_masked_depth_npy", False) if self.config else False
+
+            self._save_depth_map_image(metric_depth, sam2_sg_dir / f"{path.stem}_depth_map.png")
+            depth_map_image_rel = f"scene_graph/{path.stem}_depth_map.png"
+            depth_map_npy_rel = f"depth/{path.stem}_depth_metric.npy"
+            depth_global_min = float(np.min(metric_depth))
+            depth_global_max = float(np.max(metric_depth))
+            depth_global_mean = float(np.mean(metric_depth))
+
+            # RAM++ dynamic vocabulary: tag the full image, build per-image GDINO query.
+            # Load RAM++ now (before SAM2 generate) so the dynamic query is ready.
+            # Florence-2 is deferred until Stage 4 to keep VRAM free during SAM2 inference.
+            _rampp_tags_for_metadata: list = []
+            _gdino_query_used: str = self.sam2_wrapper.text_query
+            if self._rampp_enabled:
+                if self.rampp is None or not self.rampp.active:
+                    self.rampp = RAMPlusPlusWrapper(
+                        device=self.device,
+                        checkpoint_path=self._rampp_checkpoint_path,
+                        repo_path=self._rampp_repo_path,
+                        image_size=self._rampp_image_size,
+                        vit=self._rampp_vit,
+                        default_confidence=self._rampp_default_conf,
+                        max_tags=self._rampp_max_tags,
+                    )
+                if self.rampp is not None and self.rampp.active:
+                    _tag_result = self.rampp.tag_image(img_rgb)
+                    _rampp_tags_for_metadata = list(_tag_result.get("tags", []))
+                    if _rampp_tags_for_metadata:
+                        # Build GDINO query: period-separated nouns from RAM++ tags
+                        _dynamic_query = ". ".join(_rampp_tags_for_metadata) + "."
+                        self.sam2_wrapper.update_text_query(_dynamic_query)
+                        _gdino_query_used = _dynamic_query
+                        print(f"  [RAM++] Tags: {', '.join(_rampp_tags_for_metadata)}")
+                        print(f"  [RAM++] GDINO query updated ({len(_rampp_tags_for_metadata)} tags)")
+                    else:
+                        print("  [RAM++] No tags returned — using default GDINO query")
+
+            amg_masks = self.sam2_wrapper.generate(img_rgb)
+
+            if (
+                getattr(self.config, "run_both_segmentors", False)
+                and getattr(self.sam2_wrapper, "_amg_fallback", None) is not None
+            ):
+                amg_only = self.sam2_wrapper._amg_fallback.generate(img_rgb)
+                iou_dedup = float(getattr(self.config, "run_both_segmentors_iou_dedup", 0.7))
+                gdino_bins = [np.asarray(m["segmentation"]) > 0 for m in amg_masks]
+                extra = []
+                for amg_m in amg_only:
+                    seg_amg = amg_m.get("segmentation")
+                    if seg_amg is None:
+                        continue
+                    seg_bin = np.asarray(seg_amg) > 0
+                    if seg_bin.sum() == 0:
+                        continue
+                    duplicate = False
+                    for gbin in gdino_bins:
+                        g = gbin
+                        if g.shape != seg_bin.shape:
+                            g = cv2.resize(g.astype(np.uint8), (seg_bin.shape[1], seg_bin.shape[0]),
+                                           interpolation=cv2.INTER_NEAREST).astype(bool)
+                        inter = int(np.logical_and(seg_bin, g).sum())
+                        union = int(np.logical_or(seg_bin, g).sum())
+                        if union > 0 and inter / union >= iou_dedup:
+                            duplicate = True
+                            break
+                    if not duplicate:
+                        amg_m["source_model"] = "SAM2_AMG"
+                        extra.append(amg_m)
+                n_gdino = len(amg_masks)
+                amg_masks = amg_masks + extra
+                print(f"  [DualSegmentor] GroundedSAM2={n_gdino}, AMG-extra(non-dup)={len(extra)}, total={len(amg_masks)}")
+
+            seg_map_rel = f"scene_graph/{path.stem}_segmentation.png"
+            sam2_paths = self._save_sam2_outputs(
+                amg_masks=amg_masks,
+                h=h,
+                w=w,
+                out_dir=sam2_sg_dir,
+                path_stem=path.stem,
+                image_path=str(path.resolve()),
+                timestamp=timestamp,
+                image_rgb=img_rgb,
+            )
+
+            # SAM3 runs after SAM2 (sequentially) — defer to after SAM2 pipeline completes
+            sam3_masks: List[Dict[str, Any]] = []
+            sam3_paths: Dict[str, str] = {}
+
+            all_detections = []
+            for i, amg in enumerate(amg_masks):
+                seg = amg.get("segmentation")
+                mask_bin = (np.asarray(seg) > 0) if seg is not None else np.zeros((h, w), dtype=bool)
+                det = self._label_mask(img_bgr, mask_bin, amg)
+                det["graph_id"] = f"obj_{i}_GroundedSAM2"
+                det["sam2_mask_index"] = int(i)
+                det["grounded_sam2_label"] = str(amg.get("label", det.get("label", "object"))).strip().lower()
+                det["grounded_sam2_confidence"] = float(amg.get("gdino_conf", amg.get("predicted_iou", 0.0)))
+                det["bbox"] = self._xywh_to_xyxy(amg.get("bbox", [0, 0, w, h]))  # SAM2 bbox, viz only
+                det["segmentor"] = str(amg.get("source_model", "GroundedSAM2"))
+                all_detections.append(det)
+
+            print(f"Stage 3: {len(all_detections)} mask-objects labelled (no filtering — all masks kept)")
+            # Free temporary GPU cache from per-object labelling calls
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+            gc.collect()
+
+            matched_A_lookup: Dict[str, Dict[str, Any]] = {}
+            for det in all_detections:
+                idx = int(det.get("sam2_mask_index", -1))
+                if 0 <= idx < len(amg_masks):
+                    seg = amg_masks[idx].get("segmentation")
+                    mask = (np.asarray(seg) > 0) if seg is not None else np.zeros((h, w), dtype=bool)
+                else:
+                    idx = -1
+                    mask = np.zeros((h, w), dtype=bool)
+                matched_A_lookup[det["graph_id"]] = {
+                    "detection": det,
+                    "mask": mask,
+                    "sam2_mask_index": idx,
+                    "mask_bbox_xyxy": det["bbox"],
+                }
+
+            for mode in self.depth_mask_modes:
+                if mode == "A":
+                    matched = [matched_A_lookup[det["graph_id"]] for det in all_detections]
+                elif mode == "B":
+                    matched = self._match_mask_first(
+                        amg_masks, all_detections, iou_thresh=self.mask_iou_match_thresh
+                    ) if amg_masks else []
+                else:
                     continue
+                json_objects = []
+                for i, mobj in enumerate(matched):
+                    det = mobj.get("detection")
+                    mask = mobj.get("mask")
+                    if mask is None:
+                        continue
+                    depth_stats, coords_3d, centroid = self._mask_depth_stats_and_3d(
+                        metric_depth, K, mask, det, use_erosion=True)
+                    _do_erosion_cmp = bool(getattr(self.config, "depth_erosion_comparison", True)) if self.config else True
+                    if _do_erosion_cmp:
+                        depth_stats_raw, coords_3d_raw, centroid_raw = self._mask_depth_stats_and_3d(
+                            metric_depth, K, mask, det, use_erosion=False)
+                    else:
+                        depth_stats_raw, coords_3d_raw, centroid_raw = None, None, None
+                    if det:
+                        obj_id = f"obj_{i}_{det.get('source_model', 'det')}"
+                        label = det.get("label", "unknown")
+                        bbox = det.get("bbox", [])
+                        source_model = det.get("source_model", "")
+                    else:
+                        obj_id = f"obj_{i}_mask"
+                        label = "unlabeled"
+                        bbox = list(mobj.get("mask_bbox_xyxy", [0, 0, 0, 0]))
+                        source_model = ""
+                    mask_path_rel = None
+                    masked_depth_path_rel = None
+                    obj_entry = {
+                        "id": obj_id,
+                        "label": label,
+                        "bbox": bbox,
+                        "source_model": source_model,
+                        "segmentor": str(det.get("segmentor", source_model)) if det else source_model,
+                        "sam2_mask_index": mobj.get("sam2_mask_index", -1),
+                        "mask_path": mask_path_rel,
+                        "masked_depth_path": masked_depth_path_rel,
+                        # With adaptive erosion (default, more accurate for large objects)
+                        "depth_stats": depth_stats,
+                        "coordinates_3d_from_mask": coords_3d,
+                        "mask_centroid_2d": centroid,
+                        # Without erosion (raw boundary pixels included — for comparison)
+                        "depth_stats_no_erosion": depth_stats_raw,
+                        "coordinates_3d_no_erosion": coords_3d_raw,
+                        "mask_centroid_2d_no_erosion": centroid_raw,
+                    }
+                    json_objects.append(obj_entry)
+                mapping_path = sam2_sg_dir / f"{path.stem}_depth_mask_mapping_{mode}.png"
+                self._save_depth_mask_mapping_image(metric_depth, matched, mapping_path)
+                mapping_rel = f"scene_graph/{path.stem}_depth_mask_mapping_{mode}.png"
+                dm_json = self._build_depth_mask_json(
+                    image_path=str(path.resolve()),
+                    path_stem=path.stem,
+                    timestamp=timestamp,
+                    image_size=[w, h],
+                    matching_mode=mode,
+                    depth_map_path=depth_map_npy_rel,
+                    depth_map_image_path=depth_map_image_rel,
+                    depth_global_min=depth_global_min,
+                    depth_global_max=depth_global_max,
+                    depth_global_mean=depth_global_mean,
+                    segmentation_map_image_path=seg_map_rel,
+                    num_auto_masks=len(amg_masks),
+                    mapping_image_path=mapping_rel,
+                    objects=json_objects,
+                )
+
+            # 4. Integration & Projection (mask-native)
+            # Load labellers now — they were deferred to keep VRAM free during SAM2 inference.
+            self._load_labellers()
+            # Every object is built directly from a SAM2 mask — no bbox fallback exists.
+            # coordinates_3d, depth_stats, and mask_centroid_2d are all pixel-native:
+            #   z = median depth over mask foreground pixels (robust to noise)
+            #   (cx, cy) = centre-of-mass of mask pixels
+            # _sam2_mask_array is stored as a transient field for downstream Pix2SG;
+            # it is stripped before json.dump in Stage 6.
+            objects_3d = []
+
+            # Per-object depth PNGs go directly into scene_graph/
+            objects_dir = sam2_sg_dir
+
+            for i, det in enumerate(all_detections):
+                bbox = det['bbox']
+                src = det.get('source_model', 'Unknown')
+                graph_id = det.get("graph_id", f"obj_{i}_{src}")
+                confidence = round(float(det.get("conf", 0.0)), 4)
+                gdino_confidence = round(float(det.get("grounded_sam2_confidence", confidence)), 4)
+                grounded_label = str(det.get("grounded_sam2_label", det.get("label", "object"))).strip().lower()
+                bbox_int = [int(round(v)) for v in bbox[:4]]
+
+                mobj = matched_A_lookup[graph_id]  # always present — identity mapping
+                mask = mobj["mask"]
+                # With adaptive erosion (default — boundary bleed removed)
                 depth_stats, coords_3d, centroid = self._mask_depth_stats_and_3d(
-                    metric_depth, K, mask, det, use_erosion=True)
+                    metric_depth, K, mask, det, use_erosion=True
+                )
+                # Without erosion — raw boundary pixels included (comparison set)
                 _do_erosion_cmp = bool(getattr(self.config, "depth_erosion_comparison", True)) if self.config else True
                 if _do_erosion_cmp:
                     depth_stats_raw, coords_3d_raw, centroid_raw = self._mask_depth_stats_and_3d(
-                        metric_depth, K, mask, det, use_erosion=False)
+                        metric_depth, K, mask, det, use_erosion=False
+                    )
                 else:
                     depth_stats_raw, coords_3d_raw, centroid_raw = None, None, None
-                if det:
-                    obj_id = f"obj_{i}_{det.get('source_model', 'det')}"
-                    label = det.get("label", "unknown")
-                    bbox = det.get("bbox", [])
-                    source_model = det.get("source_model", "")
-                else:
-                    obj_id = f"obj_{i}_mask"
-                    label = "unlabeled"
-                    bbox = list(mobj.get("mask_bbox_xyxy", [0, 0, 0, 0]))
-                    source_model = ""
-                mask_path_rel = f"scene_graph/masks/{path.stem}_obj_{i}_mask_{mode}.png"
-                masked_depth_path_rel = f"scene_graph/masks/{path.stem}_obj_{i}_masked_depth_{mode}.npy"
-                if save_per_object_masks:
-                    masks_dir.mkdir(parents=True, exist_ok=True)
-                    mask_uint8 = (np.asarray(mask).astype(np.float32) * 255).clip(0, 255).astype(np.uint8)
-                    if mask_uint8.shape[:2] != (h, w):
-                        mask_uint8 = cv2.resize(mask_uint8, (w, h), interpolation=cv2.INTER_NEAREST)
-                    cv2.imwrite(str(masks_dir / f"{path.stem}_obj_{i}_mask_{mode}.png"), mask_uint8)
-                    if save_masked_depth_npy:
-                        mask_resized = cv2.resize(mask.astype(np.float32), (w, h), interpolation=cv2.INTER_NEAREST) if mask.shape[:2] != (h, w) else mask.astype(np.float32)
-                        masked_depth = metric_depth.astype(np.float32) * (mask_resized > 0)
-                        np.save(masks_dir / f"{path.stem}_obj_{i}_masked_depth_{mode}.npy", masked_depth)
+
+                sam2_mask_index = mobj["sam2_mask_index"]
+                mask_path_rel: Optional[str] = None
+                mask_matched = True
+
+                obj_depth_filename = None
+
                 obj_entry = {
-                    "id": obj_id,
-                    "label": label,
-                    "bbox": bbox,
-                    "source_model": source_model,
-                    "segmentor": str(det.get("segmentor", source_model)) if det else source_model,
-                    "sam2_mask_index": mobj.get("sam2_mask_index", -1),
-                    "mask_path": mask_path_rel,
-                    "masked_depth_path": masked_depth_path_rel,
-                    # With adaptive erosion (default, more accurate for large objects)
+                    "id": graph_id,
+                    "label": str(det.get("label", "object")).strip().lower(),
+                    "confidence": confidence,
+                    "conf": confidence,                  # backward compatibility
+                    "bbox": bbox_int,
+                    "segmentor": str(det.get("segmentor", src)),  # GroundedSAM2 or SAM2_AMG
+                    # --- With adaptive erosion (default, boundary-bleed removed) ---
+                    "coordinates_3d": coords_3d,
                     "depth_stats": depth_stats,
-                    "coordinates_3d_from_mask": coords_3d,
                     "mask_centroid_2d": centroid,
-                    # Without erosion (raw boundary pixels included — for comparison)
-                    "depth_stats_no_erosion": depth_stats_raw,
+                    # --- Without erosion (raw — for comparison) ---
                     "coordinates_3d_no_erosion": coords_3d_raw,
+                    "depth_stats_no_erosion": depth_stats_raw,
                     "mask_centroid_2d_no_erosion": centroid_raw,
+                    "sam2_mask_index": sam2_mask_index,  # index into amg_masks; -1 if unmatched
+                    "mask_matched": mask_matched,        # True = mask-native coords
+                    "mask_path": mask_path_rel,
+                    "depth_map_path": None,
+                    "sources": {
+                        "GroundedSAM2": {
+                            "caption": str(det.get("caption", grounded_label)),
+                            "label": grounded_label,
+                            "confidence": gdino_confidence,
+                        },
+                        "Florence2": {
+                            "label": str(det.get("florence2_label", "")),
+                            "caption": str(det.get("florence2_caption", "")),
+                        },
+                        "RAM++": {
+                            "label": str(det.get("rampp_label", "")),
+                            "caption": str(det.get("rampp_caption", "")),
+                            "tags": list(det.get("rampp_tags", [])),
+                        },
+                        "Pix2SG": {"relations": []},
+                    },
+                    "_sam2_mask_array": mask,            # TRANSIENT — stripped before JSON save
                 }
-                json_objects.append(obj_entry)
-            mapping_path = scene_graph_dir / f"{path.stem}_depth_mask_mapping_{mode}.png"
-            self._save_depth_mask_mapping_image(metric_depth, matched, mapping_path)
-            mapping_rel = f"scene_graph/{path.stem}_depth_mask_mapping_{mode}.png"
-            depth_mask_dir.mkdir(parents=True, exist_ok=True)
-            dm_json = self._build_depth_mask_json(
-                image_path=str(path.resolve()),
-                path_stem=path.stem,
-                timestamp=timestamp,
-                image_size=[w, h],
-                matching_mode=mode,
-                depth_map_path=depth_map_npy_rel,
-                depth_map_image_path=depth_map_image_rel,
-                depth_global_min=depth_global_min,
-                depth_global_max=depth_global_max,
-                depth_global_mean=depth_global_mean,
-                segmentation_map_image_path=seg_map_rel,
-                num_auto_masks=len(amg_masks),
-                mapping_image_path=mapping_rel,
-                objects=json_objects,
+                objects_3d.append(obj_entry)
+
+            # 5. Relation Matching
+            # Pix2SG runs here (after Stage 4) so objects_3d entries carry
+            # _sam2_mask_array and mask_centroid_2d, enabling mask-native spatial
+            # predicates in _build_spatial_scaffold_triplets.
+            pix2sg_out = self.pix2sg.predict(
+                img_bgr,
+                image_stem=path.stem,
+                detections=objects_3d,
+                iou_func=self._bbox_iou_xyxy,
             )
-            with open(depth_mask_dir / f"{path.stem}_depth_mask_{mode}.json", "w") as f:
-                json.dump(dm_json, f, indent=2)
-
-        # 4. Integration & Projection (mask-native)
-        # Every object is built directly from a SAM2 mask — no bbox fallback exists.
-        # coordinates_3d, depth_stats, and mask_centroid_2d are all pixel-native:
-        #   z = median depth over mask foreground pixels (robust to noise)
-        #   (cx, cy) = centre-of-mass of mask pixels
-        # _sam2_mask_array is stored as a transient field for downstream Pix2SG;
-        # it is stripped before json.dump in Stage 6.
-        objects_3d = []
-
-        # Ensure objects directory exists
-        objects_dir = scene_graph_dir / "objects"
-        objects_dir.mkdir(parents=True, exist_ok=True)
-
-        for i, det in enumerate(all_detections):
-            bbox = det['bbox']
-            src = det.get('source_model', 'Unknown')
-            graph_id = det.get("graph_id", f"obj_{i}_{src}")
-            confidence = round(float(det.get("conf", 0.0)), 4)
-            gdino_confidence = round(float(det.get("grounded_sam2_confidence", confidence)), 4)
-            grounded_label = str(det.get("grounded_sam2_label", det.get("label", "object"))).strip().lower()
-            bbox_int = [int(round(v)) for v in bbox[:4]]
-
-            mobj = matched_A_lookup[graph_id]  # always present — identity mapping
-            mask = mobj["mask"]
-            # With adaptive erosion (default — boundary bleed removed)
-            depth_stats, coords_3d, centroid = self._mask_depth_stats_and_3d(
-                metric_depth, K, mask, det, use_erosion=True
-            )
-            # Without erosion — raw boundary pixels included (comparison set)
-            _do_erosion_cmp = bool(getattr(self.config, "depth_erosion_comparison", True)) if self.config else True
-            if _do_erosion_cmp:
-                depth_stats_raw, coords_3d_raw, centroid_raw = self._mask_depth_stats_and_3d(
-                    metric_depth, K, mask, det, use_erosion=False
+            if self.pix2sg.is_active():
+                print(
+                    "Pix2SG produced "
+                    f"{len(pix2sg_out)} raw triplets (backend={self.pix2sg.status().get('backend', 'unknown')})."
                 )
             else:
-                depth_stats_raw, coords_3d_raw, centroid_raw = None, None, None
+                print(f"Pix2SG inactive: {self.pix2sg.status().get('reason', 'unknown reason')}")
 
-            sam2_mask_index = mobj["sam2_mask_index"]
-            mask_path_rel: Optional[str] = f"scene_graph/masks/{path.stem}_obj_{i}_mask_A.png"
-            mask_matched = True
-
-            # Per-object depth visualization — use mask bbox (SAM2's own bbox)
-            x1, y1, x2, y2 = (
-                max(0, int(bbox[0])), max(0, int(bbox[1])),
-                min(w, int(bbox[2])), min(h, int(bbox[3])),
+            pix2sg_stats = self._attach_relations_by_triplets(
+                objects_3d,
+                pix2sg_out,
+                "Pix2SG",
             )
-            object_depth_map = metric_depth[y1:y2, x1:x2]
-            obj_depth_filename = f"{path.stem}_obj_{i}_{src}_depth.png"
-            obj_depth_path = objects_dir / obj_depth_filename
-
-            if object_depth_map.size > 0:
-                d_min, d_max = object_depth_map.min(), object_depth_map.max()
-                if d_max - d_min > 1e-6:
-                    norm_obj_depth = ((object_depth_map - d_min) / (d_max - d_min) * 255).astype(np.uint8)
-                else:
-                    norm_obj_depth = np.zeros_like(object_depth_map, dtype=np.uint8)
-                norm_obj_depth = cv2.applyColorMap(norm_obj_depth, cv2.COLORMAP_INFERNO)
-                cv2.imwrite(str(obj_depth_path), norm_obj_depth)
-
-            obj_entry = {
-                "id": graph_id,
-                "label": str(det.get("label", "object")).strip().lower(),
-                "confidence": confidence,
-                "conf": confidence,                  # backward compatibility
-                "bbox": bbox_int,
-                "segmentor": str(det.get("segmentor", src)),  # GroundedSAM2 or SAM2_AMG
-                # --- With adaptive erosion (default, boundary-bleed removed) ---
-                "coordinates_3d": coords_3d,
-                "depth_stats": depth_stats,
-                "mask_centroid_2d": centroid,
-                # --- Without erosion (raw — for comparison) ---
-                "coordinates_3d_no_erosion": coords_3d_raw,
-                "depth_stats_no_erosion": depth_stats_raw,
-                "mask_centroid_2d_no_erosion": centroid_raw,
-                "sam2_mask_index": sam2_mask_index,  # index into amg_masks; -1 if unmatched
-                "mask_matched": mask_matched,        # True = mask-native coords
-                "mask_path": mask_path_rel,
-                "depth_map_path": f"objects/{obj_depth_filename}",
-                "sources": {
-                    "GroundedSAM2": {
-                        "caption": str(det.get("caption", grounded_label)),
-                        "label": grounded_label,
-                        "confidence": gdino_confidence,
-                    },
-                    "Pix2SG": {"relations": []},
-                },
-                "_sam2_mask_array": mask,            # TRANSIENT — stripped before JSON save
-            }
-            objects_3d.append(obj_entry)
-
-        # 5. Relation Matching
-        # Pix2SG runs here (after Stage 4) so objects_3d entries carry
-        # _sam2_mask_array and mask_centroid_2d, enabling mask-native spatial
-        # predicates in _build_spatial_scaffold_triplets.
-        pix2sg_out = self.pix2sg.predict(
-            img_bgr,
-            image_stem=path.stem,
-            detections=objects_3d,
-            iou_func=self._bbox_iou_xyxy,
-        )
-        if self.pix2sg.is_active():
             print(
-                "Pix2SG produced "
-                f"{len(pix2sg_out)} raw triplets (backend={self.pix2sg.status().get('backend', 'unknown')})."
-            )
-        else:
-            print(f"Pix2SG inactive: {self.pix2sg.status().get('reason', 'unknown reason')}")
-
-        pix2sg_stats = self._attach_relations_by_triplets(
-            objects_3d,
-            pix2sg_out,
-            "Pix2SG",
-        )
-        print(
-            "Relation attach stats: "
-            f"Pix2SG(attached={pix2sg_stats['attached']}/{pix2sg_stats['input_triplets']}, "
-            f"sub_id={pix2sg_stats['subject_id_matched']}, sub_label={pix2sg_stats['subject_label_matched']})"
-        )
-
-        # SGTR — semantic relations (OIv6 30 predicates).
-        if (
-            self.require_any_relation_source
-            and len(all_detections) >= 2
-            and pix2sg_stats["input_triplets"] == 0
-        ):
-            relation_status = self._collect_relation_source_status()
-            details = "; ".join(
-                f"{name}: active={status.get('active')} backend={status.get('backend')} reason={status.get('reason', '')}"
-                for name, status in relation_status.items()
-            )
-            raise RuntimeError(
-                "No relation triplets were produced by Pix2SG despite multiple detections. "
-                f"Diagnostics: {details}"
+                "Relation attach stats: "
+                f"Pix2SG(attached={pix2sg_stats['attached']}/{pix2sg_stats['input_triplets']}, "
+                f"sub_id={pix2sg_stats['subject_id_matched']}, sub_label={pix2sg_stats['subject_label_matched']})"
             )
 
-        # 6. Save Combined Scene Graph
-        scene_graph_dir = out / "scene_graph"
-        scene_graph_dir.mkdir(parents=True, exist_ok=True)
+            # SGTR — semantic relations (OIv6 30 predicates).
+            if (
+                self.require_any_relation_source
+                and len(all_detections) >= 2
+                and pix2sg_stats["input_triplets"] == 0
+            ):
+                relation_status = self._collect_relation_source_status()
+                details = "; ".join(
+                    f"{name}: active={status.get('active')} backend={status.get('backend')} reason={status.get('reason', '')}"
+                    for name, status in relation_status.items()
+                )
+                raise RuntimeError(
+                    "No relation triplets were produced by Pix2SG despite multiple detections. "
+                    f"Diagnostics: {details}"
+                )
 
-        # Convert Intrinsics values to native python types for JSON serialization
-        if K:
-            K_serializable = {k: float(v) for k, v in K.items()}
-        else:
-            K_serializable = None
+            # Unload labellers — relations are done, SAM3 loads next, VRAM needed.
+            _f2_was_active = self.florence2 is not None and self.florence2.active
+            _rampp_was_active = self.rampp is not None and self.rampp.active
+            self._unload_labellers()
 
-        models_used = ["GroundedSAM2", "Florence-2"]
-        if self.grit.predictor is not None:
-            models_used.append("GRiT")  # fallback active
-        if self.pix2sg.is_active():
-            models_used.append("Pix2SG")
-
-        metadata = {
-            "timestamp": timestamp,
-            "intrinsics": K_serializable,
-            "models": models_used,
-            "relation_sources": self._collect_relation_source_status(),
-            "relation_debug": {
-                "pix2sg": pix2sg_stats,
-                "mask_iou_match_thresh": float(self.mask_iou_match_thresh),
-                "pix2sg_mask_overlap_thresh": float(self.pix2sg_mask_overlap_thresh),
-                "pix2sg_depth_near_threshold": float(self.pix2sg_depth_near_threshold),
-                "raw_triplets": {
-                    "pix2sg": int(len(pix2sg_out)),
-                },
-                "num_detected_objects": int(len(all_detections)),
-                "num_mask_matched": int(sum(1 for o in objects_3d if o.get("mask_matched"))),
-            },
-        }
-        if "A" in self.depth_mask_modes:
-            metadata["depth_mask_json_A"] = f"scene_graph/depth_mask/{path.stem}_depth_mask_A.json"
-        if "B" in self.depth_mask_modes:
-            metadata["depth_mask_json_B"] = f"scene_graph/depth_mask/{path.stem}_depth_mask_B.json"
-        metadata["sam2_json"] = sam2_paths["sam2_json_path"]
-        metadata["sam2_segmentation_image"] = sam2_paths["sam2_segmentation_image_path"]
-        metadata["sam2_masks_dir"] = sam2_paths["sam2_masks_dir"]
-        # Strip transient numpy mask arrays before JSON serialization.
-        # _sam2_mask_array is not JSON-serializable; stripping here is safe because
-        # Pix2SG spatial predicates have already consumed it above.
-        for obj in objects_3d:
-            obj.pop("_sam2_mask_array", None)
-        json_output = {"metadata": metadata, "objects": objects_3d}
-        with open(scene_graph_dir / f"{path.stem}_scene.json", 'w') as f:
-            json.dump(json_output, f, indent=2)
-
-        # 7. Visualization
-        viz = img_bgr.copy()
-        for obj in objects_3d:
-            x, y, z = obj['coordinates_3d'].values()
-            bbox = obj['bbox']
-            # All objects are GRiT-labelled mask-native — uniform color
-            color = (0, 255, 0)
-
-            label = f"{obj['label']} [M]"
-            thickness = 2
-            cv2.rectangle(viz, (int(bbox[0]), int(bbox[1])), (int(bbox[2]), int(bbox[3])), color, thickness)
-            cv2.putText(viz, label, (int(bbox[0]), int(bbox[1])-5), cv2.FONT_HERSHEY_SIMPLEX, 0.4, color, 1)
-
-            # Draw mask centroid dot for matched objects — shows the actual 3D anchor point
-            mc = obj.get("mask_centroid_2d")
-            if mc and len(mc) == 2 and obj.get("mask_matched"):
-                cv2.circle(viz, (int(mc[0]), int(mc[1])), 3, color, -1)
-
-            # Relation line anchor: prefer mask centroid over bbox center
-            if mc and len(mc) == 2:
-                cx_a, cy_a = int(mc[0]), int(mc[1])
+            # 6. Save SAM2 scene graph JSON (into scene_graph/sam2/)
+            if K:
+                K_serializable = {k: float(v) for k, v in K.items()}
             else:
-                cx_a, cy_a = (int(bbox[0]) + int(bbox[2])) // 2, (int(bbox[1]) + int(bbox[3])) // 2
+                K_serializable = None
 
-            # Draw Relations
-            for source in ["Pix2SG", "SGTR"]:
-                if source in obj["sources"]:
-                    for rel in obj["sources"][source]["relations"]:
-                        target_id = rel['target_id']
-                        # Skip external targets — no location to draw to
-                        if isinstance(target_id, str) and target_id.startswith("external_"):
-                            continue
-                        target = next((o for o in objects_3d if o['id'] == target_id), None)
-                        if target:
-                            bbox_b = target['bbox']
-                            mc_b = target.get("mask_centroid_2d")
-                            if mc_b and len(mc_b) == 2:
-                                cx_b, cy_b = int(mc_b[0]), int(mc_b[1])
-                            else:
-                                cx_b = (int(bbox_b[0]) + int(bbox_b[2])) // 2
-                                cy_b = (int(bbox_b[1]) + int(bbox_b[3])) // 2
-                            line_color = (0, 255, 255)
-                            cv2.line(viz, (int(cx_a), int(cy_a)), (int(cx_b), int(cy_b)), line_color, 1)
-                            mx = (int(cx_a) + int(cx_b)) // 2
-                            my = (int(cy_a) + int(cy_b)) // 2
-                            cv2.putText(viz, rel['predicate'], (int(mx), int(my)), cv2.FONT_HERSHEY_SIMPLEX, 0.4, line_color, 1)
+            models_used_sam2 = ["GroundedSAM2"]
+            if _f2_was_active:
+                models_used_sam2.append("Florence-2")
+            if _rampp_was_active:
+                models_used_sam2.append("RAM++")
+            if self.pix2sg.is_active():
+                models_used_sam2.append("Pix2SG")
 
-        cv2.imwrite(str(scene_graph_dir / f"{path.stem}_3d_viz.png"), viz)
+            sam2_metadata = {
+                "timestamp": timestamp,
+                "segmentor": "SAM2",
+                "intrinsics": K_serializable,
+                "models": models_used_sam2,
+                "rampp_tags": _rampp_tags_for_metadata,
+                "gdino_query_used": _gdino_query_used,
+                "relation_sources": self._collect_relation_source_status(),
+                "relation_debug": {
+                    "pix2sg": pix2sg_stats,
+                    "mask_iou_match_thresh": float(self.mask_iou_match_thresh),
+                    "pix2sg_mask_overlap_thresh": float(self.pix2sg_mask_overlap_thresh),
+                    "pix2sg_depth_near_threshold": float(self.pix2sg_depth_near_threshold),
+                    "raw_triplets": {"pix2sg": int(len(pix2sg_out))},
+                    "num_detected_objects": int(len(all_detections)),
+                    "num_mask_matched": int(sum(1 for o in objects_3d if o.get("mask_matched"))),
+                },
+                "depth_map": depth_map_image_rel,
+                "segmentation_image": seg_map_rel,
+            }
+            sam2_metadata["sam2_segmentation_image"] = sam2_paths["sam2_segmentation_image_path"]
+            sam2_metadata["sam2_tinted_overlay_image"] = sam2_paths["sam2_tinted_overlay_image_path"]
+
+            # Save labelled visualizations while _sam2_mask_array is still present
+            self._save_labelled_segmentation(
+                objects_3d,
+                sam2_sg_dir / f"{path.stem}_sam2_segmentation.png",
+            )
+            self._save_labelled_tinted_overlay(
+                objects_3d,
+                img_rgb,
+                sam2_sg_dir / f"{path.stem}_sam2_tinted_overlay.png",
+            )
+
+            for obj in objects_3d:
+                obj.pop("_sam2_mask_array", None)
+            sam2_scene_output = {"metadata": sam2_metadata, "objects": objects_3d}
+            with open(sam2_sg_dir / f"{path.stem}_scene.json", "w") as f:
+                json.dump(sam2_scene_output, f, indent=2)
+            print(f"SAM2 scene graph saved: scene_graph/{path.stem}_scene.json")
+
+            # 7. SAM2 Visualization (into scene_graph/sam2/)
+            viz_sam2 = img_bgr.copy()
+            for obj in objects_3d:
+                bbox = obj["bbox"]
+                color = (0, 255, 0)
+                label = f"{obj['label']} [M]"
+                cv2.rectangle(viz_sam2, (int(bbox[0]), int(bbox[1])), (int(bbox[2]), int(bbox[3])), color, 2)
+                cv2.putText(viz_sam2, label, (int(bbox[0]), int(bbox[1]) - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.4, color, 1)
+                mc = obj.get("mask_centroid_2d")
+                if mc and len(mc) == 2 and obj.get("mask_matched"):
+                    cv2.circle(viz_sam2, (int(mc[0]), int(mc[1])), 3, color, -1)
+                cx_a = int(mc[0]) if mc and len(mc) == 2 else (int(bbox[0]) + int(bbox[2])) // 2
+                cy_a = int(mc[1]) if mc and len(mc) == 2 else (int(bbox[1]) + int(bbox[3])) // 2
+                for source in ["Pix2SG", "SGTR"]:
+                    if source in obj.get("sources", {}):
+                        for rel in obj["sources"][source].get("relations", []):
+                            target_id = rel["target_id"]
+                            if isinstance(target_id, str) and target_id.startswith("external_"):
+                                continue
+                            target = next((o for o in objects_3d if o["id"] == target_id), None)
+                            if target:
+                                bbox_b = target["bbox"]
+                                mc_b = target.get("mask_centroid_2d")
+                                cx_b = int(mc_b[0]) if mc_b and len(mc_b) == 2 else (int(bbox_b[0]) + int(bbox_b[2])) // 2
+                                cy_b = int(mc_b[1]) if mc_b and len(mc_b) == 2 else (int(bbox_b[1]) + int(bbox_b[3])) // 2
+                                cv2.line(viz_sam2, (cx_a, cy_a), (cx_b, cy_b), (0, 255, 255), 1)
+                                cv2.putText(viz_sam2, rel["predicate"],
+                                            ((cx_a + cx_b) // 2, (cy_a + cy_b) // 2),
+                                            cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 255), 1)
+            cv2.imwrite(str(sam2_sg_dir / f"{path.stem}_3d_viz.png"), viz_sam2)
+
+        # 8. Sequential SAM3 pass — loads weights here (after SAM2 finishes),
+        #    runs inference, then immediately unloads to free VRAM.
+        objects_3d_sam3: List[Dict[str, Any]] = []
+        if self._run_sam3:
+            if not self._sam3_only:
+                print("="*60)
+                print("Stage SAM3: Freeing SAM2 inference VRAM before SAM3 load...")
+                del amg_masks, all_detections
+            # Always unload depth backend before SAM3 loads — depth inference is already done by this point.
+            # Frees ~1.8 GB VRAM on T4; without this SAM3 (3.45 GB) + Florence-2 (2.3 GB) cause OOM.
+            if getattr(self.depth_estimator, "backend", None) is not None:
+                print("Stage SAM3: Unloading depth backend to free VRAM before SAM3 load...")
+                self.depth_estimator.unload_backend()
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+            gc.collect()
+
+            # Lazy-load SAM3 weights now (after SAM2 inference tensors freed)
+            if self.sam3_wrapper is None or not self.sam3_wrapper.active:
+                print("Stage SAM3: Loading SAM3 weights...")
+                self.sam3_wrapper = SAM3Wrapper(
+                    device=self.device,
+                    text_query=self._sam3_text_query,
+                    confidence_threshold=self._sam3_conf,
+                    checkpoint_path=self._sam3_ckpt,
+                    load_from_hf=self._sam3_hf,
+                )
+
+            sam3_masks = []
+            if self.sam3_wrapper.active:
+                print("Stage SAM3: Running SAM3 segmentation pass (sequential)...")
+                sam3_masks = self.sam3_wrapper.generate(img_rgb)
+                # Unload immediately after inference to reclaim ~3.5GB VRAM
+                self.sam3_wrapper.unload()
+                self.sam3_wrapper = None
+
+            sam3_paths = self._save_sam3_outputs(
+                sam3_masks=sam3_masks,
+                h=h,
+                w=w,
+                out_dir=out,
+                path_stem=path.stem,
+                image_path=str(path.resolve()),
+                timestamp=timestamp,
+                image_rgb=img_rgb,
+            ) if sam3_masks else {}
+
+            if sam3_masks:
+                # SAM3 sub-directory mirrors SAM2 structure
+                sam3_sg_dir = scene_graph_dir / "sam3"
+                sam3_sg_dir.mkdir(parents=True, exist_ok=True)
+                sam3_objects_dir = sam3_sg_dir / "objects"
+                sam3_objects_dir.mkdir(parents=True, exist_ok=True)
+                sam3_masks_out_dir = sam3_sg_dir / "masks"
+                sam3_masks_out_dir.mkdir(parents=True, exist_ok=True)
+
+                print(f"Stage SAM3: building 3D object entries for {len(sam3_masks)} SAM3 masks...")
+                _do_erosion_cmp = bool(getattr(self.config, "depth_erosion_comparison", True)) if self.config else True
+                self._load_labellers()
+
+                for i, sam3_m in enumerate(sam3_masks):
+                    seg = sam3_m.get("segmentation")
+                    mask = (np.asarray(seg) > 0) if seg is not None else np.zeros((h, w), dtype=bool)
+                    if mask.shape[:2] != (h, w):
+                        mask = cv2.resize(mask.astype(np.uint8), (w, h),
+                                          interpolation=cv2.INTER_NEAREST).astype(bool)
+
+                    det_s3 = self._label_mask(img_bgr, mask, sam3_m)
+                    det_s3["graph_id"] = f"sam3_obj_{i}"
+                    det_s3["sam2_mask_index"] = int(i)
+                    det_s3["grounded_sam2_label"] = str(sam3_m.get("label", det_s3.get("label", "object"))).strip().lower()
+                    det_s3["grounded_sam2_confidence"] = float(sam3_m.get("gdino_conf", sam3_m.get("predicted_iou", 0.0)))
+                    det_s3["bbox"] = self._xywh_to_xyxy(sam3_m.get("bbox", [0, 0, w, h]))
+                    det_s3["segmentor"] = "SAM3"
+
+                    graph_id_s3 = det_s3["graph_id"]
+                    confidence_s3 = round(float(det_s3.get("conf", 0.0)), 4)
+                    gdino_conf_s3 = round(float(det_s3.get("grounded_sam2_confidence", confidence_s3)), 4)
+                    grounded_label_s3 = det_s3.get("grounded_sam2_label", det_s3.get("label", "object"))
+                    bbox_s3 = [int(round(v)) for v in det_s3["bbox"][:4]]
+
+                    depth_stats_s3, coords_3d_s3, centroid_s3 = self._mask_depth_stats_and_3d(
+                        metric_depth, K, mask, det_s3, use_erosion=True)
+                    if _do_erosion_cmp:
+                        depth_stats_raw_s3, coords_3d_raw_s3, centroid_raw_s3 = self._mask_depth_stats_and_3d(
+                            metric_depth, K, mask, det_s3, use_erosion=False)
+                    else:
+                        depth_stats_raw_s3, coords_3d_raw_s3, centroid_raw_s3 = None, None, None
+
+                    # Per-object mask PNG
+                    mask_path_rel_s3 = None
+
+                    # Per-object depth visualization
+                    x1s = max(0, bbox_s3[0]); y1s = max(0, bbox_s3[1])
+                    x2s = min(w, bbox_s3[2]); y2s = min(h, bbox_s3[3])
+                    obj_depth_fn_s3 = f"{path.stem}_sam3_obj_{i}_depth.png"
+                    object_depth_s3 = metric_depth[y1s:y2s, x1s:x2s]
+                    if object_depth_s3.size > 0:
+                        dm, dx = object_depth_s3.min(), object_depth_s3.max()
+                        nd = ((object_depth_s3 - dm) / (dx - dm) * 255).astype(np.uint8) if dx - dm > 1e-6 else np.zeros_like(object_depth_s3, dtype=np.uint8)
+                        cv2.imwrite(str(sam3_objects_dir / obj_depth_fn_s3),
+                                    cv2.applyColorMap(nd, cv2.COLORMAP_INFERNO))
+
+                    obj_entry_s3 = {
+                        "id": graph_id_s3,
+                        "label": str(det_s3.get("label", "object")).strip().lower(),
+                        "confidence": confidence_s3,
+                        "conf": confidence_s3,
+                        "bbox": bbox_s3,
+                        "segmentor": "SAM3",
+                        "coordinates_3d": coords_3d_s3,
+                        "depth_stats": depth_stats_s3,
+                        "mask_centroid_2d": centroid_s3,
+                        "coordinates_3d_no_erosion": coords_3d_raw_s3,
+                        "depth_stats_no_erosion": depth_stats_raw_s3,
+                        "mask_centroid_2d_no_erosion": centroid_raw_s3,
+                        "sam3_mask_index": i,
+                        "mask_matched": True,
+                        "mask_path": mask_path_rel_s3,
+                        "depth_map_path": f"scene_graph/sam3/objects/{obj_depth_fn_s3}",
+                        "sources": {
+                            "SAM3": {
+                                "caption": str(det_s3.get("caption", grounded_label_s3)),
+                                "label": grounded_label_s3,
+                                "confidence": gdino_conf_s3,
+                            },
+                            "Pix2SG": {"relations": []},
+                        },
+                        "_sam2_mask_array": mask,   # TRANSIENT
+                    }
+                    objects_3d_sam3.append(obj_entry_s3)
+
+                # Depth map copy into sam3 dir (same depth, different segmentor)
+                self._save_depth_map_image(metric_depth, sam3_sg_dir / f"{path.stem}_depth_map.png")
+
+                # Pix2SG relations on SAM3 objects
+                if objects_3d_sam3:
+                    pix2sg_out_s3 = self.pix2sg.predict(
+                        img_bgr,
+                        image_stem=path.stem,
+                        detections=objects_3d_sam3,
+                        iou_func=self._bbox_iou_xyxy,
+                    )
+                    pix2sg_stats_sam3 = self._attach_relations_by_triplets(
+                        objects_3d_sam3, pix2sg_out_s3, "Pix2SG"
+                    )
+                    print(
+                        f"SAM3 Pix2SG relations: attached={pix2sg_stats_sam3['attached']}/"
+                        f"{pix2sg_stats_sam3['input_triplets']}"
+                    )
+
+                self._unload_labellers()
+
+                # SAM3 labelled visualizations (before mask strip)
+                self._save_labelled_segmentation(
+                    objects_3d_sam3,
+                    sam3_sg_dir / f"{path.stem}_sam3_segmentation.png",
+                )
+                self._save_labelled_tinted_overlay(
+                    objects_3d_sam3,
+                    img_rgb,
+                    sam3_sg_dir / f"{path.stem}_sam3_tinted_overlay.png",
+                )
+
+                # SAM3 3d_viz (mirroring SAM2 viz style, orange boxes to distinguish)
+                viz_sam3 = img_bgr.copy()
+                for obj in objects_3d_sam3:
+                    obj.pop("_sam2_mask_array", None)
+                    bbox = obj["bbox"]
+                    color = (255, 128, 0)   # orange-ish in BGR — distinct from SAM2 green
+                    label = f"{obj['label']} [S3]"
+                    cv2.rectangle(viz_sam3, (int(bbox[0]), int(bbox[1])), (int(bbox[2]), int(bbox[3])), color, 2)
+                    cv2.putText(viz_sam3, label, (int(bbox[0]), int(bbox[1]) - 5),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.4, color, 1)
+                    mc = obj.get("mask_centroid_2d")
+                    if mc and len(mc) == 2 and obj.get("mask_matched"):
+                        cv2.circle(viz_sam3, (int(mc[0]), int(mc[1])), 3, color, -1)
+                    cx_a = int(mc[0]) if mc and len(mc) == 2 else (int(bbox[0]) + int(bbox[2])) // 2
+                    cy_a = int(mc[1]) if mc and len(mc) == 2 else (int(bbox[1]) + int(bbox[3])) // 2
+                    for source in ["Pix2SG"]:
+                        if source in obj.get("sources", {}):
+                            for rel in obj["sources"][source].get("relations", []):
+                                target_id = rel["target_id"]
+                                if isinstance(target_id, str) and target_id.startswith("external_"):
+                                    continue
+                                target = next((o for o in objects_3d_sam3 if o["id"] == target_id), None)
+                                if target:
+                                    bbox_b = target["bbox"]
+                                    mc_b = target.get("mask_centroid_2d")
+                                    cx_b = int(mc_b[0]) if mc_b and len(mc_b) == 2 else (int(bbox_b[0]) + int(bbox_b[2])) // 2
+                                    cy_b = int(mc_b[1]) if mc_b and len(mc_b) == 2 else (int(bbox_b[1]) + int(bbox_b[3])) // 2
+                                    cv2.line(viz_sam3, (cx_a, cy_a), (cx_b, cy_b), (0, 200, 255), 1)
+                                    cv2.putText(viz_sam3, rel["predicate"],
+                                                ((cx_a + cx_b) // 2, (cy_a + cy_b) // 2),
+                                                cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 200, 255), 1)
+                cv2.imwrite(str(sam3_sg_dir / f"{path.stem}_3d_viz.png"), viz_sam3)
+
+                # SAM3 scene JSON
+                sam3_scene_output = {
+                    "metadata": {
+                        "timestamp": timestamp,
+                        "segmentor": "SAM3",
+                        "intrinsics": K_serializable,
+                        "models": ["SAM3", "Florence-2", "Pix2SG"],
+                        "depth_map": f"scene_graph/sam3/{path.stem}_depth_map.png",
+                        "segmentation_image": f"scene_graph/sam3/{path.stem}_sam3_segmentation.png",
+                        "sam3_raw_json": sam3_paths.get("sam3_json_path", ""),
+                        "num_objects": len(objects_3d_sam3),
+                    },
+                    "objects": objects_3d_sam3,
+                }
+                with open(sam3_sg_dir / f"{path.stem}_scene.json", "w") as f:
+                    json.dump(sam3_scene_output, f, indent=2)
+                print(f"SAM3 scene graph saved: scene_graph/sam3/{path.stem}_scene.json")
+
         print(f"Results saved to {out}")
 
         # Release large arrays so memory is available before the next image
-        del img_bgr, img_rgb, metric_depth, amg_masks, all_detections
+        if not self._sam3_only:
+            try:
+                del amg_masks, all_detections
+            except NameError:
+                pass
+        del img_bgr, img_rgb, metric_depth
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
         gc.collect()
 
 if __name__ == "__main__":
+    import argparse
     from config import PreprocessConfig
-    
+
+    parser = argparse.ArgumentParser(description="Run scene understanding pipeline (SAM2 and/or SAM3).")
+    parser.add_argument("--input_dir", type=str, default="images", help="Directory containing input images")
+    parser.add_argument("--output_dir", type=str, default="output_scene", help="Output directory for scene graphs")
+    parser.add_argument("--sam3-only", action="store_true", help="Run only depth + SAM3 (no SAM2). Use for Run 2 when comparing SAM2 vs SAM3.")
+    parser.add_argument("--use-existing-depth", action="store_true", help="When --sam3-only, load depth from output_dir/depth/ when present (from Run 1).")
+    parser.add_argument("--run-both", action="store_true", help="Run SAM2 and SAM3 in one process (requires ~16GB+ VRAM). Default is SAM2-only to avoid OOM.")
+    args = parser.parse_args()
+
     print("Testing pipeline initialization...")
     cfg = PreprocessConfig()
-    images_dir = Path("images")
-    output_dir = "output_scene"
+    cfg.sam3_only = args.sam3_only
+    cfg.sam3_only_use_existing_depth = args.use_existing_depth
+    # Default: SAM2-only so VM does not OOM when loading SAM3 after SAM2. Use --sam3-only for Run 2, or --run-both if you have enough VRAM.
+    if not cfg.sam3_only:
+        cfg.run_sam3 = args.run_both
+    if cfg.sam3_only:
+        print("Mode: SAM3-only (depth + SAM3). Run 1 first without --sam3-only to get SAM2 results.")
+    elif not cfg.run_sam3:
+        print("Mode: SAM2-only (depth + SAM2). Run again with --sam3-only [--use-existing-depth] to get SAM3 results.")
+    else:
+        print("Mode: SAM2 + SAM3 in one process (--run-both). Requires sufficient VRAM.")
+    images_dir = Path(args.input_dir)
+    output_dir = args.output_dir
     supported_exts = {".png", ".jpg", ".jpeg", ".bmp", ".tiff", ".tif", ".webp", ".heic", ".heif"}
-    
+
     try:
         if not images_dir.exists() or not images_dir.is_dir():
             raise FileNotFoundError(f"Images directory not found: {images_dir.resolve()}")
@@ -2716,7 +3325,7 @@ if __name__ == "__main__":
         for img_path in image_paths:
             print(f"Processing image: {img_path.name}")
             try:
-                pipeline.process_image(str(img_path), output_dir)
+                pipeline.process_image(str(img_path), str(output_dir))
             except ValueError as e:
                 print(f"Skipping {img_path.name}: {e}")
             
