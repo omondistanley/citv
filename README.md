@@ -73,6 +73,31 @@ Input image
               {stem}_scene.json
 ```
 
+## Setup
+
+### Requirements
+
+- Python 3.9–3.11
+- CUDA-capable GPU (≥ 8 GB VRAM recommended)
+- `nvcc` on PATH (`sudo apt install nvidia-cuda-toolkit`)
+- ~20 GB free disk space
+
+### One-shot install
+
+```bash
+git clone https://github.com/omondistanley/citv.git
+cd citv
+bash setup.sh
+```
+
+### Pipeline quick test
+
+```bash
+python scene_understanding.py --input_dir images --output_dir output_scene
+```
+
+Place image(s) in `images/` and inspect `output_scene/<stem>_scene.json`.
+
 ## Output Format
 
 Each image produces `{stem}_scene.json`:
