@@ -27,7 +27,7 @@ Input image
 ┌──────────────────────────────────────────────────────────────┐
 │  Stage 1  Camera intrinsics                                  │
 │           Priority: calibration file > explicit fx/fy > FOV  │
-│           FOV fallback: fx = W / (2·tan(FOV·π/360))         │
+│           FOV fallback: fx = W / (2·tan(FOV·π/360))          │
 └────────────────────────┬─────────────────────────────────────┘
                          │
                          ▼
@@ -42,7 +42,7 @@ Input image
 │  Stage 3  Instance segmentation (dual-segmentor)             │
 │           GroundingDINO → SAM2 per-bbox  (object-level)      │
 │           SAM2 AMG grid-based            (part/small-object) │
-│           IoU deduplication (threshold 0.7) → merged masks  │
+│           IoU deduplication (threshold 0.7) → merged masks   │
 └────────────────────────┬─────────────────────────────────────┘
                          │
                          ▼
