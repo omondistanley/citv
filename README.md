@@ -424,17 +424,3 @@ See [`NOTES.md`](NOTES.md) for in-depth documentation of every algorithm, formul
 }
 ```
 
----
-
-## License
-
-MIT — see [LICENSE](LICENSE) for details.
-
-Third-party models retain their original licenses:
-- SAM2: Apache 2.0
-- GroundingDINO: Apache 2.0
-- Florence-2: MIT
-- GRiT: Apache 2.0
-- Depth Anything V2: Apache 2.0
-- CLIP: MIT
-- YOLOv8: AGPL-3.0
