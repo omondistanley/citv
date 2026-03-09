@@ -8,16 +8,13 @@
 #
 # What this does (in order):
 #   0. Disk-space check
-#   1. Clone GRiT and SAM2 repos (if not already present)
+#   1. Clone SAM2 repo (if not already present)
 #   2. Download SAM2 checkpoint
-#   3. Download GRiT model weights
-#   4. Install PyTorch with the correct CUDA version
-#   5. Install root Python dependencies (requirements.txt + extras)
-#   6. Build detectron2 from GRiT/third_party/CenterNet2
-#   7. Install GRiT Python deps (excluding conflicting pins)
-#   8. Build SAM2 _C CUDA extension
-#   9. Pre-download all HuggingFace models (Depth Anything V2 ×2, Florence-2,
-#      GroundingDINO, CLIP, YOLOv8) so the first pipeline run is instant.
+#   3. Install PyTorch with the correct CUDA version
+#   4. Install root Python dependencies (requirements.txt + extras)
+#   5. Build SAM2 _C CUDA extension
+#   6. Pre-download all HuggingFace models (Depth Anything V2 ×2, Florence-2,
+#      GroundingDINO, CLIP) so the first pipeline run is instant.
 #
 # Requirements:
 #   - Python 3.9–3.11
@@ -48,16 +45,9 @@ if [ -n "$FREE_KB" ] && [ "$FREE_KB" -lt 20000000 ]; then
 fi
 
 # -----------------------------------------------------------------------------
-# 1. Clone third-party repos
+# 1. Clone third-party repo
 # -----------------------------------------------------------------------------
-echo "--- 1. Third-party repos ---"
-
-if [ -d "GRiT/.git" ]; then
-  echo "  GRiT already present; skipping clone."
-else
-  echo "  Cloning GRiT..."
-  git clone https://github.com/JialianW/GRiT.git
-fi
+echo "--- 1. Third-party repo ---"
 
 if [ -d "sam2/.git" ]; then
   echo "  SAM2 already present; skipping clone."
@@ -83,27 +73,10 @@ else
 fi
 
 # -----------------------------------------------------------------------------
-# 3. GRiT model weights
+# 3. PyTorch — install with matching CUDA version
 # -----------------------------------------------------------------------------
 echo ""
-echo "--- 3. GRiT model weights ---"
-GRIT_CKPT="GRiT/models/grit_b_densecap_objectdet.pth"
-if [ -f "$GRIT_CKPT" ]; then
-  echo "  GRiT checkpoint already present: $GRIT_CKPT"
-else
-  mkdir -p GRiT/models
-  echo "  Downloading grit_b_densecap_objectdet.pth (~900 MB)..."
-  # GRiT model hosted on HuggingFace
-  wget -q --show-progress -O "$GRIT_CKPT" \
-    "https://huggingface.co/xinyu1205/GRiT/resolve/main/grit_b_densecap_objectdet.pth"
-  echo "  Downloaded: $GRIT_CKPT"
-fi
-
-# -----------------------------------------------------------------------------
-# 4. PyTorch — install with matching CUDA version
-# -----------------------------------------------------------------------------
-echo ""
-echo "--- 4. PyTorch ---"
+echo "--- 3. PyTorch ---"
 
 # Detect system CUDA from nvcc
 NVCC_VER=""
@@ -130,66 +103,27 @@ else
 fi
 
 # -----------------------------------------------------------------------------
-# 5. Root Python dependencies
+# 4. Root Python dependencies
 # -----------------------------------------------------------------------------
 echo ""
-echo "--- 5. Root Python dependencies (requirements.txt) ---"
+echo "--- 4. Root Python dependencies (requirements.txt) ---"
 $PIP_INSTALL -r requirements.txt
 
 # Extra runtime deps not in requirements.txt
-echo "  Installing extra runtime deps (ultralytics, scipy, matplotlib, safetensors, huggingface_hub)..."
+echo "  Installing extra runtime deps (scipy, matplotlib, safetensors, huggingface_hub)..."
 $PIP_INSTALL \
-  "ultralytics>=8.0.0" \
   "scipy" \
   "matplotlib" \
   "safetensors" \
   "huggingface_hub>=0.22.0"
 
 # -----------------------------------------------------------------------------
-# 6. CenterNet2 / detectron2 (must compile against system nvcc)
-# -----------------------------------------------------------------------------
-echo ""
-echo "--- 6. CenterNet2 (detectron2) ---"
-if python -c "import detectron2" 2>/dev/null; then
-  echo "  detectron2 already installed; skipping."
-else
-  # Verify CUDA version match before building
-  if command -v nvcc &>/dev/null && python -c "import torch" 2>/dev/null; then
-    SYS_CUDA="${NVCC_VER:-$(nvcc --version 2>/dev/null | grep -oE 'release [0-9]+\.[0-9]+' | head -1 | awk '{print $2}')}"
-    TORCH_CUDA=$(python -c "import torch; print(torch.version.cuda or '')" 2>/dev/null)
-    if [[ "$SYS_CUDA" == 11.* ]] && [[ "$TORCH_CUDA" == 12.* ]]; then
-      echo "  CUDA mismatch (system $SYS_CUDA vs PyTorch $TORCH_CUDA). Reinstalling PyTorch for CUDA 11.8..."
-      pip uninstall -y torch torchvision 2>/dev/null || true
-      $PIP_INSTALL torch torchvision --index-url https://download.pytorch.org/whl/cu118
-    fi
-  fi
-  echo "  Building detectron2 from GRiT/third_party/CenterNet2 (takes 5–15 min)..."
-  $PIP_INSTALL -e "./GRiT/third_party/CenterNet2"
-fi
-
-# -----------------------------------------------------------------------------
-# 7. GRiT Python dependencies (skip conflicting version pins)
-# -----------------------------------------------------------------------------
-# Excluded pins:
-#   transformers==4.21.1   — GRiT only needs BertTokenizer; any >=4.x works
-#   protobuf==3.19.4       — conflicts with google-cloud / tensorflow
-#   opencv-python==4.5.5.64 — conflicts with newer opencv already installed
-echo ""
-echo "--- 7. GRiT Python dependencies ---"
-if [ -f "GRiT/requirements.txt" ]; then
-  grep -vE '^\s*(transformers|protobuf|opencv-python)\b' "GRiT/requirements.txt" \
-    | $PIP_INSTALL --no-cache-dir -r /dev/stdin
-else
-  echo "  GRiT/requirements.txt not found; skipping (GRiT may not have been cloned)."
-fi
-
-# -----------------------------------------------------------------------------
-# 8. SAM2 _C CUDA extension
+# 5. SAM2 _C CUDA extension
 # -----------------------------------------------------------------------------
 # sam2/_C.so enables connected-component post-processing on masks.
 # Without it SAM2 still works but with slightly lower mask quality.
 echo ""
-echo "--- 8. SAM2 _C CUDA extension ---"
+echo "--- 5. SAM2 _C CUDA extension ---"
 if python -c "import sam2._C" 2>/dev/null; then
   echo "  sam2._C already built; skipping."
 else
@@ -204,13 +138,13 @@ else
 fi
 
 # -----------------------------------------------------------------------------
-# 9. Pre-download HuggingFace models
+# 6. Pre-download HuggingFace models
 # -----------------------------------------------------------------------------
 # Uses `huggingface-cli download` (ships with huggingface_hub, installed above).
 # Each call is idempotent — already-cached files are skipped automatically.
 # Models land in ~/.cache/huggingface/hub/ (the default HF cache).
 echo ""
-echo "--- 9. Pre-downloading HuggingFace models ---"
+echo "--- 6. Pre-downloading HuggingFace models ---"
 echo "  This fetches ~6 GB total; already-cached files are skipped."
 echo ""
 
@@ -243,11 +177,8 @@ hf_download "IDEA-Research/grounding-dino-base" \
 hf_download "microsoft/Florence-2-large" \
             "Florence-2-large"
 
-# YOLOv8x-cls — secondary label fallback (downloaded by ultralytics, not HF)
-echo "  Downloading yolov8x-cls.pt via ultralytics (~130 MB)..."
-python -c "from ultralytics import YOLO; YOLO('yolov8x-cls.pt')" 2>/dev/null && \
-  echo "    ✓ yolov8x-cls.pt" || \
-  echo "    ✗ yolov8x-cls.pt — failed (ultralytics will retry on first run)"
+# RAM++ checkpoint is not downloaded automatically here.
+# Set rampp_checkpoint_path in config.py after installing/cloning Recognize Anything.
 
 # -----------------------------------------------------------------------------
 # Done

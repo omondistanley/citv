@@ -22,8 +22,8 @@ safetensors
 # and GRiT/third_party/CenterNet2 (pip install -e ./GRiT/third_party/CenterNet2)
 # See setup.sh for the full install sequence.
 
-# YOLO (secondary label fallback)
-ultralytics>=8.0.0
+# RAM++ (Recognize Anything) is optional and loaded from a local checkout.
+# If you install RAM++ via pip/editable install, it will provide module `ram`.
 
 # Misc
 scipy

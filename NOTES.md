@@ -1,762 +1,1240 @@
-# CITV Pipeline — Full Technical Notes
+# CITV Pipeline — Complete Technical Reference
 
-Everything discussed across all sessions: what the pipeline does, every fix applied,
-the mathematics, the reasons, and ASCII flow diagrams.
+A code-grounded, formula-complete explanation of every stage of the pipeline,
+derived directly from `scene_understanding.py` and `depth.py`.
 
 ---
 
 ## Table of Contents
 
-1. [What the Pipeline Does](#1-what-the-pipeline-does)
-2. [Full Pipeline Flow Diagram](#2-full-pipeline-flow-diagram)
-3. [Model Stack — Why Each Model Was Chosen](#3-model-stack--why-each-model-was-chosen)
-4. [Stage-by-Stage Breakdown with Math](#4-stage-by-stage-breakdown-with-math)
-5. [Fixes Applied (5.1 – 5.7)](#5-fixes-applied-51--57)
-6. [Dead Code Removed](#6-dead-code-removed)
-7. [Depth Accuracy — Full Explanation](#7-depth-accuracy--full-explanation)
-8. [Coordinate Accuracy — Back-Projection Math](#8-coordinate-accuracy--back-projection-math)
-9. [Dual Segmentor Strategy](#9-dual-segmentor-strategy)
-10. [Dual Erosion Comparison](#10-dual-erosion-comparison)
-11. [Relation Pipeline](#11-relation-pipeline)
-12. [Output Structure](#12-output-structure)
-13. [Config Reference](#13-config-reference)
-14. [Reproduction / Setup](#14-reproduction--setup)
+1. [Overview and Objective](#1-overview-and-objective)
+2. [Full Pipeline Flow](#2-full-pipeline-flow)
+3. [Stage 0 — Lens Undistortion](#3-stage-0--lens-undistortion)
+4. [Stage 1 — Camera Intrinsics](#4-stage-1--camera-intrinsics)
+5. [Stage 2 — Scene Classification (CLIP) and Depth Estimation](#5-stage-2--scene-classification-clip-and-depth-estimation)
+6. [Stage 3 — RAM++ Dynamic Vocabulary + Dual Segmentation (GroundedSAM2 + SAM2 AMG)](#6-stage-3--dual-segmentation-groundedsam2--sam2-amg)
+7. [Stage 4 — Per-Object Depth Stats and 3D Coordinates](#7-stage-4--per-object-depth-stats-and-3d-coordinates)
+8. [Stage 4b — Object Labelling](#8-stage-4b--object-labelling)
+9. [Stage 5 — Relation Prediction (Pix2SG + Florence-2)](#9-stage-5--relation-prediction-pix2sg--florence-2)
+10. [Stage 6 — Serialisation](#10-stage-6--serialisation)
+11. [Stage 7 — Visualisation](#11-stage-7--visualisation)
+12. [All Formulas in One Place](#12-all-formulas-in-one-place)
+13. [Fixes Applied (5.1–5.7)](#13-fixes-applied-51-57)
+14. [Dead Code Removed](#14-dead-code-removed)
+15. [Output File Structure](#15-output-file-structure)
+16. [Config Reference](#16-config-reference)
+17. [Reproduction](#17-reproduction)
 
 ---
 
-## 1. What the Pipeline Does
+## 1. Overview and Objective
 
-**Goal:** Given a folder of RGB images, produce a 3D scene graph for each image.
-
-A scene graph is a structured representation of what objects are in the scene,
-where they are in 3D space, and how they relate to each other
-(e.g. "person — sitting on — chair", "cup — on — table").
+**Input:** A folder of RGB images (any resolution, any camera).
 
 **Output per image:**
-- `{stem}_scene.json` — full scene graph: objects with 3D coordinates, depth stats,
-  labels, confidence scores, and semantic relations
-- `{stem}_depth.png` — colourised depth map
-- `{stem}_depth_16bit.png` — 16-bit depth map (optional)
-- `{stem}_viz.png` — annotated image with mask overlays, object labels, depth values
+- `{stem}_scene.json` — structured scene graph: every object with its 3D position,
+  depth statistics, semantic label, confidence, and relations to other objects
+- `{stem}_depth.png` — false-colour depth map (INFERNO colormap)
+- `{stem}_viz.png` — annotated overlay: mask colours, labels, depth values
 - Per-object mask PNGs (optional)
-- Depth `.npy` arrays (optional)
+
+**What "scene graph" means:** A labelled directed graph where:
+- **Nodes** = detected objects (person, chair, cup …) with 3D coordinates [X, Y, Z]
+- **Edges** = semantic relations (sitting_on, holding, next_to …) between pairs
+
+The pipeline builds this entirely from a single RGB image — no depth sensor, no stereo,
+no IMU. Everything is inferred.
 
 ---
 
-## 2. Full Pipeline Flow Diagram
+## 2. Full Pipeline Flow
 
 ```
-INPUT IMAGE
-     │
-     ▼
-┌─────────────────────────────────────────────────────┐
-│ Stage 0 — Undistortion (optional)                   │
-│                                                     │
-│  If camera_calibration_file set:                    │
-│    Load JSON → K matrix + dist_coeffs               │
-│    cv2.undistort(img, K, dist_coeffs) → img_corr    │
-│  Else: use raw image                                │
-└─────────────────────────────────────────────────────┘
-     │
-     ▼
-┌─────────────────────────────────────────────────────┐
-│ Stage 1 — Camera Intrinsics                         │
-│                                                     │
-│  Priority 1: calibration JSON (most accurate)       │
-│  Priority 2: explicit config fx/fy/cx/cy            │
-│  Priority 3: FOV estimate                           │
-│    fx = W / (2 * tan(FOV/2))                        │
-│    cx = W/2, cy = H/2                               │
-└─────────────────────────────────────────────────────┘
-     │
-     ▼
-┌─────────────────────────────────────────────────────┐
-│ Stage 2 — Depth Estimation                          │
-│                                                     │
-│  CLIP (loads, classifies, UNLOADS to free VRAM)     │
-│    image → "indoor" or "outdoor"                    │
-│         │                                           │
-│         ├─ indoor  → Depth-Anything-V2-Indoor-Large │
-│         └─ outdoor → Depth-Anything-V2-Outdoor-Large│
-│                                                     │
-│  Model → metric_depth  (float32, metres, H×W)       │
-│  No scaling needed (metric output = true metres)    │
-└─────────────────────────────────────────────────────┘
-     │
-     ▼
-┌─────────────────────────────────────────────────────┐
-│ Stage 3 — Segmentation (Dual Segmentor)             │
-│                                                     │
-│  GroundedSAM2 (primary):                            │
-│    GroundingDINO → bboxes + labels per object       │
-│    SAM2 prompted per bbox → object-level masks      │
-│    (one clean mask per detected entity)             │
-│         │                                           │
-│  SAM2 AMG (secondary, run_both_segmentors=True):    │
-│    Automatic mask generation (grid of points)       │
-│    Catches: parts, small objects, background        │
-│         │                                           │
-│  IoU dedup: AMG mask dropped if IoU > 0.7 with      │
-│    any GroundedSAM2 mask (GDINO mask is better)     │
-│         │                                           │
-│  → merged amg_masks list (all masks, no filtering)  │
-└─────────────────────────────────────────────────────┘
-     │
-     ▼
-┌─────────────────────────────────────────────────────┐
-│ Stage 4 — Labelling + Depth per Object              │
-│                                                     │
-│  For each mask:                                     │
-│    Label priority:                                  │
-│      1. GDINO label (if mask from GroundedSAM2)     │
-│      2. Florence-2 <OD> on cropped mask region      │
-│      3. GRiT dense captioning (last resort)         │
-│      4. YOLOv8x-cls (final fallback)                │
-│                                                     │
-│    Depth extraction:                                │
-│      mask_pixels = metric_depth[mask_binary]        │
-│      → adaptive erosion (shrink mask edges)         │
-│      → sigma-clipping (remove outliers)             │
-│      → histogram mode → z_val (metres)              │
-│      → transparency check (border ring compare)     │
-│      → back-project → X, Y, Z in metres            │
-│                                                     │
-│    (If depth_erosion_comparison=True: run twice,    │
-│     store both eroded and raw depth stats)          │
-└─────────────────────────────────────────────────────┘
-     │
-     ▼
-┌─────────────────────────────────────────────────────┐
-│ Stage 5 — Relations (Pix2SG + Florence-2)           │
-│                                                     │
-│  For each pair of objects where mask IoU > 0.02:    │
-│    Render crop with subject=RED, object=BLUE        │
-│    Florence-2 <CAPTION> → sentence                  │
-│    Extract canonical predicate (verb phrase)        │
-│    → relation entry: {subject, predicate, object}   │
-│                                                     │
-│  Also: spatial scaffold from Pix2SG                 │
-│    (left-of, above, near, far, etc. from 3D coords) │
-└─────────────────────────────────────────────────────┘
-     │
-     ▼
-┌─────────────────────────────────────────────────────┐
-│ Stage 6 — Serialise                                 │
-│                                                     │
-│  Strip numpy arrays (_sam2_mask_array)              │
-│  json.dump → {stem}_scene.json                      │
-└─────────────────────────────────────────────────────┘
-     │
-     ▼
-┌─────────────────────────────────────────────────────┐
-│ Stage 7 — Visualisation                             │
-│                                                     │
-│  Draw: mask overlays, label [M] tags,               │
-│  depth values, bounding boxes, centroid dots        │
-│  → {stem}_viz.png                                   │
-└─────────────────────────────────────────────────────┘
-     │
-     ▼
-OUTPUT: scene_graph/{stem}_scene.json
-        depth_maps/{stem}_depth.png
-        visualizations/{stem}_viz.png
-        masks/{stem}_obj_{i}_mask.png  (optional)
+INPUT IMAGE FILE
+        │
+        ▼
+┌───────────────────────────────────────────────────────────────┐
+│ Stage 0 — Undistortion (optional, if calibration JSON set)   │
+│   cv2.undistort(img, K, dist_coeffs) → rectified image       │
+└───────────────────────────────────────────────────────────────┘
+        │
+        ▼
+┌───────────────────────────────────────────────────────────────┐
+│ Stage 1 — Camera Intrinsics                                   │
+│   Priority 1: calibration JSON  (< 0.5% error)               │
+│   Priority 2: explicit fx/fy/cx/cy in config                  │
+│   Priority 3: FOV estimate  (~10–30% error)                   │
+│   → K = {fx, fy, cx, cy}                                      │
+└───────────────────────────────────────────────────────────────┘
+        │
+        ▼
+┌───────────────────────────────────────────────────────────────┐
+│ Stage 2 — Depth Estimation                                    │
+│                                                               │
+│   CLIP (loads → classifies → UNLOADS to free 340MB VRAM)     │
+│     image → softmax over indoor/outdoor prompts              │
+│     → "indoor" or "outdoor"                                   │
+│                                                               │
+│   Depth Anything V2 Metric (matching variant loads)           │
+│     img_rgb → out["predicted_depth"] → float32 metres H×W    │
+│     resize to image dims with INTER_NEAREST                   │
+│     → metric_depth  (true metres, no scaling)                 │
+└───────────────────────────────────────────────────────────────┘
+        │
+        ▼
+┌───────────────────────────────────────────────────────────────┐
+│ Stage 3 — Segmentation                                        │
+│                                                               │
+│   RAM++ (runs first):                                         │
+│     full image → Swin-L tagger → pipe-separated tags         │
+│     → dynamic GDINO query (max 8 tags, period-separated)     │
+│     sam2_wrapper.update_text_query(dynamic_query)            │
+│     stored in metadata: rampp_tags, gdino_query_used         │
+│                                                               │
+│   GroundedSAM2 (primary):                                     │
+│     dynamic query → GroundingDINO → N bboxes + labels        │
+│     SAM2ImagePredictor.predict(bbox) → 1 mask per entity      │
+│                                                               │
+│   SAM2 AMG (secondary, run_both_segmentors=True):             │
+│     grid of points → SamAutomaticMaskGenerator → all masks   │
+│                                                               │
+│   IoU deduplication:                                          │
+│     for each AMG mask: IoU with any GDINO mask > 0.7?        │
+│       YES → drop (GDINO mask is better quality)               │
+│       NO  → keep (part / small object / background)           │
+│                                                               │
+│   → merged amg_masks list (no filtering, all masks kept)      │
+└───────────────────────────────────────────────────────────────┘
+        │
+        ▼
+┌───────────────────────────────────────────────────────────────┐
+│ Stage 4 — Per-Object Depth + 3D + Labelling                   │
+│                                                               │
+│   For each mask in amg_masks:                                 │
+│                                                               │
+│   4a. Labelling (_label_mask):                                │
+│       Priority: GDINO → Florence-2 → RAM++ → GRiT → YOLOv8x │
+│       Florence-2: <MORE_DETAILED_CAPTION> → noun extraction  │
+│                   <OD> fallback if caption gave "object"     │
+│       Crop = bbox region, out-of-mask pixels → image mean     │
+│                                                               │
+│   4b. Depth stats (_mask_depth_stats_and_3d):                 │
+│       i.   Adaptive erosion (kernel sized to min_dim)         │
+│       ii.  depth_at_mask = metric_depth[ys, xs]               │
+│       iii. Sigma-clipping: reject |d - μ| > σ * std          │
+│       iv.  Transparency check (border ring comparison)        │
+│       v.   Depth-weighted centroid (cx, cy)                   │
+│       vi.  Histogram mode over inner 50% → z_val (metres)     │
+│       vii. Back-projection → X, Y, Z                          │
+│                                                               │
+│       If depth_erosion_comparison=True: run steps i–vii       │
+│       twice (use_erosion=True AND False) → store both sets    │
+└───────────────────────────────────────────────────────────────┘
+        │
+        ▼
+┌───────────────────────────────────────────────────────────────┐
+│ Stage 5 — Relations (Pix2SG.predict)                          │
+│                                                               │
+│   Layer 1: Spatial scaffold                                   │
+│     For each object pair: depth, bbox position, mask overlap  │
+│     → near/far, left-of, above, on-top-of                     │
+│                                                               │
+│   Layer 2: Florence-2 semantic (_enrich_with_florence2)       │
+│     For pairs where mask IoU > relation_min_mask_overlap:     │
+│       union bbox crop → subject=RED tint, object=BLUE tint    │
+│       Florence-2 <MORE_DETAILED_CAPTION> (standalone)        │
+│       → _parse_relation_phrase → canonical predicate         │
+│       → add triplet                                           │
+└───────────────────────────────────────────────────────────────┘
+        │
+        ▼
+┌───────────────────────────────────────────────────────────────┐
+│ Stage 6 — Serialise                                           │
+│   Strip _sam2_mask_array (numpy, not JSON-serialisable)       │
+│   json.dump → {stem}_scene.json                               │
+└───────────────────────────────────────────────────────────────┘
+        │
+        ▼
+┌───────────────────────────────────────────────────────────────┐
+│ Stage 7 — Visualisation                                       │
+│   Mask overlays, label [M] tags, depth values, centroids      │
+│   → {stem}_viz.png                                            │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 3. Model Stack — Why Each Model Was Chosen
+## 3. Stage 0 — Lens Undistortion
 
-| Model | Role | Why |
-|---|---|---|
-| **CLIP ViT-B/32** | Indoor/outdoor classifier | Fast, 340MB, zero-shot; unloaded after use to free VRAM |
-| **Depth Anything V2 Metric** | Metric depth (metres) | State-of-art monocular depth; metric variant gives true metres without scaling |
-| **GroundingDINO v2** | Open-vocab object detection | Text-prompted detection; finds any object category without fixed class list |
-| **SAM2** | Instance segmentation | Produces clean, prompt-able masks; AMG mode for part-level coverage |
-| **Florence-2** | Labelling + relation prediction | Single model for both tasks; <OD> for labels, <CAPTION> for relations |
-| **GRiT** | Dense captioning fallback | Produces captions for any crop; last resort when GDINO+Florence-2 fail |
-| **YOLOv8x-cls** | Classification fallback | Fast top-1 class for any crop |
+**Why:** Every real lens introduces distortion. Barrel distortion (wide-angle) bends
+straight lines outward. Pincushion distortion bends them inward. If uncorrected,
+pixels near image edges are in the wrong position, making all depth back-projections
+geometrically incorrect.
+
+**OpenCV lens distortion model:**
+
+```
+Let (x, y) = normalised camera coordinates (pixel - principal point, divided by focal length)
+r² = x² + y²
+
+Radial distortion correction:
+  x_r = x · (1 + k1·r² + k2·r⁴)
+  y_r = y · (1 + k1·r² + k2·r⁴)
+
+Tangential distortion correction (lens not perfectly parallel to sensor):
+  x_t = 2·p1·x·y + p2·(r² + 2x²)
+  y_t = p1·(r² + 2y²) + 2·p2·x·y
+
+Full corrected coordinates:
+  x_corrected = x_r + x_t
+  y_corrected = y_r + y_t
+
+Coefficients from calibration JSON:
+  k1, k2 = radial distortion (most important — highest magnitude)
+  p1, p2 = tangential distortion (usually small)
+```
+
+`cv2.undistort(img, K, dist_coeffs)` inverts this mapping analytically, producing a
+rectified image where straight lines in the world appear straight in the image.
+
+**When it runs:** Only if `camera_calibration_file` is set in config and
+`apply_undistortion = True`. All subsequent processing (depth, masks, back-projection)
+runs on the undistorted image.
+
+**Camera calibration tool:**
+```bash
+python tools/calibrate_camera.py \
+    --images path/to/checkerboard_frames/ \
+    --pattern 9x6 \
+    --square_size 0.025 \
+    --out calibration.json
+```
+
+OpenCV's checkerboard method: finds N·M inner corners at known 3D positions
+(z=0 plane, spacing = square_size metres), minimises reprojection error across
+20+ images to solve for K and [k1, k2, p1, p2].
+
+Accuracy: `fx, fy < 0.5% error`, `cx, cy < 2px error`, `RMS < 0.5px = excellent`.
 
 ---
 
-## 4. Stage-by-Stage Breakdown with Math
+## 4. Stage 1 — Camera Intrinsics
 
-### Stage 0 — Lens Undistortion
-
-OpenCV lens model:
+The **camera matrix K** maps 3D camera-space points to 2D image pixels:
 
 ```
-x_distorted = x(1 + k1*r² + k2*r⁴) + 2*p1*x*y + p2*(r² + 2x²)
-y_distorted = y(1 + k1*r² + k2*r⁴) + p1*(r² + 2y²) + 2*p2*x*y
+        [ fx    0   cx ]
+K  =    [  0   fy   cy ]
+        [  0    0    1 ]
 
-where r² = x² + y²
-k1, k2 = radial distortion coefficients
-p1, p2 = tangential distortion coefficients
+fx = focal length in pixels, x-axis
+fy = focal length in pixels, y-axis  (fx ≈ fy for square pixels)
+cx = principal point x  (ideally W/2)
+cy = principal point y  (ideally H/2)
 ```
 
-`cv2.undistort(img, K, dist_coeffs)` inverts this to produce a rectified image.
-Critical: all depth and mask processing runs on the undistorted image, so back-projected
-3D coordinates correspond to real-world geometry.
-
-### Stage 1 — Camera Intrinsics
-
-The camera matrix K maps 3D camera-space points to 2D image pixels:
-
+**Priority 1 — calibration JSON** (most accurate):
 ```
-K = [ fx   0   cx ]
-    [  0  fy   cy ]
-    [  0   0    1 ]
-
-fx, fy = focal lengths in pixels
-cx, cy = principal point (ideally image centre W/2, H/2)
+Load: fx, fy, cx, cy directly from JSON
+Also load: k1, k2, p1, p2 for undistortion
+Error: < 0.5% for fx/fy, < 2px for cx/cy
 ```
 
-FOV fallback (least accurate, ~10–30% error vs calibration):
+**Priority 2 — explicit config values:**
 ```
-fx = W / (2 * tan(FOV_degrees * π/360))
-fy = fx   (assuming square pixels)
+camera_fx, camera_fy, camera_cx, camera_cy set directly in config.py
+Useful when manufacturer provides pixel-level specs (e.g. from EXIF)
+```
+
+**Priority 3 — FOV estimate** (least accurate):
+```
+fx = W / (2 · tan(FOV_degrees · π / 360))
+fy = fx                 ← assumes square pixels
 cx = W / 2
 cy = H / 2
+
+Default: FOV = 60°, so for W=1920:
+  fx = 1920 / (2 · tan(30°)) = 1920 / (2 · 0.5774) = 1662 px
+
+Error: 10–30% vs. real lens, depending on actual focal length
 ```
 
-Calibration accuracy (OpenCV checkerboard):
+---
+
+## 5. Stage 2 — Scene Classification (CLIP) and Depth Estimation
+
+### 5a. CLIP Scene Classifier (`SceneTypeClassifier`)
+
+**Why:** Depth Anything V2 has two metric variants:
+- **Indoor** (NYUv2-trained): range ~0.1–10m, tuned for rooms/furniture
+- **Outdoor** (KITTI-trained): range ~0.5–80m, tuned for streets/buildings
+
+Using the wrong variant causes systematic scale errors that corrupt all coordinates.
+
+**How CLIP classifies (from `depth.py:132–176`):**
+
 ```
-fx, fy error: < 0.5%
-cx, cy error: < 2 pixels
-RMS reprojection error target: < 0.5 px (excellent), < 1.0 px (acceptable)
+Prompts:
+  INDOOR  = ["a photo of an indoor room",
+              "an interior space with furniture",
+              "inside a building with walls and ceiling"]
+  OUTDOOR = ["a photo taken outside with sky or open space",
+              "an outdoor scene with trees, streets or buildings",
+              "a landscape or street scene outside"]
+
+Step 1: Encode image + all 6 texts with CLIP ViT-B/32
+Step 2: logits = outputs.logits_per_image[0]   # shape: (6,)
+Step 3: probs = softmax(logits)                 # sums to 1 across all 6 texts
+Step 4: indoor_score  = mean(probs[0:3])
+        outdoor_score = mean(probs[3:6])
+Step 5: scene_type = "indoor" if indoor_score >= outdoor_score else "outdoor"
 ```
 
-### Stage 2 — Depth Model
+CLIP's contrastive training makes these softmax scores directly comparable —
+they reflect how well the image matches each text prompt relative to all others.
 
-**Key bug fixed (Fix 5.1):**
-HuggingFace depth-estimation pipeline returns two keys:
-- `out["depth"]` → PIL Image, uint8, range 0–255 (NOT metres — this was the bug)
-- `out["predicted_depth"]` → raw float32 tensor, range 0–∞ metres ← correct key
+**VRAM management:** CLIP (~340MB) loads → classifies one image → immediately
+`unload()` is called (deletes model, calls `torch.cuda.empty_cache()`) before
+the depth model loads. This is essential on 8–12GB GPUs.
 
-Indoor model: trained on NYUv2 (indoor rooms)
-Outdoor model: trained on KITTI (streets, outdoor scenes)
-CLIP automatically selects the right model per image.
+### 5b. Depth Anything V2 Metric (`DepthAnythingV2Backend`)
+
+**Critical implementation detail (from `depth.py:248–254`):**
+```python
+out = self.pipe(pil_img)
+
+# out["depth"]            → PIL Image, uint8, range 0-255  ← WRONG (visualization only)
+# out["predicted_depth"]  → torch.Tensor, float32, metres  ← CORRECT
+depth = out["predicted_depth"]
+```
+
+This was the most impactful bug in the original pipeline: using `out["depth"]` gave
+values 0–255 instead of true metres, making all coordinates wrong by ~100×.
+
+**Resize strategy (`depth.py:36–50`):**
+```python
+cv2.resize(depth, target_size, interpolation=cv2.INTER_NEAREST)
+```
+
+`INTER_NEAREST` is mandatory: it copies the nearest depth value without blending.
+`INTER_LINEAR` would average adjacent depths at object boundaries, creating
+"ghost" depth values where foreground and background blend — corrupting
+per-mask depth extraction in Stage 4.
 
 **Output:** `metric_depth` — float32 numpy array, shape (H, W), values in metres.
+No `depth_scale_factor` scaling needed (metric models output true metres; config
+keeps `depth_scale_factor = 1.0`).
 
-### Stage 4 — Per-Object Depth Stats
-
-**Step 1: Extract mask pixels**
-```python
-ys, xs = np.where(mask_binary)
-depth_at_mask = metric_depth[ys, xs]   # shape: (N_pixels,)
+**16-bit PNG saving (optional):**
+```
+max_range = 20.0m (indoor) or 80.0m (outdoor)
+depth_16bit = clip(depth / max_range * 65535, 0, 65535).astype(uint16)
 ```
 
-**Step 2: Adaptive erosion** (shrink mask inward to avoid boundary bleed)
+---
+
+## 6. Stage 3 — Dual Segmentation (GroundedSAM2 + SAM2 AMG)
+
+### 6a. RAM++ Dynamic Vocabulary (runs before GroundedSAM2)
+
+Before any segmentation happens, **RAM++ (Recognize Anything Model++)** tags the
+full scene image to produce a per-image vocabulary. The result is used as the
+GroundingDINO text query, replacing the previous static generic category list.
+
+```
+RAM++ input:  full scene image (RGB numpy, resized to 384×384 internally)
+RAM++ output: pipe-separated tag string → parsed to list
+  e.g. beach image → ["beach", "cloudy", "coast", "footprint", "sea", "sand",
+                       "shoreline", "sky"]
+  e.g. kitchen  → ["alcohol", "bottle", "cake", "car", "counter top", "plate",
+                   "paper plate", "platter"]
+
+Dynamic GDINO query:
+  "beach. cloudy. coast. footprint. sea. sand. shoreline. sky."
+  (period-separated, max 8 tags from config.rampp_max_tags)
+```
+
+`sam2_wrapper.update_text_query(dynamic_query)` is called before `.generate()`.
+Both the tags list and the exact query string used are stored in scene JSON metadata
+under `rampp_tags` and `gdino_query_used`.
+
+**Why this improves detection:** A static query like "person. furniture. vehicle."
+misses scene-specific objects. A beach image gets no detections for "footprint" or
+"shoreline" with the old query; RAM++ identifies exactly what's in the scene.
+
+### 6b. GroundedSAM2 (primary)
+
+**GroundingDINO** is an open-vocabulary detector. Given a text query, it returns
+bounding boxes for every instance of every mentioned category:
+
+```
+Text query: dynamic per-image from RAM++ (see 6a above)
+
+Output: [(bbox1, "sand", conf=0.84), (bbox2, "sky", conf=0.91), ...]
+
+Thresholds (lowered from defaults to catch weak/small detections):
+  grounding_dino_box_thresh = 0.15   ← minimum detection confidence
+  grounding_dino_text_thresh = 0.15  ← minimum token confidence
+```
+
+**SAM2ImagePredictor** then generates a precise pixel mask for each detected box:
+```
+For each (bbox, label, conf) from GroundingDINO:
+    predictor.set_image(img_rgb)
+    masks, scores, logits = predictor.predict(box=bbox, multimask_output=True)
+    best_mask = masks[argmax(scores)]
+    → amg_entry = {segmentation: best_mask, label: label, gdino_conf: conf}
+```
+
+This gives **one clean object-level mask per entity** — much better than the
+generic AMG grid which produces part-level masks.
+
+### 6c. SAM2 AMG (secondary, `run_both_segmentors = True`)
+
+SAM2's Automatic Mask Generator places a dense grid of points across the image
+and generates masks for every stable region it finds:
+
+```
+Points per side: 32  → 32×32 = 1024 seed points
+Predicted IoU threshold: 0.80    ← permissive to get candidates
+Stability score threshold: 0.92
+Min mask area: 100px
+```
+
+AMG catches what GDINO misses: texture regions, small objects (buttons, coins),
+background sky/floor/wall, part-level anatomy (shirt, collar, sole of shoe).
+
+### 6d. IoU Deduplication
+
+```python
+# From process_image() in scene_understanding.py:
+iou_thresh = config.run_both_segmentors_iou_dedup  # 0.7
+
+for amg_m in amg_only_masks:
+    seg = np.asarray(amg_m["segmentation"]) > 0
+    duplicate = False
+    for gdino_mask_bin in gdino_masks:
+        inter = np.logical_and(seg, gdino_mask_bin).sum()
+        union = np.logical_or(seg, gdino_mask_bin).sum()
+        if union > 0 and inter / union >= iou_thresh:
+            duplicate = True
+            break
+    if not duplicate:
+        amg_m["source_model"] = "SAM2_AMG"
+        extra.append(amg_m)
+
+amg_masks = gdino_masks + extra
+```
+
+**IoU formula:**
+```
+IoU(A, B) = |A ∩ B| / |A ∪ B|
+
+where |·| = number of True pixels in the boolean mask
+```
+
+An AMG mask with IoU > 0.7 against any GDINO mask is dropped — the GDINO-prompted
+mask is more semantically accurate for that object. The remaining AMG masks
+(IoU ≤ 0.7 with all GDINO masks) are new information and kept.
+
+---
+
+## 7. Stage 4 — Per-Object Depth Stats and 3D Coordinates
+
+This is the core computation, implemented in `_mask_depth_stats_and_3d()`.
+
+### Step i — Adaptive Erosion (`_adaptive_erosion_kernel`)
+
+**Why erosion:** Mask edges overlap background pixels. The depth model at a boundary
+pixel produces a blend of foreground and background depth — typically too high for
+the foreground object. Eroding the mask inward removes these boundary pixels.
+
+**Why adaptive:** A fixed kernel of 5px destroys thin objects (a 6px-wide pole
+disappears after erosion). The kernel is sized to the object:
+
 ```
 min_dim = min(mask_height, mask_width)
 
 kernel_size:
-  0  if min_dim < 15px   (tiny object — don't erode at all)
-  1  if min_dim < 30px
-  2  if min_dim < 60px
-  config.mask_erosion_kernel_size  otherwise (default: 5)
+  0   if min_dim < 15px    → too thin to erode safely; skip
+  1   if min_dim < 30px    → minimal erosion
+  2   if min_dim < 60px    → moderate erosion
+  config.mask_erosion_kernel_size  otherwise  (default: 5)
 
-eroded_mask = cv2.erode(mask, kernel(kernel_size))
+Applied only if mask has > 4 * kernel² pixels (won't disappear after erosion):
+  eroded = cv2.erode(mask_bin.astype(uint8), ones(kernel, kernel), iterations=1)
+  if eroded.sum() > 0: mask_bin = eroded
 ```
 
-Reason: mask edges often bleed onto background depth values (the mask boundary
-covers pixels that are partly foreground, partly background). Erosion removes these.
+When `use_erosion=False` (the no-erosion comparison run), this entire block is skipped.
 
-**Step 3: Sigma-clipping** (remove statistical outliers)
+### Step ii — Extract Depth at Mask Pixels
+
+```python
+ys, xs = np.where(mask_bin)            # pixel row, col coordinates of mask
+depth_at_mask = metric_depth[ys, xs]   # direct array index → depth values in metres
+depth_at_mask = depth_at_mask[np.isfinite(depth_at_mask)]  # remove NaN/Inf
+```
+
+This is a direct numpy index into the H×W depth array using the mask coordinates.
+Result: 1D array of N depth measurements, one per mask pixel, in metres.
+
+### Step iii — Sigma-Clipping (Outlier Rejection)
+
+**Why:** Transparent objects, reflective surfaces, and partially occluded objects
+produce bimodal depth distributions. The background mode must be rejected.
+
+**From `scene_understanding.py:1763–1771`:**
+```python
+sigma = self.depth_outlier_sigma   # default: 2.0
+if sigma > 0 and depth_at_mask.size >= 10:
+    mean_d = float(np.mean(depth_at_mask))
+    std_d  = float(np.std(depth_at_mask))
+    if std_d > 1e-6:
+        inlier = np.abs(depth_at_mask - mean_d) < sigma * std_d
+        if inlier.sum() >= 5:
+            depth_at_mask = depth_at_mask[inlier]
+```
+
+**Formula:**
 ```
 μ = mean(depth_at_mask)
 σ = std(depth_at_mask)
-keep = |depth_pixel - μ| < outlier_sigma * σ    (outlier_sigma = 2.0)
-depth_clean = depth_at_mask[keep]
+keep pixel i  iff  |depth_i - μ| < outlier_sigma · σ
+
+With outlier_sigma = 2.0: keeps all pixels within 2 standard deviations of the mean.
+~95.4% of a Gaussian distribution is within 2σ — outliers are the tail beyond.
 ```
 
-Reason: a glass window or translucent object produces bimodal depth distribution.
-Clipping removes the background mode, keeping only the foreground depth.
+Example: glass vase, 250 pixels:
+- 200 pixels at ~0.8m (vase surface), 50 at ~2.5m (background through glass)
+- μ = 1.04m, σ = 0.42m
+- Threshold: |d - 1.04| < 2.0 × 0.42 = 0.84m → keep [0.2m, 1.88m]
+- 2.5m pixels: |2.5 - 1.04| = 1.46 > 0.84 → rejected
 
-**Step 4: Histogram mode (z_val)**
-```
-Use inner 50% of mask pixels (depth_central_fraction = 0.5)
-Bin them into a histogram
-z_val = centre of the bin with the most pixels
-```
+### Step iv — Transparency Detection
 
-Reason: the histogram mode is more robust than mean for objects with
-non-uniform depth (curved surfaces, occluded areas). Mean would be pulled
-toward background bleed. Mode picks the dominant depth layer.
+**From `scene_understanding.py:1780–1791`:**
+```python
+kernel_5 = np.ones((5, 5), np.uint8)
+dilated    = cv2.dilate(mask_bin.astype(uint8), kernel_5) > 0
+border_ring = dilated & ~mask_bin          # pixels just outside the mask
 
-**Step 5: Depth-weighted centroid**
-```
-weight_i = 1 / (depth_i + ε)   where ε = 1e-6
+border_depths = metric_depth[border_ring]   # background depth samples
+mask_mean     = mean(depth_at_mask)
+border_mean   = mean(border_depths)
+depth_separation = |mask_mean - border_mean|
 
-centroid_x = Σ(weight_i * x_i) / Σ(weight_i)
-centroid_y = Σ(weight_i * y_i) / Σ(weight_i)
-```
-
-Reason: closer pixels (lower depth, higher weight) dominate. This pulls the
-centroid toward the nearest surface of the object — more physically meaningful
-than a pure geometric centroid.
-
-**Step 6: Transparency detection**
-```
-border_ring = dilate(mask, 3px) AND NOT mask
-border_depth = mean(metric_depth[border_ring])
-mask_depth   = mean(depth_clean)
-separation   = |mask_depth - border_depth|
-
-if separation < depth_transparency_threshold (0.15m):
-    possibly_transparent = True
+possibly_transparent = depth_separation < depth_transparency_threshold  # 0.15m
 ```
 
-Reason: glass, plastic wrap, and water have depth values nearly identical to
-the background behind them (the sensor "sees through" them). The border ring
-comparison detects this.
+**Logic:** A solid opaque object at 1.5m should have background at 3m+ → separation
+= 1.5m >> 0.15m → not transparent. A glass window at 2m with wall behind at 2.1m
+→ separation = 0.1m < 0.15m → flagged `possibly_transparent = True`.
 
-### Stage 8 — Back-Projection to 3D
+This flag tells downstream code the depth value is unreliable for this object.
 
-```
-Given pixel (u, v) and depth z (metres):
+### Step v — Depth-Weighted Centroid
 
-X = (u - cx) * z / fx      ← metres, horizontal
-Y = (v - cy) * z / fy      ← metres, vertical (positive = down)
-Z = z                       ← metres, depth from camera
+**From `scene_understanding.py:1798–1807`:**
+```python
+weights = 1.0 / (depth_at_mask + 1e-6)    # closer = higher weight
+w_sum   = weights.sum()
+cy_f = np.sum(ys_f * weights) / w_sum      # weighted centroid y (row)
+cx_f = np.sum(xs_f * weights) / w_sum      # weighted centroid x (col)
 
-3D point = [X, Y, Z]
-```
-
-Accuracy depends on z_val accuracy:
-- With calibration + metric model: X, Y accurate to ~2–5% for well-lit, non-transparent objects
-- With FOV estimate only: X, Y error ~10–30% due to fx/fy uncertainty
-- Depth (Z) accuracy: ~5–10% for Depth Anything V2 Metric at training distribution scenes
-
----
-
-## 5. Fixes Applied (5.1 – 5.7)
-
-### Fix 5.1 — Depth Model Variant Selection (auto/indoor/outdoor)
-
-**Problem:** A single depth model trained on indoor data gives wrong scale for outdoor
-scenes (e.g. a street appears only 2m wide instead of 10m wide).
-
-**Solution:** CLIP classifies each image → loads matching metric model.
-```
-depth_model_variant = "auto"  →  CLIP classifies → indoor or outdoor model
-depth_model_variant = "indoor"  →  always indoor model (NYUv2-trained)
-depth_model_variant = "outdoor" →  always outdoor model (KITTI-trained)
+# Snap to nearest real mask pixel (avoids landing in a hole)
+dist2 = (ys_f - cy_f)² + (xs_f - cx_f)²
+anchor = argmin(dist2)
+cx, cy = xs_f[anchor], ys_f[anchor]
 ```
 
-CLIP loads, classifies, then **immediately unloads** (~340MB VRAM freed) before the
-depth model loads. This is critical on GPUs with 8–12GB VRAM.
-
-**Also fixed:** `out["depth"]` → `out["predicted_depth"]` — the HuggingFace pipeline
-was returning a PIL uint8 image (0–255) instead of the raw metric float32 tensor.
-This caused all depth values to be 0–255 instead of true metres. Root cause of the
-most impactful accuracy bug in the pipeline.
-
-### Fix 5.2 — Camera Intrinsics via OpenCV Calibration
-
-**Problem:** FOV estimate (60°) gives ~10–30% error in fx/fy → proportional error in X, Y.
-
-**Solution:** OpenCV checkerboard calibration produces K matrix with < 0.5% error.
-
+**Formula:**
 ```
-tools/calibrate_camera.py --images calib_imgs/ --pattern 9x6 --square_size 0.025 --out calibration.json
+w_i = 1 / (d_i + ε)      where d_i = depth at pixel i, ε = 1e-6
+
+cx = Σ(w_i · x_i) / Σ(w_i)
+cy = Σ(w_i · y_i) / Σ(w_i)
 ```
 
-Output JSON: `{fx, fy, cx, cy, k1, k2, p1, p2, image_size, rms_reprojection_error}`
+**Why depth-weighted:** A pure geometric centroid of an asymmetric object lands
+at the visual centre, which may be inside an occluded region. The depth-weighted
+centroid is pulled toward the nearest visible surface — more physically meaningful
+for 3D anchoring.
 
-Priority order in pipeline:
-1. `camera_calibration_file` JSON (most accurate)
-2. Explicit `camera_fx/fy/cx/cy` in config
-3. `camera_fov_degrees` FOV estimate (least accurate)
+### Step vi — z_val via Histogram Mode
 
-### Fix 5.3 — Grounded SAM2 (GroundingDINO + SAM2)
+**From `scene_understanding.py:1810–1826`:**
+```python
+# Inner circle: pixels within sqrt(area * central_frac / π) radius of centroid
+area   = float(mask_bin.sum())
+radius = np.sqrt(area * central_frac / np.pi)   # central_frac = 0.5
+inner_mask = dist2 <= radius²
+inner_depths = depth_at_mask[inner_mask]
 
-**Problem:** SAM2 AMG (automatic grid) produces part-level masks (e.g. "shirt sleeve"
-instead of "person"). No semantic labels. Cannot identify specific objects.
-
-**Solution:** GroundingDINO detects objects by text query → SAM2 prompted per bbox.
-Each detected entity gets one clean, object-level mask with a semantic label.
-
-Text query (broad to catch everything):
-```
-"person. animal. vehicle. furniture. appliance. food. clothing.
- container. tool. building. plant. electronics. object."
-```
-
-SAM2 AMG kept as fallback (and now also run alongside GDINO for parts/small objects).
-
-### Fix 5.4 — Florence-2 Object Labelling
-
-**Problem:** GRiT produces verbose captions ("a red ceramic mug on a wooden table")
-instead of clean labels ("mug"). Heuristic noun extraction was fragile.
-
-**Solution:** Florence-2 `<OD>` task returns structured `{label, bbox}` pairs.
-Highest-confidence label taken for the mask crop. Clean, short labels.
-
-Label priority chain:
-```
-GDINO label → Florence-2 <OD> → GRiT caption → YOLOv8x-cls
+# Histogram over inner depths
+n_bins = max(10, min(100, inner_depths.size // 5))
+hist, edges = np.histogram(inner_depths, bins=n_bins)
+peak_bin = argmax(hist)
+z_val = (edges[peak_bin] + edges[peak_bin + 1]) / 2.0
 ```
 
-### Fix 5.5 — Post-hoc Mask Filters (now fully disabled)
+**Why histogram mode instead of mean:**
+- Mean is biased by outliers even after sigma-clipping
+- For a curved surface (bowl, sphere), near edge pixels are farther than centre pixels
+- Mode picks the depth of the largest coherent surface layer → most representative
+  single depth for the object
 
-**Original:** Strict quality filters removed low-confidence masks:
-- `stability_score >= 0.85`
-- `pred_iou >= 0.82`
-- `area >= 1500px` (removed small objects)
-- `area_fraction <= 0.30` (removed background)
+**Inner circle rationale:** The outer pixels of a mask are most likely to be:
+- boundary bleed (even after erosion)
+- occluded partial pixels at depth transitions
 
-**Current state (fully disabled):** All thresholds set to 0 / 1.0.
-Every mask is kept — including tiny objects (buttons, coins), background regions
-(sky, floor), and part-level masks.
+Using only the inner 50% of the mask area (by equivalent circle radius) concentrates
+on the central, most reliable depth measurements.
 
-Reason: research/analysis use case — need complete coverage for scene graph.
-Re-enable by setting non-zero thresholds in config.py.
+### Step vii — Back-Projection to 3D
 
-### Fix 5.6 — Relation Enhancement (Florence-2 + Pix2SG)
-
-**Problem:** SGTR was the only relation source — removed due to complex setup,
-poor generalisation, dead code.
-
-**Solution:** Two-source relation pipeline:
-1. **Pix2SG spatial scaffold** — geometric relations from 3D positions
-   (left-of, above, near/far based on depth thresholds)
-2. **Florence-2 semantic relations** — for overlapping mask pairs:
-   - Render crop: subject=RED overlay, object=BLUE overlay
-   - Florence-2 `<CAPTION>` → sentence
-   - Extract canonical predicate (verb phrase)
-   - Stored as `source_layer: "florence2"`
-
-Overlap threshold: `relation_min_mask_overlap = 0.02` (2% pixel IoU).
-Only pairs with spatial contact get semantic relation prediction (avoids running
-VQA on 10,000 non-touching pairs in a dense scene).
-
-### Fix 5.7 — Depth Accuracy: Adaptive Erosion + Outlier Rejection
-
-Three improvements to per-object depth extraction:
-
-**Adaptive erosion** (kernel scales to object size):
+**From `_back_project()` in `scene_understanding.py`:**
 ```
-Prevents destroying thin objects (pencil, wire, finger) while still
-removing boundary bleed on large objects.
+Given:
+  (cx, cy) = centroid pixel coordinates (col, row)
+  z_val    = representative depth in metres
+  K        = {fx, fy, cx_principal, cy_principal}
+
+3D camera-space coordinates:
+  X = (cx - K["cx"]) * z_val / K["fx"]     ← metres, horizontal (right = positive)
+  Y = (cy - K["cy"]) * z_val / K["fy"]     ← metres, vertical (down = positive)
+  Z = z_val                                  ← metres, depth from camera
+
+coordinates_3d = {"x": X, "y": Y, "z": Z}
 ```
 
-**Sigma-clipping** (`depth_outlier_sigma = 2.0`):
+**Derivation:** The pinhole camera model projects 3D point (X, Y, Z) to pixel (u, v):
 ```
-Removes pixels more than 2σ from mask mean depth.
-Handles: glass, reflective surfaces, partially occluded objects.
+u = fx · (X/Z) + cx_principal
+v = fy · (Y/Z) + cy_principal
+```
+Inverting:
+```
+X = (u - cx_principal) · Z / fx
+Y = (v - cy_principal) · Z / fy
 ```
 
-**Transparency detection** (border ring comparison):
+This is exact for a perfect pinhole camera with no distortion (after undistortion
+in Stage 0, this assumption holds to < 0.5px residual error).
+
+### Dual Erosion Comparison
+
+When `depth_erosion_comparison = True`, `_mask_depth_stats_and_3d` is called twice:
+
+```python
+# Call 1: with erosion (standard)
+depth_stats, coords_3d, centroid = self._mask_depth_stats_and_3d(
+    metric_depth, K, mask, detection, use_erosion=True)
+
+# Call 2: without erosion (comparison)
+depth_stats_ne, coords_3d_ne, centroid_ne = self._mask_depth_stats_and_3d(
+    metric_depth, K, mask, detection, use_erosion=False)
 ```
-Objects where mask depth ≈ background depth → flagged possibly_transparent.
-Downstream code can then treat depth value as unreliable.
+
+Both sets are stored in the scene JSON under separate keys:
+```
+depth_stats              ← with adaptive erosion
+depth_stats_no_erosion   ← without erosion
+coordinates_3d           ← back-projected from eroded z_val
+coordinates_3d_no_erosion← back-projected from raw z_val
+mask_centroid_2d         ← eroded centroid pixel
+mask_centroid_2d_no_erosion ← raw centroid pixel
 ```
 
 ---
 
-## 6. Dead Code Removed
+## 8. Stage 4b — Object Labelling (`_label_mask`)
 
-The following were in `scene_understanding.py` and completely removed.
-They either never worked in this codebase, depended on unavailable checkpoints,
-or were superseded by better approaches.
+**Five-priority label chain:**
 
-| Removed | Lines (approx) | Reason |
-|---|---|---|
-| `FasterRCNNWrapper` | ~120 lines | Replaced by GroundedSAM2 for detection |
-| `DETRWrapper` | ~80 lines | Replaced by GroundingDINO |
-| `Pix2SeqWrapper` / OWLViT | ~100 lines | OWLViT checkpoint unavailable; never ran |
-| `SGSGWrapper` (SGTR) | ~330 lines | SGTR repo removed; checkpoint unavailable |
-| SGTR path setup | ~20 lines | Dead without SGTR repo |
-| `_OIV6_PREDICATES` dict | ~70 lines | Only used by SGSGWrapper |
-| `_save_model_output` method | ~20 lines | Never called anywhere |
-| All `sgtr_stats` references | ~5 lines | Caused NameError after SGTR removal |
+### Priority 1: GroundingDINO label
+```python
+gdino_label = amg_entry.get("label")
+gdino_conf  = amg_entry.get("gdino_conf", 0.0)
+if gdino_label and gdino_label != "object":
+    return {"label": gdino_label, "conf": gdino_conf, "source_model": "GroundingDINO"}
+```
+Used directly when mask came from GroundedSAM2. GDINO labels are the most semantically
+accurate because they come from the text-prompted detection. Note: the confidence
+threshold is intentionally omitted — since the GDINO query is now scene-specific
+(from RAM++), even low-confidence detections are relevant.
 
-Total removed: ~745 lines (~22% of original file).
+### Priority 2: Florence-2 on masked crop (`label_crop`)
+
+`label_crop` runs a **two-step** process on a tight crop of the object:
+
+**Step 2a — `<MORE_DETAILED_CAPTION>` (primary):**
+```python
+cap_result = florence2._run_task("<MORE_DETAILED_CAPTION>", pil_crop)
+caption = cap_result.get("<MORE_DETAILED_CAPTION>", "")
+# e.g. "a wooden dining chair with a padded seat and curved back legs"
+label = florence2._extract_label_from_caption(caption)
+# skips stopwords → first meaningful noun → "chair"
+```
+
+`_extract_label_from_caption` skips ~50 stopwords (articles, prepositions, common
+adjectives like "wooden", "large", colour words) and returns the first remaining
+noun. The full caption is stored in `sources.Florence2.caption` in the scene JSON.
+
+**Step 2b — `<OD>` fallback (when caption gave "object"):**
+```python
+od_result = florence2._run_task("<OD>", pil_crop)
+# Returns: {labels: ["chair", "table"], bboxes: [[x1,y1,x2,y2], ...]}
+# Pick label from largest bbox area → dominant object in crop
+best_label = max(zip(labels, bboxes), key=lambda lb: bbox_area(lb[1]))[0]
+```
+
+**Why mean-fill background:** Out-of-mask pixels are replaced with the image mean
+colour (not zero/black). This preserves natural brightness/colour statistics so
+Florence-2 and GRiT behave as trained.
+
+**Why largest bbox:** A crop of a "person" might detect ["person", "shirt", "hand"].
+The person bbox is largest → correct dominant label.
+
+### Priority 3: RAM++ per-crop (`label_crop`)
+```python
+rampp_result = rampp.label_crop(crop_filled)  # crop is BGR
+# Returns: {label: "chair", conf: 0.70, caption: "chair | table | ...", tags: [...]}
+label = rampp_result["label"]   # first tag = most salient detected object
+```
+RAM++ runs its Swin-L tagger on the masked crop. The first tag (highest salience)
+is used as the label. Unlike whole-image tagging (which feeds the GDINO query),
+this per-crop call gives RAM++ a chance to label AMG masks that GDINO and Florence-2
+both missed.
+
+### Priority 4: GRiT + YOLO
+```python
+results = self.grit.predict(crop_filled)
+grit_label = max(results, key=lambda r: r.get("conf", 0.0)).get("label", "object")
+
+yolo_label, yolo_conf = self.yolo_cls.classify(crop_filled)
+label = yolo_label if yolo_conf >= yolo_cls.conf_thresh else grit_label
+```
+
+GRiT generates dense captions; its detection head provides per-region labels.
+YOLOv8x-cls is a 1000-class ImageNet classifier — high confidence when the object
+is a common category, used as tiebreaker over GRiT.
 
 ---
 
-## 7. Depth Accuracy — Full Explanation
+## 9. Stage 5 — Relation Prediction (Pix2SG + Florence-2)
 
-### What the depth model produces
+### Layer 1: Spatial Scaffold
 
-Depth Anything V2 Metric is a monocular depth estimation model.
-"Monocular" = single camera, single image — no stereo baseline.
-
-**Absolute accuracy (metric model, good conditions):**
-- Indoor (NYUv2-trained): MAE ~5–8cm for objects within 0.5–5m
-- Outdoor (KITTI-trained): MAE ~10–30cm for objects within 5–50m
-- Challenging: glass, mirrors, transparent objects, very dark surfaces
-
-**Why metric models are better than relative models:**
-```
-Relative model output: arbitrary scale (e.g. 0–1 or 0–255)
-  → requires a depth_scale_factor hack (was: ×10) to approximate metres
-  → inconsistent across images
-
-Metric model output: true metres, consistent across images
-  → depth_scale_factor = 1.0 always
-  → can directly compare depths across frames
-```
-
-### How depth map + mask masking works
+For every ordered pair of objects (A, B), geometric relations are derived from
+3D coordinates and mask positions:
 
 ```
-metric_depth shape: (H, W)   — every pixel has a depth value in metres
+Depth-based:
+  if Z_A < near_threshold (1.0m): A is "near"
+  if Z_A > far_threshold (3.0m):  A is "far"
+  if Z_A < Z_B - 0.5m: A is "in_front_of" B
 
-mask_binary shape: (H, W)    — True where this object's pixels are
+Positional:
+  bbox centroid comparison → "left_of", "right_of", "above", "below"
 
-depth extraction:
-    ys, xs = np.where(mask_binary)     # pixel coordinates of mask
-    depth_values = metric_depth[ys, xs]  # depth at each mask pixel
+Mask overlap:
+  if mask_IoU(A, B) > pix2sg_mask_overlap_thresh (0.05):
+    if A is smaller and inside B bbox: A "on" B
+    → "contains", "on_top_of", "overlapping"
 ```
 
-This is a direct index into the depth array using the mask's pixel coordinates.
-The result is an array of depth measurements (one per mask pixel) in true metres.
+### Layer 2: Florence-2 Semantic Relations (`_enrich_with_florence2`)
 
-The pipeline then applies erosion → sigma-clipping → histogram mode
-to get a single robust representative depth value `z_val`.
+**From `scene_understanding.py:542–603`:**
 
-### Sources of depth error
+```python
+for i in range(n):                      # subject
+    for j in range(n):                  # object
+        if i == j: continue
 
-1. **Model error** (~5–10%): monocular depth is fundamentally ambiguous
-2. **Boundary bleed** (→ fixed by erosion): mask edges cover background pixels
-3. **Transparent objects** (→ flagged): glass/water depth ≈ background depth
-4. **Wrong model variant** (→ fixed by CLIP): indoor model on outdoor scene or vice versa
-5. **Distortion** (→ fixed by undistortion): barrel/pincushion distortion shifts pixel positions
+        # Mask IoU check (from code lines 582-584):
+        inter = np.logical_and(sub_m, obj_m).sum()
+        union = np.logical_or(sub_m, obj_m).sum()
+        iou   = inter / union
+        if iou < relation_min_mask_overlap:   # 0.02
+            continue
 
----
-
-## 8. Coordinate Accuracy — Back-Projection Math
-
-### Full derivation
-
-Camera model (pinhole):
-```
-u = fx * (X/Z) + cx
-v = fy * (Y/Z) + cy
+        pred = florence2.predict_relation(
+            image_bgr, sub_mask, obj_mask, sub_label, obj_label)
 ```
 
-Inverting to get 3D from pixel + depth:
-```
-X = (u - cx) * Z / fx
-Y = (v - cy) * Z / fy
-Z = z_val   (from depth model, metres)
-```
+**`predict_relation` method:**
 
-`coordinates_3d` in scene JSON stores `[X, Y, Z]` in metres relative to camera.
+```python
+# Step 1: Union bounding box of both masks (10px padding)
+union_m = sub_m | obj_m
+ys, xs  = np.where(union_m)
+x1 = max(0, int(xs.min()) - 10)
+x2 = min(W, int(xs.max()) + 10)
+y1 = max(0, int(ys.min()) - 10)
+y2 = min(H, int(ys.max()) + 10)
+crop = full_img_bgr[y1:y2, x1:x2]
 
-### Centroid pixel used for back-projection
+# Step 2: Color overlay (alpha=0.45)
+crop_rgb = cv2.cvtColor(crop, BGR2RGB).astype(float32)
+crop_rgb[sub_crop, 0] = clip(crop_rgb[sub_crop, 0] * 0.55 + 255 * 0.45, 0, 255)  # RED channel
+crop_rgb[obj_crop, 2] = clip(crop_rgb[obj_crop, 2] * 0.55 + 255 * 0.45, 0, 255)  # BLUE channel
 
-The depth-weighted centroid `(u_c, v_c)` is computed from all mask pixels:
-```
-weight_i = 1 / (depth_i + ε)
-u_c = Σ(weight_i * u_i) / Σ weight_i
-v_c = Σ(weight_i * v_i) / Σ weight_i
-```
+# Step 3: Florence-2 <MORE_DETAILED_CAPTION> (standalone task token — no appended text)
+result = florence2._run_task("<MORE_DETAILED_CAPTION>", pil_crop)
+raw    = result.get("<MORE_DETAILED_CAPTION>", "")
+# → "The red person is sitting on the blue chair near a wooden table."
 
-This centroid is back-projected with `z_val` to produce `coordinates_3d`.
-
-### Dual erosion comparison
-
-Every object gets computed **twice**:
-
-| Field | With adaptive erosion | Without erosion |
-|---|---|---|
-| `depth_stats` | eroded mask depth | raw mask depth |
-| `coordinates_3d` | from eroded z_val | from raw z_val |
-| `mask_centroid_2d` | eroded centroid | raw centroid |
-| suffix | (default) | `_no_erosion` |
-
-This lets you compare how much erosion affects depth accuracy per object.
-Thin objects (pencil, finger) show large differences; large flat objects show small differences.
-
----
-
-## 9. Dual Segmentor Strategy
-
-```
-run_both_segmentors = True  →  both run on every image
-
-GroundedSAM2                        SAM2 AMG
-────────────────                    ──────────────────
-Text query → GDINO                  Grid of points
-→ object bboxes                     → all possible masks
-→ SAM2 per bbox                     → parts, small objects,
-→ one clean mask                      background regions
-  per entity
-
-        IoU deduplication
-        ─────────────────
-        For each AMG mask:
-            IoU with any GDINO mask > 0.7?
-            YES → discard (GDINO mask is better quality)
-            NO  → keep (new information: part or small object)
-
-        Merged list:
-        [GDINO masks] + [non-duplicate AMG masks]
-
-        Every mask gets:
-            segmentor: "GroundedSAM2"  or  "SAM2_AMG"
+# Step 4: Map to canonical predicate via phrase lookup table
+predicate = florence2._parse_relation_phrase(raw.lower())
+# "sitting on" → "on",  "next to" → "is_next_to",  "holding" → "holds", etc.
+# Returns None if no phrase from the lookup table matched
 ```
 
-Why this matters:
-- GDINO alone misses: buttons, coins, text on packaging, textures, background sky
-- AMG alone gives: part-level masks (shirt sleeve ≠ person), no semantic labels
-- Together: complete coverage at both object and part level
+**Important:** The task token `<MORE_DETAILED_CAPTION>` must be the **only** text
+passed to `_run_task` — no appended prompt text. transformers 5.x enforces this
+strictly and raises `"task token should be the only token in the text"` otherwise.
+Earlier versions used `<CAPTION>` with an appended prompt; that approach no longer
+works and was replaced.
 
----
+**Why color overlay works:** Florence-2 understands natural language colour references
+("the red X", "the blue Y"). The overlay makes the two regions unambiguous within
+the crop, so the caption naturally describes the relationship between exactly those
+two objects even when other objects appear in the same crop.
 
-## 10. Dual Erosion Comparison
-
-`depth_erosion_comparison = True` causes every mask to be processed twice
-through `_mask_depth_stats_and_3d(use_erosion=True/False)`.
-
-Use cases:
-- **Thin objects** (pencil, wire): erosion destroys the mask → use `_no_erosion` fields
-- **Large objects** (wall, floor): erosion removes boundary bleed → use eroded fields
-- **Debugging**: compare both to understand how boundary effects influence depth
-- **Downstream analysis**: choose which set to use per object based on `min_dim`
-
-The `use_erosion` parameter was added to `_mask_depth_stats_and_3d()` as a clean
-parameter (no global state mutation) to support this without code duplication.
-
----
-
-## 11. Relation Pipeline
-
+**`_parse_relation_phrase` lookup table (abbreviated):**
 ```
-objects_3d list (all objects with 3D coords)
-         │
-         ▼
-Pix2SG.predict(objects_3d)
-    │
-    ├── Spatial scaffold
-    │     For each object pair:
-    │       depth A vs B → near/far (thresholds: 1.0m, 3.0m)
-    │       bbox position → left-of, right-of, above, below
-    │       mask overlap  → on-top-of, contains
-    │
-    └── Florence-2 semantic enrichment
-          For each overlapping pair (mask IoU > 0.02):
-            crop = bounding box of union
-            overlay: subject pixels → RED tint
-                     object pixels  → BLUE tint
-            Florence-2 <CAPTION> → "a person sitting on a chair"
-            extract predicate: "sitting on"
-            canonical form: "sitting_on"
-            → relation: {predicate, target_id, target_label, target_caption}
+"on top of" / "resting on" / "sitting on" / "standing on"  → "on"
+"under" / "below" / "beneath"                               → "under"
+"next to" / "beside" / "adjacent"                           → "is_next_to"
+"in front of"                                               → "in_front_of"
+"behind"                                                    → "behind"
+"inside" / "within" / "contained in"                        → "inside_of"
+"holding" / "carrying" / "gripping"                         → "holds"
+"wearing" / "dressed in"                                    → "wears"
+"riding" / "mounted on"                                     → "rides"
+... (20 entries total)
+```
+Returns `None` if no phrase matched — that pair gets no Florence-2 relation entry.
 
-relation entry structure:
+**Triplet structure:**
+```json
 {
-  "predicate":      "sitting_on",
-  "target_id":      "obj_3_GroundedSAM2",
-  "target_label":   "chair",
-  "target_caption": "a wooden dining chair"
+  "sub": "person",
+  "pred": "sitting_on",
+  "obj": "chair",
+  "sub_id": "obj_0_GroundedSAM2",
+  "obj_id": "obj_3_GroundedSAM2",
+  "score": 0.75,
+  "source_layer": "florence2"
 }
 ```
 
+### Relation Attachment (`_attach_relations_by_triplets`)
+
+Triplets are attached to `objects_3d` entries by ID first, then label fallback:
+
+```python
+id_to_obj = {str(o["id"]): o for o in objects_3d}
+
+for triplet in triplets:
+    # Match subject
+    source_obj = id_to_obj.get(str(triplet["sub_id"]))
+    if source_obj is None:
+        source_obj = find_by_label(triplet["sub"])   # partial string match
+
+    # Match target
+    target = id_to_obj.get(str(triplet["obj_id"]))
+    if target is None:
+        target = find_by_label(triplet["obj"])
+    if target is None:
+        target_id = f"external_{triplet['obj']}"     # object not in scene graph
+
+    # Build relation entry (includes target_label and target_caption)
+    relation_entry = {
+        "predicate":      triplet["pred"],
+        "target_id":      target_id,
+        "target_label":   target_obj["label"],
+        "target_caption": target_obj["sources"][...]["caption"],
+    }
+    source_obj["sources"][source_name]["relations"].append(relation_entry)
+```
+
 ---
 
-## 12. Output Structure
+## 10. Stage 6 — Serialisation
+
+Before `json.dump`, `_sam2_mask_array` (a numpy bool array, not JSON-serialisable)
+is stripped from every object entry. All other fields are Python native types
+(float, int, str, list, dict) and serialise cleanly.
+
+Output: `{output_dir}/scene_graph/{stem}_scene.json`
+
+---
+
+## 11. Stage 7 — Visualisation
+
+Two labelled overlay images are produced per image. Both are generated **before**
+`_sam2_mask_array` is stripped from `objects_3d` (they need the numpy masks).
+
+**`_sam2_segmentation.png`** — solid mask fills + contours + labels:
+- Each mask gets a deterministic colour from `_mask_colour(seed=mask_index)`:
+  `np.random.RandomState(seed).randint(60, 230, 3)` → stable colour per object
+- Solid fill drawn at full opacity, then contour outline in same colour
+- Label text on dark (0,0,0,180 alpha) pill background at mask centroid
+- Font scale: `sqrt(mask_area) / 250`, clamped to [0.35, 0.70]
+
+**`_sam2_tinted_overlay.png`** — original photo with semi-transparent tints + labels:
+- Original image copied, then each mask region blended: `α=0.45` tint over photo
+- Same label rendering as above (pill background, centroid-anchored)
+
+**`_depth_map.png`** — INFERNO false-colour depth map (cv2.COLORMAP_INFERNO).
+
+**`_3d_viz.png`** — 3D coordinate overlay with centroid positions annotated.
+
+No bounding box rectangles are drawn. No `[M]` tag prefix. No depth value in the label.
+
+---
+
+## 12. All Formulas in One Place
+
+```
+─── CLIP scene classification ──────────────────────────────────
+logits  = CLIP_similarity(image, [text_1 ... text_6])     shape: (6,)
+probs   = softmax(logits)
+indoor_score  = mean(probs[0:3])
+outdoor_score = mean(probs[3:6])
+scene_type = argmax([indoor_score, outdoor_score])
+
+─── FOV intrinsics fallback ────────────────────────────────────
+fx = W / (2 · tan(FOV_deg · π / 360))
+fy = fx
+cx = W/2,  cy = H/2
+
+─── Lens distortion correction ────────────────────────────────
+r² = x² + y²
+x_corr = x(1 + k1·r² + k2·r⁴) + 2·p1·x·y + p2·(r² + 2x²)
+y_corr = y(1 + k1·r² + k2·r⁴) + p1·(r² + 2y²) + 2·p2·x·y
+
+─── Mask IoU (dedup + overlap + relations) ──────────────────────
+IoU(A, B) = |A ∩ B| / |A ∪ B|         (pixel-level boolean masks)
+
+─── Adaptive erosion kernel ────────────────────────────────────
+min_dim = min(mask_h, mask_w)
+k = 0 if min_dim < 15
+  = 1 if min_dim < 30
+  = 2 if min_dim < 60
+  = config.mask_erosion_kernel_size  otherwise
+
+─── Depth extraction ───────────────────────────────────────────
+depth_at_mask = metric_depth[ys, xs]       direct numpy index
+
+─── Sigma clipping ─────────────────────────────────────────────
+μ = mean(depth_at_mask)
+σ = std(depth_at_mask)
+keep_i iff |depth_i - μ| < outlier_sigma · σ      (outlier_sigma = 2.0)
+
+─── Transparency detection ──────────────────────────────────────
+border_ring = dilate(mask, 5×5) AND NOT mask
+depth_sep   = |mean(depth_at_mask) - mean(metric_depth[border_ring])|
+possibly_transparent = depth_sep < depth_transparency_threshold   (0.15m)
+
+─── Depth-weighted centroid ─────────────────────────────────────
+w_i = 1 / (depth_i + 1e-6)
+cx  = Σ(w_i · x_i) / Σ(w_i)
+cy  = Σ(w_i · y_i) / Σ(w_i)
+
+─── Inner circle radius ────────────────────────────────────────
+area   = number of True pixels in mask
+radius = sqrt(area · central_frac / π)     (central_frac = 0.5)
+inner  = pixels where (x-cx)² + (y-cy)² ≤ radius²
+
+─── Histogram mode (z_val) ──────────────────────────────────────
+n_bins = clamp(inner.size // 5,  min=10, max=100)
+hist, edges = histogram(inner_depths, bins=n_bins)
+peak   = argmax(hist)
+z_val  = (edges[peak] + edges[peak+1]) / 2
+
+─── Back-projection ─────────────────────────────────────────────
+X = (u - cx_principal) · z_val / fx
+Y = (v - cy_principal) · z_val / fy
+Z = z_val
+
+─── RAM++ dynamic GDINO query ───────────────────────────────────
+tags  = ram_plus.inference(transform(full_image), model)   → pipe-separated string
+tags_list = parse(tags)[:max_tags]                         → list of nouns
+gdino_query = ". ".join(tags_list) + "."                   → GDINO text input
+
+─── Florence-2 labelling (label_crop) ───────────────────────────
+Primary:   caption = Florence2("<MORE_DETAILED_CAPTION>", crop)
+           label   = first non-stopword noun in caption
+Fallback:  od      = Florence2("<OD>", crop)
+           label   = label from bbox with largest area in od["<OD>"]["bboxes"]
+
+─── Florence-2 color overlay (relation prediction) ─────────────
+# alpha = 0.45
+crop_rgb[sub_pixels, 0] = clip(crop_rgb[sub_pixels, 0] · 0.55 + 255 · 0.45, 0, 255)  # RED
+crop_rgb[obj_pixels, 2] = clip(crop_rgb[obj_pixels, 2] · 0.55 + 255 · 0.45, 0, 255)  # BLUE
+raw_caption = Florence2("<MORE_DETAILED_CAPTION>", crop)   # standalone task token only
+predicate   = _parse_relation_phrase(raw_caption)          # phrase → canonical predicate
+
+─── 16-bit depth PNG ────────────────────────────────────────────
+max_range = 20.0m (indoor) or 80.0m (outdoor)
+depth_16  = clip(depth / max_range · 65535,  0, 65535).astype(uint16)
+
+─── EMA temporal depth filtering (multi-frame, optional) ────────
+filtered[t] = α · depth[t] + (1-α) · filtered[t-1]     α = 0.6
+```
+
+---
+
+## 13. Fixes Applied (5.1–5.7)
+
+### Fix 5.1 — Correct depth key + CLIP model selection
+
+**Bug:** `out["depth"]` returns a PIL uint8 image (0–255), not metres.
+**Fix:** Use `out["predicted_depth"]` (raw float32 tensor in metres).
+
+**Bug:** Single depth model used regardless of scene type → wrong scale.
+**Fix:** CLIP classifies indoor/outdoor, matching metric model loads.
+CLIP unloads immediately after to free VRAM (~340MB).
+
+**Bug:** `_resize_to_target` was called inside `infer()` forcing a 512×512 square
+resize before `process_image` resized again → double resize, destroyed aspect ratio.
+**Fix:** Removed the resize from `infer()`; `process_image` does one correct resize.
+
+### Fix 5.2 — Camera calibration (OpenCV checkerboard)
+
+Priority system: calibration JSON > explicit fx/fy > FOV estimate.
+`tools/calibrate_camera.py` produces calibration JSON with < 0.5% fx/fy error.
+Distortion coefficients (k1, k2, p1, p2) applied via `cv2.undistort` before any
+depth or mask processing.
+
+### Fix 5.3 — GroundedSAM2 replaces SAM2 AMG as primary segmentor
+
+GDINO text-prompted detection → one clean object-level mask per entity.
+SAM2 AMG kept as secondary (parts, small objects, background).
+`grounded_sam2_fallback_to_amg = True` as safety net.
+
+### Fix 5.4 — Florence-2 replaces GRiT heuristic as primary labeller
+
+GRiT's "last word of caption" heuristic failed ~30% of time.
+Florence-2 `label_crop` uses a two-step approach:
+1. `<MORE_DETAILED_CAPTION>` → full sentence → noun extracted by `_extract_label_from_caption`
+   (skips ~50 stopwords including articles, prepositions, adjectives, colour words)
+2. `<OD>` fallback if caption extraction yielded "object" → largest bbox label
+
+The full caption is stored in `sources.Florence2.caption` in the scene JSON for reference.
+
+### Fix 5.5 — Post-hoc mask filters (now fully disabled)
+
+Original strict filters removed small objects, background, low-confidence masks.
+All thresholds set to 0 / 1.0 → every mask retained.
+Re-enable selectively in config.py for production use.
+
+### Fix 5.6 — Florence-2 semantic relation prediction
+
+For overlapping mask pairs (IoU > 0.02):
+1. Crop to union bbox
+2. RED tint on subject, BLUE tint on object
+3. Florence-2 `<MORE_DETAILED_CAPTION>` (standalone) → `_parse_relation_phrase` → canonical predicate
+4. Stored alongside spatial scaffold relations
+
+### Fix 5.7 — Depth accuracy: adaptive erosion + sigma-clipping + transparency
+
+Three independent improvements to per-mask depth quality:
+1. **Adaptive erosion** — kernel scales to min(mask_h, mask_w) to protect thin objects
+2. **Sigma-clipping** — reject pixels beyond 2σ from mask mean depth
+3. **Transparency detection** — border ring depth comparison → `possibly_transparent` flag
+
+`use_erosion` parameter added to `_mask_depth_stats_and_3d` for dual-run comparison
+(no global state mutation, clean parameter interface).
+
+### Fix 5.8 — RAM++ dynamic GDINO vocabulary + improved labelling
+
+**Problem:** GDINO used a static generic category list for every image, causing missed
+detections for scene-specific objects and false positives for irrelevant categories.
+Florence-2 `predict_relation` used `<CAPTION>` with appended text — broken in
+transformers 5.x. Florence-2 `label_crop` only used `<OD>`, missing the richer
+`<MORE_DETAILED_CAPTION>` output.
+
+**Fixes:**
+1. **RAM++ whole-image tagging** — runs before GroundedSAM2; builds a per-image
+   GDINO query from scene-specific tags. `update_text_query()` added to
+   `GroundedSAM2Wrapper`.
+2. **`label_crop` two-step** — primary: `<MORE_DETAILED_CAPTION>` → noun extraction
+   with `_extract_label_from_caption` (~50-word stoplist); fallback: `<OD>` largest-bbox.
+3. **`predict_relation` task token** — changed from `<CAPTION>` + appended text to
+   `<MORE_DETAILED_CAPTION>` standalone. Fixes `"task token should be the only token"`
+   error in transformers 5.x; relation prediction now executes correctly.
+4. **`all_tied_weights_keys` property setter** — RAM++ shim added a read-only property
+   to `PreTrainedModel` that blocked Florence-2 loading after RAM++. Fixed by adding
+   a setter that stores override via `self.__dict__`.
+5. **RAM++ per-crop labelling** — added as Priority 3 in the label chain, between
+   Florence-2 and GRiT.
+6. **Output cleanup** — per-object mask PNGs removed; output reduced to 7 flat files
+   per image; labelled overlay images (`_sam2_segmentation.png`,
+   `_sam2_tinted_overlay.png`) added with pill-background labels at mask centroids.
+
+---
+
+## 14. Dead Code Removed
+
+Removed from `scene_understanding.py` (~745 lines, ~22% of original file):
+
+| Class / Code | Lines | Reason |
+|---|---|---|
+| `FasterRCNNWrapper` | ~120 | Superseded by GroundedSAM2 |
+| `DETRWrapper` | ~80 | Superseded by GroundingDINO |
+| `Pix2SeqWrapper` / OWLViT | ~100 | Checkpoint unavailable; never ran |
+| `SGSGWrapper` (SGTR) | ~330 | SGTR repo removed; no checkpoint |
+| SGTR path setup | ~20 | Dead without SGTR |
+| `_OIV6_PREDICATES` dict | ~70 | Only used by SGSGWrapper |
+| `_save_model_output` | ~20 | Never called |
+| `sgtr_stats` references | ~5 | Caused NameError post-removal |
+
+---
+
+## 15. Output File Structure
+
+All outputs land flat inside `output_scene/scene_graph/`. Exactly **7 files per image**,
+no subdirectories, no per-object mask PNGs.
 
 ```
 output_scene/
-├── scene_graph/
-│   └── {stem}_scene.json          ← main output
-├── depth_maps/
-│   ├── {stem}_depth.png           ← colourised depth
-│   └── {stem}_depth_16bit.png     ← 16-bit depth (optional)
-├── visualizations/
-│   └── {stem}_viz.png             ← annotated image
-└── masks/
-    └── {stem}_obj_{i}_mask.png    ← per-object masks (optional)
+├── depth/
+│   └── {stem}_depth_metric.npy        ← float32 H×W metres (always saved)
+└── scene_graph/
+    ├── {stem}_scene.json               ← full scene graph (metadata + objects)
+    ├── {stem}_depth_map.png            ← INFERNO false-colour depth map
+    ├── {stem}_3d_viz.png               ← 3D coordinate overlay
+    ├── {stem}_depth_mask_mapping_A.png ← depth/mask matching visualisation (mode A)
+    ├── {stem}_depth_mask_mapping_B.png ← depth/mask matching visualisation (mode B)
+    ├── {stem}_sam2_segmentation.png    ← solid-colour mask fills + contours + labels
+    └── {stem}_sam2_tinted_overlay.png  ← original photo with α=0.45 tinted overlays + labels
 ```
 
-### scene JSON structure (per object)
+**Per-object mask PNGs are not saved** (`save_per_object_masks = False` hardcoded).
+`mask_path` and `depth_map_path` in the scene JSON are always `null`.
 
+**The labelled overlay images** (`_sam2_segmentation.png`, `_sam2_tinted_overlay.png`)
+are generated **before** `_sam2_mask_array` is stripped — they use the transient numpy
+mask arrays still present on `objects_3d` entries at that point. Each label is drawn
+as white text on a dark pill background, centred at the mask centroid, with font
+size scaled to `sqrt(mask_area) / 250` (clamped 0.35–0.70).
+
+**Scene JSON — top-level structure:**
+```json
+{
+  "metadata": {
+    "timestamp": "2026-03-09 14:22:01",
+    "segmentor": "SAM2",
+    "intrinsics": {"fx": 623.5, "fy": 623.5, "cx": 360.0, "cy": 640.0},
+    "models": ["DepthAnythingV2-Metric-Indoor", "GroundingDINO", "SAM2", "Florence-2", "RAM++"],
+    "rampp_tags": ["beach", "cloudy", "coast", "footprint", "sea", "sand", "shoreline", "sky"],
+    "gdino_query_used": "beach. cloudy. coast. footprint. sea. sand. shoreline. sky.",
+    "relation_sources": { "...": "..." },
+    "relation_debug": { "...": "..." },
+    "depth_map": "scene_graph/{stem}_depth_map.png",
+    "segmentation_image": "scene_graph/{stem}_segmentation.png",
+    "sam2_segmentation_image": "scene_graph/{stem}_sam2_segmentation.png",
+    "sam2_tinted_overlay_image": "scene_graph/{stem}_sam2_tinted_overlay.png"
+  },
+  "objects": [ ... ]
+}
+```
+
+**Per-object entry in scene JSON:**
 ```json
 {
   "id": "obj_0_GroundedSAM2",
   "label": "person",
+  "confidence": 0.87,
   "conf": 0.87,
   "segmentor": "GroundedSAM2",
-  "bbox": [x1, y1, x2, y2],
-  "coordinates_3d": [X, Y, Z],
-  "coordinates_3d_no_erosion": [X, Y, Z],
+  "bbox": [359, 4, 572, 319],
+  "coordinates_3d": {"x": -0.23, "y": 0.41, "z": 2.34},
+  "coordinates_3d_no_erosion": {"x": -0.25, "y": 0.43, "z": 2.41},
   "depth_stats": {
-    "z_val": 2.34,
-    "z_val_pixels": 2310,
+    "min": 2.01, "max": 2.89, "mean": 2.38, "median": 2.35, "std": 0.18,
+    "num_pixels": 4210, "z_val": 2.34, "z_val_pixels": 2310,
     "possibly_transparent": false,
     "depth_separation_from_background": 0.82
   },
-  "depth_stats_no_erosion": { ... },
-  "mask_centroid_2d": [u, v],
-  "mask_centroid_2d_no_erosion": [u, v],
+  "depth_stats_no_erosion": { "...": "..." },
+  "mask_centroid_2d": [312, 445],
+  "mask_centroid_2d_no_erosion": [315, 448],
   "sam2_mask_index": 0,
   "mask_matched": true,
-  "mask_path": "masks/..._obj_0_mask.png",
+  "mask_path": null,
+  "depth_map_path": null,
   "sources": {
-    "GroundedSAM2": {"label": "person", "conf": 0.87},
-    "Florence2": {"label": "person", "caption": "a man in a blue shirt"},
-    "GRiT": {"caption": "a man standing near a table"},
-    "Pix2SG": {"relations": [...]}
-  },
-  "relations": [
-    {
-      "predicate": "standing_near",
-      "target_id": "obj_2_GroundedSAM2",
-      "target_label": "table",
-      "target_caption": "a wooden dining table"
+    "GroundedSAM2": {"label": "person", "conf": 0.87, "caption": "person"},
+    "Florence2": {
+      "label": "person",
+      "caption": "a man in a blue shirt standing near a wooden table"
+    },
+    "RAM++": {
+      "label": "person",
+      "caption": "person | clothing | shirt",
+      "tags": ["person", "clothing", "shirt"]
+    },
+    "Pix2SG": {
+      "relations": [
+        {
+          "predicate": "is_next_to",
+          "target_id": "obj_2_GroundedSAM2",
+          "target_label": "table",
+          "target_caption": "a brown wooden dining table",
+          "score": 0.85
+        }
+      ]
     }
-  ]
+  }
 }
 ```
 
 ---
 
-## 13. Config Reference
+## 16. Config Reference
 
-All settings live in `config.py` → `PreprocessConfig` dataclass.
+All settings in `config.py` → `PreprocessConfig` dataclass.
 
 ### Depth
-
-| Field | Default | Description |
+| Field | Default | Meaning |
 |---|---|---|
-| `depth_model_variant` | `"auto"` | `"auto"` \| `"indoor"` \| `"outdoor"` |
+| `depth_model_variant` | `"auto"` | `"auto"` / `"indoor"` / `"outdoor"` |
 | `depth_scale_factor` | `1.0` | Always 1.0 for metric models |
-| `depth_adaptive_erosion` | `True` | Scale erosion kernel to object size |
+| `depth_adaptive_erosion` | `True` | Scale kernel to object size |
 | `mask_erosion_kernel_size` | `5` | Max erosion kernel (px) |
-| `depth_central_fraction` | `0.5` | Inner fraction used for histogram |
+| `depth_central_fraction` | `0.5` | Inner fraction for histogram |
 | `depth_outlier_sigma` | `2.0` | Sigma-clipping threshold (0 = off) |
 | `depth_transparency_check` | `True` | Enable border ring comparison |
-| `depth_transparency_threshold` | `0.15` | Metres separation to flag transparent |
-| `depth_erosion_comparison` | `True` | Compute both eroded and raw depth stats |
+| `depth_transparency_threshold` | `0.15` | Metres below which → transparent |
+| `depth_erosion_comparison` | `True` | Store both eroded and raw stats |
 
 ### Camera
-
-| Field | Default | Description |
+| Field | Default | Meaning |
 |---|---|---|
 | `camera_calibration_file` | `None` | Path to calibration JSON |
-| `apply_undistortion` | `True` | Apply cv2.undistort() |
+| `apply_undistortion` | `True` | Run cv2.undistort() |
 | `camera_fx/fy/cx/cy` | `None` | Explicit intrinsics (priority 2) |
 | `camera_fov_degrees` | `60.0` | FOV fallback (priority 3) |
 
 ### Segmentation
-
-| Field | Default | Description |
+| Field | Default | Meaning |
 |---|---|---|
-| `run_both_segmentors` | `True` | Run GDINO+SAM2 AND SAM2 AMG |
-| `run_both_segmentors_iou_dedup` | `0.7` | IoU threshold to dedup AMG masks |
-| `grounding_dino_box_thresh` | `0.15` | GDINO detection confidence |
-| `grounding_dino_text_thresh` | `0.15` | GDINO token confidence |
-| `sam2_amg_min_mask_region_area` | `100` | Min mask area in px (AMG) |
-| `grounded_sam2_fallback_to_amg` | `True` | Fall back to AMG if GDINO fails |
+| `run_both_segmentors` | `True` | GDINO+SAM2 AND SAM2 AMG |
+| `run_both_segmentors_iou_dedup` | `0.7` | IoU threshold to drop AMG duplicates |
+| `grounding_dino_box_thresh` | `0.15` | Min GDINO detection confidence |
+| `grounding_dino_text_thresh` | `0.15` | Min GDINO token confidence |
+| `sam2_amg_min_mask_region_area` | `100` | Min AMG mask area (px) |
+| `grounded_sam2_fallback_to_amg` | `True` | Use AMG if GDINO fails |
 
 ### Filtering (all disabled)
-
-| Field | Default | Description |
+| Field | Default | Meaning |
 |---|---|---|
 | `sam2_post_filter_min_stability` | `0.0` | 0 = disabled |
 | `sam2_post_filter_min_pred_iou` | `0.0` | 0 = disabled |
@@ -764,32 +1242,41 @@ All settings live in `config.py` → `PreprocessConfig` dataclass.
 | `sam2_post_filter_max_area_fraction` | `1.0` | 1.0 = allow background |
 
 ### Relations
-
-| Field | Default | Description |
+| Field | Default | Meaning |
 |---|---|---|
 | `florence2_relation_enabled` | `True` | Florence-2 semantic relations |
 | `relation_min_mask_overlap` | `0.02` | Min IoU to attempt relation |
-| `pix2sg_depth_near_threshold` | `1.0` | Metres — near/far boundary |
-| `pix2sg_depth_far_threshold` | `3.0` | Metres — far boundary |
+| `pix2sg_depth_near_threshold` | `1.0` | Near boundary (metres) |
+| `pix2sg_depth_far_threshold` | `3.0` | Far boundary (metres) |
+
+### RAM++
+| Field | Default | Meaning |
+|---|---|---|
+| `rampp_enabled` | `True` | Enable RAM++ for GDINO query + per-crop labelling |
+| `rampp_checkpoint_path` | `"checkpoints/ram_plus_swin_large_14m.pth"` | Local .pth path |
+| `rampp_image_size` | `384` | Input resolution for RAM++ Swin-L |
+| `rampp_vit` | `"swin_l"` | Backbone variant (`"swin_l"` or `"swin_b"`) |
+| `rampp_default_confidence` | `0.70` | Confidence assigned to RAM++ labels |
+| `rampp_max_tags` | `8` | Max tags kept for dynamic GDINO query |
 
 ---
 
-## 14. Reproduction / Setup
+## 17. Reproduction
 
 ```bash
-# 1. Clone your repo
-git clone https://github.com/<you>/citv.git
+# 1. Clone repo
+git clone https://github.com/omondistanley/citv.git
 cd citv
 
-# 2. Run one-shot setup (clones GRiT+SAM2, downloads checkpoints,
-#    builds detectron2+SAM2 C extension, installs all deps,
-#    pre-downloads all HuggingFace models)
+# 2. One-shot setup (clones GRiT+SAM2, downloads all checkpoints,
+#    builds detectron2+SAM2_C, installs all deps, pre-downloads
+#    all HuggingFace models)
 bash setup.sh
 
-# 3. Run the pipeline
+# 3. Run pipeline
 python scene_understanding.py --input_dir images --output_dir output_scene
 
-# Optional: camera calibration for accurate intrinsics
+# Optional: camera calibration
 python tools/calibrate_camera.py \
     --images path/to/checkerboard_frames/ \
     --pattern 9x6 \
@@ -798,22 +1285,4 @@ python tools/calibrate_camera.py \
 # Then set in config.py: camera_calibration_file = "calibration.json"
 ```
 
-**Requirements:**
-- Python 3.9–3.11
-- CUDA GPU (≥ 8 GB VRAM)
-- `nvcc` on PATH (`sudo apt install nvidia-cuda-toolkit`)
-- ~20 GB free disk space
-
-**Disk breakdown:**
-
-| Component | Size |
-|---|---|
-| PyTorch + CUDA | ~5 GB |
-| Depth-Anything-V2 × 2 | ~2.6 GB |
-| Florence-2-large | ~900 MB |
-| GRiT + detectron2 build | ~3 GB |
-| SAM2 checkpoint | ~900 MB |
-| GroundingDINO | ~341 MB |
-| CLIP | ~340 MB |
-| YOLOv8x-cls | ~130 MB |
-| **Total** | **~13–15 GB** |
+**Requirements:** Python 3.9–3.11, CUDA GPU ≥ 8GB VRAM, nvcc on PATH, ~20GB disk.

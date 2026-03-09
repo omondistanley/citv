@@ -158,11 +158,7 @@ After setup, the first pipeline run is instant — all models are pre-cached.
 ### Run the pipeline
 
 ```bash
-<<<<<<< HEAD
-python scene_understanding.py --input_dir images --output_dir output_scene
-=======
 gcloud compute ssh --zone "zone here" "instance here" --project "name"
->>>>>>> 7c99bd6945c2667ff3a7431765d5a2a02f9498cb
 ```
 
 | Argument | Description |

@@ -150,9 +150,14 @@ class PreprocessConfig:
     # florence2_task: Florence-2 task token for per-crop labelling.
     #   "<OD>" returns structured {label, bbox} — we take the highest-conf label.
     #   "<CAPTION>" returns a sentence — less structured but works without boxes.
+    # florence2_label_enabled:
+    #   True  -> Florence-2 participates in object labelling.
+    #   False -> Florence-2 is skipped for labelling (can still be used for relations
+    #            via florence2_relation_enabled).
     # -------------------------------------------------------------------------
     florence2_model: str = "microsoft/Florence-2-large"
     florence2_task: str = "<OD>"
+    florence2_label_enabled: bool = True
 
     # -------------------------------------------------------------------------
     # Grounded-SAM2 (Fix 5.3)
@@ -207,7 +212,50 @@ class PreprocessConfig:
     relation_min_mask_overlap: float = 0.02  # pixel IoU threshold for semantic relation attempt
 
     # -------------------------------------------------------------------------
-    # YOLO classification (kept as secondary fallback after Florence-2)
+    # RAM++ labelling (replaces GRiT + YOLOv8-cls fallback)
+    #
+    # Requires local Recognize Anything installation (module "ram") and a
+    # local checkpoint file path.
+    #
+    # rampp_enabled: enable RAM++ fallback in object labelling.
+    # rampp_checkpoint_path: local .pth checkpoint path for RAM++.
+    #   Example: "recognize-anything/pretrained/ram_plus_swin_large_14m.pth"
+    # rampp_repo_path: optional local repo path to append to sys.path when RAM
+    #   is not installed into site-packages.
     # -------------------------------------------------------------------------
-    yolo_cls_model: str = "yolov8x-cls.pt"
-    yolo_cls_conf_thresh: float = 0.30
+    rampp_enabled: bool = True
+    rampp_checkpoint_path: Optional[str] = "checkpoints/ram_plus_swin_large_14m.pth"
+    rampp_repo_path: Optional[str] = None
+    rampp_image_size: int = 384
+    rampp_vit: str = "swin_l"
+    rampp_default_confidence: float = 0.70
+    rampp_max_tags: int = 8
+
+    # -------------------------------------------------------------------------
+    # SAM3 (parallel segmentor — comparison with SAM2)
+    #
+    # run_sam3: if True, SAM3 is initialised alongside SAM2 and run on every
+    #   image.  Results are written to scene_graph/sam3/ as a parallel track.
+    #   The main _scene.json keeps SAM2 objects in "objects"; SAM3 objects are
+    #   stored separately under "objects_sam3" for direct comparison.
+    # sam3_only: if True, pipeline runs only depth + SAM3 (no SAM2). Use for
+    #   Run 2 when comparing SAM2 vs SAM3 in two separate runs; avoids loading
+    #   both segmentors in one process.
+    # sam3_only_use_existing_depth: if True and sam3_only, load metric_depth
+    #   from {output_dir}/depth/{stem}_depth_metric.npy when present (e.g.
+    #   from Run 1); otherwise compute depth. Saves time and memory in Run 2.
+    # sam3_confidence_threshold: minimum SAM3 presence score to keep a mask.
+    # sam3_checkpoint_path: local path to sam3.pt; if None and
+    #   sam3_load_from_hf=True the checkpoint is downloaded from HF hub.
+    # sam3_text_query: text prompt fed to SAM3 (same free-form style as GDINO).
+    # -------------------------------------------------------------------------
+    run_sam3: bool = False          # opt-in — set True to enable SAM3 pass
+    sam3_only: bool = False         # Run 2: depth + SAM3 only, no SAM2
+    sam3_only_use_existing_depth: bool = False  # Reuse depth from Run 1 when sam3_only
+    sam3_confidence_threshold: float = 0.3
+    sam3_checkpoint_path: Optional[str] = "/home/stanleyomondi/.cache/huggingface/hub/models--facebook--sam3/snapshots/3c879f39826c281e95690f02c7821c4de09afae7/sam3.pt"
+    sam3_load_from_hf: bool = False  # checkpoint already cached locally
+    sam3_text_query: str = (
+        "person. animal. vehicle. furniture. appliance. food. "
+        "clothing. container. tool. building. plant. electronics. object."
+    )
