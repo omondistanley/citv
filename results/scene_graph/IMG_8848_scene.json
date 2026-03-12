@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "timestamp": "2026-03-12 17:44:09",
+    "segmentor": "SAM2",
+    "intrinsics": {
+      "fx": 1108.5125168440816,
+      "fy": 1108.5125168440816,
+      "cx": 640.0,
+      "cy": 480.0
+    },
+    "models": [
+      "GroundedSAM2",
+      "Florence-2",
+      "Pix2SG"
+    ],
+    "rampp_tags": [],
+    "gdino_query_used": "person. man. woman. child. animal. dog. cat. car. truck. bicycle. motorcycle. bus. chair. table. desk. sofa. bed. shelf. cabinet. door. window. bottle. cup. bowl. plate. glass. laptop. phone. keyboard. monitor. television. bag. backpack. book. clock. lamp. tree. plant. sign.",
+    "relation_sources": {
+      "Pix2SG": {
+        "active": true,
+        "backend": "spatial_scaffold",
+        "reason": "No precomputed triplets dir at /home/stanleyomondi/citv/pix2sg_triplets. Using spatial scaffold backend."
+      }
+    },
+    "relation_debug": {
+      "pix2sg": {
+        "input_triplets": 0,
+        "attached": 0,
+        "subject_id_matched": 0,
+        "subject_label_matched": 0,
+        "target_id_matched": 0,
+        "target_label_matched": 0,
+        "external_targets": 0,
+        "unmatched_subjects": 0
+      },
+      "mask_iou_match_thresh": 0.1,
+      "pix2sg_mask_overlap_thresh": 0.05,
+      "pix2sg_depth_near_threshold": 1.0,
+      "raw_triplets": {
+        "pix2sg": 0
+      },
+      "num_detected_objects": 1,
+      "num_mask_matched": 1
+    },
+    "depth_map": "scene_graph/IMG_8848_depth_map.png",
+    "segmentation_image": "scene_graph/IMG_8848_segmentation.png",
+    "sam2_segmentation_image": "scene_graph/IMG_8848_sam2_segmentation.png",
+    "sam2_tinted_overlay_image": "scene_graph/IMG_8848_sam2_tinted_overlay.png"
+  },
+  "objects": [
+    {
+      "id": "obj_0_GroundedSAM2",
+      "label": "child",
+      "confidence": 0.6742,
+      "conf": 0.6742,
+      "bbox": [
+        584,
+        476,
+        802,
+        852
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 0.467,
+        "y": 1.375,
+        "z": 9.237
+      },
+      "depth_stats": {
+        "min": 8.4105,
+        "max": 9.8416,
+        "mean": 9.1668,
+        "median": 9.2068,
+        "std": 0.2874,
+        "num_pixels": 41152,
+        "z_val": 9.2375,
+        "z_val_pixels": 20013,
+        "possibly_transparent": true,
+        "depth_separation_from_background": 0.0771
+      },
+      "mask_centroid_2d": [
+        696,
+        645
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 0.467,
+        "y": 1.401,
+        "z": 9.246
+      },
+      "depth_stats_no_erosion": {
+        "min": 8.3655,
+        "max": 9.9039,
+        "mean": 9.1672,
+        "median": 9.2086,
+        "std": 0.3004,
+        "num_pixels": 44177,
+        "z_val": 9.2464,
+        "z_val_pixels": 21363,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.4772
+      },
+      "mask_centroid_2d_no_erosion": [
+        696,
+        648
+      ],
+      "sam2_mask_index": 0,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "child",
+          "label": "child",
+          "confidence": 0.6742
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    }
+  ]
+}

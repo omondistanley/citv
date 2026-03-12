@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2026-03-09 00:52:10",
+    "timestamp": "2026-03-09 18:59:28",
     "segmentor": "SAM2",
     "intrinsics": {
       "fx": 498.8306325798367,
@@ -34,11 +34,11 @@
     },
     "relation_debug": {
       "pix2sg": {
-        "input_triplets": 655,
-        "attached": 655,
-        "subject_id_matched": 655,
+        "input_triplets": 654,
+        "attached": 654,
+        "subject_id_matched": 654,
         "subject_label_matched": 0,
-        "target_id_matched": 655,
+        "target_id_matched": 654,
         "target_label_matched": 0,
         "external_targets": 0,
         "unmatched_subjects": 0
@@ -47,7 +47,7 @@
       "pix2sg_mask_overlap_thresh": 0.05,
       "pix2sg_depth_near_threshold": 1.0,
       "raw_triplets": {
-        "pix2sg": 655
+        "pix2sg": 654
       },
       "num_detected_objects": 57,
       "num_mask_matched": 57
@@ -171,8 +171,8 @@
             {
               "predicate": "overlapping",
               "target_id": "obj_38_GroundedSAM2",
-              "target_label": "lamp",
-              "target_caption": "lamp | ceiling | curtain | flag pole | pole",
+              "target_label": "bottle",
+              "target_caption": "bottle",
               "score": 0.85
             },
             {
@@ -198,23 +198,9 @@
             },
             {
               "predicate": "at",
-              "target_id": "obj_6_GroundedSAM2",
-              "target_label": "food",
-              "target_caption": "food",
-              "score": 0.75
-            },
-            {
-              "predicate": "at",
               "target_id": "obj_7_GroundedSAM2",
               "target_label": "food",
               "target_caption": "food",
-              "score": 0.75
-            },
-            {
-              "predicate": "at",
-              "target_id": "obj_10_GroundedSAM2",
-              "target_label": "cake",
-              "target_caption": "cake",
               "score": 0.75
             },
             {
@@ -234,8 +220,8 @@
             {
               "predicate": "at",
               "target_id": "obj_38_GroundedSAM2",
-              "target_label": "lamp",
-              "target_caption": "lamp | ceiling | curtain | flag pole | pole",
+              "target_label": "bottle",
+              "target_caption": "bottle",
               "score": 0.75
             },
             {
@@ -355,8 +341,8 @@
             {
               "predicate": "above",
               "target_id": "obj_46_GroundedSAM2",
-              "target_label": "dart",
-              "target_caption": "dart | fly | pole | sky",
+              "target_label": "food",
+              "target_caption": "food",
               "score": 0.7
             },
             {
@@ -381,7 +367,7 @@
               "score": 0.7
             },
             {
-              "predicate": "at",
+              "predicate": "under",
               "target_id": "obj_2_GroundedSAM2",
               "target_label": "alcohol",
               "target_caption": "alcohol",
@@ -504,8 +490,8 @@
             {
               "predicate": "above",
               "target_id": "obj_46_GroundedSAM2",
-              "target_label": "dart",
-              "target_caption": "dart | fly | pole | sky",
+              "target_label": "food",
+              "target_caption": "food",
               "score": 0.7
             },
             {
@@ -530,7 +516,7 @@
               "score": 0.7
             },
             {
-              "predicate": "at",
+              "predicate": "under",
               "target_id": "obj_1_GroundedSAM2",
               "target_label": "bottle",
               "target_caption": "bottle",
@@ -660,8 +646,8 @@
             {
               "predicate": "overlapping",
               "target_id": "obj_38_GroundedSAM2",
-              "target_label": "lamp",
-              "target_caption": "lamp | ceiling | curtain | flag pole | pole",
+              "target_label": "bottle",
+              "target_caption": "bottle",
               "score": 0.85
             },
             {
@@ -680,13 +666,6 @@
             },
             {
               "predicate": "at",
-              "target_id": "obj_0_GroundedSAM2",
-              "target_label": "bottle",
-              "target_caption": "bottle",
-              "score": 0.75
-            },
-            {
-              "predicate": "under",
               "target_id": "obj_6_GroundedSAM2",
               "target_label": "food",
               "target_caption": "food",
@@ -700,7 +679,7 @@
               "score": 0.75
             },
             {
-              "predicate": "under",
+              "predicate": "at",
               "target_id": "obj_10_GroundedSAM2",
               "target_label": "cake",
               "target_caption": "cake",
@@ -723,8 +702,8 @@
             {
               "predicate": "at",
               "target_id": "obj_38_GroundedSAM2",
-              "target_label": "lamp",
-              "target_caption": "lamp | ceiling | curtain | flag pole | pole",
+              "target_label": "bottle",
+              "target_caption": "bottle",
               "score": 0.75
             },
             {
@@ -1033,7 +1012,7 @@
               "score": 0.7
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_9_GroundedSAM2",
               "target_label": "counter top",
               "target_caption": "counter top",
@@ -1210,7 +1189,7 @@
               "score": 0.7
             },
             {
-              "predicate": "under",
+              "predicate": "at",
               "target_id": "obj_0_GroundedSAM2",
               "target_label": "bottle",
               "target_caption": "bottle",
@@ -1776,35 +1755,70 @@
               "score": 0.7
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "counter top",
+              "target_caption": "counter top",
+              "score": 0.75
+            },
+            {
+              "predicate": "is_next_to",
+              "target_id": "obj_24_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | mascara | pole | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "is_next_to",
+              "target_id": "obj_27_GroundedSAM2",
+              "target_label": "brush",
+              "target_caption": "brush | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "is_next_to",
+              "target_id": "obj_30_GroundedSAM2",
+              "target_label": "cigarette",
+              "target_caption": "cigarette",
+              "score": 0.75
+            },
+            {
+              "predicate": "is_next_to",
+              "target_id": "obj_31_GroundedSAM2",
+              "target_label": "fly",
+              "target_caption": "fly | man | sky",
+              "score": 0.75
+            },
+            {
+              "predicate": "is_next_to",
               "target_id": "obj_41_GroundedSAM2",
               "target_label": "flag",
               "target_caption": "flag | flag pole | fly | man | pole | sky",
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_42_GroundedSAM2",
               "target_label": "eagle",
               "target_caption": "eagle | fly | man | sky",
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_49_GroundedSAM2",
               "target_label": "man",
               "target_caption": "man | sea | sky",
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_51_GroundedSAM2",
               "target_label": "sky",
               "target_caption": "sky",
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_52_GroundedSAM2",
               "target_label": "cigarette",
               "target_caption": "cigarette | pencil | smoke",
@@ -1927,8 +1941,8 @@
             {
               "predicate": "overlapping",
               "target_id": "obj_38_GroundedSAM2",
-              "target_label": "lamp",
-              "target_caption": "lamp | ceiling | curtain | flag pole | pole",
+              "target_label": "bottle",
+              "target_caption": "bottle",
               "score": 0.85
             },
             {
@@ -1990,8 +2004,8 @@
             {
               "predicate": "at",
               "target_id": "obj_38_GroundedSAM2",
-              "target_label": "lamp",
-              "target_caption": "lamp | ceiling | curtain | flag pole | pole",
+              "target_label": "bottle",
+              "target_caption": "bottle",
               "score": 0.75
             },
             {
@@ -2372,8 +2386,8 @@
             {
               "predicate": "at",
               "target_id": "obj_38_GroundedSAM2",
-              "target_label": "lamp",
-              "target_caption": "lamp | ceiling | curtain | flag pole | pole",
+              "target_label": "bottle",
+              "target_caption": "bottle",
               "score": 0.75
             }
           ]
@@ -2465,8 +2479,8 @@
             {
               "predicate": "overlapping",
               "target_id": "obj_46_GroundedSAM2",
-              "target_label": "dart",
-              "target_caption": "dart | fly | pole | sky",
+              "target_label": "food",
+              "target_caption": "food",
               "score": 0.85
             },
             {
@@ -2535,8 +2549,8 @@
             {
               "predicate": "at",
               "target_id": "obj_46_GroundedSAM2",
-              "target_label": "dart",
-              "target_caption": "dart | fly | pole | sky",
+              "target_label": "food",
+              "target_caption": "food",
               "score": 0.75
             }
           ]
@@ -2922,7 +2936,7 @@
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_22_GroundedSAM2",
               "target_label": "man",
               "target_caption": "man | stand",
@@ -2943,7 +2957,7 @@
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_47_GroundedSAM2",
               "target_label": "fly",
               "target_caption": "fly | green | man | sky",
@@ -3180,8 +3194,8 @@
             {
               "predicate": "overlapping",
               "target_id": "obj_46_GroundedSAM2",
-              "target_label": "dart",
-              "target_caption": "dart | fly | pole | sky",
+              "target_label": "food",
+              "target_caption": "food",
               "score": 0.85
             },
             {
@@ -3250,8 +3264,8 @@
             {
               "predicate": "at",
               "target_id": "obj_46_GroundedSAM2",
-              "target_label": "dart",
-              "target_caption": "dart | fly | pole | sky",
+              "target_label": "food",
+              "target_caption": "food",
               "score": 0.75
             }
           ]
@@ -3551,7 +3565,7 @@
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_14_GroundedSAM2",
               "target_label": "food",
               "target_caption": "food",
@@ -4031,7 +4045,7 @@
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_14_GroundedSAM2",
               "target_label": "food",
               "target_caption": "food",
@@ -4359,7 +4373,7 @@
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_9_GroundedSAM2",
               "target_label": "counter top",
               "target_caption": "counter top",
@@ -4682,13 +4696,6 @@
               "target_label": "fly",
               "target_caption": "fly | shadow | sky",
               "score": 0.75
-            },
-            {
-              "predicate": "at",
-              "target_id": "obj_55_GroundedSAM2",
-              "target_label": "fly",
-              "target_caption": "fly | man | sky",
-              "score": 0.75
             }
           ]
         }
@@ -4830,7 +4837,7 @@
             },
             {
               "predicate": "at",
-              "target_id": "obj_9_GroundedSAM2",
+              "target_id": "obj_5_GroundedSAM2",
               "target_label": "counter top",
               "target_caption": "counter top",
               "score": 0.75
@@ -5137,13 +5144,6 @@
             },
             {
               "predicate": "at",
-              "target_id": "obj_14_GroundedSAM2",
-              "target_label": "food",
-              "target_caption": "food",
-              "score": 0.75
-            },
-            {
-              "predicate": "at",
               "target_id": "obj_15_GroundedSAM2",
               "target_label": "birthday",
               "target_caption": "birthday",
@@ -5294,7 +5294,7 @@
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_9_GroundedSAM2",
               "target_label": "counter top",
               "target_caption": "counter top",
@@ -5448,13 +5448,20 @@
             },
             {
               "predicate": "at",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "counter top",
+              "target_caption": "counter top",
+              "score": 0.75
+            },
+            {
+              "predicate": "is_next_to",
               "target_id": "obj_9_GroundedSAM2",
               "target_label": "counter top",
               "target_caption": "counter top",
               "score": 0.75
             },
             {
-              "predicate": "under",
+              "predicate": "at",
               "target_id": "obj_27_GroundedSAM2",
               "target_label": "brush",
               "target_caption": "brush | sky",
@@ -5907,7 +5914,7 @@
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "under",
               "target_id": "obj_7_GroundedSAM2",
               "target_label": "food",
               "target_caption": "food",
@@ -6330,8 +6337,8 @@
             {
               "predicate": "behind",
               "target_id": "obj_38_GroundedSAM2",
-              "target_label": "lamp",
-              "target_caption": "lamp | ceiling | curtain | flag pole | pole",
+              "target_label": "bottle",
+              "target_caption": "bottle",
               "score": 0.75
             },
             {
@@ -6375,9 +6382,9 @@
     },
     {
       "id": "obj_38_GroundedSAM2",
-      "label": "lamp",
-      "confidence": 0.7,
-      "conf": 0.7,
+      "label": "bottle",
+      "confidence": 0.5558,
+      "conf": 0.5558,
       "bbox": [
         380,
         0,
@@ -6433,24 +6440,18 @@
       "depth_map_path": null,
       "sources": {
         "GroundedSAM2": {
-          "caption": "lamp | ceiling | curtain | flag pole | pole",
-          "label": "lamp",
+          "caption": "bottle",
+          "label": "bottle",
           "confidence": 0.9199
         },
         "Florence2": {
-          "label": "object",
-          "caption": "object"
+          "label": "",
+          "caption": ""
         },
         "RAM++": {
-          "label": "lamp",
-          "caption": "lamp | ceiling | curtain | flag pole | pole",
-          "tags": [
-            "lamp",
-            "ceiling",
-            "curtain",
-            "flag pole",
-            "pole"
-          ]
+          "label": "",
+          "caption": "",
+          "tags": []
         },
         "Pix2SG": {
           "relations": [
@@ -6511,21 +6512,21 @@
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "under",
               "target_id": "obj_0_GroundedSAM2",
               "target_label": "bottle",
               "target_caption": "bottle",
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "under",
               "target_id": "obj_3_GroundedSAM2",
               "target_label": "alcohol",
               "target_caption": "alcohol",
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "under",
               "target_id": "obj_10_GroundedSAM2",
               "target_label": "cake",
               "target_caption": "cake",
@@ -6696,7 +6697,7 @@
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "under",
               "target_id": "obj_7_GroundedSAM2",
               "target_label": "food",
               "target_caption": "food",
@@ -6996,17 +6997,10 @@
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_9_GroundedSAM2",
               "target_label": "counter top",
               "target_caption": "counter top",
-              "score": 0.75
-            },
-            {
-              "predicate": "at",
-              "target_id": "obj_42_GroundedSAM2",
-              "target_label": "eagle",
-              "target_caption": "eagle | fly | man | sky",
               "score": 0.75
             }
           ]
@@ -7150,14 +7144,14 @@
               "score": 0.7
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_9_GroundedSAM2",
               "target_label": "counter top",
               "target_caption": "counter top",
               "score": 0.75
             },
             {
-              "predicate": "under",
+              "predicate": "at",
               "target_id": "obj_41_GroundedSAM2",
               "target_label": "flag",
               "target_caption": "flag | flag pole | fly | man | pole | sky",
@@ -7270,8 +7264,8 @@
             {
               "predicate": "below",
               "target_id": "obj_46_GroundedSAM2",
-              "target_label": "dart",
-              "target_caption": "dart | fly | pole | sky",
+              "target_label": "food",
+              "target_caption": "food",
               "score": 0.7
             },
             {
@@ -7310,7 +7304,7 @@
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_17_GroundedSAM2",
               "target_label": "birthday",
               "target_caption": "birthday",
@@ -7415,8 +7409,8 @@
             {
               "predicate": "overlapping",
               "target_id": "obj_46_GroundedSAM2",
-              "target_label": "dart",
-              "target_caption": "dart | fly | pole | sky",
+              "target_label": "food",
+              "target_caption": "food",
               "score": 0.85
             },
             {
@@ -7471,8 +7465,8 @@
             {
               "predicate": "at",
               "target_id": "obj_46_GroundedSAM2",
-              "target_label": "dart",
-              "target_caption": "dart | fly | pole | sky",
+              "target_label": "food",
+              "target_caption": "food",
               "score": 0.75
             }
           ]
@@ -7559,8 +7553,8 @@
             {
               "predicate": "right_of",
               "target_id": "obj_46_GroundedSAM2",
-              "target_label": "dart",
-              "target_caption": "dart | fly | pole | sky",
+              "target_label": "food",
+              "target_caption": "food",
               "score": 0.7
             },
             {
@@ -7618,9 +7612,9 @@
     },
     {
       "id": "obj_46_GroundedSAM2",
-      "label": "dart",
-      "confidence": 0.7,
-      "conf": 0.7,
+      "label": "food",
+      "confidence": 0.1631,
+      "conf": 0.1631,
       "bbox": [
         425,
         795,
@@ -7676,23 +7670,18 @@
       "depth_map_path": null,
       "sources": {
         "GroundedSAM2": {
-          "caption": "dart | fly | pole | sky",
-          "label": "dart",
+          "caption": "food",
+          "label": "food",
           "confidence": 0.8962
         },
         "Florence2": {
-          "label": "object",
-          "caption": "object"
+          "label": "",
+          "caption": ""
         },
         "RAM++": {
-          "label": "dart",
-          "caption": "dart | fly | pole | sky",
-          "tags": [
-            "dart",
-            "fly",
-            "pole",
-            "sky"
-          ]
+          "label": "",
+          "caption": "",
+          "tags": []
         },
         "Pix2SG": {
           "relations": [
@@ -7928,7 +7917,7 @@
               "score": 0.75
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_14_GroundedSAM2",
               "target_label": "food",
               "target_caption": "food",
@@ -7942,7 +7931,7 @@
               "score": 0.75
             },
             {
-              "predicate": "under",
+              "predicate": "at",
               "target_id": "obj_22_GroundedSAM2",
               "target_label": "man",
               "target_caption": "man | stand",
@@ -8242,7 +8231,7 @@
               "score": 0.7
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_9_GroundedSAM2",
               "target_label": "counter top",
               "target_caption": "counter top",
@@ -8539,7 +8528,7 @@
               "score": 0.7
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_9_GroundedSAM2",
               "target_label": "counter top",
               "target_caption": "counter top",
@@ -8692,7 +8681,7 @@
               "score": 0.7
             },
             {
-              "predicate": "at",
+              "predicate": "is_next_to",
               "target_id": "obj_9_GroundedSAM2",
               "target_label": "counter top",
               "target_caption": "counter top",
@@ -8997,13 +8986,6 @@
               "target_label": "gray",
               "target_caption": "gray",
               "score": 0.75
-            },
-            {
-              "predicate": "at",
-              "target_id": "obj_50_GroundedSAM2",
-              "target_label": "floor",
-              "target_caption": "floor | hardwood floor | wood floor",
-              "score": 0.75
             }
           ]
         }
@@ -9242,8 +9224,8 @@
             {
               "predicate": "right_of",
               "target_id": "obj_46_GroundedSAM2",
-              "target_label": "dart",
-              "target_caption": "dart | fly | pole | sky",
+              "target_label": "food",
+              "target_caption": "food",
               "score": 0.7
             },
             {

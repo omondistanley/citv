@@ -18,8 +18,7 @@ timm>=0.9.0
 safetensors
 
 # Grounding DINO / GroundedSAM2
-# These are installed from the sam2 subdir (pip install -e ./sam2)
-# and GRiT/third_party/CenterNet2 (pip install -e ./GRiT/third_party/CenterNet2)
+# SAM2 is installed from the sam2 subdir (pip install -e ./sam2).
 # See setup.sh for the full install sequence.
 
 # RAM++ (Recognize Anything) is optional and loaded from a local checkout.

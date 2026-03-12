@@ -174,22 +174,39 @@ class PreprocessConfig:
     #   produces zero detections, fall back to SAM2 AMG (original behaviour).
     # -------------------------------------------------------------------------
     grounding_dino_model: str = "IDEA-Research/grounding-dino-base"
-    grounding_dino_box_thresh: float = 0.15   # lowered to detect small/weak objects
-    grounding_dino_text_thresh: float = 0.15  # lowered to match
+    # Raised thresholds for cleaner object-level detections — fewer false positives,
+    # no part-level fragments, non-overlapping semantic masks.
+    grounding_dino_box_thresh: float = 0.30
+    grounding_dino_text_thresh: float = 0.25
     grounding_dino_text_query: str = (
-        "person. animal. vehicle. furniture. appliance. food. clothing. "
-        "container. tool. building. plant. electronics. object."
+        "person. man. woman. child. animal. dog. cat. "
+        "car. truck. bicycle. motorcycle. bus. "
+        "chair. table. desk. sofa. bed. shelf. cabinet. door. window. "
+        "bottle. cup. bowl. plate. glass. laptop. phone. keyboard. monitor. "
+        "television. bag. backpack. book. clock. lamp. tree. plant. sign."
     )
-    grounded_sam2_fallback_to_amg: bool = True  # safety net if GDINO finds zero objects
-    # run_both_segmentors: if True, run GroundedSAM2 AND SAM2 AMG together.
-    #   GroundedSAM2 provides object-level masks (one per detected entity).
-    #   SAM2 AMG provides part-level and small-object masks missed by GDINO.
-    #   Duplicates are removed by mask IoU: if an AMG mask overlaps a GDINO mask
-    #   by more than run_both_segmentors_iou_dedup, the AMG mask is dropped
-    #   (the GDINO-prompted mask is higher quality for that object).
-    # run_both_segmentors_iou_dedup: IoU threshold for deduplication (0.7 = 70%).
-    run_both_segmentors: bool = True
+    # AMG fallback disabled — we want GDINO-only object-level masks with no
+    # part-level AMG masks added.  If GDINO finds zero objects the image is
+    # returned with an empty object list rather than falling back to AMG.
+    grounded_sam2_fallback_to_amg: bool = False
+    # Dual-segmentor mode OFF — run GroundedSAM2 only (GDINO-prompted SAM2).
+    # This gives one non-overlapping semantic mask per detected object with no
+    # AMG part-level masks mixed in.
+    run_both_segmentors: bool = False
     run_both_segmentors_iou_dedup: float = 0.7
+    # -------------------------------------------------------------------------
+    # Coherent-layer two-pass labelling (Option C)
+    #
+    # Pass 1 labels all GroundedSAM2 masks first (GDINO label wins immediately,
+    # no Florence-2 call needed). Pass 2 labels SAM2_AMG masks with:
+    #   - Inheritance: if AMG mask overlaps a confirmed GDINO mask by
+    #     layer_inherit_iou_thresh, the GDINO label is inherited (no Florence-2).
+    #   - Small-mask skip: if AMG mask area < layer_small_mask_px pixels,
+    #     Florence-2 is skipped and only RAM++ is tried (parts/textures).
+    #   - Full chain: everything else runs GDINO → Florence-2 → RAM++ normally.
+    # -------------------------------------------------------------------------
+    layer_inherit_iou_thresh: float = 0.3   # IoU overlap to inherit GDINO label
+    layer_small_mask_px: int = 2000         # area threshold for Florence-2 skip
 
     # -------------------------------------------------------------------------
     # Relation enhancement (Fix 5.6)
@@ -212,7 +229,7 @@ class PreprocessConfig:
     relation_min_mask_overlap: float = 0.02  # pixel IoU threshold for semantic relation attempt
 
     # -------------------------------------------------------------------------
-    # RAM++ labelling (replaces GRiT + YOLOv8-cls fallback)
+    # RAM++ labelling (Priority 3 in the label chain: GDINO → Florence-2 → RAM++)
     #
     # Requires local Recognize Anything installation (module "ram") and a
     # local checkpoint file path.
@@ -223,8 +240,8 @@ class PreprocessConfig:
     # rampp_repo_path: optional local repo path to append to sys.path when RAM
     #   is not installed into site-packages.
     # -------------------------------------------------------------------------
-    rampp_enabled: bool = True
-    rampp_checkpoint_path: Optional[str] = "checkpoints/ram_plus_swin_large_14m.pth"
+    rampp_enabled: bool = False   # RAM++ removed from labelling chain
+    rampp_checkpoint_path: Optional[str] = None
     rampp_repo_path: Optional[str] = None
     rampp_image_size: int = 384
     rampp_vit: str = "swin_l"

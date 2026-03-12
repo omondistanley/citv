@@ -1,0 +1,569 @@
+{
+  "metadata": {
+    "timestamp": "2026-03-12 17:42:49",
+    "segmentor": "SAM2",
+    "intrinsics": {
+      "fx": 831.3843876330611,
+      "fy": 831.3843876330611,
+      "cx": 480.0,
+      "cy": 640.0
+    },
+    "models": [
+      "GroundedSAM2",
+      "Florence-2",
+      "Pix2SG"
+    ],
+    "rampp_tags": [],
+    "gdino_query_used": "person. man. woman. child. animal. dog. cat. car. truck. bicycle. motorcycle. bus. chair. table. desk. sofa. bed. shelf. cabinet. door. window. bottle. cup. bowl. plate. glass. laptop. phone. keyboard. monitor. television. bag. backpack. book. clock. lamp. tree. plant. sign.",
+    "relation_sources": {
+      "Pix2SG": {
+        "active": true,
+        "backend": "spatial_scaffold",
+        "reason": "No precomputed triplets dir at /home/stanleyomondi/citv/pix2sg_triplets. Using spatial scaffold backend."
+      }
+    },
+    "relation_debug": {
+      "pix2sg": {
+        "input_triplets": 21,
+        "attached": 21,
+        "subject_id_matched": 21,
+        "subject_label_matched": 0,
+        "target_id_matched": 21,
+        "target_label_matched": 0,
+        "external_targets": 0,
+        "unmatched_subjects": 0
+      },
+      "mask_iou_match_thresh": 0.1,
+      "pix2sg_mask_overlap_thresh": 0.05,
+      "pix2sg_depth_near_threshold": 1.0,
+      "raw_triplets": {
+        "pix2sg": 21
+      },
+      "num_detected_objects": 5,
+      "num_mask_matched": 5
+    },
+    "depth_map": "scene_graph/IMG_1117_depth_map.png",
+    "segmentation_image": "scene_graph/IMG_1117_segmentation.png",
+    "sam2_segmentation_image": "scene_graph/IMG_1117_sam2_segmentation.png",
+    "sam2_tinted_overlay_image": "scene_graph/IMG_1117_sam2_tinted_overlay.png"
+  },
+  "objects": [
+    {
+      "id": "obj_0_GroundedSAM2",
+      "label": "child",
+      "confidence": 0.6805,
+      "conf": 0.6805,
+      "bbox": [
+        343,
+        516,
+        700,
+        872
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 0.033,
+        "y": 1.306,
+        "z": 13.575
+      },
+      "depth_stats": {
+        "min": 11.3342,
+        "max": 15.6091,
+        "mean": 13.2693,
+        "median": 13.5246,
+        "std": 0.8275,
+        "num_pixels": 66875,
+        "z_val": 13.5752,
+        "z_val_pixels": 33113,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.8353
+      },
+      "mask_centroid_2d": [
+        482,
+        720
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 0.049,
+        "y": 1.306,
+        "z": 13.575
+      },
+      "depth_stats_no_erosion": {
+        "min": 10.2427,
+        "max": 17.3386,
+        "mean": 13.3121,
+        "median": 13.526,
+        "std": 0.941,
+        "num_pixels": 70535,
+        "z_val": 13.5752,
+        "z_val_pixels": 34983,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 8.1707
+      },
+      "mask_centroid_2d_no_erosion": [
+        483,
+        720
+      ],
+      "sam2_mask_index": 0,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "child",
+          "label": "child",
+          "confidence": 0.6805
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_1_GroundedSAM2",
+      "label": "tree",
+      "confidence": 0.5324,
+      "conf": 0.5324,
+      "bbox": [
+        120,
+        35,
+        534,
+        469
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -10.629,
+        "y": -28.711,
+        "z": 57.38
+      },
+      "depth_stats": {
+        "min": 48.5105,
+        "max": 66.115,
+        "mean": 57.2762,
+        "median": 57.7335,
+        "std": 3.6058,
+        "num_pixels": 80881,
+        "z_val": 57.3805,
+        "z_val_pixels": 40311,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.0898
+      },
+      "mask_centroid_2d": [
+        326,
+        224
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -10.626,
+        "y": -28.703,
+        "z": 57.363
+      },
+      "depth_stats_no_erosion": {
+        "min": 48.2905,
+        "max": 66.4093,
+        "mean": 57.3162,
+        "median": 57.7828,
+        "std": 3.6966,
+        "num_pixels": 84167,
+        "z_val": 57.3629,
+        "z_val_pixels": 41953,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.2627
+      },
+      "mask_centroid_2d_no_erosion": [
+        326,
+        224
+      ],
+      "sam2_mask_index": 1,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "tree",
+          "label": "tree",
+          "confidence": 0.5324
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "child",
+              "target_caption": "child",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_2_GroundedSAM2",
+      "label": "tree",
+      "confidence": 0.3593,
+      "conf": 0.3593,
+      "bbox": [
+        474,
+        324,
+        589,
+        476
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 4.653,
+        "y": -23.171,
+        "z": 77.364
+      },
+      "depth_stats": {
+        "min": 71.8925,
+        "max": 79.1471,
+        "mean": 76.5482,
+        "median": 76.8626,
+        "std": 1.3936,
+        "num_pixels": 8761,
+        "z_val": 77.3643,
+        "z_val_pixels": 4084,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.8549
+      },
+      "mask_centroid_2d": [
+        530,
+        391
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 4.653,
+        "y": -23.081,
+        "z": 77.374
+      },
+      "depth_stats_no_erosion": {
+        "min": 71.5659,
+        "max": 79.2445,
+        "mean": 76.5099,
+        "median": 76.8369,
+        "std": 1.466,
+        "num_pixels": 9247,
+        "z_val": 77.3742,
+        "z_val_pixels": 4328,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.9637
+      },
+      "mask_centroid_2d_no_erosion": [
+        530,
+        392
+      ],
+      "sam2_mask_index": 2,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "tree",
+          "label": "tree",
+          "confidence": 0.3593
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.85
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "child",
+              "target_caption": "child",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_3_GroundedSAM2",
+      "label": "tree",
+      "confidence": 0.3782,
+      "conf": 0.3782,
+      "bbox": [
+        631,
+        92,
+        816,
+        464
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 19.882,
+        "y": -30.664,
+        "z": 63.575
+      },
+      "depth_stats": {
+        "min": 57.3135,
+        "max": 76.7794,
+        "mean": 66.5095,
+        "median": 66.2986,
+        "std": 4.988,
+        "num_pixels": 35878,
+        "z_val": 63.5752,
+        "z_val_pixels": 17487,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 3.5892
+      },
+      "mask_centroid_2d": [
+        740,
+        239
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 19.918,
+        "y": -30.72,
+        "z": 63.691
+      },
+      "depth_stats_no_erosion": {
+        "min": 57.3135,
+        "max": 76.9697,
+        "mean": 66.6844,
+        "median": 66.6075,
+        "std": 4.9846,
+        "num_pixels": 37890,
+        "z_val": 63.6906,
+        "z_val_pixels": 18503,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.8655
+      },
+      "mask_centroid_2d_no_erosion": [
+        740,
+        239
+      ],
+      "sam2_mask_index": 3,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "tree",
+          "label": "tree",
+          "confidence": 0.3782
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.85
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "child",
+              "target_caption": "child",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_4_GroundedSAM2",
+      "label": "tree",
+      "confidence": 0.3041,
+      "conf": 0.3041,
+      "bbox": [
+        474,
+        91,
+        814,
+        476
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 17.957,
+        "y": -31.107,
+        "z": 75.399
+      },
+      "depth_stats": {
+        "min": 58.2395,
+        "max": 79.3014,
+        "mean": 71.0208,
+        "median": 72.1251,
+        "std": 5.8917,
+        "num_pixels": 63255,
+        "z_val": 75.3987,
+        "z_val_pixels": 27251,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.9297
+      },
+      "mask_centroid_2d": [
+        678,
+        297
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 17.864,
+        "y": -31.013,
+        "z": 75.39
+      },
+      "depth_stats_no_erosion": {
+        "min": 58.4092,
+        "max": 79.3465,
+        "mean": 71.1201,
+        "median": 72.1068,
+        "std": 5.8002,
+        "num_pixels": 66337,
+        "z_val": 75.3903,
+        "z_val_pixels": 28932,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.3357
+      },
+      "mask_centroid_2d_no_erosion": [
+        677,
+        298
+      ],
+      "sam2_mask_index": 4,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "tree",
+          "label": "tree",
+          "confidence": 0.3041
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.85
+            },
+            {
+              "predicate": "overlapping",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.85
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "tree",
+              "target_caption": "tree",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "child",
+              "target_caption": "child",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

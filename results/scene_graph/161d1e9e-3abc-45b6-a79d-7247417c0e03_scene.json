@@ -1,0 +1,720 @@
+{
+  "metadata": {
+    "timestamp": "2026-03-12 17:40:36",
+    "segmentor": "SAM2",
+    "intrinsics": {
+      "fx": 665.1075101064489,
+      "fy": 665.1075101064489,
+      "cx": 384.0,
+      "cy": 512.0
+    },
+    "models": [
+      "GroundedSAM2",
+      "Florence-2",
+      "Pix2SG"
+    ],
+    "rampp_tags": [],
+    "gdino_query_used": "person. man. woman. child. animal. dog. cat. car. truck. bicycle. motorcycle. bus. chair. table. desk. sofa. bed. shelf. cabinet. door. window. bottle. cup. bowl. plate. glass. laptop. phone. keyboard. monitor. television. bag. backpack. book. clock. lamp. tree. plant. sign.",
+    "relation_sources": {
+      "Pix2SG": {
+        "active": true,
+        "backend": "spatial_scaffold",
+        "reason": "No precomputed triplets dir at /home/stanleyomondi/citv/pix2sg_triplets. Using spatial scaffold backend."
+      }
+    },
+    "relation_debug": {
+      "pix2sg": {
+        "input_triplets": 32,
+        "attached": 32,
+        "subject_id_matched": 32,
+        "subject_label_matched": 0,
+        "target_id_matched": 32,
+        "target_label_matched": 0,
+        "external_targets": 0,
+        "unmatched_subjects": 0
+      },
+      "mask_iou_match_thresh": 0.1,
+      "pix2sg_mask_overlap_thresh": 0.05,
+      "pix2sg_depth_near_threshold": 1.0,
+      "raw_triplets": {
+        "pix2sg": 32
+      },
+      "num_detected_objects": 6,
+      "num_mask_matched": 6
+    },
+    "depth_map": "scene_graph/161d1e9e-3abc-45b6-a79d-7247417c0e03_depth_map.png",
+    "segmentation_image": "scene_graph/161d1e9e-3abc-45b6-a79d-7247417c0e03_segmentation.png",
+    "sam2_segmentation_image": "scene_graph/161d1e9e-3abc-45b6-a79d-7247417c0e03_sam2_segmentation.png",
+    "sam2_tinted_overlay_image": "scene_graph/161d1e9e-3abc-45b6-a79d-7247417c0e03_sam2_tinted_overlay.png"
+  },
+  "objects": [
+    {
+      "id": "obj_0_GroundedSAM2",
+      "label": "person",
+      "confidence": 0.3771,
+      "conf": 0.3771,
+      "bbox": [
+        635,
+        0,
+        713,
+        46
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 11.803,
+        "y": -20.052,
+        "z": 27.163
+      },
+      "depth_stats": {
+        "min": 25.1848,
+        "max": 30.2826,
+        "mean": 27.3719,
+        "median": 27.1597,
+        "std": 1.246,
+        "num_pixels": 1566,
+        "z_val": 27.1626,
+        "z_val_pixels": 453,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.9065
+      },
+      "mask_centroid_2d": [
+        673,
+        21
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 11.749,
+        "y": -20.03,
+        "z": 27.133
+      },
+      "depth_stats_no_erosion": {
+        "min": 25.1848,
+        "max": 30.3032,
+        "mean": 27.3979,
+        "median": 27.1796,
+        "std": 1.2533,
+        "num_pixels": 1670,
+        "z_val": 27.1329,
+        "z_val_pixels": 513,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.0741
+      },
+      "mask_centroid_2d_no_erosion": [
+        672,
+        21
+      ],
+      "sam2_mask_index": 0,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "person",
+          "label": "person",
+          "confidence": 0.3771
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "right_of",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.7
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "plant",
+              "target_caption": "plant",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_1_GroundedSAM2",
+      "label": "person",
+      "confidence": 0.4284,
+      "conf": 0.4284,
+      "bbox": [
+        0,
+        446,
+        760,
+        1024
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -0.468,
+        "y": 2.675,
+        "z": 4.718
+      },
+      "depth_stats": {
+        "min": 2.8339,
+        "max": 6.435,
+        "mean": 4.365,
+        "median": 4.3236,
+        "std": 0.7032,
+        "num_pixels": 187043,
+        "z_val": 4.7184,
+        "z_val_pixels": 58394,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.2524
+      },
+      "mask_centroid_2d": [
+        318,
+        889
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.468,
+        "y": 2.669,
+        "z": 4.72
+      },
+      "depth_stats_no_erosion": {
+        "min": 2.8023,
+        "max": 6.511,
+        "mean": 4.3852,
+        "median": 4.3428,
+        "std": 0.7258,
+        "num_pixels": 191173,
+        "z_val": 4.7204,
+        "z_val_pixels": 61314,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.4372
+      },
+      "mask_centroid_2d_no_erosion": [
+        318,
+        888
+      ],
+      "sam2_mask_index": 1,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "person",
+          "label": "person",
+          "confidence": 0.4284
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "plant",
+              "target_caption": "plant",
+              "score": 0.75
+            },
+            {
+              "predicate": "below",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.7
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_2_GroundedSAM2",
+      "label": "person",
+      "confidence": 0.3363,
+      "conf": 0.3363,
+      "bbox": [
+        1,
+        444,
+        106,
+        577
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -3.824,
+        "y": 0.022,
+        "z": 7.416
+      },
+      "depth_stats": {
+        "min": 7.0266,
+        "max": 8.4208,
+        "mean": 7.6358,
+        "median": 7.5728,
+        "std": 0.2713,
+        "num_pixels": 8925,
+        "z_val": 7.4159,
+        "z_val_pixels": 4349,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.1672
+      },
+      "mask_centroid_2d": [
+        41,
+        514
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -3.814,
+        "y": 0.022,
+        "z": 7.417
+      },
+      "depth_stats_no_erosion": {
+        "min": 7.0266,
+        "max": 8.7263,
+        "mean": 7.6581,
+        "median": 7.5846,
+        "std": 0.2997,
+        "num_pixels": 9293,
+        "z_val": 7.4169,
+        "z_val_pixels": 4578,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 3.2863
+      },
+      "mask_centroid_2d_no_erosion": [
+        42,
+        514
+      ],
+      "sam2_mask_index": 2,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "person",
+          "label": "person",
+          "confidence": 0.3363
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "left_of",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.7
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "plant",
+              "target_caption": "plant",
+              "score": 0.7
+            },
+            {
+              "predicate": "above",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.7
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            },
+            {
+              "predicate": "at",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_3_GroundedSAM2",
+      "label": "bottle",
+      "confidence": 0.3048,
+      "conf": 0.3048,
+      "bbox": [
+        286,
+        498,
+        402,
+        653
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -0.509,
+        "y": 0.818,
+        "z": 8.915
+      },
+      "depth_stats": {
+        "min": 8.6734,
+        "max": 9.2838,
+        "mean": 8.932,
+        "median": 8.931,
+        "std": 0.105,
+        "num_pixels": 12419,
+        "z_val": 8.9148,
+        "z_val_pixels": 6214,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.0205
+      },
+      "mask_centroid_2d": [
+        346,
+        573
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.509,
+        "y": 0.818,
+        "z": 8.915
+      },
+      "depth_stats_no_erosion": {
+        "min": 8.6734,
+        "max": 9.5075,
+        "mean": 8.9415,
+        "median": 8.9339,
+        "std": 0.1198,
+        "num_pixels": 12937,
+        "z_val": 8.9148,
+        "z_val_pixels": 6484,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.3742
+      },
+      "mask_centroid_2d_no_erosion": [
+        346,
+        573
+      ],
+      "sam2_mask_index": 3,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "bottle",
+          "label": "bottle",
+          "confidence": 0.3048
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "left_of",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "plant",
+              "target_caption": "plant",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.7
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_4_GroundedSAM2",
+      "label": "person",
+      "confidence": 0.3081,
+      "conf": 0.3081,
+      "bbox": [
+        448,
+        0,
+        525,
+        50
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 4.185,
+        "y": -19.409,
+        "z": 26.507
+      },
+      "depth_stats": {
+        "min": 25.9976,
+        "max": 28.4096,
+        "mean": 27.1284,
+        "median": 27.072,
+        "std": 0.5727,
+        "num_pixels": 2365,
+        "z_val": 26.5071,
+        "z_val_pixels": 1010,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.4611
+      },
+      "mask_centroid_2d": [
+        489,
+        25
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 4.145,
+        "y": -19.408,
+        "z": 26.505
+      },
+      "depth_stats_no_erosion": {
+        "min": 25.9976,
+        "max": 28.4541,
+        "mean": 27.1478,
+        "median": 27.0894,
+        "std": 0.578,
+        "num_pixels": 2491,
+        "z_val": 26.5055,
+        "z_val_pixels": 1111,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.4945
+      },
+      "mask_centroid_2d_no_erosion": [
+        488,
+        25
+      ],
+      "sam2_mask_index": 4,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "person",
+          "label": "person",
+          "confidence": 0.3081
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "left_of",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.7
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_5_GroundedSAM2",
+              "target_label": "plant",
+              "target_caption": "plant",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_5_GroundedSAM2",
+      "label": "plant",
+      "confidence": 0.5372,
+      "conf": 0.5372,
+      "bbox": [
+        0,
+        0,
+        768,
+        919
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 1.004,
+        "y": -0.31,
+        "z": 9.824
+      },
+      "depth_stats": {
+        "min": 6.0698,
+        "max": 24.8405,
+        "mean": 12.932,
+        "median": 12.4173,
+        "std": 4.5738,
+        "num_pixels": 539643,
+        "z_val": 9.8239,
+        "z_val_pixels": 248385,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.3772
+      },
+      "mask_centroid_2d": [
+        452,
+        491
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 0.972,
+        "y": -0.28,
+        "z": 9.796
+      },
+      "depth_stats_no_erosion": {
+        "min": 6.0123,
+        "max": 25.0266,
+        "mean": 12.9203,
+        "median": 12.381,
+        "std": 4.5961,
+        "num_pixels": 547721,
+        "z_val": 9.7957,
+        "z_val_pixels": 254260,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.4677
+      },
+      "mask_centroid_2d_no_erosion": [
+        450,
+        493
+      ],
+      "sam2_mask_index": 5,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "plant",
+          "label": "plant",
+          "confidence": 0.5372
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "right_of",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.7
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.7
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_4_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "person",
+              "target_caption": "person",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

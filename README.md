@@ -29,7 +29,7 @@ CITV takes a directory of images and, for each image, produces a structured JSON
 
 - Every segmented object (mask, bounding box, 2D centroid, depth-weighted 3D coordinates)
 - Metric depth statistics per object — with and without adaptive mask erosion for comparison
-- Semantic labels ranked by a 4-model priority chain (GDINO → Florence-2 → GRiT → YOLOv8)
+- Semantic labels ranked by a 3-model priority chain (GDINO → Florence-2 → RAM++)
 - Spatial and semantic relations between overlapping objects (Pix2SG + Florence-2)
 - Optional lens-undistortion using a calibrated camera matrix
 
@@ -64,6 +64,13 @@ Input image
                          │
                          ▼
 ┌──────────────────────────────────────────────────────────────┐
+│  Stage 3  RAM++ dynamic vocabulary                           │
+│           Swin-L tagger on full image → scene-specific tags  │
+│           → per-image GroundingDINO text query               │
+└────────────────────────┬─────────────────────────────────────┘
+                         │
+                         ▼
+┌──────────────────────────────────────────────────────────────┐
 │  Stage 3  Instance segmentation (dual-segmentor)             │
 │           GroundingDINO → SAM2 per-bbox  (object-level)      │
 │           SAM2 AMG grid-based            (part/small-object) │
@@ -81,17 +88,19 @@ Input image
                          │
                          ▼
 ┌──────────────────────────────────────────────────────────────┐
-│  Stage 5  Semantic labelling                                 │
-│           GDINO text label > Florence-2 <OD> >               │
-│           GRiT dense caption > YOLOv8-cls                    │
+│  Stage 5  Semantic labelling (3-priority chain)              │
+│           1. GDINO text label (from RAM++ dynamic query)     │
+│           2. Florence-2 <MORE_DETAILED_CAPTION> → noun       │
+│              fallback: Florence-2 <OD> → largest-bbox label  │
+│           3. RAM++ per-crop tag (AMG masks GDINO missed)     │
 └────────────────────────┬─────────────────────────────────────┘
                          │
                          ▼
 ┌──────────────────────────────────────────────────────────────┐
 │  Stage 6  Relation graph (Pix2SG + Florence-2)               │
 │           Spatial scaffold for overlapping mask pairs        │
-│           Florence-2 <CAPTION> over RED/BLUE overlay crops   │
-│           Canonical predicate extraction                     │
+│           Florence-2 <MORE_DETAILED_CAPTION> over            │
+│           RED/BLUE colour-overlay crops → canonical predicate│
 └────────────────────────┬─────────────────────────────────────┘
                          │
                          ▼
@@ -106,11 +115,10 @@ Input image
 |---|---|---|
 | **CLIP ViT-B/32** | Indoor/outdoor scene classification | [Radford et al., 2021](https://arxiv.org/abs/2103.00020) |
 | **Depth Anything V2 Metric** | Metric monocular depth (metres) | [Yang et al., 2024](https://arxiv.org/abs/2406.09414) |
-| **GroundingDINO** | Open-vocabulary object detection | [Liu et al., 2023](https://arxiv.org/abs/2303.05499) |
+| **RAM++ (Swin-L)** | Per-image dynamic GDINO vocabulary + per-crop labelling (Priority 3) | [Zhang et al., 2023](https://arxiv.org/abs/2306.03514) |
+| **GroundingDINO** | Open-vocabulary object detection driven by RAM++ tags | [Liu et al., 2023](https://arxiv.org/abs/2303.05499) |
 | **SAM2** | Prompted + automatic mask generation | [Ravi et al., 2024](https://arxiv.org/abs/2408.00714) |
-| **Florence-2** | Semantic labelling (`<OD>`) + relation captions | [Xiao et al., 2023](https://arxiv.org/abs/2311.06242) |
-| **GRiT** | Dense captioning fallback label | [Wu et al., 2022](https://arxiv.org/abs/2212.00280) |
-| **YOLOv8-cls** | Classification fallback label | [Jocher et al., 2023](https://github.com/ultralytics/ultralytics) |
+| **Florence-2** | Semantic labelling (`<MORE_DETAILED_CAPTION>`, `<OD>`) + relation captions | [Xiao et al., 2023](https://arxiv.org/abs/2311.06242) |
 | **Pix2SG** | Spatial relation scaffold | [Yao et al., 2024](https://arxiv.org/abs/2401.03600) |
 
 All models run locally after setup. No API keys required (HuggingFace public repos only).
@@ -124,7 +132,7 @@ All models run locally after setup. No API keys required (HuggingFace public rep
 - Python 3.9–3.11
 - CUDA-capable GPU (≥ 8 GB VRAM recommended)
 - `nvcc` on PATH (`sudo apt install nvidia-cuda-toolkit`)
-- ~20 GB free disk space
+- ~12 GB free disk space
 
 ### One-shot install
 
@@ -139,15 +147,12 @@ bash setup.sh
 | Step | Action |
 |---|---|
 | 0 | Disk-space check (warns if < 20 GB free) |
-| 1 | Clone `GRiT` and `sam2` repos (skips if already present) |
+| 1 | Clone `sam2` repo (skips if already present) |
 | 2 | Download SAM2 checkpoint `sam2.1_hiera_large.pt` (~900 MB) |
-| 3 | Download GRiT weights `grit_b_densecap_objectdet.pth` (~900 MB) |
-| 4 | Install PyTorch with correct CUDA version (auto-detected via `nvcc`) |
-| 5 | Install Python dependencies from `requirements.txt` |
-| 6 | Build `detectron2` from `GRiT/third_party/CenterNet2` (5–15 min) |
-| 7 | Install GRiT Python deps (excluding conflicting pins) |
-| 8 | Build SAM2 `_C` CUDA extension |
-| 9 | Pre-download all HuggingFace models (~6 GB; idempotent) |
+| 3 | Install PyTorch with correct CUDA version (auto-detected via `nvcc`) |
+| 4 | Install Python dependencies from `requirements.txt` |
+| 5 | Build SAM2 `_C` CUDA extension |
+| 6 | Pre-download all HuggingFace models (~6 GB; idempotent) |
 
 After setup, the first pipeline run is instant — all models are pre-cached.
 
@@ -191,11 +196,16 @@ Each image produces `{stem}_scene.json`:
 
 ```json
 {
-  "image": "images/living_room.jpg",
-  "scene_type": "indoor",
+  "metadata": {
+    "timestamp": "2026-03-09 14:22:01",
+    "models": ["DepthAnythingV2-Metric-Indoor", "GroundingDINO", "SAM2", "Florence-2", "RAM++"],
+    "rampp_tags": ["sofa", "table", "person", "lamp", "carpet"],
+    "gdino_query_used": "sofa. table. person. lamp. carpet.",
+    "intrinsics": {"fx": 623.5, "fy": 623.5, "cx": 360.0, "cy": 640.0}
+  },
   "objects": [
     {
-      "id": "obj_0",
+      "id": "obj_0_GroundedSAM2",
       "label": "sofa",
       "conf": 0.87,
       "segmentor": "GroundedSAM2",
@@ -204,28 +214,24 @@ Each image produces `{stem}_scene.json`:
       "coordinates_3d": {"x": -0.42, "y": 0.15, "z": 2.31},
       "depth_stats": {
         "z_val": 2.31,
-        "z_val_pixels": 2.31,
         "possibly_transparent": false,
         "depth_separation_from_background": 0.89
       },
-      "depth_stats_no_erosion": { "z_val": 2.28, "..." : "..." },
+      "depth_stats_no_erosion": {"z_val": 2.28},
       "coordinates_3d_no_erosion": {"x": -0.41, "y": 0.14, "z": 2.28},
-      "grounded_sam2_label": "sofa",
-      "grounded_sam2_confidence": 0.87
-    }
-  ],
-  "relations": [
-    {
-      "subject": "obj_0",
-      "predicate": "in front of",
-      "object": "obj_2",
-      "source_layer": "florence2"
+      "sources": {
+        "GroundedSAM2": {"label": "sofa", "conf": 0.87},
+        "Florence2": {"label": "sofa", "caption": "a grey fabric sofa with cushions"},
+        "Pix2SG": {"relations": [{"predicate": "in_front_of", "target_label": "table"}]}
+      }
     }
   ]
 }
 ```
 
 Every object carries **dual depth stats** — one set computed with adaptive mask erosion, one without — so you can compare the effect of erosion on depth accuracy.
+
+The `metadata` block records which RAM++ tags drove the GroundingDINO query for that image (`rampp_tags`, `gdino_query_used`), making every detection decision fully traceable.
 
 ---
 
@@ -274,6 +280,21 @@ Edit `config.py` to tune the pipeline. Key fields:
 | `relation_min_mask_overlap` | `0.02` | Min IoU between masks to predict relation |
 | `pix2sg_mask_overlap_thresh` | `0.05` | Pix2SG spatial scaffold overlap threshold |
 
+### RAM++
+
+| Field | Default | Description |
+|---|---|---|
+| `rampp_enabled` | `True` | Build per-image GDINO vocab + per-crop labelling |
+| `rampp_checkpoint_path` | `"checkpoints/ram_plus_swin_large_14m.pth"` | Local checkpoint path |
+| `rampp_image_size` | `384` | Input resolution for Swin-L backbone |
+| `rampp_vit` | `"swin_l"` | Backbone variant (`"swin_l"` or `"swin_b"`) |
+| `rampp_default_confidence` | `0.70` | Confidence assigned to RAM++ labels |
+| `rampp_max_tags` | `8` | Max tags used for GDINO query |
+
+> **Inference time note:** Florence-2 is the dominant bottleneck — up to 350 forward passes per
+> image (labelling + relations). Raise `relation_min_mask_overlap` to `0.15` for the largest
+> single speed-up. See [NOTES.md Section 18](NOTES.md#18-inference-time-and-performance-notes).
+
 ---
 
 ## Camera Calibration
@@ -309,8 +330,10 @@ See [`NOTES.md`](NOTES.md) for in-depth documentation of every algorithm, formul
 - Sigma-clipping implementation
 - Transparency detection algorithm
 - Dual-segmentor IoU deduplication
+- RAM++ dynamic GDINO vocabulary mechanism
 - Florence-2 RED/BLUE colour-overlay relation extraction
-- All fixes applied (5.1 – 5.7) with problem/solution/rationale
+- Inference time breakdown and tuning guidance (Section 18)
+- All fixes applied (5.1 – 5.8) with problem/solution/rationale
 
 ---
 
@@ -337,6 +360,15 @@ See [`NOTES.md`](NOTES.md) for in-depth documentation of every algorithm, formul
              and Girshick, Ross and Dollár, Piotr and Feichtenhofer, Christoph},
   journal = {arXiv:2408.00714},
   year    = {2024}
+}
+
+@article{zhang2023rampp,
+  title   = {Recognize Anything: A Strong Image Tagging Model},
+  author  = {Zhang, Youcai and Huang, Xinyu and Ma, Jinyu and Li, Zhaoyang
+             and Luo, Zhaochuan and Xie, Yanchun and Qin, Yuzhuo and Luo, Tong
+             and Li, Yaqian and Liu, Shilong and Guo, Yandong and Zhang, Lei},
+  journal = {arXiv:2306.03514},
+  year    = {2023}
 }
 
 @article{liu2023groundingdino,
@@ -368,22 +400,6 @@ See [`NOTES.md`](NOTES.md) for in-depth documentation of every algorithm, formul
              Clark, Jack and Krueger, Gretchen and Sutskever, Ilya},
   journal = {arXiv:2103.00020},
   year    = {2021}
-}
-
-@article{wu2022grit,
-  title   = {GRiT: A Generative Region-to-text Transformer for Object
-             Understanding},
-  author  = {Wu, Jialian and Wang, Jianfeng and Yang, Zhengyuan and
-             Gan, Zhe and Liu, Zicheng and Yuan, Junsong and Wang, Lijuan},
-  journal = {arXiv:2212.00280},
-  year    = {2022}
-}
-
-@software{jocher2023yolov8,
-  title   = {Ultralytics YOLOv8},
-  author  = {Jocher, Glenn and Chaurasia, Ayush and Qiu, Jing},
-  year    = {2023},
-  url     = {https://github.com/ultralytics/ultralytics}
 }
 
 @article{yao2024pix2sg,
@@ -426,15 +442,4 @@ See [`NOTES.md`](NOTES.md) for in-depth documentation of every algorithm, formul
 
 ---
 
-## License
 
-MIT — see [LICENSE](LICENSE) for details.
-
-Third-party models retain their original licenses:
-- SAM2: Apache 2.0
-- GroundingDINO: Apache 2.0
-- Florence-2: MIT
-- GRiT: Apache 2.0
-- Depth Anything V2: Apache 2.0
-- CLIP: MIT
-- YOLOv8: AGPL-3.0

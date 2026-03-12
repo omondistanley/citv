@@ -1,0 +1,432 @@
+{
+  "metadata": {
+    "timestamp": "2026-03-12 17:41:27",
+    "segmentor": "SAM2",
+    "intrinsics": {
+      "fx": 623.5382907247958,
+      "fy": 623.5382907247958,
+      "cx": 360.0,
+      "cy": 640.0
+    },
+    "models": [
+      "GroundedSAM2",
+      "Florence-2",
+      "Pix2SG"
+    ],
+    "rampp_tags": [],
+    "gdino_query_used": "person. man. woman. child. animal. dog. cat. car. truck. bicycle. motorcycle. bus. chair. table. desk. sofa. bed. shelf. cabinet. door. window. bottle. cup. bowl. plate. glass. laptop. phone. keyboard. monitor. television. bag. backpack. book. clock. lamp. tree. plant. sign.",
+    "relation_sources": {
+      "Pix2SG": {
+        "active": true,
+        "backend": "spatial_scaffold",
+        "reason": "No precomputed triplets dir at /home/stanleyomondi/citv/pix2sg_triplets. Using spatial scaffold backend."
+      }
+    },
+    "relation_debug": {
+      "pix2sg": {
+        "input_triplets": 12,
+        "attached": 12,
+        "subject_id_matched": 12,
+        "subject_label_matched": 0,
+        "target_id_matched": 12,
+        "target_label_matched": 0,
+        "external_targets": 0,
+        "unmatched_subjects": 0
+      },
+      "mask_iou_match_thresh": 0.1,
+      "pix2sg_mask_overlap_thresh": 0.05,
+      "pix2sg_depth_near_threshold": 1.0,
+      "raw_triplets": {
+        "pix2sg": 12
+      },
+      "num_detected_objects": 4,
+      "num_mask_matched": 4
+    },
+    "depth_map": "scene_graph/97f1f852-bc3b-47ee-8f08-babdc990ce4f_depth_map.png",
+    "segmentation_image": "scene_graph/97f1f852-bc3b-47ee-8f08-babdc990ce4f_segmentation.png",
+    "sam2_segmentation_image": "scene_graph/97f1f852-bc3b-47ee-8f08-babdc990ce4f_sam2_segmentation.png",
+    "sam2_tinted_overlay_image": "scene_graph/97f1f852-bc3b-47ee-8f08-babdc990ce4f_sam2_tinted_overlay.png"
+  },
+  "objects": [
+    {
+      "id": "obj_0_GroundedSAM2",
+      "label": "bottle",
+      "confidence": 0.5001,
+      "conf": 0.5001,
+      "bbox": [
+        448,
+        6,
+        715,
+        397
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 4.061,
+        "y": -8.882,
+        "z": 11.562
+      },
+      "depth_stats": {
+        "min": 10.3684,
+        "max": 13.8031,
+        "mean": 11.9688,
+        "median": 11.8459,
+        "std": 0.7696,
+        "num_pixels": 70002,
+        "z_val": 11.5619,
+        "z_val_pixels": 33728,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.3107
+      },
+      "mask_centroid_2d": [
+        579,
+        161
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 4.058,
+        "y": -8.875,
+        "z": 11.553
+      },
+      "depth_stats_no_erosion": {
+        "min": 10.3684,
+        "max": 13.9004,
+        "mean": 11.995,
+        "median": 11.8677,
+        "std": 0.7839,
+        "num_pixels": 72211,
+        "z_val": 11.5527,
+        "z_val_pixels": 34909,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.1304
+      },
+      "mask_centroid_2d_no_erosion": [
+        579,
+        161
+      ],
+      "sam2_mask_index": 0,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "bottle",
+          "label": "bottle",
+          "confidence": 0.5001
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "above",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "bowl",
+              "target_caption": "bowl",
+              "score": 0.7
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "plate",
+              "target_caption": "plate",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_1_GroundedSAM2",
+      "label": "bottle",
+      "confidence": 0.4779,
+      "conf": 0.4779,
+      "bbox": [
+        545,
+        563,
+        719,
+        974
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 2.801,
+        "y": 1.476,
+        "z": 5.94
+      },
+      "depth_stats": {
+        "min": 5.316,
+        "max": 7.1986,
+        "mean": 6.2158,
+        "median": 6.2184,
+        "std": 0.4679,
+        "num_pixels": 47122,
+        "z_val": 5.9397,
+        "z_val_pixels": 21394,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.5995
+      },
+      "mask_centroid_2d": [
+        654,
+        795
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 2.79,
+        "y": 1.486,
+        "z": 5.938
+      },
+      "depth_stats_no_erosion": {
+        "min": 5.316,
+        "max": 7.2332,
+        "mean": 6.2385,
+        "median": 6.2444,
+        "std": 0.4776,
+        "num_pixels": 48806,
+        "z_val": 5.9378,
+        "z_val_pixels": 22204,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.1597
+      },
+      "mask_centroid_2d_no_erosion": [
+        653,
+        796
+      ],
+      "sam2_mask_index": 1,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "bottle",
+          "label": "bottle",
+          "confidence": 0.4779
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "bowl",
+              "target_caption": "bowl",
+              "score": 0.75
+            },
+            {
+              "predicate": "right_of",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "plate",
+              "target_caption": "plate",
+              "score": 0.7
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_2_GroundedSAM2",
+      "label": "plate",
+      "confidence": 0.53,
+      "conf": 0.53,
+      "bbox": [
+        9,
+        319,
+        713,
+        813
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -0.026,
+        "y": 0.714,
+        "z": 8.243
+      },
+      "depth_stats": {
+        "min": 6.8671,
+        "max": 13.9144,
+        "mean": 9.9164,
+        "median": 9.5578,
+        "std": 1.9985,
+        "num_pixels": 126369,
+        "z_val": 8.2429,
+        "z_val_pixels": 12897,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.0278
+      },
+      "mask_centroid_2d": [
+        358,
+        694
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": -0.053,
+        "y": 0.688,
+        "z": 8.246
+      },
+      "depth_stats_no_erosion": {
+        "min": 6.8135,
+        "max": 14.0469,
+        "mean": 9.9924,
+        "median": 9.6535,
+        "std": 2.0326,
+        "num_pixels": 136275,
+        "z_val": 8.2458,
+        "z_val_pixels": 16249,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.1207
+      },
+      "mask_centroid_2d_no_erosion": [
+        356,
+        692
+      ],
+      "sam2_mask_index": 2,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "plate",
+          "label": "plate",
+          "confidence": 0.53
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_3_GroundedSAM2",
+              "target_label": "bowl",
+              "target_caption": "bowl",
+              "score": 0.75
+            },
+            {
+              "predicate": "left_of",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.7
+            },
+            {
+              "predicate": "in_front_of",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "obj_3_GroundedSAM2",
+      "label": "bowl",
+      "confidence": 0.3246,
+      "conf": 0.3246,
+      "bbox": [
+        494,
+        429,
+        710,
+        594
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 4.081,
+        "y": -2.382,
+        "z": 11.516
+      },
+      "depth_stats": {
+        "min": 9.868,
+        "max": 11.9126,
+        "mean": 11.2604,
+        "median": 11.3017,
+        "std": 0.2932,
+        "num_pixels": 21232,
+        "z_val": 11.5156,
+        "z_val_pixels": 10620,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.314
+      },
+      "mask_centroid_2d": [
+        581,
+        511
+      ],
+      "coordinates_3d_no_erosion": {
+        "x": 4.102,
+        "y": -2.365,
+        "z": 11.522
+      },
+      "depth_stats_no_erosion": {
+        "min": 9.7703,
+        "max": 12.4607,
+        "mean": 11.2593,
+        "median": 11.3033,
+        "std": 0.3187,
+        "num_pixels": 22846,
+        "z_val": 11.5224,
+        "z_val_pixels": 11431,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.3527
+      },
+      "mask_centroid_2d_no_erosion": [
+        582,
+        512
+      ],
+      "sam2_mask_index": 3,
+      "mask_matched": true,
+      "mask_path": null,
+      "depth_map_path": null,
+      "sources": {
+        "GroundedSAM2": {
+          "caption": "bowl",
+          "label": "bowl",
+          "confidence": 0.3246
+        },
+        "Florence2": {
+          "label": "object",
+          "caption": "object"
+        },
+        "Pix2SG": {
+          "relations": [
+            {
+              "predicate": "behind",
+              "target_id": "obj_2_GroundedSAM2",
+              "target_label": "plate",
+              "target_caption": "plate",
+              "score": 0.75
+            },
+            {
+              "predicate": "behind",
+              "target_id": "obj_1_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.75
+            },
+            {
+              "predicate": "below",
+              "target_id": "obj_0_GroundedSAM2",
+              "target_label": "bottle",
+              "target_caption": "bottle",
+              "score": 0.7
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

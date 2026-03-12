@@ -41,6 +41,15 @@ _logging.getLogger("transformers.modeling_attn_mask_utils").setLevel(_logging.ER
 # Import existing DepthEstimator
 from depth import DepthEstimator
 
+# spaCy for grammatically-aware noun extraction in Florence-2 label chain.
+# Falls back to the legacy stopword scan if spaCy or the model is unavailable.
+_spacy_nlp = None
+try:
+    import spacy as _spacy
+    _spacy_nlp = _spacy.load("en_core_web_sm")
+except Exception:
+    pass
+
 
 def _load_bgr_image(path: Path) -> np.ndarray:
     """
@@ -768,16 +777,27 @@ class Florence2Wrapper:
                 return w_clean
         return "object"
 
-    def label_crop(self, crop_bgr: np.ndarray) -> Dict[str, Any]:
+    def label_crop(
+        self,
+        crop_bgr: np.ndarray,
+        gdino_hint: str = "",
+    ) -> Dict[str, Any]:
         """
         Label a BGR crop using Florence-2.
 
-        Primary: <MORE_DETAILED_CAPTION> — on a tight single-object crop this
-        reliably produces sentences like "a wooden dining chair with padded seat"
-        from which we extract the first meaningful noun ("chair").
+        Step 1 — <OD> structured detection on the padded, blurred-context crop.
+          Returns {labels, bboxes}; pick the label from the largest detected bbox.
+          This is the most robust task on object crops of any size.
 
-        Secondary: <OD> — if caption extraction still yields "object", run
-        detection on the crop and pick the label from the largest bbox.
+        Step 2 — <MORE_DETAILED_CAPTION> for rich caption storage (large crops only).
+          Only attempted when the crop is at least 128×128 px to avoid Florence-2
+          degenerate repetition loops on very small crops.
+          spaCy noun-chunk parser extracts the primary noun from the caption.
+
+        Args:
+            crop_bgr: BGR image crop (padded, blurred-context background).
+            gdino_hint: GDINO class label — used as the caption label when both
+                        <OD> and <MORE_DETAILED_CAPTION> fail.
 
         Returns dict: label (str), conf (float), caption (str).
         """
@@ -788,36 +808,78 @@ class Florence2Wrapper:
         crop_rgb = cv2.cvtColor(crop_bgr, cv2.COLOR_BGR2RGB)
         pil_crop = PILImage.fromarray(crop_rgb)
 
-        # --- Primary: rich caption → noun extraction ---
-        cap_result = self._run_task("<MORE_DETAILED_CAPTION>", pil_crop)
-        caption = cap_result.get("<MORE_DETAILED_CAPTION>", "")
-        if not isinstance(caption, str):
-            caption = str(caption)
+        label = "object"
+        conf = 0.0
+        caption = ""
 
-        label = self._extract_label_from_caption(caption)
-        conf = 0.75
+        # --- Step 1: <OD> structured detection → label ---
+        od_result = self._run_task("<OD>", pil_crop)
+        od_data = od_result.get("<OD>", {})
+        od_labels = od_data.get("labels", [])
+        od_bboxes = od_data.get("bboxes", [])
+        if od_labels:
+            best_area = -1
+            best_label = ""
+            for lbl, box in zip(od_labels, od_bboxes):
+                if len(box) >= 4:
+                    area = abs(box[2] - box[0]) * abs(box[3] - box[1])
+                    if area > best_area:
+                        best_area = area
+                        best_label = str(lbl).strip().lower()
+            if best_label and best_label != "object":
+                label = best_label
+                conf = 0.82
 
-        # --- Secondary: structured <OD> when caption gave nothing useful ---
-        if label == "object":
-            od_result = self._run_task("<OD>", pil_crop)
-            od_data = od_result.get("<OD>", {})
-            od_labels = od_data.get("labels", [])
-            od_bboxes = od_data.get("bboxes", [])
-            if od_labels:
-                best_area = -1
-                for lbl, box in zip(od_labels, od_bboxes):
-                    if len(box) >= 4:
-                        area = abs(box[2] - box[0]) * abs(box[3] - box[1])
-                        if area > best_area:
-                            best_area = area
-                            label = str(lbl).strip().lower()
-                if label != "object":
-                    conf = 0.80
+        # --- Step 2: <MORE_DETAILED_CAPTION> for rich caption (large crops only) ---
+        crop_h, crop_w = crop_bgr.shape[:2]
+        if crop_h >= 128 and crop_w >= 128:
+            detail_result = self._run_task("<MORE_DETAILED_CAPTION>", pil_crop)
+            detail_caption = detail_result.get("<MORE_DETAILED_CAPTION>", "")
+            if isinstance(detail_caption, str) and detail_caption.strip():
+                # Sanity-check: reject runaway repetition (>5 repeated tokens)
+                words = detail_caption.split()
+                if len(words) > 0:
+                    from collections import Counter
+                    word_counts = Counter(words)
+                    most_common_frac = word_counts.most_common(1)[0][1] / len(words)
+                    if most_common_frac < 0.25:  # no single word > 25% of output
+                        caption = detail_caption
+                        # Extract noun from caption if <OD> gave nothing
+                        if label == "object":
+                            extracted = self._extract_label_from_caption_spacy(detail_caption)
+                            if extracted != "object":
+                                label = extracted
+                                conf = 0.72
 
+        # Fallback to GDINO hint for caption when Florence-2 gave nothing useful
         if not caption:
-            caption = label
+            caption = label if label != "object" else (gdino_hint if gdino_hint else "object")
 
         return {"label": label, "conf": conf, "caption": caption}
+
+    @staticmethod
+    def _extract_label_from_caption_spacy(caption: str) -> str:
+        """
+        Extract the primary object noun from a Florence-2 <CAPTION> string.
+
+        Uses spaCy's dependency parser when available: returns the root of the
+        first noun chunk (e.g. "A wooden dining chair …" → "chair").
+        Falls back to the legacy stopword scan when spaCy is not installed.
+        """
+        if not caption or not isinstance(caption, str):
+            return "object"
+        global _spacy_nlp
+        if _spacy_nlp is not None:
+            try:
+                doc = _spacy_nlp(caption)
+                for chunk in doc.noun_chunks:
+                    root = chunk.root.text.lower().strip(".,;:!?\"'()")
+                    if root and len(root) > 2 and root not in Florence2Wrapper._CAPTION_STOPWORDS:
+                        return root
+            except Exception:
+                pass
+        # Legacy fallback
+        return Florence2Wrapper._extract_label_from_caption(caption)
 
     def predict_relation(
         self,
@@ -2055,9 +2117,17 @@ class SceneUnderstandingPipeline:
         img_bgr: np.ndarray,
         mask_bin: np.ndarray,
         amg_entry: Dict[str, Any],
+        skip_florence2: bool = False,
+        inherited_label: str = "",
+        inherited_conf: float = 0.0,
     ) -> Dict[str, Any]:
         """
         Label a mask via priority chain: GDINO → Florence-2 (optional) → RAM++.
+
+        skip_florence2: skip the Florence-2 crop call entirely (used for small AMG masks
+            or AMG masks whose label is inherited from an overlapping GDINO mask).
+        inherited_label / inherited_conf: pre-computed label from a parent GDINO mask;
+            when set, returned immediately as Priority 1 (source_model="GroundedSAM2_inherited").
         """
         h_img, w_img = img_bgr.shape[:2]
         x, y, bw, bh = amg_entry.get("bbox", [0, 0, w_img, h_img])
@@ -2072,31 +2142,60 @@ class SceneUnderstandingPipeline:
                 "source_model": "fallback",
                 "florence2_label": "",
                 "florence2_caption": "",
-                "rampp_label": "",
-                "rampp_caption": "",
-                "rampp_tags": [],
             }
 
-        crop = img_bgr[y1:y2, x1:x2].copy()
+        # Coherent-layer fast-path: label inherited from overlapping GDINO mask
+        if inherited_label and inherited_label != "object":
+            return {
+                "label": inherited_label,
+                "conf": inherited_conf,
+                "caption": inherited_label,
+                "source_model": "GroundedSAM2_inherited",
+                "florence2_label": "",
+                "florence2_caption": "",
+            }
+
+        # Padded crop: add 20% of bbox dims on each side for scene context.
+        pad_x = int((x2 - x1) * 0.20)
+        pad_y = int((y2 - y1) * 0.20)
+        cx1 = max(0, x1 - pad_x)
+        cy1 = max(0, y1 - pad_y)
+        cx2 = min(w_img, x2 + pad_x)
+        cy2 = min(h_img, y2 + pad_y)
+        crop = img_bgr[cy1:cy2, cx1:cx2].copy()
         ch, cw = crop.shape[:2]
+
+        # Build mask at crop dimensions
         mask_resized = cv2.resize(
             mask_bin.astype(np.uint8), (cw, ch), interpolation=cv2.INTER_NEAREST
         ).astype(bool)
-        bg_mean = img_bgr.mean(axis=(0, 1)).astype(np.uint8)
-        crop_filled = crop.copy()
-        crop_filled[~mask_resized] = bg_mean
+
+        # Blurred-context fill: background pixels → 20%-opacity Gaussian blur of
+        # the full image so Florence-2 sees the object in its natural context
+        # without background pixels competing at full sharpness.
+        blurred_full = cv2.GaussianBlur(img_bgr, (0, 0), sigmaX=15)
+        blurred_crop = blurred_full[cy1:cy2, cx1:cx2].copy()
+        crop_filled = crop.copy().astype(np.float32)
+        bg_float = blurred_crop.astype(np.float32)
+        bg_mask_3ch = np.stack([~mask_resized] * 3, axis=-1)
+        crop_filled[bg_mask_3ch] = (
+            crop_filled[bg_mask_3ch] * 0.20 + bg_float[bg_mask_3ch] * 0.80
+        )
+        crop_filled = np.clip(crop_filled, 0, 255).astype(np.uint8)
+
+        # GDINO hint for steering Florence-2 caption
+        gdino_hint = str(amg_entry.get("label", "")).strip().lower()
 
         f2_label, f2_caption = "object", "object"
         if (
-            self._florence2_label_enabled
+            not skip_florence2
+            and self._florence2_label_enabled
             and self.florence2 is not None
             and self.florence2.active
         ):
-            f2_result = self.florence2.label_crop(crop_filled)
+            f2_result = self.florence2.label_crop(crop_filled, gdino_hint=gdino_hint)
             f2_label = str(f2_result.get("label", "object")).strip().lower() or "object"
             f2_caption = str(f2_result.get("caption", "object"))
-
-        rampp_label, rampp_caption, rampp_tags = "object", "object", []
 
         # Priority 1: GDINO label (wins if specific — not "object")
         gdino_label = str(amg_entry.get("label", "object")).strip().lower()
@@ -2105,49 +2204,21 @@ class SceneUnderstandingPipeline:
             return {
                 "label": gdino_label,
                 "conf": gdino_conf,
-                "caption": gdino_label,
+                "caption": f2_caption if f2_caption != "object" else gdino_label,
                 "source_model": "GroundingDINO",
                 "florence2_label": f2_label,
                 "florence2_caption": f2_caption,
-                "rampp_label": rampp_label,
-                "rampp_caption": rampp_caption,
-                "rampp_tags": rampp_tags,
             }
 
         # Priority 2: Florence-2
         if f2_label != "object":
             return {
                 "label": f2_label,
-                "conf": 0.75,
+                "conf": 0.78,
                 "caption": f2_caption,
                 "source_model": "Florence-2",
                 "florence2_label": f2_label,
                 "florence2_caption": f2_caption,
-                "rampp_label": rampp_label,
-                "rampp_caption": rampp_caption,
-                "rampp_tags": rampp_tags,
-            }
-
-        # Priority 3: RAM++
-        rampp_conf = 0.0
-        if self.rampp is not None and self.rampp.active:
-            rampp_result = self.rampp.label_crop(crop_filled)
-            rampp_label = str(rampp_result.get("label", "object")).strip().lower() or "object"
-            rampp_caption = str(rampp_result.get("caption", "object"))
-            rampp_tags = list(rampp_result.get("tags", []))
-            rampp_conf = float(rampp_result.get("conf", 0.0))
-
-        if rampp_label != "object":
-            return {
-                "label": rampp_label,
-                "conf": rampp_conf,
-                "caption": rampp_caption,
-                "source_model": "RAM++",
-                "florence2_label": f2_label,
-                "florence2_caption": f2_caption,
-                "rampp_label": rampp_label,
-                "rampp_caption": rampp_caption,
-                "rampp_tags": rampp_tags,
             }
 
         return {
@@ -2157,9 +2228,6 @@ class SceneUnderstandingPipeline:
             "source_model": "fallback",
             "florence2_label": f2_label,
             "florence2_caption": f2_caption,
-            "rampp_label": rampp_label,
-            "rampp_caption": rampp_caption,
-            "rampp_tags": rampp_tags,
         }
 
     def _attach_relations_by_triplets(
@@ -2636,34 +2704,9 @@ class SceneUnderstandingPipeline:
             depth_global_max = float(np.max(metric_depth))
             depth_global_mean = float(np.mean(metric_depth))
 
-            # RAM++ dynamic vocabulary: tag the full image, build per-image GDINO query.
-            # Load RAM++ now (before SAM2 generate) so the dynamic query is ready.
-            # Florence-2 is deferred until Stage 4 to keep VRAM free during SAM2 inference.
+            # RAM++ dynamic vocabulary removed — use the static GDINO text query.
             _rampp_tags_for_metadata: list = []
             _gdino_query_used: str = self.sam2_wrapper.text_query
-            if self._rampp_enabled:
-                if self.rampp is None or not self.rampp.active:
-                    self.rampp = RAMPlusPlusWrapper(
-                        device=self.device,
-                        checkpoint_path=self._rampp_checkpoint_path,
-                        repo_path=self._rampp_repo_path,
-                        image_size=self._rampp_image_size,
-                        vit=self._rampp_vit,
-                        default_confidence=self._rampp_default_conf,
-                        max_tags=self._rampp_max_tags,
-                    )
-                if self.rampp is not None and self.rampp.active:
-                    _tag_result = self.rampp.tag_image(img_rgb)
-                    _rampp_tags_for_metadata = list(_tag_result.get("tags", []))
-                    if _rampp_tags_for_metadata:
-                        # Build GDINO query: period-separated nouns from RAM++ tags
-                        _dynamic_query = ". ".join(_rampp_tags_for_metadata) + "."
-                        self.sam2_wrapper.update_text_query(_dynamic_query)
-                        _gdino_query_used = _dynamic_query
-                        print(f"  [RAM++] Tags: {', '.join(_rampp_tags_for_metadata)}")
-                        print(f"  [RAM++] GDINO query updated ({len(_rampp_tags_for_metadata)} tags)")
-                    else:
-                        print("  [RAM++] No tags returned — using default GDINO query")
 
             amg_masks = self.sam2_wrapper.generate(img_rgb)
 
@@ -2716,18 +2759,94 @@ class SceneUnderstandingPipeline:
             sam3_masks: List[Dict[str, Any]] = []
             sam3_paths: Dict[str, str] = {}
 
+            # ── Coherent-layer two-pass labelling (Option C) ──────────────────────
+            # Pass 1: label all GroundedSAM2 (GDINO-prompted) masks first.
+            #   These already carry a GDINO label → Priority 1 wins immediately,
+            #   no Florence-2 call needed. Build a map for Pass 2 inheritance.
+            # Pass 2: label SAM2_AMG masks.
+            #   - If mask overlaps a confirmed GDINO mask (IoU > threshold): inherit label
+            #   - If mask area < small_mask_px: skip Florence-2, go straight to RAM++
+            #   - Otherwise: normal GDINO → Florence-2 → RAM++ chain
+            _inherit_iou_thresh = float(getattr(self.config, "layer_inherit_iou_thresh", 0.3)) if self.config else 0.3
+            _small_mask_px = int(getattr(self.config, "layer_small_mask_px", 2000)) if self.config else 2000
+
+            # Precompute binary masks for all entries once (reused in both passes)
+            _mask_bins: List[np.ndarray] = []
+            for amg in amg_masks:
+                seg = amg.get("segmentation")
+                _mask_bins.append((np.asarray(seg) > 0) if seg is not None else np.zeros((h, w), dtype=bool))
+
+            # Pass 1 — GroundedSAM2 masks → build gdino_confirmed list
+            gdino_confirmed: List[Dict[str, Any]] = []  # {mask_bin, label, conf}
             all_detections = []
             for i, amg in enumerate(amg_masks):
-                seg = amg.get("segmentation")
-                mask_bin = (np.asarray(seg) > 0) if seg is not None else np.zeros((h, w), dtype=bool)
-                det = self._label_mask(img_bgr, mask_bin, amg)
+                src = str(amg.get("source_model", "GroundedSAM2"))
+                mask_bin = _mask_bins[i]
+                if src != "SAM2_AMG":
+                    det = self._label_mask(img_bgr, mask_bin, amg)
+                    det["graph_id"] = f"obj_{i}_GroundedSAM2"
+                    det["sam2_mask_index"] = int(i)
+                    det["grounded_sam2_label"] = str(amg.get("label", det.get("label", "object"))).strip().lower()
+                    det["grounded_sam2_confidence"] = float(amg.get("gdino_conf", amg.get("predicted_iou", 0.0)))
+                    det["bbox"] = self._xywh_to_xyxy(amg.get("bbox", [0, 0, w, h]))
+                    det["segmentor"] = src
+                    all_detections.append(det)
+                    confirmed_label = det.get("label", "object")
+                    if confirmed_label and confirmed_label != "object":
+                        gdino_confirmed.append({
+                            "mask_bin": mask_bin,
+                            "label": confirmed_label,
+                            "conf": float(det.get("conf", 0.0)),
+                        })
+
+            n_gdino_pass = len(all_detections)
+            print(f"  [LayerLabel] Pass 1 (GroundedSAM2): {n_gdino_pass} masks labelled, "
+                  f"{len(gdino_confirmed)} confirmed labels for inheritance")
+
+            # Pass 2 — SAM2_AMG masks with inheritance / skip logic
+            n_inherited, n_small_skip, n_full = 0, 0, 0
+            for i, amg in enumerate(amg_masks):
+                src = str(amg.get("source_model", "GroundedSAM2"))
+                if src != "SAM2_AMG":
+                    continue
+                mask_bin = _mask_bins[i]
+                mask_area = int(mask_bin.sum())
+
+                # Check overlap with any confirmed GDINO mask
+                inherited_label, inherited_conf = "", 0.0
+                for _gc in gdino_confirmed:
+                    inter = np.logical_and(mask_bin, _gc["mask_bin"]).sum()
+                    union = np.logical_or(mask_bin, _gc["mask_bin"]).sum()
+                    if union > 0 and (inter / union) >= _inherit_iou_thresh:
+                        inherited_label = _gc["label"]
+                        inherited_conf = _gc["conf"]
+                        break
+
+                skip_f2 = bool(inherited_label) or (mask_area < _small_mask_px)
+                if inherited_label:
+                    n_inherited += 1
+                elif mask_area < _small_mask_px:
+                    n_small_skip += 1
+                else:
+                    n_full += 1
+
+                det = self._label_mask(
+                    img_bgr, mask_bin, amg,
+                    skip_florence2=skip_f2,
+                    inherited_label=inherited_label,
+                    inherited_conf=inherited_conf,
+                )
                 det["graph_id"] = f"obj_{i}_GroundedSAM2"
                 det["sam2_mask_index"] = int(i)
                 det["grounded_sam2_label"] = str(amg.get("label", det.get("label", "object"))).strip().lower()
                 det["grounded_sam2_confidence"] = float(amg.get("gdino_conf", amg.get("predicted_iou", 0.0)))
-                det["bbox"] = self._xywh_to_xyxy(amg.get("bbox", [0, 0, w, h]))  # SAM2 bbox, viz only
-                det["segmentor"] = str(amg.get("source_model", "GroundedSAM2"))
+                det["bbox"] = self._xywh_to_xyxy(amg.get("bbox", [0, 0, w, h]))
+                det["segmentor"] = src
                 all_detections.append(det)
+
+            n_amg_pass = len(all_detections) - n_gdino_pass
+            print(f"  [LayerLabel] Pass 2 (SAM2_AMG): {n_amg_pass} masks — "
+                  f"inherited={n_inherited}, small(RAM++ only)={n_small_skip}, full_chain={n_full}")
 
             print(f"Stage 3: {len(all_detections)} mask-objects labelled (no filtering — all masks kept)")
             # Free temporary GPU cache from per-object labelling calls
@@ -2898,11 +3017,6 @@ class SceneUnderstandingPipeline:
                             "label": str(det.get("florence2_label", "")),
                             "caption": str(det.get("florence2_caption", "")),
                         },
-                        "RAM++": {
-                            "label": str(det.get("rampp_label", "")),
-                            "caption": str(det.get("rampp_caption", "")),
-                            "tags": list(det.get("rampp_tags", [])),
-                        },
                         "Pix2SG": {"relations": []},
                     },
                     "_sam2_mask_array": mask,            # TRANSIENT — stripped before JSON save
@@ -2956,7 +3070,6 @@ class SceneUnderstandingPipeline:
 
             # Unload labellers — relations are done, SAM3 loads next, VRAM needed.
             _f2_was_active = self.florence2 is not None and self.florence2.active
-            _rampp_was_active = self.rampp is not None and self.rampp.active
             self._unload_labellers()
 
             # 6. Save SAM2 scene graph JSON (into scene_graph/sam2/)
@@ -2968,8 +3081,6 @@ class SceneUnderstandingPipeline:
             models_used_sam2 = ["GroundedSAM2"]
             if _f2_was_active:
                 models_used_sam2.append("Florence-2")
-            if _rampp_was_active:
-                models_used_sam2.append("RAM++")
             if self.pix2sg.is_active():
                 models_used_sam2.append("Pix2SG")
 
