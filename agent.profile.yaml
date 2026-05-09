@@ -1,0 +1,46 @@
+id: "user_defined_agent_v1"
+source: "user_measurement"
+measured_at: "2026-04-21"
+notes: >
+  Physical profile of the agent traversing the scenes. These values drive the
+  agent-physics layer (Layer E) of the semantic cost map: 3D footprint
+  inflation around obstacles and the step-over tolerance gate. All units are
+  metres. Replace the placeholder values below with your own measurements
+  before enabling path_cost_semantic_enabled in config.py. The physics layer
+  refuses to run if any required field is missing, <= 0, or NaN; this is
+  intentional, so no silent default is ever substituted.
+
+# ---------------------------------------------------------------------------
+# Required fields (no defaults — physics layer fails fast if absent)
+# ---------------------------------------------------------------------------
+
+# Half the agent's widest horizontal footprint (metres). Used to inflate
+# obstacle footprints on the ground plane so the centre of the agent keeps
+# its full half-width of clearance. Example: a 0.60 m wide robot -> 0.30.
+half_width_m: 0.30
+
+# Maximum vertical step the agent can clear without replanning (metres).
+# Pixels whose height-above-ground lies in [0, foot_tolerance_m] count as
+# walkable; pixels above it are stepped-on obstacles. Example for a wheeled
+# robot: ~0.02. For a legged robot: ~0.10-0.20. For a human avatar: ~0.30.
+foot_tolerance_m: 0.05
+
+# Height of the agent's tallest point above the ground plane (metres). Used
+# together with any "overhead clearance" check from the geometry layer so
+# ceilings/archways below head_height are marked untraversable.
+head_height_m: 1.70
+
+# ---------------------------------------------------------------------------
+# Optional fields (fall back to physically-motivated derivations, not magic)
+# ---------------------------------------------------------------------------
+
+# Per-axis forward/back/lateral safety pads (metres). When omitted, the
+# fuser uses half_width_m for both x and y.
+# pad_x_m:
+# pad_y_m:
+
+# Agent's nominal motion granularity (metres). Used to set the grid-search
+# step size when the path_search_algorithm is grid-based. When omitted,
+# grid step is derived from depth resolution + camera intrinsics (1 px in
+# metric units at the median depth of the image).
+step_m: null

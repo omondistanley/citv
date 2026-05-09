@@ -1,0 +1,13 @@
+{
+  "schema": "citv_navigation_zone_policy_v1",
+  "version": "1.0",
+  "channel_order": ["idle", "walk", "run", "careful"],
+  "description": "Per-affordance soft priors over navigation channels; keys match affordance strings emitted by semantic_layer.region_affordances.",
+  "affordance_channel_prior": {
+    "walkable": { "idle": 0.08, "walk": 0.42, "run": 0.45, "careful": 0.05 },
+    "interaction_zone": { "idle": 0.18, "walk": 0.48, "run": 0.22, "careful": 0.12 },
+    "obstacle": { "idle": 0.05, "walk": 0.15, "run": 0.0, "careful": 0.8 },
+    "far_background": { "idle": 0.02, "walk": 0.08, "run": 0.0, "careful": 0.9 }
+  },
+  "default": { "idle": 0.15, "walk": 0.5, "run": 0.25, "careful": 0.1 }
+}

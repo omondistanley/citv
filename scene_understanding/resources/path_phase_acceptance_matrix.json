@@ -1,0 +1,94 @@
+{
+  "schema": "citv_path_phase_acceptance_matrix_v1",
+  "source_of_truth": "docs/path_updates.md",
+  "phases": [
+    {
+      "phase": 1,
+      "name": "documentation_and_contracts",
+      "required_artifacts": [
+        "docs/path_updates.md",
+        "thoughts.md"
+      ],
+      "required_tests": []
+    },
+    {
+      "phase": 2,
+      "name": "staged_path_parity",
+      "required_artifacts": [
+        "scene_graph/staged/<stem>_paths/path_hypotheses.json"
+      ],
+      "required_fields": [
+        "hypotheses[].polyline_3d",
+        "hypotheses[].depth_trace_m",
+        "hypotheses[].support_trace",
+        "hypotheses[].semantic_trace",
+        "hypotheses[].caption_trace",
+        "hypotheses[].visibility_profile",
+        "hypotheses[].region_boundary_trace",
+        "hypotheses[].movement_scope",
+        "hypotheses[].boundary_interaction"
+      ],
+      "required_tests": [
+        "tests/test_path_action_affordance_contracts.py::test_path_enrichment_adds_scene_and_render_contracts"
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "affordance_layer",
+      "required_artifacts": [
+        "scene_graph/staged/<stem>_caption_evidence.json",
+        "scene_graph/staged/<stem>_scene_affordances.json",
+        "scene_graph/staged/<stem>_object_affordances.json",
+        "scene_graph/staged/<stem>_mask_affordances.json"
+      ],
+      "required_tests": [
+        "tests/test_path_action_affordance_contracts.py::test_affordance_stage_exports_caption_aware_contracts"
+      ]
+    },
+    {
+      "phase": 4,
+      "name": "action_hypotheses",
+      "required_artifacts": [
+        "scene_graph/staged/<stem>_paths/action_hypotheses.json"
+      ],
+      "required_fields": [
+        "hypotheses[].manifold_type",
+        "hypotheses[].scores.confidence_breakdown",
+        "hypotheses[].scores.rejection_reasons"
+      ],
+      "required_tests": [
+        "tests/test_path_action_affordance_contracts.py::test_action_export_writes_path_and_affordance_manifolds"
+      ]
+    },
+    {
+      "phase": 5,
+      "name": "occlusion_aware_trajectories",
+      "required_artifacts": [
+        "scene_graph/staged/<stem>_paths/trajectory_hypotheses.json",
+        "scene_graph/staged/<stem>_paths/animation_components.json"
+      ],
+      "required_fields": [
+        "hypotheses[].action_context.render_layers",
+        "hypotheses[].action_context.occlusion_trace",
+        "components[].action_context.visibility_profile"
+      ],
+      "required_tests": [
+        "tests/test_path_action_affordance_contracts.py::test_animation_export_writes_non_empty_trajectory_and_components_without_qa"
+      ]
+    },
+    {
+      "phase": 6,
+      "name": "qa_and_tests",
+      "required_artifacts": [
+        "scene_graph/staged/<stem>_paths/path_trajectories.png",
+        "scene_graph/staged/<stem>_paths/path_trajectories_batches.json",
+        "scene_graph/staged/<stem>_paths/path_visual_qa.json",
+        "scene_graph/staged/<stem>_paths/path_visual_qa.md"
+      ],
+      "required_tests": [
+        "tests/test_path_action_affordance_contracts.py::test_visual_qa_links_action_hypotheses_v2",
+        "tests/test_scene_paths_phase7.py"
+      ]
+    }
+  ]
+}

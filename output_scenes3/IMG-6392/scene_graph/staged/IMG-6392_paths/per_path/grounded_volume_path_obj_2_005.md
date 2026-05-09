@@ -1,0 +1,23 @@
+# Path `grounded_volume_path_obj_2_005`
+
+- rank: 93
+- manifold: volume_path
+- action_family: volume_motion
+- movement_scope: inter_region
+- boundary_interaction: crosses_and_tracks_region_boundaries
+- dominant_motion: descend_or_approach_camera
+- confidence: 0.325
+- status: low_confidence
+- rejection_reasons: []
+- uncertainty_reasons: ['geometry_depth_jump_unexplained', 'straight_line_crosses_region_transition_without_shape_context', 'two_point_route_shape_underexplained']
+- contradiction_reasons: []
+- grounding_evidence: {'schema': 'citv_path_grounding_evidence_v1', 'candidate_source': 'scene_grounding_index', 'entity_id': 'obj_2', 'entity_label': 'face', 'local_evidence_confidence': 0.4231, 'global_only': False, 'manifold_reason': 'local_or_region_open_air', 'uncertainty': [], 'contradictions': []}
+- source: actor
+- target: face
+- motion_labels: ['descend_or_approach_camera', 'occlusion_aware_traverse', 'careful', 'region_transition_traverse', 'edge_follow_or_orbit', 'step_or_occlusion_boundary_transition']
+- action_labels: ['fly', 'interact', 'hover', 'peek', 'interact', 'hold', 'cross_region_transition', 'edge_follow_or_portal_approach', 'fly', 'hover', 'inter_region', 'boundary_context']
+- render_layers: ['in_front', 'partially_occluded']
+- occlusion_trace: {'mean_visible_fraction': 0.6583, 'min_visible_fraction': 0.4, 'occluded_sample_fraction': 0.9167, 'occluder_ids': ['obj_1', 'obj_9']}
+- trajectory_contract: {'dominant_motion': 'descend_or_approach_camera', 'shape_type': 'open_space_volume', 'direction_profile': {'available': True, 'heading_start_deg': -44.335, 'heading_end_deg': -44.335, 'image_direction': 'up_right', 'camera_depth_trend': 'toward_camera', 'depth_delta_m': -1.0703, 'scale_trend': 'larger_over_time', 'approach_retreat': 'approach', 'orbit_direction': 'not_orbital'}, 'support_dominant': 'unknown', 'animation_ready': True, 'mean_visible_fraction': 0.6583, 'width_mean_px': 35.527}
+- path_shape_contract: {'shape_type': 'open_space_volume', 'straight_line_like': True, 'straightness_ratio': 1.0, 'direction_profile': {'available': True, 'heading_start_deg': -44.335, 'heading_end_deg': -44.335, 'image_direction': 'up_right', 'camera_depth_trend': 'toward_camera', 'depth_delta_m': -1.0703, 'scale_trend': 'larger_over_time', 'approach_retreat': 'approach', 'orbit_direction': 'not_orbital'}, 'support_evidence': {'support_kind_counts': {'unknown': 48}, 'support_grounding_confidence': 0.0, 'movement_scope': 'inter_region', 'boundary_interaction': 'crosses_and_tracks_region_boundaries', 'region_transition_count': 1}, 'shape_justification': ['region_boundary_context_sampled', 'support_trace_sampled'], 'geometry_refs': {'raw_centerline': 'polyline_2d_raw', 'validated_centerline': 'polyline_2d_validated', 'display_centerline': 'display_polyline_2d', 'centerline': 'display_polyline_2d', 'polyline_3d': 'polyline_3d', 'display_polyline_3d': 'display_polyline_3d', 'left_boundary': 'left_boundary_2d', 'right_boundary': 'right_boundary_2d', 'mask_or_effect_refs': []}, 'geometry_quality': {'zigzag_score': 0.0, 'turn_angle_p95': 0.0, 'curvature_energy': 0.0, 'vertical_shoot_score': 0.0, 'depth_jump_count': 2, 'support_snap_displacement_px': {'mean': 5.285, 'max': 15.854}, 'smoothability_status': 'rejected'}, 'rejection_reasons': ['two_point_route_shape_underexplained', 'straight_line_crosses_region_transition_without_shape_context', 'geometry_depth_jump_unexplained']}
+- animation_render_contract: {'render_primitive': 'open_volume_actor_or_field', 'alpha_policy': 'depth_visibility_volume', 'width_policy': 'depth_width_profile', 'depth_scale_policy': 'metric_depth_trace', 'render_layers': ['in_front', 'partially_occluded'], 'motion_labels': ['careful', 'descend_or_approach_camera', 'edge_follow_or_orbit', 'occlusion_aware_traverse', 'region_transition_traverse', 'step_or_occlusion_boundary_transition'], 'action_labels': ['above', 'boundary_context', 'cross_region_transition', 'edge_follow_or_portal_approach', 'fly', 'hold', 'hover', 'inter_region', 'interact', 'peek'], 'sample_state_preview_count': 2}

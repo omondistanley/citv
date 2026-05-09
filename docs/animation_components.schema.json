@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "citv_animation_components_bundle_v1",
+  "type": "object",
+  "required": [
+    "schema",
+    "version",
+    "image_stem",
+    "track",
+    "image_size",
+    "components"
+  ],
+  "properties": {
+    "schema": { "const": "citv_animation_components_bundle_v1" },
+    "version": { "type": "string" },
+    "image_stem": { "type": "string" },
+    "track": { "type": "string" },
+    "image_size": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "component_id",
+          "trajectory_id",
+          "path_id_linked",
+          "motion_mode_candidates",
+          "timeline_records",
+          "trajectory_points",
+          "relation_guardrails",
+          "naturalness_score"
+        ],
+        "properties": {
+          "component_id": { "type": "string" },
+          "trajectory_id": { "type": "string" },
+          "path_id_linked": { "type": "string" },
+          "subject": { "type": "object" },
+          "motion_mode_candidates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["motion", "confidence"],
+              "properties": {
+                "motion": {
+                  "type": "string",
+                  "enum": [
+                    "idle",
+                    "walk",
+                    "run",
+                    "jump",
+                    "crawl",
+                    "wave",
+                    "sit",
+                    "surprised",
+                    "hop"
+                  ]
+                },
+                "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+              }
+            }
+          },
+          "timeline_records": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["t0_s", "t1_s", "motion"],
+              "properties": {
+                "t0_s": { "type": "number", "minimum": 0 },
+                "t1_s": { "type": "number", "minimum": 0 },
+                "motion": { "type": "string" },
+                "path_segment_indices": {
+                  "type": "array",
+                  "items": { "type": "integer", "minimum": 0 }
+                },
+                "relation_predicate": { "type": "string" },
+                "navigation_hint": { "type": "string" }
+              }
+            }
+          },
+          "trajectory_points": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["t_s", "x_px", "y_px", "theta_rad"],
+              "properties": {
+                "t_s": { "type": "number" },
+                "x_px": { "type": "number" },
+                "y_px": { "type": "number" },
+                "theta_rad": { "type": "number" },
+                "z_m": { "type": ["number", "null"] }
+              }
+            }
+          },
+          "relation_guardrails": { "type": "object" },
+          "scene_semantic_constraints": { "type": "object" },
+          "naturalness_score": { "type": "number", "minimum": 0, "maximum": 1 },
+          "rejection_reasons": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "counterpart": {
+            "type": ["object", "null"],
+            "properties": {
+              "kind": { "type": "string" },
+              "id": { "type": "string" },
+              "display_label": { "type": "string" }
+            }
+          },
+          "trajectory_samples": {
+            "type": "array",
+            "description": "Multi-sample trajectories (idle, rollout_pca, inter_path, ...).",
+            "items": {
+              "type": "object",
+              "required": ["sample_id", "sample_kind", "states_t"],
+              "properties": {
+                "sample_id": { "type": "string" },
+                "sample_kind": {
+                  "type": "string",
+                  "enum": ["idle", "rollout_pca", "inter_path", "intra_contour"]
+                },
+                "weight": { "type": "number" },
+                "states_t": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["t_s", "x_px", "y_px", "theta_rad"],
+                    "properties": {
+                      "t_s": { "type": "number" },
+                      "x_px": { "type": "number" },
+                      "y_px": { "type": "number" },
+                      "theta_rad": { "type": "number" },
+                      "z_m": { "type": ["number", "null"] }
+                    }
+                  }
+                },
+                "evidence": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

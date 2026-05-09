@@ -1,0 +1,77 @@
+{
+  "path_hypotheses_v2": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Path Hypotheses v2",
+    "type": "object",
+    "required": ["schema", "version", "image_stem", "paths"],
+    "properties": {
+      "schema": { "const": "citv_path_hypotheses_v2" },
+      "version": { "const": "2.0" },
+      "image_stem": { "type": "string" },
+      "paths": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["path_id", "path_type", "polyline_2d", "scores"],
+          "properties": {
+            "path_id": { "type": "string" },
+            "path_type": { "type": "string" },
+            "source_entity": { "type": "object" },
+            "target_entity": { "type": "object" },
+            "polyline_2d": { "type": "array" },
+            "scores": {
+              "type": "object",
+              "required": ["overall_confidence", "hybrid_overall"],
+              "properties": {
+                "overall_confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+                "hybrid_overall": { "type": "number", "minimum": 0, "maximum": 1 },
+                "energy_total": { "type": "number" }
+              }
+            },
+            "energy_terms": { "type": "object" },
+            "constraints_applied": { "type": "object" },
+            "diagnostics": { "type": "object" },
+            "semantic_validity_score": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        }
+      }
+    }
+  },
+  "trajectory_hypotheses_v2": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Trajectory Hypotheses v2",
+    "type": "object",
+    "required": ["schema", "version", "image_stem", "hypotheses"],
+    "properties": {
+      "schema": { "const": "citv_trajectory_hypotheses_bundle_v2" },
+      "version": { "const": "2.0" },
+      "image_stem": { "type": "string" },
+      "hypotheses": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["trajectory_id", "subject", "time_model", "samples", "confidence"],
+          "properties": {
+            "trajectory_id": { "type": "string" },
+            "subject": { "type": "object" },
+            "time_model": { "type": "object" },
+            "samples": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["sample_id", "states_t"],
+                "properties": {
+                  "sample_id": { "type": "string" },
+                  "states_t": { "type": "array" },
+                  "evidence": { "type": "object" }
+                }
+              }
+            },
+            "constraints_used": { "type": "object" },
+            "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        }
+      }
+    }
+  }
+}

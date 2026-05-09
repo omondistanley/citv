@@ -1,0 +1,96 @@
+{
+  "contract_name": "citv_path_export_stage_contract",
+  "version": "1.0",
+  "stage": "SceneUnderstandingPipeline._export_path_hypotheses_for_track",
+  "required_inputs": [
+    "img_bgr",
+    "path_stem",
+    "track_dir_name",
+    "track_dir",
+    "objects_3d_with_masks",
+    "regions_block",
+    "region_label_map",
+    "region_adjacency",
+    "relations",
+    "config"
+  ],
+  "optional_inputs": [
+    "metric_depth_m"
+  ],
+  "early_exit_conditions": [
+    "config.export_path_hypotheses is false",
+    "region_label_map is null",
+    "regions_block is null",
+    "region_adjacency is null"
+  ],
+  "required_outputs": [
+    "path_hypotheses.json",
+    "path_reasoning.md",
+    "descriptions.md",
+    "semantic_layer.json",
+    "scene_context.json",
+    "path_visual_index.json",
+    "animation_plan.json",
+    "animation_components.json"
+  ],
+  "conditional_outputs": {
+    "path_descriptions.json": "config.path_export_descriptions",
+    "pair_proposals.json": "config.path_export_pair_proposals_json",
+    "path_diagnostics.json": "config.path_export_diagnostics_json",
+    "insertion_path_ensembles.json": "config.export_motion_contract_json",
+    "trajectory_hypotheses.json": "config.export_motion_contract_json",
+    "motion_contracts_overlay.png": "config.path_motion_contract_overlay && config.export_motion_contract_json",
+    "path_fields_explainer.png": "config.path_export_fields_explainer",
+    "path_fields_legend.json": "config.path_export_fields_explainer",
+    "path_context_top5.png": "config.path_export_context_composites && config.path_context_top_k > 0",
+    "path_context_triplets_manifest.json": "config.path_export_triplet_context_composites",
+    "path_atlas_manifest.json": "config.path_atlas_enabled",
+    "path_top30_atlas.md": "config.path_atlas_enabled",
+    "path_atlas_ranked_panel_01.png": "config.path_atlas_enabled",
+    "path_atlas_ranked_panel_01_paths_trajectories.png": "config.path_atlas_enabled && config.path_atlas_export_paths_trajectories_overlay",
+    "traj_atlas_line_only.png": "config.path_atlas_enabled && config.path_atlas_export_trajectory_line_only",
+    "trajectory_viz_v2/traj_v2_manifest.json": "config.path_v2_visualization_enabled",
+    "animation_qa_24/animation_qa_manifest.json": "config.path_animation_qa_enabled && 24 in config.path_animation_qa_modes",
+    "animation_qa_24/animation_qa_scores.json": "config.path_animation_qa_enabled && 24 in config.path_animation_qa_modes",
+    "animation_qa_120/animation_qa_manifest.json": "config.path_animation_qa_enabled && 120 in config.path_animation_qa_modes",
+    "animation_qa_120/animation_qa_scores.json": "config.path_animation_qa_enabled && 120 in config.path_animation_qa_modes",
+    "path_hypotheses_full.json": "config.path_export_full_hypotheses (default true); pre-family_cap geometric snapshot",
+    "navigation_zones.npy": "config.path_export_navigation_zones (default true)",
+    "navigation_zones.png": "config.path_export_navigation_zones (default true)",
+    "navigation_zones.json": "config.path_export_navigation_zones (default true)",
+    "path_walkable.npy": "config.path_export_walkable_npy (default true)",
+    "path_walkable_mask.json": "config.path_export_walkable_npy (default true); includes semantic_fusion_applied / semantic_fusion_fallback_geometric / semantic_labels_blocked when path_walkable_semantic_fusion_enabled",
+    "path_hypotheses paths[].polyline_3d": "optional [u,v,z_m] per vertex when path_export_polyline_3d and metric depth available; trajectory inter_path samples use vertex_z interpolation when counts match polyline_2d"
+  },
+  "performance_policy": {
+    "cpu_only_required": true,
+    "target_wall_total_seconds": 200,
+    "stage_budget_seconds": {
+      "pre_depth": 5,
+      "depth": 20,
+      "segmentation": 35,
+      "regions": 8,
+      "enrich_regions": 20,
+      "path_hypotheses_export": 45,
+      "relations_layers_maps": 8,
+      "track_geometry_exports": 60,
+      "caption_exports": 15,
+      "release_heavy_models": 5
+    }
+  },
+  "required_return_keys": [
+    "path_hypotheses_json",
+    "path_map_all_image",
+    "path_map_topN_image",
+    "path_context_top5_image",
+    "semantic_layer_json",
+    "animation_plan_json",
+    "animation_components_json",
+    "path_visual_index_json",
+    "path_cost_map_png",
+    "path_cost_map_npy",
+    "path_traversability_speed_npy",
+    "path_traversability_speed_png",
+    "path_hypotheses_full_json"
+  ]
+}

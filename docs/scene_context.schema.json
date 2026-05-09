@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "citv/scene_context.schema.json",
+  "title": "CITV Scene Context",
+  "type": "object",
+  "required": [
+    "schema",
+    "version",
+    "image_stem",
+    "track",
+    "image_size",
+    "context_summary",
+    "inputs"
+  ],
+  "properties": {
+    "schema": { "const": "citv_scene_context_v1" },
+    "version": { "const": "1.0" },
+    "image_stem": { "type": "string", "minLength": 1 },
+    "track": { "type": "string", "minLength": 1 },
+    "image_size": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "context_summary": {
+      "type": "object",
+      "required": [
+        "objects_count",
+        "regions_count",
+        "relations_count",
+        "depth_available",
+        "region_label_map_valid",
+        "intrinsics_available"
+      ],
+      "properties": {
+        "objects_count": { "type": "integer", "minimum": 0 },
+        "regions_count": { "type": "integer", "minimum": 0 },
+        "relations_count": { "type": "integer", "minimum": 0 },
+        "depth_available": { "type": "boolean" },
+        "region_label_map_valid": { "type": "boolean" },
+        "intrinsics_available": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "region_label_map_stats": { "type": "object" },
+    "depth_stats": { "type": "object" },
+    "inputs": {
+      "type": "object",
+      "required": ["objects", "regions_block", "region_adjacency", "relations", "intrinsics"],
+      "properties": {
+        "objects": { "type": "array" },
+        "regions_block": { "type": "object" },
+        "region_adjacency": { "type": "object" },
+        "relations": { "type": "array" },
+        "intrinsics": { "type": "object" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

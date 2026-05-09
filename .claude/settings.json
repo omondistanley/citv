@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(/opt/anaconda3/bin/python3 -c ' *)",
+      "Bash(python3 -m scene_understanding *)"
+    ]
+  }
+}

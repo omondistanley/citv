@@ -1,0 +1,49 @@
+# Versioned prompts for the semantic cost map's Layer B (VLM).
+#
+# The two pole structure is intentional: every query returns a score in
+# [0, 1] where 1 means "pixel/object matches the positive pole" and 0
+# means "pixel/object matches the negative pole". Layer B turns these
+# pairs into a cost (obstacle_pole - walkable_pole, clipped to [0, 1])
+# with precision proportional to |positive - negative|.
+#
+# Changing these prompts affects downstream cost maps, so bump `version`
+# whenever you edit them. The version string is written verbatim into
+# cost_meta.json.
+
+version: "2026-04-21.a"
+
+clipseg:
+  # CLIPSeg gives per-pixel similarity; used in Layer B for the scene-wide
+  # walkable/obstacle field.
+  walkable_prompts:
+    - "a walkable floor"
+    - "open ground to walk on"
+    - "a path or walkway"
+    - "an empty surface an agent can stand on"
+  obstacle_prompts:
+    - "a wall blocking the path"
+    - "furniture blocking the way"
+    - "an object that cannot be walked through"
+    - "a barrier or obstacle"
+
+siglip:
+  # SigLIP scores per-object; used to refine object-level obstacle vs.
+  # traversable classification. Each object is compared against both poles
+  # and the softmax-normalised difference drives the cost contribution.
+  traversable_prompts:
+    - "a flat traversable floor"
+    - "an open walkway"
+    - "a rug on the ground"
+  obstacle_prompts:
+    - "a solid obstacle"
+    - "a wall or barrier"
+    - "a piece of furniture"
+    - "a person standing in the way"
+
+# Fusion knobs for Layer B. These multiply the normalised scores, so
+# values outside [0, 1] will break the fused cost contract.
+fusion:
+  clipseg_weight: 1.0
+  siglip_weight: 1.0
+  precision_floor: 0.05  # layer always contributes at least this much
+  precision_ceiling: 0.95

@@ -1,0 +1,1748 @@
+# Path, Trajectory, Affordance, And Action-Manifold Updates
+
+Related planning note: [thoughts.md](../thoughts.md)
+
+This is the canonical design document for the next generation of CITV path,
+trajectory, affordance, and animation-planning work. It captures the discussion
+about where the current path system is strong, where it is under-specified, and
+how to evolve it into an open-vocabulary, depth-aware, scene-aware action
+manifold system.
+
+The central point is blunt: better shortest-path search is not enough. The
+project needs richer scene representation and richer motion contracts. A path
+for animation is not always a line. It can be a ribbon, blob, volume, contour,
+portal, contact patch, occlusion pulse, or local effect field depending on the
+action and the scene.
+
+## 1. Purpose And Scope
+
+This document is the implementation source of truth for future path and
+trajectory upgrades. It is intentionally design-first. It should be reviewed
+before code changes begin.
+
+The immediate goal is to improve scene-aware animation contracts, not merely to
+find shorter or smoother paths. A route should carry enough evidence for the
+animation system to decide:
+
+- where motion can happen;
+- what kind of motion is plausible;
+- how the actor or effect should scale with depth;
+- whether it is visible, partially occluded, hidden, reflected, or fading;
+- what scene, object, mask, and relation evidence supports or rejects it.
+
+The document covers:
+
+- current codebase behavior;
+- current pitfalls;
+- the proposed conceptual model;
+- scene-level, object-level, and mask-level affordance understanding;
+- open-vocabulary action grounding;
+- dense/global/region/object/mask caption evidence;
+- depth, geometry, and pixel grounding;
+- occlusion and rendering awareness;
+- output contracts;
+- formulas;
+- computational costs;
+- implementation roadmap;
+- acceptance criteria.
+
+## 2. Current Codebase State
+
+CITV currently builds a scene graph from one or more RGB images. The
+package-native staged pipeline runs roughly as:
+
+```text
+image
+ -> preprocessing / optional undistortion
+ -> camera intrinsics
+ -> metric depth
+ -> depth regions
+ -> GroundingDINO + SAM2 segmentation
+ -> per-mask labelling and depth geometry
+ -> relation prediction
+ -> visualization
+ -> path export
+ -> animation export
+ -> captions
+ -> scene JSON
+```
+
+The staged runner lives in `scene_understanding/stages/full_run.py`. It passes a
+`PipelineContext` through each stage. That context carries image data,
+intrinsics, metric depth, detections, relations, region labels, region metadata,
+objects, mask hierarchy, path exports, and extra stage data.
+
+### Current strengths
+
+- Metric depth is first-class. `depth.py` uses CLIP to choose indoor/outdoor
+  Depth Anything V2 Metric and returns depth in metres.
+- Objects carry useful depth geometry: mask centroid, depth stats,
+  depth-weighted 3D coordinates, raw/eroded variants, region assignment, and
+  plausibility notes.
+- The pipeline has strong segmentation and labelling inputs: GroundingDINO,
+  SAM2, Florence-2, RAM++ tags/captions, and Pix2SG-style relation scaffolding.
+- The legacy/root pipeline also contains richer caption-oriented behavior:
+  dense or bundled descriptions of scenes, regions, objects, masks, path
+  explanations, and uncertainty notes. Future implementation should preserve
+  the useful caption evidence in package-native staged form instead of treating
+  captions as final prose only.
+- The pathing package already contains good primitives: traversability speed
+  maps, walkable masks, semantic cost layers, FMM path planning, navigation
+  zones, trajectory bundles, animation components, and QA rendering.
+- FMM is a reasonable planner for continuous cost fields. The planner is not the
+  weakest part of the system.
+
+### Current weaknesses
+
+- Staged path export is simpler than the richer root monolith. The staged path
+  stage mostly builds an obstacle mask, traversability speed map, walkable
+  snapshot, and FMM object-to-object paths. It does not yet expose all of the
+  richer semantic cost, navigation-zone, provenance, path atlas, path
+  diagnostics, and motion-contract signals available elsewhere in the repo.
+- Regions are primarily depth partitions. A depth region can contain floor,
+  wall, sky, road, table surface, grass, water, or clutter. Those have very
+  different motion implications.
+- Objects are often treated too bluntly. Object masks become obstacles too
+  easily, even though a rug, road, water surface, doorway, table, mirror, glass
+  pane, chair, person, and sky region need different behavior.
+- Object-to-object paths frequently start/end at mask centroids. For animation,
+  actors usually need approach/contact anchors, foot anchors, occlusion
+  boundaries, entry/exit points, or support patches instead of centroids.
+- Staged paths are mostly `polyline_2d` plus confidence. They need
+  `polyline_3d`, depth traces, semantic traces, support traces, visibility
+  traces, width profiles, and action/manifold types.
+- Trajectories are under-informed when path hypotheses do not include rich 3D
+  and semantic evidence. The animation stage can infer walk/run/careful/climb
+  more reliably only if paths carry richer signals.
+- Caption evidence is not yet a first-class staged path/action input. Captions
+  currently help labelling and documentation, but path generation should also
+  consume scene captions, dense region captions, object captions, mask captions,
+  path descriptions, and caption uncertainty as structured semantic evidence.
+
+### Root monolith / staged parity gap
+
+The root `scene_understanding.py` contains richer path export logic than the
+package-native staged `paths_export.py`. It includes concepts such as semantic
+cost maps, soft obstacles, pair proposals, hybrid scoring, path descriptions,
+diagnostics, path atlases, motion contracts, animation components, and QA
+rendering. It also has richer captioning/documentation-style outputs than the
+current staged path/action contract. The staged path exporter is more compact
+and easier to reason about, but it has not reached parity with that richer
+behavior.
+
+The next implementation should not blindly copy the monolith. It should promote
+the useful concepts into clean staged modules and keep the output contracts
+additive and testable.
+
+## 3. Core Pitfalls
+
+### Pitfall 1: better pathfinding does not equal better animation
+
+FMM can find a good geodesic on a cost field. If the cost field does not know
+floor from sky, wall from doorway, water from rug, or mirror from passable
+portal, the path can still be visually wrong.
+
+The strongest improvement is a better scene/action representation feeding the
+planner, not a new shortest-path algorithm.
+
+### Pitfall 2: not every action is a polyline
+
+Walking can be a line or ribbon. But holding, peeking, hiding, disappearing,
+wobbling, reflecting, flying, swimming, orbiting, entering, emerging, and
+floating are not naturally represented as a single centerline.
+
+A path system for animation must support multiple manifold types.
+
+### Pitfall 3: do not hard-code label behavior
+
+Avoid logic like:
+
+```text
+if label == "water": swimmable = true
+if label == "chair": obstacle = true
+if label == "sky": flyable = true
+```
+
+That does not scale. It fails on synonyms, unusual labels, captions, and
+ambiguous objects.
+
+Use open-vocabulary semantic evidence:
+
+```text
+swimmable_score =
+  similarity(entity_caption, "liquid, water, pool, river, ocean, swimmable surface")
+  fused with depth, geometry, mask shape, and relations
+```
+
+### Pitfall 4: do not ignore occlusion and depth ordering
+
+Animation is rendered into an image. A route that crosses behind a chair should
+not draw the actor fully in front of the chair. A disappearing action should not
+only move to a point; it should fade, shrink, or become hidden according to the
+target mask and depth ordering.
+
+Every useful trajectory should be able to report visibility and render layer.
+
+### Pitfall 5: do not add heavy models before wiring existing signals
+
+The repo already has many useful local signals. Before adding more models, first
+wire existing staged outputs into richer path/action contracts:
+
+- metric depth;
+- 3D coordinates;
+- masks;
+- labels;
+- captions;
+- RAM++ tags;
+- region metadata;
+- relations;
+- semantic cost modules;
+- navigation zones;
+- trajectory bundles.
+
+Heavy geometry/VLM providers can be optional later.
+
+## 4. New Conceptual Model
+
+The new flow should be:
+
+```text
+scene graph
+ -> dense caption evidence
+ -> scene/object/mask affordance understanding
+ -> open-vocabulary action grounding
+ -> action-manifold generation
+ -> trajectory/render contract generation
+ -> QA overlays and animation exports
+```
+
+This replaces "path only" thinking with action-aware motion. A normal walking
+path remains a valid action manifold, but it is only one type.
+
+### Action manifold types
+
+`centerline_path`
+
+- A thin centerline through valid support space.
+- Best for simple walk/run/drive routes.
+
+`ribbon_path`
+
+- A centerline with width, boundaries, depth-aware scale, and clearance.
+- Best for body-aware walking/running/crawling.
+
+`blob_path`
+
+- An area-based path or motion zone.
+- Best for swimming, floating, hovering, idle movement, liquid movement, and
+  soft effects.
+
+`volume_path`
+
+- A projected 2D/3D aerial volume.
+- Best for flying, floating through sky/open air, smoke-like movement, or
+  background aerial motion.
+
+`contour_path`
+
+- A route around or along an object boundary.
+- Best for orbiting, inspecting, circling, peeking along an edge, or moving
+  around obstacles.
+
+`interior_path`
+
+- A route inside a mask or region.
+- Best for moving within rugs, roads, water surfaces, floor patches, containers,
+  or large support masks.
+
+`portal_path`
+
+- A route into or out of a doorway, mirror, shadow, opening, tunnel, gate,
+  window, or water surface.
+- Best for entering, exiting, appearing, disappearing, or emerging.
+
+`occlusion_pulse`
+
+- A short local motion near an occlusion boundary.
+- Best for peeking, hiding, revealing, ducking behind an object, or partial
+  emergence.
+
+`contact_patch`
+
+- A local constraint between actor and object.
+- Best for holding, touching, grabbing, dragging, pushing, leaning, sitting, or
+  placing.
+
+`effect_field`
+
+- A local animation/effect field rather than physical traversal.
+- Best for wobble, shimmer, reflection, dissolve, ripple, glass/mirror effects,
+  or magical/non-physical scene actions.
+
+## 5. Scene-Level Understanding
+
+Scene-level understanding should answer:
+
+```text
+What parts of the image support motion?
+What parts block motion?
+What parts allow aerial, liquid, reflective, portal, or effect actions?
+What global topology connects those areas?
+```
+
+### Scene-level entities
+
+Support surfaces:
+
+- floor;
+- ground;
+- sidewalk;
+- road;
+- path;
+- rug;
+- tabletop;
+- platform;
+- bridge;
+- stair tread;
+- ramp;
+- water surface for floating actors.
+
+Blocking surfaces:
+
+- wall;
+- large furniture body;
+- vehicle body;
+- tree trunk;
+- fence;
+- closed door;
+- cabinet;
+- foreground person or animal, depending on actor/action.
+
+Open-air / sky regions:
+
+- sky;
+- open space above ground;
+- far background air;
+- aerial corridor.
+
+Liquid regions:
+
+- water;
+- pool;
+- lake;
+- river;
+- sea;
+- puddle;
+- fluid/liquid container surface.
+
+Reflective / transparent regions:
+
+- mirror;
+- glass;
+- window;
+- glossy surface;
+- transparent pane;
+- reflective water.
+
+Portals and transitions:
+
+- doorway;
+- hallway opening;
+- gate;
+- arch;
+- tunnel;
+- window;
+- mirror-like portal;
+- shadow/occluder entry;
+- water entry/exit edge.
+
+Cluttered / uncertain areas:
+
+- high depth noise;
+- dense object overlap;
+- ambiguous mask hierarchy;
+- far background;
+- textureless surfaces;
+- transparent objects with low depth separation.
+
+### Why scene-level understanding matters
+
+Without scene-level semantics, a path can cross a wall because the wall is just
+part of a connected depth region. With support semantics, the system can prefer:
+
+```text
+floor -> doorway threshold -> hallway floor
+```
+
+instead of:
+
+```text
+foreground object centroid -> arbitrary background region -> target centroid
+```
+
+Scene-level understanding also lets actor type change the valid route:
+
+- ground actor uses floor/road/sidewalk;
+- flying actor can use sky/open-air volume;
+- swimming actor can use water/liquid masks;
+- small object can move on tabletop;
+- reflection/effect action can use mirror/glass without treating it as a normal
+  walkable surface.
+
+## 6. Object-Level Understanding
+
+Object-level understanding should answer:
+
+```text
+What role does this object play in motion or action?
+Can it be approached, held, hidden behind, entered, climbed, crossed, reflected in,
+avoided, or used as a support?
+Where are the useful anchors?
+```
+
+### Object roles
+
+`actor`
+
+- An entity that can initiate motion or action.
+- Examples: person, animal, vehicle, animated object, generated character.
+
+`hard_obstacle`
+
+- Usually blocks traversal for the current actor.
+- Example: wall, table body, closed cabinet, vehicle body.
+
+`soft_obstacle`
+
+- Can be avoided but may be crossed, stepped over, climbed, jumped, or treated as
+  high cost depending on actor and action.
+- Example: stool, curb, small box, low object.
+
+`support`
+
+- Can hold or support motion/contact.
+- Example: floor, road, table surface, chair seat, platform.
+
+`container`
+
+- May allow inside/enter/exit/contain actions.
+- Example: box, bowl, cup, doorway-like container, room-like area.
+
+`portal`
+
+- May allow through/enter/exit/disappear/emerge actions.
+- Example: doorway, gate, window, tunnel, mirror if action is effect-like.
+
+`liquid`
+
+- Supports swim, float, splash, ripple, sink, or liquid surface actions.
+
+`reflective_transparent`
+
+- Supports reflect, shimmer, wobble, fade, pass-through only if action and
+  geometry make sense.
+
+`interaction_target`
+
+- Can be held, touched, approached, looked at, opened, sat on, pushed, pulled,
+  or otherwise acted on.
+
+`occluder`
+
+- Can hide or partially hide actors/effects.
+- Useful for peeking, hiding, emerging, and disappearing behind objects.
+
+### Object anchors
+
+Approach points:
+
+- Points near the object where an actor can plausibly stand, arrive, or interact.
+- Should be outside hard obstacle masks and on valid support.
+
+Contact points:
+
+- Points on the object boundary or support/contact patch.
+- Useful for hold, touch, push, pull, sit, lean, grab.
+
+Occlusion boundary points:
+
+- Boundary segments where an actor can hide, peek, emerge, or disappear.
+- Derived from object contour, depth edge, and foreground/background ordering.
+
+Support/contact patches:
+
+- Subregions of the mask that can support contact or on-object motion.
+- Example: chair seat, tabletop, road surface, water surface.
+
+Entry/exit points:
+
+- Points on portal/liquid/container masks where enter/exit makes sense.
+- Example: doorway threshold, water edge, opening boundary, mirror face.
+
+### Object-level output example
+
+```json
+{
+  "entity_id": "obj_4",
+  "entity_type": "object",
+  "label": "glass door",
+  "caption": "a glass door near a hallway",
+  "roles": {
+    "portal": 0.58,
+    "reflective_transparent": 0.72,
+    "hard_obstacle": 0.31,
+    "interaction_target": 0.80,
+    "occluder": 0.45
+  },
+  "anchors": {
+    "approach_points": [[210, 340], [225, 342]],
+    "contact_points": [[218, 310]],
+    "entry_exit_points": [[221, 338]],
+    "occlusion_boundary_points": [[205, 300], [205, 340]]
+  },
+  "evidence": {
+    "labels": ["glass door", "door", "hallway"],
+    "depth_z_m": 3.1,
+    "region_id": "region_6",
+    "relation_ids": ["rel_12", "rel_14"]
+  }
+}
+```
+
+## 7. Mask-Level Understanding
+
+Mask-level understanding should answer:
+
+```text
+What exact pixels can be entered, crossed, avoided, followed, touched, hidden behind,
+used as an effect surface, or used as an action region?
+```
+
+Masks should not be treated only as obstacle blobs. A mask is a local manifold
+with shape, boundary, interior, depth profile, containment relationships, holes,
+and relation to other masks.
+
+### Mask path modes
+
+`inside`
+
+- Motion remains inside the mask.
+- Valid for water, road, rug, large floor region, container interior, sky volume
+  projection, or effect fields.
+
+`outside`
+
+- Motion stays outside the mask.
+- Common for obstacles or objects that should be avoided.
+
+`around`
+
+- Motion follows an offset contour around the mask.
+- Useful for route-around-object, orbit, inspect, circle, or avoid.
+
+`on`
+
+- Motion/contact happens on the mask surface.
+- Valid for floor, road, tabletop, platform, chair seat, water surface for
+  floating actions.
+
+`through`
+
+- Motion passes through an opening or portal-like mask.
+- Valid for doorway, tunnel, gate, open window, mirror/effect portal if grounded.
+
+`above`
+
+- Motion is projected above/over the mask.
+- Valid for flying, hovering, jumping, aerial pass, or over-object movement.
+
+`contact`
+
+- No travel path is required; the action locks or approaches contact points.
+- Valid for hold, touch, push, pull, lean, sit, grab.
+
+`effect`
+
+- The mask hosts an animation effect instead of physical traversal.
+- Valid for wobble, shimmer, reflection, ripple, dissolve, glow.
+
+### Mask geometry features
+
+Useful mask features:
+
+- exterior contour;
+- offset contour/ring;
+- medial axis;
+- largest interior component;
+- holes/openings;
+- boundary normals;
+- depth profile over mask;
+- depth discontinuity around mask;
+- containment hierarchy;
+- overlap with regions;
+- distance transform to obstacles;
+- support/affordance scores rasterized over the mask.
+
+### Mask-level output example
+
+```json
+{
+  "mask_id": "mask_water_1",
+  "entity_id": "obj_9",
+  "path_modes": {
+    "inside": 0.91,
+    "on": 0.63,
+    "around": 0.44,
+    "through": 0.86,
+    "contact": 0.38,
+    "effect": 0.74
+  },
+  "actions": {
+    "swim": 0.88,
+    "float": 0.92,
+    "walk": 0.06,
+    "splash": 0.77,
+    "ripple": 0.81
+  },
+  "geometry": {
+    "area_px": 48120,
+    "interior_component_count": 1,
+    "median_depth_m": 4.2,
+    "depth_std_m": 0.34
+  }
+}
+```
+
+## 8. Open-Vocabulary Affordances
+
+The project should use labels and captions as semantic evidence, not as fixed
+branches in code.
+
+Available evidence:
+
+- GroundingDINO labels;
+- Florence-2 crop labels and captions;
+- RAM++ tags;
+- full-scene tags/captions;
+- dense scene captions;
+- dense region captions;
+- dense object/mask captions;
+- path and trajectory captions/descriptions;
+- caption uncertainty records;
+- Pix2SG relation text;
+- region labels/summaries;
+- mask hierarchy and containment;
+- object 3D/depth context.
+
+### Captioning awareness
+
+Captioning should be a first-class semantic evidence layer. Captions should not
+only be user-facing prose written after path generation. They should be parsed,
+structured, scored, and fused into affordance/action decisions.
+
+Useful caption layers:
+
+- global scene caption: describes the overall environment, layout, dominant
+  surfaces, likely scene type, and unusual context;
+- dense region captions: describe floor, wall, sky, water, doorway, tabletop,
+  clutter, open-air, reflective, transparent, or uncertain areas;
+- object captions: describe object identity, material, pose, interaction role,
+  and visible state;
+- mask captions: describe local shape/part/support/inside/outside/edge
+  semantics;
+- relation captions: describe how objects and regions interact spatially and
+  semantically;
+- path/action captions: explain what each generated hypothesis is trying to do;
+- uncertainty captions: explicitly describe ambiguous, transparent, occluded,
+  far-background, or low-confidence areas.
+
+Caption evidence should be stored as structured data. The path/action system
+should not depend on raw paragraphs alone. A caption record should expose:
+
+```json
+{
+  "caption_id": "cap_region_3",
+  "scope": "region",
+  "entity_id": "region_3",
+  "text": "a glossy glass door opening into a hallway",
+  "phrases": ["glossy glass door", "opening", "hallway"],
+  "open_vocab_tags": ["glass", "door", "portal", "reflective", "hallway"],
+  "material_hints": ["glass", "glossy"],
+  "surface_hints": ["vertical", "transparent"],
+  "action_hints": ["reflect", "approach", "pass_through", "disappear_into"],
+  "uncertainty": {
+    "generic_caption": false,
+    "ambiguous_material": false,
+    "occluded": true,
+    "depth_conflict": 0.31
+  },
+  "source": "Florence2_or_caption_bundle"
+}
+```
+
+Dense captions improve semantic understanding because they can encode context
+that short labels often miss:
+
+- `blue area` may be weak, but caption `a swimming pool filled with water`
+  strongly supports liquid/swim/float/splash actions;
+- `door` may be ambiguous, but caption `an open doorway leading into a hallway`
+  supports portal/through/enter/exit actions;
+- `glass` plus `reflective surface` supports reflect/wobble/shimmer/fade
+  effects;
+- `sky above buildings` supports aerial volume paths;
+- `table with cups and plates` supports tabletop/contact/hold/place actions.
+
+Caption confidence should affect downstream confidence. Generic captions such as
+`an object` or contradictory captions should contribute low precision. Captions
+that agree with labels, depth, masks, and relations should contribute higher
+precision.
+
+### Action concepts should be config-driven
+
+Core code should not contain a huge closed list of action behavior. Instead,
+action concepts should live in a config or YAML file.
+
+Example concept record:
+
+```yaml
+swim:
+  prompts:
+    - "swim through liquid water"
+    - "move inside a pool river sea lake or water surface"
+  preferred_entity_roles:
+    - liquid
+  preferred_mask_modes:
+    - inside
+    - through
+  default_manifold_type: blob_path
+```
+
+The code can compute:
+
+```text
+E_sem(action, entity) =
+  open_vocab_similarity(entity_label_caption_tags_densecaptions, action_prompts)
+```
+
+Then fuse semantic evidence with geometry, depth, actor constraints, and
+relations.
+
+### Any imaginable action
+
+"Any imaginable action" should mean:
+
+```text
+accept arbitrary action text
+try to ground it in scene/object/mask evidence
+generate the best matching action manifold
+return confidence, assumptions, and rejection/fallback reasons
+```
+
+It should not mean every action is accepted as physically valid.
+
+Example:
+
+```text
+Action: "swim through a wooden chair"
+```
+
+Expected result:
+
+```json
+{
+  "status": "low_confidence",
+  "reason": "target has low liquid/swimmable affordance",
+  "fallbacks": ["go_around", "interact", "peek_from"]
+}
+```
+
+Example:
+
+```text
+Action: "wobble on the glass"
+```
+
+Expected result:
+
+```json
+{
+  "status": "accepted",
+  "manifold_type": "effect_field",
+  "target_affordances": {
+    "reflective_transparent": 0.78,
+    "effect": 0.73
+  }
+}
+```
+
+## 9. Depth, Geometry, And Pixel Awareness
+
+Every generated path/action should remain grounded in the image and in metric
+geometry.
+
+Required grounding signals:
+
+- pixels;
+- masks;
+- dense captions;
+- metric depth;
+- 3D coordinates;
+- intrinsics;
+- visibility;
+- occluder masks;
+- support/affordance traces;
+- scene graph relations;
+- uncertainty/precision.
+
+### Required path/action fields
+
+`polyline_3d`
+
+- Per-sample `[u, v, z_m]` or `[x_m, y_m, z_m]` depending on schema mode.
+- Minimum requirement for 2D animation: `[u, v, z_m]`.
+
+`depth_trace`
+
+- Sampled metric depth along the path/manifold.
+- Used for scale, thickness, visibility, and kinematic signatures.
+
+`support_trace`
+
+- Support surface class/evidence along the motion.
+- Example: `["floor", "floor", "doorway_threshold", "floor"]`.
+
+`semantic_trace`
+
+- Action-relevant semantic evidence along the path.
+- Example: `["walkable", "near_chair", "occlusion_edge", "doorway"]`.
+
+`caption_trace`
+
+- Caption-derived phrases and action hints sampled along the path/manifold.
+- Example: `["open doorway", "glass reflection", "hallway beyond"]`.
+- Should include caption uncertainty or contradiction notes when captions and
+  geometry disagree.
+
+`visibility_profile`
+
+- Per-sample visible fraction, usually `0..1`.
+- Used for occlusion, alpha, render layer, disappear/appear behavior.
+
+`width_profile_px`
+
+- Per-sample path/body/effect width in pixels.
+- Should be depth-aware and action-aware.
+
+### Depth-aware width
+
+For actor-like motion:
+
+```text
+width_px(s) = fx * actor_width_m / max(eps, z_m(s))
+```
+
+This means:
+
+- moving away from the camera makes the actor/path thinner;
+- moving toward the camera makes it thicker;
+- moving at similar depth keeps width stable;
+- disappearing or portal actions can additionally taper width to zero;
+- flying/effect/blob actions can scale width by action style.
+
+Final width:
+
+```text
+final_width_px(s) =
+  perspective_width_px(s)
+  * action_width_scale(s)
+  * confidence_scale(s)
+  * support_scale(s)
+```
+
+## 10. Occlusion And Rendering Awareness
+
+A path or trajectory is not complete unless the renderer knows whether the actor
+or effect should be visible.
+
+### Visibility estimate
+
+For each sample along a trajectory, sample the actor/effect footprint. For each
+footprint sample:
+
+```text
+actor_z = z_m at trajectory sample
+scene_z = depth map at rendered pixel
+
+if scene_z < actor_z - depth_margin:
+  sample is occluded by foreground scene geometry
+else:
+  sample is visible
+```
+
+Then:
+
+```text
+visible_fraction(s) =
+  visible_footprint_samples(s) / total_footprint_samples(s)
+```
+
+### Render-layer states
+
+`in_front`
+
+- The actor/effect should render normally.
+
+`partially_occluded`
+
+- The actor/effect should be masked or alpha-reduced where foreground objects
+  occlude it.
+
+`behind_object`
+
+- The actor/effect is mostly hidden by one or more occluder masks.
+
+`inside_mask`
+
+- The actor/effect is inside a liquid, portal, container, shadow, or other
+  action host mask.
+
+`reflected`
+
+- The actor/effect should render as a reflection or mirrored/effect layer.
+
+`fading_disappearing`
+
+- Alpha, width, or scale intentionally decreases along a portal/effect path.
+
+### Why this matters
+
+Occlusion-aware output enables:
+
+- walking behind furniture;
+- peeking around a chair or wall;
+- hiding behind an object;
+- disappearing into a doorway, mirror, shadow, or water;
+- emerging from behind an object;
+- flying behind foreground trees or buildings;
+- reflective and transparent glass/mirror effects.
+
+## 11. Path And Action-Manifold Output Contracts
+
+The output changes should be additive. Existing consumers of
+`path_hypotheses.json`, `trajectory_hypotheses.json`, and
+`animation_components.json` should keep working if they ignore new fields.
+
+### New/additive artifacts
+
+`caption_evidence.json`
+
+- Structured caption evidence gathered from global scene captions, dense region
+  captions, object captions, mask captions, relation captions, path/action
+  descriptions, and caption uncertainty.
+- This should be consumable by affordance, path, action, and trajectory stages.
+
+`scene_affordances.json`
+
+- Scene-level action and support interpretation.
+- Should include caption-derived scene hints and contradictions.
+
+`object_affordances.json`
+
+- Per-object roles, affordances, anchors, and evidence.
+- Should include object caption phrases, material hints, action hints, and
+  caption uncertainty.
+
+`mask_affordances.json`
+
+- Per-mask path modes, action scores, geometry summaries, and evidence.
+- Should include mask/part captions and local semantic hints when available.
+
+Enhanced `path_hypotheses.json`
+
+- Existing paths plus richer traces and manifold metadata.
+
+New `action_hypotheses.json`
+
+- Action-level records above paths.
+- Ordinary walking remains a path action; non-line actions use other manifold
+  types.
+
+Enhanced `trajectory_hypotheses.json`
+
+- Adds depth-aware, visibility-aware, action-aware motion samples.
+
+Enhanced `animation_components.json`
+
+- Adds render layer, alpha, width, occluders, effect metadata, and action
+  manifold references.
+
+QA overlays/videos
+
+- Visualize manifold type, semantic trace, support trace, width profile,
+  occlusion state, and rejection reasons.
+
+### Sample: walking ribbon path
+
+```json
+{
+  "hypothesis_id": "act_walk_001",
+  "action_text": "walk to the door",
+  "action_family": "locomotion",
+  "actor_id": "obj_person",
+  "target_id": "obj_door",
+  "manifold_type": "ribbon_path",
+  "geometry": {
+    "centerline_2d": [[120, 410], [180, 380], [240, 350]],
+    "centerline_3d": [[120, 410, 1.8], [180, 380, 2.1], [240, 350, 2.6]],
+    "width_profile_px": [24, 18, 13],
+    "left_boundary_2d": [[110, 410], [171, 380], [234, 350]],
+    "right_boundary_2d": [[130, 410], [189, 380], [246, 350]]
+  },
+  "traces": {
+    "support_trace": ["floor", "floor", "doorway_threshold"],
+    "semantic_trace": ["walkable", "walkable", "portal_approach"],
+    "caption_trace": ["clear floor path", "open doorway", "hallway beyond"],
+    "depth_trace_m": [1.8, 2.1, 2.6],
+    "visibility_profile": [1.0, 0.72, 0.35],
+    "occluder_ids": [[], ["obj_chair"], ["obj_door_frame"]]
+  },
+  "motion_hints": ["walk", "careful", "emerge"],
+  "scores": {
+    "semantic_fit": 0.86,
+    "geometry_fit": 0.91,
+    "depth_3d_fit": 0.83,
+    "occlusion_fit": 0.74,
+    "overall": 0.84
+  }
+}
+```
+
+### Sample: swimming blob path
+
+```json
+{
+  "hypothesis_id": "act_swim_001",
+  "action_text": "swim across the pool",
+  "action_family": "liquid_motion",
+  "actor_id": "obj_person",
+  "target_id": "mask_pool",
+  "manifold_type": "blob_path",
+  "geometry": {
+    "allowed_area_mask_ref": "scene_graph/staged/img_paths/masks/mask_pool.npy",
+    "corridor_mask_ref": "scene_graph/staged/img_paths/action_corridors/swim_001.npy",
+    "centerline_2d": [[90, 300], [160, 280], [240, 290]],
+    "width_profile_px": [28, 32, 26]
+  },
+  "traces": {
+    "semantic_trace": ["water", "water", "water"],
+    "caption_trace": ["swimming pool water", "pool surface", "water surface"],
+    "support_trace": ["liquid", "liquid", "liquid"],
+    "visibility_profile": [0.85, 0.78, 0.82]
+  },
+  "motion_hints": ["swim", "float", "splash"],
+  "scores": {
+    "liquid_affordance": 0.91,
+    "actor_fit": 0.78,
+    "overall": 0.84
+  }
+}
+```
+
+### Sample: flying volume path
+
+```json
+{
+  "hypothesis_id": "act_fly_001",
+  "action_text": "fly across the sky",
+  "action_family": "aerial_motion",
+  "actor_id": "obj_bird",
+  "target_id": "region_sky",
+  "manifold_type": "volume_path",
+  "geometry": {
+    "allowed_regions": ["region_sky"],
+    "centerline_2d": [[80, 90], [220, 70], [410, 110]],
+    "centerline_3d": [[80, 90, 30.0], [220, 70, 35.0], [410, 110, 42.0]],
+    "width_profile_px": [30, 24, 18]
+  },
+  "traces": {
+    "semantic_trace": ["sky", "sky", "sky"],
+    "caption_trace": ["open sky", "sky above buildings", "clear aerial space"],
+    "visibility_profile": [1.0, 1.0, 0.88]
+  },
+  "motion_hints": ["fly", "glide"],
+  "scores": {
+    "sky_affordance": 0.93,
+    "aerial_actor_fit": 0.89,
+    "overall": 0.91
+  }
+}
+```
+
+### Sample: peeking occlusion pulse
+
+```json
+{
+  "hypothesis_id": "act_peek_001",
+  "action_text": "peek from behind the chair",
+  "action_family": "visibility_occlusion",
+  "actor_id": "obj_person",
+  "target_id": "obj_chair",
+  "manifold_type": "occlusion_pulse",
+  "geometry": {
+    "occluder_id": "obj_chair",
+    "anchor_boundary": "obj_chair_left_occlusion_edge",
+    "centerline_2d": [[180, 310], [190, 306], [181, 311]],
+    "centerline_3d": [[180, 310, 2.6], [190, 306, 2.55], [181, 311, 2.6]],
+    "width_profile_px": [8, 14, 8]
+  },
+  "visibility": {
+    "visibility_profile": [0.12, 0.58, 0.10],
+    "render_layers": ["behind_object", "partially_occluded", "behind_object"]
+  },
+  "motion_hints": ["hide", "peek", "hide"],
+  "scores": {
+    "semantic_fit": 0.84,
+    "geometry_fit": 0.79,
+    "occlusion_fit": 0.91,
+    "overall": 0.85
+  }
+}
+```
+
+### Sample: holding contact patch
+
+```json
+{
+  "hypothesis_id": "act_hold_001",
+  "action_text": "hold the cup",
+  "action_family": "contact_interaction",
+  "actor_id": "obj_person",
+  "target_id": "obj_cup",
+  "manifold_type": "contact_patch",
+  "geometry": {
+    "actor_contact": "hand",
+    "target_contact_points": [[244, 318], [250, 321]],
+    "target_patch_mask_ref": "scene_graph/staged/img_paths/contact_patches/hold_001.npy"
+  },
+  "constraints": {
+    "maintain_contact": true,
+    "relative_transform_locked": true,
+    "requires_actor_reach": true
+  },
+  "traces": {
+    "caption_trace": ["small cup on table", "hand-held object", "reachable cup"]
+  },
+  "motion_hints": ["reach", "hold", "idle"],
+  "scores": {
+    "semantic_fit": 0.87,
+    "contact_geometry_fit": 0.74,
+    "depth_fit": 0.69,
+    "overall": 0.77
+  }
+}
+```
+
+### Sample: disappearing portal path
+
+```json
+{
+  "hypothesis_id": "act_disappear_001",
+  "action_text": "disappear into the mirror",
+  "action_family": "portal_or_effect",
+  "actor_id": "obj_person",
+  "target_id": "obj_mirror",
+  "manifold_type": "portal_path",
+  "geometry": {
+    "centerline_2d": [[300, 420], [310, 380], [320, 340]],
+    "centerline_3d": [[300, 420, 1.7], [310, 380, 2.2], [320, 340, 2.8]],
+    "width_profile_px": [20, 12, 2]
+  },
+  "rendering": {
+    "alpha_profile": [1.0, 0.45, 0.0],
+    "render_effect": "reflection_dissolve",
+    "render_layers": ["in_front", "reflected", "fading_disappearing"]
+  },
+  "traces": {
+    "caption_trace": ["mirror surface", "reflective glass", "person in front of mirror"]
+  },
+  "motion_hints": ["walk", "fade", "disappear"],
+  "scores": {
+    "mirror_affordance": 0.82,
+    "portal_effect_fit": 0.62,
+    "overall": 0.72
+  }
+}
+```
+
+### Sample: wobble/effect field
+
+```json
+{
+  "hypothesis_id": "act_wobble_001",
+  "action_text": "wobble on the glass",
+  "action_family": "surface_effect",
+  "target_id": "obj_glass",
+  "manifold_type": "effect_field",
+  "geometry": {
+    "host_mask_ref": "scene_graph/staged/img_paths/masks/obj_glass.npy",
+    "effect_center_2d": [260, 300],
+    "effect_radius_px": 42
+  },
+  "effect": {
+    "type": "wobble",
+    "amplitude_px": 4,
+    "frequency_hz": 2.0,
+    "alpha_profile": [0.0, 0.8, 0.0]
+  },
+  "traces": {
+    "caption_trace": ["glass surface", "transparent pane", "reflective highlight"]
+  },
+  "scores": {
+    "reflective_transparent_fit": 0.76,
+    "surface_effect_fit": 0.81,
+    "overall": 0.79
+  }
+}
+```
+
+### Enhanced trajectory sample
+
+```json
+{
+  "t_s": 1.2,
+  "x_px": 180,
+  "y_px": 380,
+  "z_m": 2.1,
+  "scale": 0.76,
+  "path_width_px": 18,
+  "visible_fraction": 0.72,
+  "occluder_ids": ["obj_chair"],
+  "render_layer": "partially_occluded",
+  "motion": "careful",
+  "alpha": 0.72
+}
+```
+
+## 12. Computation Formulas
+
+This section uses ASCII notation so it can be copied into code comments and
+schemas without encoding issues.
+
+### Affordance scoring
+
+For action `a` and entity `e`:
+
+```text
+E_sem(a, e)   = open_vocab_similarity(text(e), prompts(a))
+E_cap(a, e)   = caption_phrase_fit(captions(e), prompts(a))
+E_geo(a, e)   = geometry_fit(depth, normal, slope, support, mask_shape)
+E_rel(a, e)   = scene_graph_relation_fit(e, relations, a)
+E_depth(a, e) = depth_confidence_and_3d_consistency(e)
+E_actor(a, e) = actor_profile_fit(actor, a, e)
+
+AffordanceScore(a, e) =
+  fuse(E_sem, E_cap, E_geo, E_rel, E_depth, E_actor, precision)
+```
+
+The `precision` term should capture how trustworthy each evidence source is for
+this entity and action. For example, semantic precision may be lower when the
+caption is generic, depth precision may be lower in transparent/glass regions,
+and geometry precision may be lower in textureless far background.
+
+Caption precision should be higher when the caption agrees with labels, masks,
+relations, and geometry. It should be lower when the caption is generic,
+contradicts depth/geometry, or describes an occluded/uncertain area.
+
+### Layered path cost
+
+For pixel/sample `x`, actor `actor`, and action `action`:
+
+```text
+C_path(x, actor, action) =
+  w_geo   * C_geometry(x)
++ w_sem   * (1 - AffordanceScore(action, x))
++ w_cap   * C_caption_contradiction_or_uncertainty(x)
++ w_obs   * C_obstacle(actor, x)
++ w_depth * C_depth_uncertainty(x)
++ w_rel   * C_scene_graph_violation(x)
+```
+
+Weights should be non-negative and normalized at runtime. Defaults may be
+configured, but thresholds should prefer scene-derived statistics where possible.
+
+### Precision-weighted fusion
+
+For layers `i` with cost `C_i(x)` and precision `P_i(x)`:
+
+```text
+C(x) = sum_i(P_i(x) * C_i(x)) / max(eps, sum_i(P_i(x)))
+
+P_fused(x) = 1 - prod_i(1 - P_i(x))
+```
+
+This prevents low-confidence layers from dominating the final cost.
+
+### FMM speed
+
+Convert fused cost to speed:
+
+```text
+F(x) = F_min + (1 - F_min) * (1 - C(x)) * P_fused(x)
+```
+
+Then solve:
+
+```text
+|grad T(x)| * F(x) = 1
+T(goal) = 0
+path follows decreasing T from start to goal
+```
+
+### Width from depth
+
+For a physical actor:
+
+```text
+width_px(s) = fx * actor_width_m / max(eps, z_m(s))
+```
+
+For general action manifolds:
+
+```text
+final_width_px(s) =
+  width_px(s)
+  * action_width_scale(s)
+  * confidence_scale(s)
+  * support_scale(s)
+```
+
+### Visibility
+
+```text
+visible_fraction(s) =
+  visible_footprint_samples(s) / total_footprint_samples(s)
+```
+
+Each footprint sample is visible when:
+
+```text
+scene_z(sample_xy) >= actor_z(s) - depth_margin
+```
+
+If scene depth is nearer than the actor/effect depth, the actor/effect is
+behind something and should be partially or fully occluded.
+
+### Trajectory timing
+
+For path/manifold parameter `s`:
+
+```text
+risk(s) = C_path(gamma(s)) + careful_zone(gamma(s)) - run_zone(gamma(s))
+
+v(s) = v_actor * F(gamma(s)) * motion_zone_factor(gamma(s))
+
+t(s) = integral ds / max(eps, v(s))
+```
+
+This allows slower motion in high-cost/careful/occluded areas and faster motion
+in open, low-cost, high-confidence support areas.
+
+### Candidate ranking
+
+```text
+S_total(path_or_action) =
+  W_geo   * geometric_validity
++ W_sem   * mean_affordance_along_manifold
++ W_cap   * caption_support_and_consistency
++ W_actor * actor_fit
++ W_rel   * scene_graph_consistency
++ W_depth * depth_3d_consistency
++ W_kin   * trajectory_naturalness
++ W_vis   * visibility_or_effect_fit
+```
+
+The result should be accompanied by explanation fields, not only a score.
+
+## 13. Computational Cost
+
+The system should remain CPU-first by default and cache aggressively.
+
+### CPU-cheap
+
+- FMM over already-built cost/speed fields;
+- precision-weighted cost fusion;
+- OpenCV distance transforms;
+- mask contours and offset rings;
+- mask interiors and simple medial axes;
+- depth gradients and approximate normals from depth;
+- visibility/occlusion sampling over a footprint;
+- trajectory timing and state sampling;
+- JSON/QA artifact generation.
+
+### CPU-moderate
+
+- object/region/mask open-vocabulary embedding similarity;
+- dense caption parsing, phrase extraction, and caption/entity alignment;
+- support-surface extraction from depth/normals;
+- richer path scoring and diagnostics;
+- ribbon/blob/portal/contact/effect manifold generation;
+- sampling semantic/depth traces along every candidate;
+- QA overlays for many candidates.
+
+### CPU-expensive / GPU-preferred
+
+- SAM2;
+- GroundingDINO;
+- Florence-2;
+- RAM++;
+- dense VLM affordance maps;
+- Depth Pro, Metric3D, MoGe, DUSt3R, MASt3R, or similar geometry providers;
+- multi-view reconstruction.
+
+### CPU-first default strategy
+
+- Reuse existing labels, captions, tags, masks, relations, depth, and 3D
+  coordinates.
+- Reuse existing caption bundles and caption uncertainty records before adding
+  new caption models.
+- Normalize captions into structured evidence once per image and cache the
+  result.
+- Score affordances at entity level first: scene, region, object, mask.
+- Rasterize entity-level scores back to pixels only after scoring.
+- Cache affordance outputs per image.
+- Downsample planning maps for global solve, then refine locally.
+- Keep dense VLM and stronger geometry providers optional.
+- Use config/prompt files for action concepts.
+- Prefer scene-derived thresholds: percentiles, Otsu/JSD splits, local depth
+  statistics, and precision maps.
+
+### Values that are acceptable to configure
+
+Not every scalar is a harmful hard-code. Some values are physical or numerical:
+
+- actor width;
+- actor height;
+- clearance;
+- step height;
+- camera intrinsics;
+- numerical speed floor;
+- max candidates for runtime control;
+- QA output limits.
+
+The problem is hard-coded semantic behavior, not measured physical constants.
+
+## 14. Implementation Roadmap
+
+Status legend:
+
+- `[x]` implemented in the first CPU-first staged pass.
+- `[~]` partially implemented; usable, but not complete relative to this design.
+- `[ ]` not implemented yet.
+
+### Phase 1: documentation and contracts
+
+- [x] Create this document.
+- [x] Link this document from `thoughts.md`.
+- [x] Define output contracts in prose before code.
+- [x] Decide which artifacts are additive to existing outputs.
+- [x] Add caption-awareness to the contracts: define `caption_evidence.json`,
+  `caption_trace`, caption uncertainty, and how caption evidence flows into
+  affordances, paths, action hypotheses, trajectories, and animation components.
+
+### Phase 2: staged path parity
+
+- [x] Enrich staged path export with:
+  - `polyline_3d`;
+  - depth traces;
+  - semantic traces;
+  - caption traces;
+  - support traces;
+  - cost traces;
+  - visibility traces;
+  - width profiles;
+  - `[~]` clearer rejection/suppression reasons.
+- [~] Wire existing semantic cost and navigation-zone modules into staged path
+  export.
+- [x] Preserve existing `path_hypotheses.json` fields.
+
+### Phase 3: affordance layer
+
+- [x] Add scene/object/mask affordance generation.
+- [x] Consume existing labels, dense captions, caption bundles, caption uncertainty,
+  RAM++ tags, masks, depth, 3D coordinates, regions, and relations.
+- [x] Use open-vocabulary evidence.
+- [x] Treat caption evidence as a first-class input, not as final prose only.
+- [x] Keep action prompts/ontology config-driven via
+  `scene_understanding/resources/path_action_ontology.json`, plus
+  `config.path_action_ontology` / `config.path_action_ontology_json` override
+  hooks.
+- [x] Emit:
+  - `caption_evidence.json`;
+  - `scene_affordances.json`;
+  - `object_affordances.json`;
+  - `mask_affordances.json`.
+
+### Phase 4: action hypotheses
+
+- [~] Add an action intent compiler that accepts arbitrary action text. Current
+  implementation compiles action hypotheses from path and affordance evidence;
+  direct user-supplied action text is not wired yet.
+- [~] Ground action text against scene, dense captions, object, mask, region, and
+  relation evidence.
+- [x] Add `action_hypotheses.json`.
+- [~] Generate non-line action manifolds:
+  - `[x]` ribbon;
+  - `[x]` blob;
+  - `[x]` volume;
+  - `[x]` contour;
+  - `[ ]` interior as a distinct action manifold;
+  - `[x]` portal;
+  - `[x]` occlusion pulse;
+  - `[x]` contact patch;
+  - `[x]` effect field.
+
+### Phase 5: occlusion-aware trajectories
+
+- [x] Add depth-aware width and scale.
+- [x] Add visible fraction.
+- [x] Add render layer.
+- [~] Add alpha profile. Current output provides alpha policy/render contract,
+  not a dense per-frame alpha curve.
+- [x] Add occluder ids.
+- [x] Add action-specific motion hints.
+- [x] Add caption-derived motion/action hints and caption uncertainty references.
+- [x] Feed richer state into `trajectory_hypotheses.json` and
+  `animation_components.json`.
+
+### Phase 6: QA and tests
+
+- [x] Add JSON contract tests.
+- [x] Add unit tests for affordance fusion and path/action records.
+- [~] Add fixture scenes:
+  - `[ ]` indoor floor/furniture;
+  - `[ ]` doorway/portal;
+  - `[ ]` sky/open air;
+  - `[x]` water/liquid synthetic contract fixture;
+  - `[x]` mirror/glass synthetic contract fixture;
+  - `[ ]` stairs/height change;
+  - `[ ]` cluttered occlusion.
+- [~] Add caption fixtures:
+  - `[ ]` generic caption;
+  - `[x]` specific dense region caption synthetic fixture;
+  - `[x]` caption/label agreement synthetic fixture;
+  - `[ ]` caption/depth contradiction;
+  - `[x]` caption uncertainty around glass/mirror/water synthetic fixture;
+  - `[ ]` sky caption uncertainty fixture.
+- [~] Add visual QA overlays for:
+  - `[x]` manifold type via `action_manifold_overlay.png`;
+  - `[ ]` support trace;
+  - `[ ]` semantic trace;
+  - `[ ]` width profile;
+  - `[ ]` visibility profile;
+  - `[ ]` occlusion state;
+  - `[ ]` accepted/rejected action reasons.
+
+### Implementation Pass: 2026-05-06
+
+The first CPU-first implementation pass maps the roadmap to these staged
+entrypoints:
+
+- Caption evidence now runs before pathing in
+  `scene_understanding/stages/full_run.py`, so downstream stages can consume
+  captions instead of treating them as late report text.
+- `scene_understanding/stages/affordances_export.py` writes
+  `caption_evidence.json`, `scene_affordances.json`,
+  `object_affordances.json`, and `mask_affordances.json`.
+- `scene_understanding/stages/paths_export.py` keeps existing path records and
+  adds `polyline_3d`, `depth_trace_m`, `width_profile_px`, `support_trace`,
+  `semantic_trace`, `caption_trace`, `visibility_profile`, `render_layers`,
+  `occlusion_trace`, `cost_trace`, `motion_hints`, and `action_hints`.
+- `scene_understanding/stages/action_export.py` writes
+  `action_hypotheses.json` with path-grounded ribbon actions plus
+  affordance-grounded blob, volume, portal, contact, occlusion, contour, and
+  effect-field manifolds.
+- `scene_understanding/stages/animation_export.py` passes ranked enriched paths
+  into trajectory generation and appends action/render context to
+  `trajectory_hypotheses.json` and `animation_components.json`.
+- `scene_understanding/stages/scene_write.py` exposes compact summaries and
+  metadata references in staged scene JSON.
+- `tests/test_path_action_affordance_contracts.py` provides low-cost contract
+  tests for affordance, path enrichment, and action hypothesis outputs.
+- `scene_understanding/resources/path_action_ontology.json` is the default
+  data-driven action/role/manifold policy. It replaces Python-level semantic
+  prompt and action-to-manifold tables and can be overridden by config.
+
+This pass is intentionally additive. It does not replace SAM2, FMM, depth,
+captioning, or existing animation consumers. It also does not claim full
+open-world physical reasoning; the current open-vocabulary layer uses
+configurable prompt evidence, data-driven policies, and confidence-scored
+grounding as a practical CPU-first base.
+
+## 15. Acceptance Criteria
+
+This documentation round is complete when:
+
+- `docs/path_updates.md` exists and can stand alone as the project direction
+  document.
+- `thoughts.md` links to `docs/path_updates.md`.
+- The document clearly distinguishes current behavior from proposed behavior.
+- The document includes concrete output contracts and sample JSON.
+- The document includes computational formulas.
+- The document includes computational cost and CPU-first strategy.
+- The document includes pitfalls and non-goals.
+- A future implementer can begin work without needing this chat history.
+
+Implementation work should not begin until this document is reviewed and the
+artifact contracts are accepted or revised.
+
+## 16. Subsystem Plan For Later Code Changes
+
+### Affordance subsystem
+
+Add package code that extracts scene/object/mask affordances from existing
+pipeline outputs.
+
+Inputs:
+
+- labels;
+- captions;
+- dense scene captions;
+- dense region captions;
+- object captions;
+- mask captions;
+- caption bundles;
+- caption uncertainty records;
+- RAM++ tags;
+- relations;
+- regions;
+- masks;
+- metric depth;
+- 3D coordinates;
+- intrinsics;
+- mask hierarchy.
+
+Outputs:
+
+- `caption_evidence.json`;
+- `scene_affordances.json`;
+- `object_affordances.json`;
+- `mask_affordances.json`;
+- optional preview overlays.
+
+### Path export subsystem
+
+Extend staged path export to use:
+
+- semantic cost;
+- caption evidence and caption traces;
+- soft obstacles;
+- support traces;
+- `polyline_3d`;
+- depth traces;
+- navigation zones;
+- visibility traces;
+- width profiles.
+
+Keep existing path JSON fields for backward compatibility.
+
+### Action hypothesis subsystem
+
+Add `action_hypotheses.json` above path hypotheses.
+
+Ordinary walking remains a path action. Peeking, holding, flying, swimming,
+disappearing, wobbling, reflecting, entering, emerging, and orbiting use richer
+manifold types.
+
+### Trajectory/animation subsystem
+
+Ingest richer action/path fields.
+
+Produce:
+
+- depth-aware scale;
+- width;
+- alpha;
+- visible fraction;
+- render layer;
+- occluder ids;
+- caption-derived motion hints;
+- caption uncertainty references;
+- motion hints;
+- effect metadata.
+
+Keep old animation outputs working when new fields are absent.
+
+### Testing/QA subsystem
+
+Add tests and fixtures around contracts rather than model accuracy.
+
+Important assertions:
+
+- every path/action has a supported manifold type;
+- 3D/depth fields are present when depth is available;
+- caption evidence is optional but, when present, is structured and referenced
+  by affordance/action/path records;
+- visibility profile length matches sampled trajectory length;
+- unknown actions produce grounded low-confidence records, not crashes;
+- hard-coded semantic label behavior is avoided in core logic;
+- additive fields do not break old consumers.
+
+## 17. Research Anchors
+
+The implementation direction is consistent with current research trends:
+
+- better depth and geometry improve grounding;
+- open-vocabulary scene representations improve semantic navigation;
+- VLM/map/scene-graph grounding improves action selection;
+- multiple candidate paths should be generated and reranked by semantic and
+  geometric fit.
+
+Relevant anchors from prior research review:
+
+- Depth Anything V2 for robust monocular depth;
+- Depth Pro for sharp metric depth and focal estimation;
+- Metric3D/Metric3Dv2 for metric geometry and normals;
+- MoGe for richer monocular geometry;
+- DUSt3R/MASt3R for multi-view geometry when multiple images are available;
+- SAM2 for masks;
+- GroundingDINO for open-set detection;
+- Florence-2 and RAM++ for labels/captions/tags;
+- VLMaps and ConceptGraphs for open-vocabulary spatial grounding;
+- VL-TGS-style approaches for generating/ranking semantically plausible
+  trajectories.
+
+These are optional enhancement directions. The first implementation should get
+more value from the existing CITV outputs before adding heavy providers.
+
+## 18. Non-Goals For The First Implementation
+
+- Do not replace the whole path planner.
+- Do not require GPU-only dense VLM maps.
+- Do not hard-code a fixed closed action list in core path logic.
+- Do not break existing `path_hypotheses.json`,
+  `trajectory_hypotheses.json`, or `animation_components.json` consumers.
+- Do not treat imaginative actions as always valid. Ground them, score them,
+  and explain uncertainty.
+- Do not build polished final animation behavior before the action/path
+  contracts are stable.
+
+## 19. Expected Result
+
+After these upgrades, CITV should move from:
+
+```text
+detect objects -> draw paths between object centroids -> animate along paths
+```
+
+to:
+
+```text
+understand scene/object/mask affordances
+ -> ground arbitrary action text with open vocabulary
+ -> generate the right manifold shape for the action
+ -> attach depth, semantics, visibility, and geometry traces
+ -> produce animation-ready trajectory/render contracts
+```
+
+That is the direction that makes path and trajectory generation match the scene,
+the pixels, the masks, the depths, the 3D coordinates, and the intended action.

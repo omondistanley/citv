@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://citv.local/schemas/insertion_path_ensemble_bundle.schema.json",
+  "title": "CITV insertion path ensemble bundle (phase 1)",
+  "description": "Wrapper file written as insertion_path_ensembles.json next to path_hypotheses.json. Each ensemble groups counterfactual insertion routes; hypotheses may share legacy polylines.",
+  "type": "object",
+  "required": ["schema", "version", "image_stem", "image_size", "ensembles"],
+  "additionalProperties": true,
+  "properties": {
+    "schema": {
+      "type": "string",
+      "const": "citv_insertion_path_ensembles_bundle_v1"
+    },
+    "version": { "type": "string", "pattern": "^1\\." },
+    "image_stem": { "type": "string" },
+    "track": { "type": "string" },
+    "image_size": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "ensembles": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/InsertionPathEnsemble" }
+    }
+  },
+  "definitions": {
+    "Endpoint": {
+      "type": "object",
+      "required": ["kind", "id", "manifold"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["mask", "object", "region", "point_prior"]
+        },
+        "id": { "type": "string" },
+        "manifold": { "type": "string" },
+        "display_label": { "type": "string" }
+      }
+    },
+    "InsertionHypothesis": {
+      "type": "object",
+      "required": ["hypothesis_id", "polyline_2d"],
+      "properties": {
+        "hypothesis_id": { "type": "string" },
+        "legacy_path_id": { "type": "string" },
+        "polyline_2d": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": { "type": "number" }
+          }
+        },
+        "corridor": { "type": ["object", "null"] },
+        "topology_hint": { "type": "object" },
+        "scores": { "type": "object" }
+      }
+    },
+    "InsertionPathEnsemble": {
+      "type": "object",
+      "required": ["path_family_id", "path_family", "hypotheses"],
+      "properties": {
+        "path_family_id": { "type": "string" },
+        "path_family": { "type": "string" },
+        "path_type": { "type": "string" },
+        "agent_model": {
+          "type": "object",
+          "properties": {
+            "class": { "type": "string" },
+            "footprint_m": { "type": "number" },
+            "clearance_m": { "type": "number" }
+          }
+        },
+        "endpoints": {
+          "type": "object",
+          "properties": {
+            "start": { "$ref": "#/definitions/Endpoint" },
+            "goal": { "$ref": "#/definitions/Endpoint" }
+          }
+        },
+        "traversability_field_ref": { "type": "string" },
+        "hypotheses": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/InsertionHypothesis" }
+        },
+        "workflow_conditioning": {
+          "type": "object",
+          "properties": {
+            "relation_ids": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "notes": { "type": "string" },
+        "regions_traversed": { "type": "array", "items": { "type": "string" } },
+        "constraints_applied": { "type": "object" }
+      }
+    }
+  }
+}
