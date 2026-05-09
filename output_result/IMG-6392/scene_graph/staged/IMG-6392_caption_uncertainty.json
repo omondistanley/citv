@@ -1,0 +1,47 @@
+{
+  "tier": "uncertainty",
+  "stem": "IMG-6392",
+  "count": 5,
+  "notes": [
+    {
+      "object_id": "obj_2",
+      "label": "face",
+      "issues": [
+        "possibly_transparent"
+      ],
+      "region_id": "region_70"
+    },
+    {
+      "object_id": "obj_3",
+      "label": "landscape photograph",
+      "issues": [
+        "possibly_transparent"
+      ],
+      "region_id": "region_32"
+    },
+    {
+      "object_id": "obj_6",
+      "label": "set",
+      "issues": [
+        "possibly_transparent"
+      ],
+      "region_id": "region_12"
+    },
+    {
+      "object_id": "obj_15",
+      "label": "landscape photograph",
+      "issues": [
+        "possibly_transparent"
+      ],
+      "region_id": "region_32"
+    },
+    {
+      "object_id": "obj_17",
+      "label": "person",
+      "issues": [
+        "possibly_transparent"
+      ],
+      "region_id": "region_29"
+    }
+  ]
+}

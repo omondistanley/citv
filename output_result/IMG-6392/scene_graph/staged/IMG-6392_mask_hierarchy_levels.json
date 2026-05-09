@@ -1,0 +1,543 @@
+{
+  "stem": "IMG-6392",
+  "timestamp": "2026-05-07 13:04:05",
+  "schema": "citv_mask_hierarchy_levels_v1",
+  "level_count": 3,
+  "levels": [
+    {
+      "layer": "foreground",
+      "region_count": 5,
+      "regions": [
+        {
+          "region_id": "region_4",
+          "region_index": 4,
+          "label": "foreground",
+          "depth_z": 11.288,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_7",
+          "region_index": 7,
+          "label": "foreground",
+          "depth_z": 11.2811,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_11",
+          "region_index": 11,
+          "label": "foreground",
+          "depth_z": 11.2471,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_12",
+          "region_index": 12,
+          "label": "foreground",
+          "depth_z": 10.9562,
+          "object_ids": [
+            "obj_1",
+            "obj_4",
+            "obj_6",
+            "obj_13"
+          ]
+        },
+        {
+          "region_id": "region_13",
+          "region_index": 13,
+          "label": "foreground",
+          "depth_z": 11.2436,
+          "object_ids": []
+        }
+      ]
+    },
+    {
+      "layer": "midground",
+      "region_count": 27,
+      "regions": [
+        {
+          "region_id": "region_1",
+          "region_index": 1,
+          "label": "midground",
+          "depth_z": 11.5652,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_2",
+          "region_index": 2,
+          "label": "midground",
+          "depth_z": 11.5233,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_3",
+          "region_index": 3,
+          "label": "midground",
+          "depth_z": 11.3805,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_5",
+          "region_index": 5,
+          "label": "midground",
+          "depth_z": 11.4601,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_6",
+          "region_index": 6,
+          "label": "midground",
+          "depth_z": 11.4253,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_8",
+          "region_index": 8,
+          "label": "midground",
+          "depth_z": 11.3628,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_9",
+          "region_index": 9,
+          "label": "midground",
+          "depth_z": 11.416,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_10",
+          "region_index": 10,
+          "label": "midground",
+          "depth_z": 11.3624,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_14",
+          "region_index": 14,
+          "label": "midground",
+          "depth_z": 11.4313,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_15",
+          "region_index": 15,
+          "label": "midground",
+          "depth_z": 12.3665,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_16",
+          "region_index": 16,
+          "label": "midground",
+          "depth_z": 12.5066,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_17",
+          "region_index": 17,
+          "label": "midground",
+          "depth_z": 12.546,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_18",
+          "region_index": 18,
+          "label": "midground",
+          "depth_z": 12.584,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_19",
+          "region_index": 19,
+          "label": "midground",
+          "depth_z": 12.2607,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_20",
+          "region_index": 20,
+          "label": "midground",
+          "depth_z": 12.3294,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_21",
+          "region_index": 21,
+          "label": "midground",
+          "depth_z": 12.7332,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_22",
+          "region_index": 22,
+          "label": "midground",
+          "depth_z": 12.4321,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_23",
+          "region_index": 23,
+          "label": "midground",
+          "depth_z": 12.8882,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_24",
+          "region_index": 24,
+          "label": "midground",
+          "depth_z": 12.6099,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_25",
+          "region_index": 25,
+          "label": "midground",
+          "depth_z": 12.2262,
+          "object_ids": [
+            "obj_5",
+            "obj_9",
+            "obj_14"
+          ]
+        },
+        {
+          "region_id": "region_26",
+          "region_index": 26,
+          "label": "midground",
+          "depth_z": 12.7689,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_27",
+          "region_index": 27,
+          "label": "midground",
+          "depth_z": 12.7437,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_28",
+          "region_index": 28,
+          "label": "midground",
+          "depth_z": 12.7467,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_29",
+          "region_index": 29,
+          "label": "midground",
+          "depth_z": 12.2056,
+          "object_ids": [
+            "obj_17"
+          ]
+        },
+        {
+          "region_id": "region_30",
+          "region_index": 30,
+          "label": "midground",
+          "depth_z": 12.1555,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_31",
+          "region_index": 31,
+          "label": "midground",
+          "depth_z": 11.8596,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_38",
+          "region_index": 38,
+          "label": "midground",
+          "depth_z": 13.2709,
+          "object_ids": []
+        }
+      ]
+    },
+    {
+      "layer": "background",
+      "region_count": 38,
+      "regions": [
+        {
+          "region_id": "region_32",
+          "region_index": 32,
+          "label": "background",
+          "depth_z": 13.5562,
+          "object_ids": [
+            "obj_3",
+            "obj_11",
+            "obj_15"
+          ]
+        },
+        {
+          "region_id": "region_33",
+          "region_index": 33,
+          "label": "background",
+          "depth_z": 13.5312,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_34",
+          "region_index": 34,
+          "label": "background",
+          "depth_z": 13.7414,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_35",
+          "region_index": 35,
+          "label": "background",
+          "depth_z": 13.4001,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_36",
+          "region_index": 36,
+          "label": "background",
+          "depth_z": 13.774,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_37",
+          "region_index": 37,
+          "label": "background",
+          "depth_z": 13.9358,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_39",
+          "region_index": 39,
+          "label": "background",
+          "depth_z": 13.3732,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_40",
+          "region_index": 40,
+          "label": "background",
+          "depth_z": 13.9127,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_41",
+          "region_index": 41,
+          "label": "background",
+          "depth_z": 13.6364,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_42",
+          "region_index": 42,
+          "label": "background",
+          "depth_z": 13.4391,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_43",
+          "region_index": 43,
+          "label": "background",
+          "depth_z": 14.0197,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_44",
+          "region_index": 44,
+          "label": "background",
+          "depth_z": 13.5762,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_45",
+          "region_index": 45,
+          "label": "background",
+          "depth_z": 13.5878,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_46",
+          "region_index": 46,
+          "label": "background",
+          "depth_z": 13.5871,
+          "object_ids": [
+            "obj_8"
+          ]
+        },
+        {
+          "region_id": "region_47",
+          "region_index": 47,
+          "label": "background",
+          "depth_z": 13.6348,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_48",
+          "region_index": 48,
+          "label": "background",
+          "depth_z": 14.8304,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_49",
+          "region_index": 49,
+          "label": "background",
+          "depth_z": 14.9663,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_50",
+          "region_index": 50,
+          "label": "background",
+          "depth_z": 14.9796,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_51",
+          "region_index": 51,
+          "label": "background",
+          "depth_z": 14.4368,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_52",
+          "region_index": 52,
+          "label": "background",
+          "depth_z": 14.9854,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_53",
+          "region_index": 53,
+          "label": "background",
+          "depth_z": 14.5141,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_54",
+          "region_index": 54,
+          "label": "background",
+          "depth_z": 14.6219,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_55",
+          "region_index": 55,
+          "label": "background",
+          "depth_z": 14.688,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_56",
+          "region_index": 56,
+          "label": "background",
+          "depth_z": 15.1464,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_57",
+          "region_index": 57,
+          "label": "background",
+          "depth_z": 14.5725,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_58",
+          "region_index": 58,
+          "label": "background",
+          "depth_z": 15.1291,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_59",
+          "region_index": 59,
+          "label": "background",
+          "depth_z": 14.8198,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_60",
+          "region_index": 60,
+          "label": "background",
+          "depth_z": 14.8793,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_61",
+          "region_index": 61,
+          "label": "background",
+          "depth_z": 15.0597,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_62",
+          "region_index": 62,
+          "label": "background",
+          "depth_z": 14.9031,
+          "object_ids": [
+            "obj_0"
+          ]
+        },
+        {
+          "region_id": "region_63",
+          "region_index": 63,
+          "label": "background",
+          "depth_z": 14.9513,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_64",
+          "region_index": 64,
+          "label": "background",
+          "depth_z": 14.6292,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_65",
+          "region_index": 65,
+          "label": "background",
+          "depth_z": 15.2604,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_66",
+          "region_index": 66,
+          "label": "background",
+          "depth_z": 14.8927,
+          "object_ids": [
+            "obj_7",
+            "obj_12",
+            "obj_16"
+          ]
+        },
+        {
+          "region_id": "region_67",
+          "region_index": 67,
+          "label": "background",
+          "depth_z": 14.4937,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_68",
+          "region_index": 68,
+          "label": "background",
+          "depth_z": 14.7482,
+          "object_ids": []
+        },
+        {
+          "region_id": "region_69",
+          "region_index": 69,
+          "label": "background",
+          "depth_z": 15.4072,
+          "object_ids": [
+            "obj_10"
+          ]
+        },
+        {
+          "region_id": "region_70",
+          "region_index": 70,
+          "label": "background",
+          "depth_z": 15.1219,
+          "object_ids": [
+            "obj_2"
+          ]
+        }
+      ]
+    }
+  ]
+}

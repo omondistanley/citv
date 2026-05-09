@@ -1,0 +1,327 @@
+{
+  "depth_quantiles": {
+    "foreground_max_z": 11.6449,
+    "midground_max_z": 13.3261
+  },
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "object_ids": [
+        "obj_1",
+        "obj_4",
+        "obj_6",
+        "obj_13",
+        "obj_14",
+        "obj_17"
+      ]
+    },
+    {
+      "layer_type": "midground",
+      "object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_5",
+        "obj_8",
+        "obj_9",
+        "obj_15"
+      ]
+    },
+    {
+      "layer_type": "background",
+      "object_ids": [
+        "obj_0",
+        "obj_7",
+        "obj_10",
+        "obj_11",
+        "obj_12",
+        "obj_16"
+      ]
+    },
+    {
+      "layer_type": "unassigned",
+      "object_ids": []
+    }
+  ],
+  "regions": [
+    {
+      "region_id": "region_1",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_2",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_3",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_4",
+      "layer_type": "foreground"
+    },
+    {
+      "region_id": "region_5",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_6",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_7",
+      "layer_type": "foreground"
+    },
+    {
+      "region_id": "region_8",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_9",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_10",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_11",
+      "layer_type": "foreground"
+    },
+    {
+      "region_id": "region_12",
+      "layer_type": "foreground"
+    },
+    {
+      "region_id": "region_13",
+      "layer_type": "foreground"
+    },
+    {
+      "region_id": "region_14",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_15",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_16",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_17",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_18",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_19",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_20",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_21",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_22",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_23",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_24",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_25",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_26",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_27",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_28",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_29",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_30",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_31",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_32",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_33",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_34",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_35",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_36",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_37",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_38",
+      "layer_type": "midground"
+    },
+    {
+      "region_id": "region_39",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_40",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_41",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_42",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_43",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_44",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_45",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_46",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_47",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_48",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_49",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_50",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_51",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_52",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_53",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_54",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_55",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_56",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_57",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_58",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_59",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_60",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_61",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_62",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_63",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_64",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_65",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_66",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_67",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_68",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_69",
+      "layer_type": "background"
+    },
+    {
+      "region_id": "region_70",
+      "layer_type": "background"
+    }
+  ]
+}

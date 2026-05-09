@@ -1,0 +1,96 @@
+{
+  "schema": "citv_affordance_rasters_manifest_v1",
+  "file": "affordance_rasters.npz",
+  "rasters": {
+    "support_surface_score": {
+      "shape": [
+        1024,
+        945
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.65,
+      "nonzero_px": 926195
+    },
+    "blocker_score": {
+      "shape": [
+        1024,
+        945
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.55,
+      "nonzero_px": 536821
+    },
+    "contact_target_score": {
+      "shape": [
+        1024,
+        945
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.6004,
+      "nonzero_px": 7824
+    },
+    "occlusion_edge_score": {
+      "shape": [
+        1024,
+        945
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.808,
+      "nonzero_px": 958837
+    },
+    "portal_score": {
+      "shape": [
+        1024,
+        945
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.3385,
+      "nonzero_px": 531615
+    },
+    "open_air_score": {
+      "shape": [
+        1024,
+        945
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.7272,
+      "nonzero_px": 931157
+    },
+    "interior_motion_score": {
+      "shape": [
+        1024,
+        945
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.3808,
+      "nonzero_px": 7824
+    },
+    "uncertainty_score": {
+      "shape": [
+        1024,
+        945
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.55,
+      "nonzero_px": 927339
+    },
+    "depth_discontinuity_score": {
+      "shape": [
+        1024,
+        945
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "nonzero_px": 731227
+    }
+  }
+}

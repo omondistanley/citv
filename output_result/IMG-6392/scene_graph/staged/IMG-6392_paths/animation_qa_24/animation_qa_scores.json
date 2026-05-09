@@ -1,0 +1,2567 @@
+{
+  "panels": [
+    {
+      "panel_index": 0,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_1_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_2_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_3_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_4_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_5_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_6_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_7_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_7_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_8_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_8_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_9_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_9_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_10_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_10_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 1,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_11_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_11_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_12_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_12_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_13_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_13_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_14_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_14_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_15_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_15_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_16_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_16_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_0_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_0_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_2_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_3_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_4_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 2,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_5_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_7_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_7_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_8_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_8_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_9_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_9_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_10_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_10_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_11_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_11_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_12_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_12_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_13_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_13_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_14_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_14_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_15_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_15_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 3,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_16_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_16_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_1_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_1_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_3_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_4_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_5_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_6_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_7_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_7_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_8_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_8_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_9_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_9_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_10_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_10_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 4,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_11_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_11_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_12_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_12_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_13_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_13_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_14_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_14_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_15_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_15_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_16_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_16_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_2_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_2_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_3_to_obj_4_k01",
+          "trajectory_id": "staged_fmm_obj_3_to_obj_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_3_to_obj_5_k01",
+          "trajectory_id": "staged_fmm_obj_3_to_obj_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_3_to_obj_6_k01",
+          "trajectory_id": "staged_fmm_obj_3_to_obj_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 5,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_3_to_obj_7_k01",
+          "trajectory_id": "staged_fmm_obj_3_to_obj_7_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_3_to_obj_8_k01",
+          "trajectory_id": "staged_fmm_obj_3_to_obj_8_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_3_to_obj_9_k01",
+          "trajectory_id": "staged_fmm_obj_3_to_obj_9_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_3_to_obj_10_k01",
+          "trajectory_id": "staged_fmm_obj_3_to_obj_10_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_3_to_obj_11_k01",
+          "trajectory_id": "staged_fmm_obj_3_to_obj_11_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_3_to_obj_12_k01",
+          "trajectory_id": "staged_fmm_obj_3_to_obj_12_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_3_to_obj_13_k01",
+          "trajectory_id": "staged_fmm_obj_3_to_obj_13_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_3_to_obj_14_k01",
+          "trajectory_id": "staged_fmm_obj_3_to_obj_14_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_3_to_obj_16_k01",
+          "trajectory_id": "staged_fmm_obj_3_to_obj_16_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_3_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_3_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 6,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_4_to_obj_5_k01",
+          "trajectory_id": "staged_fmm_obj_4_to_obj_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_4_to_obj_6_k01",
+          "trajectory_id": "staged_fmm_obj_4_to_obj_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_4_to_obj_7_k01",
+          "trajectory_id": "staged_fmm_obj_4_to_obj_7_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_4_to_obj_9_k01",
+          "trajectory_id": "staged_fmm_obj_4_to_obj_9_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_4_to_obj_10_k01",
+          "trajectory_id": "staged_fmm_obj_4_to_obj_10_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_4_to_obj_11_k01",
+          "trajectory_id": "staged_fmm_obj_4_to_obj_11_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_4_to_obj_12_k01",
+          "trajectory_id": "staged_fmm_obj_4_to_obj_12_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_4_to_obj_14_k01",
+          "trajectory_id": "staged_fmm_obj_4_to_obj_14_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_4_to_obj_15_k01",
+          "trajectory_id": "staged_fmm_obj_4_to_obj_15_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_4_to_obj_16_k01",
+          "trajectory_id": "staged_fmm_obj_4_to_obj_16_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 7,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_5_to_obj_6_k01",
+          "trajectory_id": "staged_fmm_obj_5_to_obj_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_5_to_obj_7_k01",
+          "trajectory_id": "staged_fmm_obj_5_to_obj_7_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_5_to_obj_8_k01",
+          "trajectory_id": "staged_fmm_obj_5_to_obj_8_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_5_to_obj_9_k01",
+          "trajectory_id": "staged_fmm_obj_5_to_obj_9_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_5_to_obj_10_k01",
+          "trajectory_id": "staged_fmm_obj_5_to_obj_10_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_5_to_obj_11_k01",
+          "trajectory_id": "staged_fmm_obj_5_to_obj_11_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_5_to_obj_12_k01",
+          "trajectory_id": "staged_fmm_obj_5_to_obj_12_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_5_to_obj_13_k01",
+          "trajectory_id": "staged_fmm_obj_5_to_obj_13_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_5_to_obj_14_k01",
+          "trajectory_id": "staged_fmm_obj_5_to_obj_14_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_5_to_obj_15_k01",
+          "trajectory_id": "staged_fmm_obj_5_to_obj_15_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 8,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_5_to_obj_16_k01",
+          "trajectory_id": "staged_fmm_obj_5_to_obj_16_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_5_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_5_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_6_to_obj_7_k01",
+          "trajectory_id": "staged_fmm_obj_6_to_obj_7_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_6_to_obj_8_k01",
+          "trajectory_id": "staged_fmm_obj_6_to_obj_8_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_6_to_obj_9_k01",
+          "trajectory_id": "staged_fmm_obj_6_to_obj_9_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_6_to_obj_10_k01",
+          "trajectory_id": "staged_fmm_obj_6_to_obj_10_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_6_to_obj_11_k01",
+          "trajectory_id": "staged_fmm_obj_6_to_obj_11_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_6_to_obj_12_k01",
+          "trajectory_id": "staged_fmm_obj_6_to_obj_12_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_6_to_obj_13_k01",
+          "trajectory_id": "staged_fmm_obj_6_to_obj_13_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_6_to_obj_14_k01",
+          "trajectory_id": "staged_fmm_obj_6_to_obj_14_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 9,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_6_to_obj_15_k01",
+          "trajectory_id": "staged_fmm_obj_6_to_obj_15_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_6_to_obj_16_k01",
+          "trajectory_id": "staged_fmm_obj_6_to_obj_16_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_6_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_6_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_7_to_obj_8_k01",
+          "trajectory_id": "staged_fmm_obj_7_to_obj_8_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_7_to_obj_9_k01",
+          "trajectory_id": "staged_fmm_obj_7_to_obj_9_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_7_to_obj_10_k01",
+          "trajectory_id": "staged_fmm_obj_7_to_obj_10_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_7_to_obj_11_k01",
+          "trajectory_id": "staged_fmm_obj_7_to_obj_11_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_7_to_obj_12_k01",
+          "trajectory_id": "staged_fmm_obj_7_to_obj_12_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_7_to_obj_13_k01",
+          "trajectory_id": "staged_fmm_obj_7_to_obj_13_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_7_to_obj_14_k01",
+          "trajectory_id": "staged_fmm_obj_7_to_obj_14_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 10,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_7_to_obj_15_k01",
+          "trajectory_id": "staged_fmm_obj_7_to_obj_15_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_7_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_7_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_8_to_obj_9_k01",
+          "trajectory_id": "staged_fmm_obj_8_to_obj_9_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_8_to_obj_10_k01",
+          "trajectory_id": "staged_fmm_obj_8_to_obj_10_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_8_to_obj_11_k01",
+          "trajectory_id": "staged_fmm_obj_8_to_obj_11_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_8_to_obj_12_k01",
+          "trajectory_id": "staged_fmm_obj_8_to_obj_12_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_8_to_obj_14_k01",
+          "trajectory_id": "staged_fmm_obj_8_to_obj_14_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_8_to_obj_15_k01",
+          "trajectory_id": "staged_fmm_obj_8_to_obj_15_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_8_to_obj_16_k01",
+          "trajectory_id": "staged_fmm_obj_8_to_obj_16_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_8_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_8_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 11,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_9_to_obj_10_k01",
+          "trajectory_id": "staged_fmm_obj_9_to_obj_10_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_9_to_obj_11_k01",
+          "trajectory_id": "staged_fmm_obj_9_to_obj_11_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_9_to_obj_12_k01",
+          "trajectory_id": "staged_fmm_obj_9_to_obj_12_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_9_to_obj_13_k01",
+          "trajectory_id": "staged_fmm_obj_9_to_obj_13_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_9_to_obj_14_k01",
+          "trajectory_id": "staged_fmm_obj_9_to_obj_14_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_9_to_obj_15_k01",
+          "trajectory_id": "staged_fmm_obj_9_to_obj_15_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_9_to_obj_16_k01",
+          "trajectory_id": "staged_fmm_obj_9_to_obj_16_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_9_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_9_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_10_to_obj_11_k01",
+          "trajectory_id": "staged_fmm_obj_10_to_obj_11_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_10_to_obj_12_k01",
+          "trajectory_id": "staged_fmm_obj_10_to_obj_12_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 12,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_10_to_obj_13_k01",
+          "trajectory_id": "staged_fmm_obj_10_to_obj_13_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_10_to_obj_14_k01",
+          "trajectory_id": "staged_fmm_obj_10_to_obj_14_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_10_to_obj_15_k01",
+          "trajectory_id": "staged_fmm_obj_10_to_obj_15_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_10_to_obj_16_k01",
+          "trajectory_id": "staged_fmm_obj_10_to_obj_16_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_10_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_10_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_11_to_obj_12_k01",
+          "trajectory_id": "staged_fmm_obj_11_to_obj_12_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_11_to_obj_13_k01",
+          "trajectory_id": "staged_fmm_obj_11_to_obj_13_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_11_to_obj_14_k01",
+          "trajectory_id": "staged_fmm_obj_11_to_obj_14_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_11_to_obj_15_k01",
+          "trajectory_id": "staged_fmm_obj_11_to_obj_15_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_11_to_obj_16_k01",
+          "trajectory_id": "staged_fmm_obj_11_to_obj_16_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 13,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_11_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_11_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_12_to_obj_13_k01",
+          "trajectory_id": "staged_fmm_obj_12_to_obj_13_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_12_to_obj_14_k01",
+          "trajectory_id": "staged_fmm_obj_12_to_obj_14_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_12_to_obj_15_k01",
+          "trajectory_id": "staged_fmm_obj_12_to_obj_15_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_12_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_12_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_13_to_obj_14_k01",
+          "trajectory_id": "staged_fmm_obj_13_to_obj_14_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_13_to_obj_15_k01",
+          "trajectory_id": "staged_fmm_obj_13_to_obj_15_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_13_to_obj_16_k01",
+          "trajectory_id": "staged_fmm_obj_13_to_obj_16_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_13_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_13_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_14_to_obj_15_k01",
+          "trajectory_id": "staged_fmm_obj_14_to_obj_15_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 14,
+      "metrics": [
+        {
+          "path_id": "staged_fmm_obj_14_to_obj_16_k01",
+          "trajectory_id": "staged_fmm_obj_14_to_obj_16_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_14_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_14_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_15_to_obj_16_k01",
+          "trajectory_id": "staged_fmm_obj_15_to_obj_16_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_15_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_15_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_fmm_obj_16_to_obj_17_k01",
+          "trajectory_id": "staged_fmm_obj_16_to_obj_17_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_0_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_0_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_0_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_0_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_0_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_0_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_0_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_0_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_0_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_0_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 15,
+      "metrics": [
+        {
+          "path_id": "staged_objreg_obj_0_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_0_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_1_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_1_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_1_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_1_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_1_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_1_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_1_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_1_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_1_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_1_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_1_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_1_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_2_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_2_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_2_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_2_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_2_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_2_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 16,
+      "metrics": [
+        {
+          "path_id": "staged_objreg_obj_2_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_2_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_2_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_2_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_2_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_2_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_3_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_3_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_3_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_3_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_3_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_3_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_3_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_3_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_3_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_3_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_3_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_3_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_4_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_4_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 17,
+      "metrics": [
+        {
+          "path_id": "staged_objreg_obj_4_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_4_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_4_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_4_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_4_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_4_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_4_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_4_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_4_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_4_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_5_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_5_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_5_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_5_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_5_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_5_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_5_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_5_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_5_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_5_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 18,
+      "metrics": [
+        {
+          "path_id": "staged_objreg_obj_5_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_5_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_6_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_6_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_6_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_6_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_6_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_6_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_6_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_6_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_6_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_6_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_6_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_6_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_7_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_7_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_7_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_7_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_7_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_7_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 19,
+      "metrics": [
+        {
+          "path_id": "staged_objreg_obj_7_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_7_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_7_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_7_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_7_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_7_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_8_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_8_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_8_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_8_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_8_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_8_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_8_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_8_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_8_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_8_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_8_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_8_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_9_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_9_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 20,
+      "metrics": [
+        {
+          "path_id": "staged_objreg_obj_9_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_9_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_9_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_9_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_9_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_9_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_9_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_9_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_9_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_9_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_10_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_10_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_10_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_10_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_10_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_10_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_10_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_10_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_10_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_10_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 21,
+      "metrics": [
+        {
+          "path_id": "staged_objreg_obj_10_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_10_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_11_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_11_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_11_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_11_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_11_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_11_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_11_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_11_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_11_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_11_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_11_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_11_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_12_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_12_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_12_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_12_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_12_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_12_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 22,
+      "metrics": [
+        {
+          "path_id": "staged_objreg_obj_12_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_12_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_12_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_12_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_12_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_12_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_13_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_13_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_13_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_13_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_13_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_13_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_13_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_13_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_13_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_13_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_13_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_13_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_14_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_14_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 23,
+      "metrics": [
+        {
+          "path_id": "staged_objreg_obj_14_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_14_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_14_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_14_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_14_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_14_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_14_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_14_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_14_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_14_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_15_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_15_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_15_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_15_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_15_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_15_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_15_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_15_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_15_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_15_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 24,
+      "metrics": [
+        {
+          "path_id": "staged_objreg_obj_15_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_15_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_16_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_16_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_16_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_16_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_16_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_16_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_16_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_16_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_16_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_16_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_16_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_16_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_17_to_region_1_k01",
+          "trajectory_id": "staged_objreg_obj_17_to_region_1_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_17_to_region_2_k01",
+          "trajectory_id": "staged_objreg_obj_17_to_region_2_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_17_to_region_3_k01",
+          "trajectory_id": "staged_objreg_obj_17_to_region_3_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 25,
+      "metrics": [
+        {
+          "path_id": "staged_objreg_obj_17_to_region_4_k01",
+          "trajectory_id": "staged_objreg_obj_17_to_region_4_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_17_to_region_5_k01",
+          "trajectory_id": "staged_objreg_obj_17_to_region_5_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "staged_objreg_obj_17_to_region_6_k01",
+          "trajectory_id": "staged_objreg_obj_17_to_region_6_k01",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_0",
+          "trajectory_id": "manifold_contact_obj_0",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_occlusion_pulse_obj_0_000",
+          "trajectory_id": "grounded_occlusion_pulse_obj_0_000",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_volume_path_obj_0_001",
+          "trajectory_id": "grounded_volume_path_obj_0_001",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_volume_path_obj_1_003",
+          "trajectory_id": "grounded_volume_path_obj_1_003",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_1",
+          "trajectory_id": "manifold_contact_obj_1",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_occlusion_pulse_obj_1_002",
+          "trajectory_id": "grounded_occlusion_pulse_obj_1_002",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_2",
+          "trajectory_id": "manifold_contact_obj_2",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 26,
+      "metrics": [
+        {
+          "path_id": "grounded_volume_path_obj_2_005",
+          "trajectory_id": "grounded_volume_path_obj_2_005",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_volume_path_obj_3_006",
+          "trajectory_id": "grounded_volume_path_obj_3_006",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_3",
+          "trajectory_id": "manifold_contact_obj_3",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_occlusion_pulse_obj_4_007",
+          "trajectory_id": "grounded_occlusion_pulse_obj_4_007",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_4",
+          "trajectory_id": "manifold_contact_obj_4",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_5",
+          "trajectory_id": "manifold_contact_obj_5",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_volume_path_obj_5_009",
+          "trajectory_id": "grounded_volume_path_obj_5_009",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_occlusion_pulse_obj_6_010",
+          "trajectory_id": "grounded_occlusion_pulse_obj_6_010",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_6",
+          "trajectory_id": "manifold_contact_obj_6",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_occlusion_pulse_obj_7_012",
+          "trajectory_id": "grounded_occlusion_pulse_obj_7_012",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 27,
+      "metrics": [
+        {
+          "path_id": "grounded_volume_path_obj_7_013",
+          "trajectory_id": "grounded_volume_path_obj_7_013",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_7",
+          "trajectory_id": "manifold_contact_obj_7",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_8",
+          "trajectory_id": "manifold_contact_obj_8",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_occlusion_pulse_obj_8_014",
+          "trajectory_id": "grounded_occlusion_pulse_obj_8_014",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_volume_path_obj_8_015",
+          "trajectory_id": "grounded_volume_path_obj_8_015",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_9",
+          "trajectory_id": "manifold_contact_obj_9",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_volume_path_obj_9_016",
+          "trajectory_id": "grounded_volume_path_obj_9_016",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_volume_path_obj_10_019",
+          "trajectory_id": "grounded_volume_path_obj_10_019",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_contact_patch_obj_10_017",
+          "trajectory_id": "grounded_contact_patch_obj_10_017",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_10",
+          "trajectory_id": "manifold_contact_obj_10",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 28,
+      "metrics": [
+        {
+          "path_id": "manifold_contact_obj_11",
+          "trajectory_id": "manifold_contact_obj_11",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_occlusion_pulse_obj_11_020",
+          "trajectory_id": "grounded_occlusion_pulse_obj_11_020",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_volume_path_obj_11_021",
+          "trajectory_id": "grounded_volume_path_obj_11_021",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_12",
+          "trajectory_id": "manifold_contact_obj_12",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_occlusion_pulse_obj_12_022",
+          "trajectory_id": "grounded_occlusion_pulse_obj_12_022",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_volume_path_obj_12_023",
+          "trajectory_id": "grounded_volume_path_obj_12_023",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_occlusion_pulse_obj_13_024",
+          "trajectory_id": "grounded_occlusion_pulse_obj_13_024",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_13",
+          "trajectory_id": "manifold_contact_obj_13",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_14",
+          "trajectory_id": "manifold_contact_obj_14",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_contact_patch_obj_14_025",
+          "trajectory_id": "grounded_contact_patch_obj_14_025",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 29,
+      "metrics": [
+        {
+          "path_id": "grounded_volume_path_obj_14_026",
+          "trajectory_id": "grounded_volume_path_obj_14_026",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_volume_path_obj_15_027",
+          "trajectory_id": "grounded_volume_path_obj_15_027",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_15",
+          "trajectory_id": "manifold_contact_obj_15",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_portal_obj_15",
+          "trajectory_id": "manifold_portal_obj_15",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_17",
+          "trajectory_id": "manifold_contact_obj_17",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_occlusion_pulse_obj_17_028",
+          "trajectory_id": "grounded_occlusion_pulse_obj_17_028",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "grounded_volume_path_obj_17_029",
+          "trajectory_id": "grounded_volume_path_obj_17_029",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contour_obj_0",
+          "trajectory_id": "manifold_contour_obj_0",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_volume_obj_0",
+          "trajectory_id": "manifold_volume_obj_0",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_occ_pulse_obj_0",
+          "trajectory_id": "manifold_occ_pulse_obj_0",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 30,
+      "metrics": [
+        {
+          "path_id": "manifold_contour_obj_1",
+          "trajectory_id": "manifold_contour_obj_1",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_volume_obj_1",
+          "trajectory_id": "manifold_volume_obj_1",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_occ_pulse_obj_1",
+          "trajectory_id": "manifold_occ_pulse_obj_1",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_volume_obj_2",
+          "trajectory_id": "manifold_volume_obj_2",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contour_obj_3",
+          "trajectory_id": "manifold_contour_obj_3",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_volume_obj_3",
+          "trajectory_id": "manifold_volume_obj_3",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_occ_pulse_obj_4",
+          "trajectory_id": "manifold_occ_pulse_obj_4",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_volume_obj_5",
+          "trajectory_id": "manifold_volume_obj_5",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contour_obj_6",
+          "trajectory_id": "manifold_contour_obj_6",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_occ_pulse_obj_6",
+          "trajectory_id": "manifold_occ_pulse_obj_6",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 31,
+      "metrics": [
+        {
+          "path_id": "manifold_contour_obj_7",
+          "trajectory_id": "manifold_contour_obj_7",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_occ_pulse_obj_7",
+          "trajectory_id": "manifold_occ_pulse_obj_7",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contour_obj_8",
+          "trajectory_id": "manifold_contour_obj_8",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_volume_obj_8",
+          "trajectory_id": "manifold_volume_obj_8",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_volume_obj_9",
+          "trajectory_id": "manifold_volume_obj_9",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_volume_obj_10",
+          "trajectory_id": "manifold_volume_obj_10",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contour_obj_10",
+          "trajectory_id": "manifold_contour_obj_10",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_blob_obj_10",
+          "trajectory_id": "manifold_blob_obj_10",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_occ_pulse_obj_10",
+          "trajectory_id": "manifold_occ_pulse_obj_10",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_volume_obj_11",
+          "trajectory_id": "manifold_volume_obj_11",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 32,
+      "metrics": [
+        {
+          "path_id": "manifold_volume_obj_12",
+          "trajectory_id": "manifold_volume_obj_12",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_occ_pulse_obj_13",
+          "trajectory_id": "manifold_occ_pulse_obj_13",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_blob_obj_14",
+          "trajectory_id": "manifold_blob_obj_14",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_volume_obj_14",
+          "trajectory_id": "manifold_volume_obj_14",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_effect_obj_14",
+          "trajectory_id": "manifold_effect_obj_14",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_volume_obj_15",
+          "trajectory_id": "manifold_volume_obj_15",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_contact_obj_16",
+          "trajectory_id": "manifold_contact_obj_16",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_volume_obj_17",
+          "trajectory_id": "manifold_volume_obj_17",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_occ_pulse_obj_17",
+          "trajectory_id": "manifold_occ_pulse_obj_17",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_aerial_approach_obj_0",
+          "trajectory_id": "manifold_aerial_approach_obj_0",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 33,
+      "metrics": [
+        {
+          "path_id": "manifold_aerial_approach_obj_1",
+          "trajectory_id": "manifold_aerial_approach_obj_1",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_aerial_approach_obj_2",
+          "trajectory_id": "manifold_aerial_approach_obj_2",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_aerial_approach_obj_3",
+          "trajectory_id": "manifold_aerial_approach_obj_3",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_aerial_approach_obj_4",
+          "trajectory_id": "manifold_aerial_approach_obj_4",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_aerial_approach_obj_5",
+          "trajectory_id": "manifold_aerial_approach_obj_5",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_aerial_approach_obj_6",
+          "trajectory_id": "manifold_aerial_approach_obj_6",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_aerial_approach_obj_7",
+          "trajectory_id": "manifold_aerial_approach_obj_7",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_aerial_approach_obj_8",
+          "trajectory_id": "manifold_aerial_approach_obj_8",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_aerial_approach_obj_9",
+          "trajectory_id": "manifold_aerial_approach_obj_9",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        },
+        {
+          "path_id": "manifold_aerial_approach_obj_10",
+          "trajectory_id": "manifold_aerial_approach_obj_10",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    },
+    {
+      "panel_index": 34,
+      "metrics": [
+        {
+          "path_id": "manifold_aerial_approach_obj_11",
+          "trajectory_id": "manifold_aerial_approach_obj_11",
+          "thickness_depth_monotonicity": 1.0,
+          "temporal_flicker_score": 0.0,
+          "depth_semantic_coherence": 0.0
+        }
+      ]
+    }
+  ],
+  "fps": 24
+}

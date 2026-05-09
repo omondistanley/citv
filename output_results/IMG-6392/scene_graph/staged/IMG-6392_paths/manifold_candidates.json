@@ -1,0 +1,2045 @@
+{
+  "schema": "citv_manifold_candidates_v1",
+  "candidate_count": 33,
+  "candidates": [
+    {
+      "path_id": "grounded_occlusion_pulse_obj_0_000",
+      "path_level": "object",
+      "path_type": "occlusion_pulse",
+      "manifold_type": "occlusion_pulse",
+      "action_family": "occlusion_interaction",
+      "action_name": "peek",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          476.882,
+          530.198
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_0",
+        "goal_uv": [
+          476.882,
+          530.198
+        ],
+        "label": "person man",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          460.882,
+          529.198
+        ],
+        [
+          476.882,
+          530.198
+        ],
+        [
+          492.882,
+          534.198
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5062,
+        "grounding_candidate_confidence": 0.3385
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_0",
+        "entity_label": "person man",
+        "local_evidence_confidence": 0.3385,
+        "global_only": false,
+        "manifold_reason": "local_occluder_or_depth_edge",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_volume_path_obj_0_001",
+      "path_level": "object",
+      "path_type": "volume_path",
+      "manifold_type": "volume_path",
+      "action_family": "volume_motion",
+      "action_name": "hover",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          476.882,
+          530.198
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_0",
+        "goal_uv": [
+          476.882,
+          530.198
+        ],
+        "label": "person man",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          454.882,
+          535.698
+        ],
+        [
+          476.882,
+          530.198
+        ],
+        [
+          498.882,
+          508.198
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5062,
+        "grounding_candidate_confidence": 0.3385
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_0",
+        "entity_label": "person man",
+        "local_evidence_confidence": 0.3385,
+        "global_only": false,
+        "manifold_reason": "local_or_region_open_air",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_occlusion_pulse_obj_1_002",
+      "path_level": "object",
+      "path_type": "occlusion_pulse",
+      "manifold_type": "occlusion_pulse",
+      "action_family": "occlusion_interaction",
+      "action_name": "peek",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          476.751,
+          508.067
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_1",
+        "goal_uv": [
+          476.751,
+          508.067
+        ],
+        "label": "set",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          460.751,
+          507.067
+        ],
+        [
+          476.751,
+          508.067
+        ],
+        [
+          492.751,
+          512.067
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5294,
+        "grounding_candidate_confidence": 0.3808
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_1",
+        "entity_label": "set",
+        "local_evidence_confidence": 0.3808,
+        "global_only": false,
+        "manifold_reason": "local_occluder_or_depth_edge",
+        "uncertainty": [
+          "weak_or_meta_label"
+        ],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_volume_path_obj_1_003",
+      "path_level": "object",
+      "path_type": "volume_path",
+      "manifold_type": "volume_path",
+      "action_family": "volume_motion",
+      "action_name": "hover",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          476.751,
+          508.067
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_1",
+        "goal_uv": [
+          476.751,
+          508.067
+        ],
+        "label": "set",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          454.751,
+          513.567
+        ],
+        [
+          476.751,
+          508.067
+        ],
+        [
+          498.751,
+          486.067
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.6502,
+        "grounding_candidate_confidence": 0.6004
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_1",
+        "entity_label": "set",
+        "local_evidence_confidence": 0.6004,
+        "global_only": false,
+        "manifold_reason": "local_or_region_open_air",
+        "uncertainty": [
+          "weak_or_meta_label"
+        ],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_ribbon_path_obj_1_004",
+      "path_level": "object",
+      "path_type": "ribbon_path",
+      "manifold_type": "ribbon_path",
+      "action_family": "locomotion",
+      "action_name": "walk",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          476.751,
+          508.067
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_1",
+        "goal_uv": [
+          476.751,
+          508.067
+        ],
+        "label": "set",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          450.751,
+          509.067
+        ],
+        [
+          476.751,
+          508.067
+        ],
+        [
+          502.751,
+          504.067
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5294,
+        "grounding_candidate_confidence": 0.3808
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_1",
+        "entity_label": "set",
+        "local_evidence_confidence": 0.3808,
+        "global_only": false,
+        "manifold_reason": "local_support_or_walkable_surface",
+        "uncertainty": [
+          "weak_or_meta_label"
+        ],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_volume_path_obj_2_005",
+      "path_level": "object",
+      "path_type": "volume_path",
+      "manifold_type": "volume_path",
+      "action_family": "volume_motion",
+      "action_name": "hover",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          6.146,
+          686.69
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_2",
+        "goal_uv": [
+          6.146,
+          686.69
+        ],
+        "label": "face",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          -15.854,
+          692.19
+        ],
+        [
+          6.146,
+          686.69
+        ],
+        [
+          28.146,
+          664.69
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5527,
+        "grounding_candidate_confidence": 0.4231
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_2",
+        "entity_label": "face",
+        "local_evidence_confidence": 0.4231,
+        "global_only": false,
+        "manifold_reason": "local_or_region_open_air",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_occlusion_pulse_obj_3_006",
+      "path_level": "object",
+      "path_type": "occlusion_pulse",
+      "manifold_type": "occlusion_pulse",
+      "action_family": "occlusion_interaction",
+      "action_name": "peek",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          480.771,
+          289.462
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_3",
+        "goal_uv": [
+          480.771,
+          289.462
+        ],
+        "label": "landscape photograph",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          464.771,
+          288.462
+        ],
+        [
+          480.771,
+          289.462
+        ],
+        [
+          496.771,
+          293.462
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5062,
+        "grounding_candidate_confidence": 0.3385
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_3",
+        "entity_label": "landscape photograph",
+        "local_evidence_confidence": 0.3385,
+        "global_only": false,
+        "manifold_reason": "local_occluder_or_depth_edge",
+        "uncertainty": [
+          "weak_or_meta_label"
+        ],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_volume_path_obj_3_007",
+      "path_level": "object",
+      "path_type": "volume_path",
+      "manifold_type": "volume_path",
+      "action_family": "volume_motion",
+      "action_name": "hover",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          480.771,
+          289.462
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_3",
+        "goal_uv": [
+          480.771,
+          289.462
+        ],
+        "label": "landscape photograph",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          458.771,
+          294.962
+        ],
+        [
+          480.771,
+          289.462
+        ],
+        [
+          502.771,
+          267.462
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.6135,
+        "grounding_candidate_confidence": 0.5337
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_3",
+        "entity_label": "landscape photograph",
+        "local_evidence_confidence": 0.5337,
+        "global_only": false,
+        "manifold_reason": "local_or_region_open_air",
+        "uncertainty": [
+          "weak_or_meta_label"
+        ],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_contact_patch_obj_4_008",
+      "path_level": "object",
+      "path_type": "contact_patch",
+      "manifold_type": "contact_patch",
+      "action_family": "contact_interaction",
+      "action_name": "interact",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          74.769,
+          661.506
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_4",
+        "goal_uv": [
+          74.769,
+          661.506
+        ],
+        "label": "face",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          64.769,
+          663.506
+        ],
+        [
+          74.769,
+          661.506
+        ],
+        [
+          84.769,
+          653.506
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5527,
+        "grounding_candidate_confidence": 0.4231
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_4",
+        "entity_label": "face",
+        "local_evidence_confidence": 0.4231,
+        "global_only": false,
+        "manifold_reason": "local_object_or_mask_contact",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_occlusion_pulse_obj_4_009",
+      "path_level": "object",
+      "path_type": "occlusion_pulse",
+      "manifold_type": "occlusion_pulse",
+      "action_family": "occlusion_interaction",
+      "action_name": "peek",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          74.769,
+          661.506
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_4",
+        "goal_uv": [
+          74.769,
+          661.506
+        ],
+        "label": "face",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          58.769000000000005,
+          660.506
+        ],
+        [
+          74.769,
+          661.506
+        ],
+        [
+          90.769,
+          665.506
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.7644,
+        "grounding_candidate_confidence": 0.808
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_4",
+        "entity_label": "face",
+        "local_evidence_confidence": 0.808,
+        "global_only": false,
+        "manifold_reason": "local_occluder_or_depth_edge",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_ribbon_path_obj_4_010",
+      "path_level": "object",
+      "path_type": "ribbon_path",
+      "manifold_type": "ribbon_path",
+      "action_family": "locomotion",
+      "action_name": "walk",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          74.769,
+          661.506
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_4",
+        "goal_uv": [
+          74.769,
+          661.506
+        ],
+        "label": "face",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          48.769000000000005,
+          662.506
+        ],
+        [
+          74.769,
+          661.506
+        ],
+        [
+          100.769,
+          657.506
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5527,
+        "grounding_candidate_confidence": 0.4231
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_4",
+        "entity_label": "face",
+        "local_evidence_confidence": 0.4231,
+        "global_only": false,
+        "manifold_reason": "local_support_or_walkable_surface",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_volume_path_obj_5_011",
+      "path_level": "object",
+      "path_type": "volume_path",
+      "manifold_type": "volume_path",
+      "action_family": "volume_motion",
+      "action_name": "hover",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          728.635,
+          639.855
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_5",
+        "goal_uv": [
+          728.635,
+          639.855
+        ],
+        "label": "person",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          706.635,
+          645.355
+        ],
+        [
+          728.635,
+          639.855
+        ],
+        [
+          750.635,
+          617.855
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5062,
+        "grounding_candidate_confidence": 0.3385
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_5",
+        "entity_label": "person",
+        "local_evidence_confidence": 0.3385,
+        "global_only": false,
+        "manifold_reason": "local_or_region_open_air",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_occlusion_pulse_obj_6_012",
+      "path_level": "object",
+      "path_type": "occlusion_pulse",
+      "manifold_type": "occlusion_pulse",
+      "action_family": "occlusion_interaction",
+      "action_name": "peek",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          469.91,
+          823.03
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_6",
+        "goal_uv": [
+          469.91,
+          823.03
+        ],
+        "label": "set",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          453.91,
+          822.03
+        ],
+        [
+          469.91,
+          823.03
+        ],
+        [
+          485.91,
+          827.03
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5294,
+        "grounding_candidate_confidence": 0.3808
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_6",
+        "entity_label": "set",
+        "local_evidence_confidence": 0.3808,
+        "global_only": false,
+        "manifold_reason": "local_occluder_or_depth_edge",
+        "uncertainty": [
+          "weak_or_meta_label"
+        ],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_ribbon_path_obj_6_013",
+      "path_level": "object",
+      "path_type": "ribbon_path",
+      "manifold_type": "ribbon_path",
+      "action_family": "locomotion",
+      "action_name": "walk",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          469.91,
+          823.03
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_6",
+        "goal_uv": [
+          469.91,
+          823.03
+        ],
+        "label": "set",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          443.91,
+          824.03
+        ],
+        [
+          469.91,
+          823.03
+        ],
+        [
+          495.91,
+          819.03
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5294,
+        "grounding_candidate_confidence": 0.3808
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_6",
+        "entity_label": "set",
+        "local_evidence_confidence": 0.3808,
+        "global_only": false,
+        "manifold_reason": "local_support_or_walkable_surface",
+        "uncertainty": [
+          "weak_or_meta_label"
+        ],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_occlusion_pulse_obj_7_014",
+      "path_level": "object",
+      "path_type": "occlusion_pulse",
+      "manifold_type": "occlusion_pulse",
+      "action_family": "occlusion_interaction",
+      "action_name": "peek",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          20.266,
+          670.424
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_7",
+        "goal_uv": [
+          20.266,
+          670.424
+        ],
+        "label": "face",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          4.265999999999998,
+          669.424
+        ],
+        [
+          20.266,
+          670.424
+        ],
+        [
+          36.266,
+          674.424
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.6869,
+        "grounding_candidate_confidence": 0.6671
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_7",
+        "entity_label": "face",
+        "local_evidence_confidence": 0.6671,
+        "global_only": false,
+        "manifold_reason": "local_occluder_or_depth_edge",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_volume_path_obj_7_015",
+      "path_level": "object",
+      "path_type": "volume_path",
+      "manifold_type": "volume_path",
+      "action_family": "volume_motion",
+      "action_name": "hover",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          20.266,
+          670.424
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_7",
+        "goal_uv": [
+          20.266,
+          670.424
+        ],
+        "label": "face",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          -1.7340000000000018,
+          675.924
+        ],
+        [
+          20.266,
+          670.424
+        ],
+        [
+          42.266,
+          648.424
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5527,
+        "grounding_candidate_confidence": 0.4231
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_7",
+        "entity_label": "face",
+        "local_evidence_confidence": 0.4231,
+        "global_only": false,
+        "manifold_reason": "local_or_region_open_air",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_occlusion_pulse_obj_8_016",
+      "path_level": "object",
+      "path_type": "occlusion_pulse",
+      "manifold_type": "occlusion_pulse",
+      "action_family": "occlusion_interaction",
+      "action_name": "peek",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          60.411,
+          671.836
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_8",
+        "goal_uv": [
+          60.411,
+          671.836
+        ],
+        "label": "person",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          44.411,
+          670.836
+        ],
+        [
+          60.411,
+          671.836
+        ],
+        [
+          76.411,
+          675.836
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5062,
+        "grounding_candidate_confidence": 0.3385
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_8",
+        "entity_label": "person",
+        "local_evidence_confidence": 0.3385,
+        "global_only": false,
+        "manifold_reason": "local_occluder_or_depth_edge",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_volume_path_obj_8_017",
+      "path_level": "object",
+      "path_type": "volume_path",
+      "manifold_type": "volume_path",
+      "action_family": "volume_motion",
+      "action_name": "hover",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          60.411,
+          671.836
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_8",
+        "goal_uv": [
+          60.411,
+          671.836
+        ],
+        "label": "person",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          38.411,
+          677.336
+        ],
+        [
+          60.411,
+          671.836
+        ],
+        [
+          82.411,
+          649.836
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5062,
+        "grounding_candidate_confidence": 0.3385
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_8",
+        "entity_label": "person",
+        "local_evidence_confidence": 0.3385,
+        "global_only": false,
+        "manifold_reason": "local_or_region_open_air",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_volume_path_obj_9_018",
+      "path_level": "object",
+      "path_type": "volume_path",
+      "manifold_type": "volume_path",
+      "action_family": "volume_motion",
+      "action_name": "hover",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          482.973,
+          575.624
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_9",
+        "goal_uv": [
+          482.973,
+          575.624
+        ],
+        "label": "rendering",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          460.973,
+          581.124
+        ],
+        [
+          482.973,
+          575.624
+        ],
+        [
+          504.973,
+          553.624
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5527,
+        "grounding_candidate_confidence": 0.4231
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_9",
+        "entity_label": "rendering",
+        "local_evidence_confidence": 0.4231,
+        "global_only": false,
+        "manifold_reason": "local_or_region_open_air",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_contact_patch_obj_10_019",
+      "path_level": "object",
+      "path_type": "contact_patch",
+      "manifold_type": "contact_patch",
+      "action_family": "contact_interaction",
+      "action_name": "interact",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          770.328,
+          591.695
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_10",
+        "goal_uv": [
+          770.328,
+          591.695
+        ],
+        "label": "thin",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          760.328,
+          593.695
+        ],
+        [
+          770.328,
+          591.695
+        ],
+        [
+          780.328,
+          583.695
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.6502,
+        "grounding_candidate_confidence": 0.6004
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_10",
+        "entity_label": "thin",
+        "local_evidence_confidence": 0.6004,
+        "global_only": false,
+        "manifold_reason": "local_object_or_mask_contact",
+        "uncertainty": [
+          "weak_or_meta_label"
+        ],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_occlusion_pulse_obj_10_020",
+      "path_level": "object",
+      "path_type": "occlusion_pulse",
+      "manifold_type": "occlusion_pulse",
+      "action_family": "occlusion_interaction",
+      "action_name": "peek",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          770.328,
+          591.695
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_10",
+        "goal_uv": [
+          770.328,
+          591.695
+        ],
+        "label": "thin",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          754.328,
+          590.695
+        ],
+        [
+          770.328,
+          591.695
+        ],
+        [
+          786.328,
+          595.695
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5294,
+        "grounding_candidate_confidence": 0.3808
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_10",
+        "entity_label": "thin",
+        "local_evidence_confidence": 0.3808,
+        "global_only": false,
+        "manifold_reason": "local_occluder_or_depth_edge",
+        "uncertainty": [
+          "weak_or_meta_label"
+        ],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_volume_path_obj_10_021",
+      "path_level": "object",
+      "path_type": "volume_path",
+      "manifold_type": "volume_path",
+      "action_family": "volume_motion",
+      "action_name": "hover",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          770.328,
+          591.695
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_10",
+        "goal_uv": [
+          770.328,
+          591.695
+        ],
+        "label": "thin",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          748.328,
+          597.195
+        ],
+        [
+          770.328,
+          591.695
+        ],
+        [
+          792.328,
+          569.695
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.72,
+        "grounding_candidate_confidence": 0.7272
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_10",
+        "entity_label": "thin",
+        "local_evidence_confidence": 0.7272,
+        "global_only": false,
+        "manifold_reason": "local_or_region_open_air",
+        "uncertainty": [
+          "weak_or_meta_label"
+        ],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_occlusion_pulse_obj_11_022",
+      "path_level": "object",
+      "path_type": "occlusion_pulse",
+      "manifold_type": "occlusion_pulse",
+      "action_family": "occlusion_interaction",
+      "action_name": "peek",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          120.788,
+          646.571
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_11",
+        "goal_uv": [
+          120.788,
+          646.571
+        ],
+        "label": "face",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          104.788,
+          645.571
+        ],
+        [
+          120.788,
+          646.571
+        ],
+        [
+          136.788,
+          650.571
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5527,
+        "grounding_candidate_confidence": 0.4231
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_11",
+        "entity_label": "face",
+        "local_evidence_confidence": 0.4231,
+        "global_only": false,
+        "manifold_reason": "local_occluder_or_depth_edge",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_volume_path_obj_11_023",
+      "path_level": "object",
+      "path_type": "volume_path",
+      "manifold_type": "volume_path",
+      "action_family": "volume_motion",
+      "action_name": "hover",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          120.788,
+          646.571
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_11",
+        "goal_uv": [
+          120.788,
+          646.571
+        ],
+        "label": "face",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          98.788,
+          652.071
+        ],
+        [
+          120.788,
+          646.571
+        ],
+        [
+          142.788,
+          624.571
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5527,
+        "grounding_candidate_confidence": 0.4231
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_11",
+        "entity_label": "face",
+        "local_evidence_confidence": 0.4231,
+        "global_only": false,
+        "manifold_reason": "local_or_region_open_air",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_occlusion_pulse_obj_12_024",
+      "path_level": "object",
+      "path_type": "occlusion_pulse",
+      "manifold_type": "occlusion_pulse",
+      "action_family": "occlusion_interaction",
+      "action_name": "peek",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          5.061,
+          644.298
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_12",
+        "goal_uv": [
+          5.061,
+          644.298
+        ],
+        "label": "head",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          -10.939,
+          643.298
+        ],
+        [
+          5.061,
+          644.298
+        ],
+        [
+          21.061,
+          648.298
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5527,
+        "grounding_candidate_confidence": 0.4231
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_12",
+        "entity_label": "head",
+        "local_evidence_confidence": 0.4231,
+        "global_only": false,
+        "manifold_reason": "local_occluder_or_depth_edge",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_volume_path_obj_12_025",
+      "path_level": "object",
+      "path_type": "volume_path",
+      "manifold_type": "volume_path",
+      "action_family": "volume_motion",
+      "action_name": "hover",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          5.061,
+          644.298
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_12",
+        "goal_uv": [
+          5.061,
+          644.298
+        ],
+        "label": "head",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          -16.939,
+          649.798
+        ],
+        [
+          5.061,
+          644.298
+        ],
+        [
+          27.061,
+          622.298
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5527,
+        "grounding_candidate_confidence": 0.4231
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_12",
+        "entity_label": "head",
+        "local_evidence_confidence": 0.4231,
+        "global_only": false,
+        "manifold_reason": "local_or_region_open_air",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_occlusion_pulse_obj_13_026",
+      "path_level": "object",
+      "path_type": "occlusion_pulse",
+      "manifold_type": "occlusion_pulse",
+      "action_family": "occlusion_interaction",
+      "action_name": "peek",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          77.335,
+          674.68
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_13",
+        "goal_uv": [
+          77.335,
+          674.68
+        ],
+        "label": "face",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          61.334999999999994,
+          673.68
+        ],
+        [
+          77.335,
+          674.68
+        ],
+        [
+          93.335,
+          678.68
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5527,
+        "grounding_candidate_confidence": 0.4231
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_13",
+        "entity_label": "face",
+        "local_evidence_confidence": 0.4231,
+        "global_only": false,
+        "manifold_reason": "local_occluder_or_depth_edge",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_contact_patch_obj_14_027",
+      "path_level": "object",
+      "path_type": "contact_patch",
+      "manifold_type": "contact_patch",
+      "action_family": "contact_interaction",
+      "action_name": "interact",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          314.411,
+          507.848
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_14",
+        "goal_uv": [
+          314.411,
+          507.848
+        ],
+        "label": "thin",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          304.411,
+          509.848
+        ],
+        [
+          314.411,
+          507.848
+        ],
+        [
+          324.411,
+          499.848
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5294,
+        "grounding_candidate_confidence": 0.3808
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_14",
+        "entity_label": "thin",
+        "local_evidence_confidence": 0.3808,
+        "global_only": false,
+        "manifold_reason": "local_object_or_mask_contact",
+        "uncertainty": [
+          "weak_or_meta_label"
+        ],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_volume_path_obj_14_028",
+      "path_level": "object",
+      "path_type": "volume_path",
+      "manifold_type": "volume_path",
+      "action_family": "volume_motion",
+      "action_name": "hover",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          314.411,
+          507.848
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_14",
+        "goal_uv": [
+          314.411,
+          507.848
+        ],
+        "label": "thin",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          292.411,
+          513.348
+        ],
+        [
+          314.411,
+          507.848
+        ],
+        [
+          336.411,
+          485.848
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5294,
+        "grounding_candidate_confidence": 0.3808
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_14",
+        "entity_label": "thin",
+        "local_evidence_confidence": 0.3808,
+        "global_only": false,
+        "manifold_reason": "local_or_region_open_air",
+        "uncertainty": [
+          "weak_or_meta_label"
+        ],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_volume_path_obj_15_029",
+      "path_level": "object",
+      "path_type": "volume_path",
+      "manifold_type": "volume_path",
+      "action_family": "volume_motion",
+      "action_name": "hover",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          480.043,
+          291.194
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_15",
+        "goal_uv": [
+          480.043,
+          291.194
+        ],
+        "label": "landscape photograph",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          458.043,
+          296.694
+        ],
+        [
+          480.043,
+          291.194
+        ],
+        [
+          502.043,
+          269.194
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.6135,
+        "grounding_candidate_confidence": 0.5337
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_15",
+        "entity_label": "landscape photograph",
+        "local_evidence_confidence": 0.5337,
+        "global_only": false,
+        "manifold_reason": "local_or_region_open_air",
+        "uncertainty": [
+          "weak_or_meta_label"
+        ],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_occlusion_pulse_obj_17_030",
+      "path_level": "object",
+      "path_type": "occlusion_pulse",
+      "manifold_type": "occlusion_pulse",
+      "action_family": "occlusion_interaction",
+      "action_name": "peek",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          74.719,
+          651.902
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_17",
+        "goal_uv": [
+          74.719,
+          651.902
+        ],
+        "label": "person",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          58.718999999999994,
+          650.902
+        ],
+        [
+          74.719,
+          651.902
+        ],
+        [
+          90.719,
+          655.902
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5062,
+        "grounding_candidate_confidence": 0.3385
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_17",
+        "entity_label": "person",
+        "local_evidence_confidence": 0.3385,
+        "global_only": false,
+        "manifold_reason": "local_occluder_or_depth_edge",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_volume_path_obj_17_031",
+      "path_level": "object",
+      "path_type": "volume_path",
+      "manifold_type": "volume_path",
+      "action_family": "volume_motion",
+      "action_name": "hover",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          74.719,
+          651.902
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_17",
+        "goal_uv": [
+          74.719,
+          651.902
+        ],
+        "label": "person",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          52.718999999999994,
+          657.402
+        ],
+        [
+          74.719,
+          651.902
+        ],
+        [
+          96.719,
+          629.902
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5062,
+        "grounding_candidate_confidence": 0.3385
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_17",
+        "entity_label": "person",
+        "local_evidence_confidence": 0.3385,
+        "global_only": false,
+        "manifold_reason": "local_or_region_open_air",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    },
+    {
+      "path_id": "grounded_ribbon_path_obj_17_032",
+      "path_level": "object",
+      "path_type": "ribbon_path",
+      "manifold_type": "ribbon_path",
+      "action_family": "locomotion",
+      "action_name": "walk",
+      "source_entity": {
+        "type": "grounded_candidate",
+        "id": "actor",
+        "start_uv": [
+          74.719,
+          651.902
+        ],
+        "evidence_level": "local_or_scene_prior"
+      },
+      "target_entity": {
+        "type": "object",
+        "id": "obj_17",
+        "goal_uv": [
+          74.719,
+          651.902
+        ],
+        "label": "person",
+        "evidence_level": "object_mask"
+      },
+      "polyline_2d": [
+        [
+          48.718999999999994,
+          652.902
+        ],
+        [
+          74.719,
+          651.902
+        ],
+        [
+          100.719,
+          647.902
+        ]
+      ],
+      "scores": {
+        "overall_confidence": 0.5062,
+        "grounding_candidate_confidence": 0.3385
+      },
+      "grounding_evidence": {
+        "schema": "citv_path_grounding_evidence_v1",
+        "candidate_source": "scene_grounding_index",
+        "entity_id": "obj_17",
+        "entity_label": "person",
+        "local_evidence_confidence": 0.3385,
+        "global_only": false,
+        "manifold_reason": "local_support_or_walkable_surface",
+        "uncertainty": [],
+        "contradictions": []
+      },
+      "routing_meta": {
+        "generation_order": "grounding_index_to_manifold_candidate",
+        "uses_affordance_rasters": true,
+        "path_granularity": "grounded_manifold"
+      }
+    }
+  ]
+}

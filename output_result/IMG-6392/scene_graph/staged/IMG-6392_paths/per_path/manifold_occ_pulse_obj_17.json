@@ -1,0 +1,1042 @@
+{
+  "schema": "citv_path_visual_qa_per_path_v1",
+  "stem": "IMG-6392",
+  "path": {
+    "global_rank": 213,
+    "path_id": "manifold_occ_pulse_obj_17",
+    "path_type": "occlusion_pulse",
+    "manifold_type": "occlusion_pulse",
+    "action_family": "occlusion_interaction",
+    "movement_scope": "inter_region",
+    "boundary_interaction": "crosses_and_tracks_region_boundaries",
+    "dominant_motion": "occlusion_aware_traverse",
+    "acceptance_status": "low_confidence",
+    "rejection_reasons": [],
+    "uncertainty_reasons": [
+      "geometry_depth_jump_unexplained"
+    ],
+    "contradiction_reasons": [
+      "impossible_manifold_evidence_mismatch"
+    ],
+    "grounding_evidence": {
+      "schema": "citv_path_grounding_evidence_v1",
+      "candidate_source": "occlusion_pulse",
+      "local_evidence_confidence": 0.6,
+      "scene_prior_confidence": 0.7272,
+      "global_only": false,
+      "local_evidence_levels": [
+        "region_boundary",
+        "source",
+        "target"
+      ],
+      "manifold_type": "occlusion_pulse"
+    },
+    "scores": {
+      "overall_confidence": 0.2039,
+      "geometric_feasibility": 0.7,
+      "semantic_confidence": 0.675,
+      "geometric_confidence": 0.2255,
+      "caption_confidence": 0.57,
+      "boundary_context_confidence": 0.87,
+      "kinematic_confidence": 0.5693,
+      "support_grounding_confidence": 0.45,
+      "entity_anchor_confidence": 0.65,
+      "local_action_evidence_confidence": 0.6,
+      "local_grounding_score": 0.6175,
+      "manifold_fit_score": 0.6417,
+      "geometry_contract_score": 0.6,
+      "renderability_score": 0.2,
+      "contradiction_score": 0.58,
+      "uncertainty_score": 0.3797,
+      "support_channel_means": {
+        "support_surface_score": 0.4196,
+        "route_corridor_score": 0.0,
+        "contact_target_score": 0.0,
+        "occlusion_edge_score": 0.7833,
+        "contour_boundary_score": 0.0,
+        "open_air_score": 0.5186,
+        "portal_score": 0.0,
+        "interior_motion_score": 0.0,
+        "effect_host_score": 0.0,
+        "confirmed_blocker_score": 0.0,
+        "uncertainty_score": 0.3781
+      },
+      "unknown_support_fraction": 0.6458,
+      "blocking_support_fraction": 0.3542,
+      "shape_confidence": 0.55,
+      "contract_confidence": 0.2039,
+      "overall_confidence_before_contract_gate": 0.4185
+    },
+    "overall_confidence": 0.2039,
+    "source_entity": {
+      "id": "obj_17",
+      "label": "person",
+      "entity_kind": ""
+    },
+    "target_entity": {
+      "id": "obj_17",
+      "label": "person",
+      "entity_kind": ""
+    },
+    "regions_traversed": [],
+    "routing_meta": {
+      "feasible_variant": "routing_support"
+    },
+    "goal_generation": {},
+    "action_hints": [
+      {
+        "entity_role": "scene",
+        "action": "fly",
+        "score": 0.7272,
+        "evidence_terms": [
+          "above",
+          "air",
+          "flying",
+          "sky"
+        ]
+      },
+      {
+        "entity_role": "scene",
+        "action": "hover",
+        "score": 0.6671,
+        "evidence_terms": [
+          "above",
+          "air",
+          "sky"
+        ]
+      },
+      {
+        "entity_role": "scene",
+        "action": "peek",
+        "score": 0.6671,
+        "evidence_terms": [
+          "behind",
+          "foreground"
+        ]
+      },
+      {
+        "entity_role": "scene",
+        "action": "interact",
+        "score": 0.6671,
+        "evidence_terms": [
+          "on",
+          "with"
+        ]
+      },
+      {
+        "entity_role": "scene",
+        "action": "hold",
+        "score": 0.6004,
+        "evidence_terms": [
+          "handle",
+          "object"
+        ]
+      },
+      {
+        "entity_role": "region_boundary",
+        "action": "cross_region_transition",
+        "path_mode": "inter_region",
+        "score": 0.6,
+        "evidence_terms": [
+          "region_label_map",
+          "yellow_contour_boundary",
+          "crosses_and_tracks_region_boundaries"
+        ]
+      },
+      {
+        "entity_role": "region_boundary",
+        "action": "edge_follow_or_portal_approach",
+        "path_mode": "boundary_context",
+        "score": 0.56,
+        "evidence_terms": [
+          "region_label_map",
+          "region_boundary_trace"
+        ]
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_17",
+        "action": "interact",
+        "score": 0.5337,
+        "evidence_terms": [
+          "on",
+          "with"
+        ]
+      },
+      {
+        "entity_role": "target",
+        "object_id": "obj_17",
+        "action": "interact",
+        "score": 0.5337,
+        "evidence_terms": [
+          "on",
+          "with"
+        ]
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_17",
+        "action": "fly",
+        "score": 0.3385,
+        "evidence_terms": [
+          "above"
+        ]
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_17",
+        "action": "hover",
+        "score": 0.3385,
+        "evidence_terms": [
+          "above"
+        ]
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_17",
+        "action": "crawl",
+        "score": 0.3385,
+        "evidence_terms": [
+          "low"
+        ]
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_17",
+        "action": "peek",
+        "score": 0.3385,
+        "evidence_terms": [
+          "behind"
+        ]
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_17",
+        "path_mode": "inside",
+        "score": 0.3385
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_17",
+        "path_mode": "outside",
+        "score": 0.3385
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_17",
+        "path_mode": "around",
+        "score": 0.3385
+      }
+    ],
+    "motion_hints": [
+      {
+        "motion": "occlusion_aware_traverse",
+        "score": 0.6,
+        "reason": "visibility_profile"
+      },
+      {
+        "motion": "careful",
+        "score": 0.52,
+        "reason": "high_path_cost"
+      },
+      {
+        "motion": "region_transition_traverse",
+        "score": 0.58,
+        "reason": "region_boundary_trace_inter_region"
+      },
+      {
+        "motion": "edge_follow_or_orbit",
+        "score": 0.54,
+        "reason": "region_boundary_trace_boundary_following"
+      },
+      {
+        "motion": "step_or_occlusion_boundary_transition",
+        "score": 0.56,
+        "reason": "region_boundary_trace_depth_delta"
+      }
+    ],
+    "motion_labels": [
+      "occlusion_aware_traverse",
+      "careful",
+      "region_transition_traverse",
+      "edge_follow_or_orbit",
+      "step_or_occlusion_boundary_transition"
+    ],
+    "action_labels": [
+      "fly",
+      "hover",
+      "peek",
+      "interact",
+      "hold",
+      "cross_region_transition",
+      "edge_follow_or_portal_approach",
+      "interact",
+      "interact",
+      "fly",
+      "hover",
+      "crawl"
+    ],
+    "semantic_trace": {
+      "source": {
+        "id": "obj_17",
+        "label": "person",
+        "roles": [
+          {
+            "name": "actor",
+            "score": 0.6464
+          },
+          {
+            "name": "soft_obstacle",
+            "score": 0.3385
+          },
+          {
+            "name": "support",
+            "score": 0.3385
+          },
+          {
+            "name": "occluder",
+            "score": 0.3385
+          },
+          {
+            "name": "sky_open_air",
+            "score": 0.3385
+          }
+        ],
+        "actions": [
+          {
+            "name": "interact",
+            "score": 0.5337
+          },
+          {
+            "name": "fly",
+            "score": 0.3385
+          },
+          {
+            "name": "hover",
+            "score": 0.3385
+          },
+          {
+            "name": "crawl",
+            "score": 0.3385
+          },
+          {
+            "name": "peek",
+            "score": 0.3385
+          }
+        ],
+        "path_modes": [
+          {
+            "name": "inside",
+            "score": 0.3385
+          },
+          {
+            "name": "outside",
+            "score": 0.3385
+          },
+          {
+            "name": "around",
+            "score": 0.3385
+          },
+          {
+            "name": "on",
+            "score": 0.3385
+          },
+          {
+            "name": "above",
+            "score": 0.3385
+          }
+        ]
+      },
+      "target": {
+        "id": "obj_17",
+        "label": "person",
+        "roles": [
+          {
+            "name": "actor",
+            "score": 0.6464
+          },
+          {
+            "name": "soft_obstacle",
+            "score": 0.3385
+          },
+          {
+            "name": "support",
+            "score": 0.3385
+          },
+          {
+            "name": "occluder",
+            "score": 0.3385
+          },
+          {
+            "name": "sky_open_air",
+            "score": 0.3385
+          }
+        ],
+        "actions": [
+          {
+            "name": "interact",
+            "score": 0.5337
+          },
+          {
+            "name": "fly",
+            "score": 0.3385
+          },
+          {
+            "name": "hover",
+            "score": 0.3385
+          },
+          {
+            "name": "crawl",
+            "score": 0.3385
+          },
+          {
+            "name": "peek",
+            "score": 0.3385
+          }
+        ],
+        "path_modes": [
+          {
+            "name": "inside",
+            "score": 0.3385
+          },
+          {
+            "name": "outside",
+            "score": 0.3385
+          },
+          {
+            "name": "around",
+            "score": 0.3385
+          },
+          {
+            "name": "on",
+            "score": 0.3385
+          },
+          {
+            "name": "above",
+            "score": 0.3385
+          }
+        ]
+      },
+      "regions_traversed": [
+        {
+          "region_id": "region_12",
+          "region_type": "foreground",
+          "semantic_label": "",
+          "roles": [
+            {
+              "name": "actor",
+              "score": 0.4231
+            },
+            {
+              "name": "occluder",
+              "score": 0.4231
+            }
+          ],
+          "actions": [
+            {
+              "name": "peek",
+              "score": 0.4231
+            },
+            {
+              "name": "avoid",
+              "score": 0.4231
+            }
+          ]
+        },
+        {
+          "region_id": "region_29",
+          "region_type": "midground",
+          "semantic_label": "",
+          "roles": [
+            {
+              "name": "actor",
+              "score": 0.4231
+            }
+          ],
+          "actions": []
+        },
+        {
+          "region_id": "region_46",
+          "region_type": "background",
+          "semantic_label": "",
+          "roles": [
+            {
+              "name": "actor",
+              "score": 0.4231
+            }
+          ],
+          "actions": []
+        }
+      ],
+      "support_kind_counts": {
+        "unknown": 31,
+        "blocking": 17
+      },
+      "support_channel_means": {
+        "support_surface_score": 0.4196,
+        "route_corridor_score": 0.0,
+        "contact_target_score": 0.0,
+        "occlusion_edge_score": 0.7833,
+        "contour_boundary_score": 0.0,
+        "open_air_score": 0.5186,
+        "portal_score": 0.0,
+        "interior_motion_score": 0.0,
+        "effect_host_score": 0.0,
+        "confirmed_blocker_score": 0.0,
+        "uncertainty_score": 0.3781
+      },
+      "nearby_object_ids": [
+        "obj_1",
+        "obj_13",
+        "obj_17",
+        "obj_4",
+        "obj_8",
+        "obj_9"
+      ]
+    },
+    "support_kind_counts": {
+      "unknown": 31,
+      "blocking": 17
+    },
+    "ground_object_classification": {
+      "schema": "citv_ground_object_classification_v1",
+      "dominant_support_kind": "unknown",
+      "walkable_fraction": 0.1259,
+      "swimmable_fraction": 0.0,
+      "open_air_fraction": 0.2593,
+      "blocking_fraction": 0.3542,
+      "terrain_labels": [
+        "open_air",
+        "obstacle_heavy"
+      ],
+      "recommended_motion": "occlusion_aware_traverse",
+      "support_action_priors": {
+        "occlusion_aware_traverse": 0.6,
+        "region_transition_traverse": 0.58,
+        "occlusion_boundary_transition": 0.56,
+        "step": 0.56,
+        "edge_follow": 0.54,
+        "orbit": 0.54,
+        "careful": 0.52
+      }
+    },
+    "region_boundary_trace": {
+      "available": true,
+      "movement_scope": "inter_region",
+      "boundary_interaction": "crosses_and_tracks_region_boundaries",
+      "boundary_sample_fraction": 1.0,
+      "transition_count": 5,
+      "max_transition_depth_delta_m": 1.3815,
+      "regions_sequence": [
+        {
+          "region_label": 12,
+          "region_id": "region_12",
+          "region_type": "foreground",
+          "semantic_label": "",
+          "support_kind": "blocking",
+          "depth_mean_m": 10.9562,
+          "sample_fraction": 0.3542
+        },
+        {
+          "region_label": 29,
+          "region_id": "region_29",
+          "region_type": "midground",
+          "semantic_label": "",
+          "support_kind": "unknown",
+          "depth_mean_m": 12.2056,
+          "sample_fraction": 0.3542
+        },
+        {
+          "region_label": 46,
+          "region_id": "region_46",
+          "region_type": "background",
+          "semantic_label": "",
+          "support_kind": "unknown",
+          "depth_mean_m": 13.5871,
+          "sample_fraction": 0.2917
+        }
+      ],
+      "transitions": [
+        {
+          "s": 0.2128,
+          "from_region": {
+            "region_label": 29,
+            "region_id": "region_29",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 12.2056
+          },
+          "to_region": {
+            "region_label": 46,
+            "region_id": "region_46",
+            "region_type": "background",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 13.5871
+          },
+          "depth_delta_m": 1.3815,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.4255,
+          "from_region": {
+            "region_label": 46,
+            "region_id": "region_46",
+            "region_type": "background",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 13.5871
+          },
+          "to_region": {
+            "region_label": 29,
+            "region_id": "region_29",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 12.2056
+          },
+          "depth_delta_m": 1.3815,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.5319,
+          "from_region": {
+            "region_label": 29,
+            "region_id": "region_29",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 12.2056
+          },
+          "to_region": {
+            "region_label": 46,
+            "region_id": "region_46",
+            "region_type": "background",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 13.5871
+          },
+          "depth_delta_m": 1.3815,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.617,
+          "from_region": {
+            "region_label": 46,
+            "region_id": "region_46",
+            "region_type": "background",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 13.5871
+          },
+          "to_region": {
+            "region_label": 29,
+            "region_id": "region_29",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 12.2056
+          },
+          "depth_delta_m": 1.3815,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.6596,
+          "from_region": {
+            "region_label": 29,
+            "region_id": "region_29",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 12.2056
+          },
+          "to_region": {
+            "region_label": 12,
+            "region_id": "region_12",
+            "region_type": "foreground",
+            "semantic_label": "",
+            "support_kind": "blocking",
+            "depth_mean_m": 10.9562
+          },
+          "depth_delta_m": 1.2494,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        }
+      ],
+      "motion_implications": [
+        "inter_region_transition",
+        "recheck_support_and_motion_label_at_region_seams",
+        "boundary_following_or_portal_context",
+        "depth_step_or_occlusion_boundary"
+      ]
+    },
+    "caption_trace": {
+      "source_caption": "person person The image is a blurred photograph of a person sitting on a chair. The person appears to be in a relaxed position, with their head resting on their hands and their body slightly turned to the side. They are wearing a green shirt and have a slight smile on their face. The background is a plain green color, and the image is slightly out of focus. The image is taken from a low angle, so the focus is on the person's face. person the sitting chair appears relaxed posi",
+      "target_caption": "person person The image is a blurred photograph of a person sitting on a chair. The person appears to be in a relaxed position, with their head resting on their hands and their body slightly turned to the side. They are wearing a green shirt and have a slight smile on their face. The background is a plain green color, and the image is slightly out of focus. The image is taken from a low angle, so the focus is on the person's face. person the sitting chair appears relaxed posi",
+      "region_samples": [
+        {
+          "s": 0.0,
+          "region_id": "region_29",
+          "caption": "midground person Region region_29 (midground) at 11.6 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.0426,
+          "region_id": "region_29",
+          "caption": "midground person Region region_29 (midground) at 11.6 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.0851,
+          "region_id": "region_29",
+          "caption": "midground person Region region_29 (midground) at 11.6 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.1277,
+          "region_id": "region_29",
+          "caption": "midground person Region region_29 (midground) at 11.6 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.1702,
+          "region_id": "region_29",
+          "caption": "midground person Region region_29 (midground) at 11.6 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.2128,
+          "region_id": "region_46",
+          "caption": "background person Region region_46 (background) at 11.7 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.2553,
+          "region_id": "region_46",
+          "caption": "background person Region region_46 (background) at 11.7 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.2979,
+          "region_id": "region_46",
+          "caption": "background person Region region_46 (background) at 11.7 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.3404,
+          "region_id": "region_46",
+          "caption": "background person Region region_46 (background) at 11.7 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.383,
+          "region_id": "region_46",
+          "caption": "background person Region region_46 (background) at 11.7 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.4255,
+          "region_id": "region_29",
+          "caption": "midground person Region region_29 (midground) at 11.6 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.4681,
+          "region_id": "region_29",
+          "caption": "midground person Region region_29 (midground) at 11.6 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.5319,
+          "region_id": "region_46",
+          "caption": "background person Region region_46 (background) at 11.7 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.5745,
+          "region_id": "region_46",
+          "caption": "background person Region region_46 (background) at 11.7 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.617,
+          "region_id": "region_29",
+          "caption": "midground person Region region_29 (midground) at 11.6 m contains: person.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.6596,
+          "region_id": "region_12",
+          "caption": "foreground set face set face Region region_12 (foreground) at 11.1 m contains: set, face, set, face.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.7021,
+          "region_id": "region_12",
+          "caption": "foreground set face set face Region region_12 (foreground) at 11.1 m contains: set, face, set, face.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.7447,
+          "region_id": "region_12",
+          "caption": "foreground set face set face Region region_12 (foreground) at 11.1 m contains: set, face, set, face.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.7872,
+          "region_id": "region_12",
+          "caption": "foreground set face set face Region region_12 (foreground) at 11.1 m contains: set, face, set, face.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.8298,
+          "region_id": "region_12",
+          "caption": "foreground set face set face Region region_12 (foreground) at 11.1 m contains: set, face, set, face.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.8723,
+          "region_id": "region_12",
+          "caption": "foreground set face set face Region region_12 (foreground) at 11.1 m contains: set, face, set, face.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.9149,
+          "region_id": "region_12",
+          "caption": "foreground set face set face Region region_12 (foreground) at 11.1 m contains: set, face, set, face.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.9574,
+          "region_id": "region_12",
+          "caption": "foreground set face set face Region region_12 (foreground) at 11.1 m contains: set, face, set, face.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 1.0,
+          "region_id": "region_12",
+          "caption": "foreground set face set face Region region_12 (foreground) at 11.1 m contains: set, face, set, face.",
+          "precision": 0.48,
+          "confidence": 0.58
+        }
+      ],
+      "mean_caption_confidence": 0.57
+    },
+    "render_layers": [
+      "partially_occluded",
+      "behind_object"
+    ],
+    "occlusion_trace": {
+      "mean_visible_fraction": 0.2,
+      "min_visible_fraction": 0.0,
+      "occluded_sample_fraction": 1.0,
+      "occluder_ids": [
+        "obj_1",
+        "obj_4",
+        "obj_6",
+        "obj_8",
+        "obj_9"
+      ]
+    },
+    "depth_summary": {
+      "summary": true,
+      "valid_fraction": 1.0,
+      "min_m": 11.5156,
+      "max_m": 13.9062,
+      "mean_m": 12.6172,
+      "delta_m": -0.2109
+    },
+    "width_summary_px": {
+      "min_px": 32.368,
+      "max_px": 39.087,
+      "mean_px": 35.831,
+      "sample_count": 6
+    },
+    "trajectory_contract": {
+      "dominant_motion": "occlusion_aware_traverse",
+      "shape_type": "occlusion_edge_pulse",
+      "direction_profile": {
+        "available": true,
+        "heading_start_deg": 147.995,
+        "heading_end_deg": 8.973,
+        "image_direction": "down",
+        "camera_depth_trend": "toward_camera",
+        "depth_delta_m": -0.2109,
+        "scale_trend": "larger_over_time",
+        "approach_retreat": "approach",
+        "orbit_direction": "clockwise"
+      },
+      "support_dominant": "unknown",
+      "animation_ready": true,
+      "mean_visible_fraction": 0.2,
+      "width_mean_px": 35.831
+    },
+    "path_shape_contract": {
+      "shape_type": "occlusion_edge_pulse",
+      "straight_line_like": false,
+      "straightness_ratio": 0.6032,
+      "direction_profile": {
+        "available": true,
+        "heading_start_deg": 147.995,
+        "heading_end_deg": 8.973,
+        "image_direction": "down",
+        "camera_depth_trend": "toward_camera",
+        "depth_delta_m": -0.2109,
+        "scale_trend": "larger_over_time",
+        "approach_retreat": "approach",
+        "orbit_direction": "clockwise"
+      },
+      "support_evidence": {
+        "support_kind_counts": {
+          "unknown": 31,
+          "blocking": 17
+        },
+        "support_grounding_confidence": 0.45,
+        "movement_scope": "inter_region",
+        "boundary_interaction": "crosses_and_tracks_region_boundaries",
+        "region_transition_count": 5
+      },
+      "shape_justification": [
+        "edge_pulse_anchor_set",
+        "multi_vertex_scene_shape",
+        "region_boundary_context_sampled",
+        "support_trace_sampled"
+      ],
+      "geometry_refs": {
+        "raw_centerline": "polyline_2d_raw",
+        "validated_centerline": "polyline_2d_validated",
+        "display_centerline": "display_polyline_2d",
+        "centerline": "display_polyline_2d",
+        "polyline_3d": "polyline_3d",
+        "display_polyline_3d": "display_polyline_3d",
+        "left_boundary": "left_boundary_2d",
+        "right_boundary": "right_boundary_2d",
+        "mask_or_effect_refs": [
+          "occluder_id"
+        ]
+      },
+      "geometry_quality": {
+        "zigzag_score": 0.0,
+        "turn_angle_p95": 49.963,
+        "curvature_energy": 0.02996,
+        "vertical_shoot_score": 0.0,
+        "depth_jump_count": 5,
+        "support_snap_displacement_px": {
+          "mean": 0.0,
+          "max": 0.0
+        },
+        "smoothability_status": "rejected"
+      },
+      "rejection_reasons": [
+        "geometry_depth_jump_unexplained"
+      ]
+    },
+    "path_geometry_quality": {
+      "zigzag_score": 0.0,
+      "turn_angle_p95": 49.963,
+      "curvature_energy": 0.02996,
+      "vertical_shoot_score": 0.0,
+      "depth_jump_count": 5,
+      "support_snap_displacement_px": {
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "mask_boundary_crossing_count": 0,
+      "terrain_transition_mismatch": true,
+      "smoothability_status": "rejected",
+      "geometry_rejection_reasons": [
+        "geometry_depth_jump_unexplained"
+      ]
+    },
+    "geometry_smoothing_provenance": {
+      "source": "simplified_chaikin_constrained",
+      "smoothability_status": "smoothed_validated",
+      "raw_vertex_count": 6,
+      "simplified_vertex_count": 4,
+      "display_vertex_count": 8,
+      "simplification_epsilon_px": 3.0,
+      "smoothing_iterations": 1,
+      "validation": {
+        "feasible_fraction": 1.0,
+        "support_fraction": 1.0,
+        "feasible_boundary_crossing_count": 0,
+        "support_boundary_crossing_count": 0,
+        "min_valid_fraction": 0.92
+      }
+    },
+    "animation_render_contract": {
+      "render_primitive": "edge_anchored_hide_peek_pulse",
+      "alpha_policy": "peek_hide_pulse_from_visibility_curve",
+      "width_policy": "depth_width_profile",
+      "depth_scale_policy": "metric_depth_trace",
+      "render_layers": [
+        "partially_occluded",
+        "behind_object"
+      ],
+      "motion_labels": [
+        "careful",
+        "edge_follow_or_orbit",
+        "occlusion_aware_traverse",
+        "region_transition_traverse",
+        "step_or_occlusion_boundary_transition"
+      ],
+      "action_labels": [
+        "around",
+        "boundary_context",
+        "crawl",
+        "cross_region_transition",
+        "edge_follow_or_portal_approach",
+        "fly",
+        "hold",
+        "hover",
+        "inside",
+        "inter_region"
+      ],
+      "sample_state_preview_count": 8
+    },
+    "natural_direction_2d_deg": -92.953,
+    "validation_notes": null,
+    "polyline_summary": {
+      "vertex_count": 6,
+      "start_xy": [
+        72.73,
+        702.82
+      ],
+      "end_xy": [
+        71.16,
+        741.69
+      ]
+    },
+    "trajectory_id": "traj_IMG-6392_manifold_occ_pulse_obj_17_path_follow",
+    "trajectory_has_points": true,
+    "linked_action": {
+      "action_id": "action_manifold_occ_pulse_obj_17_locomotion",
+      "action_name": "occlusion_aware_traverse",
+      "action_family": "occlusion_interaction",
+      "manifold_type": "occlusion_pulse"
+    }
+  }
+}

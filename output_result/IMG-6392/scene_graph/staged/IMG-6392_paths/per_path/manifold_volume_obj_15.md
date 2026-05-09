@@ -1,0 +1,23 @@
+# Path `manifold_volume_obj_15`
+
+- rank: 215
+- manifold: volume_path
+- action_family: locomotion
+- movement_scope: inter_region
+- boundary_interaction: crosses_and_tracks_region_boundaries
+- dominant_motion: descend_or_approach_camera
+- confidence: 0.203
+- status: low_confidence
+- rejection_reasons: []
+- uncertainty_reasons: ['geometry_depth_jump_unexplained', 'geometry_sharp_turns_unexplained']
+- contradiction_reasons: ['impossible_manifold_evidence_mismatch']
+- grounding_evidence: {'schema': 'citv_path_grounding_evidence_v1', 'candidate_source': 'volume_path', 'local_evidence_confidence': 0.6, 'scene_prior_confidence': 0.7272, 'global_only': False, 'local_evidence_levels': ['region_boundary', 'source', 'target'], 'manifold_type': 'volume_path'}
+- source: landscape photograph
+- target: landscape photograph
+- motion_labels: ['descend_or_approach_camera', 'occlusion_aware_traverse', 'careful', 'region_transition_traverse', 'edge_follow_or_orbit', 'step_or_occlusion_boundary_transition']
+- action_labels: ['fly', 'hover', 'peek', 'interact', 'hold', 'cross_region_transition', 'edge_follow_or_portal_approach', 'fly', 'hover', 'interact', 'fly', 'hover']
+- render_layers: ['in_front', 'partially_occluded', 'behind_object']
+- occlusion_trace: {'mean_visible_fraction': 0.1083, 'min_visible_fraction': 0.0, 'occluded_sample_fraction': 0.9167, 'occluder_ids': ['obj_1', 'obj_3']}
+- trajectory_contract: {'dominant_motion': 'descend_or_approach_camera', 'shape_type': 'open_space_volume', 'direction_profile': {'available': True, 'heading_start_deg': 0.124, 'heading_end_deg': 179.874, 'image_direction': 'right', 'camera_depth_trend': 'toward_camera', 'depth_delta_m': -3.6172, 'scale_trend': 'larger_over_time', 'approach_retreat': 'approach', 'orbit_direction': 'counterclockwise'}, 'support_dominant': 'unknown', 'animation_ready': True, 'mean_visible_fraction': 0.1083, 'width_mean_px': 33.221}
+- path_shape_contract: {'shape_type': 'open_space_volume', 'straight_line_like': False, 'straightness_ratio': 0.0113, 'direction_profile': {'available': True, 'heading_start_deg': 0.124, 'heading_end_deg': 179.874, 'image_direction': 'right', 'camera_depth_trend': 'toward_camera', 'depth_delta_m': -3.6172, 'scale_trend': 'larger_over_time', 'approach_retreat': 'approach', 'orbit_direction': 'counterclockwise'}, 'support_evidence': {'support_kind_counts': {'unknown': 48}, 'support_grounding_confidence': 0.0265, 'movement_scope': 'inter_region', 'boundary_interaction': 'crosses_and_tracks_region_boundaries', 'region_transition_count': 30}, 'shape_justification': ['multi_vertex_scene_shape', 'region_boundary_context_sampled', 'support_trace_sampled'], 'geometry_refs': {'raw_centerline': 'polyline_2d_raw', 'validated_centerline': 'polyline_2d_validated', 'display_centerline': 'display_polyline_2d', 'centerline': 'display_polyline_2d', 'polyline_3d': 'polyline_3d', 'display_polyline_3d': 'display_polyline_3d', 'left_boundary': 'left_boundary_2d', 'right_boundary': 'right_boundary_2d', 'mask_or_effect_refs': []}, 'geometry_quality': {'zigzag_score': 0.0, 'turn_angle_p95': 142.422, 'curvature_energy': 0.21161, 'vertical_shoot_score': 0.0, 'depth_jump_count': 17, 'support_snap_displacement_px': {'mean': 0.0, 'max': 0.0}, 'smoothability_status': 'rejected'}, 'rejection_reasons': ['geometry_depth_jump_unexplained', 'geometry_sharp_turns_unexplained']}
+- animation_render_contract: {'render_primitive': 'open_volume_actor_or_field', 'alpha_policy': 'depth_visibility_volume', 'width_policy': 'depth_width_profile', 'depth_scale_policy': 'metric_depth_trace', 'render_layers': ['in_front', 'partially_occluded', 'behind_object'], 'motion_labels': ['careful', 'descend_or_approach_camera', 'edge_follow_or_orbit', 'occlusion_aware_traverse', 'region_transition_traverse', 'step_or_occlusion_boundary_transition'], 'action_labels': ['above', 'boundary_context', 'crawl', 'cross_region_transition', 'edge_follow_or_portal_approach', 'fly', 'hold', 'hover', 'inter_region', 'interact'], 'sample_state_preview_count': 6}

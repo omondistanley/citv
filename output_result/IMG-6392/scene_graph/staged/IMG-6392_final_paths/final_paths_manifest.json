@@ -1,0 +1,8 @@
+{
+  "schema": "citv_final_paths_manifest_v1",
+  "stem": "IMG-6392",
+  "final_paths_json": "paths.json",
+  "visuals_dir": "visuals",
+  "copied_visual_files": [],
+  "source_paths_dir": "output_result/IMG-6392/scene_graph/staged/IMG-6392_paths"
+}

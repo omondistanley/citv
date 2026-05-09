@@ -1,0 +1,1217 @@
+{
+  "schema": "citv_path_visual_qa_per_path_v1",
+  "stem": "IMG-6392",
+  "path": {
+    "global_rank": 324,
+    "path_id": "staged_objreg_obj_0_to_region_6_k01",
+    "path_type": "object_region_fmm",
+    "manifold_type": "ribbon_path",
+    "action_family": "locomotion",
+    "movement_scope": "inter_region",
+    "boundary_interaction": "crosses_and_tracks_region_boundaries",
+    "dominant_motion": "occlusion_aware_traverse",
+    "acceptance_status": "rejected",
+    "rejection_reasons": [],
+    "uncertainty_reasons": [
+      "geometry_depth_jump_unexplained",
+      "geometry_high_zigzag",
+      "geometry_low_support_fraction",
+      "ribbon_path_lacks_local_support_evidence",
+      "unknown_only_or_unsupported_route"
+    ],
+    "contradiction_reasons": [
+      "blocking_support_dominates_route",
+      "geometry_support_snap_displacement_too_large",
+      "impossible_manifold_evidence_mismatch"
+    ],
+    "grounding_evidence": {
+      "schema": "citv_path_grounding_evidence_v1",
+      "candidate_source": "object_region_fmm",
+      "local_evidence_confidence": 0.6,
+      "scene_prior_confidence": 0.7272,
+      "global_only": false,
+      "local_evidence_levels": [
+        "region_boundary",
+        "source"
+      ],
+      "manifold_type": "ribbon_path"
+    },
+    "scores": {
+      "overall_confidence": 0.1166,
+      "geometric_confidence": 0.2828,
+      "semantic_confidence": 0.5221,
+      "caption_confidence": 0.58,
+      "boundary_context_confidence": 0.7825,
+      "kinematic_confidence": 0.6111,
+      "support_grounding_confidence": 0.0,
+      "entity_anchor_confidence": 0.3601,
+      "local_action_evidence_confidence": 0.6,
+      "local_grounding_score": 0.516,
+      "manifold_fit_score": 0.237,
+      "geometry_contract_score": 0.0,
+      "renderability_score": 0.3125,
+      "contradiction_score": 0.58,
+      "uncertainty_score": 0.5269,
+      "support_channel_means": {
+        "support_surface_score": 0.3976,
+        "route_corridor_score": 0.0,
+        "contact_target_score": 0.0,
+        "occlusion_edge_score": 0.3873,
+        "contour_boundary_score": 0.0,
+        "open_air_score": 0.6004,
+        "portal_score": 0.1834,
+        "interior_motion_score": 0.0,
+        "effect_host_score": 0.0,
+        "confirmed_blocker_score": 0.0,
+        "uncertainty_score": 0.55
+      },
+      "unknown_support_fraction": 0.8333,
+      "blocking_support_fraction": 0.1667,
+      "shape_confidence": 0.4495,
+      "contract_confidence": 0.1166,
+      "overall_confidence_before_contract_gate": 0.3949
+    },
+    "overall_confidence": 0.1166,
+    "source_entity": {
+      "id": "obj_0",
+      "label": "person man",
+      "entity_kind": ""
+    },
+    "target_entity": {
+      "id": "region_6",
+      "label": "",
+      "entity_kind": ""
+    },
+    "regions_traversed": [],
+    "routing_meta": {
+      "feasible_variant": "routing_support"
+    },
+    "goal_generation": {
+      "sources": [
+        "object_anchor",
+        "region_bottom_centroid"
+      ],
+      "relation_boost_regions": []
+    },
+    "action_hints": [
+      {
+        "entity_role": "scene",
+        "action": "fly",
+        "score": 0.7272,
+        "evidence_terms": [
+          "above",
+          "air",
+          "flying",
+          "sky"
+        ]
+      },
+      {
+        "entity_role": "scene",
+        "action": "hover",
+        "score": 0.6671,
+        "evidence_terms": [
+          "above",
+          "air",
+          "sky"
+        ]
+      },
+      {
+        "entity_role": "scene",
+        "action": "peek",
+        "score": 0.6671,
+        "evidence_terms": [
+          "behind",
+          "foreground"
+        ]
+      },
+      {
+        "entity_role": "scene",
+        "action": "interact",
+        "score": 0.6671,
+        "evidence_terms": [
+          "on",
+          "with"
+        ]
+      },
+      {
+        "entity_role": "scene",
+        "action": "hold",
+        "score": 0.6004,
+        "evidence_terms": [
+          "handle",
+          "object"
+        ]
+      },
+      {
+        "entity_role": "region_boundary",
+        "action": "cross_region_transition",
+        "path_mode": "inter_region",
+        "score": 0.6,
+        "evidence_terms": [
+          "region_label_map",
+          "yellow_contour_boundary",
+          "crosses_and_tracks_region_boundaries"
+        ]
+      },
+      {
+        "entity_role": "region_boundary",
+        "action": "edge_follow_or_portal_approach",
+        "path_mode": "boundary_context",
+        "score": 0.56,
+        "evidence_terms": [
+          "region_label_map",
+          "region_boundary_trace"
+        ]
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_0",
+        "action": "interact",
+        "score": 0.5337,
+        "evidence_terms": [
+          "on",
+          "with"
+        ]
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_0",
+        "action": "fly",
+        "score": 0.3385,
+        "evidence_terms": [
+          "above"
+        ]
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_0",
+        "action": "hover",
+        "score": 0.3385,
+        "evidence_terms": [
+          "above"
+        ]
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_0",
+        "action": "peek",
+        "score": 0.3385,
+        "evidence_terms": [
+          "behind"
+        ]
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_0",
+        "action": "hide",
+        "score": 0.3385,
+        "evidence_terms": [
+          "behind"
+        ]
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_0",
+        "path_mode": "inside",
+        "score": 0.3385
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_0",
+        "path_mode": "around",
+        "score": 0.3385
+      },
+      {
+        "entity_role": "source",
+        "object_id": "obj_0",
+        "path_mode": "above",
+        "score": 0.3385
+      }
+    ],
+    "motion_hints": [
+      {
+        "motion": "occlusion_aware_traverse",
+        "score": 0.6,
+        "reason": "visibility_profile"
+      },
+      {
+        "motion": "careful",
+        "score": 0.52,
+        "reason": "high_path_cost"
+      },
+      {
+        "motion": "region_transition_traverse",
+        "score": 0.58,
+        "reason": "region_boundary_trace_inter_region"
+      },
+      {
+        "motion": "edge_follow_or_orbit",
+        "score": 0.54,
+        "reason": "region_boundary_trace_boundary_following"
+      },
+      {
+        "motion": "step_or_occlusion_boundary_transition",
+        "score": 0.56,
+        "reason": "region_boundary_trace_depth_delta"
+      }
+    ],
+    "motion_labels": [
+      "occlusion_aware_traverse",
+      "careful",
+      "region_transition_traverse",
+      "edge_follow_or_orbit",
+      "step_or_occlusion_boundary_transition"
+    ],
+    "action_labels": [
+      "fly",
+      "hover",
+      "peek",
+      "interact",
+      "hold",
+      "cross_region_transition",
+      "edge_follow_or_portal_approach",
+      "interact",
+      "fly",
+      "hover",
+      "peek",
+      "hide"
+    ],
+    "semantic_trace": {
+      "source": {
+        "id": "obj_0",
+        "label": "person man",
+        "roles": [
+          {
+            "name": "actor",
+            "score": 0.5337
+          },
+          {
+            "name": "occluder",
+            "score": 0.3385
+          },
+          {
+            "name": "sky_open_air",
+            "score": 0.3385
+          }
+        ],
+        "actions": [
+          {
+            "name": "interact",
+            "score": 0.5337
+          },
+          {
+            "name": "fly",
+            "score": 0.3385
+          },
+          {
+            "name": "hover",
+            "score": 0.3385
+          },
+          {
+            "name": "peek",
+            "score": 0.3385
+          },
+          {
+            "name": "hide",
+            "score": 0.3385
+          }
+        ],
+        "path_modes": [
+          {
+            "name": "inside",
+            "score": 0.3385
+          },
+          {
+            "name": "around",
+            "score": 0.3385
+          },
+          {
+            "name": "above",
+            "score": 0.3385
+          }
+        ]
+      },
+      "target": {
+        "id": "region_6",
+        "label": "",
+        "roles": [],
+        "actions": [],
+        "path_modes": []
+      },
+      "regions_traversed": [
+        {
+          "region_id": "region_12",
+          "region_type": "foreground",
+          "semantic_label": "",
+          "roles": [
+            {
+              "name": "actor",
+              "score": 0.4231
+            },
+            {
+              "name": "occluder",
+              "score": 0.4231
+            }
+          ],
+          "actions": [
+            {
+              "name": "peek",
+              "score": 0.4231
+            },
+            {
+              "name": "avoid",
+              "score": 0.4231
+            }
+          ]
+        },
+        {
+          "region_id": "region_13",
+          "region_type": "foreground",
+          "semantic_label": "",
+          "roles": [
+            {
+              "name": "occluder",
+              "score": 0.4231
+            }
+          ],
+          "actions": [
+            {
+              "name": "peek",
+              "score": 0.4231
+            },
+            {
+              "name": "avoid",
+              "score": 0.4231
+            }
+          ]
+        },
+        {
+          "region_id": "region_15",
+          "region_type": "midground",
+          "semantic_label": "",
+          "roles": [],
+          "actions": []
+        },
+        {
+          "region_id": "region_25",
+          "region_type": "midground",
+          "semantic_label": "",
+          "roles": [
+            {
+              "name": "actor",
+              "score": 0.4231
+            }
+          ],
+          "actions": []
+        },
+        {
+          "region_id": "region_3",
+          "region_type": "midground",
+          "semantic_label": "",
+          "roles": [],
+          "actions": []
+        },
+        {
+          "region_id": "region_32",
+          "region_type": "background",
+          "semantic_label": "",
+          "roles": [
+            {
+              "name": "actor",
+              "score": 0.4231
+            }
+          ],
+          "actions": []
+        },
+        {
+          "region_id": "region_35",
+          "region_type": "background",
+          "semantic_label": "",
+          "roles": [],
+          "actions": []
+        },
+        {
+          "region_id": "region_44",
+          "region_type": "background",
+          "semantic_label": "",
+          "roles": [],
+          "actions": []
+        },
+        {
+          "region_id": "region_58",
+          "region_type": "background",
+          "semantic_label": "",
+          "roles": [],
+          "actions": []
+        },
+        {
+          "region_id": "region_6",
+          "region_type": "midground",
+          "semantic_label": "",
+          "roles": [],
+          "actions": []
+        }
+      ],
+      "support_kind_counts": {
+        "blocking": 8,
+        "unknown": 40
+      },
+      "support_channel_means": {
+        "support_surface_score": 0.3976,
+        "route_corridor_score": 0.0,
+        "contact_target_score": 0.0,
+        "occlusion_edge_score": 0.3873,
+        "contour_boundary_score": 0.0,
+        "open_air_score": 0.6004,
+        "portal_score": 0.1834,
+        "interior_motion_score": 0.0,
+        "effect_host_score": 0.0,
+        "confirmed_blocker_score": 0.0,
+        "uncertainty_score": 0.55
+      },
+      "nearby_object_ids": [
+        "obj_1",
+        "obj_14",
+        "obj_15",
+        "obj_3",
+        "obj_6",
+        "obj_9"
+      ]
+    },
+    "support_kind_counts": {
+      "blocking": 8,
+      "unknown": 40
+    },
+    "ground_object_classification": {
+      "schema": "citv_ground_object_classification_v1",
+      "dominant_support_kind": "unknown",
+      "walkable_fraction": 0.1193,
+      "swimmable_fraction": 0.0,
+      "open_air_fraction": 0.3002,
+      "blocking_fraction": 0.1667,
+      "terrain_labels": [
+        "open_air"
+      ],
+      "recommended_motion": "occlusion_aware_traverse",
+      "support_action_priors": {
+        "occlusion_aware_traverse": 0.6,
+        "region_transition_traverse": 0.58,
+        "occlusion_boundary_transition": 0.56,
+        "step": 0.56,
+        "edge_follow": 0.54,
+        "orbit": 0.54,
+        "careful": 0.52
+      }
+    },
+    "region_boundary_trace": {
+      "available": true,
+      "movement_scope": "inter_region",
+      "boundary_interaction": "crosses_and_tracks_region_boundaries",
+      "boundary_sample_fraction": 0.5625,
+      "transition_count": 15,
+      "max_transition_depth_delta_m": 2.3326,
+      "regions_sequence": [
+        {
+          "region_label": 15,
+          "region_id": "region_15",
+          "region_type": "midground",
+          "semantic_label": "",
+          "support_kind": "unknown",
+          "depth_mean_m": 12.3665,
+          "sample_fraction": 0.2708
+        },
+        {
+          "region_label": 25,
+          "region_id": "region_25",
+          "region_type": "midground",
+          "semantic_label": "",
+          "support_kind": "unknown",
+          "depth_mean_m": 12.2262,
+          "sample_fraction": 0.2083
+        },
+        {
+          "region_label": 32,
+          "region_id": "region_32",
+          "region_type": "background",
+          "semantic_label": "",
+          "support_kind": "unknown",
+          "depth_mean_m": 13.5562,
+          "sample_fraction": 0.1875
+        },
+        {
+          "region_label": 12,
+          "region_id": "region_12",
+          "region_type": "foreground",
+          "semantic_label": "",
+          "support_kind": "blocking",
+          "depth_mean_m": 10.9562,
+          "sample_fraction": 0.1458
+        },
+        {
+          "region_label": 3,
+          "region_id": "region_3",
+          "region_type": "midground",
+          "semantic_label": "",
+          "support_kind": "unknown",
+          "depth_mean_m": 11.3805,
+          "sample_fraction": 0.0417
+        },
+        {
+          "region_label": 44,
+          "region_id": "region_44",
+          "region_type": "background",
+          "semantic_label": "",
+          "support_kind": "unknown",
+          "depth_mean_m": 13.5762,
+          "sample_fraction": 0.0417
+        },
+        {
+          "region_label": 6,
+          "region_id": "region_6",
+          "region_type": "midground",
+          "semantic_label": "",
+          "support_kind": "unknown",
+          "depth_mean_m": 11.4253,
+          "sample_fraction": 0.0208
+        },
+        {
+          "region_label": 13,
+          "region_id": "region_13",
+          "region_type": "foreground",
+          "semantic_label": "",
+          "support_kind": "blocking",
+          "depth_mean_m": 11.2436,
+          "sample_fraction": 0.0208
+        }
+      ],
+      "transitions": [
+        {
+          "s": 0.1489,
+          "from_region": {
+            "region_label": 12,
+            "region_id": "region_12",
+            "region_type": "foreground",
+            "semantic_label": "",
+            "support_kind": "blocking",
+            "depth_mean_m": 10.9562
+          },
+          "to_region": {
+            "region_label": 25,
+            "region_id": "region_25",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 12.2262
+          },
+          "depth_delta_m": 1.27,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.1702,
+          "from_region": {
+            "region_label": 25,
+            "region_id": "region_25",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 12.2262
+          },
+          "to_region": {
+            "region_label": 13,
+            "region_id": "region_13",
+            "region_type": "foreground",
+            "semantic_label": "",
+            "support_kind": "blocking",
+            "depth_mean_m": 11.2436
+          },
+          "depth_delta_m": 0.9826,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.1915,
+          "from_region": {
+            "region_label": 13,
+            "region_id": "region_13",
+            "region_type": "foreground",
+            "semantic_label": "",
+            "support_kind": "blocking",
+            "depth_mean_m": 11.2436
+          },
+          "to_region": {
+            "region_label": 44,
+            "region_id": "region_44",
+            "region_type": "background",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 13.5762
+          },
+          "depth_delta_m": 2.3326,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.234,
+          "from_region": {
+            "region_label": 44,
+            "region_id": "region_44",
+            "region_type": "background",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 13.5762
+          },
+          "to_region": {
+            "region_label": 25,
+            "region_id": "region_25",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 12.2262
+          },
+          "depth_delta_m": 1.35,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.4255,
+          "from_region": {
+            "region_label": 25,
+            "region_id": "region_25",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 12.2262
+          },
+          "to_region": {
+            "region_label": 32,
+            "region_id": "region_32",
+            "region_type": "background",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 13.5562
+          },
+          "depth_delta_m": 1.33,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.4468,
+          "from_region": {
+            "region_label": 32,
+            "region_id": "region_32",
+            "region_type": "background",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 13.5562
+          },
+          "to_region": {
+            "region_label": 15,
+            "region_id": "region_15",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 12.3665
+          },
+          "depth_delta_m": 1.1897,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.4681,
+          "from_region": {
+            "region_label": 15,
+            "region_id": "region_15",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 12.3665
+          },
+          "to_region": {
+            "region_label": 32,
+            "region_id": "region_32",
+            "region_type": "background",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 13.5562
+          },
+          "depth_delta_m": 1.1897,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.5319,
+          "from_region": {
+            "region_label": 32,
+            "region_id": "region_32",
+            "region_type": "background",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 13.5562
+          },
+          "to_region": {
+            "region_label": 58,
+            "region_id": "region_58",
+            "region_type": "background",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 15.1291
+          },
+          "depth_delta_m": 1.5729,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.5532,
+          "from_region": {
+            "region_label": 58,
+            "region_id": "region_58",
+            "region_type": "background",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 15.1291
+          },
+          "to_region": {
+            "region_label": 32,
+            "region_id": "region_32",
+            "region_type": "background",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 13.5562
+          },
+          "depth_delta_m": 1.5729,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.6596,
+          "from_region": {
+            "region_label": 32,
+            "region_id": "region_32",
+            "region_type": "background",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 13.5562
+          },
+          "to_region": {
+            "region_label": 15,
+            "region_id": "region_15",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 12.3665
+          },
+          "depth_delta_m": 1.1897,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.8511,
+          "from_region": {
+            "region_label": 15,
+            "region_id": "region_15",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 12.3665
+          },
+          "to_region": {
+            "region_label": 6,
+            "region_id": "region_6",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 11.4253
+          },
+          "depth_delta_m": 0.9412,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        },
+        {
+          "s": 0.8723,
+          "from_region": {
+            "region_label": 6,
+            "region_id": "region_6",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 11.4253
+          },
+          "to_region": {
+            "region_label": 15,
+            "region_id": "region_15",
+            "region_type": "midground",
+            "semantic_label": "",
+            "support_kind": "unknown",
+            "depth_mean_m": 12.3665
+          },
+          "depth_delta_m": 0.9412,
+          "transition_kind": "depth_step_or_occlusion_edge"
+        }
+      ],
+      "motion_implications": [
+        "inter_region_transition",
+        "recheck_support_and_motion_label_at_region_seams",
+        "boundary_following_or_portal_context",
+        "depth_step_or_occlusion_boundary"
+      ]
+    },
+    "caption_trace": {
+      "source_caption": "person man person man The image is a portrait of a young boy sitting on a stool. He is wearing a blue t-shirt with a graphic design on it, orange shorts, and blue sneakers. He has dark hair and is wearing sunglasses. The background is a plain green color. The boy is looking off to the side with a slight smile on his face. person man person man the young boy sitting stool wearing blue t-shirt with graphic background image portrait person man person man portrait The image is a ",
+      "target_caption": "",
+      "region_samples": [
+        {
+          "s": 0.0,
+          "region_id": "region_12",
+          "caption": "foreground set face set face Region region_12 (foreground) at 11.1 m contains: set, face, set, face.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.0426,
+          "region_id": "region_12",
+          "caption": "foreground set face set face Region region_12 (foreground) at 11.1 m contains: set, face, set, face.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.0851,
+          "region_id": "region_12",
+          "caption": "foreground set face set face Region region_12 (foreground) at 11.1 m contains: set, face, set, face.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.1277,
+          "region_id": "region_12",
+          "caption": "foreground set face set face Region region_12 (foreground) at 11.1 m contains: set, face, set, face.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.1702,
+          "region_id": "region_13",
+          "caption": "foreground Region region_13 (foreground) at unknown depth contains: no named objects.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.2128,
+          "region_id": "region_44",
+          "caption": "background Region region_44 (background) at unknown depth contains: no named objects.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.2553,
+          "region_id": "region_25",
+          "caption": "midground person rendering thin Region region_25 (midground) at 12.2 m contains: person, rendering, thin.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.2979,
+          "region_id": "region_25",
+          "caption": "midground person rendering thin Region region_25 (midground) at 12.2 m contains: person, rendering, thin.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.3404,
+          "region_id": "region_25",
+          "caption": "midground person rendering thin Region region_25 (midground) at 12.2 m contains: person, rendering, thin.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.383,
+          "region_id": "region_25",
+          "caption": "midground person rendering thin Region region_25 (midground) at 12.2 m contains: person, rendering, thin.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.4255,
+          "region_id": "region_32",
+          "caption": "background landscape photograph face landscape photograph Region region_32 (background) at 13.5 m contains: landscape photograph, face, landscape photograph.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.4681,
+          "region_id": "region_32",
+          "caption": "background landscape photograph face landscape photograph Region region_32 (background) at 13.5 m contains: landscape photograph, face, landscape photograph.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.5319,
+          "region_id": "region_58",
+          "caption": "background Region region_58 (background) at unknown depth contains: no named objects.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.5745,
+          "region_id": "region_32",
+          "caption": "background landscape photograph face landscape photograph Region region_32 (background) at 13.5 m contains: landscape photograph, face, landscape photograph.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.617,
+          "region_id": "region_32",
+          "caption": "background landscape photograph face landscape photograph Region region_32 (background) at 13.5 m contains: landscape photograph, face, landscape photograph.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.6596,
+          "region_id": "region_15",
+          "caption": "midground Region region_15 (midground) at unknown depth contains: no named objects.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.7021,
+          "region_id": "region_15",
+          "caption": "midground Region region_15 (midground) at unknown depth contains: no named objects.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.7447,
+          "region_id": "region_15",
+          "caption": "midground Region region_15 (midground) at unknown depth contains: no named objects.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.7872,
+          "region_id": "region_15",
+          "caption": "midground Region region_15 (midground) at unknown depth contains: no named objects.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.8298,
+          "region_id": "region_15",
+          "caption": "midground Region region_15 (midground) at unknown depth contains: no named objects.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.8723,
+          "region_id": "region_15",
+          "caption": "midground Region region_15 (midground) at unknown depth contains: no named objects.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.9149,
+          "region_id": "region_3",
+          "caption": "midground Region region_3 (midground) at unknown depth contains: no named objects.",
+          "precision": 0.48,
+          "confidence": 0.58
+        },
+        {
+          "s": 0.9574,
+          "region_id": "",
+          "caption": "",
+          "precision": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "s": 1.0,
+          "region_id": "region_35",
+          "caption": "background Region region_35 (background) at unknown depth contains: no named objects.",
+          "precision": 0.48,
+          "confidence": 0.58
+        }
+      ],
+      "mean_caption_confidence": 0.58
+    },
+    "render_layers": [
+      "in_front",
+      "behind_object"
+    ],
+    "occlusion_trace": {
+      "mean_visible_fraction": 0.3125,
+      "min_visible_fraction": 0.0,
+      "occluded_sample_fraction": 0.6875,
+      "occluder_ids": [
+        "obj_1"
+      ]
+    },
+    "depth_summary": {
+      "summary": true,
+      "valid_fraction": 1.0,
+      "min_m": 10.7109,
+      "max_m": 14.7031,
+      "mean_m": 11.623,
+      "delta_m": 0.1641
+    },
+    "width_summary_px": {
+      "min_px": 30.614,
+      "max_px": 42.024,
+      "mean_px": 38.992,
+      "sample_count": 64
+    },
+    "trajectory_contract": {
+      "dominant_motion": "occlusion_aware_traverse",
+      "shape_type": "support_aware_ribbon",
+      "direction_profile": {
+        "available": true,
+        "heading_start_deg": -135.0,
+        "heading_end_deg": -90.0,
+        "image_direction": "up_left",
+        "camera_depth_trend": "roughly_constant_depth",
+        "depth_delta_m": 0.1641,
+        "scale_trend": "roughly_constant_scale",
+        "approach_retreat": "neutral",
+        "orbit_direction": "counterclockwise"
+      },
+      "support_dominant": "unknown",
+      "animation_ready": true,
+      "mean_visible_fraction": 0.3125,
+      "width_mean_px": 38.992
+    },
+    "path_shape_contract": {
+      "shape_type": "support_aware_ribbon",
+      "straight_line_like": false,
+      "straightness_ratio": 0.9191,
+      "direction_profile": {
+        "available": true,
+        "heading_start_deg": -135.0,
+        "heading_end_deg": -90.0,
+        "image_direction": "up_left",
+        "camera_depth_trend": "roughly_constant_depth",
+        "depth_delta_m": 0.1641,
+        "scale_trend": "roughly_constant_scale",
+        "approach_retreat": "neutral",
+        "orbit_direction": "counterclockwise"
+      },
+      "support_evidence": {
+        "support_kind_counts": {
+          "blocking": 8,
+          "unknown": 40
+        },
+        "support_grounding_confidence": 0.0,
+        "movement_scope": "inter_region",
+        "boundary_interaction": "crosses_and_tracks_region_boundaries",
+        "region_transition_count": 15
+      },
+      "shape_justification": [
+        "multi_vertex_scene_shape",
+        "region_boundary_context_sampled",
+        "support_trace_sampled"
+      ],
+      "geometry_refs": {
+        "raw_centerline": "polyline_2d_raw",
+        "validated_centerline": "polyline_2d_validated",
+        "display_centerline": "display_polyline_2d",
+        "centerline": "display_polyline_2d",
+        "polyline_3d": "polyline_3d",
+        "display_polyline_3d": "display_polyline_3d",
+        "left_boundary": "left_boundary_2d",
+        "right_boundary": "right_boundary_2d",
+        "mask_or_effect_refs": []
+      },
+      "geometry_quality": {
+        "zigzag_score": 0.8372,
+        "turn_angle_p95": 45.0,
+        "curvature_energy": 0.00543,
+        "vertical_shoot_score": 0.0,
+        "depth_jump_count": 10,
+        "support_snap_displacement_px": {
+          "mean": 35.859,
+          "max": 326.546
+        },
+        "smoothability_status": "rejected"
+      },
+      "rejection_reasons": [
+        "ribbon_path_lacks_local_support_evidence",
+        "geometry_depth_jump_unexplained",
+        "geometry_high_zigzag",
+        "geometry_low_support_fraction",
+        "geometry_support_snap_displacement_too_large"
+      ]
+    },
+    "path_geometry_quality": {
+      "zigzag_score": 0.8372,
+      "turn_angle_p95": 45.0,
+      "curvature_energy": 0.00543,
+      "vertical_shoot_score": 0.0,
+      "depth_jump_count": 10,
+      "support_snap_displacement_px": {
+        "mean": 35.859,
+        "max": 326.546
+      },
+      "mask_boundary_crossing_count": 7,
+      "terrain_transition_mismatch": true,
+      "smoothability_status": "rejected",
+      "geometry_rejection_reasons": [
+        "geometry_depth_jump_unexplained",
+        "geometry_high_zigzag",
+        "geometry_low_support_fraction",
+        "geometry_support_snap_displacement_too_large"
+      ]
+    },
+    "geometry_smoothing_provenance": {
+      "source": "raw_planning_polyline",
+      "smoothability_status": "raw_retained_smoothing_invalid",
+      "raw_vertex_count": 612,
+      "simplified_vertex_count": 12,
+      "display_vertex_count": 612,
+      "simplification_epsilon_px": 3.0,
+      "smoothing_iterations": 1,
+      "validation": {
+        "feasible_fraction": 1.0,
+        "support_fraction": 0.0288,
+        "feasible_boundary_crossing_count": 0,
+        "support_boundary_crossing_count": 5,
+        "min_valid_fraction": 0.92
+      }
+    },
+    "animation_render_contract": {
+      "render_primitive": "depth_tapered_corridor_plus_actor",
+      "alpha_policy": "visibility_profile",
+      "width_policy": "depth_width_profile",
+      "depth_scale_policy": "metric_depth_trace",
+      "render_layers": [
+        "in_front",
+        "behind_object"
+      ],
+      "motion_labels": [
+        "careful",
+        "edge_follow_or_orbit",
+        "occlusion_aware_traverse",
+        "region_transition_traverse",
+        "step_or_occlusion_boundary_transition"
+      ],
+      "action_labels": [
+        "above",
+        "around",
+        "boundary_context",
+        "cross_region_transition",
+        "edge_follow_or_portal_approach",
+        "fly",
+        "hide",
+        "hold",
+        "hover",
+        "inside"
+      ],
+      "sample_state_preview_count": 12
+    },
+    "natural_direction_2d_deg": -90.474,
+    "validation_notes": null,
+    "polyline_summary": {
+      "vertex_count": 258,
+      "start_xy": [
+        501.0,
+        753.67
+      ],
+      "end_xy": [
+        382.65,
+        -154.87
+      ]
+    },
+    "trajectory_id": "traj_IMG-6392_staged_objreg_obj_0_to_region_6_k01_path_follow",
+    "trajectory_has_points": true,
+    "linked_action": {
+      "action_id": "action_staged_objreg_obj_0_to_region_6_k01_locomotion",
+      "action_name": "occlusion_aware_traverse",
+      "action_family": "locomotion",
+      "manifold_type": "ribbon_path"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+# Path `manifold_aerial_approach_obj_2`
+
+- rank: 49
+- manifold: volume_path
+- action_family: locomotion
+- movement_scope: inter_region
+- boundary_interaction: crosses_and_tracks_region_boundaries
+- dominant_motion: climb_or_approach_farther_depth
+- confidence: 0.491
+- status: low_confidence
+- rejection_reasons: []
+- uncertainty_reasons: ['geometry_depth_jump_unexplained', 'straight_line_crosses_region_transition_without_shape_context', 'two_point_route_shape_underexplained']
+- contradiction_reasons: []
+- grounding_evidence: {'schema': 'citv_path_grounding_evidence_v1', 'candidate_source': 'volume_path', 'local_evidence_confidence': 0.6671, 'scene_prior_confidence': 0.7272, 'global_only': False, 'local_evidence_levels': ['region_boundary', 'target'], 'manifold_type': 'volume_path'}
+- source: sky_band
+- target: face
+- motion_labels: ['climb_or_approach_farther_depth', 'occlusion_aware_traverse', 'careful', 'region_transition_traverse', 'edge_follow_or_orbit', 'step_or_occlusion_boundary_transition']
+- action_labels: ['fly', 'interact', 'hover', 'peek', 'interact', 'hold', 'cross_region_transition', 'edge_follow_or_portal_approach', 'fly', 'hover', 'inter_region', 'boundary_context']
+- render_layers: ['partially_occluded', 'behind_object']
+- occlusion_trace: {'mean_visible_fraction': 0.0625, 'min_visible_fraction': 0.0, 'occluded_sample_fraction': 1.0, 'occluder_ids': ['obj_1', 'obj_9']}
+- trajectory_contract: {'dominant_motion': 'climb_or_approach_farther_depth', 'shape_type': 'open_space_volume', 'direction_profile': {'available': True, 'heading_start_deg': 126.415, 'heading_end_deg': 126.415, 'image_direction': 'down_left', 'camera_depth_trend': 'away_from_camera', 'depth_delta_m': 0.5156, 'scale_trend': 'smaller_over_time', 'approach_retreat': 'retreat', 'orbit_direction': 'not_orbital'}, 'support_dominant': 'unknown', 'animation_ready': True, 'mean_visible_fraction': 0.0625, 'width_mean_px': 34.684}
+- path_shape_contract: {'shape_type': 'open_space_volume', 'straight_line_like': True, 'straightness_ratio': 1.0, 'direction_profile': {'available': True, 'heading_start_deg': 126.415, 'heading_end_deg': 126.415, 'image_direction': 'down_left', 'camera_depth_trend': 'away_from_camera', 'depth_delta_m': 0.5156, 'scale_trend': 'smaller_over_time', 'approach_retreat': 'retreat', 'orbit_direction': 'not_orbital'}, 'support_evidence': {'support_kind_counts': {'unknown': 48}, 'support_grounding_confidence': 0.0476, 'movement_scope': 'inter_region', 'boundary_interaction': 'crosses_and_tracks_region_boundaries', 'region_transition_count': 10}, 'shape_justification': ['region_boundary_context_sampled', 'support_trace_sampled'], 'geometry_refs': {'raw_centerline': 'polyline_2d_raw', 'validated_centerline': 'polyline_2d_validated', 'display_centerline': 'display_polyline_2d', 'centerline': 'display_polyline_2d', 'polyline_3d': 'polyline_3d', 'display_polyline_3d': 'display_polyline_3d', 'left_boundary': 'left_boundary_2d', 'right_boundary': 'right_boundary_2d', 'mask_or_effect_refs': []}, 'geometry_quality': {'zigzag_score': 0.0, 'turn_angle_p95': 0.0, 'curvature_energy': 0.0, 'vertical_shoot_score': 0.0, 'depth_jump_count': 1, 'support_snap_displacement_px': {'mean': 0.0, 'max': 0.0}, 'smoothability_status': 'rejected'}, 'rejection_reasons': ['two_point_route_shape_underexplained', 'straight_line_crosses_region_transition_without_shape_context', 'geometry_depth_jump_unexplained']}
+- animation_render_contract: {'render_primitive': 'open_volume_actor_or_field', 'alpha_policy': 'depth_visibility_volume', 'width_policy': 'depth_width_profile', 'depth_scale_policy': 'metric_depth_trace', 'render_layers': ['partially_occluded', 'behind_object'], 'motion_labels': ['careful', 'climb_or_approach_farther_depth', 'edge_follow_or_orbit', 'occlusion_aware_traverse', 'region_transition_traverse', 'step_or_occlusion_boundary_transition'], 'action_labels': ['above', 'boundary_context', 'cross_region_transition', 'edge_follow_or_portal_approach', 'fly', 'hold', 'hover', 'inter_region', 'interact', 'peek'], 'sample_state_preview_count': 2}

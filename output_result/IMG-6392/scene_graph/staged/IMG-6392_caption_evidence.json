@@ -1,0 +1,4872 @@
+{
+  "schema": "citv_caption_evidence_v1",
+  "version": "1.0",
+  "stem": "IMG-6392",
+  "timestamp": "2026-05-07 13:04:05",
+  "image": "images_test/IMG-6392.png",
+  "source_artifacts": {
+    "global_scene": "scene_graph/staged/IMG-6392_caption_global.json",
+    "per_object": "scene_graph/staged/IMG-6392_caption_objects.json",
+    "per_region": "scene_graph/staged/IMG-6392_caption_regions.json",
+    "cross_region": "scene_graph/staged/IMG-6392_caption_cross_region.json",
+    "uncertainty": "scene_graph/staged/IMG-6392_caption_uncertainty.json"
+  },
+  "dense_captioning_note": "Caption tiers are first-class semantic evidence for affordances, paths, actions, trajectories, and animation contracts.",
+  "records": [
+    {
+      "entity_type": "scene",
+      "entity_id": "IMG-6392",
+      "source": "caption_global",
+      "text": "The image shows a set of stairs in a park. The stairs are made of concrete and have a railing on each side. There are trees on both sides of the stairs and a few people can be seen walking up and down the stairs. The sky is blue and the trees are green, indicating that it is a sunny day. In the center of the image, there is a person sitting on the stairs, wearing a blue shirt and sunglasses. The person appears to be relaxed and enjoying the view.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.72,
+      "precision": 0.55,
+      "uncertainty": []
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_0",
+      "source": "caption_object_and_labels",
+      "text": "person man person man The image is a portrait of a young boy sitting on a stool. He is wearing a blue t-shirt with a graphic design on it, orange shorts, and blue sneakers. He has dark hair and is wearing sunglasses. The background is a plain green color. The boy is looking off to the side with a slight smile on his face. person man person man the young boy sitting stool wearing blue t-shirt with graphic background image portrait person man person man portrait The image is a portrait of a young boy sitting on a stool. He is wearing a blue t-shirt with a graphic design on it, orange shorts, and blue sneakers. He has dark hair and is wearing sunglasses. The background is a plain green color. The boy is looking off to the side with a slight smile on his face. person man person man person man portrait The image is a portrait of a young boy sitting on a stool. He is wearing a blue t-shirt with a graphic design on it, orange shorts, and blue sneakers. He has dark hair and is wearing sunglasses. The background is a plain green color. The boy is looking off to the side with a slight smile on his face.",
+      "labels": [
+        "person man",
+        "person man",
+        "person man",
+        "person man",
+        "person man",
+        "portrait"
+      ],
+      "tags": [],
+      "confidence": 0.579,
+      "precision": 0.7,
+      "uncertainty": [],
+      "region_id": "region_62"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_1",
+      "source": "caption_object_and_labels",
+      "text": "set set The image shows a set of stairs in a park. The stairs are made of concrete and are arranged in a way that creates a sense of depth and dimension. The steps are surrounded by trees and greenery, and the sky is visible in the background. On the right side of the image, there is a wooden railing with a green handrail. The railing appears to be made of metal and is attached to the stairs with two posts. The image is taken from a low angle, looking up at the stairs. set city park park city park park the shows stairs park are made concrete and arranged background image city park park city park park set The image shows a set of stairs in a park. The stairs are made of concrete and are arranged in a way that creates a sense of depth and dimension. The steps are surrounded by trees and greenery, and the sky is visible in the background. On the right side of the image, there is a wooden railing with a green handrail. The railing appears to be made of metal and is attached to the stairs with two posts. The image is taken from a low angle, looking up at the stairs. set set city park park set The image shows a set of stairs in a park. The stairs are made of concrete and are arranged in a way that creates a sense of depth and dimension. The steps are surrounded by trees and greenery, and the sky is visible in the background. On the right side of the image, there is a wooden railing with a green handrail. The railing appears to be made of metal and is attached to the stairs with two posts. The image is taken from a low angle, looking up at the stairs.",
+      "labels": [
+        "set",
+        "set",
+        "set",
+        "set",
+        "city park park",
+        "set"
+      ],
+      "tags": [],
+      "confidence": 0.72,
+      "precision": 0.7,
+      "uncertainty": [],
+      "region_id": "region_12"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_2",
+      "source": "caption_object_and_labels",
+      "text": "face face The image is a close-up of a person's face. The person appears to be in profile, with their head slightly tilted to the side. The background is a solid green color, and the focus is on the person's head and neck. The image is slightly blurred, but it appears to have been taken from a low angle, making it difficult to make out any details. The overall mood of the image is somber and contemplative. face person the close-up appears profile with their head slightly tilted side background blurred focus image person person face The image is a close-up of a person's face. The person appears to be in profile, with their head slightly tilted to the side. The background is a solid green color, and the focus is on the person's head and neck. The image is slightly blurred, but it appears to have been taken from a low angle, making it difficult to make out any details. The overall mood of the image is somber and contemplative. face face person face The image is a close-up of a person's face. The person appears to be in profile, with their head slightly tilted to the side. The background is a solid green color, and the focus is on the person's head and neck. The image is slightly blurred, but it appears to have been taken from a low angle, making it difficult to make out any details. The overall mood of the image is somber and contemplative.",
+      "labels": [
+        "face",
+        "face",
+        "face",
+        "face",
+        "person",
+        "face"
+      ],
+      "tags": [],
+      "confidence": 0.72,
+      "precision": 0.58,
+      "uncertainty": [
+        "possibly_transparent_depth"
+      ],
+      "region_id": "region_70"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_3",
+      "source": "caption_object_and_labels",
+      "text": "landscape photograph landscape photograph The image is a landscape photograph of a forest. The trees are tall and have green leaves, indicating that it is springtime. The sky is blue and there are a few clouds visible. In the center of the image, there is a silhouette of a building or structure, which appears to be a structure with a curved roof and a sloping roof. The building is surrounded by trees and foliage, creating a peaceful and serene atmosphere. The image is taken from a low angle, looking up at the trees. landscape photograph city park park city park park the landscape forest trees are tall and have green image photograph city park park city park park landscape photograph The image is a landscape photograph of a forest. The trees are tall and have green leaves, indicating that it is springtime. The sky is blue and there are a few clouds visible. In the center of the image, there is a silhouette of a building or structure, which appears to be a structure with a curved roof and a sloping roof. The building is surrounded by trees and foliage, creating a peaceful and serene atmosphere. The image is taken from a low angle, looking up at the trees. landscape photograph landscape photograph city park park landscape photograph The image is a landscape photograph of a forest. The trees are tall and have green leaves, indicating that it is springtime. The sky is blue and there are a few clouds visible. In the center of the image, there is a silhouette of a building or structure, which appears to be a structure with a curved roof and a sloping roof. The building is surrounded by trees and foliage, creating a peaceful and serene atmosphere. The image is taken from a low angle, looking up at the trees.",
+      "labels": [
+        "landscape photograph",
+        "landscape photograph",
+        "landscape photograph",
+        "landscape photograph",
+        "city park park",
+        "landscape photograph"
+      ],
+      "tags": [],
+      "confidence": 0.72,
+      "precision": 0.58,
+      "uncertainty": [
+        "possibly_transparent_depth"
+      ],
+      "region_id": "region_32"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_4",
+      "source": "caption_object_and_labels",
+      "text": "face face The image is a close-up of a person's face. The person appears to be in a state of distress, with their head tilted back and their eyes closed. They are wearing a green hat with a white brim. The background is blurred, but it seems like the person is standing in front of a green wall. The image is slightly out of focus, making it difficult to make out any details. The overall mood of the image is somber and melancholic. face person man the close-up person appears state distress with their head tilted background blurred focus image person man person man face The image is a close-up of a person's face. The person appears to be in a state of distress, with their head tilted back and their eyes closed. They are wearing a green hat with a white brim. The background is blurred, but it seems like the person is standing in front of a green wall. The image is slightly out of focus, making it difficult to make out any details. The overall mood of the image is somber and melancholic. face face person man face The image is a close-up of a person's face. The person appears to be in a state of distress, with their head tilted back and their eyes closed. They are wearing a green hat with a white brim. The background is blurred, but it seems like the person is standing in front of a green wall. The image is slightly out of focus, making it difficult to make out any details. The overall mood of the image is somber and melancholic.",
+      "labels": [
+        "face",
+        "face",
+        "face",
+        "face",
+        "person man",
+        "face"
+      ],
+      "tags": [],
+      "confidence": 0.72,
+      "precision": 0.7,
+      "uncertainty": [],
+      "region_id": "region_12"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_5",
+      "source": "caption_object_and_labels",
+      "text": "person person The image is a blurred close-up of a person's head and neck. The person appears to be sleeping or resting, with their head resting on a white pillow. The background is blurred, but it seems to be a greenish-blue color. The image is taken from a low angle, so the focus is on the person's face. The overall mood of the image is peaceful and serene. person the close-up head and neck appears sleeping resting with their white background blurred focus image person person blurred The image is a blurred close-up of a person's head and neck. The person appears to be sleeping or resting, with their head resting on a white pillow. The background is blurred, but it seems to be a greenish-blue color. The image is taken from a low angle, so the focus is on the person's face. The overall mood of the image is peaceful and serene. person person person blurred The image is a blurred close-up of a person's head and neck. The person appears to be sleeping or resting, with their head resting on a white pillow. The background is blurred, but it seems to be a greenish-blue color. The image is taken from a low angle, so the focus is on the person's face. The overall mood of the image is peaceful and serene.",
+      "labels": [
+        "person",
+        "person",
+        "person",
+        "person",
+        "person",
+        "blurred"
+      ],
+      "tags": [],
+      "confidence": 0.45,
+      "precision": 0.7,
+      "uncertainty": [],
+      "region_id": "region_25"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_6",
+      "source": "caption_object_and_labels",
+      "text": "set set The image shows a set of stairs made of concrete blocks. The stairs are arranged in a pyramid-like structure with a flat top and multiple steps. The blocks are of different sizes and colors, with some being light grey and others being darker grey. The steps appear to be old and weathered, with visible cracks and chips in the concrete. The background is a plain green color, making the stairs stand out. The image is a 3D rendering, giving it a realistic look and feel. set rade city park park the shows stairs made concrete blocks are arranged pyramid-like structure background image ##rade city park park ##rade city park park set The image shows a set of stairs made of concrete blocks. The stairs are arranged in a pyramid-like structure with a flat top and multiple steps. The blocks are of different sizes and colors, with some being light grey and others being darker grey. The steps appear to be old and weathered, with visible cracks and chips in the concrete. The background is a plain green color, making the stairs stand out. The image is a 3D rendering, giving it a realistic look and feel. set set ##rade city park park set The image shows a set of stairs made of concrete blocks. The stairs are arranged in a pyramid-like structure with a flat top and multiple steps. The blocks are of different sizes and colors, with some being light grey and others being darker grey. The steps appear to be old and weathered, with visible cracks and chips in the concrete. The background is a plain green color, making the stairs stand out. The image is a 3D rendering, giving it a realistic look and feel.",
+      "labels": [
+        "set",
+        "set",
+        "set",
+        "set",
+        "##rade city park park",
+        "set"
+      ],
+      "tags": [],
+      "confidence": 0.72,
+      "precision": 0.58,
+      "uncertainty": [
+        "possibly_transparent_depth"
+      ],
+      "region_id": "region_12"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_7",
+      "source": "caption_object_and_labels",
+      "text": "face face The image is a close-up of a person's face. The person appears to be in their late twenties or early thirties. They have dark hair that is styled in loose waves and falls over their shoulders. The background is a solid green color.\n\nIn the foreground, there is a white flower with a yellow center. The flower is slightly blurred, giving it a dreamy, ethereal quality. The petals of the flower are slightly out of focus, making it the focal point of the image. face person the close-up appears their late twenties early thirties they have background blurred focus image person person face The image is a close-up of a person's face. The person appears to be in their late twenties or early thirties. They have dark hair that is styled in loose waves and falls over their shoulders. The background is a solid green color.\n\nIn the foreground, there is a white flower with a yellow center. The flower is slightly blurred, giving it a dreamy, ethereal quality. The petals of the flower are slightly out of focus, making it the focal point of the image. face face person face The image is a close-up of a person's face. The person appears to be in their late twenties or early thirties. They have dark hair that is styled in loose waves and falls over their shoulders. The background is a solid green color.\n\nIn the foreground, there is a white flower with a yellow center. The flower is slightly blurred, giving it a dreamy, ethereal quality. The petals of the flower are slightly out of focus, making it the focal point of the image.",
+      "labels": [
+        "face",
+        "face",
+        "face",
+        "face",
+        "person",
+        "face"
+      ],
+      "tags": [],
+      "confidence": 0.72,
+      "precision": 0.7,
+      "uncertainty": [],
+      "region_id": "region_66"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_8",
+      "source": "caption_object_and_labels",
+      "text": "person person The image is a blurred view of a person's head and neck. The person appears to be in a state of distress, with their head tilted downwards and their eyes closed. The background is a solid green color, and the focus is on the person's face. The image is slightly out of focus, making it difficult to make out any details. The overall mood of the image is somber and melancholic. person the head and neck appears state distress with their tilted downwards background blurred focus image view person person blurred The image is a blurred view of a person's head and neck. The person appears to be in a state of distress, with their head tilted downwards and their eyes closed. The background is a solid green color, and the focus is on the person's face. The image is slightly out of focus, making it difficult to make out any details. The overall mood of the image is somber and melancholic. person person person blurred The image is a blurred view of a person's head and neck. The person appears to be in a state of distress, with their head tilted downwards and their eyes closed. The background is a solid green color, and the focus is on the person's face. The image is slightly out of focus, making it difficult to make out any details. The overall mood of the image is somber and melancholic.",
+      "labels": [
+        "person",
+        "person",
+        "person",
+        "person",
+        "person",
+        "blurred"
+      ],
+      "tags": [],
+      "confidence": 0.45,
+      "precision": 0.7,
+      "uncertainty": [],
+      "region_id": "region_46"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_9",
+      "source": "caption_object_and_labels",
+      "text": "rendering rendering The image shows a 3D rendering of a long, straight line with multiple points of interest. The line appears to be made of metal or a similar material and is curved in a way that it curves upwards. There are several small objects scattered around the line, including a small bird or a small insect. The background is a plain green color. The image is taken from a top-down perspective, looking down on the line. rendering rail the shows long straight line with multiple points interest appears background image rail rail rendering The image shows a 3D rendering of a long, straight line with multiple points of interest. The line appears to be made of metal or a similar material and is curved in a way that it curves upwards. There are several small objects scattered around the line, including a small bird or a small insect. The background is a plain green color. The image is taken from a top-down perspective, looking down on the line. rendering rendering rail rendering The image shows a 3D rendering of a long, straight line with multiple points of interest. The line appears to be made of metal or a similar material and is curved in a way that it curves upwards. There are several small objects scattered around the line, including a small bird or a small insect. The background is a plain green color. The image is taken from a top-down perspective, looking down on the line.",
+      "labels": [
+        "rendering",
+        "rendering",
+        "rendering",
+        "rendering",
+        "rail",
+        "rendering"
+      ],
+      "tags": [],
+      "confidence": 0.72,
+      "precision": 0.7,
+      "uncertainty": [],
+      "region_id": "region_25"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_10",
+      "source": "caption_object_and_labels",
+      "text": "thin thin The image shows a long, thin, white object with a pointed tip. It appears to be a weapon or a weapon with a long handle and a pointed end. The object is flying in the air, with a green background. On the right side of the image, there are several smaller objects scattered around, including a small white object, a green object, and a few smaller white objects. The objects appear to be made of plastic or a similar material. thin rail the shows long white with pointed tip appears weapon handle background image rail rail thin The image shows a long, thin, white object with a pointed tip. It appears to be a weapon or a weapon with a long handle and a pointed end. The object is flying in the air, with a green background. On the right side of the image, there are several smaller objects scattered around, including a small white object, a green object, and a few smaller white objects. The objects appear to be made of plastic or a similar material. thin thin rail thin The image shows a long, thin, white object with a pointed tip. It appears to be a weapon or a weapon with a long handle and a pointed end. The object is flying in the air, with a green background. On the right side of the image, there are several smaller objects scattered around, including a small white object, a green object, and a few smaller white objects. The objects appear to be made of plastic or a similar material.",
+      "labels": [
+        "thin",
+        "thin",
+        "thin",
+        "thin",
+        "rail",
+        "thin"
+      ],
+      "tags": [],
+      "confidence": 0.72,
+      "precision": 0.7,
+      "uncertainty": [],
+      "region_id": "region_69"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_11",
+      "source": "caption_object_and_labels",
+      "text": "face face The image is a close-up of a person's face. The person appears to be in their late twenties or early thirties. The background is a solid green color. The image is slightly blurred, but it seems to be taken from a low angle, so the focus is on the person's head and upper body. The hair is dark and messy, with some strands of hair falling over their shoulders. The overall mood of the image is somber and contemplative. face person the close-up appears their late twenties early thirties solid green background blurred focus image person person face The image is a close-up of a person's face. The person appears to be in their late twenties or early thirties. The background is a solid green color. The image is slightly blurred, but it seems to be taken from a low angle, so the focus is on the person's head and upper body. The hair is dark and messy, with some strands of hair falling over their shoulders. The overall mood of the image is somber and contemplative. face face person face The image is a close-up of a person's face. The person appears to be in their late twenties or early thirties. The background is a solid green color. The image is slightly blurred, but it seems to be taken from a low angle, so the focus is on the person's head and upper body. The hair is dark and messy, with some strands of hair falling over their shoulders. The overall mood of the image is somber and contemplative.",
+      "labels": [
+        "face",
+        "face",
+        "face",
+        "face",
+        "person",
+        "face"
+      ],
+      "tags": [],
+      "confidence": 0.72,
+      "precision": 0.7,
+      "uncertainty": [],
+      "region_id": "region_32"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_12",
+      "source": "caption_object_and_labels",
+      "text": "head head The image is a close-up of a fish's head. The fish appears to be a type of sea creature, possibly a conch, with a long, slender body and a pointed snout. The body of the fish is predominantly white, with some hints of pink and purple. The head is slightly tilted to the side, and the background is blurred, making it difficult to make out any details. The image is taken from a slightly elevated angle, looking down on the fish. head person the close-up fish appears type sea creature possibly conch with background blurred image person person head The image is a close-up of a fish's head. The fish appears to be a type of sea creature, possibly a conch, with a long, slender body and a pointed snout. The body of the fish is predominantly white, with some hints of pink and purple. The head is slightly tilted to the side, and the background is blurred, making it difficult to make out any details. The image is taken from a slightly elevated angle, looking down on the fish. head head person head The image is a close-up of a fish's head. The fish appears to be a type of sea creature, possibly a conch, with a long, slender body and a pointed snout. The body of the fish is predominantly white, with some hints of pink and purple. The head is slightly tilted to the side, and the background is blurred, making it difficult to make out any details. The image is taken from a slightly elevated angle, looking down on the fish.",
+      "labels": [
+        "head",
+        "head",
+        "head",
+        "head",
+        "person",
+        "head"
+      ],
+      "tags": [],
+      "confidence": 0.72,
+      "precision": 0.7,
+      "uncertainty": [],
+      "region_id": "region_66"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_13",
+      "source": "caption_object_and_labels",
+      "text": "face face The image is a close-up of a person's face. The person appears to be in a relaxed and content state, with their eyes closed and their mouth slightly open. The background is blurred, but it seems to be a greenish-brown color. The image is slightly out of focus, making it difficult to make out any details. The overall mood of the image is peaceful and serene. face person the close-up appears relaxed and content state with their eyes background blurred focus image person person face The image is a close-up of a person's face. The person appears to be in a relaxed and content state, with their eyes closed and their mouth slightly open. The background is blurred, but it seems to be a greenish-brown color. The image is slightly out of focus, making it difficult to make out any details. The overall mood of the image is peaceful and serene. face face person face The image is a close-up of a person's face. The person appears to be in a relaxed and content state, with their eyes closed and their mouth slightly open. The background is blurred, but it seems to be a greenish-brown color. The image is slightly out of focus, making it difficult to make out any details. The overall mood of the image is peaceful and serene.",
+      "labels": [
+        "face",
+        "face",
+        "face",
+        "face",
+        "person",
+        "face"
+      ],
+      "tags": [],
+      "confidence": 0.72,
+      "precision": 0.7,
+      "uncertainty": [],
+      "region_id": "region_12"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_14",
+      "source": "caption_object_and_labels",
+      "text": "thin thin The image shows a long, thin, white pole with a curved shape. The pole appears to be made of metal and has a smooth, shiny surface. It is lying on a plain, light green background. On the right side of the pole, there are two small, pointed objects, possibly screws or bolts, attached to it. The objects are arranged in a way that they are overlapping each other, creating a sense of movement and depth. The image is a 3D rendering, giving it a realistic look and feel. thin rail the shows long white pole with curved shape appears made background image rail rail thin The image shows a long, thin, white pole with a curved shape. The pole appears to be made of metal and has a smooth, shiny surface. It is lying on a plain, light green background. On the right side of the pole, there are two small, pointed objects, possibly screws or bolts, attached to it. The objects are arranged in a way that they are overlapping each other, creating a sense of movement and depth. The image is a 3D rendering, giving it a realistic look and feel. thin thin rail thin The image shows a long, thin, white pole with a curved shape. The pole appears to be made of metal and has a smooth, shiny surface. It is lying on a plain, light green background. On the right side of the pole, there are two small, pointed objects, possibly screws or bolts, attached to it. The objects are arranged in a way that they are overlapping each other, creating a sense of movement and depth. The image is a 3D rendering, giving it a realistic look and feel.",
+      "labels": [
+        "thin",
+        "thin",
+        "thin",
+        "thin",
+        "rail",
+        "thin"
+      ],
+      "tags": [],
+      "confidence": 0.72,
+      "precision": 0.7,
+      "uncertainty": [],
+      "region_id": "region_25"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_15",
+      "source": "caption_object_and_labels",
+      "text": "landscape photograph landscape photograph The image is a landscape photograph of a forest. The trees are tall and have green leaves, and the sky is visible through the branches. In the center of the image, there is a wooden structure that appears to be a fence or gate. The structure is made up of several wooden posts and posts, and there are several smaller posts on either side of the fence. The image is taken from a low angle, looking up at the trees. The background is blurred, but it seems to be an open area with more trees and foliage. landscape photograph city park the landscape forest trees are tall and have green leaves background blurred image photograph city park city park landscape photograph The image is a landscape photograph of a forest. The trees are tall and have green leaves, and the sky is visible through the branches. In the center of the image, there is a wooden structure that appears to be a fence or gate. The structure is made up of several wooden posts and posts, and there are several smaller posts on either side of the fence. The image is taken from a low angle, looking up at the trees. The background is blurred, but it seems to be an open area with more trees and foliage. landscape photograph landscape photograph city park landscape photograph The image is a landscape photograph of a forest. The trees are tall and have green leaves, and the sky is visible through the branches. In the center of the image, there is a wooden structure that appears to be a fence or gate. The structure is made up of several wooden posts and posts, and there are several smaller posts on either side of the fence. The image is taken from a low angle, looking up at the trees. The background is blurred, but it seems to be an open area with more trees and foliage.",
+      "labels": [
+        "landscape photograph",
+        "landscape photograph",
+        "landscape photograph",
+        "landscape photograph",
+        "city park",
+        "landscape photograph"
+      ],
+      "tags": [],
+      "confidence": 0.72,
+      "precision": 0.58,
+      "uncertainty": [
+        "possibly_transparent_depth"
+      ],
+      "region_id": "region_32"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_16",
+      "source": "caption_object_and_labels",
+      "text": "person person The image is a blurred photograph of a person's face. The person appears to be in a state of deep thought or contemplation. The background is a plain green color, and the focus is on the person's head and neck. The image is slightly out of focus, making it difficult to make out any details. The overall mood of the image is somber and contemplative. person the face appears state deep thought contemplation plain green color and background blurred focus image photograph person person blurred photograph The image is a blurred photograph of a person's face. The person appears to be in a state of deep thought or contemplation. The background is a plain green color, and the focus is on the person's head and neck. The image is slightly out of focus, making it difficult to make out any details. The overall mood of the image is somber and contemplative. person person person blurred photograph The image is a blurred photograph of a person's face. The person appears to be in a state of deep thought or contemplation. The background is a plain green color, and the focus is on the person's head and neck. The image is slightly out of focus, making it difficult to make out any details. The overall mood of the image is somber and contemplative.",
+      "labels": [
+        "person",
+        "person",
+        "person",
+        "person",
+        "person",
+        "blurred photograph"
+      ],
+      "tags": [],
+      "confidence": 0.45,
+      "precision": 0.7,
+      "uncertainty": [],
+      "region_id": "region_66"
+    },
+    {
+      "entity_type": "object",
+      "entity_id": "obj_17",
+      "source": "caption_object_and_labels",
+      "text": "person person The image is a blurred photograph of a person sitting on a chair. The person appears to be in a relaxed position, with their head resting on their hands and their body slightly turned to the side. They are wearing a green shirt and have a slight smile on their face. The background is a plain green color, and the image is slightly out of focus. The image is taken from a low angle, so the focus is on the person's face. person the sitting chair appears relaxed position with their head resting hands background blurred focus image photograph person person blurred photograph The image is a blurred photograph of a person sitting on a chair. The person appears to be in a relaxed position, with their head resting on their hands and their body slightly turned to the side. They are wearing a green shirt and have a slight smile on their face. The background is a plain green color, and the image is slightly out of focus. The image is taken from a low angle, so the focus is on the person's face. person person person blurred photograph The image is a blurred photograph of a person sitting on a chair. The person appears to be in a relaxed position, with their head resting on their hands and their body slightly turned to the side. They are wearing a green shirt and have a slight smile on their face. The background is a plain green color, and the image is slightly out of focus. The image is taken from a low angle, so the focus is on the person's face.",
+      "labels": [
+        "person",
+        "person",
+        "person",
+        "person",
+        "person",
+        "blurred photograph"
+      ],
+      "tags": [],
+      "confidence": 0.45,
+      "precision": 0.58,
+      "uncertainty": [
+        "possibly_transparent_depth"
+      ],
+      "region_id": "region_29"
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_1",
+      "source": "caption_region_summary",
+      "text": "midground Region region_1 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_2",
+      "source": "caption_region_summary",
+      "text": "midground Region region_2 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_3",
+      "source": "caption_region_summary",
+      "text": "midground Region region_3 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_4",
+      "source": "caption_region_summary",
+      "text": "foreground Region region_4 (foreground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_5",
+      "source": "caption_region_summary",
+      "text": "midground Region region_5 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_6",
+      "source": "caption_region_summary",
+      "text": "midground Region region_6 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_7",
+      "source": "caption_region_summary",
+      "text": "foreground Region region_7 (foreground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_8",
+      "source": "caption_region_summary",
+      "text": "midground Region region_8 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_9",
+      "source": "caption_region_summary",
+      "text": "midground Region region_9 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_10",
+      "source": "caption_region_summary",
+      "text": "midground Region region_10 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_11",
+      "source": "caption_region_summary",
+      "text": "foreground Region region_11 (foreground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_12",
+      "source": "caption_region_summary",
+      "text": "foreground set face set face Region region_12 (foreground) at 11.1 m contains: set, face, set, face.",
+      "labels": [
+        "set",
+        "face",
+        "set",
+        "face"
+      ],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 11.113
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_13",
+      "source": "caption_region_summary",
+      "text": "foreground Region region_13 (foreground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_14",
+      "source": "caption_region_summary",
+      "text": "midground Region region_14 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_15",
+      "source": "caption_region_summary",
+      "text": "midground Region region_15 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_16",
+      "source": "caption_region_summary",
+      "text": "midground Region region_16 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_17",
+      "source": "caption_region_summary",
+      "text": "midground Region region_17 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_18",
+      "source": "caption_region_summary",
+      "text": "midground Region region_18 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_19",
+      "source": "caption_region_summary",
+      "text": "midground Region region_19 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_20",
+      "source": "caption_region_summary",
+      "text": "midground Region region_20 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_21",
+      "source": "caption_region_summary",
+      "text": "midground Region region_21 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_22",
+      "source": "caption_region_summary",
+      "text": "midground Region region_22 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_23",
+      "source": "caption_region_summary",
+      "text": "midground Region region_23 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_24",
+      "source": "caption_region_summary",
+      "text": "midground Region region_24 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_25",
+      "source": "caption_region_summary",
+      "text": "midground person rendering thin Region region_25 (midground) at 12.2 m contains: person, rendering, thin.",
+      "labels": [
+        "person",
+        "rendering",
+        "thin"
+      ],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 12.22
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_26",
+      "source": "caption_region_summary",
+      "text": "midground Region region_26 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_27",
+      "source": "caption_region_summary",
+      "text": "midground Region region_27 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_28",
+      "source": "caption_region_summary",
+      "text": "midground Region region_28 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_29",
+      "source": "caption_region_summary",
+      "text": "midground person Region region_29 (midground) at 11.6 m contains: person.",
+      "labels": [
+        "person"
+      ],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 11.567
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_30",
+      "source": "caption_region_summary",
+      "text": "midground Region region_30 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_31",
+      "source": "caption_region_summary",
+      "text": "midground Region region_31 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_32",
+      "source": "caption_region_summary",
+      "text": "background landscape photograph face landscape photograph Region region_32 (background) at 13.5 m contains: landscape photograph, face, landscape photograph.",
+      "labels": [
+        "landscape photograph",
+        "face",
+        "landscape photograph"
+      ],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 13.528
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_33",
+      "source": "caption_region_summary",
+      "text": "background Region region_33 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_34",
+      "source": "caption_region_summary",
+      "text": "background Region region_34 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_35",
+      "source": "caption_region_summary",
+      "text": "background Region region_35 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_36",
+      "source": "caption_region_summary",
+      "text": "background Region region_36 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_37",
+      "source": "caption_region_summary",
+      "text": "background Region region_37 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_38",
+      "source": "caption_region_summary",
+      "text": "midground Region region_38 (midground) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_39",
+      "source": "caption_region_summary",
+      "text": "background Region region_39 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_40",
+      "source": "caption_region_summary",
+      "text": "background Region region_40 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_41",
+      "source": "caption_region_summary",
+      "text": "background Region region_41 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_42",
+      "source": "caption_region_summary",
+      "text": "background Region region_42 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_43",
+      "source": "caption_region_summary",
+      "text": "background Region region_43 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_44",
+      "source": "caption_region_summary",
+      "text": "background Region region_44 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_45",
+      "source": "caption_region_summary",
+      "text": "background Region region_45 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_46",
+      "source": "caption_region_summary",
+      "text": "background person Region region_46 (background) at 11.7 m contains: person.",
+      "labels": [
+        "person"
+      ],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 11.684
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_47",
+      "source": "caption_region_summary",
+      "text": "background Region region_47 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_48",
+      "source": "caption_region_summary",
+      "text": "background Region region_48 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_49",
+      "source": "caption_region_summary",
+      "text": "background Region region_49 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_50",
+      "source": "caption_region_summary",
+      "text": "background Region region_50 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_51",
+      "source": "caption_region_summary",
+      "text": "background Region region_51 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_52",
+      "source": "caption_region_summary",
+      "text": "background Region region_52 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_53",
+      "source": "caption_region_summary",
+      "text": "background Region region_53 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_54",
+      "source": "caption_region_summary",
+      "text": "background Region region_54 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_55",
+      "source": "caption_region_summary",
+      "text": "background Region region_55 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_56",
+      "source": "caption_region_summary",
+      "text": "background Region region_56 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_57",
+      "source": "caption_region_summary",
+      "text": "background Region region_57 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_58",
+      "source": "caption_region_summary",
+      "text": "background Region region_58 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_59",
+      "source": "caption_region_summary",
+      "text": "background Region region_59 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_60",
+      "source": "caption_region_summary",
+      "text": "background Region region_60 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_61",
+      "source": "caption_region_summary",
+      "text": "background Region region_61 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_62",
+      "source": "caption_region_summary",
+      "text": "background person man Region region_62 (background) at 14.4 m contains: person man.",
+      "labels": [
+        "person man"
+      ],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 14.405
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_63",
+      "source": "caption_region_summary",
+      "text": "background Region region_63 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_64",
+      "source": "caption_region_summary",
+      "text": "background Region region_64 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_65",
+      "source": "caption_region_summary",
+      "text": "background Region region_65 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_66",
+      "source": "caption_region_summary",
+      "text": "background face head person Region region_66 (background) at 14.8 m contains: face, head, person.",
+      "labels": [
+        "face",
+        "head",
+        "person"
+      ],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 14.849
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_67",
+      "source": "caption_region_summary",
+      "text": "background Region region_67 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_68",
+      "source": "caption_region_summary",
+      "text": "background Region region_68 (background) at unknown depth contains: no named objects.",
+      "labels": [],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 0.0
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_69",
+      "source": "caption_region_summary",
+      "text": "background thin Region region_69 (background) at 14.3 m contains: thin.",
+      "labels": [
+        "thin"
+      ],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 14.297
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "region_70",
+      "source": "caption_region_summary",
+      "text": "background face Region region_70 (background) at 13.2 m contains: face.",
+      "labels": [
+        "face"
+      ],
+      "tags": [],
+      "confidence": 0.58,
+      "precision": 0.48,
+      "uncertainty": [],
+      "depth_mean_m": 13.184
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0000",
+      "source": "caption_cross_region",
+      "text": "person man behind set region_62 region_12",
+      "labels": [
+        "person man",
+        "set"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_0",
+      "object_id": "obj_1"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0001",
+      "source": "caption_cross_region",
+      "text": "person man right_of rendering region_62 region_25",
+      "labels": [
+        "person man",
+        "rendering"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_0",
+      "object_id": "obj_9"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0002",
+      "source": "caption_cross_region",
+      "text": "person man right_of thin region_62 region_25",
+      "labels": [
+        "person man",
+        "thin"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_0",
+      "object_id": "obj_14"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0003",
+      "source": "caption_cross_region",
+      "text": "person man below landscape photograph region_62 region_32",
+      "labels": [
+        "person man",
+        "landscape photograph"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_0",
+      "object_id": "obj_15"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0004",
+      "source": "caption_cross_region",
+      "text": "person man below landscape photograph region_62 region_32",
+      "labels": [
+        "person man",
+        "landscape photograph"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_0",
+      "object_id": "obj_3"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0005",
+      "source": "caption_cross_region",
+      "text": "person man left_of thin region_62 region_69",
+      "labels": [
+        "person man",
+        "thin"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_0",
+      "object_id": "obj_10"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0006",
+      "source": "caption_cross_region",
+      "text": "person man left_of person region_62 region_25",
+      "labels": [
+        "person man",
+        "person"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_0",
+      "object_id": "obj_5"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0007",
+      "source": "caption_cross_region",
+      "text": "person man behind set region_62 region_12",
+      "labels": [
+        "person man",
+        "set"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_0",
+      "object_id": "obj_6"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0008",
+      "source": "caption_cross_region",
+      "text": "set in_front_of person man region_12 region_62",
+      "labels": [
+        "set",
+        "person man"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_1",
+      "object_id": "obj_0"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0009",
+      "source": "caption_cross_region",
+      "text": "set below rendering region_12 region_25",
+      "labels": [
+        "set",
+        "rendering"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_1",
+      "object_id": "obj_9"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0010",
+      "source": "caption_cross_region",
+      "text": "set right_of thin region_12 region_25",
+      "labels": [
+        "set",
+        "thin"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_1",
+      "object_id": "obj_14"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0011",
+      "source": "caption_cross_region",
+      "text": "set in_front_of thin region_12 region_69",
+      "labels": [
+        "set",
+        "thin"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_1",
+      "object_id": "obj_10"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0012",
+      "source": "caption_cross_region",
+      "text": "set overlapping landscape photograph region_12 region_32",
+      "labels": [
+        "set",
+        "landscape photograph"
+      ],
+      "tags": [
+        "overlapping"
+      ],
+      "confidence": 0.34,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_1",
+      "object_id": "obj_15"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0013",
+      "source": "caption_cross_region",
+      "text": "set overlapping landscape photograph region_12 region_32",
+      "labels": [
+        "set",
+        "landscape photograph"
+      ],
+      "tags": [
+        "overlapping"
+      ],
+      "confidence": 0.34,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_1",
+      "object_id": "obj_3"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0014",
+      "source": "caption_cross_region",
+      "text": "set left_of person region_12 region_25",
+      "labels": [
+        "set",
+        "person"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_1",
+      "object_id": "obj_5"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0015",
+      "source": "caption_cross_region",
+      "text": "face overlapping person region_70 region_66",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "overlapping"
+      ],
+      "confidence": 0.34,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_2",
+      "object_id": "obj_16"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0016",
+      "source": "caption_cross_region",
+      "text": "face below face region_70 region_66",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_2",
+      "object_id": "obj_7"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0017",
+      "source": "caption_cross_region",
+      "text": "face below head region_70 region_66",
+      "labels": [
+        "face",
+        "head"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_2",
+      "object_id": "obj_12"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0018",
+      "source": "caption_cross_region",
+      "text": "face left_of person region_70 region_46",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_2",
+      "object_id": "obj_8"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0019",
+      "source": "caption_cross_region",
+      "text": "face left_of face region_70 region_12",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_2",
+      "object_id": "obj_13"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0020",
+      "source": "caption_cross_region",
+      "text": "face left_of face region_70 region_12",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_2",
+      "object_id": "obj_4"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0021",
+      "source": "caption_cross_region",
+      "text": "face left_of person region_70 region_29",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_2",
+      "object_id": "obj_17"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0022",
+      "source": "caption_cross_region",
+      "text": "face left_of face region_70 region_32",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_2",
+      "object_id": "obj_11"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0023",
+      "source": "caption_cross_region",
+      "text": "landscape photograph above rendering region_32 region_25",
+      "labels": [
+        "landscape photograph",
+        "rendering"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_3",
+      "object_id": "obj_9"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0024",
+      "source": "caption_cross_region",
+      "text": "landscape photograph above person man region_32 region_62",
+      "labels": [
+        "landscape photograph",
+        "person man"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_3",
+      "object_id": "obj_0"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0025",
+      "source": "caption_cross_region",
+      "text": "landscape photograph above thin region_32 region_25",
+      "labels": [
+        "landscape photograph",
+        "thin"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_3",
+      "object_id": "obj_14"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0026",
+      "source": "caption_cross_region",
+      "text": "landscape photograph overlapping set region_32 region_12",
+      "labels": [
+        "landscape photograph",
+        "set"
+      ],
+      "tags": [
+        "overlapping"
+      ],
+      "confidence": 0.34,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_3",
+      "object_id": "obj_1"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0027",
+      "source": "caption_cross_region",
+      "text": "landscape photograph above thin region_32 region_69",
+      "labels": [
+        "landscape photograph",
+        "thin"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_3",
+      "object_id": "obj_10"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0028",
+      "source": "caption_cross_region",
+      "text": "landscape photograph above person region_32 region_25",
+      "labels": [
+        "landscape photograph",
+        "person"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_3",
+      "object_id": "obj_5"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0029",
+      "source": "caption_cross_region",
+      "text": "face overlapping person region_12 region_29",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "overlapping"
+      ],
+      "confidence": 0.34,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_4",
+      "object_id": "obj_17"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0030",
+      "source": "caption_cross_region",
+      "text": "face right_of person region_12 region_46",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_4",
+      "object_id": "obj_8"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0031",
+      "source": "caption_cross_region",
+      "text": "face in_front_of face region_12 region_32",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_4",
+      "object_id": "obj_11"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0032",
+      "source": "caption_cross_region",
+      "text": "face in_front_of face region_12 region_66",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_4",
+      "object_id": "obj_7"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0033",
+      "source": "caption_cross_region",
+      "text": "face right_of person region_12 region_66",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_4",
+      "object_id": "obj_16"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0034",
+      "source": "caption_cross_region",
+      "text": "face in_front_of head region_12 region_66",
+      "labels": [
+        "face",
+        "head"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_4",
+      "object_id": "obj_12"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0035",
+      "source": "caption_cross_region",
+      "text": "face right_of face region_12 region_70",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_4",
+      "object_id": "obj_2"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0036",
+      "source": "caption_cross_region",
+      "text": "person below thin region_25 region_69",
+      "labels": [
+        "person",
+        "thin"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_5",
+      "object_id": "obj_10"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0037",
+      "source": "caption_cross_region",
+      "text": "person right_of set region_25 region_12",
+      "labels": [
+        "person",
+        "set"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_5",
+      "object_id": "obj_1"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0038",
+      "source": "caption_cross_region",
+      "text": "person right_of person man region_25 region_62",
+      "labels": [
+        "person",
+        "person man"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_5",
+      "object_id": "obj_0"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0039",
+      "source": "caption_cross_region",
+      "text": "person right_of set region_25 region_12",
+      "labels": [
+        "person",
+        "set"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_5",
+      "object_id": "obj_6"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0040",
+      "source": "caption_cross_region",
+      "text": "person below landscape photograph region_25 region_32",
+      "labels": [
+        "person",
+        "landscape photograph"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_5",
+      "object_id": "obj_15"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0041",
+      "source": "caption_cross_region",
+      "text": "person below landscape photograph region_25 region_32",
+      "labels": [
+        "person",
+        "landscape photograph"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_5",
+      "object_id": "obj_3"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0042",
+      "source": "caption_cross_region",
+      "text": "set in_front_of person man region_12 region_62",
+      "labels": [
+        "set",
+        "person man"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_6",
+      "object_id": "obj_0"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0043",
+      "source": "caption_cross_region",
+      "text": "set left_of person region_12 region_25",
+      "labels": [
+        "set",
+        "person"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_6",
+      "object_id": "obj_5"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0044",
+      "source": "caption_cross_region",
+      "text": "set in_front_of thin region_12 region_69",
+      "labels": [
+        "set",
+        "thin"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_6",
+      "object_id": "obj_10"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0045",
+      "source": "caption_cross_region",
+      "text": "set below thin region_12 region_25",
+      "labels": [
+        "set",
+        "thin"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_6",
+      "object_id": "obj_14"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0046",
+      "source": "caption_cross_region",
+      "text": "set below rendering region_12 region_25",
+      "labels": [
+        "set",
+        "rendering"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_6",
+      "object_id": "obj_9"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0047",
+      "source": "caption_cross_region",
+      "text": "set in_front_of face region_12 region_32",
+      "labels": [
+        "set",
+        "face"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_6",
+      "object_id": "obj_11"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0048",
+      "source": "caption_cross_region",
+      "text": "face above face region_66 region_70",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_7",
+      "object_id": "obj_2"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0049",
+      "source": "caption_cross_region",
+      "text": "face behind person region_66 region_46",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_7",
+      "object_id": "obj_8"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0050",
+      "source": "caption_cross_region",
+      "text": "face behind face region_66 region_12",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_7",
+      "object_id": "obj_4"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0051",
+      "source": "caption_cross_region",
+      "text": "face behind person region_66 region_29",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_7",
+      "object_id": "obj_17"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0052",
+      "source": "caption_cross_region",
+      "text": "face behind face region_66 region_12",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_7",
+      "object_id": "obj_13"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0053",
+      "source": "caption_cross_region",
+      "text": "face left_of face region_66 region_32",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_7",
+      "object_id": "obj_11"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0054",
+      "source": "caption_cross_region",
+      "text": "person left_of face region_46 region_12",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_8",
+      "object_id": "obj_4"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0055",
+      "source": "caption_cross_region",
+      "text": "person left_of face region_46 region_12",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_8",
+      "object_id": "obj_13"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0056",
+      "source": "caption_cross_region",
+      "text": "person below person region_46 region_29",
+      "labels": [
+        "person",
+        "person"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_8",
+      "object_id": "obj_17"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0057",
+      "source": "caption_cross_region",
+      "text": "person in_front_of face region_46 region_66",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_8",
+      "object_id": "obj_7"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0058",
+      "source": "caption_cross_region",
+      "text": "person right_of person region_46 region_66",
+      "labels": [
+        "person",
+        "person"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_8",
+      "object_id": "obj_16"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0059",
+      "source": "caption_cross_region",
+      "text": "person right_of face region_46 region_70",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_8",
+      "object_id": "obj_2"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0060",
+      "source": "caption_cross_region",
+      "text": "person in_front_of head region_46 region_66",
+      "labels": [
+        "person",
+        "head"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_8",
+      "object_id": "obj_12"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0061",
+      "source": "caption_cross_region",
+      "text": "person in_front_of face region_46 region_32",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_8",
+      "object_id": "obj_11"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0062",
+      "source": "caption_cross_region",
+      "text": "rendering left_of person man region_25 region_62",
+      "labels": [
+        "rendering",
+        "person man"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_9",
+      "object_id": "obj_0"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0063",
+      "source": "caption_cross_region",
+      "text": "rendering above set region_25 region_12",
+      "labels": [
+        "rendering",
+        "set"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_9",
+      "object_id": "obj_1"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0064",
+      "source": "caption_cross_region",
+      "text": "rendering below landscape photograph region_25 region_32",
+      "labels": [
+        "rendering",
+        "landscape photograph"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_9",
+      "object_id": "obj_15"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0065",
+      "source": "caption_cross_region",
+      "text": "rendering below landscape photograph region_25 region_32",
+      "labels": [
+        "rendering",
+        "landscape photograph"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_9",
+      "object_id": "obj_3"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0066",
+      "source": "caption_cross_region",
+      "text": "rendering right_of face region_25 region_32",
+      "labels": [
+        "rendering",
+        "face"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_9",
+      "object_id": "obj_11"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0067",
+      "source": "caption_cross_region",
+      "text": "rendering right_of person region_25 region_29",
+      "labels": [
+        "rendering",
+        "person"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_9",
+      "object_id": "obj_17"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0068",
+      "source": "caption_cross_region",
+      "text": "rendering right_of face region_25 region_12",
+      "labels": [
+        "rendering",
+        "face"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_9",
+      "object_id": "obj_4"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0069",
+      "source": "caption_cross_region",
+      "text": "thin above person region_69 region_25",
+      "labels": [
+        "thin",
+        "person"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_10",
+      "object_id": "obj_5"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0070",
+      "source": "caption_cross_region",
+      "text": "thin right_of person man region_69 region_62",
+      "labels": [
+        "thin",
+        "person man"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_10",
+      "object_id": "obj_0"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0071",
+      "source": "caption_cross_region",
+      "text": "thin behind set region_69 region_12",
+      "labels": [
+        "thin",
+        "set"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_10",
+      "object_id": "obj_1"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0072",
+      "source": "caption_cross_region",
+      "text": "thin behind set region_69 region_12",
+      "labels": [
+        "thin",
+        "set"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_10",
+      "object_id": "obj_6"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0073",
+      "source": "caption_cross_region",
+      "text": "thin overlapping rendering region_69 region_25",
+      "labels": [
+        "thin",
+        "rendering"
+      ],
+      "tags": [
+        "overlapping"
+      ],
+      "confidence": 0.34,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_10",
+      "object_id": "obj_9"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0074",
+      "source": "caption_cross_region",
+      "text": "thin below landscape photograph region_69 region_32",
+      "labels": [
+        "thin",
+        "landscape photograph"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_10",
+      "object_id": "obj_15"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0075",
+      "source": "caption_cross_region",
+      "text": "thin below landscape photograph region_69 region_32",
+      "labels": [
+        "thin",
+        "landscape photograph"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_10",
+      "object_id": "obj_3"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0076",
+      "source": "caption_cross_region",
+      "text": "thin right_of thin region_69 region_25",
+      "labels": [
+        "thin",
+        "thin"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_10",
+      "object_id": "obj_14"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0077",
+      "source": "caption_cross_region",
+      "text": "face behind person region_32 region_29",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_11",
+      "object_id": "obj_17"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0078",
+      "source": "caption_cross_region",
+      "text": "face behind face region_32 region_12",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_11",
+      "object_id": "obj_4"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0079",
+      "source": "caption_cross_region",
+      "text": "face behind face region_32 region_12",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_11",
+      "object_id": "obj_13"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0080",
+      "source": "caption_cross_region",
+      "text": "face behind person region_32 region_46",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_11",
+      "object_id": "obj_8"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0081",
+      "source": "caption_cross_region",
+      "text": "face right_of face region_32 region_66",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_11",
+      "object_id": "obj_7"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0082",
+      "source": "caption_cross_region",
+      "text": "face right_of person region_32 region_66",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_11",
+      "object_id": "obj_16"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0083",
+      "source": "caption_cross_region",
+      "text": "face right_of head region_32 region_66",
+      "labels": [
+        "face",
+        "head"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_11",
+      "object_id": "obj_12"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0084",
+      "source": "caption_cross_region",
+      "text": "face right_of face region_32 region_70",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_11",
+      "object_id": "obj_2"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0085",
+      "source": "caption_cross_region",
+      "text": "head above face region_66 region_70",
+      "labels": [
+        "head",
+        "face"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_12",
+      "object_id": "obj_2"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0086",
+      "source": "caption_cross_region",
+      "text": "head behind person region_66 region_46",
+      "labels": [
+        "head",
+        "person"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_12",
+      "object_id": "obj_8"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0087",
+      "source": "caption_cross_region",
+      "text": "head behind person region_66 region_29",
+      "labels": [
+        "head",
+        "person"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_12",
+      "object_id": "obj_17"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0088",
+      "source": "caption_cross_region",
+      "text": "head behind face region_66 region_12",
+      "labels": [
+        "head",
+        "face"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_12",
+      "object_id": "obj_4"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0089",
+      "source": "caption_cross_region",
+      "text": "head behind face region_66 region_12",
+      "labels": [
+        "head",
+        "face"
+      ],
+      "tags": [
+        "behind"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_12",
+      "object_id": "obj_13"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0090",
+      "source": "caption_cross_region",
+      "text": "head left_of face region_66 region_32",
+      "labels": [
+        "head",
+        "face"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_12",
+      "object_id": "obj_11"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0091",
+      "source": "caption_cross_region",
+      "text": "face right_of person region_12 region_46",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_13",
+      "object_id": "obj_8"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0092",
+      "source": "caption_cross_region",
+      "text": "face below person region_12 region_29",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_13",
+      "object_id": "obj_17"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0093",
+      "source": "caption_cross_region",
+      "text": "face in_front_of face region_12 region_32",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_13",
+      "object_id": "obj_11"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0094",
+      "source": "caption_cross_region",
+      "text": "face in_front_of face region_12 region_66",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_13",
+      "object_id": "obj_7"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0095",
+      "source": "caption_cross_region",
+      "text": "face right_of person region_12 region_66",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_13",
+      "object_id": "obj_16"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0096",
+      "source": "caption_cross_region",
+      "text": "face right_of face region_12 region_70",
+      "labels": [
+        "face",
+        "face"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_13",
+      "object_id": "obj_2"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0097",
+      "source": "caption_cross_region",
+      "text": "face in_front_of head region_12 region_66",
+      "labels": [
+        "face",
+        "head"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_13",
+      "object_id": "obj_12"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0098",
+      "source": "caption_cross_region",
+      "text": "thin left_of person man region_25 region_62",
+      "labels": [
+        "thin",
+        "person man"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_14",
+      "object_id": "obj_0"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0099",
+      "source": "caption_cross_region",
+      "text": "thin left_of set region_25 region_12",
+      "labels": [
+        "thin",
+        "set"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_14",
+      "object_id": "obj_1"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0100",
+      "source": "caption_cross_region",
+      "text": "thin in_front_of face region_25 region_32",
+      "labels": [
+        "thin",
+        "face"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_14",
+      "object_id": "obj_11"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0101",
+      "source": "caption_cross_region",
+      "text": "thin below landscape photograph region_25 region_32",
+      "labels": [
+        "thin",
+        "landscape photograph"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_14",
+      "object_id": "obj_15"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0102",
+      "source": "caption_cross_region",
+      "text": "thin below landscape photograph region_25 region_32",
+      "labels": [
+        "thin",
+        "landscape photograph"
+      ],
+      "tags": [
+        "below"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_14",
+      "object_id": "obj_3"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0103",
+      "source": "caption_cross_region",
+      "text": "thin right_of person region_25 region_29",
+      "labels": [
+        "thin",
+        "person"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_14",
+      "object_id": "obj_17"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0104",
+      "source": "caption_cross_region",
+      "text": "thin right_of face region_25 region_12",
+      "labels": [
+        "thin",
+        "face"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_14",
+      "object_id": "obj_4"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0105",
+      "source": "caption_cross_region",
+      "text": "landscape photograph above rendering region_32 region_25",
+      "labels": [
+        "landscape photograph",
+        "rendering"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_15",
+      "object_id": "obj_9"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0106",
+      "source": "caption_cross_region",
+      "text": "landscape photograph above person man region_32 region_62",
+      "labels": [
+        "landscape photograph",
+        "person man"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_15",
+      "object_id": "obj_0"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0107",
+      "source": "caption_cross_region",
+      "text": "landscape photograph above thin region_32 region_25",
+      "labels": [
+        "landscape photograph",
+        "thin"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_15",
+      "object_id": "obj_14"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0108",
+      "source": "caption_cross_region",
+      "text": "landscape photograph overlapping set region_32 region_12",
+      "labels": [
+        "landscape photograph",
+        "set"
+      ],
+      "tags": [
+        "overlapping"
+      ],
+      "confidence": 0.34,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_15",
+      "object_id": "obj_1"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0109",
+      "source": "caption_cross_region",
+      "text": "landscape photograph above thin region_32 region_69",
+      "labels": [
+        "landscape photograph",
+        "thin"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_15",
+      "object_id": "obj_10"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0110",
+      "source": "caption_cross_region",
+      "text": "landscape photograph above person region_32 region_25",
+      "labels": [
+        "landscape photograph",
+        "person"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_15",
+      "object_id": "obj_5"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0111",
+      "source": "caption_cross_region",
+      "text": "person overlapping face region_66 region_70",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "overlapping"
+      ],
+      "confidence": 0.34,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_16",
+      "object_id": "obj_2"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0112",
+      "source": "caption_cross_region",
+      "text": "person left_of person region_66 region_46",
+      "labels": [
+        "person",
+        "person"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_16",
+      "object_id": "obj_8"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0113",
+      "source": "caption_cross_region",
+      "text": "person left_of face region_66 region_12",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_16",
+      "object_id": "obj_4"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0114",
+      "source": "caption_cross_region",
+      "text": "person left_of person region_66 region_29",
+      "labels": [
+        "person",
+        "person"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_16",
+      "object_id": "obj_17"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0115",
+      "source": "caption_cross_region",
+      "text": "person left_of face region_66 region_12",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_16",
+      "object_id": "obj_13"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0116",
+      "source": "caption_cross_region",
+      "text": "person left_of face region_66 region_32",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "left_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_16",
+      "object_id": "obj_11"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0117",
+      "source": "caption_cross_region",
+      "text": "person overlapping face region_29 region_12",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "overlapping"
+      ],
+      "confidence": 0.34,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_17",
+      "object_id": "obj_4"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0118",
+      "source": "caption_cross_region",
+      "text": "person above face region_29 region_12",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_17",
+      "object_id": "obj_13"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0119",
+      "source": "caption_cross_region",
+      "text": "person above person region_29 region_46",
+      "labels": [
+        "person",
+        "person"
+      ],
+      "tags": [
+        "above"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_17",
+      "object_id": "obj_8"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0120",
+      "source": "caption_cross_region",
+      "text": "person in_front_of face region_29 region_32",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_17",
+      "object_id": "obj_11"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0121",
+      "source": "caption_cross_region",
+      "text": "person in_front_of face region_29 region_66",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_17",
+      "object_id": "obj_7"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0122",
+      "source": "caption_cross_region",
+      "text": "person right_of person region_29 region_66",
+      "labels": [
+        "person",
+        "person"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_17",
+      "object_id": "obj_16"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0123",
+      "source": "caption_cross_region",
+      "text": "person in_front_of head region_29 region_66",
+      "labels": [
+        "person",
+        "head"
+      ],
+      "tags": [
+        "in_front_of"
+      ],
+      "confidence": 0.75,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_17",
+      "object_id": "obj_12"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0124",
+      "source": "caption_cross_region",
+      "text": "person right_of face region_29 region_70",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "right_of"
+      ],
+      "confidence": 0.27999999999999997,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_17",
+      "object_id": "obj_2"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0125",
+      "source": "caption_cross_region",
+      "text": "person contains face region_66 region_70",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "contains"
+      ],
+      "confidence": 0.97688,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_16",
+      "object_id": "obj_2"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0126",
+      "source": "caption_cross_region",
+      "text": "set contains landscape photograph region_12 region_32",
+      "labels": [
+        "set",
+        "landscape photograph"
+      ],
+      "tags": [
+        "contains"
+      ],
+      "confidence": 0.99924,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_1",
+      "object_id": "obj_3"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0127",
+      "source": "caption_cross_region",
+      "text": "landscape photograph on set region_32 region_12",
+      "labels": [
+        "landscape photograph",
+        "set"
+      ],
+      "tags": [
+        "on"
+      ],
+      "confidence": 0.899335,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_3",
+      "object_id": "obj_1"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0128",
+      "source": "caption_cross_region",
+      "text": "set contains landscape photograph region_12 region_32",
+      "labels": [
+        "set",
+        "landscape photograph"
+      ],
+      "tags": [
+        "contains"
+      ],
+      "confidence": 0.99964,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_1",
+      "object_id": "obj_15"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0129",
+      "source": "caption_cross_region",
+      "text": "landscape photograph on set region_32 region_12",
+      "labels": [
+        "landscape photograph",
+        "set"
+      ],
+      "tags": [
+        "on"
+      ],
+      "confidence": 0.8996850000000001,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_15",
+      "object_id": "obj_1"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0130",
+      "source": "caption_cross_region",
+      "text": "face contains person region_12 region_29",
+      "labels": [
+        "face",
+        "person"
+      ],
+      "tags": [
+        "contains"
+      ],
+      "confidence": 0.99252,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_4",
+      "object_id": "obj_17"
+    },
+    {
+      "entity_type": "relation",
+      "entity_id": "caption_relation_0131",
+      "source": "caption_cross_region",
+      "text": "person on face region_29 region_12",
+      "labels": [
+        "person",
+        "face"
+      ],
+      "tags": [
+        "on"
+      ],
+      "confidence": 0.893455,
+      "precision": 0.5,
+      "uncertainty": [],
+      "subject_id": "obj_17",
+      "object_id": "obj_4"
+    },
+    {
+      "entity_type": "uncertainty",
+      "entity_id": "obj_2",
+      "source": "caption_uncertainty",
+      "text": "face possibly_transparent",
+      "labels": [
+        "face"
+      ],
+      "tags": [
+        "possibly_transparent"
+      ],
+      "confidence": 0.65,
+      "precision": 0.35,
+      "uncertainty": [
+        "possibly_transparent"
+      ]
+    },
+    {
+      "entity_type": "uncertainty",
+      "entity_id": "obj_3",
+      "source": "caption_uncertainty",
+      "text": "landscape photograph possibly_transparent",
+      "labels": [
+        "landscape photograph"
+      ],
+      "tags": [
+        "possibly_transparent"
+      ],
+      "confidence": 0.65,
+      "precision": 0.35,
+      "uncertainty": [
+        "possibly_transparent"
+      ]
+    },
+    {
+      "entity_type": "uncertainty",
+      "entity_id": "obj_6",
+      "source": "caption_uncertainty",
+      "text": "set possibly_transparent",
+      "labels": [
+        "set"
+      ],
+      "tags": [
+        "possibly_transparent"
+      ],
+      "confidence": 0.65,
+      "precision": 0.35,
+      "uncertainty": [
+        "possibly_transparent"
+      ]
+    },
+    {
+      "entity_type": "uncertainty",
+      "entity_id": "obj_15",
+      "source": "caption_uncertainty",
+      "text": "landscape photograph possibly_transparent",
+      "labels": [
+        "landscape photograph"
+      ],
+      "tags": [
+        "possibly_transparent"
+      ],
+      "confidence": 0.65,
+      "precision": 0.35,
+      "uncertainty": [
+        "possibly_transparent"
+      ]
+    },
+    {
+      "entity_type": "uncertainty",
+      "entity_id": "obj_17",
+      "source": "caption_uncertainty",
+      "text": "person possibly_transparent",
+      "labels": [
+        "person"
+      ],
+      "tags": [
+        "possibly_transparent"
+      ],
+      "confidence": 0.65,
+      "precision": 0.35,
+      "uncertainty": [
+        "possibly_transparent"
+      ]
+    }
+  ],
+  "open_vocab_concepts": [
+    {
+      "term": "arranged pyramid-like structure",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_6",
+        "obj_6",
+        "obj_6"
+      ]
+    },
+    {
+      "term": "landscape landscape landscape",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "silhouette building structure",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "rendering rendering rendering",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_9",
+        "obj_9"
+      ]
+    },
+    {
+      "term": "greenish-brown color slightly",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_13",
+        "obj_13",
+        "obj_13"
+      ]
+    },
+    {
+      "term": "landscape region_12 region_32",
+      "score": 1.0,
+      "entity_types": [
+        "relation"
+      ],
+      "example_entity_ids": [
+        "caption_relation_0012",
+        "caption_relation_0013",
+        "caption_relation_0126"
+      ]
+    },
+    {
+      "term": "region_32 region_12 landscape",
+      "score": 1.0,
+      "entity_types": [
+        "relation"
+      ],
+      "example_entity_ids": [
+        "caption_relation_0026",
+        "caption_relation_0108",
+        "caption_relation_0127"
+      ]
+    },
+    {
+      "term": "leaves indicating springtime",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "stairs arranged pyramid-like",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_6",
+        "obj_6",
+        "obj_6"
+      ]
+    },
+    {
+      "term": "top-down perspective looking",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_9",
+        "obj_9",
+        "obj_9"
+      ]
+    },
+    {
+      "term": "pyramid-like structure flat",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_6",
+        "obj_6",
+        "obj_6"
+      ]
+    },
+    {
+      "term": "thought contemplation plain",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_16",
+        "obj_16",
+        "obj_16"
+      ]
+    },
+    {
+      "term": "dimension steps surrounded",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_1",
+        "obj_1",
+        "obj_1"
+      ]
+    },
+    {
+      "term": "landscape landscape forest",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "peaceful serene atmosphere",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "rendering giving realistic",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_6",
+        "obj_6",
+        "obj_6"
+      ]
+    },
+    {
+      "term": "taken top-down perspective",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_9",
+        "obj_9",
+        "obj_9"
+      ]
+    },
+    {
+      "term": "scattered around including",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_10",
+        "obj_10",
+        "obj_10"
+      ]
+    },
+    {
+      "term": "seems greenish-brown color",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_13",
+        "obj_13",
+        "obj_13"
+      ]
+    },
+    {
+      "term": "deep thought contemplation",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_16",
+        "obj_16",
+        "obj_16"
+      ]
+    },
+    {
+      "term": "in_front_of face region_12",
+      "score": 1.0,
+      "entity_types": [
+        "relation"
+      ],
+      "example_entity_ids": [
+        "caption_relation_0031",
+        "caption_relation_0032",
+        "caption_relation_0047"
+      ]
+    },
+    {
+      "term": "surrounded trees greenery",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_1",
+        "obj_1",
+        "obj_1"
+      ]
+    },
+    {
+      "term": "mood somber contemplative",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_2",
+        "obj_2",
+        "obj_2"
+      ]
+    },
+    {
+      "term": "somber contemplative face",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_2",
+        "obj_2",
+        "obj_2"
+      ]
+    },
+    {
+      "term": "indicating springtime sky",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "there silhouette building",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "building surrounded trees",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "foliage creating peaceful",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "rendering shows rendering",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_9",
+        "obj_9",
+        "obj_9"
+      ]
+    },
+    {
+      "term": "several smaller scattered",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_10",
+        "obj_10",
+        "obj_10"
+      ]
+    },
+    {
+      "term": "contemplation plain green",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_16",
+        "obj_16",
+        "obj_16"
+      ]
+    },
+    {
+      "term": "wearing sunglasses plain",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_0",
+        "obj_0",
+        "obj_0"
+      ]
+    },
+    {
+      "term": "handrail railing appears",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_1",
+        "obj_1",
+        "obj_1"
+      ]
+    },
+    {
+      "term": "building structure which",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "appears structure curved",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "roof building surrounded",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "surrounded trees foliage",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "creating peaceful serene",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "park landscape landscape",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_15"
+      ]
+    },
+    {
+      "term": "landscape landscape city",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_15"
+      ]
+    },
+    {
+      "term": "appears sleeping resting",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_5",
+        "obj_5",
+        "obj_5"
+      ]
+    },
+    {
+      "term": "weathered visible cracks",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_6",
+        "obj_6",
+        "obj_6"
+      ]
+    },
+    {
+      "term": "multiple points interest",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_9",
+        "obj_9",
+        "obj_9"
+      ]
+    },
+    {
+      "term": "perspective looking down",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_9",
+        "obj_9",
+        "obj_9"
+      ]
+    },
+    {
+      "term": "line rendering rendering",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_9",
+        "obj_9"
+      ]
+    },
+    {
+      "term": "rendering rendering rail",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_9",
+        "obj_9"
+      ]
+    },
+    {
+      "term": "rendering rail rendering",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_9",
+        "obj_9"
+      ]
+    },
+    {
+      "term": "smaller scattered around",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_10",
+        "obj_10",
+        "obj_10"
+      ]
+    },
+    {
+      "term": "plastic similar material",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_10",
+        "obj_10",
+        "obj_10"
+      ]
+    },
+    {
+      "term": "fish predominantly white",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_12",
+        "obj_12",
+        "obj_12"
+      ]
+    },
+    {
+      "term": "predominantly white some",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_12",
+        "obj_12",
+        "obj_12"
+      ]
+    },
+    {
+      "term": "but seems greenish-brown",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_13",
+        "obj_13",
+        "obj_13"
+      ]
+    },
+    {
+      "term": "movement depth rendering",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_14",
+        "obj_14",
+        "obj_14"
+      ]
+    },
+    {
+      "term": "visible through branches",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_15",
+        "obj_15",
+        "obj_15"
+      ]
+    },
+    {
+      "term": "wooden structure appears",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_15",
+        "obj_15",
+        "obj_15"
+      ]
+    },
+    {
+      "term": "appears relaxed position",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_17",
+        "obj_17",
+        "obj_17"
+      ]
+    },
+    {
+      "term": "foreground unknown depth",
+      "score": 1.0,
+      "entity_types": [
+        "region"
+      ],
+      "example_entity_ids": [
+        "region_4",
+        "region_7",
+        "region_11"
+      ]
+    },
+    {
+      "term": "face region_12 region_32",
+      "score": 1.0,
+      "entity_types": [
+        "relation"
+      ],
+      "example_entity_ids": [
+        "caption_relation_0031",
+        "caption_relation_0047",
+        "caption_relation_0093"
+      ]
+    },
+    {
+      "term": "region_12 region_66 face",
+      "score": 1.0,
+      "entity_types": [
+        "relation"
+      ],
+      "example_entity_ids": [
+        "caption_relation_0032",
+        "caption_relation_0033",
+        "caption_relation_0034"
+      ]
+    },
+    {
+      "term": "face region_66 region_12",
+      "score": 1.0,
+      "entity_types": [
+        "relation"
+      ],
+      "example_entity_ids": [
+        "caption_relation_0050",
+        "caption_relation_0052",
+        "caption_relation_0088"
+      ]
+    },
+    {
+      "term": "hair wearing sunglasses",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_0",
+        "obj_0",
+        "obj_0"
+      ]
+    },
+    {
+      "term": "person close-up appears",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_2",
+        "obj_7",
+        "obj_11"
+      ]
+    },
+    {
+      "term": "contemplative face face",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_2",
+        "obj_2",
+        "obj_11"
+      ]
+    },
+    {
+      "term": "green leaves indicating",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "center there silhouette",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "structure which appears",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "which appears structure",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "serene atmosphere taken",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "looking trees landscape",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_3",
+        "obj_3",
+        "obj_3"
+      ]
+    },
+    {
+      "term": "mood somber melancholic",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_4",
+        "obj_4",
+        "obj_4"
+      ]
+    },
+    {
+      "term": "somber melancholic face",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_4",
+        "obj_4",
+        "obj_4"
+      ]
+    },
+    {
+      "term": "twenties early thirties",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_7",
+        "obj_7",
+        "obj_7"
+      ]
+    },
+    {
+      "term": "dreamy ethereal quality",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_7",
+        "obj_7",
+        "obj_7"
+      ]
+    },
+    {
+      "term": "ethereal quality petals",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_7",
+        "obj_7",
+        "obj_7"
+      ]
+    },
+    {
+      "term": "rendering long straight",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_9",
+        "obj_9",
+        "obj_9"
+      ]
+    },
+    {
+      "term": "similar material curved",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_9",
+        "obj_9",
+        "obj_9"
+      ]
+    },
+    {
+      "term": "several small scattered",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_9",
+        "obj_9",
+        "obj_9"
+      ]
+    },
+    {
+      "term": "their shoulders overall",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_11",
+        "obj_11",
+        "obj_11"
+      ]
+    },
+    {
+      "term": "creature possibly conch",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_12",
+        "obj_12",
+        "obj_12"
+      ]
+    },
+    {
+      "term": "body fish predominantly",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_12",
+        "obj_12",
+        "obj_12"
+      ]
+    },
+    {
+      "term": "taken slightly elevated",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_12",
+        "obj_12",
+        "obj_12"
+      ]
+    },
+    {
+      "term": "slightly elevated angle",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_12",
+        "obj_12",
+        "obj_12"
+      ]
+    },
+    {
+      "term": "appears relaxed content",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_13",
+        "obj_13",
+        "obj_13"
+      ]
+    },
+    {
+      "term": "pointed possibly screws",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_14",
+        "obj_14",
+        "obj_14"
+      ]
+    },
+    {
+      "term": "bolts attached arranged",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_14",
+        "obj_14",
+        "obj_14"
+      ]
+    },
+    {
+      "term": "creating sense movement",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_14",
+        "obj_14",
+        "obj_14"
+      ]
+    },
+    {
+      "term": "through branches center",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_15",
+        "obj_15",
+        "obj_15"
+      ]
+    },
+    {
+      "term": "structure appears fence",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_15",
+        "obj_15",
+        "obj_15"
+      ]
+    },
+    {
+      "term": "trees foliage landscape",
+      "score": 1.0,
+      "entity_types": [
+        "object"
+      ],
+      "example_entity_ids": [
+        "obj_15",
+        "obj_15",
+        "obj_15"
+      ]
+    },
+    {
+      "term": "midground unknown depth",
+      "score": 1.0,
+      "entity_types": [
+        "region"
+      ],
+      "example_entity_ids": [
+        "region_1",
+        "region_2",
+        "region_3"
+      ]
+    },
+    {
+      "term": "region_12 region_32 set",
+      "score": 1.0,
+      "entity_types": [
+        "relation"
+      ],
+      "example_entity_ids": [
+        "caption_relation_0012",
+        "caption_relation_0013",
+        "caption_relation_0047"
+      ]
+    },
+    {
+      "term": "region_32 set landscape",
+      "score": 1.0,
+      "entity_types": [
+        "relation"
+      ],
+      "example_entity_ids": [
+        "caption_relation_0012",
+        "caption_relation_0013",
+        "caption_relation_0126"
+      ]
+    },
+    {
+      "term": "set region_32 region_12",
+      "score": 1.0,
+      "entity_types": [
+        "relation"
+      ],
+      "example_entity_ids": [
+        "caption_relation_0026",
+        "caption_relation_0108",
+        "caption_relation_0127"
+      ]
+    },
+    {
+      "term": "region_12 landscape set",
+      "score": 1.0,
+      "entity_types": [
+        "relation"
+      ],
+      "example_entity_ids": [
+        "caption_relation_0026",
+        "caption_relation_0108",
+        "caption_relation_0127"
+      ]
+    },
+    {
+      "term": "behind person region_66",
+      "score": 1.0,
+      "entity_types": [
+        "relation"
+      ],
+      "example_entity_ids": [
+        "caption_relation_0049",
+        "caption_relation_0051",
+        "caption_relation_0086"
+      ]
+    },
+    {
+      "term": "person in_front_of face",
+      "score": 1.0,
+      "entity_types": [
+        "relation"
+      ],
+      "example_entity_ids": [
+        "caption_relation_0057",
+        "caption_relation_0061",
+        "caption_relation_0120"
+      ]
+    }
+  ],
+  "open_vocab_contract": {
+    "seed_prompts_are_priors": true,
+    "closed_vocabulary": false,
+    "concept_source": "captions_labels_tags_relations_regions_uncertainty",
+    "cpu_first": true
+  },
+  "summary": {
+    "record_count": 226,
+    "scene_caption_available": true,
+    "object_caption_count": 18,
+    "region_caption_count": 70,
+    "relation_caption_count": 132,
+    "open_vocab_concept_count": 96
+  }
+}
