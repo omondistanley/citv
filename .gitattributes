@@ -1,2 +1,4 @@
-# GitHub blocks blobs >100MiB; sample bundle JSON under output_scenes3 can exceed that.
+# GitHub blocks blobs >100MiB; large pipeline JSON is stored via Git LFS (git lfs pull after clone).
 output_scenes3/**/*.json filter=lfs diff=lfs merge=lfs -text
+output_result/**/*.json filter=lfs diff=lfs merge=lfs -text
+output_results/**/*.json filter=lfs diff=lfs merge=lfs -text

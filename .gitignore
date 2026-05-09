@@ -29,20 +29,6 @@ output/
 # Sample bundle output_scenes3: keep PNG + JSON in git; omit dense arrays (regenerate locally)
 output_scenes3/**/*.npz
 
-# Pipeline JSON exports that exceed GitHub's 100 MB blob limit (regenerate with local run)
-output_result/**/path_hypotheses.json
-output_result/**/trajectory_hypotheses.json
-output_result/**/animation_components.json
-output_result/**/action_hypotheses.json
-output_results/**/path_hypotheses.json
-output_results/**/trajectory_hypotheses.json
-output_results/**/animation_components.json
-output_results/**/action_hypotheses.json
-output_scenes3/**/path_hypotheses.json
-output_scenes3/**/trajectory_hypotheses.json
-output_scenes3/**/animation_components.json
-output_scenes3/**/action_hypotheses.json
-
 # Test inputs (sample images OK; bulk datasets not)
 # images/   ← uncomment if you don't want to push sample images
 

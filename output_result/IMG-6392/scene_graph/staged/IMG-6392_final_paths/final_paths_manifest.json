@@ -1,8 +1,3 @@
-{
-  "schema": "citv_final_paths_manifest_v1",
-  "stem": "IMG-6392",
-  "final_paths_json": "paths.json",
-  "visuals_dir": "visuals",
-  "copied_visual_files": [],
-  "source_paths_dir": "output_result/IMG-6392/scene_graph/staged/IMG-6392_paths"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:de2adebd3be3b9a7410641718f1347bc7c22966ff2ead6493db1e28fcea3f448
+size 243
