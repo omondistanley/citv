@@ -1,0 +1,551 @@
+{
+  "ordering": [
+    {
+      "object_id": "grounded_sam2_obj_31_GroundedSAM2",
+      "z": 8.207,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_20_GroundedSAM2",
+      "z": 8.491,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "z": 9.508,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "z": 9.508,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "z": 9.508,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_24_GroundedSAM2",
+      "z": 9.515,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_29_GroundedSAM2",
+      "z": 9.517,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_33_GroundedSAM2",
+      "z": 10.84,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "z": 10.904,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "z": 10.909,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "z": 10.977,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_25_GroundedSAM2",
+      "z": 11.218,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "z": 11.226,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_19_GroundedSAM2",
+      "z": 11.745,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "z": 11.771,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "z": 12.192,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_36_GroundedSAM2",
+      "z": 12.228,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_35_GroundedSAM2",
+      "z": 12.24,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "z": 12.265,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "z": 12.72,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_27_GroundedSAM2",
+      "z": 12.72,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_30_GroundedSAM2",
+      "z": 12.759,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "z": 12.839,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "z": 12.915,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_22_GroundedSAM2",
+      "z": 13.027,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_28_GroundedSAM2",
+      "z": 13.681,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_26_GroundedSAM2",
+      "z": 14.941,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_23_GroundedSAM2",
+      "z": 17.878,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "z": 19.456,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_34_GroundedSAM2",
+      "z": 19.565,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_21_GroundedSAM2",
+      "z": 19.566,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_37_GroundedSAM2",
+      "z": 19.882,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_32_GroundedSAM2",
+      "z": 19.913,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "z": 20.0,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "z": 20.013,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "z": 20.253,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "z": 20.659,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "z": 21.875,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "region_2",
+      "z": 8.7448,
+      "layer_type": "foreground",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_1",
+      "z": 10.807,
+      "layer_type": "foreground",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_3",
+      "z": 12.7204,
+      "layer_type": "midground",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_9",
+      "z": 16.367,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_7",
+      "z": 16.4969,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_8",
+      "z": 17.2482,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_5",
+      "z": 18.4365,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_4",
+      "z": 19.1782,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_6",
+      "z": 20.676,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_14",
+      "z": 23.2245,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_12",
+      "z": 23.3363,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_13",
+      "z": 23.3656,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_11",
+      "z": 23.8197,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_15",
+      "z": 24.209,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_10",
+      "z": 24.9762,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_16",
+      "z": 26.8946,
+      "layer_type": "background",
+      "entity_kind": "region"
+    }
+  ],
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "object_ids": [
+        "grounded_sam2_obj_1_GroundedSAM2",
+        "grounded_sam2_obj_2_GroundedSAM2",
+        "grounded_sam2_obj_3_GroundedSAM2",
+        "grounded_sam2_obj_4_GroundedSAM2",
+        "grounded_sam2_obj_10_GroundedSAM2",
+        "grounded_sam2_obj_13_GroundedSAM2",
+        "grounded_sam2_obj_14_GroundedSAM2",
+        "grounded_sam2_obj_20_GroundedSAM2",
+        "grounded_sam2_obj_24_GroundedSAM2",
+        "grounded_sam2_obj_25_GroundedSAM2",
+        "grounded_sam2_obj_29_GroundedSAM2",
+        "grounded_sam2_obj_31_GroundedSAM2",
+        "grounded_sam2_obj_33_GroundedSAM2"
+      ],
+      "count": 13,
+      "z_min": 8.207,
+      "z_max": 11.226
+    },
+    {
+      "layer_type": "midground",
+      "object_ids": [
+        "grounded_sam2_obj_0_GroundedSAM2",
+        "grounded_sam2_obj_5_GroundedSAM2",
+        "grounded_sam2_obj_6_GroundedSAM2",
+        "grounded_sam2_obj_7_GroundedSAM2",
+        "grounded_sam2_obj_11_GroundedSAM2",
+        "grounded_sam2_obj_15_GroundedSAM2",
+        "grounded_sam2_obj_19_GroundedSAM2",
+        "grounded_sam2_obj_22_GroundedSAM2",
+        "grounded_sam2_obj_27_GroundedSAM2",
+        "grounded_sam2_obj_30_GroundedSAM2",
+        "grounded_sam2_obj_35_GroundedSAM2",
+        "grounded_sam2_obj_36_GroundedSAM2"
+      ],
+      "count": 12,
+      "z_min": 11.745,
+      "z_max": 13.027
+    },
+    {
+      "layer_type": "background",
+      "object_ids": [
+        "grounded_sam2_obj_8_GroundedSAM2",
+        "grounded_sam2_obj_9_GroundedSAM2",
+        "grounded_sam2_obj_12_GroundedSAM2",
+        "grounded_sam2_obj_16_GroundedSAM2",
+        "grounded_sam2_obj_17_GroundedSAM2",
+        "grounded_sam2_obj_18_GroundedSAM2",
+        "grounded_sam2_obj_21_GroundedSAM2",
+        "grounded_sam2_obj_23_GroundedSAM2",
+        "grounded_sam2_obj_26_GroundedSAM2",
+        "grounded_sam2_obj_28_GroundedSAM2",
+        "grounded_sam2_obj_32_GroundedSAM2",
+        "grounded_sam2_obj_34_GroundedSAM2",
+        "grounded_sam2_obj_37_GroundedSAM2"
+      ],
+      "count": 13,
+      "z_min": 13.681,
+      "z_max": 21.875
+    }
+  ],
+  "depth_quantiles": {
+    "foreground_max_z": 11.399,
+    "midground_max_z": 13.463
+  },
+  "regions": [
+    {
+      "region_id": "region_1",
+      "region_index": 1,
+      "layer_type": "foreground",
+      "z_mean": 10.807,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_2",
+      "region_index": 2,
+      "layer_type": "foreground",
+      "z_mean": 8.7448,
+      "object_ids": [
+        "grounded_sam2_obj_1_GroundedSAM2",
+        "grounded_sam2_obj_3_GroundedSAM2",
+        "grounded_sam2_obj_13_GroundedSAM2",
+        "grounded_sam2_obj_20_GroundedSAM2",
+        "grounded_sam2_obj_24_GroundedSAM2",
+        "grounded_sam2_obj_29_GroundedSAM2",
+        "grounded_sam2_obj_31_GroundedSAM2"
+      ]
+    },
+    {
+      "region_id": "region_3",
+      "region_index": 3,
+      "layer_type": "midground",
+      "z_mean": 12.7204,
+      "object_ids": [
+        "grounded_sam2_obj_0_GroundedSAM2",
+        "grounded_sam2_obj_2_GroundedSAM2",
+        "grounded_sam2_obj_4_GroundedSAM2",
+        "grounded_sam2_obj_5_GroundedSAM2",
+        "grounded_sam2_obj_6_GroundedSAM2",
+        "grounded_sam2_obj_7_GroundedSAM2",
+        "grounded_sam2_obj_10_GroundedSAM2",
+        "grounded_sam2_obj_11_GroundedSAM2",
+        "grounded_sam2_obj_14_GroundedSAM2",
+        "grounded_sam2_obj_15_GroundedSAM2",
+        "grounded_sam2_obj_19_GroundedSAM2",
+        "grounded_sam2_obj_22_GroundedSAM2",
+        "grounded_sam2_obj_25_GroundedSAM2",
+        "grounded_sam2_obj_27_GroundedSAM2",
+        "grounded_sam2_obj_28_GroundedSAM2",
+        "grounded_sam2_obj_30_GroundedSAM2",
+        "grounded_sam2_obj_33_GroundedSAM2",
+        "grounded_sam2_obj_35_GroundedSAM2",
+        "grounded_sam2_obj_36_GroundedSAM2"
+      ]
+    },
+    {
+      "region_id": "region_4",
+      "region_index": 4,
+      "layer_type": "background",
+      "z_mean": 19.1782,
+      "object_ids": [
+        "grounded_sam2_obj_8_GroundedSAM2",
+        "grounded_sam2_obj_9_GroundedSAM2",
+        "grounded_sam2_obj_12_GroundedSAM2",
+        "grounded_sam2_obj_16_GroundedSAM2",
+        "grounded_sam2_obj_17_GroundedSAM2",
+        "grounded_sam2_obj_18_GroundedSAM2",
+        "grounded_sam2_obj_21_GroundedSAM2",
+        "grounded_sam2_obj_23_GroundedSAM2",
+        "grounded_sam2_obj_26_GroundedSAM2",
+        "grounded_sam2_obj_32_GroundedSAM2",
+        "grounded_sam2_obj_34_GroundedSAM2",
+        "grounded_sam2_obj_37_GroundedSAM2"
+      ]
+    },
+    {
+      "region_id": "region_5",
+      "region_index": 5,
+      "layer_type": "background",
+      "z_mean": 18.4365,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_6",
+      "region_index": 6,
+      "layer_type": "background",
+      "z_mean": 20.676,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_7",
+      "region_index": 7,
+      "layer_type": "background",
+      "z_mean": 16.4969,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_8",
+      "region_index": 8,
+      "layer_type": "background",
+      "z_mean": 17.2482,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_9",
+      "region_index": 9,
+      "layer_type": "background",
+      "z_mean": 16.367,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_10",
+      "region_index": 10,
+      "layer_type": "background",
+      "z_mean": 24.9762,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_11",
+      "region_index": 11,
+      "layer_type": "background",
+      "z_mean": 23.8197,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_12",
+      "region_index": 12,
+      "layer_type": "background",
+      "z_mean": 23.3363,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_13",
+      "region_index": 13,
+      "layer_type": "background",
+      "z_mean": 23.3656,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_14",
+      "region_index": 14,
+      "layer_type": "background",
+      "z_mean": 23.2245,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_15",
+      "region_index": 15,
+      "layer_type": "background",
+      "z_mean": 24.209,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_16",
+      "region_index": 16,
+      "layer_type": "background",
+      "z_mean": 26.8946,
+      "object_ids": []
+    }
+  ]
+}

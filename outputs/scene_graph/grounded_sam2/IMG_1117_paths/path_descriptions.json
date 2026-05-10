@@ -1,0 +1,6119 @@
+{
+  "rpath_IMG_1117_region_1_to_region_6_k01": {
+    "title": "region path: young (region_1) \u2192 rendering (region_6)",
+    "summary": "Confidence=0.79. Traverses regions: region_1, region_6. Invalid-pixel crossing ratio: 0.000. Max turn: 24.2\u00b0.",
+    "why_valid": "Traverses regions: region_1, region_6. Invalid-pixel crossing ratio: 0.000. Max turn: 24.2\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.79 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_IMG_1117_region_1_to_region_6_k01",
+    "source": {
+      "type": "region",
+      "id": "region_1",
+      "name": "young",
+      "display_label": "young (region_1)",
+      "start_uv": [
+        489,
+        1041
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_6",
+      "name": "rendering",
+      "display_label": "rendering (region_6)",
+      "goal_uv": [
+        633,
+        724
+      ]
+    },
+    "regions_traversed": [
+      "region_1",
+      "region_6"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.8788612734102292,
+      "depth_consistency": 0.8788612734102292,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.7913730832598752,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.7040445093640918
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 24.227745317954152
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          489,
+          1041
+        ],
+        [
+          633,
+          721
+        ],
+        [
+          633,
+          724
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 1
+  },
+  "rpath_IMG_1117_region_4_to_region_8_k01": {
+    "title": "region path: abstract (region_4) \u2192 blurred (region_8)",
+    "summary": "Confidence=0.75. Traverses regions: region_4, region_8. Invalid-pixel crossing ratio: 0.000. Max turn: 50.4\u00b0.",
+    "why_valid": "Traverses regions: region_4, region_8. Invalid-pixel crossing ratio: 0.000. Max turn: 50.4\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.75 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_IMG_1117_region_4_to_region_8_k01",
+    "source": {
+      "type": "region",
+      "id": "region_4",
+      "name": "abstract",
+      "display_label": "abstract (region_4)",
+      "start_uv": [
+        955,
+        458
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_8",
+      "name": "blurred",
+      "display_label": "blurred (region_8)",
+      "goal_uv": [
+        862,
+        323
+      ]
+    },
+    "regions_traversed": [
+      "region_4",
+      "region_8"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.7477983398449723,
+      "depth_consistency": 0.7477983398449723,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.7484206860601961,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.651619335937989
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 50.44033203100552
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          955,
+          458
+        ],
+        [
+          952,
+          467
+        ],
+        [
+          862,
+          323
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 12
+  },
+  "rpath_IMG_1117_region_7_to_region_11_k01": {
+    "title": "region path: rendering (region_7) \u2192 rendering (region_11)",
+    "summary": "Confidence=0.77. Traverses regions: region_7, region_11. Invalid-pixel crossing ratio: 0.000. Max turn: 15.4\u00b0.",
+    "why_valid": "Traverses regions: region_7, region_11. Invalid-pixel crossing ratio: 0.000. Max turn: 15.4\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.77 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_IMG_1117_region_7_to_region_11_k01",
+    "source": {
+      "type": "region",
+      "id": "region_7",
+      "name": "rendering",
+      "display_label": "rendering (region_7)",
+      "start_uv": [
+        373,
+        176
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_11",
+      "name": "rendering",
+      "display_label": "rendering (region_11)",
+      "goal_uv": [
+        283,
+        151
+      ]
+    },
+    "regions_traversed": [
+      "region_7",
+      "region_11"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.9231919184407568,
+      "depth_consistency": 0.9231919184407568,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.7733904521343602,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.7217767673763027
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 15.361616311848646
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          373,
+          176
+        ],
+        [
+          282,
+          151
+        ],
+        [
+          283,
+          151
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 5
+  },
+  "opath_IMG_1117_grounded_sam2_obj_0_GroundedSAM2_to_grounded_sam2_obj_18_GroundedSAM2_k01": {
+    "title": "object path: and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white. (grounded_sam2_obj_0_GroundedSAM2) \u2192 probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft (grounded_sam2_obj_18_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_0_GroundedSAM2_to_grounded_sam2_obj_18_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_0_GroundedSAM2",
+      "name": "and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white.",
+      "display_label": "and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white. (grounded_sam2_obj_0_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_18_GroundedSAM2",
+      "name": "probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft",
+      "display_label": "probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft (grounded_sam2_obj_18_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6979175860060197,
+      "motion_primary_score": 0.6956947162426614,
+      "depth_alignment_score": 0.978473581213307,
+      "action_fit": 0.6283018867924528,
+      "hybrid_overall": 0.6988702444760305
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.66; regions are mostly traversable/interactive; lexical semantic match=0.02",
+    "path_num": 14
+  },
+  "opath_IMG_1117_grounded_sam2_obj_0_GroundedSAM2_to_grounded_sam2_obj_14_GroundedSAM2_k01": {
+    "title": "object path: and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white. (grounded_sam2_obj_0_GroundedSAM2) \u2192 and blue striped pattern. the stripes are arranged in a diagonal line (grounded_sam2_obj_14_GroundedSAM2)",
+    "summary": "Confidence=0.77. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.77 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_0_GroundedSAM2_to_grounded_sam2_obj_14_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_0_GroundedSAM2",
+      "name": "and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white.",
+      "display_label": "and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white. (grounded_sam2_obj_0_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_14_GroundedSAM2",
+      "name": "and blue striped pattern. the stripes are arranged in a diagonal line",
+      "display_label": "and blue striped pattern. the stripes are arranged in a diagonal line (grounded_sam2_obj_14_GroundedSAM2)",
+      "goal_uv": [
+        488,
+        760
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4786607840408882,
+      "overall_confidence": 0.7747794102886851,
+      "motion_primary_score": 0.9562591193647962,
+      "depth_alignment_score": 0.8532423208191122,
+      "action_fit": 0.6291666666666667,
+      "hybrid_overall": 0.6970023921132089
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          484,
+          723
+        ],
+        [
+          484,
+          723
+        ],
+        [
+          484,
+          724
+        ],
+        [
+          484,
+          724
+        ],
+        [
+          484,
+          725
+        ],
+        [
+          484,
+          725
+        ],
+        [
+          484,
+          725
+        ],
+        [
+          485,
+          726
+        ],
+        [
+          485,
+          726
+        ],
+        [
+          485,
+          726
+        ],
+        [
+          485,
+          727
+        ],
+        [
+          485,
+          727
+        ],
+        [
+          485,
+          728
+        ],
+        [
+          485,
+          728
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          730
+        ],
+        [
+          485,
+          730
+        ],
+        [
+          485,
+          731
+        ],
+        [
+          485,
+          731
+        ],
+        [
+          485,
+          732
+        ],
+        [
+          485,
+          732
+        ],
+        [
+          485,
+          733
+        ],
+        [
+          485,
+          733
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          735
+        ],
+        [
+          485,
+          735
+        ],
+        [
+          485,
+          736
+        ],
+        [
+          485,
+          736
+        ],
+        [
+          485,
+          737
+        ],
+        [
+          485,
+          737
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          739
+        ],
+        [
+          485,
+          739
+        ],
+        [
+          485,
+          740
+        ],
+        [
+          485,
+          740
+        ],
+        [
+          485,
+          741
+        ],
+        [
+          485,
+          741
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          743
+        ],
+        [
+          485,
+          743
+        ],
+        [
+          485,
+          744
+        ],
+        [
+          485,
+          744
+        ],
+        [
+          485,
+          745
+        ],
+        [
+          485,
+          745
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          747
+        ],
+        [
+          485,
+          747
+        ],
+        [
+          485,
+          748
+        ],
+        [
+          485,
+          748
+        ],
+        [
+          485,
+          749
+        ],
+        [
+          485,
+          749
+        ],
+        [
+          485,
+          749
+        ],
+        [
+          486,
+          750
+        ],
+        [
+          486,
+          750
+        ],
+        [
+          486,
+          750
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          752
+        ],
+        [
+          487,
+          752
+        ],
+        [
+          487,
+          753
+        ],
+        [
+          487,
+          753
+        ],
+        [
+          487,
+          754
+        ],
+        [
+          487,
+          754
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          756
+        ],
+        [
+          487,
+          756
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          488,
+          758
+        ],
+        [
+          488,
+          758
+        ],
+        [
+          488,
+          759
+        ],
+        [
+          488,
+          759
+        ],
+        [
+          488,
+          760
+        ],
+        [
+          488,
+          760
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.66; regions are mostly traversable/interactive; lexical semantic match=0.02",
+    "path_num": 4
+  },
+  "opath_IMG_1117_grounded_sam2_obj_1_GroundedSAM2_to_grounded_sam2_obj_13_GroundedSAM2_k01": {
+    "title": "object path: floor pavement (grounded_sam2_obj_1_GroundedSAM2) \u2192 floor pavement golf course (grounded_sam2_obj_13_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_1_GroundedSAM2_to_grounded_sam2_obj_13_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_1_GroundedSAM2",
+      "name": "floor pavement",
+      "display_label": "floor pavement (grounded_sam2_obj_1_GroundedSAM2)",
+      "start_uv": [
+        492,
+        1040
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_13_GroundedSAM2",
+      "name": "floor pavement golf course",
+      "display_label": "floor pavement golf course (grounded_sam2_obj_13_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4379867911338806,
+      "overall_confidence": 0.6913045206069947,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6875778865814209
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 28
+  },
+  "opath_IMG_1117_grounded_sam2_obj_1_GroundedSAM2_to_grounded_sam2_obj_11_GroundedSAM2_k01": {
+    "title": "object path: floor pavement (grounded_sam2_obj_1_GroundedSAM2) \u2192 concrete floor pavement golf course (grounded_sam2_obj_11_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_1_GroundedSAM2_to_grounded_sam2_obj_11_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_1_GroundedSAM2",
+      "name": "floor pavement",
+      "display_label": "floor pavement (grounded_sam2_obj_1_GroundedSAM2)",
+      "start_uv": [
+        492,
+        1040
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_11_GroundedSAM2",
+      "name": "concrete floor pavement golf course",
+      "display_label": "concrete floor pavement golf course (grounded_sam2_obj_11_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4379867911338806,
+      "overall_confidence": 0.6913045206069947,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6875778865814209
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 29
+  },
+  "opath_IMG_1117_grounded_sam2_obj_1_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01": {
+    "title": "object path: floor pavement (grounded_sam2_obj_1_GroundedSAM2) \u2192 cement concrete floor golf course (grounded_sam2_obj_5_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_1_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_1_GroundedSAM2",
+      "name": "floor pavement",
+      "display_label": "floor pavement (grounded_sam2_obj_1_GroundedSAM2)",
+      "start_uv": [
+        492,
+        1040
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_5_GroundedSAM2",
+      "name": "cement concrete floor golf course",
+      "display_label": "cement concrete floor golf course (grounded_sam2_obj_5_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4379867911338806,
+      "overall_confidence": 0.6913045206069947,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6875778865814209
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 30
+  },
+  "opath_IMG_1117_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_18_GroundedSAM2_k01": {
+    "title": "object path: jacket (grounded_sam2_obj_2_GroundedSAM2) \u2192 probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft (grounded_sam2_obj_18_GroundedSAM2)",
+    "summary": "Confidence=0.77. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.77 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_18_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_2_GroundedSAM2",
+      "name": "jacket",
+      "display_label": "jacket (grounded_sam2_obj_2_GroundedSAM2)",
+      "start_uv": [
+        488,
+        760
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_18_GroundedSAM2",
+      "name": "probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft",
+      "display_label": "probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft (grounded_sam2_obj_18_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4786701252063116,
+      "overall_confidence": 0.7717955068648061,
+      "motion_primary_score": 0.9531148428056638,
+      "depth_alignment_score": 0.83752093802345,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6940872200330099
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          488,
+          760
+        ],
+        [
+          488,
+          760
+        ],
+        [
+          488,
+          759
+        ],
+        [
+          488,
+          759
+        ],
+        [
+          488,
+          758
+        ],
+        [
+          488,
+          758
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          487,
+          756
+        ],
+        [
+          487,
+          756
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          754
+        ],
+        [
+          487,
+          754
+        ],
+        [
+          487,
+          753
+        ],
+        [
+          487,
+          753
+        ],
+        [
+          487,
+          752
+        ],
+        [
+          487,
+          752
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          750
+        ],
+        [
+          487,
+          750
+        ],
+        [
+          487,
+          749
+        ],
+        [
+          487,
+          749
+        ],
+        [
+          487,
+          749
+        ],
+        [
+          486,
+          748
+        ],
+        [
+          486,
+          748
+        ],
+        [
+          486,
+          747
+        ],
+        [
+          486,
+          747
+        ],
+        [
+          486,
+          747
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          745
+        ],
+        [
+          485,
+          745
+        ],
+        [
+          485,
+          744
+        ],
+        [
+          485,
+          744
+        ],
+        [
+          485,
+          743
+        ],
+        [
+          485,
+          743
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          741
+        ],
+        [
+          485,
+          741
+        ],
+        [
+          485,
+          740
+        ],
+        [
+          485,
+          740
+        ],
+        [
+          485,
+          739
+        ],
+        [
+          485,
+          739
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          737
+        ],
+        [
+          485,
+          737
+        ],
+        [
+          485,
+          736
+        ],
+        [
+          485,
+          736
+        ],
+        [
+          485,
+          735
+        ],
+        [
+          485,
+          735
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          733
+        ],
+        [
+          485,
+          733
+        ],
+        [
+          485,
+          732
+        ],
+        [
+          485,
+          732
+        ],
+        [
+          485,
+          731
+        ],
+        [
+          485,
+          731
+        ],
+        [
+          485,
+          730
+        ],
+        [
+          485,
+          730
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          728
+        ],
+        [
+          485,
+          728
+        ],
+        [
+          485,
+          727
+        ],
+        [
+          485,
+          727
+        ],
+        [
+          485,
+          726
+        ],
+        [
+          485,
+          726
+        ],
+        [
+          485,
+          725
+        ],
+        [
+          485,
+          725
+        ],
+        [
+          485,
+          725
+        ],
+        [
+          485,
+          724
+        ],
+        [
+          485,
+          724
+        ],
+        [
+          485,
+          723
+        ],
+        [
+          485,
+          723
+        ],
+        [
+          485,
+          723
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 7
+  },
+  "opath_IMG_1117_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_0_GroundedSAM2_k01": {
+    "title": "object path: jacket (grounded_sam2_obj_2_GroundedSAM2) \u2192 and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white. (grounded_sam2_obj_0_GroundedSAM2)",
+    "summary": "Confidence=0.78. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.78 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_0_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_2_GroundedSAM2",
+      "name": "jacket",
+      "display_label": "jacket (grounded_sam2_obj_2_GroundedSAM2)",
+      "start_uv": [
+        488,
+        760
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_0_GroundedSAM2",
+      "name": "and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white.",
+      "display_label": "and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white. (grounded_sam2_obj_0_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4786701252063116,
+      "overall_confidence": 0.7751207342769902,
+      "motion_primary_score": 0.9562591193647962,
+      "depth_alignment_score": 0.8532423208191122,
+      "action_fit": 0.6298611111111111,
+      "hybrid_overall": 0.6974899978107877
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          488,
+          760
+        ],
+        [
+          488,
+          760
+        ],
+        [
+          488,
+          759
+        ],
+        [
+          488,
+          759
+        ],
+        [
+          488,
+          758
+        ],
+        [
+          488,
+          758
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          487,
+          756
+        ],
+        [
+          487,
+          756
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          754
+        ],
+        [
+          487,
+          754
+        ],
+        [
+          487,
+          753
+        ],
+        [
+          487,
+          753
+        ],
+        [
+          487,
+          752
+        ],
+        [
+          487,
+          752
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          750
+        ],
+        [
+          487,
+          750
+        ],
+        [
+          487,
+          749
+        ],
+        [
+          487,
+          749
+        ],
+        [
+          487,
+          749
+        ],
+        [
+          486,
+          748
+        ],
+        [
+          486,
+          748
+        ],
+        [
+          486,
+          747
+        ],
+        [
+          486,
+          747
+        ],
+        [
+          486,
+          747
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          745
+        ],
+        [
+          485,
+          745
+        ],
+        [
+          485,
+          744
+        ],
+        [
+          485,
+          744
+        ],
+        [
+          485,
+          743
+        ],
+        [
+          485,
+          743
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          741
+        ],
+        [
+          485,
+          741
+        ],
+        [
+          485,
+          740
+        ],
+        [
+          485,
+          740
+        ],
+        [
+          485,
+          739
+        ],
+        [
+          485,
+          739
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          737
+        ],
+        [
+          485,
+          737
+        ],
+        [
+          485,
+          736
+        ],
+        [
+          485,
+          736
+        ],
+        [
+          485,
+          735
+        ],
+        [
+          485,
+          735
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          733
+        ],
+        [
+          485,
+          733
+        ],
+        [
+          485,
+          732
+        ],
+        [
+          485,
+          732
+        ],
+        [
+          485,
+          731
+        ],
+        [
+          485,
+          731
+        ],
+        [
+          485,
+          730
+        ],
+        [
+          485,
+          730
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          728
+        ],
+        [
+          485,
+          728
+        ],
+        [
+          485,
+          727
+        ],
+        [
+          485,
+          727
+        ],
+        [
+          485,
+          726
+        ],
+        [
+          485,
+          726
+        ],
+        [
+          485,
+          725
+        ],
+        [
+          485,
+          725
+        ],
+        [
+          485,
+          725
+        ],
+        [
+          485,
+          724
+        ],
+        [
+          485,
+          724
+        ],
+        [
+          485,
+          723
+        ],
+        [
+          485,
+          723
+        ],
+        [
+          485,
+          723
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.66; regions are mostly traversable/interactive; lexical semantic match=0.03",
+    "path_num": 2
+  },
+  "opath_IMG_1117_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_15_GroundedSAM2_k01": {
+    "title": "object path: baby child (grounded_sam2_obj_3_GroundedSAM2) \u2192 baby child (grounded_sam2_obj_15_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_15_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_3_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_3_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_15_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_15_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6965882967524122,
+      "motion_primary_score": 0.6966568338249756,
+      "depth_alignment_score": 0.9832841691248776,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6965589237213136
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 20
+  },
+  "opath_IMG_1117_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_17_GroundedSAM2_k01": {
+    "title": "object path: baby child (grounded_sam2_obj_3_GroundedSAM2) \u2192 baby child (grounded_sam2_obj_17_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_17_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_3_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_3_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_17_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_17_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6975912466049194,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6965589237213136
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 16
+  },
+  "opath_IMG_1117_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01": {
+    "title": "object path: baby child (grounded_sam2_obj_3_GroundedSAM2) \u2192 baby boy (grounded_sam2_obj_7_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_3_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_3_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_7_GroundedSAM2",
+      "name": "baby boy",
+      "display_label": "baby boy (grounded_sam2_obj_7_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6965882967524122,
+      "motion_primary_score": 0.6966568338249756,
+      "depth_alignment_score": 0.9832841691248776,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6965589237213136
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 21
+  },
+  "opath_IMG_1117_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_18_GroundedSAM2_k01": {
+    "title": "object path: baby child (grounded_sam2_obj_3_GroundedSAM2) \u2192 probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft (grounded_sam2_obj_18_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_18_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_3_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_3_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_18_GroundedSAM2",
+      "name": "probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft",
+      "display_label": "probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft (grounded_sam2_obj_18_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6962996614777179,
+      "motion_primary_score": 0.6956947162426614,
+      "depth_alignment_score": 0.978473581213307,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6965589237213136
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 26
+  },
+  "opath_IMG_1117_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_12_GroundedSAM2_k01": {
+    "title": "object path: cement concrete (grounded_sam2_obj_4_GroundedSAM2) \u2192 cement concrete (grounded_sam2_obj_12_GroundedSAM2)",
+    "summary": "Confidence=0.76. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.76 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_12_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "cement concrete",
+      "display_label": "cement concrete (grounded_sam2_obj_4_GroundedSAM2)",
+      "start_uv": [
+        492,
+        1040
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_12_GroundedSAM2",
+      "name": "cement concrete",
+      "display_label": "cement concrete (grounded_sam2_obj_12_GroundedSAM2)",
+      "goal_uv": [
+        489,
+        1081
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.46559565141797066,
+      "overall_confidence": 0.7612754659417815,
+      "motion_primary_score": 0.9229291766098959,
+      "depth_alignment_score": 0.6548788474132285,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6919953042268754
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1041
+        ],
+        [
+          492,
+          1041
+        ],
+        [
+          492,
+          1042
+        ],
+        [
+          492,
+          1042
+        ],
+        [
+          492,
+          1043
+        ],
+        [
+          492,
+          1043
+        ],
+        [
+          492,
+          1044
+        ],
+        [
+          492,
+          1044
+        ],
+        [
+          492,
+          1044
+        ],
+        [
+          492,
+          1045
+        ],
+        [
+          492,
+          1045
+        ],
+        [
+          492,
+          1046
+        ],
+        [
+          492,
+          1046
+        ],
+        [
+          492,
+          1047
+        ],
+        [
+          492,
+          1047
+        ],
+        [
+          492,
+          1048
+        ],
+        [
+          492,
+          1048
+        ],
+        [
+          492,
+          1048
+        ],
+        [
+          492,
+          1049
+        ],
+        [
+          492,
+          1049
+        ],
+        [
+          492,
+          1050
+        ],
+        [
+          492,
+          1050
+        ],
+        [
+          492,
+          1051
+        ],
+        [
+          492,
+          1051
+        ],
+        [
+          492,
+          1052
+        ],
+        [
+          492,
+          1052
+        ],
+        [
+          492,
+          1052
+        ],
+        [
+          492,
+          1053
+        ],
+        [
+          492,
+          1053
+        ],
+        [
+          492,
+          1054
+        ],
+        [
+          492,
+          1054
+        ],
+        [
+          492,
+          1055
+        ],
+        [
+          492,
+          1055
+        ],
+        [
+          492,
+          1056
+        ],
+        [
+          492,
+          1056
+        ],
+        [
+          492,
+          1056
+        ],
+        [
+          492,
+          1057
+        ],
+        [
+          492,
+          1057
+        ],
+        [
+          492,
+          1058
+        ],
+        [
+          492,
+          1058
+        ],
+        [
+          492,
+          1059
+        ],
+        [
+          492,
+          1059
+        ],
+        [
+          492,
+          1060
+        ],
+        [
+          492,
+          1060
+        ],
+        [
+          492,
+          1060
+        ],
+        [
+          492,
+          1061
+        ],
+        [
+          492,
+          1061
+        ],
+        [
+          492,
+          1062
+        ],
+        [
+          492,
+          1062
+        ],
+        [
+          492,
+          1063
+        ],
+        [
+          492,
+          1063
+        ],
+        [
+          492,
+          1064
+        ],
+        [
+          492,
+          1064
+        ],
+        [
+          492,
+          1064
+        ],
+        [
+          492,
+          1065
+        ],
+        [
+          492,
+          1065
+        ],
+        [
+          492,
+          1066
+        ],
+        [
+          492,
+          1066
+        ],
+        [
+          492,
+          1067
+        ],
+        [
+          492,
+          1067
+        ],
+        [
+          492,
+          1068
+        ],
+        [
+          492,
+          1068
+        ],
+        [
+          492,
+          1068
+        ],
+        [
+          492,
+          1069
+        ],
+        [
+          492,
+          1069
+        ],
+        [
+          491,
+          1070
+        ],
+        [
+          491,
+          1070
+        ],
+        [
+          491,
+          1070
+        ],
+        [
+          491,
+          1071
+        ],
+        [
+          491,
+          1071
+        ],
+        [
+          491,
+          1072
+        ],
+        [
+          491,
+          1072
+        ],
+        [
+          491,
+          1072
+        ],
+        [
+          491,
+          1073
+        ],
+        [
+          491,
+          1073
+        ],
+        [
+          490,
+          1074
+        ],
+        [
+          490,
+          1074
+        ],
+        [
+          490,
+          1074
+        ],
+        [
+          490,
+          1075
+        ],
+        [
+          490,
+          1075
+        ],
+        [
+          490,
+          1076
+        ],
+        [
+          490,
+          1076
+        ],
+        [
+          490,
+          1077
+        ],
+        [
+          490,
+          1077
+        ],
+        [
+          490,
+          1077
+        ],
+        [
+          489,
+          1078
+        ],
+        [
+          489,
+          1078
+        ],
+        [
+          489,
+          1078
+        ],
+        [
+          489,
+          1079
+        ],
+        [
+          489,
+          1079
+        ],
+        [
+          489,
+          1080
+        ],
+        [
+          489,
+          1080
+        ],
+        [
+          489,
+          1081
+        ],
+        [
+          489,
+          1081
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 8
+  },
+  "opath_IMG_1117_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01": {
+    "title": "object path: cement concrete (grounded_sam2_obj_4_GroundedSAM2) \u2192 cement concrete floor golf course (grounded_sam2_obj_5_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "cement concrete",
+      "display_label": "cement concrete (grounded_sam2_obj_4_GroundedSAM2)",
+      "start_uv": [
+        492,
+        1040
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_5_GroundedSAM2",
+      "name": "cement concrete floor golf course",
+      "display_label": "cement concrete floor golf course (grounded_sam2_obj_5_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4379867911338806,
+      "overall_confidence": 0.6913045206069947,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6875778865814209
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 31
+  },
+  "opath_IMG_1117_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_11_GroundedSAM2_k01": {
+    "title": "object path: cement concrete (grounded_sam2_obj_4_GroundedSAM2) \u2192 concrete floor pavement golf course (grounded_sam2_obj_11_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_11_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "cement concrete",
+      "display_label": "cement concrete (grounded_sam2_obj_4_GroundedSAM2)",
+      "start_uv": [
+        492,
+        1040
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_11_GroundedSAM2",
+      "name": "concrete floor pavement golf course",
+      "display_label": "concrete floor pavement golf course (grounded_sam2_obj_11_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4379867911338806,
+      "overall_confidence": 0.6913045206069947,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6875778865814209
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 32
+  },
+  "opath_IMG_1117_grounded_sam2_obj_5_GroundedSAM2_to_grounded_sam2_obj_11_GroundedSAM2_k01": {
+    "title": "object path: cement concrete floor golf course (grounded_sam2_obj_5_GroundedSAM2) \u2192 concrete floor pavement golf course (grounded_sam2_obj_11_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_5_GroundedSAM2_to_grounded_sam2_obj_11_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_5_GroundedSAM2",
+      "name": "cement concrete floor golf course",
+      "display_label": "cement concrete floor golf course (grounded_sam2_obj_5_GroundedSAM2)",
+      "start_uv": [
+        492,
+        1040
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_11_GroundedSAM2",
+      "name": "concrete floor pavement golf course",
+      "display_label": "concrete floor pavement golf course (grounded_sam2_obj_11_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4379867911338806,
+      "overall_confidence": 0.6913045206069947,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6875778865814209
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 33
+  },
+  "opath_IMG_1117_grounded_sam2_obj_5_GroundedSAM2_to_grounded_sam2_obj_13_GroundedSAM2_k01": {
+    "title": "object path: cement concrete floor golf course (grounded_sam2_obj_5_GroundedSAM2) \u2192 floor pavement golf course (grounded_sam2_obj_13_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_5_GroundedSAM2_to_grounded_sam2_obj_13_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_5_GroundedSAM2",
+      "name": "cement concrete floor golf course",
+      "display_label": "cement concrete floor golf course (grounded_sam2_obj_5_GroundedSAM2)",
+      "start_uv": [
+        492,
+        1040
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_13_GroundedSAM2",
+      "name": "floor pavement golf course",
+      "display_label": "floor pavement golf course (grounded_sam2_obj_13_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4379867911338806,
+      "overall_confidence": 0.6913045206069947,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6875778865814209
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 34
+  },
+  "opath_IMG_1117_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_0_GroundedSAM2_k01": {
+    "title": "object path: baby boy (grounded_sam2_obj_7_GroundedSAM2) \u2192 and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white. (grounded_sam2_obj_0_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_0_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_7_GroundedSAM2",
+      "name": "baby boy",
+      "display_label": "baby boy (grounded_sam2_obj_7_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_0_GroundedSAM2",
+      "name": "and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white.",
+      "display_label": "and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white. (grounded_sam2_obj_0_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6988448756997806,
+      "motion_primary_score": 0.6966568338249756,
+      "depth_alignment_score": 0.9832841691248776,
+      "action_fit": 0.6296052631578948,
+      "hybrid_overall": 0.6997826079318399
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.66; regions are mostly traversable/interactive; lexical semantic match=0.03",
+    "path_num": 13
+  },
+  "opath_IMG_1117_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01": {
+    "title": "object path: baby boy (grounded_sam2_obj_7_GroundedSAM2) \u2192 jacket (grounded_sam2_obj_2_GroundedSAM2)",
+    "summary": "Confidence=0.77. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.77 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_7_GroundedSAM2",
+      "name": "baby boy",
+      "display_label": "baby boy (grounded_sam2_obj_7_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_2_GroundedSAM2",
+      "name": "jacket",
+      "display_label": "jacket (grounded_sam2_obj_2_GroundedSAM2)",
+      "goal_uv": [
+        488,
+        760
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4786607840408882,
+      "overall_confidence": 0.7720057779641248,
+      "motion_primary_score": 0.9538192338384843,
+      "depth_alignment_score": 0.8410428931875525,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6940857254465422
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          484,
+          723
+        ],
+        [
+          484,
+          723
+        ],
+        [
+          484,
+          724
+        ],
+        [
+          484,
+          724
+        ],
+        [
+          484,
+          725
+        ],
+        [
+          484,
+          725
+        ],
+        [
+          484,
+          725
+        ],
+        [
+          485,
+          726
+        ],
+        [
+          485,
+          726
+        ],
+        [
+          485,
+          726
+        ],
+        [
+          485,
+          727
+        ],
+        [
+          485,
+          727
+        ],
+        [
+          485,
+          728
+        ],
+        [
+          485,
+          728
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          730
+        ],
+        [
+          485,
+          730
+        ],
+        [
+          485,
+          731
+        ],
+        [
+          485,
+          731
+        ],
+        [
+          485,
+          732
+        ],
+        [
+          485,
+          732
+        ],
+        [
+          485,
+          733
+        ],
+        [
+          485,
+          733
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          735
+        ],
+        [
+          485,
+          735
+        ],
+        [
+          485,
+          736
+        ],
+        [
+          485,
+          736
+        ],
+        [
+          485,
+          737
+        ],
+        [
+          485,
+          737
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          739
+        ],
+        [
+          485,
+          739
+        ],
+        [
+          485,
+          740
+        ],
+        [
+          485,
+          740
+        ],
+        [
+          485,
+          741
+        ],
+        [
+          485,
+          741
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          743
+        ],
+        [
+          485,
+          743
+        ],
+        [
+          485,
+          744
+        ],
+        [
+          485,
+          744
+        ],
+        [
+          485,
+          745
+        ],
+        [
+          485,
+          745
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          747
+        ],
+        [
+          485,
+          747
+        ],
+        [
+          485,
+          748
+        ],
+        [
+          485,
+          748
+        ],
+        [
+          485,
+          749
+        ],
+        [
+          485,
+          749
+        ],
+        [
+          485,
+          749
+        ],
+        [
+          486,
+          750
+        ],
+        [
+          486,
+          750
+        ],
+        [
+          486,
+          750
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          752
+        ],
+        [
+          487,
+          752
+        ],
+        [
+          487,
+          753
+        ],
+        [
+          487,
+          753
+        ],
+        [
+          487,
+          754
+        ],
+        [
+          487,
+          754
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          756
+        ],
+        [
+          487,
+          756
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          488,
+          758
+        ],
+        [
+          488,
+          758
+        ],
+        [
+          488,
+          759
+        ],
+        [
+          488,
+          759
+        ],
+        [
+          488,
+          760
+        ],
+        [
+          488,
+          760
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 6
+  },
+  "opath_IMG_1117_grounded_sam2_obj_11_GroundedSAM2_to_grounded_sam2_obj_13_GroundedSAM2_k01": {
+    "title": "object path: concrete floor pavement golf course (grounded_sam2_obj_11_GroundedSAM2) \u2192 floor pavement golf course (grounded_sam2_obj_13_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_11_GroundedSAM2_to_grounded_sam2_obj_13_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_11_GroundedSAM2",
+      "name": "concrete floor pavement golf course",
+      "display_label": "concrete floor pavement golf course (grounded_sam2_obj_11_GroundedSAM2)",
+      "start_uv": [
+        492,
+        1040
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_13_GroundedSAM2",
+      "name": "floor pavement golf course",
+      "display_label": "floor pavement golf course (grounded_sam2_obj_13_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4379867911338806,
+      "overall_confidence": 0.6913045206069947,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6875778865814209
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 35
+  },
+  "opath_IMG_1117_grounded_sam2_obj_11_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01": {
+    "title": "object path: concrete floor pavement golf course (grounded_sam2_obj_11_GroundedSAM2) \u2192 cement concrete floor golf course (grounded_sam2_obj_5_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_11_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_11_GroundedSAM2",
+      "name": "concrete floor pavement golf course",
+      "display_label": "concrete floor pavement golf course (grounded_sam2_obj_11_GroundedSAM2)",
+      "start_uv": [
+        492,
+        1040
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_5_GroundedSAM2",
+      "name": "cement concrete floor golf course",
+      "display_label": "cement concrete floor golf course (grounded_sam2_obj_5_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4379867911338806,
+      "overall_confidence": 0.6913045206069947,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6875778865814209
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 36
+  },
+  "opath_IMG_1117_grounded_sam2_obj_12_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01": {
+    "title": "object path: cement concrete (grounded_sam2_obj_12_GroundedSAM2) \u2192 cement concrete (grounded_sam2_obj_4_GroundedSAM2)",
+    "summary": "Confidence=0.76. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.76 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_12_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_12_GroundedSAM2",
+      "name": "cement concrete",
+      "display_label": "cement concrete (grounded_sam2_obj_12_GroundedSAM2)",
+      "start_uv": [
+        489,
+        1081
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "cement concrete",
+      "display_label": "cement concrete (grounded_sam2_obj_4_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4652162318428358,
+      "overall_confidence": 0.7612329709493664,
+      "motion_primary_score": 0.9229291766098957,
+      "depth_alignment_score": 0.6548788474132285,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6919345970948538
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          489,
+          1081
+        ],
+        [
+          489,
+          1081
+        ],
+        [
+          489,
+          1080
+        ],
+        [
+          489,
+          1080
+        ],
+        [
+          489,
+          1079
+        ],
+        [
+          489,
+          1079
+        ],
+        [
+          489,
+          1078
+        ],
+        [
+          489,
+          1078
+        ],
+        [
+          489,
+          1078
+        ],
+        [
+          490,
+          1077
+        ],
+        [
+          490,
+          1077
+        ],
+        [
+          490,
+          1077
+        ],
+        [
+          490,
+          1076
+        ],
+        [
+          490,
+          1076
+        ],
+        [
+          490,
+          1075
+        ],
+        [
+          490,
+          1075
+        ],
+        [
+          490,
+          1075
+        ],
+        [
+          491,
+          1074
+        ],
+        [
+          491,
+          1074
+        ],
+        [
+          491,
+          1073
+        ],
+        [
+          491,
+          1073
+        ],
+        [
+          491,
+          1072
+        ],
+        [
+          491,
+          1072
+        ],
+        [
+          491,
+          1072
+        ],
+        [
+          491,
+          1071
+        ],
+        [
+          491,
+          1071
+        ],
+        [
+          491,
+          1070
+        ],
+        [
+          491,
+          1070
+        ],
+        [
+          491,
+          1070
+        ],
+        [
+          492,
+          1069
+        ],
+        [
+          492,
+          1069
+        ],
+        [
+          492,
+          1068
+        ],
+        [
+          492,
+          1068
+        ],
+        [
+          492,
+          1068
+        ],
+        [
+          492,
+          1067
+        ],
+        [
+          492,
+          1067
+        ],
+        [
+          492,
+          1066
+        ],
+        [
+          492,
+          1066
+        ],
+        [
+          492,
+          1065
+        ],
+        [
+          492,
+          1065
+        ],
+        [
+          492,
+          1064
+        ],
+        [
+          492,
+          1064
+        ],
+        [
+          492,
+          1064
+        ],
+        [
+          492,
+          1063
+        ],
+        [
+          492,
+          1063
+        ],
+        [
+          492,
+          1062
+        ],
+        [
+          492,
+          1062
+        ],
+        [
+          492,
+          1061
+        ],
+        [
+          492,
+          1061
+        ],
+        [
+          492,
+          1060
+        ],
+        [
+          492,
+          1060
+        ],
+        [
+          492,
+          1060
+        ],
+        [
+          492,
+          1059
+        ],
+        [
+          492,
+          1059
+        ],
+        [
+          492,
+          1058
+        ],
+        [
+          492,
+          1058
+        ],
+        [
+          492,
+          1057
+        ],
+        [
+          492,
+          1057
+        ],
+        [
+          492,
+          1056
+        ],
+        [
+          492,
+          1056
+        ],
+        [
+          492,
+          1056
+        ],
+        [
+          492,
+          1055
+        ],
+        [
+          492,
+          1055
+        ],
+        [
+          492,
+          1054
+        ],
+        [
+          492,
+          1054
+        ],
+        [
+          492,
+          1053
+        ],
+        [
+          492,
+          1053
+        ],
+        [
+          492,
+          1052
+        ],
+        [
+          492,
+          1052
+        ],
+        [
+          492,
+          1052
+        ],
+        [
+          492,
+          1051
+        ],
+        [
+          492,
+          1051
+        ],
+        [
+          492,
+          1050
+        ],
+        [
+          492,
+          1050
+        ],
+        [
+          492,
+          1049
+        ],
+        [
+          492,
+          1049
+        ],
+        [
+          492,
+          1048
+        ],
+        [
+          492,
+          1048
+        ],
+        [
+          492,
+          1048
+        ],
+        [
+          492,
+          1047
+        ],
+        [
+          492,
+          1047
+        ],
+        [
+          492,
+          1046
+        ],
+        [
+          492,
+          1046
+        ],
+        [
+          492,
+          1045
+        ],
+        [
+          492,
+          1045
+        ],
+        [
+          492,
+          1044
+        ],
+        [
+          492,
+          1044
+        ],
+        [
+          492,
+          1044
+        ],
+        [
+          492,
+          1043
+        ],
+        [
+          492,
+          1043
+        ],
+        [
+          492,
+          1042
+        ],
+        [
+          492,
+          1042
+        ],
+        [
+          492,
+          1041
+        ],
+        [
+          492,
+          1041
+        ],
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 9
+  },
+  "opath_IMG_1117_grounded_sam2_obj_12_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01": {
+    "title": "object path: cement concrete (grounded_sam2_obj_12_GroundedSAM2) \u2192 cement concrete floor golf course (grounded_sam2_obj_5_GroundedSAM2)",
+    "summary": "Confidence=0.76. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.76 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_12_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_12_GroundedSAM2",
+      "name": "cement concrete",
+      "display_label": "cement concrete (grounded_sam2_obj_12_GroundedSAM2)",
+      "start_uv": [
+        489,
+        1081
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_5_GroundedSAM2",
+      "name": "cement concrete floor golf course",
+      "display_label": "cement concrete floor golf course (grounded_sam2_obj_5_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4652162318428358,
+      "overall_confidence": 0.7612329709493664,
+      "motion_primary_score": 0.9229291766098957,
+      "depth_alignment_score": 0.6548788474132285,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6919345970948538
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          489,
+          1081
+        ],
+        [
+          489,
+          1081
+        ],
+        [
+          489,
+          1080
+        ],
+        [
+          489,
+          1080
+        ],
+        [
+          489,
+          1079
+        ],
+        [
+          489,
+          1079
+        ],
+        [
+          489,
+          1078
+        ],
+        [
+          489,
+          1078
+        ],
+        [
+          489,
+          1078
+        ],
+        [
+          490,
+          1077
+        ],
+        [
+          490,
+          1077
+        ],
+        [
+          490,
+          1077
+        ],
+        [
+          490,
+          1076
+        ],
+        [
+          490,
+          1076
+        ],
+        [
+          490,
+          1075
+        ],
+        [
+          490,
+          1075
+        ],
+        [
+          490,
+          1075
+        ],
+        [
+          491,
+          1074
+        ],
+        [
+          491,
+          1074
+        ],
+        [
+          491,
+          1073
+        ],
+        [
+          491,
+          1073
+        ],
+        [
+          491,
+          1072
+        ],
+        [
+          491,
+          1072
+        ],
+        [
+          491,
+          1072
+        ],
+        [
+          491,
+          1071
+        ],
+        [
+          491,
+          1071
+        ],
+        [
+          491,
+          1070
+        ],
+        [
+          491,
+          1070
+        ],
+        [
+          491,
+          1070
+        ],
+        [
+          492,
+          1069
+        ],
+        [
+          492,
+          1069
+        ],
+        [
+          492,
+          1068
+        ],
+        [
+          492,
+          1068
+        ],
+        [
+          492,
+          1068
+        ],
+        [
+          492,
+          1067
+        ],
+        [
+          492,
+          1067
+        ],
+        [
+          492,
+          1066
+        ],
+        [
+          492,
+          1066
+        ],
+        [
+          492,
+          1065
+        ],
+        [
+          492,
+          1065
+        ],
+        [
+          492,
+          1064
+        ],
+        [
+          492,
+          1064
+        ],
+        [
+          492,
+          1064
+        ],
+        [
+          492,
+          1063
+        ],
+        [
+          492,
+          1063
+        ],
+        [
+          492,
+          1062
+        ],
+        [
+          492,
+          1062
+        ],
+        [
+          492,
+          1061
+        ],
+        [
+          492,
+          1061
+        ],
+        [
+          492,
+          1060
+        ],
+        [
+          492,
+          1060
+        ],
+        [
+          492,
+          1060
+        ],
+        [
+          492,
+          1059
+        ],
+        [
+          492,
+          1059
+        ],
+        [
+          492,
+          1058
+        ],
+        [
+          492,
+          1058
+        ],
+        [
+          492,
+          1057
+        ],
+        [
+          492,
+          1057
+        ],
+        [
+          492,
+          1056
+        ],
+        [
+          492,
+          1056
+        ],
+        [
+          492,
+          1056
+        ],
+        [
+          492,
+          1055
+        ],
+        [
+          492,
+          1055
+        ],
+        [
+          492,
+          1054
+        ],
+        [
+          492,
+          1054
+        ],
+        [
+          492,
+          1053
+        ],
+        [
+          492,
+          1053
+        ],
+        [
+          492,
+          1052
+        ],
+        [
+          492,
+          1052
+        ],
+        [
+          492,
+          1052
+        ],
+        [
+          492,
+          1051
+        ],
+        [
+          492,
+          1051
+        ],
+        [
+          492,
+          1050
+        ],
+        [
+          492,
+          1050
+        ],
+        [
+          492,
+          1049
+        ],
+        [
+          492,
+          1049
+        ],
+        [
+          492,
+          1048
+        ],
+        [
+          492,
+          1048
+        ],
+        [
+          492,
+          1048
+        ],
+        [
+          492,
+          1047
+        ],
+        [
+          492,
+          1047
+        ],
+        [
+          492,
+          1046
+        ],
+        [
+          492,
+          1046
+        ],
+        [
+          492,
+          1045
+        ],
+        [
+          492,
+          1045
+        ],
+        [
+          492,
+          1044
+        ],
+        [
+          492,
+          1044
+        ],
+        [
+          492,
+          1044
+        ],
+        [
+          492,
+          1043
+        ],
+        [
+          492,
+          1043
+        ],
+        [
+          492,
+          1042
+        ],
+        [
+          492,
+          1042
+        ],
+        [
+          492,
+          1041
+        ],
+        [
+          492,
+          1041
+        ],
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 10
+  },
+  "opath_IMG_1117_grounded_sam2_obj_12_GroundedSAM2_to_grounded_sam2_obj_11_GroundedSAM2_k01": {
+    "title": "object path: cement concrete (grounded_sam2_obj_12_GroundedSAM2) \u2192 concrete floor pavement golf course (grounded_sam2_obj_11_GroundedSAM2)",
+    "summary": "Confidence=0.76. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.76 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_12_GroundedSAM2_to_grounded_sam2_obj_11_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_12_GroundedSAM2",
+      "name": "cement concrete",
+      "display_label": "cement concrete (grounded_sam2_obj_12_GroundedSAM2)",
+      "start_uv": [
+        489,
+        1081
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_11_GroundedSAM2",
+      "name": "concrete floor pavement golf course",
+      "display_label": "concrete floor pavement golf course (grounded_sam2_obj_11_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4652162318428358,
+      "overall_confidence": 0.7612329709493664,
+      "motion_primary_score": 0.9229291766098957,
+      "depth_alignment_score": 0.6548788474132285,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6919345970948538
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          489,
+          1081
+        ],
+        [
+          489,
+          1081
+        ],
+        [
+          489,
+          1080
+        ],
+        [
+          489,
+          1080
+        ],
+        [
+          489,
+          1079
+        ],
+        [
+          489,
+          1079
+        ],
+        [
+          489,
+          1078
+        ],
+        [
+          489,
+          1078
+        ],
+        [
+          489,
+          1078
+        ],
+        [
+          490,
+          1077
+        ],
+        [
+          490,
+          1077
+        ],
+        [
+          490,
+          1077
+        ],
+        [
+          490,
+          1076
+        ],
+        [
+          490,
+          1076
+        ],
+        [
+          490,
+          1075
+        ],
+        [
+          490,
+          1075
+        ],
+        [
+          490,
+          1075
+        ],
+        [
+          491,
+          1074
+        ],
+        [
+          491,
+          1074
+        ],
+        [
+          491,
+          1073
+        ],
+        [
+          491,
+          1073
+        ],
+        [
+          491,
+          1072
+        ],
+        [
+          491,
+          1072
+        ],
+        [
+          491,
+          1072
+        ],
+        [
+          491,
+          1071
+        ],
+        [
+          491,
+          1071
+        ],
+        [
+          491,
+          1070
+        ],
+        [
+          491,
+          1070
+        ],
+        [
+          491,
+          1070
+        ],
+        [
+          492,
+          1069
+        ],
+        [
+          492,
+          1069
+        ],
+        [
+          492,
+          1068
+        ],
+        [
+          492,
+          1068
+        ],
+        [
+          492,
+          1068
+        ],
+        [
+          492,
+          1067
+        ],
+        [
+          492,
+          1067
+        ],
+        [
+          492,
+          1066
+        ],
+        [
+          492,
+          1066
+        ],
+        [
+          492,
+          1065
+        ],
+        [
+          492,
+          1065
+        ],
+        [
+          492,
+          1064
+        ],
+        [
+          492,
+          1064
+        ],
+        [
+          492,
+          1064
+        ],
+        [
+          492,
+          1063
+        ],
+        [
+          492,
+          1063
+        ],
+        [
+          492,
+          1062
+        ],
+        [
+          492,
+          1062
+        ],
+        [
+          492,
+          1061
+        ],
+        [
+          492,
+          1061
+        ],
+        [
+          492,
+          1060
+        ],
+        [
+          492,
+          1060
+        ],
+        [
+          492,
+          1060
+        ],
+        [
+          492,
+          1059
+        ],
+        [
+          492,
+          1059
+        ],
+        [
+          492,
+          1058
+        ],
+        [
+          492,
+          1058
+        ],
+        [
+          492,
+          1057
+        ],
+        [
+          492,
+          1057
+        ],
+        [
+          492,
+          1056
+        ],
+        [
+          492,
+          1056
+        ],
+        [
+          492,
+          1056
+        ],
+        [
+          492,
+          1055
+        ],
+        [
+          492,
+          1055
+        ],
+        [
+          492,
+          1054
+        ],
+        [
+          492,
+          1054
+        ],
+        [
+          492,
+          1053
+        ],
+        [
+          492,
+          1053
+        ],
+        [
+          492,
+          1052
+        ],
+        [
+          492,
+          1052
+        ],
+        [
+          492,
+          1052
+        ],
+        [
+          492,
+          1051
+        ],
+        [
+          492,
+          1051
+        ],
+        [
+          492,
+          1050
+        ],
+        [
+          492,
+          1050
+        ],
+        [
+          492,
+          1049
+        ],
+        [
+          492,
+          1049
+        ],
+        [
+          492,
+          1048
+        ],
+        [
+          492,
+          1048
+        ],
+        [
+          492,
+          1048
+        ],
+        [
+          492,
+          1047
+        ],
+        [
+          492,
+          1047
+        ],
+        [
+          492,
+          1046
+        ],
+        [
+          492,
+          1046
+        ],
+        [
+          492,
+          1045
+        ],
+        [
+          492,
+          1045
+        ],
+        [
+          492,
+          1044
+        ],
+        [
+          492,
+          1044
+        ],
+        [
+          492,
+          1044
+        ],
+        [
+          492,
+          1043
+        ],
+        [
+          492,
+          1043
+        ],
+        [
+          492,
+          1042
+        ],
+        [
+          492,
+          1042
+        ],
+        [
+          492,
+          1041
+        ],
+        [
+          492,
+          1041
+        ],
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 11
+  },
+  "opath_IMG_1117_grounded_sam2_obj_13_GroundedSAM2_to_grounded_sam2_obj_11_GroundedSAM2_k01": {
+    "title": "object path: floor pavement golf course (grounded_sam2_obj_13_GroundedSAM2) \u2192 concrete floor pavement golf course (grounded_sam2_obj_11_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_13_GroundedSAM2_to_grounded_sam2_obj_11_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_13_GroundedSAM2",
+      "name": "floor pavement golf course",
+      "display_label": "floor pavement golf course (grounded_sam2_obj_13_GroundedSAM2)",
+      "start_uv": [
+        492,
+        1040
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_11_GroundedSAM2",
+      "name": "concrete floor pavement golf course",
+      "display_label": "concrete floor pavement golf course (grounded_sam2_obj_11_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4379867911338806,
+      "overall_confidence": 0.6913045206069947,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6875778865814209
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 37
+  },
+  "opath_IMG_1117_grounded_sam2_obj_13_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01": {
+    "title": "object path: floor pavement golf course (grounded_sam2_obj_13_GroundedSAM2) \u2192 cement concrete floor golf course (grounded_sam2_obj_5_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_13_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_13_GroundedSAM2",
+      "name": "floor pavement golf course",
+      "display_label": "floor pavement golf course (grounded_sam2_obj_13_GroundedSAM2)",
+      "start_uv": [
+        492,
+        1040
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_5_GroundedSAM2",
+      "name": "cement concrete floor golf course",
+      "display_label": "cement concrete floor golf course (grounded_sam2_obj_5_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4379867911338806,
+      "overall_confidence": 0.6913045206069947,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6875778865814209
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 38
+  },
+  "opath_IMG_1117_grounded_sam2_obj_13_GroundedSAM2_to_grounded_sam2_obj_1_GroundedSAM2_k01": {
+    "title": "object path: floor pavement golf course (grounded_sam2_obj_13_GroundedSAM2) \u2192 floor pavement (grounded_sam2_obj_1_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_13_GroundedSAM2_to_grounded_sam2_obj_1_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_13_GroundedSAM2",
+      "name": "floor pavement golf course",
+      "display_label": "floor pavement golf course (grounded_sam2_obj_13_GroundedSAM2)",
+      "start_uv": [
+        492,
+        1040
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_1_GroundedSAM2",
+      "name": "floor pavement",
+      "display_label": "floor pavement (grounded_sam2_obj_1_GroundedSAM2)",
+      "goal_uv": [
+        492,
+        1040
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4379867911338806,
+      "overall_confidence": 0.6913045206069947,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6875778865814209
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          492,
+          1040
+        ],
+        [
+          492,
+          1040
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 39
+  },
+  "opath_IMG_1117_grounded_sam2_obj_14_GroundedSAM2_to_grounded_sam2_obj_0_GroundedSAM2_k01": {
+    "title": "object path: and blue striped pattern. the stripes are arranged in a diagonal line (grounded_sam2_obj_14_GroundedSAM2) \u2192 and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white. (grounded_sam2_obj_0_GroundedSAM2)",
+    "summary": "Confidence=0.77. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.77 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_14_GroundedSAM2_to_grounded_sam2_obj_0_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_14_GroundedSAM2",
+      "name": "and blue striped pattern. the stripes are arranged in a diagonal line",
+      "display_label": "and blue striped pattern. the stripes are arranged in a diagonal line (grounded_sam2_obj_14_GroundedSAM2)",
+      "start_uv": [
+        488,
+        760
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_0_GroundedSAM2",
+      "name": "and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white.",
+      "display_label": "and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white. (grounded_sam2_obj_0_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4786701252063116,
+      "overall_confidence": 0.7747804564992125,
+      "motion_primary_score": 0.9562591193647962,
+      "depth_alignment_score": 0.8532423208191122,
+      "action_fit": 0.6291666666666667,
+      "hybrid_overall": 0.6970038866996766
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          488,
+          760
+        ],
+        [
+          488,
+          760
+        ],
+        [
+          488,
+          759
+        ],
+        [
+          488,
+          759
+        ],
+        [
+          488,
+          758
+        ],
+        [
+          488,
+          758
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          488,
+          757
+        ],
+        [
+          487,
+          756
+        ],
+        [
+          487,
+          756
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          755
+        ],
+        [
+          487,
+          754
+        ],
+        [
+          487,
+          754
+        ],
+        [
+          487,
+          753
+        ],
+        [
+          487,
+          753
+        ],
+        [
+          487,
+          752
+        ],
+        [
+          487,
+          752
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          751
+        ],
+        [
+          487,
+          750
+        ],
+        [
+          487,
+          750
+        ],
+        [
+          487,
+          749
+        ],
+        [
+          487,
+          749
+        ],
+        [
+          487,
+          749
+        ],
+        [
+          486,
+          748
+        ],
+        [
+          486,
+          748
+        ],
+        [
+          486,
+          747
+        ],
+        [
+          486,
+          747
+        ],
+        [
+          486,
+          747
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          746
+        ],
+        [
+          485,
+          745
+        ],
+        [
+          485,
+          745
+        ],
+        [
+          485,
+          744
+        ],
+        [
+          485,
+          744
+        ],
+        [
+          485,
+          743
+        ],
+        [
+          485,
+          743
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          742
+        ],
+        [
+          485,
+          741
+        ],
+        [
+          485,
+          741
+        ],
+        [
+          485,
+          740
+        ],
+        [
+          485,
+          740
+        ],
+        [
+          485,
+          739
+        ],
+        [
+          485,
+          739
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          738
+        ],
+        [
+          485,
+          737
+        ],
+        [
+          485,
+          737
+        ],
+        [
+          485,
+          736
+        ],
+        [
+          485,
+          736
+        ],
+        [
+          485,
+          735
+        ],
+        [
+          485,
+          735
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          734
+        ],
+        [
+          485,
+          733
+        ],
+        [
+          485,
+          733
+        ],
+        [
+          485,
+          732
+        ],
+        [
+          485,
+          732
+        ],
+        [
+          485,
+          731
+        ],
+        [
+          485,
+          731
+        ],
+        [
+          485,
+          730
+        ],
+        [
+          485,
+          730
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          729
+        ],
+        [
+          485,
+          728
+        ],
+        [
+          485,
+          728
+        ],
+        [
+          485,
+          727
+        ],
+        [
+          485,
+          727
+        ],
+        [
+          485,
+          726
+        ],
+        [
+          485,
+          726
+        ],
+        [
+          485,
+          725
+        ],
+        [
+          485,
+          725
+        ],
+        [
+          485,
+          725
+        ],
+        [
+          485,
+          724
+        ],
+        [
+          485,
+          724
+        ],
+        [
+          485,
+          723
+        ],
+        [
+          485,
+          723
+        ],
+        [
+          485,
+          723
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          484,
+          722
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          483,
+          721
+        ],
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.66; regions are mostly traversable/interactive; lexical semantic match=0.02",
+    "path_num": 3
+  },
+  "opath_IMG_1117_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01": {
+    "title": "object path: baby child (grounded_sam2_obj_15_GroundedSAM2) \u2192 baby child (grounded_sam2_obj_3_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_15_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_15_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_3_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_3_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6965882967524122,
+      "motion_primary_score": 0.6966568338249756,
+      "depth_alignment_score": 0.9832841691248776,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6965589237213136
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 22
+  },
+  "opath_IMG_1117_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_17_GroundedSAM2_k01": {
+    "title": "object path: baby child (grounded_sam2_obj_15_GroundedSAM2) \u2192 baby child (grounded_sam2_obj_17_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_17_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_15_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_15_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_17_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_17_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6965882967524122,
+      "motion_primary_score": 0.6966568338249756,
+      "depth_alignment_score": 0.9832841691248776,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6965589237213136
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 23
+  },
+  "opath_IMG_1117_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01": {
+    "title": "object path: baby child (grounded_sam2_obj_15_GroundedSAM2) \u2192 baby boy (grounded_sam2_obj_7_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_15_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_15_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_7_GroundedSAM2",
+      "name": "baby boy",
+      "display_label": "baby boy (grounded_sam2_obj_7_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6975912466049194,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6965589237213136
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 17
+  },
+  "opath_IMG_1117_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_18_GroundedSAM2_k01": {
+    "title": "object path: baby child (grounded_sam2_obj_15_GroundedSAM2) \u2192 probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft (grounded_sam2_obj_18_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_18_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_15_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_15_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_18_GroundedSAM2",
+      "name": "probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft",
+      "display_label": "probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft (grounded_sam2_obj_18_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6972927391422329,
+      "motion_primary_score": 0.699004975124378,
+      "depth_alignment_score": 0.9950248756218898,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6965589237213136
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 19
+  },
+  "opath_IMG_1117_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01": {
+    "title": "object path: baby child (grounded_sam2_obj_17_GroundedSAM2) \u2192 baby child (grounded_sam2_obj_3_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_17_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_17_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_3_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_3_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6975912466049194,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6965589237213136
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 18
+  },
+  "opath_IMG_1117_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_15_GroundedSAM2_k01": {
+    "title": "object path: baby child (grounded_sam2_obj_17_GroundedSAM2) \u2192 baby child (grounded_sam2_obj_15_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_15_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_17_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_17_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_15_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_15_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6965882967524122,
+      "motion_primary_score": 0.6966568338249756,
+      "depth_alignment_score": 0.9832841691248776,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6965589237213136
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 24
+  },
+  "opath_IMG_1117_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01": {
+    "title": "object path: baby child (grounded_sam2_obj_17_GroundedSAM2) \u2192 baby boy (grounded_sam2_obj_7_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_17_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_17_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_7_GroundedSAM2",
+      "name": "baby boy",
+      "display_label": "baby boy (grounded_sam2_obj_7_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6965882967524122,
+      "motion_primary_score": 0.6966568338249756,
+      "depth_alignment_score": 0.9832841691248776,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6965589237213136
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 25
+  },
+  "opath_IMG_1117_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_18_GroundedSAM2_k01": {
+    "title": "object path: baby child (grounded_sam2_obj_17_GroundedSAM2) \u2192 probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft (grounded_sam2_obj_18_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_18_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_17_GroundedSAM2",
+      "name": "baby child",
+      "display_label": "baby child (grounded_sam2_obj_17_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_18_GroundedSAM2",
+      "name": "probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft",
+      "display_label": "probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft (grounded_sam2_obj_18_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6962996614777179,
+      "motion_primary_score": 0.6956947162426614,
+      "depth_alignment_score": 0.978473581213307,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6965589237213136
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 27
+  },
+  "opath_IMG_1117_grounded_sam2_obj_18_GroundedSAM2_to_grounded_sam2_obj_0_GroundedSAM2_k01": {
+    "title": "object path: probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft (grounded_sam2_obj_18_GroundedSAM2) \u2192 and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white. (grounded_sam2_obj_0_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_1117_grounded_sam2_obj_18_GroundedSAM2_to_grounded_sam2_obj_0_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_18_GroundedSAM2",
+      "name": "probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft",
+      "display_label": "probably around 2-3 years old. the child is wearing a blue jacket with a colorful patchwork design on the front. the jacket has a hood and appears to be made of a soft (grounded_sam2_obj_18_GroundedSAM2)",
+      "start_uv": [
+        482,
+        720
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_0_GroundedSAM2",
+      "name": "and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white.",
+      "display_label": "and blue. the jacket has a hood and the child is holding a small red object in their hands. they are looking directly at the camera with a slight smile on their face. the background is plain white. (grounded_sam2_obj_0_GroundedSAM2)",
+      "goal_uv": [
+        482,
+        720
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49411827325820923,
+      "overall_confidence": 0.6979175860060197,
+      "motion_primary_score": 0.6956947162426614,
+      "depth_alignment_score": 0.978473581213307,
+      "action_fit": 0.6283018867924528,
+      "hybrid_overall": 0.6988702444760305
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          720
+        ],
+        [
+          482,
+          720
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.66; regions are mostly traversable/interactive; lexical semantic match=0.02",
+    "path_num": 15
+  }
+}

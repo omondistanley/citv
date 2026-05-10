@@ -1,0 +1,46 @@
+{
+  "edges": [
+    {
+      "region_a": "region_1",
+      "region_b": "region_2",
+      "shared_border_px": 5336,
+      "depth_delta_m": 6.6693,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_2",
+      "region_b": "region_3",
+      "shared_border_px": 5646,
+      "depth_delta_m": 12.0573,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_2",
+      "region_b": "region_4",
+      "shared_border_px": 15,
+      "depth_delta_m": 25.0363,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_3",
+      "region_b": "region_4",
+      "shared_border_px": 1109,
+      "depth_delta_m": 12.979,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_3",
+      "region_b": "region_5",
+      "shared_border_px": 2194,
+      "depth_delta_m": 20.5927,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    }
+  ],
+  "num_edges": 5,
+  "kind": "region_adjacency_graph"
+}

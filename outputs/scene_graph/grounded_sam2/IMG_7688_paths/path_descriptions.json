@@ -1,0 +1,6544 @@
+{
+  "opath_IMG_7688_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01": {
+    "title": "object path: boy (grounded_sam2_obj_2_GroundedSAM2) \u2192 baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+    "summary": "Confidence=0.75. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.75 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_2_GroundedSAM2",
+      "name": "boy",
+      "display_label": "boy (grounded_sam2_obj_2_GroundedSAM2)",
+      "start_uv": [
+        464,
+        392
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "baby bottle bottle",
+      "display_label": "baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4894092051933209,
+      "overall_confidence": 0.7507289182793939,
+      "motion_primary_score": 0.8788836243258068,
+      "depth_alignment_score": 0.49333991119881615,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6958054728309314
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          464,
+          392
+        ],
+        [
+          464,
+          392
+        ],
+        [
+          464,
+          392
+        ],
+        [
+          464,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 10
+  },
+  "opath_IMG_7688_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_30_GroundedSAM2_k01": {
+    "title": "object path: child baby (grounded_sam2_obj_3_GroundedSAM2) \u2192 child baby (grounded_sam2_obj_30_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_30_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_3_GroundedSAM2",
+      "name": "child baby",
+      "display_label": "child baby (grounded_sam2_obj_3_GroundedSAM2)",
+      "start_uv": [
+        464,
+        392
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_30_GroundedSAM2",
+      "name": "child baby",
+      "display_label": "child baby (grounded_sam2_obj_30_GroundedSAM2)",
+      "goal_uv": [
+        464,
+        392
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49572503566741943,
+      "overall_confidence": 0.697771203994751,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6968160057067873
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          464,
+          392
+        ],
+        [
+          464,
+          392
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 13
+  },
+  "opath_IMG_7688_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01": {
+    "title": "object path: child baby (grounded_sam2_obj_3_GroundedSAM2) \u2192 baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+    "summary": "Confidence=0.75. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.75 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_3_GroundedSAM2",
+      "name": "child baby",
+      "display_label": "child baby (grounded_sam2_obj_3_GroundedSAM2)",
+      "start_uv": [
+        464,
+        392
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "baby bottle bottle",
+      "display_label": "baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4894092051933209,
+      "overall_confidence": 0.7507289182793939,
+      "motion_primary_score": 0.8788836243258068,
+      "depth_alignment_score": 0.49333991119881615,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6958054728309314
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          464,
+          392
+        ],
+        [
+          464,
+          392
+        ],
+        [
+          464,
+          392
+        ],
+        [
+          464,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 11
+  },
+  "opath_IMG_7688_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_22_GroundedSAM2_k01": {
+    "title": "object path: baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2) \u2192 baby bottle beverage drink (grounded_sam2_obj_22_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_22_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "baby bottle bottle",
+      "display_label": "baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+      "start_uv": [
+        454,
+        398
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_22_GroundedSAM2",
+      "name": "baby bottle beverage drink",
+      "display_label": "baby bottle beverage drink (grounded_sam2_obj_22_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.46069997549057007,
+      "overall_confidence": 0.6936689356397893,
+      "motion_primary_score": 0.6994017946161515,
+      "depth_alignment_score": 0.9970089730807576,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6912119960784913
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 24
+  },
+  "opath_IMG_7688_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_6_GroundedSAM2_k01": {
+    "title": "object path: baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2) \u2192 bottle drink (grounded_sam2_obj_6_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_6_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "baby bottle bottle",
+      "display_label": "baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+      "start_uv": [
+        454,
+        398
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_6_GroundedSAM2",
+      "name": "bottle drink",
+      "display_label": "bottle drink (grounded_sam2_obj_6_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.46069997549057007,
+      "overall_confidence": 0.6938483972549438,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6912119960784913
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 20
+  },
+  "opath_IMG_7688_grounded_sam2_obj_5_GroundedSAM2_to_grounded_sam2_obj_10_GroundedSAM2_k01": {
+    "title": "object path: floor pavement (grounded_sam2_obj_5_GroundedSAM2) \u2192 floor pavement (grounded_sam2_obj_10_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_5_GroundedSAM2_to_grounded_sam2_obj_10_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_5_GroundedSAM2",
+      "name": "floor pavement",
+      "display_label": "floor pavement (grounded_sam2_obj_5_GroundedSAM2)",
+      "start_uv": [
+        644,
+        698
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_10_GroundedSAM2",
+      "name": "floor pavement",
+      "display_label": "floor pavement (grounded_sam2_obj_10_GroundedSAM2)",
+      "goal_uv": [
+        644,
+        698
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4698053002357483,
+      "overall_confidence": 0.6948681936264038,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6926688480377198
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 18
+  },
+  "opath_IMG_7688_grounded_sam2_obj_6_GroundedSAM2_to_grounded_sam2_obj_22_GroundedSAM2_k01": {
+    "title": "object path: bottle drink (grounded_sam2_obj_6_GroundedSAM2) \u2192 baby bottle beverage drink (grounded_sam2_obj_22_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_6_GroundedSAM2_to_grounded_sam2_obj_22_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_6_GroundedSAM2",
+      "name": "bottle drink",
+      "display_label": "bottle drink (grounded_sam2_obj_6_GroundedSAM2)",
+      "start_uv": [
+        454,
+        398
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_22_GroundedSAM2",
+      "name": "baby bottle beverage drink",
+      "display_label": "baby bottle beverage drink (grounded_sam2_obj_22_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.46069997549057007,
+      "overall_confidence": 0.6936689356397893,
+      "motion_primary_score": 0.6994017946161515,
+      "depth_alignment_score": 0.9970089730807576,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6912119960784913
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 25
+  },
+  "opath_IMG_7688_grounded_sam2_obj_6_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01": {
+    "title": "object path: bottle drink (grounded_sam2_obj_6_GroundedSAM2) \u2192 baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_6_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_6_GroundedSAM2",
+      "name": "bottle drink",
+      "display_label": "bottle drink (grounded_sam2_obj_6_GroundedSAM2)",
+      "start_uv": [
+        454,
+        398
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "baby bottle bottle",
+      "display_label": "baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.46069997549057007,
+      "overall_confidence": 0.6938483972549438,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6912119960784913
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 21
+  },
+  "opath_IMG_7688_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_22_GroundedSAM2_k01": {
+    "title": "object path: beverage drink (grounded_sam2_obj_7_GroundedSAM2) \u2192 baby bottle beverage drink (grounded_sam2_obj_22_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_22_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_7_GroundedSAM2",
+      "name": "beverage drink",
+      "display_label": "beverage drink (grounded_sam2_obj_7_GroundedSAM2)",
+      "start_uv": [
+        454,
+        398
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_22_GroundedSAM2",
+      "name": "baby bottle beverage drink",
+      "display_label": "baby bottle beverage drink (grounded_sam2_obj_22_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.46069997549057007,
+      "overall_confidence": 0.6936689356397893,
+      "motion_primary_score": 0.6994017946161515,
+      "depth_alignment_score": 0.9970089730807576,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6912119960784913
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 26
+  },
+  "opath_IMG_7688_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_19_GroundedSAM2_k01": {
+    "title": "object path: beverage drink (grounded_sam2_obj_7_GroundedSAM2) \u2192 beverage drink (grounded_sam2_obj_19_GroundedSAM2)",
+    "summary": "Confidence=0.78. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.78 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_19_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_7_GroundedSAM2",
+      "name": "beverage drink",
+      "display_label": "beverage drink (grounded_sam2_obj_7_GroundedSAM2)",
+      "start_uv": [
+        454,
+        398
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_19_GroundedSAM2",
+      "name": "beverage drink",
+      "display_label": "beverage drink (grounded_sam2_obj_19_GroundedSAM2)",
+      "goal_uv": [
+        455,
+        416
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4905597300579151,
+      "overall_confidence": 0.7750138939810207,
+      "motion_primary_score": 0.9594040140484473,
+      "depth_alignment_score": 0.8285004142502066,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6959895568092666
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          455,
+          411
+        ],
+        [
+          455,
+          411
+        ],
+        [
+          455,
+          411
+        ],
+        [
+          455,
+          411
+        ],
+        [
+          455,
+          411
+        ],
+        [
+          455,
+          411
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          416
+        ],
+        [
+          455,
+          416
+        ],
+        [
+          455,
+          416
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 3
+  },
+  "opath_IMG_7688_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_6_GroundedSAM2_k01": {
+    "title": "object path: beverage drink (grounded_sam2_obj_7_GroundedSAM2) \u2192 bottle drink (grounded_sam2_obj_6_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_6_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_7_GroundedSAM2",
+      "name": "beverage drink",
+      "display_label": "beverage drink (grounded_sam2_obj_7_GroundedSAM2)",
+      "start_uv": [
+        454,
+        398
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_6_GroundedSAM2",
+      "name": "bottle drink",
+      "display_label": "bottle drink (grounded_sam2_obj_6_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.46069997549057007,
+      "overall_confidence": 0.6938483972549438,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6912119960784913
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 22
+  },
+  "opath_IMG_7688_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01": {
+    "title": "object path: beverage drink (grounded_sam2_obj_7_GroundedSAM2) \u2192 baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_7_GroundedSAM2",
+      "name": "beverage drink",
+      "display_label": "beverage drink (grounded_sam2_obj_7_GroundedSAM2)",
+      "start_uv": [
+        454,
+        398
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "baby bottle bottle",
+      "display_label": "baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.46069997549057007,
+      "overall_confidence": 0.6938483972549438,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6912119960784913
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 23
+  },
+  "opath_IMG_7688_grounded_sam2_obj_9_GroundedSAM2_to_grounded_sam2_obj_8_GroundedSAM2_k01": {
+    "title": "object path: child baby (grounded_sam2_obj_9_GroundedSAM2) \u2192 boy baby (grounded_sam2_obj_8_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_3. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_3. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_9_GroundedSAM2_to_grounded_sam2_obj_8_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_9_GroundedSAM2",
+      "name": "child baby",
+      "display_label": "child baby (grounded_sam2_obj_9_GroundedSAM2)",
+      "start_uv": [
+        507,
+        91
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_8_GroundedSAM2",
+      "name": "boy baby",
+      "display_label": "boy baby (grounded_sam2_obj_8_GroundedSAM2)",
+      "goal_uv": [
+        507,
+        91
+      ]
+    },
+    "regions_traversed": [
+      "region_3"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.48681414127349854,
+      "overall_confidence": 0.6967731838226319,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6953902626037599
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          507,
+          91
+        ],
+        [
+          507,
+          91
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 17
+  },
+  "opath_IMG_7688_grounded_sam2_obj_10_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01": {
+    "title": "object path: floor pavement (grounded_sam2_obj_10_GroundedSAM2) \u2192 floor pavement (grounded_sam2_obj_5_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_10_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_10_GroundedSAM2",
+      "name": "floor pavement",
+      "display_label": "floor pavement (grounded_sam2_obj_10_GroundedSAM2)",
+      "start_uv": [
+        644,
+        698
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_5_GroundedSAM2",
+      "name": "floor pavement",
+      "display_label": "floor pavement (grounded_sam2_obj_5_GroundedSAM2)",
+      "goal_uv": [
+        644,
+        698
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4698053002357483,
+      "overall_confidence": 0.6948681936264038,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6926688480377198
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 19
+  },
+  "opath_IMG_7688_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_18_GroundedSAM2_k01": {
+    "title": "object path: abstract object in the center of a green background. the object appears to be a small (grounded_sam2_obj_15_GroundedSAM2) \u2192 abstract background with a greenish-blue hue. in the center of the image (grounded_sam2_obj_18_GroundedSAM2)",
+    "summary": "Confidence=0.77. Traverses regions: region_5. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_5. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.77 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_18_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_15_GroundedSAM2",
+      "name": "abstract object in the center of a green background. the object appears to be a small",
+      "display_label": "abstract object in the center of a green background. the object appears to be a small (grounded_sam2_obj_15_GroundedSAM2)",
+      "start_uv": [
+        695,
+        65
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_18_GroundedSAM2",
+      "name": "abstract background with a greenish-blue hue. in the center of the image",
+      "display_label": "abstract background with a greenish-blue hue. in the center of the image (grounded_sam2_obj_18_GroundedSAM2)",
+      "goal_uv": [
+        706,
+        68
+      ]
+    },
+    "regions_traversed": [
+      "region_5"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4935545499126116,
+      "overall_confidence": 0.7733846379600318,
+      "motion_primary_score": 0.9409453723438418,
+      "depth_alignment_score": 0.8077544426494349,
+      "action_fit": 0.6322916666666667,
+      "hybrid_overall": 0.7015728946526846
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          695,
+          65
+        ],
+        [
+          695,
+          65
+        ],
+        [
+          695,
+          65
+        ],
+        [
+          695,
+          65
+        ],
+        [
+          695,
+          65
+        ],
+        [
+          695,
+          65
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          702,
+          68
+        ],
+        [
+          702,
+          68
+        ],
+        [
+          702,
+          68
+        ],
+        [
+          702,
+          68
+        ],
+        [
+          702,
+          68
+        ],
+        [
+          702,
+          68
+        ],
+        [
+          702,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          706,
+          68
+        ],
+        [
+          706,
+          68
+        ],
+        [
+          706,
+          68
+        ],
+        [
+          706,
+          68
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.66; regions are mostly traversable/interactive; lexical semantic match=0.04",
+    "path_num": 8
+  },
+  "opath_IMG_7688_grounded_sam2_obj_18_GroundedSAM2_to_grounded_sam2_obj_15_GroundedSAM2_k01": {
+    "title": "object path: abstract background with a greenish-blue hue. in the center of the image (grounded_sam2_obj_18_GroundedSAM2) \u2192 abstract object in the center of a green background. the object appears to be a small (grounded_sam2_obj_15_GroundedSAM2)",
+    "summary": "Confidence=0.77. Traverses regions: region_5. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_5. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.77 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_18_GroundedSAM2_to_grounded_sam2_obj_15_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_18_GroundedSAM2",
+      "name": "abstract background with a greenish-blue hue. in the center of the image",
+      "display_label": "abstract background with a greenish-blue hue. in the center of the image (grounded_sam2_obj_18_GroundedSAM2)",
+      "start_uv": [
+        706,
+        68
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_15_GroundedSAM2",
+      "name": "abstract object in the center of a green background. the object appears to be a small",
+      "display_label": "abstract object in the center of a green background. the object appears to be a small (grounded_sam2_obj_15_GroundedSAM2)",
+      "goal_uv": [
+        695,
+        65
+      ]
+    },
+    "regions_traversed": [
+      "region_5"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4935545499126116,
+      "overall_confidence": 0.7733846379600318,
+      "motion_primary_score": 0.9409453723438418,
+      "depth_alignment_score": 0.8077544426494349,
+      "action_fit": 0.6322916666666667,
+      "hybrid_overall": 0.7015728946526846
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          706,
+          68
+        ],
+        [
+          706,
+          68
+        ],
+        [
+          706,
+          68
+        ],
+        [
+          706,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          705,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          704,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          703,
+          68
+        ],
+        [
+          702,
+          68
+        ],
+        [
+          702,
+          68
+        ],
+        [
+          702,
+          68
+        ],
+        [
+          702,
+          68
+        ],
+        [
+          702,
+          68
+        ],
+        [
+          702,
+          68
+        ],
+        [
+          702,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          701,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          700,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          699,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          698,
+          68
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          697,
+          67
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          696,
+          66
+        ],
+        [
+          695,
+          65
+        ],
+        [
+          695,
+          65
+        ],
+        [
+          695,
+          65
+        ],
+        [
+          695,
+          65
+        ],
+        [
+          695,
+          65
+        ],
+        [
+          695,
+          65
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.66; regions are mostly traversable/interactive; lexical semantic match=0.04",
+    "path_num": 9
+  },
+  "opath_IMG_7688_grounded_sam2_obj_19_GroundedSAM2_to_grounded_sam2_obj_22_GroundedSAM2_k01": {
+    "title": "object path: beverage drink (grounded_sam2_obj_19_GroundedSAM2) \u2192 baby bottle beverage drink (grounded_sam2_obj_22_GroundedSAM2)",
+    "summary": "Confidence=0.77. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.77 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_19_GroundedSAM2_to_grounded_sam2_obj_22_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_19_GroundedSAM2",
+      "name": "beverage drink",
+      "display_label": "beverage drink (grounded_sam2_obj_19_GroundedSAM2)",
+      "start_uv": [
+        455,
+        416
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_22_GroundedSAM2",
+      "name": "baby bottle beverage drink",
+      "display_label": "baby bottle beverage drink (grounded_sam2_obj_22_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49054888635873795,
+      "overall_confidence": 0.7748894314912045,
+      "motion_primary_score": 0.958993187396753,
+      "depth_alignment_score": 0.826446280991735,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6959878218173982
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          455,
+          416
+        ],
+        [
+          455,
+          416
+        ],
+        [
+          455,
+          416
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 7
+  },
+  "opath_IMG_7688_grounded_sam2_obj_19_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01": {
+    "title": "object path: beverage drink (grounded_sam2_obj_19_GroundedSAM2) \u2192 beverage drink (grounded_sam2_obj_7_GroundedSAM2)",
+    "summary": "Confidence=0.78. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.78 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_19_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_19_GroundedSAM2",
+      "name": "beverage drink",
+      "display_label": "beverage drink (grounded_sam2_obj_19_GroundedSAM2)",
+      "start_uv": [
+        455,
+        416
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_7_GroundedSAM2",
+      "name": "beverage drink",
+      "display_label": "beverage drink (grounded_sam2_obj_7_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49054888635873795,
+      "overall_confidence": 0.7750126794867128,
+      "motion_primary_score": 0.9594040140484473,
+      "depth_alignment_score": 0.8285004142502066,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6959878218173982
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          455,
+          416
+        ],
+        [
+          455,
+          416
+        ],
+        [
+          455,
+          416
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 4
+  },
+  "opath_IMG_7688_grounded_sam2_obj_19_GroundedSAM2_to_grounded_sam2_obj_6_GroundedSAM2_k01": {
+    "title": "object path: beverage drink (grounded_sam2_obj_19_GroundedSAM2) \u2192 bottle drink (grounded_sam2_obj_6_GroundedSAM2)",
+    "summary": "Confidence=0.78. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.78 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_19_GroundedSAM2_to_grounded_sam2_obj_6_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_19_GroundedSAM2",
+      "name": "beverage drink",
+      "display_label": "beverage drink (grounded_sam2_obj_19_GroundedSAM2)",
+      "start_uv": [
+        455,
+        416
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_6_GroundedSAM2",
+      "name": "bottle drink",
+      "display_label": "bottle drink (grounded_sam2_obj_6_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49054888635873795,
+      "overall_confidence": 0.7750126794867128,
+      "motion_primary_score": 0.9594040140484473,
+      "depth_alignment_score": 0.8285004142502066,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6959878218173982
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          455,
+          416
+        ],
+        [
+          455,
+          416
+        ],
+        [
+          455,
+          416
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 5
+  },
+  "opath_IMG_7688_grounded_sam2_obj_19_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01": {
+    "title": "object path: beverage drink (grounded_sam2_obj_19_GroundedSAM2) \u2192 baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+    "summary": "Confidence=0.78. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.78 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_19_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_19_GroundedSAM2",
+      "name": "beverage drink",
+      "display_label": "beverage drink (grounded_sam2_obj_19_GroundedSAM2)",
+      "start_uv": [
+        455,
+        416
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "baby bottle bottle",
+      "display_label": "baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49054888635873795,
+      "overall_confidence": 0.7750126794867128,
+      "motion_primary_score": 0.9594040140484473,
+      "depth_alignment_score": 0.8285004142502066,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6959878218173982
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          455,
+          416
+        ],
+        [
+          455,
+          416
+        ],
+        [
+          455,
+          416
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          415
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          414
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          413
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          455,
+          412
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          411
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          410
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          409
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          408
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          407
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          406
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          405
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          404
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          403
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          402
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          401
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          400
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          399
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 6
+  },
+  "opath_IMG_7688_grounded_sam2_obj_22_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01": {
+    "title": "object path: baby bottle beverage drink (grounded_sam2_obj_22_GroundedSAM2) \u2192 baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_22_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_22_GroundedSAM2",
+      "name": "baby bottle beverage drink",
+      "display_label": "baby bottle beverage drink (grounded_sam2_obj_22_GroundedSAM2)",
+      "start_uv": [
+        454,
+        398
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "baby bottle bottle",
+      "display_label": "baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.46069997549057007,
+      "overall_confidence": 0.6936689356397893,
+      "motion_primary_score": 0.6994017946161515,
+      "depth_alignment_score": 0.9970089730807576,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6912119960784913
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 27
+  },
+  "opath_IMG_7688_grounded_sam2_obj_22_GroundedSAM2_to_grounded_sam2_obj_6_GroundedSAM2_k01": {
+    "title": "object path: baby bottle beverage drink (grounded_sam2_obj_22_GroundedSAM2) \u2192 bottle drink (grounded_sam2_obj_6_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_22_GroundedSAM2_to_grounded_sam2_obj_6_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_22_GroundedSAM2",
+      "name": "baby bottle beverage drink",
+      "display_label": "baby bottle beverage drink (grounded_sam2_obj_22_GroundedSAM2)",
+      "start_uv": [
+        454,
+        398
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_6_GroundedSAM2",
+      "name": "bottle drink",
+      "display_label": "bottle drink (grounded_sam2_obj_6_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.46069997549057007,
+      "overall_confidence": 0.6936689356397893,
+      "motion_primary_score": 0.6994017946161515,
+      "depth_alignment_score": 0.9970089730807576,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6912119960784913
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 28
+  },
+  "opath_IMG_7688_grounded_sam2_obj_22_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01": {
+    "title": "object path: baby bottle beverage drink (grounded_sam2_obj_22_GroundedSAM2) \u2192 beverage drink (grounded_sam2_obj_7_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_22_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_22_GroundedSAM2",
+      "name": "baby bottle beverage drink",
+      "display_label": "baby bottle beverage drink (grounded_sam2_obj_22_GroundedSAM2)",
+      "start_uv": [
+        454,
+        398
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_7_GroundedSAM2",
+      "name": "beverage drink",
+      "display_label": "beverage drink (grounded_sam2_obj_7_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.46069997549057007,
+      "overall_confidence": 0.6936689356397893,
+      "motion_primary_score": 0.6994017946161515,
+      "depth_alignment_score": 0.9970089730807576,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6912119960784913
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 29
+  },
+  "opath_IMG_7688_grounded_sam2_obj_25_GroundedSAM2_to_grounded_sam2_obj_16_GroundedSAM2_k01": {
+    "title": "object path: and has a rough (grounded_sam2_obj_25_GroundedSAM2) \u2192 irregularly shaped particles that appear to be floating in the air. the particles are white in color and have a rough (grounded_sam2_obj_16_GroundedSAM2)",
+    "summary": "Confidence=0.79. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.79 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_25_GroundedSAM2_to_grounded_sam2_obj_16_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_25_GroundedSAM2",
+      "name": "and has a rough",
+      "display_label": "and has a rough (grounded_sam2_obj_25_GroundedSAM2)",
+      "start_uv": [
+        855,
+        768
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_16_GroundedSAM2",
+      "name": "irregularly shaped particles that appear to be floating in the air. the particles are white in color and have a rough",
+      "display_label": "irregularly shaped particles that appear to be floating in the air. the particles are white in color and have a rough (grounded_sam2_obj_16_GroundedSAM2)",
+      "goal_uv": [
+        854,
+        767
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4946459233760834,
+      "overall_confidence": 0.7876503434181213,
+      "motion_primary_score": 1.0,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6966433477401734
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          855,
+          768
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ],
+        [
+          854,
+          767
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 1
+  },
+  "opath_IMG_7688_grounded_sam2_obj_29_GroundedSAM2_to_grounded_sam2_obj_11_GroundedSAM2_k01": {
+    "title": "object path: and the overall scene is peaceful and serene. (grounded_sam2_obj_29_GroundedSAM2) \u2192 creating a sense of depth and dimension. in the background (grounded_sam2_obj_11_GroundedSAM2)",
+    "summary": "Confidence=0.78. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.78 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_29_GroundedSAM2_to_grounded_sam2_obj_11_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_29_GroundedSAM2",
+      "name": "and the overall scene is peaceful and serene.",
+      "display_label": "and the overall scene is peaceful and serene. (grounded_sam2_obj_29_GroundedSAM2)",
+      "start_uv": [
+        644,
+        698
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_11_GroundedSAM2",
+      "name": "creating a sense of depth and dimension. in the background",
+      "display_label": "creating a sense of depth and dimension. in the background (grounded_sam2_obj_11_GroundedSAM2)",
+      "goal_uv": [
+        644,
+        696
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4419563263654709,
+      "overall_confidence": 0.7815100647282316,
+      "motion_primary_score": 0.9992031872509961,
+      "depth_alignment_score": 0.9960159362549805,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6882130122184754
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          698
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          697
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ],
+        [
+          644,
+          696
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 2
+  },
+  "opath_IMG_7688_grounded_sam2_obj_30_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01": {
+    "title": "object path: child baby (grounded_sam2_obj_30_GroundedSAM2) \u2192 child baby (grounded_sam2_obj_3_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_30_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_30_GroundedSAM2",
+      "name": "child baby",
+      "display_label": "child baby (grounded_sam2_obj_30_GroundedSAM2)",
+      "start_uv": [
+        464,
+        392
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_3_GroundedSAM2",
+      "name": "child baby",
+      "display_label": "child baby (grounded_sam2_obj_3_GroundedSAM2)",
+      "goal_uv": [
+        464,
+        392
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.49572503566741943,
+      "overall_confidence": 0.697771203994751,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6968160057067873
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          464,
+          392
+        ],
+        [
+          464,
+          392
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 14
+  },
+  "opath_IMG_7688_grounded_sam2_obj_30_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01": {
+    "title": "object path: child baby (grounded_sam2_obj_30_GroundedSAM2) \u2192 baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+    "summary": "Confidence=0.75. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.75 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_30_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_30_GroundedSAM2",
+      "name": "child baby",
+      "display_label": "child baby (grounded_sam2_obj_30_GroundedSAM2)",
+      "start_uv": [
+        464,
+        392
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "baby bottle bottle",
+      "display_label": "baby bottle bottle (grounded_sam2_obj_4_GroundedSAM2)",
+      "goal_uv": [
+        454,
+        398
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4894092051933209,
+      "overall_confidence": 0.7507289182793939,
+      "motion_primary_score": 0.8788836243258068,
+      "depth_alignment_score": 0.49333991119881615,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6958054728309314
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          464,
+          392
+        ],
+        [
+          464,
+          392
+        ],
+        [
+          464,
+          392
+        ],
+        [
+          464,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          463,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          462,
+          392
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          461,
+          393
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          460,
+          394
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          459,
+          395
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          458,
+          396
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          457,
+          397
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          456,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          455,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ],
+        [
+          454,
+          398
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 12
+  },
+  "opath_IMG_7688_grounded_sam2_obj_33_GroundedSAM2_to_grounded_sam2_obj_34_GroundedSAM2_k01": {
+    "title": "object path: and brown shoes. he has short dark hair and is looking down at a white object in his hands. the object appears to be a piece of paper or a toy. the boy is holding the object with both hands and seems to be playing with it. the background is a plain grey color. (grounded_sam2_obj_33_GroundedSAM2) \u2192 and brown shoes. he has short dark hair and is looking down at a white object in his hands. the object appears to be a piece of paper or cardboard. the boy is holding the object with both hands and seems to be playing with it. the background is a plain grey color. (grounded_sam2_obj_34_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_33_GroundedSAM2_to_grounded_sam2_obj_34_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_33_GroundedSAM2",
+      "name": "and brown shoes. he has short dark hair and is looking down at a white object in his hands. the object appears to be a piece of paper or a toy. the boy is holding the object with both hands and seems to be playing with it. the background is a plain grey color.",
+      "display_label": "and brown shoes. he has short dark hair and is looking down at a white object in his hands. the object appears to be a piece of paper or a toy. the boy is holding the object with both hands and seems to be playing with it. the background is a plain grey color. (grounded_sam2_obj_33_GroundedSAM2)",
+      "start_uv": [
+        473,
+        372
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_34_GroundedSAM2",
+      "name": "and brown shoes. he has short dark hair and is looking down at a white object in his hands. the object appears to be a piece of paper or cardboard. the boy is holding the object with both hands and seems to be playing with it. the background is a plain grey color.",
+      "display_label": "and brown shoes. he has short dark hair and is looking down at a white object in his hands. the object appears to be a piece of paper or cardboard. the boy is holding the object with both hands and seems to be playing with it. the background is a plain grey color. (grounded_sam2_obj_34_GroundedSAM2)",
+      "goal_uv": [
+        473,
+        372
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.48083925247192383,
+      "overall_confidence": 0.6977705080077097,
+      "motion_primary_score": 0.6992031872509957,
+      "depth_alignment_score": 0.9960159362549788,
+      "action_fit": 0.6288888888888888,
+      "hybrid_overall": 0.6971565026177301
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          473,
+          372
+        ],
+        [
+          473,
+          372
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.66; regions are mostly traversable/interactive; lexical semantic match=0.02",
+    "path_num": 15
+  },
+  "opath_IMG_7688_grounded_sam2_obj_34_GroundedSAM2_to_grounded_sam2_obj_33_GroundedSAM2_k01": {
+    "title": "object path: and brown shoes. he has short dark hair and is looking down at a white object in his hands. the object appears to be a piece of paper or cardboard. the boy is holding the object with both hands and seems to be playing with it. the background is a plain grey color. (grounded_sam2_obj_34_GroundedSAM2) \u2192 and brown shoes. he has short dark hair and is looking down at a white object in his hands. the object appears to be a piece of paper or a toy. the boy is holding the object with both hands and seems to be playing with it. the background is a plain grey color. (grounded_sam2_obj_33_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_7688_grounded_sam2_obj_34_GroundedSAM2_to_grounded_sam2_obj_33_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_34_GroundedSAM2",
+      "name": "and brown shoes. he has short dark hair and is looking down at a white object in his hands. the object appears to be a piece of paper or cardboard. the boy is holding the object with both hands and seems to be playing with it. the background is a plain grey color.",
+      "display_label": "and brown shoes. he has short dark hair and is looking down at a white object in his hands. the object appears to be a piece of paper or cardboard. the boy is holding the object with both hands and seems to be playing with it. the background is a plain grey color. (grounded_sam2_obj_34_GroundedSAM2)",
+      "start_uv": [
+        473,
+        372
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_33_GroundedSAM2",
+      "name": "and brown shoes. he has short dark hair and is looking down at a white object in his hands. the object appears to be a piece of paper or a toy. the boy is holding the object with both hands and seems to be playing with it. the background is a plain grey color.",
+      "display_label": "and brown shoes. he has short dark hair and is looking down at a white object in his hands. the object appears to be a piece of paper or a toy. the boy is holding the object with both hands and seems to be playing with it. the background is a plain grey color. (grounded_sam2_obj_33_GroundedSAM2)",
+      "goal_uv": [
+        473,
+        372
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.48083925247192383,
+      "overall_confidence": 0.6977705080077097,
+      "motion_primary_score": 0.6992031872509957,
+      "depth_alignment_score": 0.9960159362549788,
+      "action_fit": 0.6288888888888888,
+      "hybrid_overall": 0.6971565026177301
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          473,
+          372
+        ],
+        [
+          473,
+          372
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.66; regions are mostly traversable/interactive; lexical semantic match=0.02",
+    "path_num": 16
+  }
+}

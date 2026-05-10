@@ -1,0 +1,310 @@
+{
+  "ordering": [
+    {
+      "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "z": 6.455,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "z": 6.458,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "z": 6.458,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "z": 6.99,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "z": 7.002,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "z": 7.002,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "z": 7.002,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "z": 8.727,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "z": 8.729,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "z": 8.742,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "z": 9.793,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "region_2",
+      "z": 6.4343,
+      "layer_type": "foreground",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_1",
+      "z": 6.6407,
+      "layer_type": "foreground",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_4",
+      "z": 7.7201,
+      "layer_type": "midground",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_7",
+      "z": 8.1798,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_6",
+      "z": 8.619,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_5",
+      "z": 8.7227,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_3",
+      "z": 8.7423,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_11",
+      "z": 9.5531,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_10",
+      "z": 9.6521,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_8",
+      "z": 9.7022,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_9",
+      "z": 9.9611,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_12",
+      "z": 11.6821,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_13",
+      "z": 11.6826,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_14",
+      "z": 12.6975,
+      "layer_type": "background",
+      "entity_kind": "region"
+    }
+  ],
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "object_ids": [
+        "grounded_sam2_obj_3_GroundedSAM2",
+        "grounded_sam2_obj_6_GroundedSAM2",
+        "grounded_sam2_obj_7_GroundedSAM2",
+        "grounded_sam2_obj_10_GroundedSAM2"
+      ],
+      "count": 4,
+      "z_min": 6.455,
+      "z_max": 6.99
+    },
+    {
+      "layer_type": "midground",
+      "object_ids": [
+        "grounded_sam2_obj_0_GroundedSAM2",
+        "grounded_sam2_obj_1_GroundedSAM2",
+        "grounded_sam2_obj_4_GroundedSAM2"
+      ],
+      "count": 3,
+      "z_min": 7.002,
+      "z_max": 7.002
+    },
+    {
+      "layer_type": "background",
+      "object_ids": [
+        "grounded_sam2_obj_2_GroundedSAM2",
+        "grounded_sam2_obj_5_GroundedSAM2",
+        "grounded_sam2_obj_8_GroundedSAM2",
+        "grounded_sam2_obj_9_GroundedSAM2"
+      ],
+      "count": 4,
+      "z_min": 8.727,
+      "z_max": 9.793
+    }
+  ],
+  "depth_quantiles": {
+    "foreground_max_z": 6.994,
+    "midground_max_z": 8.152
+  },
+  "regions": [
+    {
+      "region_id": "region_1",
+      "region_index": 1,
+      "layer_type": "foreground",
+      "z_mean": 6.6407,
+      "object_ids": [
+        "grounded_sam2_obj_0_GroundedSAM2",
+        "grounded_sam2_obj_1_GroundedSAM2",
+        "grounded_sam2_obj_3_GroundedSAM2",
+        "grounded_sam2_obj_4_GroundedSAM2"
+      ]
+    },
+    {
+      "region_id": "region_2",
+      "region_index": 2,
+      "layer_type": "foreground",
+      "z_mean": 6.4343,
+      "object_ids": [
+        "grounded_sam2_obj_6_GroundedSAM2",
+        "grounded_sam2_obj_7_GroundedSAM2",
+        "grounded_sam2_obj_10_GroundedSAM2"
+      ]
+    },
+    {
+      "region_id": "region_3",
+      "region_index": 3,
+      "layer_type": "background",
+      "z_mean": 8.7423,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_4",
+      "region_index": 4,
+      "layer_type": "midground",
+      "z_mean": 7.7201,
+      "object_ids": [
+        "grounded_sam2_obj_2_GroundedSAM2",
+        "grounded_sam2_obj_5_GroundedSAM2",
+        "grounded_sam2_obj_9_GroundedSAM2"
+      ]
+    },
+    {
+      "region_id": "region_5",
+      "region_index": 5,
+      "layer_type": "background",
+      "z_mean": 8.7227,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_6",
+      "region_index": 6,
+      "layer_type": "background",
+      "z_mean": 8.619,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_7",
+      "region_index": 7,
+      "layer_type": "background",
+      "z_mean": 8.1798,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_8",
+      "region_index": 8,
+      "layer_type": "background",
+      "z_mean": 9.7022,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_9",
+      "region_index": 9,
+      "layer_type": "background",
+      "z_mean": 9.9611,
+      "object_ids": [
+        "grounded_sam2_obj_8_GroundedSAM2"
+      ]
+    },
+    {
+      "region_id": "region_10",
+      "region_index": 10,
+      "layer_type": "background",
+      "z_mean": 9.6521,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_11",
+      "region_index": 11,
+      "layer_type": "background",
+      "z_mean": 9.5531,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_12",
+      "region_index": 12,
+      "layer_type": "background",
+      "z_mean": 11.6821,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_13",
+      "region_index": 13,
+      "layer_type": "background",
+      "z_mean": 11.6826,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_14",
+      "region_index": 14,
+      "layer_type": "background",
+      "z_mean": 12.6975,
+      "object_ids": []
+    }
+  ]
+}

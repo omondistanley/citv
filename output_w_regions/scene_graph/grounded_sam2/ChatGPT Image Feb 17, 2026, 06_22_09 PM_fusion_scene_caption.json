@@ -1,0 +1,27 @@
+{
+  "variant": "fusion_only",
+  "track": "grounded_sam2",
+  "image_path": "/root/labs/citv/images/ChatGPT Image Feb 17, 2026, 06_22_09 PM.png",
+  "prompt": "You are a scene-grounded captioner and verifier.\n\nUse ALL provided artifacts jointly:\n- Original image: /root/labs/citv/images/ChatGPT Image Feb 17, 2026, 06_22_09 PM.png\n- Track: grounded_sam2\n- scene_graph JSON: scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_scene.json\n- relations JSON: scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_relations.json\n- layers JSON: scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_layers.json\n- mask hierarchy JSON: scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_mask_hierarchy.json\n- depth_mask_A JSON: scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_depth_mask_A.json\n- depth_mask_B JSON: scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_depth_mask_B.json\n- segmentation image: scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_sam2_segmentation.png\n- tinted overlay: scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_sam2_tinted_overlay.png\n- relations map image: scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_relations_map.png\n- layers image: scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_layers.png\n- mask hierarchy image: scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_mask_hierarchy.png\n- regions JSON: scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_regions.json\n- regions index image: scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_regions.png\n- regions overlay image: scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_regions_overlay.png\n- region segmentation image (parallel): scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_region_segmentation.png\n- region SAM2-style labelled segmentation (parallel): scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_region_sam2_style_segmentation.png\n- region tinted overlay (parallel): scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_region_tinted_overlay.png\n\nGoals:\n1) Write a detailed caption (10-16 sentences) grounded in BOTH image evidence and scene-graph evidence.\n2) Include object attributes, spatial relations, depth/layer cues, and part-whole hierarchy when supported.\n3) Avoid hallucinations: do not mention entities absent from both image and graph.\n4) If evidence conflicts, explicitly flag uncertainty and alternatives.\n",
+  "generated_caption": "",
+  "status": "pending_external_generation",
+  "input_files": {
+    "scene_json": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_scene.json",
+    "relations_json": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_relations.json",
+    "layers_json": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_layers.json",
+    "mask_hierarchy_json": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_mask_hierarchy.json",
+    "depth_mask_A_json": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_depth_mask_A.json",
+    "depth_mask_B_json": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_depth_mask_B.json",
+    "segmentation_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_sam2_segmentation.png",
+    "tinted_overlay_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_sam2_tinted_overlay.png",
+    "relations_map_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_relations_map.png",
+    "layers_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_layers.png",
+    "mask_hierarchy_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_mask_hierarchy.png",
+    "regions_json": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_regions.json",
+    "regions_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_regions.png",
+    "regions_overlay_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_regions_overlay.png",
+    "region_segmentation_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_region_segmentation.png",
+    "region_sam2_segmentation_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_region_sam2_style_segmentation.png",
+    "region_tinted_overlay_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_region_tinted_overlay.png"
+  }
+}

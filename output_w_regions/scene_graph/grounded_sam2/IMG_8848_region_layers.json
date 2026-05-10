@@ -1,0 +1,179 @@
+{
+  "ordering": [
+    {
+      "id": "region_1",
+      "label": "fence",
+      "layer_type": "foreground",
+      "z_mean": 6.3609
+    },
+    {
+      "id": "region_9",
+      "label": "rendering",
+      "layer_type": "midground",
+      "z_mean": 7.9895
+    },
+    {
+      "id": "region_13",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 8.1732
+    },
+    {
+      "id": "region_12",
+      "label": "piece",
+      "layer_type": "background",
+      "z_mean": 8.3625
+    },
+    {
+      "id": "region_11",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 8.6212
+    },
+    {
+      "id": "region_2",
+      "label": "young",
+      "layer_type": "background",
+      "z_mean": 9.0767
+    },
+    {
+      "id": "region_4",
+      "label": "digital",
+      "layer_type": "background",
+      "z_mean": 9.2753
+    },
+    {
+      "id": "region_3",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 9.4568
+    },
+    {
+      "id": "region_8",
+      "label": "digital",
+      "layer_type": "background",
+      "z_mean": 9.5437
+    },
+    {
+      "id": "region_7",
+      "label": "thin",
+      "layer_type": "background",
+      "z_mean": 9.8082
+    },
+    {
+      "id": "region_10",
+      "label": "invertebrate",
+      "layer_type": "background",
+      "z_mean": 9.8918
+    },
+    {
+      "id": "region_6",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 10.9034
+    },
+    {
+      "id": "region_5",
+      "label": "slender",
+      "layer_type": "background",
+      "z_mean": 11.1236
+    },
+    {
+      "id": "region_15",
+      "label": "piece",
+      "layer_type": "background",
+      "z_mean": 14.0523
+    },
+    {
+      "id": "region_16",
+      "label": "simple",
+      "layer_type": "background",
+      "z_mean": 14.6081
+    },
+    {
+      "id": "region_14",
+      "label": "gate",
+      "layer_type": "background",
+      "z_mean": 14.8275
+    },
+    {
+      "id": "region_20",
+      "label": "piece",
+      "layer_type": "background",
+      "z_mean": 17.9611
+    },
+    {
+      "id": "region_22",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 18.0934
+    },
+    {
+      "id": "region_21",
+      "label": "piece",
+      "layer_type": "background",
+      "z_mean": 19.1644
+    },
+    {
+      "id": "region_18",
+      "label": "corner",
+      "layer_type": "background",
+      "z_mean": 19.2292
+    },
+    {
+      "id": "region_17",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 25.727
+    },
+    {
+      "id": "region_19",
+      "label": "triangular",
+      "layer_type": "background",
+      "z_mean": 27.9276
+    }
+  ],
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "region_ids": [
+        "region_1"
+      ]
+    },
+    {
+      "layer_type": "midground",
+      "region_ids": [
+        "region_9"
+      ]
+    },
+    {
+      "layer_type": "background",
+      "region_ids": [
+        "region_2",
+        "region_3",
+        "region_4",
+        "region_5",
+        "region_6",
+        "region_7",
+        "region_8",
+        "region_10",
+        "region_11",
+        "region_12",
+        "region_13",
+        "region_14",
+        "region_15",
+        "region_16",
+        "region_17",
+        "region_18",
+        "region_19",
+        "region_20",
+        "region_21",
+        "region_22"
+      ]
+    }
+  ],
+  "depth_quantiles": {
+    "q1": 6.678,
+    "q2": 8.139
+  }
+}

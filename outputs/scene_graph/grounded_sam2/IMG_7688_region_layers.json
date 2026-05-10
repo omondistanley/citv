@@ -1,0 +1,60 @@
+{
+  "ordering": [
+    {
+      "id": "region_1",
+      "label": "feet",
+      "layer_type": "foreground",
+      "z_mean": 6.8245
+    },
+    {
+      "id": "region_2",
+      "label": "young",
+      "layer_type": "midground",
+      "z_mean": 13.4938
+    },
+    {
+      "id": "region_3",
+      "label": "person",
+      "layer_type": "background",
+      "z_mean": 25.5511
+    },
+    {
+      "id": "region_4",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 38.5301
+    },
+    {
+      "id": "region_5",
+      "label": "group",
+      "layer_type": "background",
+      "z_mean": 46.1438
+    }
+  ],
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "region_ids": [
+        "region_1"
+      ]
+    },
+    {
+      "layer_type": "midground",
+      "region_ids": [
+        "region_2"
+      ]
+    },
+    {
+      "layer_type": "background",
+      "region_ids": [
+        "region_3",
+        "region_4",
+        "region_5"
+      ]
+    }
+  ],
+  "depth_quantiles": {
+    "q1": 11.097,
+    "q2": 20.3383
+  }
+}

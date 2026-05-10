@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://citv.local/schemas/trajectory_hypotheses_bundle.schema.json",
+  "title": "CITV trajectory hypothesis bundle (phase 1)",
+  "description": "Wrapper file written as trajectory_hypotheses.json. In-scene motion priors (instant / short horizon), distinct from insertion path ensembles.",
+  "type": "object",
+  "required": ["schema", "version", "image_stem", "image_size", "hypotheses"],
+  "additionalProperties": true,
+  "properties": {
+    "schema": {
+      "type": "string",
+      "const": "citv_trajectory_hypotheses_bundle_v1"
+    },
+    "version": { "type": "string", "pattern": "^1\\." },
+    "image_stem": { "type": "string" },
+    "track": { "type": "string" },
+    "image_size": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "hypotheses": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/TrajectoryHypothesis" }
+    }
+  },
+  "definitions": {
+    "EntityRef": {
+      "type": "object",
+      "required": ["kind", "id"],
+      "properties": {
+        "kind": { "type": "string", "enum": ["mask", "object", "region"] },
+        "id": { "type": "string" },
+        "role": { "type": "string" },
+        "display_label": { "type": "string" }
+      }
+    },
+    "StateSample": {
+      "type": "object",
+      "required": ["sample_id", "weight", "states_t"],
+      "properties": {
+        "sample_id": { "type": "string" },
+        "weight": { "type": "number" },
+        "states_t": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["t_s", "x_px", "y_px"],
+            "properties": {
+              "t_s": { "type": "number" },
+              "x_px": { "type": "number" },
+              "y_px": { "type": "number" },
+              "theta_rad": { "type": ["number", "null"] },
+              "z_m": { "type": ["number", "null"] }
+            }
+          }
+        },
+        "evidence": { "type": "object" }
+      }
+    },
+    "TrajectoryHypothesis": {
+      "type": "object",
+      "required": ["trajectory_id", "subject", "time_model", "state_representation", "samples"],
+      "properties": {
+        "trajectory_id": { "type": "string" },
+        "subject": { "$ref": "#/definitions/EntityRef" },
+        "counterpart": {
+          "type": ["object", "null"],
+          "properties": {
+            "kind": { "type": ["string", "null"] },
+            "id": { "type": ["string", "null"] },
+            "relation_to_subject": { "type": ["string", "null"] }
+          }
+        },
+        "time_model": {
+          "type": "object",
+          "required": ["type"],
+          "properties": {
+            "type": { "type": "string", "enum": ["instant_prior", "fixed_horizon_s"] },
+            "horizon_s": { "type": "number" },
+            "dt_s": { "type": "number" }
+          }
+        },
+        "state_representation": { "type": "string" },
+        "samples": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/StateSample" }
+        },
+        "constraints_used": { "type": "object" },
+        "confidence": { "type": "number" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

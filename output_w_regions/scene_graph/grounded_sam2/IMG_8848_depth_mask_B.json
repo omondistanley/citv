@@ -1,0 +1,3569 @@
+{
+  "metadata": {
+    "image_path": "/root/labs/citv/images/IMG_8848.png",
+    "image_stem": "IMG_8848",
+    "timestamp": "2026-04-02 21:50:15",
+    "image_size": [
+      1280,
+      960
+    ],
+    "matching_mode": "B"
+  },
+  "depth": {
+    "depth_map_path": "depth/IMG_8848_depth_metric.npy",
+    "depth_map_image_path": "scene_graph/grounded_sam2/IMG_8848_depth_map.png",
+    "depth_min": 4.112524509429932,
+    "depth_max": 42.340145111083984,
+    "depth_mean": 9.249384880065918
+  },
+  "segmentation": {
+    "model": "SAM2",
+    "mode": "automatic_mask_generator",
+    "segmentation_map_image_path": "scene_graph/grounded_sam2/IMG_8848_segmentation.png",
+    "num_auto_masks": 39,
+    "match_strategy": "iou_with_detection_bbox"
+  },
+  "depth_mask": {
+    "mapping_image_path": "scene_graph/grounded_sam2/IMG_8848_depth_mask_mapping_B.png",
+    "objects": [
+      {
+        "id": "grounded_sam2_obj_0_GroundingDINO",
+        "entity_kind": "object",
+        "label": "boy",
+        "bbox": [
+          583.7645263671875,
+          473.6200866699219,
+          804.1846923828125,
+          853.7965087890625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 0,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 8.4074,
+          "max": 9.8356,
+          "mean": 9.1611,
+          "median": 9.2019,
+          "std": 0.2873,
+          "num_pixels": 41158,
+          "z_val": 9.2315,
+          "z_val_pixels": 20011,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0702
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.466,
+          "y": 1.374,
+          "z": 9.232
+        },
+        "mask_centroid_2d": [
+          696,
+          645
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.3623,
+          "max": 9.8971,
+          "mean": 9.1618,
+          "median": 9.2035,
+          "std": 0.3004,
+          "num_pixels": 44185,
+          "z_val": 9.3937,
+          "z_val_pixels": 21368,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3693
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.475,
+          "y": 1.424,
+          "z": 9.394
+        },
+        "mask_centroid_2d_no_erosion": [
+          696,
+          648
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_1_GroundingDINO",
+        "entity_kind": "object",
+        "label": "shoe",
+        "bbox": [
+          721.4389038085938,
+          738.591796875,
+          794.3206787109375,
+          802.2676391601562
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 8.6431,
+          "max": 9.9468,
+          "mean": 9.1921,
+          "median": 9.1845,
+          "std": 0.3393,
+          "num_pixels": 2418,
+          "z_val": 9.0378,
+          "z_val_pixels": 1172,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.343
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.954,
+          "y": 2.397,
+          "z": 9.038
+        },
+        "mask_centroid_2d": [
+          757,
+          774
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.6431,
+          "max": 9.9898,
+          "mean": 9.2087,
+          "median": 9.2056,
+          "std": 0.3452,
+          "num_pixels": 2547,
+          "z_val": 9.035,
+          "z_val_pixels": 1242,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3512
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.945,
+          "y": 2.388,
+          "z": 9.035
+        },
+        "mask_centroid_2d_no_erosion": [
+          756,
+          773
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_2_GroundingDINO",
+        "entity_kind": "object",
+        "label": "shoe",
+        "bbox": [
+          643.9690551757812,
+          774.9736328125,
+          705.3032836914062,
+          852.7539672851562
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 2,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.7924,
+          "max": 8.654,
+          "mean": 8.1649,
+          "median": 8.1528,
+          "std": 0.2128,
+          "num_pixels": 2419,
+          "z_val": 8.1405,
+          "z_val_pixels": 1202,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3461
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.264,
+          "y": 2.489,
+          "z": 8.141
+        },
+        "mask_centroid_2d": [
+          676,
+          819
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.7924,
+          "max": 8.7037,
+          "mean": 8.1788,
+          "median": 8.1626,
+          "std": 0.2228,
+          "num_pixels": 2548,
+          "z_val": 8.1486,
+          "z_val_pixels": 1266,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3752
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.265,
+          "y": 2.492,
+          "z": 8.149
+        },
+        "mask_centroid_2d_no_erosion": [
+          676,
+          819
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_3_GroundingDINO",
+        "entity_kind": "object",
+        "label": "shoe",
+        "bbox": [
+          641.83203125,
+          737.6683959960938,
+          795.9866943359375,
+          853.7569580078125
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 3,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.7924,
+          "max": 9.8711,
+          "mean": 8.665,
+          "median": 8.6418,
+          "std": 0.568,
+          "num_pixels": 4543,
+          "z_val": 8.4574,
+          "z_val_pixels": 97,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3078
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.389,
+          "y": 2.464,
+          "z": 8.457
+        },
+        "mask_centroid_2d": [
+          691,
+          803
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.7924,
+          "max": 9.9264,
+          "mean": 8.6913,
+          "median": 8.6777,
+          "std": 0.5819,
+          "num_pixels": 5049,
+          "z_val": 8.3957,
+          "z_val_pixels": 244,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3589
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.394,
+          "y": 2.439,
+          "z": 8.396
+        },
+        "mask_centroid_2d_no_erosion": [
+          692,
+          802
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_4_GroundingDINO",
+        "entity_kind": "object",
+        "label": "cage fence",
+        "bbox": [
+          1.17645263671875,
+          0.0,
+          1169.295166015625,
+          956.236083984375
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 4,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.1125,
+          "max": 15.2005,
+          "mean": 7.7126,
+          "median": 6.8252,
+          "std": 2.5431,
+          "num_pixels": 701081,
+          "z_val": 5.9224,
+          "z_val_pixels": 346159,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.2504
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.175,
+          "y": -0.78,
+          "z": 5.922
+        },
+        "mask_centroid_2d": [
+          420,
+          334
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.1125,
+          "max": 15.3977,
+          "mean": 7.7987,
+          "median": 6.8822,
+          "std": 2.6207,
+          "num_pixels": 720928,
+          "z_val": 5.9357,
+          "z_val_pixels": 355129,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.162
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.162,
+          "y": -0.776,
+          "z": 5.936
+        },
+        "mask_centroid_2d_no_erosion": [
+          423,
+          335
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_5_GroundingDINO",
+        "entity_kind": "object",
+        "label": "cage",
+        "bbox": [
+          2.65289306640625,
+          0.0028896331787109375,
+          1172.2998046875,
+          957.2833862304688
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 5,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.1125,
+          "max": 15.1752,
+          "mean": 7.7027,
+          "median": 6.8201,
+          "std": 2.5327,
+          "num_pixels": 699756,
+          "z_val": 5.9187,
+          "z_val_pixels": 345547,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.2345
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.175,
+          "y": -0.785,
+          "z": 5.919
+        },
+        "mask_centroid_2d": [
+          420,
+          333
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.1125,
+          "max": 15.3633,
+          "mean": 7.7865,
+          "median": 6.8753,
+          "std": 2.6081,
+          "num_pixels": 719592,
+          "z_val": 5.9333,
+          "z_val_pixels": 354545,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.1469
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.161,
+          "y": -0.776,
+          "z": 5.933
+        },
+        "mask_centroid_2d_no_erosion": [
+          423,
+          335
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_6_GroundingDINO",
+        "entity_kind": "object",
+        "label": "floor pavement",
+        "bbox": [
+          782.237548828125,
+          498.4293212890625,
+          1279.04052734375,
+          957.4285278320312
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 6,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 6.166,
+          "max": 16.1349,
+          "mean": 9.5017,
+          "median": 8.9923,
+          "std": 2.3653,
+          "num_pixels": 136597,
+          "z_val": 7.4534,
+          "z_val_pixels": 66450,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4495
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.938,
+          "y": 2.131,
+          "z": 7.453
+        },
+        "mask_centroid_2d": [
+          1077,
+          797
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.1488,
+          "max": 16.2444,
+          "mean": 9.5022,
+          "median": 8.9823,
+          "std": 2.399,
+          "num_pixels": 140674,
+          "z_val": 7.2994,
+          "z_val_pixels": 69072,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5117
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.871,
+          "y": 2.094,
+          "z": 7.299
+        },
+        "mask_centroid_2d_no_erosion": [
+          1076,
+          798
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_7_GroundingDINO",
+        "entity_kind": "object",
+        "label": "bulletin board doorway",
+        "bbox": [
+          157.40994262695312,
+          0.6184673309326172,
+          1003.5029296875,
+          622.0399169921875
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 7,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.8546,
+          "max": 9.8851,
+          "mean": 6.9065,
+          "median": 6.5919,
+          "std": 1.2925,
+          "num_pixels": 358816,
+          "z_val": 5.8998,
+          "z_val_pixels": 179413,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9008
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.782,
+          "y": -1.192,
+          "z": 5.9
+        },
+        "mask_centroid_2d": [
+          493,
+          256
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.8546,
+          "max": 9.9176,
+          "mean": 6.9136,
+          "median": 6.5952,
+          "std": 1.3024,
+          "num_pixels": 364545,
+          "z_val": 5.9015,
+          "z_val_pixels": 182285,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.8231
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -0.783,
+          "y": -1.193,
+          "z": 5.901
+        },
+        "mask_centroid_2d_no_erosion": [
+          493,
+          256
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_8_GroundingDINO",
+        "entity_kind": "object",
+        "label": "fence floor pavement wood floor",
+        "bbox": [
+          1.1026763916015625,
+          395.8211975097656,
+          1123.4454345703125,
+          956.4328002929688
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 8,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.5219,
+          "max": 15.509,
+          "mean": 8.6081,
+          "median": 7.5926,
+          "std": 2.6702,
+          "num_pixels": 134103,
+          "z_val": 6.9459,
+          "z_val_pixels": 43942,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.9795
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.598,
+          "y": 2.036,
+          "z": 6.946
+        },
+        "mask_centroid_2d": [
+          385,
+          805
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.4732,
+          "max": 16.196,
+          "mean": 8.8922,
+          "median": 7.7493,
+          "std": 2.8965,
+          "num_pixels": 156331,
+          "z_val": 7.0718,
+          "z_val_pixels": 51569,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.2808
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.601,
+          "y": 2.022,
+          "z": 7.072
+        },
+        "mask_centroid_2d_no_erosion": [
+          389,
+          797
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_9_GroundingDINO",
+        "entity_kind": "object",
+        "label": "floor pavement",
+        "bbox": [
+          380.84307861328125,
+          495.5211181640625,
+          1279.1590576171875,
+          958.1123657226562
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 9,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 6.0876,
+          "max": 15.0154,
+          "mean": 8.6349,
+          "median": 7.9409,
+          "std": 2.1392,
+          "num_pixels": 196156,
+          "z_val": 6.4491,
+          "z_val_pixels": 84155,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.1734
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.868,
+          "y": 2.077,
+          "z": 6.449
+        },
+        "mask_centroid_2d": [
+          961,
+          837
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.01,
+          "max": 15.1138,
+          "mean": 8.6365,
+          "median": 7.9347,
+          "std": 2.1604,
+          "num_pixels": 201324,
+          "z_val": 6.4877,
+          "z_val_pixels": 86531,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.2354
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.855,
+          "y": 2.095,
+          "z": 6.488
+        },
+        "mask_centroid_2d_no_erosion": [
+          957,
+          838
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_10_GroundingDINO",
+        "entity_kind": "object",
+        "label": "cage doorway",
+        "bbox": [
+          974.5233764648438,
+          0.4891204833984375,
+          1171.887451171875,
+          535.6900634765625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 10,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 12.3383,
+          "max": 17.7024,
+          "mean": 14.9615,
+          "median": 14.9495,
+          "std": 1.2207,
+          "num_pixels": 87785,
+          "z_val": 15.2353,
+          "z_val_pixels": 38745,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3837
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.635,
+          "y": -3.532,
+          "z": 15.235
+        },
+        "mask_centroid_2d": [
+          1050,
+          223
+        ],
+        "depth_stats_no_erosion": {
+          "min": 12.3383,
+          "max": 17.7024,
+          "mean": 14.9615,
+          "median": 14.9495,
+          "std": 1.2207,
+          "num_pixels": 87785,
+          "z_val": 15.2353,
+          "z_val_pixels": 38745,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3837
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 5.635,
+          "y": -3.532,
+          "z": 15.235
+        },
+        "mask_centroid_2d_no_erosion": [
+          1050,
+          223
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_11_GroundingDINO",
+        "entity_kind": "object",
+        "label": "floor wood floor",
+        "bbox": [
+          382.8702087402344,
+          496.9595031738281,
+          1278.27685546875,
+          958.195068359375
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 11,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 6.0876,
+          "max": 15.0182,
+          "mean": 8.6345,
+          "median": 7.9397,
+          "std": 2.1395,
+          "num_pixels": 196003,
+          "z_val": 6.4491,
+          "z_val_pixels": 83990,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.1738
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.868,
+          "y": 2.077,
+          "z": 6.449
+        },
+        "mask_centroid_2d": [
+          961,
+          837
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.0529,
+          "max": 15.1158,
+          "mean": 8.6366,
+          "median": 7.9346,
+          "std": 2.1607,
+          "num_pixels": 201243,
+          "z_val": 6.4875,
+          "z_val_pixels": 86472,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.2358
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.855,
+          "y": 2.095,
+          "z": 6.487
+        },
+        "mask_centroid_2d_no_erosion": [
+          957,
+          838
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_12_GroundingDINO",
+        "entity_kind": "object",
+        "label": "building enclosure",
+        "bbox": [
+          0.1019287109375,
+          0.0,
+          1279.955322265625,
+          959.535400390625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 12,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.8925,
+          "max": 21.754,
+          "mean": 11.3285,
+          "median": 9.3401,
+          "std": 4.7551,
+          "num_pixels": 209318,
+          "z_val": 8.228,
+          "z_val_pixels": 14785,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 4.8715
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.136,
+          "y": 1.15,
+          "z": 8.228
+        },
+        "mask_centroid_2d": [
+          487,
+          635
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.7138,
+          "max": 20.517,
+          "mean": 10.3064,
+          "median": 8.285,
+          "std": 4.3517,
+          "num_pixels": 337996,
+          "z_val": 8.1984,
+          "z_val_pixels": 34288,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.9807
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.383,
+          "y": 0.54,
+          "z": 8.198
+        },
+        "mask_centroid_2d_no_erosion": [
+          453,
+          553
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_13_GroundingDINO",
+        "entity_kind": "object",
+        "label": "floor pavement wood floor",
+        "bbox": [
+          385.0137023925781,
+          793.742431640625,
+          1002.50439453125,
+          958.53662109375
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 13,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.9415,
+          "max": 8.376,
+          "mean": 6.9168,
+          "median": 6.8017,
+          "std": 0.5335,
+          "num_pixels": 50782,
+          "z_val": 6.38,
+          "z_val_pixels": 19010,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2757
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.409,
+          "y": 2.463,
+          "z": 6.38
+        },
+        "mask_centroid_2d": [
+          711,
+          908
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.9415,
+          "max": 8.4378,
+          "mean": 6.9223,
+          "median": 6.8023,
+          "std": 0.552,
+          "num_pixels": 53802,
+          "z_val": 6.3785,
+          "z_val_pixels": 20343,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2845
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.409,
+          "y": 2.463,
+          "z": 6.378
+        },
+        "mask_centroid_2d_no_erosion": [
+          711,
+          908
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_14_GroundingDINO",
+        "entity_kind": "object",
+        "label": "fence",
+        "bbox": [
+          0.8470916748046875,
+          0.0,
+          1016.78662109375,
+          955.9081420898438
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 14,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.1125,
+          "max": 11.5826,
+          "mean": 6.8903,
+          "median": 6.5024,
+          "std": 1.3941,
+          "num_pixels": 575565,
+          "z_val": 5.8841,
+          "z_val_pixels": 286162,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3319
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.359,
+          "y": -0.775,
+          "z": 5.884
+        },
+        "mask_centroid_2d": [
+          384,
+          334
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.1125,
+          "max": 12.1545,
+          "mean": 6.9388,
+          "median": 6.5413,
+          "std": 1.4367,
+          "num_pixels": 598246,
+          "z_val": 5.8955,
+          "z_val_pixels": 298225,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1307
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.367,
+          "y": -0.745,
+          "z": 5.896
+        },
+        "mask_centroid_2d_no_erosion": [
+          383,
+          340
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_15_GroundingDINO",
+        "entity_kind": "object",
+        "label": "doorway",
+        "bbox": [
+          665.095458984375,
+          0.7664680480957031,
+          969.076904296875,
+          492.810791015625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 15,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.2916,
+          "max": 10.5756,
+          "mean": 8.9091,
+          "median": 8.8828,
+          "std": 0.7876,
+          "num_pixels": 102595,
+          "z_val": 8.5442,
+          "z_val_pixels": 50763,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4269
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.226,
+          "y": -1.827,
+          "z": 8.544
+        },
+        "mask_centroid_2d": [
+          799,
+          243
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.2459,
+          "max": 10.6145,
+          "mean": 8.9027,
+          "median": 8.8744,
+          "std": 0.7998,
+          "num_pixels": 106627,
+          "z_val": 8.5115,
+          "z_val_pixels": 52849,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5522
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.213,
+          "y": -1.835,
+          "z": 8.511
+        },
+        "mask_centroid_2d_no_erosion": [
+          798,
+          241
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_16_GroundingDINO",
+        "entity_kind": "object",
+        "label": "fence",
+        "bbox": [
+          1.2104415893554688,
+          1.522836685180664,
+          660.176513671875,
+          955.75390625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 16,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.1125,
+          "max": 11.2809,
+          "mean": 6.4187,
+          "median": 6.1786,
+          "std": 1.0249,
+          "num_pixels": 469294,
+          "z_val": 5.9115,
+          "z_val_pixels": 231243,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0535
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.744,
+          "y": -0.672,
+          "z": 5.912
+        },
+        "mask_centroid_2d": [
+          313,
+          354
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.1125,
+          "max": 11.8721,
+          "mean": 6.4607,
+          "median": 6.2011,
+          "std": 1.089,
+          "num_pixels": 484110,
+          "z_val": 5.8584,
+          "z_val_pixels": 238881,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.17
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.733,
+          "y": -0.639,
+          "z": 5.858
+        },
+        "mask_centroid_2d_no_erosion": [
+          312,
+          359
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_17_GroundingDINO",
+        "entity_kind": "object",
+        "label": "doorway",
+        "bbox": [
+          0.34920692443847656,
+          214.88623046875,
+          73.17374420166016,
+          428.29107666015625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 17,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 10.7281,
+          "max": 40.0852,
+          "mean": 26.7912,
+          "median": 28.1967,
+          "std": 5.6868,
+          "num_pixels": 4718,
+          "z_val": 28.5698,
+          "z_val_pixels": 513,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.4829
+        },
+        "coordinates_3d_from_mask": {
+          "x": -15.412,
+          "y": -3.66,
+          "z": 28.57
+        },
+        "mask_centroid_2d": [
+          42,
+          338
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.7281,
+          "max": 40.0852,
+          "mean": 26.7912,
+          "median": 28.1967,
+          "std": 5.6868,
+          "num_pixels": 4718,
+          "z_val": 28.5698,
+          "z_val_pixels": 513,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.4829
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -15.412,
+          "y": -3.66,
+          "z": 28.57
+        },
+        "mask_centroid_2d_no_erosion": [
+          42,
+          338
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_18_GroundingDINO",
+        "entity_kind": "object",
+        "label": "floor pavement wood floor",
+        "bbox": [
+          793.1922607421875,
+          574.3345947265625,
+          1278.268310546875,
+          955.193359375
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 18,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 6.166,
+          "max": 13.9311,
+          "mean": 9.1262,
+          "median": 8.7947,
+          "std": 1.9537,
+          "num_pixels": 123950,
+          "z_val": 7.2862,
+          "z_val_pixels": 59053,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9072
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.853,
+          "y": 2.13,
+          "z": 7.286
+        },
+        "mask_centroid_2d": [
+          1074,
+          804
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.0716,
+          "max": 14.035,
+          "mean": 9.134,
+          "median": 8.7913,
+          "std": 1.9853,
+          "num_pixels": 129311,
+          "z_val": 7.266,
+          "z_val_pixels": 62731,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9738
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.832,
+          "y": 2.13,
+          "z": 7.266
+        },
+        "mask_centroid_2d_no_erosion": [
+          1072,
+          805
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_19_GroundingDINO",
+        "entity_kind": "object",
+        "label": "cage doorway",
+        "bbox": [
+          0.4747486114501953,
+          0.43613433837890625,
+          226.4873504638672,
+          428.2530517578125
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 19,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.6552,
+          "max": 11.2009,
+          "mean": 5.9596,
+          "median": 5.867,
+          "std": 0.7155,
+          "num_pixels": 52290,
+          "z_val": 5.822,
+          "z_val_pixels": 20582,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3966
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.789,
+          "y": -1.544,
+          "z": 5.822
+        },
+        "mask_centroid_2d": [
+          109,
+          186
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.3459,
+          "max": 13.2526,
+          "mean": 5.9842,
+          "median": 5.8475,
+          "std": 0.8962,
+          "num_pixels": 58005,
+          "z_val": 5.8342,
+          "z_val_pixels": 23644,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.528
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.779,
+          "y": -1.542,
+          "z": 5.834
+        },
+        "mask_centroid_2d_no_erosion": [
+          112,
+          187
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_20_GroundingDINO",
+        "entity_kind": "object",
+        "label": "wood floor",
+        "bbox": [
+          783.1962890625,
+          500.36419677734375,
+          1278.873779296875,
+          956.7526245117188
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 20,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 6.166,
+          "max": 16.1353,
+          "mean": 9.5022,
+          "median": 8.9926,
+          "std": 2.3655,
+          "num_pixels": 136553,
+          "z_val": 7.4552,
+          "z_val_pixels": 66412,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4489
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.939,
+          "y": 2.132,
+          "z": 7.455
+        },
+        "mask_centroid_2d": [
+          1077,
+          797
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.1488,
+          "max": 16.2457,
+          "mean": 9.5027,
+          "median": 8.9826,
+          "std": 2.3993,
+          "num_pixels": 140636,
+          "z_val": 7.2994,
+          "z_val_pixels": 69034,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5104
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 2.871,
+          "y": 2.094,
+          "z": 7.299
+        },
+        "mask_centroid_2d_no_erosion": [
+          1076,
+          798
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_21_GroundingDINO",
+        "entity_kind": "object",
+        "label": "floor wood floor",
+        "bbox": [
+          0.0,
+          395.0677185058594,
+          1123.2464599609375,
+          957.4198608398438
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 21,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.5219,
+          "max": 15.5356,
+          "mean": 8.6186,
+          "median": 7.5967,
+          "std": 2.6803,
+          "num_pixels": 134277,
+          "z_val": 6.9459,
+          "z_val_pixels": 43950,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.9893
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.598,
+          "y": 2.03,
+          "z": 6.946
+        },
+        "mask_centroid_2d": [
+          385,
+          804
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.4733,
+          "max": 16.2113,
+          "mean": 8.8979,
+          "median": 7.7525,
+          "std": 2.9011,
+          "num_pixels": 156442,
+          "z_val": 7.0718,
+          "z_val_pixels": 51557,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.2905
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.601,
+          "y": 2.022,
+          "z": 7.072
+        },
+        "mask_centroid_2d_no_erosion": [
+          389,
+          797
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_22_GroundingDINO",
+        "entity_kind": "object",
+        "label": "cage",
+        "bbox": [
+          2.5094985961914062,
+          0.0,
+          1168.2738037109375,
+          822.86181640625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 22,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.1125,
+          "max": 14.9966,
+          "mean": 7.6432,
+          "median": 6.8044,
+          "std": 2.4608,
+          "num_pixels": 682130,
+          "z_val": 5.902,
+          "z_val_pixels": 337097,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.0571
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.134,
+          "y": -0.847,
+          "z": 5.902
+        },
+        "mask_centroid_2d": [
+          427,
+          321
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.1125,
+          "max": 15.161,
+          "mean": 7.7184,
+          "median": 6.8602,
+          "std": 2.5227,
+          "num_pixels": 701913,
+          "z_val": 5.9136,
+          "z_val_pixels": 345831,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.0406
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.115,
+          "y": -0.843,
+          "z": 5.914
+        },
+        "mask_centroid_2d_no_erosion": [
+          431,
+          322
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_23_evidence_fusion",
+        "entity_kind": "object",
+        "label": "giving the cake a textured appearance. the background is a neutral grey color",
+        "bbox": [
+          692.1795043945312,
+          472.13726806640625,
+          783.8678588867188,
+          556.35986328125
+        ],
+        "source_model": "evidence_fusion",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 23,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 8.8128,
+          "max": 9.508,
+          "mean": 9.1502,
+          "median": 9.1686,
+          "std": 0.1395,
+          "num_pixels": 4709,
+          "z_val": 9.1368,
+          "z_val_pixels": 2357,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4093
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.808,
+          "y": 0.305,
+          "z": 9.137
+        },
+        "mask_centroid_2d": [
+          738,
+          517
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.7657,
+          "max": 9.6106,
+          "mean": 9.1535,
+          "median": 9.1707,
+          "std": 0.1523,
+          "num_pixels": 5074,
+          "z_val": 9.1298,
+          "z_val_pixels": 2542,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5905
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.807,
+          "y": 0.313,
+          "z": 9.13
+        },
+        "mask_centroid_2d_no_erosion": [
+          738,
+          518
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_24_GroundingDINO",
+        "entity_kind": "object",
+        "label": "cage",
+        "bbox": [
+          0.8250045776367188,
+          0.5558395385742188,
+          982.947265625,
+          955.906494140625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 24,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.1125,
+          "max": 11.1444,
+          "mean": 6.8554,
+          "median": 6.4762,
+          "std": 1.3667,
+          "num_pixels": 561952,
+          "z_val": 5.8897,
+          "z_val_pixels": 278724,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3059
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.355,
+          "y": -0.808,
+          "z": 5.89
+        },
+        "mask_centroid_2d": [
+          385,
+          328
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.1125,
+          "max": 11.5936,
+          "mean": 6.8992,
+          "median": 6.5142,
+          "std": 1.3975,
+          "num_pixels": 584154,
+          "z_val": 5.8863,
+          "z_val_pixels": 290754,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.1581
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.359,
+          "y": -0.765,
+          "z": 5.886
+        },
+        "mask_centroid_2d_no_erosion": [
+          384,
+          336
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_25_GroundingDINO",
+        "entity_kind": "object",
+        "label": "floor pavement",
+        "bbox": [
+          0.08319854736328125,
+          398.5715637207031,
+          1279.711669921875,
+          958.2510375976562
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 25,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.5219,
+          "max": 16.49,
+          "mean": 8.9669,
+          "median": 7.743,
+          "std": 2.9928,
+          "num_pixels": 137183,
+          "z_val": 6.9711,
+          "z_val_pixels": 42140,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.3022
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.578,
+          "y": 1.994,
+          "z": 6.971
+        },
+        "mask_centroid_2d": [
+          389,
+          797
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.4732,
+          "max": 17.4215,
+          "mean": 9.1622,
+          "median": 7.8565,
+          "std": 3.1792,
+          "num_pixels": 159184,
+          "z_val": 6.7369,
+          "z_val_pixels": 51062,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.6198
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.507,
+          "y": 1.902,
+          "z": 6.737
+        },
+        "mask_centroid_2d_no_erosion": [
+          392,
+          793
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_26_GroundingDINO",
+        "entity_kind": "object",
+        "label": "wood floor",
+        "bbox": [
+          894.486083984375,
+          615.5264282226562,
+          1268.8538818359375,
+          942.4825439453125
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 26,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 6.1706,
+          "max": 12.6513,
+          "mean": 8.6351,
+          "median": 8.3873,
+          "std": 1.6705,
+          "num_pixels": 80400,
+          "z_val": 7.8075,
+          "z_val_pixels": 34876,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.4395
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.367,
+          "y": 2.402,
+          "z": 7.807
+        },
+        "mask_centroid_2d": [
+          1118,
+          821
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.0716,
+          "max": 13.1497,
+          "mean": 8.8495,
+          "median": 8.538,
+          "std": 1.8419,
+          "num_pixels": 93699,
+          "z_val": 7.8086,
+          "z_val_pixels": 43647,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.4394
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 3.325,
+          "y": 2.36,
+          "z": 7.809
+        },
+        "mask_centroid_2d_no_erosion": [
+          1112,
+          815
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_27_GroundingDINO",
+        "entity_kind": "object",
+        "label": "boy child",
+        "bbox": [
+          585.4603271484375,
+          475.2472229003906,
+          802.8797607421875,
+          853.098388671875
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 27,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 8.4072,
+          "max": 9.8356,
+          "mean": 9.1611,
+          "median": 9.2019,
+          "std": 0.2873,
+          "num_pixels": 41155,
+          "z_val": 9.2315,
+          "z_val_pixels": 20012,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.07
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.466,
+          "y": 1.374,
+          "z": 9.232
+        },
+        "mask_centroid_2d": [
+          696,
+          645
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.3623,
+          "max": 9.8971,
+          "mean": 9.1618,
+          "median": 9.2034,
+          "std": 0.3004,
+          "num_pixels": 44180,
+          "z_val": 9.3937,
+          "z_val_pixels": 21367,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3685
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.475,
+          "y": 1.424,
+          "z": 9.394
+        },
+        "mask_centroid_2d_no_erosion": [
+          696,
+          648
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_28_GroundingDINO",
+        "entity_kind": "object",
+        "label": "pavement",
+        "bbox": [
+          161.60366821289062,
+          495.4106140136719,
+          1278.0369873046875,
+          957.6947021484375
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 28,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.7643,
+          "max": 15.7187,
+          "mean": 9.1383,
+          "median": 8.556,
+          "std": 2.2927,
+          "num_pixels": 158862,
+          "z_val": 7.2875,
+          "z_val_pixels": 67335,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0804
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.275,
+          "y": 2.196,
+          "z": 7.287
+        },
+        "mask_centroid_2d": [
+          986,
+          814
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.5622,
+          "max": 15.4479,
+          "mean": 8.8691,
+          "median": 8.2532,
+          "std": 2.2364,
+          "num_pixels": 183180,
+          "z_val": 7.2581,
+          "z_val_pixels": 64695,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.421
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.932,
+          "y": 2.265,
+          "z": 7.258
+        },
+        "mask_centroid_2d_no_erosion": [
+          935,
+          826
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_29_GroundingDINO",
+        "entity_kind": "object",
+        "label": "floor",
+        "bbox": [
+          1.8441390991210938,
+          495.84881591796875,
+          1278.191650390625,
+          958.4686889648438
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 29,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.5219,
+          "max": 14.8071,
+          "mean": 8.376,
+          "median": 7.369,
+          "std": 2.5236,
+          "num_pixels": 114700,
+          "z_val": 6.7089,
+          "z_val_pixels": 39903,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.7363
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.295,
+          "y": 2.04,
+          "z": 6.709
+        },
+        "mask_centroid_2d": [
+          426,
+          817
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.4975,
+          "max": 15.2063,
+          "mean": 8.5268,
+          "median": 7.4744,
+          "std": 2.6344,
+          "num_pixels": 129373,
+          "z_val": 6.7972,
+          "z_val_pixels": 45368,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.7075
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.263,
+          "y": 2.048,
+          "z": 6.797
+        },
+        "mask_centroid_2d_no_erosion": [
+          434,
+          814
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_30_GroundingDINO",
+        "entity_kind": "object",
+        "label": "doorway",
+        "bbox": [
+          1010.9542236328125,
+          0.8448314666748047,
+          1169.173828125,
+          530.288330078125
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 30,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 13.1042,
+          "max": 17.7314,
+          "mean": 15.3675,
+          "median": 15.355,
+          "std": 1.0151,
+          "num_pixels": 66250,
+          "z_val": 15.222,
+          "z_val_pixels": 25864,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5954
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.973,
+          "y": -3.557,
+          "z": 15.222
+        },
+        "mask_centroid_2d": [
+          1075,
+          221
+        ],
+        "depth_stats_no_erosion": {
+          "min": 13.1042,
+          "max": 17.7314,
+          "mean": 15.3675,
+          "median": 15.355,
+          "std": 1.0151,
+          "num_pixels": 66250,
+          "z_val": 15.222,
+          "z_val_pixels": 25864,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5954
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 5.973,
+          "y": -3.557,
+          "z": 15.222
+        },
+        "mask_centroid_2d_no_erosion": [
+          1075,
+          221
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_31_GroundingDINO",
+        "entity_kind": "object",
+        "label": "doorway",
+        "bbox": [
+          662.8455810546875,
+          0.1895427703857422,
+          975.3518676757812,
+          607.2407836914062
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 31,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.28,
+          "max": 10.5802,
+          "mean": 8.906,
+          "median": 8.8801,
+          "std": 0.7899,
+          "num_pixels": 103308,
+          "z_val": 8.5236,
+          "z_val_pixels": 51274,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4571
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.215,
+          "y": -1.822,
+          "z": 8.524
+        },
+        "mask_centroid_2d": [
+          798,
+          243
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.2371,
+          "max": 10.6203,
+          "mean": 8.9002,
+          "median": 8.8724,
+          "std": 0.8023,
+          "num_pixels": 107294,
+          "z_val": 8.2821,
+          "z_val_pixels": 53285,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6018
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.18,
+          "y": -1.778,
+          "z": 8.282
+        },
+        "mask_centroid_2d_no_erosion": [
+          798,
+          242
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_32_GroundingDINO",
+        "entity_kind": "object",
+        "label": "wood floor",
+        "bbox": [
+          587.5975341796875,
+          863.3827514648438,
+          859.34033203125,
+          954.8036499023438
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 32,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 6.0243,
+          "max": 7.3257,
+          "mean": 6.6566,
+          "median": 6.6289,
+          "std": 0.3066,
+          "num_pixels": 21107,
+          "z_val": 6.6157,
+          "z_val_pixels": 8578,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.306
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.549,
+          "y": 2.632,
+          "z": 6.616
+        },
+        "mask_centroid_2d": [
+          732,
+          921
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.013,
+          "max": 7.3638,
+          "mean": 6.6689,
+          "median": 6.6423,
+          "std": 0.3184,
+          "num_pixels": 22163,
+          "z_val": 6.3912,
+          "z_val_pixels": 8957,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3817
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.525,
+          "y": 2.537,
+          "z": 6.391
+        },
+        "mask_centroid_2d_no_erosion": [
+          731,
+          920
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_33_GroundingDINO",
+        "entity_kind": "object",
+        "label": "wood floor",
+        "bbox": [
+          969.2344970703125,
+          629.8780517578125,
+          1262.227294921875,
+          929.4048461914062
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 33,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 6.1706,
+          "max": 13.5893,
+          "mean": 9.0822,
+          "median": 8.7082,
+          "std": 1.9815,
+          "num_pixels": 104173,
+          "z_val": 7.292,
+          "z_val_pixels": 50691,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3305
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.072,
+          "y": 2.151,
+          "z": 7.292
+        },
+        "mask_centroid_2d": [
+          1107,
+          807
+        ],
+        "depth_stats_no_erosion": {
+          "min": 6.0876,
+          "max": 13.6845,
+          "mean": 9.0619,
+          "median": 8.676,
+          "std": 1.9844,
+          "num_pixels": 113292,
+          "z_val": 7.4657,
+          "z_val_pixels": 55850,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2581
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 3.078,
+          "y": 2.209,
+          "z": 7.466
+        },
+        "mask_centroid_2d_no_erosion": [
+          1097,
+          808
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_34_GroundingDINO",
+        "entity_kind": "object",
+        "label": "wood floor",
+        "bbox": [
+          384.4288635253906,
+          793.6898193359375,
+          1003.4925537109375,
+          958.4823608398438
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 34,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.9415,
+          "max": 8.3765,
+          "mean": 6.9169,
+          "median": 6.8018,
+          "std": 0.5337,
+          "num_pixels": 50791,
+          "z_val": 6.3801,
+          "z_val_pixels": 19017,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2764
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.409,
+          "y": 2.463,
+          "z": 6.38
+        },
+        "mask_centroid_2d": [
+          711,
+          908
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.9415,
+          "max": 8.4379,
+          "mean": 6.9224,
+          "median": 6.8024,
+          "std": 0.5521,
+          "num_pixels": 53809,
+          "z_val": 6.3785,
+          "z_val_pixels": 20346,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2844
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.409,
+          "y": 2.463,
+          "z": 6.378
+        },
+        "mask_centroid_2d_no_erosion": [
+          711,
+          908
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_35_GroundingDINO",
+        "entity_kind": "object",
+        "label": "boy child",
+        "bbox": [
+          547.22412109375,
+          448.2189636230469,
+          851.00048828125,
+          867.2217407226562
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 35,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 8.4048,
+          "max": 9.8377,
+          "mean": 9.1602,
+          "median": 9.2012,
+          "std": 0.2886,
+          "num_pixels": 41605,
+          "z_val": 9.2318,
+          "z_val_pixels": 20209,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0982
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.466,
+          "y": 1.382,
+          "z": 9.232
+        },
+        "mask_centroid_2d": [
+          696,
+          646
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.3584,
+          "max": 9.9043,
+          "mean": 9.162,
+          "median": 9.2031,
+          "std": 0.302,
+          "num_pixels": 44664,
+          "z_val": 9.2378,
+          "z_val_pixels": 21597,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4103
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.467,
+          "y": 1.4,
+          "z": 9.238
+        },
+        "mask_centroid_2d_no_erosion": [
+          696,
+          648
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_36_GroundingDINO",
+        "entity_kind": "object",
+        "label": "floor",
+        "bbox": [
+          1.58538818359375,
+          396.7211608886719,
+          958.1968994140625,
+          955.8427734375
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 36,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.5219,
+          "max": 15.4318,
+          "mean": 8.119,
+          "median": 7.5595,
+          "std": 2.1227,
+          "num_pixels": 69573,
+          "z_val": 6.7818,
+          "z_val_pixels": 11516,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.4661
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.563,
+          "y": 1.958,
+          "z": 6.782
+        },
+        "mask_centroid_2d": [
+          221,
+          800
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.4732,
+          "max": 15.9855,
+          "mean": 8.406,
+          "median": 7.7443,
+          "std": 2.3685,
+          "num_pixels": 86975,
+          "z_val": 6.7687,
+          "z_val_pixels": 16121,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.7084
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.381,
+          "y": 1.868,
+          "z": 6.769
+        },
+        "mask_centroid_2d_no_erosion": [
+          250,
+          786
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_37_GroundingDINO",
+        "entity_kind": "object",
+        "label": "shoe",
+        "bbox": [
+          634.051025390625,
+          732.8261108398438,
+          705.7294921875,
+          852.6549072265625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 37,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.7924,
+          "max": 8.7428,
+          "mean": 8.2007,
+          "median": 8.1783,
+          "std": 0.2353,
+          "num_pixels": 2663,
+          "z_val": 8.1376,
+          "z_val_pixels": 1319,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.38
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.257,
+          "y": 2.474,
+          "z": 8.138
+        },
+        "mask_centroid_2d": [
+          675,
+          817
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.7924,
+          "max": 8.7918,
+          "mean": 8.2161,
+          "median": 8.1894,
+          "std": 0.2457,
+          "num_pixels": 2819,
+          "z_val": 8.1519,
+          "z_val_pixels": 1397,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4159
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 0.257,
+          "y": 2.471,
+          "z": 8.152
+        },
+        "mask_centroid_2d_no_erosion": [
+          675,
+          816
+        ]
+      },
+      {
+        "id": "grounded_sam2_obj_38_GroundingDINO",
+        "entity_kind": "object",
+        "label": "floor wood floor",
+        "bbox": [
+          1.1190414428710938,
+          494.16802978515625,
+          1125.0767822265625,
+          957.8734741210938
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 38,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.5219,
+          "max": 14.9224,
+          "mean": 8.4239,
+          "median": 7.4201,
+          "std": 2.557,
+          "num_pixels": 121451,
+          "z_val": 6.8077,
+          "z_val_pixels": 42798,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.7333
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.345,
+          "y": 2.051,
+          "z": 6.808
+        },
+        "mask_centroid_2d": [
+          421,
+          814
+        ],
+        "depth_stats_no_erosion": {
+          "min": 5.5072,
+          "max": 15.068,
+          "mean": 8.4789,
+          "median": 7.4677,
+          "std": 2.5937,
+          "num_pixels": 132470,
+          "z_val": 6.8086,
+          "z_val_pixels": 47390,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.8666
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.364,
+          "y": 2.045,
+          "z": 6.809
+        },
+        "mask_centroid_2d_no_erosion": [
+          418,
+          813
+        ]
+      },
+      {
+        "id": "region_1",
+        "entity_kind": "region",
+        "label": "foreground",
+        "bbox": [
+          0,
+          0,
+          1279,
+          959
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.9347,
+          "max": 7.7763,
+          "mean": 6.3609,
+          "median": 6.3401,
+          "std": 0.7061,
+          "num_pixels": 584006,
+          "z_val": 5.9359,
+          "z_val_pixels": 207183,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6485
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.291,
+          "y": -0.005,
+          "z": 5.936
+        },
+        "mask_centroid_2d": [
+          399,
+          479
+        ],
+        "depth_stats_no_erosion": {
+          "min": 4.9294,
+          "max": 7.7786,
+          "mean": 6.3857,
+          "median": 6.364,
+          "std": 0.7208,
+          "num_pixels": 606147,
+          "z_val": 5.9152,
+          "z_val_pixels": 226712,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.9958
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.313,
+          "y": 0.005,
+          "z": 5.915
+        },
+        "mask_centroid_2d_no_erosion": [
+          394,
+          481
+        ]
+      },
+      {
+        "id": "region_2",
+        "entity_kind": "region",
+        "label": "midground",
+        "bbox": [
+          405,
+          0,
+          1279,
+          860
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.78,
+          "max": 11.1417,
+          "mean": 9.0767,
+          "median": 9.0004,
+          "std": 0.8268,
+          "num_pixels": 311788,
+          "z_val": 9.248,
+          "z_val_pixels": 92714,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3526
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.126,
+          "y": 0.359,
+          "z": 9.248
+        },
+        "mask_centroid_2d": [
+          775,
+          523
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.7786,
+          "max": 11.2279,
+          "mean": 9.0727,
+          "median": 8.9894,
+          "std": 0.8549,
+          "num_pixels": 321595,
+          "z_val": 9.2445,
+          "z_val_pixels": 98090,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5718
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 1.143,
+          "y": 0.334,
+          "z": 9.245
+        },
+        "mask_centroid_2d_no_erosion": [
+          777,
+          520
+        ]
+      },
+      {
+        "id": "region_3",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          117,
+          389,
+          148,
+          443
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.78,
+          "max": 11.7941,
+          "mean": 9.4568,
+          "median": 9.3025,
+          "std": 1.1141,
+          "num_pixels": 522,
+          "z_val": 7.8883,
+          "z_val_pixels": 108,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2804
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.629,
+          "y": -0.441,
+          "z": 7.888
+        },
+        "mask_centroid_2d": [
+          130,
+          418
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.78,
+          "max": 11.7941,
+          "mean": 9.4568,
+          "median": 9.3025,
+          "std": 1.1141,
+          "num_pixels": 522,
+          "z_val": 7.8883,
+          "z_val_pixels": 108,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2804
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.629,
+          "y": -0.441,
+          "z": 7.888
+        },
+        "mask_centroid_2d_no_erosion": [
+          130,
+          418
+        ]
+      },
+      {
+        "id": "region_4",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          96,
+          390,
+          118,
+          478
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.7819,
+          "max": 11.7951,
+          "mean": 9.2753,
+          "median": 8.8732,
+          "std": 1.1727,
+          "num_pixels": 548,
+          "z_val": 8.001,
+          "z_val_pixels": 44,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5082
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.869,
+          "y": -0.325,
+          "z": 8.001
+        },
+        "mask_centroid_2d": [
+          104,
+          435
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.7819,
+          "max": 11.7951,
+          "mean": 9.2753,
+          "median": 8.8732,
+          "std": 1.1727,
+          "num_pixels": 548,
+          "z_val": 8.001,
+          "z_val_pixels": 44,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5082
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.869,
+          "y": -0.325,
+          "z": 8.001
+        },
+        "mask_centroid_2d_no_erosion": [
+          104,
+          435
+        ]
+      },
+      {
+        "id": "region_5",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          0,
+          435,
+          48,
+          500
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 10.1997,
+          "max": 11.965,
+          "mean": 11.1236,
+          "median": 11.1465,
+          "std": 0.4492,
+          "num_pixels": 804,
+          "z_val": 10.257,
+          "z_val_pixels": 231,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.6413
+        },
+        "coordinates_3d_from_mask": {
+          "x": -5.746,
+          "y": -0.074,
+          "z": 10.257
+        },
+        "mask_centroid_2d": [
+          19,
+          472
+        ],
+        "depth_stats_no_erosion": {
+          "min": 10.1997,
+          "max": 11.965,
+          "mean": 11.1236,
+          "median": 11.1465,
+          "std": 0.4492,
+          "num_pixels": 804,
+          "z_val": 10.257,
+          "z_val_pixels": 231,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.6413
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -5.746,
+          "y": -0.074,
+          "z": 10.257
+        },
+        "mask_centroid_2d_no_erosion": [
+          19,
+          472
+        ]
+      },
+      {
+        "id": "region_6",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          0,
+          483,
+          97,
+          671
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 8.4982,
+          "max": 11.9646,
+          "mean": 10.9034,
+          "median": 11.1755,
+          "std": 0.9132,
+          "num_pixels": 3059,
+          "z_val": 11.717,
+          "z_val_pixels": 1469,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.0111
+        },
+        "coordinates_3d_from_mask": {
+          "x": -6.173,
+          "y": 1.649,
+          "z": 11.717
+        },
+        "mask_centroid_2d": [
+          56,
+          636
+        ],
+        "depth_stats_no_erosion": {
+          "min": 8.4982,
+          "max": 11.9646,
+          "mean": 10.9034,
+          "median": 11.1755,
+          "std": 0.9132,
+          "num_pixels": 3059,
+          "z_val": 11.717,
+          "z_val_pixels": 1469,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.0111
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -6.173,
+          "y": 1.649,
+          "z": 11.717
+        },
+        "mask_centroid_2d_no_erosion": [
+          56,
+          636
+        ]
+      },
+      {
+        "id": "region_7",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          76,
+          485,
+          122,
+          644
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.7797,
+          "max": 11.9609,
+          "mean": 9.8082,
+          "median": 9.7683,
+          "std": 1.2395,
+          "num_pixels": 564,
+          "z_val": 9.6079,
+          "z_val_pixels": 43,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.308
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.698,
+          "y": 0.789,
+          "z": 9.608
+        },
+        "mask_centroid_2d": [
+          98,
+          571
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.7797,
+          "max": 11.9609,
+          "mean": 9.8082,
+          "median": 9.7683,
+          "std": 1.2395,
+          "num_pixels": 564,
+          "z_val": 9.6079,
+          "z_val_pixels": 43,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.308
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.698,
+          "y": 0.789,
+          "z": 9.608
+        },
+        "mask_centroid_2d_no_erosion": [
+          98,
+          571
+        ]
+      },
+      {
+        "id": "region_8",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          122,
+          500,
+          142,
+          592
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.783,
+          "max": 11.8041,
+          "mean": 9.5437,
+          "median": 9.5063,
+          "std": 1.0808,
+          "num_pixels": 801,
+          "z_val": 8.476,
+          "z_val_pixels": 139,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.5786
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.907,
+          "y": 0.497,
+          "z": 8.476
+        },
+        "mask_centroid_2d": [
+          129,
+          545
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.783,
+          "max": 11.8041,
+          "mean": 9.5437,
+          "median": 9.5063,
+          "std": 1.0808,
+          "num_pixels": 801,
+          "z_val": 8.476,
+          "z_val_pixels": 139,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.5786
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -3.907,
+          "y": 0.497,
+          "z": 8.476
+        },
+        "mask_centroid_2d_no_erosion": [
+          129,
+          545
+        ]
+      },
+      {
+        "id": "region_9",
+        "entity_kind": "region",
+        "label": "midground",
+        "bbox": [
+          349,
+          594,
+          392,
+          677
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.7793,
+          "max": 8.2577,
+          "mean": 7.9895,
+          "median": 7.9911,
+          "std": 0.1199,
+          "num_pixels": 2095,
+          "z_val": 8.0309,
+          "z_val_pixels": 906,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.147
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.927,
+          "y": 1.087,
+          "z": 8.031
+        },
+        "mask_centroid_2d": [
+          374,
+          630
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.7787,
+          "max": 8.2514,
+          "mean": 7.9753,
+          "median": 7.969,
+          "std": 0.123,
+          "num_pixels": 2298,
+          "z_val": 7.9946,
+          "z_val_pixels": 1009,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3639
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -1.926,
+          "y": 1.082,
+          "z": 7.995
+        },
+        "mask_centroid_2d_no_erosion": [
+          373,
+          630
+        ]
+      },
+      {
+        "id": "region_10",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          0,
+          601,
+          20,
+          693
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.7962,
+          "max": 11.9624,
+          "mean": 9.8918,
+          "median": 9.7909,
+          "std": 1.0463,
+          "num_pixels": 1063,
+          "z_val": 9.6223,
+          "z_val_pixels": 414,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.3679
+        },
+        "coordinates_3d_from_mask": {
+          "x": -5.486,
+          "y": 1.571,
+          "z": 9.622
+        },
+        "mask_centroid_2d": [
+          8,
+          661
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.7962,
+          "max": 11.9624,
+          "mean": 9.8918,
+          "median": 9.7909,
+          "std": 1.0463,
+          "num_pixels": 1063,
+          "z_val": 9.6223,
+          "z_val_pixels": 414,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.3679
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -5.486,
+          "y": 1.571,
+          "z": 9.622
+        },
+        "mask_centroid_2d_no_erosion": [
+          8,
+          661
+        ]
+      },
+      {
+        "id": "region_11",
+        "entity_kind": "region",
+        "label": "midground",
+        "bbox": [
+          44,
+          682,
+          127,
+          782
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.8049,
+          "max": 9.7969,
+          "mean": 8.6212,
+          "median": 8.6082,
+          "std": 0.479,
+          "num_pixels": 4880,
+          "z_val": 8.6616,
+          "z_val_pixels": 2432,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3847
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.329,
+          "y": 1.985,
+          "z": 8.662
+        },
+        "mask_centroid_2d": [
+          86,
+          734
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.7788,
+          "max": 9.7768,
+          "mean": 8.5879,
+          "median": 8.5756,
+          "std": 0.4876,
+          "num_pixels": 5277,
+          "z_val": 8.6804,
+          "z_val_pixels": 2640,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.7278
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.338,
+          "y": 1.989,
+          "z": 8.68
+        },
+        "mask_centroid_2d_no_erosion": [
+          86,
+          734
+        ]
+      },
+      {
+        "id": "region_12",
+        "entity_kind": "region",
+        "label": "midground",
+        "bbox": [
+          0,
+          706,
+          47,
+          778
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.7787,
+          "max": 9.2969,
+          "mean": 8.3625,
+          "median": 8.2678,
+          "std": 0.407,
+          "num_pixels": 2357,
+          "z_val": 8.2072,
+          "z_val_pixels": 1176,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2284
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.59,
+          "y": 1.962,
+          "z": 8.207
+        },
+        "mask_centroid_2d": [
+          20,
+          745
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.7787,
+          "max": 9.2916,
+          "mean": 8.3526,
+          "median": 8.2575,
+          "std": 0.4084,
+          "num_pixels": 2448,
+          "z_val": 8.2068,
+          "z_val_pixels": 1209,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.3719
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -4.59,
+          "y": 1.962,
+          "z": 8.207
+        },
+        "mask_centroid_2d_no_erosion": [
+          20,
+          745
+        ]
+      },
+      {
+        "id": "region_13",
+        "entity_kind": "region",
+        "label": "midground",
+        "bbox": [
+          311,
+          725,
+          410,
+          780
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.7798,
+          "max": 8.6799,
+          "mean": 8.1732,
+          "median": 8.1671,
+          "std": 0.2193,
+          "num_pixels": 2937,
+          "z_val": 8.2387,
+          "z_val_pixels": 1114,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0684
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.022,
+          "y": 2.066,
+          "z": 8.239
+        },
+        "mask_centroid_2d": [
+          368,
+          758
+        ],
+        "depth_stats_no_erosion": {
+          "min": 7.7798,
+          "max": 8.6762,
+          "mean": 8.1686,
+          "median": 8.1626,
+          "std": 0.2207,
+          "num_pixels": 3096,
+          "z_val": 8.2387,
+          "z_val_pixels": 1185,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.7145
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -2.029,
+          "y": 2.059,
+          "z": 8.239
+        },
+        "mask_centroid_2d_no_erosion": [
+          367,
+          757
+        ]
+      },
+      {
+        "id": "region_14",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          761,
+          0,
+          1279,
+          682
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 11.965,
+          "max": 17.714,
+          "mean": 14.8275,
+          "median": 14.8269,
+          "std": 1.498,
+          "num_pixels": 223544,
+          "z_val": 15.7305,
+          "z_val_pixels": 89380,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9465
+        },
+        "coordinates_3d_from_mask": {
+          "x": 6.003,
+          "y": -1.774,
+          "z": 15.731
+        },
+        "mask_centroid_2d": [
+          1063,
+          355
+        ],
+        "depth_stats_no_erosion": {
+          "min": 11.965,
+          "max": 17.714,
+          "mean": 14.8275,
+          "median": 14.8269,
+          "std": 1.498,
+          "num_pixels": 223544,
+          "z_val": 15.7305,
+          "z_val_pixels": 89380,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9465
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 6.003,
+          "y": -1.774,
+          "z": 15.731
+        },
+        "mask_centroid_2d_no_erosion": [
+          1063,
+          355
+        ]
+      },
+      {
+        "id": "region_15",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          0,
+          429,
+          95,
+          649
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 11.966,
+          "max": 17.3745,
+          "mean": 14.0523,
+          "median": 13.7794,
+          "std": 1.4926,
+          "num_pixels": 7846,
+          "z_val": 13.7349,
+          "z_val_pixels": 3873,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5689
+        },
+        "coordinates_3d_from_mask": {
+          "x": -7.397,
+          "y": 1.09,
+          "z": 13.735
+        },
+        "mask_centroid_2d": [
+          43,
+          568
+        ],
+        "depth_stats_no_erosion": {
+          "min": 11.966,
+          "max": 17.3745,
+          "mean": 14.0523,
+          "median": 13.7794,
+          "std": 1.4926,
+          "num_pixels": 7846,
+          "z_val": 13.7349,
+          "z_val_pixels": 3873,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5689
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -7.397,
+          "y": 1.09,
+          "z": 13.735
+        },
+        "mask_centroid_2d_no_erosion": [
+          43,
+          568
+        ]
+      },
+      {
+        "id": "region_16",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          85,
+          508,
+          117,
+          630
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 11.9686,
+          "max": 17.6643,
+          "mean": 14.6081,
+          "median": 14.5314,
+          "std": 1.5083,
+          "num_pixels": 727,
+          "z_val": 15.1215,
+          "z_val_pixels": 135,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.5551
+        },
+        "coordinates_3d_from_mask": {
+          "x": -7.325,
+          "y": 1.282,
+          "z": 15.122
+        },
+        "mask_centroid_2d": [
+          103,
+          574
+        ],
+        "depth_stats_no_erosion": {
+          "min": 11.9686,
+          "max": 17.6643,
+          "mean": 14.6081,
+          "median": 14.5314,
+          "std": 1.5083,
+          "num_pixels": 727,
+          "z_val": 15.1215,
+          "z_val_pixels": 135,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.5551
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -7.325,
+          "y": 1.282,
+          "z": 15.122
+        },
+        "mask_centroid_2d_no_erosion": [
+          103,
+          574
+        ]
+      },
+      {
+        "id": "region_17",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          12,
+          201,
+          87,
+          497
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 17.7148,
+          "max": 37.407,
+          "mean": 25.727,
+          "median": 24.9484,
+          "std": 4.9284,
+          "num_pixels": 2649,
+          "z_val": 34.0512,
+          "z_val_pixels": 305,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 14.5829
+        },
+        "coordinates_3d_from_mask": {
+          "x": -18.185,
+          "y": -4.208,
+          "z": 34.051
+        },
+        "mask_centroid_2d": [
+          48,
+          343
+        ],
+        "depth_stats_no_erosion": {
+          "min": 17.7148,
+          "max": 37.407,
+          "mean": 25.727,
+          "median": 24.9484,
+          "std": 4.9284,
+          "num_pixels": 2649,
+          "z_val": 34.0512,
+          "z_val_pixels": 305,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 14.5829
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -18.185,
+          "y": -4.208,
+          "z": 34.051
+        },
+        "mask_centroid_2d_no_erosion": [
+          48,
+          343
+        ]
+      },
+      {
+        "id": "region_18",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          1140,
+          228,
+          1279,
+          568
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 17.7143,
+          "max": 22.1985,
+          "mean": 19.2292,
+          "median": 18.9406,
+          "std": 1.1759,
+          "num_pixels": 25653,
+          "z_val": 17.8713,
+          "z_val_pixels": 10643,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.5744
+        },
+        "coordinates_3d_from_mask": {
+          "x": 9.447,
+          "y": -0.5,
+          "z": 17.871
+        },
+        "mask_centroid_2d": [
+          1226,
+          449
+        ],
+        "depth_stats_no_erosion": {
+          "min": 17.7143,
+          "max": 22.1985,
+          "mean": 19.2292,
+          "median": 18.9406,
+          "std": 1.1759,
+          "num_pixels": 25653,
+          "z_val": 17.8713,
+          "z_val_pixels": 10643,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.5744
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 9.447,
+          "y": -0.5,
+          "z": 17.871
+        },
+        "mask_centroid_2d_no_erosion": [
+          1226,
+          449
+        ]
+      },
+      {
+        "id": "region_19",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          0,
+          261,
+          58,
+          497
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 20.747,
+          "max": 34.591,
+          "mean": 27.9276,
+          "median": 28.279,
+          "std": 2.6763,
+          "num_pixels": 5530,
+          "z_val": 28.535,
+          "z_val_pixels": 1939,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 16.8342
+        },
+        "coordinates_3d_from_mask": {
+          "x": -15.96,
+          "y": -2.034,
+          "z": 28.535
+        },
+        "mask_centroid_2d": [
+          20,
+          401
+        ],
+        "depth_stats_no_erosion": {
+          "min": 20.747,
+          "max": 34.591,
+          "mean": 27.9276,
+          "median": 28.279,
+          "std": 2.6763,
+          "num_pixels": 5530,
+          "z_val": 28.535,
+          "z_val_pixels": 1939,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 16.8342
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -15.96,
+          "y": -2.034,
+          "z": 28.535
+        },
+        "mask_centroid_2d_no_erosion": [
+          20,
+          401
+        ]
+      },
+      {
+        "id": "region_20",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          1071,
+          464,
+          1112,
+          511
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 17.7148,
+          "max": 18.4047,
+          "mean": 17.9611,
+          "median": 17.9045,
+          "std": 0.1827,
+          "num_pixels": 1415,
+          "z_val": 17.8631,
+          "z_val_pixels": 646,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4398
+        },
+        "coordinates_3d_from_mask": {
+          "x": 7.284,
+          "y": 0.129,
+          "z": 17.863
+        },
+        "mask_centroid_2d": [
+          1092,
+          488
+        ],
+        "depth_stats_no_erosion": {
+          "min": 17.7148,
+          "max": 18.4047,
+          "mean": 17.9611,
+          "median": 17.9045,
+          "std": 0.1827,
+          "num_pixels": 1415,
+          "z_val": 17.8631,
+          "z_val_pixels": 646,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4398
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 7.284,
+          "y": 0.129,
+          "z": 17.863
+        },
+        "mask_centroid_2d_no_erosion": [
+          1092,
+          488
+        ]
+      },
+      {
+        "id": "region_21",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          0,
+          468,
+          67,
+          540
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 17.7158,
+          "max": 21.5008,
+          "mean": 19.1644,
+          "median": 18.9957,
+          "std": 0.986,
+          "num_pixels": 1685,
+          "z_val": 18.3155,
+          "z_val_pixels": 682,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.5004
+        },
+        "coordinates_3d_from_mask": {
+          "x": -10.145,
+          "y": 0.446,
+          "z": 18.315
+        },
+        "mask_centroid_2d": [
+          26,
+          507
+        ],
+        "depth_stats_no_erosion": {
+          "min": 17.7158,
+          "max": 21.5008,
+          "mean": 19.1644,
+          "median": 18.9957,
+          "std": 0.986,
+          "num_pixels": 1685,
+          "z_val": 18.3155,
+          "z_val_pixels": 682,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.5004
+        },
+        "coordinates_3d_no_erosion": {
+          "x": -10.145,
+          "y": 0.446,
+          "z": 18.315
+        },
+        "mask_centroid_2d_no_erosion": [
+          26,
+          507
+        ]
+      },
+      {
+        "id": "region_22",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          983,
+          469,
+          1056,
+          510
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 17.7142,
+          "max": 18.7342,
+          "mean": 18.0934,
+          "median": 18.0707,
+          "std": 0.2425,
+          "num_pixels": 1395,
+          "z_val": 17.7547,
+          "z_val_pixels": 444,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.728
+        },
+        "coordinates_3d_from_mask": {
+          "x": 6.086,
+          "y": 0.128,
+          "z": 17.755
+        },
+        "mask_centroid_2d": [
+          1020,
+          488
+        ],
+        "depth_stats_no_erosion": {
+          "min": 17.7142,
+          "max": 18.7342,
+          "mean": 18.0934,
+          "median": 18.0707,
+          "std": 0.2425,
+          "num_pixels": 1395,
+          "z_val": 17.7547,
+          "z_val_pixels": 444,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.728
+        },
+        "coordinates_3d_no_erosion": {
+          "x": 6.086,
+          "y": 0.128,
+          "z": 17.755
+        },
+        "mask_centroid_2d_no_erosion": [
+          1020,
+          488
+        ]
+      }
+    ]
+  }
+}

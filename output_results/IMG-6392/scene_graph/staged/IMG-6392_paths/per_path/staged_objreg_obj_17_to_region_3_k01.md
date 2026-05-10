@@ -1,0 +1,23 @@
+# Path `staged_objreg_obj_17_to_region_3_k01`
+
+- rank: 279
+- manifold: ribbon_path
+- action_family: locomotion
+- movement_scope: inter_region
+- boundary_interaction: crosses_and_tracks_region_boundaries
+- dominant_motion: climb_or_approach_farther_depth
+- confidence: 0.145
+- status: rejected
+- rejection_reasons: []
+- uncertainty_reasons: ['geometry_depth_jump_unexplained', 'geometry_high_zigzag', 'geometry_low_support_fraction', 'ribbon_path_lacks_local_support_evidence']
+- contradiction_reasons: ['blocking_support_dominates_route', 'geometry_support_snap_displacement_too_large', 'impossible_manifold_evidence_mismatch']
+- grounding_evidence: {'schema': 'citv_path_grounding_evidence_v1', 'candidate_source': 'object_region_fmm', 'local_evidence_confidence': 0.6, 'scene_prior_confidence': 0.7272, 'global_only': False, 'local_evidence_levels': ['region_boundary', 'source'], 'manifold_type': 'ribbon_path'}
+- source: person
+- target: region_3
+- motion_labels: ['climb_or_approach_farther_depth', 'occlusion_aware_traverse', 'careful', 'region_transition_traverse', 'edge_follow_or_orbit', 'step_or_occlusion_boundary_transition']
+- action_labels: ['fly', 'hover', 'peek', 'interact', 'hold', 'cross_region_transition', 'edge_follow_or_portal_approach', 'interact', 'fly', 'hover', 'crawl', 'peek']
+- render_layers: ['in_front', 'partially_occluded', 'behind_object']
+- occlusion_trace: {'mean_visible_fraction': 0.5333, 'min_visible_fraction': 0.0, 'occluded_sample_fraction': 0.4792, 'occluder_ids': ['obj_1']}
+- trajectory_contract: {'dominant_motion': 'climb_or_approach_farther_depth', 'shape_type': 'support_aware_ribbon', 'direction_profile': {'available': True, 'heading_start_deg': 0.0, 'heading_end_deg': 0.0, 'image_direction': 'up_right', 'camera_depth_trend': 'away_from_camera', 'depth_delta_m': 0.8984, 'scale_trend': 'smaller_over_time', 'approach_retreat': 'retreat', 'orbit_direction': 'clockwise'}, 'support_dominant': 'unknown', 'animation_ready': True, 'mean_visible_fraction': 0.5333, 'width_mean_px': 39.337}
+- path_shape_contract: {'shape_type': 'support_aware_ribbon', 'straight_line_like': False, 'straightness_ratio': 0.8343, 'direction_profile': {'available': True, 'heading_start_deg': 0.0, 'heading_end_deg': 0.0, 'image_direction': 'up_right', 'camera_depth_trend': 'away_from_camera', 'depth_delta_m': 0.8984, 'scale_trend': 'smaller_over_time', 'approach_retreat': 'retreat', 'orbit_direction': 'clockwise'}, 'support_evidence': {'support_kind_counts': {'blocking': 13, 'unknown': 35}, 'support_grounding_confidence': 0.0, 'movement_scope': 'inter_region', 'boundary_interaction': 'crosses_and_tracks_region_boundaries', 'region_transition_count': 9}, 'shape_justification': ['multi_vertex_scene_shape', 'region_boundary_context_sampled', 'support_trace_sampled'], 'geometry_refs': {'raw_centerline': 'polyline_2d_raw', 'validated_centerline': 'polyline_2d_validated', 'display_centerline': 'display_polyline_2d', 'centerline': 'display_polyline_2d', 'polyline_3d': 'polyline_3d', 'display_polyline_3d': 'display_polyline_3d', 'left_boundary': 'left_boundary_2d', 'right_boundary': 'right_boundary_2d', 'mask_or_effect_refs': []}, 'geometry_quality': {'zigzag_score': 0.7778, 'turn_angle_p95': 45.0, 'curvature_energy': 0.00551, 'vertical_shoot_score': 0.0, 'depth_jump_count': 33, 'support_snap_displacement_px': {'mean': 31.297, 'max': 318.955}, 'smoothability_status': 'rejected'}, 'rejection_reasons': ['ribbon_path_lacks_local_support_evidence', 'geometry_depth_jump_unexplained', 'geometry_high_zigzag', 'geometry_low_support_fraction', 'geometry_support_snap_displacement_too_large']}
+- animation_render_contract: {'render_primitive': 'depth_tapered_corridor_plus_actor', 'alpha_policy': 'visibility_profile', 'width_policy': 'depth_width_profile', 'depth_scale_policy': 'metric_depth_trace', 'render_layers': ['in_front', 'partially_occluded', 'behind_object'], 'motion_labels': ['careful', 'climb_or_approach_farther_depth', 'edge_follow_or_orbit', 'occlusion_aware_traverse', 'region_transition_traverse', 'step_or_occlusion_boundary_transition'], 'action_labels': ['around', 'boundary_context', 'crawl', 'cross_region_transition', 'edge_follow_or_portal_approach', 'fly', 'hold', 'hover', 'inside', 'inter_region'], 'sample_state_preview_count': 12}

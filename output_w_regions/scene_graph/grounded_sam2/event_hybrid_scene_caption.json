@@ -1,0 +1,12 @@
+{
+  "variant": "hybrid",
+  "track": "grounded_sam2",
+  "image_path": "/root/labs/citv/images/event.png",
+  "status": "pending_external_generation",
+  "inputs": {
+    "florence_object_captions": "scene_graph/grounded_sam2/event_florence_object_captions.json",
+    "florence_scene_caption": "scene_graph/grounded_sam2/event_florence_scene_caption.json",
+    "fusion_scene_caption": "scene_graph/grounded_sam2/event_fusion_scene_caption.json"
+  },
+  "generated_caption": ""
+}

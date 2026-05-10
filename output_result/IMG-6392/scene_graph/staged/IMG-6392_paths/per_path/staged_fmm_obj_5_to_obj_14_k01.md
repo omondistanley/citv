@@ -1,0 +1,23 @@
+# Path `staged_fmm_obj_5_to_obj_14_k01`
+
+- rank: 24
+- manifold: ribbon_path
+- action_family: locomotion
+- movement_scope: intra_region
+- boundary_interaction: stays_inside_region
+- dominant_motion: descend_or_approach_camera
+- confidence: 0.594
+- status: low_confidence
+- rejection_reasons: []
+- uncertainty_reasons: ['geometry_high_zigzag', 'ribbon_path_lacks_local_support_evidence']
+- contradiction_reasons: ['blocking_support_dominates_route', 'geometry_support_snap_displacement_too_large']
+- grounding_evidence: {'schema': 'citv_path_grounding_evidence_v1', 'candidate_source': 'fmm_geodesic', 'local_evidence_confidence': 0.6004, 'scene_prior_confidence': 0.7272, 'global_only': False, 'local_evidence_levels': ['region_boundary', 'source', 'target'], 'manifold_type': 'ribbon_path'}
+- source: person
+- target: thin
+- motion_labels: ['descend_or_approach_camera', 'occlusion_aware_traverse', 'careful']
+- action_labels: ['fly', 'hover', 'peek', 'interact', 'interact', 'hold', 'interact', 'continue_within_region', 'float', 'fly', 'hover', 'touch']
+- render_layers: ['in_front', 'partially_occluded', 'behind_object']
+- occlusion_trace: {'mean_visible_fraction': 0.35, 'min_visible_fraction': 0.0, 'occluded_sample_fraction': 0.6667, 'occluder_ids': ['obj_1', 'obj_6']}
+- trajectory_contract: {'dominant_motion': 'descend_or_approach_camera', 'shape_type': 'support_aware_ribbon', 'direction_profile': {'available': True, 'heading_start_deg': 132.614, 'heading_end_deg': -174.472, 'image_direction': 'down_left', 'camera_depth_trend': 'toward_camera', 'depth_delta_m': -0.5391, 'scale_trend': 'larger_over_time', 'approach_retreat': 'approach', 'orbit_direction': 'counterclockwise'}, 'support_dominant': 'blocking', 'animation_ready': True, 'mean_visible_fraction': 0.35, 'width_mean_px': 40.461}
+- path_shape_contract: {'shape_type': 'support_aware_ribbon', 'straight_line_like': False, 'straightness_ratio': 0.9685, 'direction_profile': {'available': True, 'heading_start_deg': 132.614, 'heading_end_deg': -174.472, 'image_direction': 'down_left', 'camera_depth_trend': 'toward_camera', 'depth_delta_m': -0.5391, 'scale_trend': 'larger_over_time', 'approach_retreat': 'approach', 'orbit_direction': 'counterclockwise'}, 'support_evidence': {'support_kind_counts': {'blocking': 48}, 'support_grounding_confidence': 0.0, 'movement_scope': 'intra_region', 'boundary_interaction': 'stays_inside_region', 'region_transition_count': 0}, 'shape_justification': ['region_boundary_context_sampled', 'support_trace_sampled'], 'geometry_refs': {'raw_centerline': 'polyline_2d_raw', 'validated_centerline': 'polyline_2d_validated', 'display_centerline': 'display_polyline_2d', 'centerline': 'display_polyline_2d', 'polyline_3d': 'polyline_3d', 'display_polyline_3d': 'display_polyline_3d', 'left_boundary': 'left_boundary_2d', 'right_boundary': 'right_boundary_2d', 'mask_or_effect_refs': []}, 'geometry_quality': {'zigzag_score': 0.7692, 'turn_angle_p95': 41.411, 'curvature_energy': 0.01474, 'vertical_shoot_score': 0.0, 'depth_jump_count': 0, 'support_snap_displacement_px': {'mean': 1.935, 'max': 40.0}, 'smoothability_status': 'rejected'}, 'rejection_reasons': ['ribbon_path_lacks_local_support_evidence', 'geometry_high_zigzag', 'geometry_support_snap_displacement_too_large']}
+- animation_render_contract: {'render_primitive': 'depth_tapered_corridor_plus_actor', 'alpha_policy': 'visibility_profile', 'width_policy': 'depth_width_profile', 'depth_scale_policy': 'metric_depth_trace', 'render_layers': ['in_front', 'partially_occluded', 'behind_object'], 'motion_labels': ['careful', 'descend_or_approach_camera', 'occlusion_aware_traverse'], 'action_labels': ['above', 'around', 'contact', 'continue_within_region', 'float', 'fly', 'hold', 'hover', 'interact', 'intra_region'], 'sample_state_preview_count': 12}

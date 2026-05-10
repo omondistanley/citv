@@ -1,0 +1,11 @@
+---
+description: User-owned git commits — no Cursor attribution unless explicitly requested
+alwaysApply: true
+---
+
+# Git commits and attribution
+
+- Commit messages are **the user’s voice**. Do **not** add `Co-authored-by:`, `Made with Cursor`, or any other AI/attribution trailer unless the user **explicitly** asks to include it in that commit.
+- Do **not** rewrite or extend the user’s commit message beyond what they asked for (typos/format only if they request fixes).
+- If the user wants full control, **give them the exact `git commit` command or message text** and let them run `git commit` locally instead of running it from the agent.
+- Cursor may still append attribution when the agent runs `git commit` unless disabled in the product (see Cursor Settings → **Agent → Attribution**). Turning that off is the reliable fix at the IDE level.

@@ -1,0 +1,724 @@
+{
+  "pairs": [
+    {
+      "src_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.9
+    },
+    {
+      "src_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_33_GroundedSAM2",
+      "proposal_score": 0.8052631578947369
+    },
+    {
+      "src_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_34_GroundedSAM2",
+      "proposal_score": 0.8052631578947369
+    },
+    {
+      "src_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_30_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.8666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.8666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_22_GroundedSAM2",
+      "proposal_score": 0.5
+    },
+    {
+      "src_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "proposal_score": 0.4666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.4666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_22_GroundedSAM2",
+      "proposal_score": 0.5
+    },
+    {
+      "src_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.4666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_22_GroundedSAM2",
+      "proposal_score": 0.9
+    },
+    {
+      "src_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_19_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "proposal_score": 0.8666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.4666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_22_GroundedSAM2",
+      "proposal_score": 0.44000000000000006
+    },
+    {
+      "src_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_33_GroundedSAM2",
+      "proposal_score": 0.40512820512820513
+    },
+    {
+      "src_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_34_GroundedSAM2",
+      "proposal_score": 0.40512820512820513
+    },
+    {
+      "src_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_30_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.8666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.8666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_26_GroundedSAM2",
+      "proposal_score": 0.49090909090909096
+    },
+    {
+      "src_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "proposal_score": 0.45882352941176474
+    },
+    {
+      "src_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "proposal_score": 0.45882352941176474
+    },
+    {
+      "src_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "proposal_score": 0.4555555555555556
+    },
+    {
+      "src_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.45882352941176474
+    },
+    {
+      "src_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_26_GroundedSAM2",
+      "proposal_score": 0.4518518518518519
+    },
+    {
+      "src_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_32_GroundedSAM2",
+      "proposal_score": 0.4434782608695652
+    },
+    {
+      "src_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_31_GroundedSAM2",
+      "proposal_score": 0.4416666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_35_GroundedSAM2",
+      "proposal_score": 0.45
+    },
+    {
+      "src_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_31_GroundedSAM2",
+      "proposal_score": 0.42000000000000004
+    },
+    {
+      "src_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_23_GroundedSAM2",
+      "proposal_score": 0.4181818181818182
+    },
+    {
+      "src_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_29_GroundedSAM2",
+      "proposal_score": 0.4181818181818182
+    },
+    {
+      "src_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "proposal_score": 0.4666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_21_GroundedSAM2",
+      "proposal_score": 0.456
+    },
+    {
+      "src_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_27_GroundedSAM2",
+      "proposal_score": 0.44000000000000006
+    },
+    {
+      "src_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_31_GroundedSAM2",
+      "proposal_score": 0.44000000000000006
+    },
+    {
+      "src_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_27_GroundedSAM2",
+      "proposal_score": 0.4823529411764706
+    },
+    {
+      "src_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "proposal_score": 0.4777777777777778
+    },
+    {
+      "src_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.4555555555555556
+    },
+    {
+      "src_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_33_GroundedSAM2",
+      "proposal_score": 0.4428571428571429
+    },
+    {
+      "src_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_32_GroundedSAM2",
+      "proposal_score": 0.4956521739130435
+    },
+    {
+      "src_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_26_GroundedSAM2",
+      "proposal_score": 0.44242424242424244
+    },
+    {
+      "src_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "proposal_score": 0.43846153846153846
+    },
+    {
+      "src_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_20_GroundedSAM2",
+      "proposal_score": 0.4338983050847458
+    },
+    {
+      "src_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_21_GroundedSAM2",
+      "proposal_score": 0.48888888888888893
+    },
+    {
+      "src_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "proposal_score": 0.4666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_33_GroundedSAM2",
+      "proposal_score": 0.4372093023255814
+    },
+    {
+      "src_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_34_GroundedSAM2",
+      "proposal_score": 0.4372093023255814
+    },
+    {
+      "src_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "proposal_score": 0.4777777777777778
+    },
+    {
+      "src_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.45882352941176474
+    },
+    {
+      "src_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_23_GroundedSAM2",
+      "proposal_score": 0.4375
+    },
+    {
+      "src_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_26_GroundedSAM2",
+      "proposal_score": 0.4344827586206897
+    },
+    {
+      "src_id": "grounded_sam2_obj_19_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_22_GroundedSAM2",
+      "proposal_score": 0.9
+    },
+    {
+      "src_id": "grounded_sam2_obj_19_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_19_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "proposal_score": 0.8666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_19_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_20_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_33_GroundedSAM2",
+      "proposal_score": 0.4438356164383562
+    },
+    {
+      "src_id": "grounded_sam2_obj_20_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_34_GroundedSAM2",
+      "proposal_score": 0.4438356164383562
+    },
+    {
+      "src_id": "grounded_sam2_obj_20_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_31_GroundedSAM2",
+      "proposal_score": 0.4428571428571429
+    },
+    {
+      "src_id": "grounded_sam2_obj_20_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "proposal_score": 0.44150943396226416
+    },
+    {
+      "src_id": "grounded_sam2_obj_21_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "proposal_score": 0.48888888888888893
+    },
+    {
+      "src_id": "grounded_sam2_obj_21_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "proposal_score": 0.456
+    },
+    {
+      "src_id": "grounded_sam2_obj_21_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_33_GroundedSAM2",
+      "proposal_score": 0.4266666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_21_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_34_GroundedSAM2",
+      "proposal_score": 0.4266666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_22_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.5
+    },
+    {
+      "src_id": "grounded_sam2_obj_22_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "proposal_score": 0.5
+    },
+    {
+      "src_id": "grounded_sam2_obj_22_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.44000000000000006
+    },
+    {
+      "src_id": "grounded_sam2_obj_22_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_23_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "proposal_score": 0.4375
+    },
+    {
+      "src_id": "grounded_sam2_obj_23_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_31_GroundedSAM2",
+      "proposal_score": 0.4285714285714286
+    },
+    {
+      "src_id": "grounded_sam2_obj_23_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.4266666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_23_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_27_GroundedSAM2",
+      "proposal_score": 0.42500000000000004
+    },
+    {
+      "src_id": "grounded_sam2_obj_24_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_26_GroundedSAM2",
+      "proposal_score": 0.4538461538461539
+    },
+    {
+      "src_id": "grounded_sam2_obj_24_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.43333333333333335
+    },
+    {
+      "src_id": "grounded_sam2_obj_24_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "proposal_score": 0.4307692307692308
+    },
+    {
+      "src_id": "grounded_sam2_obj_24_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "proposal_score": 0.43000000000000005
+    },
+    {
+      "src_id": "grounded_sam2_obj_25_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.43333333333333335
+    },
+    {
+      "src_id": "grounded_sam2_obj_25_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "proposal_score": 0.43157894736842106
+    },
+    {
+      "src_id": "grounded_sam2_obj_25_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "proposal_score": 0.4285714285714286
+    },
+    {
+      "src_id": "grounded_sam2_obj_25_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "proposal_score": 0.4266666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_26_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.49090909090909096
+    },
+    {
+      "src_id": "grounded_sam2_obj_26_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_24_GroundedSAM2",
+      "proposal_score": 0.4538461538461539
+    },
+    {
+      "src_id": "grounded_sam2_obj_26_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "proposal_score": 0.4518518518518519
+    },
+    {
+      "src_id": "grounded_sam2_obj_26_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "proposal_score": 0.44242424242424244
+    },
+    {
+      "src_id": "grounded_sam2_obj_27_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "proposal_score": 0.4823529411764706
+    },
+    {
+      "src_id": "grounded_sam2_obj_27_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "proposal_score": 0.44000000000000006
+    },
+    {
+      "src_id": "grounded_sam2_obj_27_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_32_GroundedSAM2",
+      "proposal_score": 0.4347826086956522
+    },
+    {
+      "src_id": "grounded_sam2_obj_27_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_20_GroundedSAM2",
+      "proposal_score": 0.4339622641509434
+    },
+    {
+      "src_id": "grounded_sam2_obj_28_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_31_GroundedSAM2",
+      "proposal_score": 0.4444444444444445
+    },
+    {
+      "src_id": "grounded_sam2_obj_28_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_20_GroundedSAM2",
+      "proposal_score": 0.4392857142857143
+    },
+    {
+      "src_id": "grounded_sam2_obj_28_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "proposal_score": 0.43333333333333335
+    },
+    {
+      "src_id": "grounded_sam2_obj_28_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "proposal_score": 0.43333333333333335
+    },
+    {
+      "src_id": "grounded_sam2_obj_29_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_35_GroundedSAM2",
+      "proposal_score": 0.44000000000000006
+    },
+    {
+      "src_id": "grounded_sam2_obj_29_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_28_GroundedSAM2",
+      "proposal_score": 0.43000000000000005
+    },
+    {
+      "src_id": "grounded_sam2_obj_29_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_31_GroundedSAM2",
+      "proposal_score": 0.4285714285714286
+    },
+    {
+      "src_id": "grounded_sam2_obj_29_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.4266666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_30_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_30_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_30_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.8666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_30_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.8666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_31_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_35_GroundedSAM2",
+      "proposal_score": 0.45882352941176474
+    },
+    {
+      "src_id": "grounded_sam2_obj_31_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_28_GroundedSAM2",
+      "proposal_score": 0.4444444444444445
+    },
+    {
+      "src_id": "grounded_sam2_obj_31_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_20_GroundedSAM2",
+      "proposal_score": 0.4428571428571429
+    },
+    {
+      "src_id": "grounded_sam2_obj_31_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "proposal_score": 0.4416666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_32_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "proposal_score": 0.4956521739130435
+    },
+    {
+      "src_id": "grounded_sam2_obj_32_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.44761904761904764
+    },
+    {
+      "src_id": "grounded_sam2_obj_32_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "proposal_score": 0.4434782608695652
+    },
+    {
+      "src_id": "grounded_sam2_obj_32_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "proposal_score": 0.4416666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_33_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_34_GroundedSAM2",
+      "proposal_score": 0.5897435897435898
+    },
+    {
+      "src_id": "grounded_sam2_obj_33_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_20_GroundedSAM2",
+      "proposal_score": 0.4438356164383562
+    },
+    {
+      "src_id": "grounded_sam2_obj_33_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "proposal_score": 0.4428571428571429
+    },
+    {
+      "src_id": "grounded_sam2_obj_33_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_26_GroundedSAM2",
+      "proposal_score": 0.44000000000000006
+    },
+    {
+      "src_id": "grounded_sam2_obj_34_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_33_GroundedSAM2",
+      "proposal_score": 0.5897435897435898
+    },
+    {
+      "src_id": "grounded_sam2_obj_34_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_20_GroundedSAM2",
+      "proposal_score": 0.4438356164383562
+    },
+    {
+      "src_id": "grounded_sam2_obj_34_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "proposal_score": 0.4428571428571429
+    },
+    {
+      "src_id": "grounded_sam2_obj_34_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_26_GroundedSAM2",
+      "proposal_score": 0.44000000000000006
+    },
+    {
+      "src_id": "grounded_sam2_obj_35_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_31_GroundedSAM2",
+      "proposal_score": 0.45882352941176474
+    },
+    {
+      "src_id": "grounded_sam2_obj_35_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "proposal_score": 0.45
+    },
+    {
+      "src_id": "grounded_sam2_obj_35_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_29_GroundedSAM2",
+      "proposal_score": 0.44000000000000006
+    },
+    {
+      "src_id": "grounded_sam2_obj_35_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.4307692307692308
+    }
+  ]
+}

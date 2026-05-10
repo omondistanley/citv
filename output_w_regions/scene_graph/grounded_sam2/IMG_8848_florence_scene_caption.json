@@ -1,0 +1,20 @@
+{
+  "variant": "florence_only",
+  "track": "grounded_sam2",
+  "image_path": "/root/labs/citv/images/IMG_8848.png",
+  "source": "Florence2 object captions aggregated",
+  "generated_caption": "The image shows a small child, probably around 2-3 years old, standing in front of a black metal gate. The child is wearing a blue jacket, white pants, and a red beanie. They are looking down at the ground with a curious expression on their face. The gate appears to be old and weathered, with peeling paint and rust visible on the metal. There are two blue signs on the gate, one on the top right corner and the other on the bottom left corner. The background shows a concrete wall and a sidewalk.",
+  "status": "generated_local_florence",
+  "input_files": {
+    "scene_json": "scene_graph/grounded_sam2/IMG_8848_scene.json",
+    "relations_json": "scene_graph/grounded_sam2/IMG_8848_relations.json",
+    "layers_json": "scene_graph/grounded_sam2/IMG_8848_layers.json",
+    "mask_hierarchy_json": "scene_graph/grounded_sam2/IMG_8848_mask_hierarchy.json",
+    "regions_json": "scene_graph/grounded_sam2/IMG_8848_regions.json",
+    "regions_image": "scene_graph/grounded_sam2/IMG_8848_regions.png",
+    "regions_overlay_image": "scene_graph/grounded_sam2/IMG_8848_regions_overlay.png",
+    "region_segmentation_image": "scene_graph/grounded_sam2/IMG_8848_region_segmentation.png",
+    "region_sam2_segmentation_image": "scene_graph/grounded_sam2/IMG_8848_region_sam2_style_segmentation.png",
+    "region_tinted_overlay_image": "scene_graph/grounded_sam2/IMG_8848_region_tinted_overlay.png"
+  }
+}

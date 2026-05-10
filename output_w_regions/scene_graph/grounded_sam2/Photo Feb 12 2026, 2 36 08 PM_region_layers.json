@@ -1,0 +1,74 @@
+{
+  "ordering": [
+    {
+      "id": "region_1",
+      "label": "digital",
+      "layer_type": "foreground",
+      "z_mean": 7.0834
+    },
+    {
+      "id": "region_4",
+      "label": "graphic",
+      "layer_type": "foreground",
+      "z_mean": 7.7986
+    },
+    {
+      "id": "region_2",
+      "label": "graphic",
+      "layer_type": "midground",
+      "z_mean": 8.4725
+    },
+    {
+      "id": "region_3",
+      "label": "simple",
+      "layer_type": "midground",
+      "z_mean": 8.8342
+    },
+    {
+      "id": "region_5",
+      "label": "graphic",
+      "layer_type": "midground",
+      "z_mean": 9.2304
+    },
+    {
+      "id": "region_6",
+      "label": "logo",
+      "layer_type": "background",
+      "z_mean": 10.2727
+    },
+    {
+      "id": "region_7",
+      "label": "headshot",
+      "layer_type": "background",
+      "z_mean": 10.9866
+    }
+  ],
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "region_ids": [
+        "region_1",
+        "region_4"
+      ]
+    },
+    {
+      "layer_type": "midground",
+      "region_ids": [
+        "region_2",
+        "region_3",
+        "region_5"
+      ]
+    },
+    {
+      "layer_type": "background",
+      "region_ids": [
+        "region_6",
+        "region_7"
+      ]
+    }
+  ],
+  "depth_quantiles": {
+    "q1": 8.418,
+    "q2": 9.241
+  }
+}

@@ -1,0 +1,23 @@
+# Path `manifold_blob_obj_14`
+
+- rank: 324
+- manifold: blob_path
+- action_family: locomotion
+- movement_scope: inter_region
+- boundary_interaction: crosses_and_tracks_region_boundaries
+- dominant_motion: descend_or_approach_camera
+- confidence: 0.117
+- status: rejected
+- rejection_reasons: []
+- uncertainty_reasons: ['geometry_depth_jump_unexplained', 'geometry_high_zigzag', 'geometry_low_support_fraction', 'unknown_only_or_unsupported_route']
+- contradiction_reasons: ['blocking_support_dominates_route', 'geometry_support_snap_displacement_too_large', 'impossible_manifold_evidence_mismatch']
+- grounding_evidence: {'schema': 'citv_path_grounding_evidence_v1', 'candidate_source': 'blob_path', 'local_evidence_confidence': 0.6004, 'scene_prior_confidence': 0.7272, 'global_only': False, 'local_evidence_levels': ['region_boundary', 'source', 'target'], 'manifold_type': 'blob_path'}
+- source: thin
+- target: thin
+- motion_labels: ['descend_or_approach_camera', 'occlusion_aware_traverse', 'careful', 'region_transition_traverse', 'edge_follow_or_orbit', 'step_or_occlusion_boundary_transition']
+- action_labels: ['fly', 'hover', 'peek', 'interact', 'interact', 'interact', 'hold', 'cross_region_transition', 'edge_follow_or_portal_approach', 'float', 'fly', 'hover']
+- render_layers: ['in_front', 'partially_occluded', 'behind_object']
+- occlusion_trace: {'mean_visible_fraction': 0.1542, 'min_visible_fraction': 0.0, 'occluded_sample_fraction': 0.9375, 'occluder_ids': ['obj_1', 'obj_6', 'obj_9']}
+- trajectory_contract: {'dominant_motion': 'descend_or_approach_camera', 'shape_type': 'mask_or_liquid_blob_area', 'direction_profile': {'available': True, 'heading_start_deg': 180.0, 'heading_end_deg': 90.0, 'image_direction': 'down_left', 'camera_depth_trend': 'toward_camera', 'depth_delta_m': -1.7578, 'scale_trend': 'larger_over_time', 'approach_retreat': 'approach', 'orbit_direction': 'clockwise'}, 'support_dominant': 'unknown', 'animation_ready': True, 'mean_visible_fraction': 0.1542, 'width_mean_px': 35.86}
+- path_shape_contract: {'shape_type': 'mask_or_liquid_blob_area', 'straight_line_like': False, 'straightness_ratio': 0.7103, 'direction_profile': {'available': True, 'heading_start_deg': 180.0, 'heading_end_deg': 90.0, 'image_direction': 'down_left', 'camera_depth_trend': 'toward_camera', 'depth_delta_m': -1.7578, 'scale_trend': 'larger_over_time', 'approach_retreat': 'approach', 'orbit_direction': 'clockwise'}, 'support_evidence': {'support_kind_counts': {'unknown': 48}, 'support_grounding_confidence': 0.0, 'movement_scope': 'inter_region', 'boundary_interaction': 'crosses_and_tracks_region_boundaries', 'region_transition_count': 9}, 'shape_justification': ['multi_vertex_scene_shape', 'region_boundary_context_sampled', 'support_trace_sampled'], 'geometry_refs': {'raw_centerline': 'polyline_2d_raw', 'validated_centerline': 'polyline_2d_validated', 'display_centerline': 'display_polyline_2d', 'centerline': 'display_polyline_2d', 'polyline_3d': 'polyline_3d', 'display_polyline_3d': 'display_polyline_3d', 'left_boundary': 'left_boundary_2d', 'right_boundary': 'right_boundary_2d', 'mask_or_effect_refs': ['blob_mask_id']}, 'geometry_quality': {'zigzag_score': 1.0, 'turn_angle_p95': 90.0, 'curvature_energy': 0.20927, 'vertical_shoot_score': 0.0, 'depth_jump_count': 36, 'support_snap_displacement_px': {'mean': 46.056, 'max': 48.0}, 'smoothability_status': 'rejected'}, 'rejection_reasons': ['geometry_depth_jump_unexplained', 'geometry_high_zigzag', 'geometry_low_support_fraction', 'geometry_support_snap_displacement_too_large']}
+- animation_render_contract: {'render_primitive': 'area_constrained_blob_motion', 'alpha_policy': 'visibility_profile', 'width_policy': 'depth_width_profile', 'depth_scale_policy': 'metric_depth_trace', 'render_layers': ['in_front', 'partially_occluded', 'behind_object'], 'motion_labels': ['careful', 'descend_or_approach_camera', 'edge_follow_or_orbit', 'occlusion_aware_traverse', 'region_transition_traverse', 'step_or_occlusion_boundary_transition'], 'action_labels': ['above', 'around', 'boundary_context', 'cross_region_transition', 'edge_follow_or_portal_approach', 'float', 'fly', 'hold', 'hover', 'inter_region'], 'sample_state_preview_count': 12}

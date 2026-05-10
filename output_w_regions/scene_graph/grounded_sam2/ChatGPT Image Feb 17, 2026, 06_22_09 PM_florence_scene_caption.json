@@ -1,0 +1,20 @@
+{
+  "variant": "florence_only",
+  "track": "grounded_sam2",
+  "image_path": "/root/labs/citv/images/ChatGPT Image Feb 17, 2026, 06_22_09 PM.png",
+  "source": "Florence2 object captions aggregated",
+  "generated_caption": "The image shows a beige coat hanging on a wooden hanger in a room. The coat has a double-breasted design with a brown leather collar and cuffs. It appears to be made of a woolen fabric and has two rows of buttons on the front. The hanger is attached to a gold-colored metal rod. In the background, there is a window with white curtains and a vase with yellow flowers on a table. The floor is covered with a light-colored carpet.",
+  "status": "generated_local_florence",
+  "input_files": {
+    "scene_json": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_scene.json",
+    "relations_json": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_relations.json",
+    "layers_json": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_layers.json",
+    "mask_hierarchy_json": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_mask_hierarchy.json",
+    "regions_json": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_regions.json",
+    "regions_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_regions.png",
+    "regions_overlay_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_regions_overlay.png",
+    "region_segmentation_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_region_segmentation.png",
+    "region_sam2_segmentation_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_region_sam2_style_segmentation.png",
+    "region_tinted_overlay_image": "scene_graph/grounded_sam2/ChatGPT Image Feb 17, 2026, 06_22_09 PM_region_tinted_overlay.png"
+  }
+}

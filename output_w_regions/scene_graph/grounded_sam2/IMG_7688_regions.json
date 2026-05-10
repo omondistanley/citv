@@ -1,0 +1,1996 @@
+{
+  "image_stem": "IMG_7688",
+  "width": 1280,
+  "height": 960,
+  "depth_model": "DepthAnythingV2-Metric-Outdoor",
+  "regions_json": "scene_graph/grounded_sam2/IMG_7688_regions.json",
+  "regions_image": "scene_graph/grounded_sam2/IMG_7688_regions.png",
+  "regions_overlay_image": "scene_graph/grounded_sam2/IMG_7688_regions_overlay.png",
+  "region_segmentation_image": "scene_graph/grounded_sam2/IMG_7688_region_segmentation.png",
+  "region_sam2_segmentation_image": "scene_graph/grounded_sam2/IMG_7688_region_sam2_style_segmentation.png",
+  "region_tinted_overlay_image": "scene_graph/grounded_sam2/IMG_7688_region_tinted_overlay.png",
+  "region_layers_json": "scene_graph/grounded_sam2/IMG_7688_region_layers.json",
+  "region_layers_image": "scene_graph/grounded_sam2/IMG_7688_region_layers.png",
+  "region_adjacency_graph_json": "scene_graph/grounded_sam2/IMG_7688_region_adjacency_graph.json",
+  "region_hierarchy_json": "scene_graph/grounded_sam2/IMG_7688_region_hierarchy.json",
+  "region_hierarchy_image": "scene_graph/grounded_sam2/IMG_7688_region_hierarchy.png",
+  "palette": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      242,
+      72,
+      186
+    ],
+    [
+      28,
+      185,
+      191
+    ],
+    [
+      242,
+      208,
+      109
+    ],
+    [
+      117,
+      57,
+      191
+    ],
+    [
+      36,
+      242,
+      69
+    ]
+  ],
+  "regions": [
+    {
+      "region_index": 1,
+      "id": "region_1",
+      "type": "foreground",
+      "depth_cluster": 0,
+      "depth_band_m": [
+        4.6775,
+        10.3597
+      ],
+      "bbox_px": [
+        0,
+        514,
+        1279,
+        959
+      ],
+      "area_px": 538136,
+      "centroid_2d_px": [
+        646,
+        780
+      ],
+      "depth_stats": {
+        "min": 4.6775,
+        "max": 10.0433,
+        "mean": 6.8241,
+        "median": 6.5395,
+        "std": 1.4974,
+        "num_pixels": 534521,
+        "z_val": 4.8853,
+        "z_val_pixels": 210005,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 3.4409
+      },
+      "object_ids": [
+        "grounded_sam2_obj_0_GroundedSAM2",
+        "grounded_sam2_obj_1_GroundedSAM2",
+        "grounded_sam2_obj_5_GroundedSAM2",
+        "grounded_sam2_obj_10_GroundedSAM2",
+        "grounded_sam2_obj_11_GroundedSAM2",
+        "grounded_sam2_obj_13_GroundedSAM2",
+        "grounded_sam2_obj_16_GroundedSAM2",
+        "grounded_sam2_obj_24_GroundedSAM2",
+        "grounded_sam2_obj_25_GroundedSAM2",
+        "grounded_sam2_obj_27_GroundedSAM2",
+        "grounded_sam2_obj_29_GroundedSAM2",
+        "grounded_sam2_obj_32_GroundedSAM2"
+      ],
+      "coordinates_3d": {
+        "x": 0.026,
+        "y": 1.322,
+        "z": 4.885
+      },
+      "semantic_label": "feet",
+      "label_confidence": 0.75,
+      "segmentation_caption": "The image shows a person's feet standing on a gray tiled floor. The floor appears to be made up of hexagonal tiles arranged in a grid-like pattern. On the right side of the image, there is a large puddle of water that is spilling out onto the ground. The water is white and is splashing onto the floor in all directions. The person is wearing a pair of beige-colored shoes with brown soles. The background is a plain grey color.",
+      "labeller_source": "Florence-2",
+      "florence2_label": "feet",
+      "florence2_caption": "The image shows a person's feet standing on a gray tiled floor. The floor appears to be made up of hexagonal tiles arranged in a grid-like pattern. On the right side of the image, there is a large puddle of water that is spilling out onto the ground. The water is white and is splashing onto the floor in all directions. The person is wearing a pair of beige-colored shoes with brown soles. The background is a plain grey color.",
+      "rampp_label": "crack",
+      "rampp_caption": "crack | floor | foot | pavement | puddle | road | shoe | yellow",
+      "rampp_tags": [
+        "crack",
+        "floor",
+        "pavement",
+        "puddle",
+        "boy",
+        "child"
+      ],
+      "canonical_name": "the image shows a person's feet standing on a gray tiled floor. the floor appears to be made up of hexagonal tiles arranged in a grid-like pattern. on the right side of the image",
+      "aliases": [
+        "crack",
+        "floor",
+        "pavement",
+        "puddle",
+        "boy"
+      ],
+      "rampp_votes": {
+        "crack": 3,
+        "floor": 3,
+        "pavement": 3,
+        "puddle": 3,
+        "boy": 2,
+        "child": 2,
+        "foot": 1,
+        "ice": 1,
+        "lay": 1,
+        "shoe": 1,
+        "yellow": 1
+      },
+      "category": "feet",
+      "label_sources": [
+        "Florence-2"
+      ],
+      "layer_type": "foreground"
+    },
+    {
+      "region_index": 2,
+      "id": "region_2",
+      "type": "midground",
+      "depth_cluster": 1,
+      "depth_band_m": [
+        10.3597,
+        19.8862
+      ],
+      "bbox_px": [
+        0,
+        117,
+        1279,
+        593
+      ],
+      "area_px": 355124,
+      "centroid_2d_px": [
+        619,
+        411
+      ],
+      "depth_stats": {
+        "min": 10.3676,
+        "max": 18.8149,
+        "mean": 13.4934,
+        "median": 12.7367,
+        "std": 2.2465,
+        "num_pixels": 347401,
+        "z_val": 11.7614,
+        "z_val_pixels": 122915,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.9419
+      },
+      "object_ids": [
+        "grounded_sam2_obj_2_GroundedSAM2",
+        "grounded_sam2_obj_3_GroundedSAM2",
+        "grounded_sam2_obj_4_GroundedSAM2",
+        "grounded_sam2_obj_6_GroundedSAM2",
+        "grounded_sam2_obj_7_GroundedSAM2",
+        "grounded_sam2_obj_19_GroundedSAM2",
+        "grounded_sam2_obj_22_GroundedSAM2",
+        "grounded_sam2_obj_23_GroundedSAM2",
+        "grounded_sam2_obj_26_GroundedSAM2",
+        "grounded_sam2_obj_30_GroundedSAM2",
+        "grounded_sam2_obj_33_GroundedSAM2",
+        "grounded_sam2_obj_34_GroundedSAM2"
+      ],
+      "coordinates_3d": {
+        "x": -0.223,
+        "y": -0.732,
+        "z": 11.761
+      },
+      "semantic_label": "young",
+      "label_confidence": 0.75,
+      "segmentation_caption": "The image shows a young child, probably around 2-3 years old, sitting on a gray pavement. The child is wearing a red plaid shirt and grey pants, and is holding a white bottle in his hands. He is looking down at the bottle with a curious expression on his face. The background is a gray sky with a few clouds. The pavement appears to be made up of hexagonal tiles.",
+      "labeller_source": "Florence-2",
+      "florence2_label": "young",
+      "florence2_caption": "The image shows a young child, probably around 2-3 years old, sitting on a gray pavement. The child is wearing a red plaid shirt and grey pants, and is holding a white bottle in his hands. He is looking down at the bottle with a curious expression on his face. The background is a gray sky with a few clouds. The pavement appears to be made up of hexagonal tiles.",
+      "rampp_label": "baby",
+      "rampp_caption": "baby | baby bottle | beverage | bottle | boy | chalk | child | drink | floor | juice | milk | pavement | plaid | play | shirt | sit | spray | toddler",
+      "rampp_tags": [
+        "bottle",
+        "boy",
+        "chalk",
+        "child",
+        "baby",
+        "baby bottle",
+        "drink",
+        "floor"
+      ],
+      "canonical_name": "and is holding a white bottle in his hands. he is looking down at the bottle with a curious expression on his face. the background is a gray sky with a few clouds. the pavement appears to be made up of hexagonal tiles.",
+      "aliases": [
+        "bottle",
+        "boy",
+        "chalk",
+        "child",
+        "baby"
+      ],
+      "rampp_votes": {
+        "bottle": 3,
+        "boy": 3,
+        "chalk": 3,
+        "child": 3,
+        "baby": 2,
+        "baby bottle": 2,
+        "drink": 2,
+        "floor": 2,
+        "beverage": 1,
+        "blow": 1,
+        "bubble": 1,
+        "milk": 1
+      },
+      "category": "young",
+      "label_sources": [
+        "Florence-2"
+      ],
+      "layer_type": "midground"
+    },
+    {
+      "region_index": 3,
+      "id": "region_3",
+      "type": "background",
+      "depth_cluster": 2,
+      "depth_band_m": [
+        19.8864,
+        35.9488
+      ],
+      "bbox_px": [
+        0,
+        0,
+        1279,
+        315
+      ],
+      "area_px": 290737,
+      "centroid_2d_px": [
+        646,
+        156
+      ],
+      "depth_stats": {
+        "min": 19.8864,
+        "max": 32.7141,
+        "mean": 25.5507,
+        "median": 25.6553,
+        "std": 2.8486,
+        "num_pixels": 290737,
+        "z_val": 21.7463,
+        "z_val_pixels": 44123,
+        "possibly_transparent": true,
+        "depth_separation_from_background": 0.1408
+      },
+      "object_ids": [
+        "grounded_sam2_obj_8_GroundedSAM2",
+        "grounded_sam2_obj_9_GroundedSAM2",
+        "grounded_sam2_obj_12_GroundedSAM2",
+        "grounded_sam2_obj_14_GroundedSAM2",
+        "grounded_sam2_obj_17_GroundedSAM2",
+        "grounded_sam2_obj_20_GroundedSAM2",
+        "grounded_sam2_obj_21_GroundedSAM2",
+        "grounded_sam2_obj_35_GroundedSAM2"
+      ],
+      "coordinates_3d": {
+        "x": 0.118,
+        "y": -6.356,
+        "z": 21.746
+      },
+      "semantic_label": "person",
+      "label_confidence": 0.75,
+      "segmentation_caption": "The image shows a person standing in the middle of a garden. The person is facing away from the camera and appears to be looking towards the right side of the image. The garden is filled with various plants and shrubs, and there are two large concrete planters on either side. The planters are made of gray stone and have a textured surface. In the center of the garden, there is a rectangular drain cover. The background is a grassy area with trees and bushes. The image is taken from a low angle, looking up at the person.",
+      "labeller_source": "Florence-2",
+      "florence2_label": "person",
+      "florence2_caption": "The image shows a person standing in the middle of a garden. The person is facing away from the camera and appears to be looking towards the right side of the image. The garden is filled with various plants and shrubs, and there are two large concrete planters on either side. The planters are made of gray stone and have a textured surface. In the center of the garden, there is a rectangular drain cover. The background is a grassy area with trees and bushes. The image is taken from a low angle, looking up at the person.",
+      "rampp_label": "concrete",
+      "rampp_caption": "concrete | floor | girl | hedge | ledge | plant | stand | walk | woman",
+      "rampp_tags": [
+        "floor",
+        "boy",
+        "ledge",
+        "plant",
+        "stand"
+      ],
+      "canonical_name": "and there are two large concrete planters on either side. the planters are made of gray stone and have a textured surface. in the center of the garden",
+      "aliases": [
+        "floor",
+        "boy",
+        "ledge",
+        "plant",
+        "stand"
+      ],
+      "rampp_votes": {
+        "floor": 3,
+        "boy": 2,
+        "ledge": 2,
+        "plant": 2,
+        "stand": 2,
+        "broom": 1,
+        "brush": 1,
+        "chalk": 1,
+        "child": 1,
+        "concrete": 1,
+        "girl": 1,
+        "hedge": 1,
+        "man": 1,
+        "pavement": 1,
+        "play": 1,
+        "stone": 1,
+        "walk": 1,
+        "woman": 1
+      },
+      "category": "person",
+      "label_sources": [
+        "Florence-2"
+      ],
+      "layer_type": "background"
+    },
+    {
+      "region_index": 4,
+      "id": "region_4",
+      "type": "background",
+      "depth_cluster": 3,
+      "depth_band_m": [
+        35.9499,
+        43.1736
+      ],
+      "bbox_px": [
+        426,
+        0,
+        475,
+        119
+      ],
+      "area_px": 2134,
+      "centroid_2d_px": [
+        460,
+        68
+      ],
+      "depth_stats": {
+        "min": 35.9499,
+        "max": 42.3127,
+        "mean": 38.5309,
+        "median": 38.4797,
+        "std": 1.7327,
+        "num_pixels": 2134,
+        "z_val": 38.9527,
+        "z_val_pixels": 553,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 4.1525
+      },
+      "object_ids": [],
+      "coordinates_3d": {
+        "x": -6.325,
+        "y": -14.478,
+        "z": 38.953
+      },
+      "semantic_label": "rendering",
+      "label_confidence": 0.75,
+      "segmentation_caption": "The image is a 3D rendering of a tall, cylindrical object with a green and black color scheme. The object appears to be made of a mesh-like material, with a grid-like pattern on the top and bottom. The top part of the object is covered in a white cloth, while the bottom part is covered with a camouflage pattern. The background is a solid green color. The image is slightly blurred, giving it a dreamy, ethereal quality.",
+      "labeller_source": "Florence-2",
+      "florence2_label": "rendering",
+      "florence2_caption": "The image is a 3D rendering of a tall, cylindrical object with a green and black color scheme. The object appears to be made of a mesh-like material, with a grid-like pattern on the top and bottom. The top part of the object is covered in a white cloth, while the bottom part is covered with a camouflage pattern. The background is a solid green color. The image is slightly blurred, giving it a dreamy, ethereal quality.",
+      "rampp_label": "alphabet",
+      "rampp_caption": "alphabet | animal | cage | fence | green | man | stand | tie",
+      "rampp_tags": [
+        "green"
+      ],
+      "canonical_name": "cylindrical object with a green and black color scheme. the object appears to be made of a mesh-like material",
+      "aliases": [
+        "green"
+      ],
+      "rampp_votes": {
+        "green": 2,
+        "animal": 1,
+        "baseball bat": 1,
+        "baseball glove": 1,
+        "bat": 1,
+        "cage": 1,
+        "enclosure": 1,
+        "fence": 1,
+        "rail": 1,
+        "sword": 1,
+        "tie": 1
+      },
+      "category": "rendering",
+      "label_sources": [
+        "Florence-2"
+      ],
+      "layer_type": "background"
+    },
+    {
+      "region_index": 5,
+      "id": "region_5",
+      "type": "background",
+      "depth_cluster": 3,
+      "depth_band_m": [
+        35.95,
+        67.4273
+      ],
+      "bbox_px": [
+        478,
+        0,
+        877,
+        134
+      ],
+      "area_px": 42316,
+      "centroid_2d_px": [
+        688,
+        60
+      ],
+      "depth_stats": {
+        "min": 35.95,
+        "max": 60.4597,
+        "mean": 46.1438,
+        "median": 45.022,
+        "std": 6.8847,
+        "num_pixels": 42316,
+        "z_val": 41.7098,
+        "z_val_pixels": 16687,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 11.1771
+      },
+      "object_ids": [
+        "grounded_sam2_obj_15_GroundedSAM2",
+        "grounded_sam2_obj_18_GroundedSAM2",
+        "grounded_sam2_obj_28_GroundedSAM2",
+        "grounded_sam2_obj_31_GroundedSAM2"
+      ],
+      "coordinates_3d": {
+        "x": 1.806,
+        "y": -15.803,
+        "z": 41.71
+      },
+      "semantic_label": "group",
+      "label_confidence": 0.75,
+      "segmentation_caption": "The image shows a group of people walking on a grassy lawn in a park. There are three people sitting on the left side of the image, two people standing on the right side, and a few people walking in the background. The lawn appears to be well-maintained and well-manicured, with neatly trimmed bushes and trees surrounding it. The people in the image appear to be engaged in conversation, with one person walking towards the camera and another walking away from the camera. The image is slightly blurred, but it appears to have been taken from a distance.",
+      "labeller_source": "Florence-2",
+      "florence2_label": "group",
+      "florence2_caption": "The image shows a group of people walking on a grassy lawn in a park. There are three people sitting on the left side of the image, two people standing on the right side, and a few people walking in the background. The lawn appears to be well-maintained and well-manicured, with neatly trimmed bushes and trees surrounding it. The people in the image appear to be engaged in conversation, with one person walking towards the camera and another walking away from the camera. The image is slightly blurred, but it appears to have been taken from a distance.",
+      "rampp_label": "golf club",
+      "rampp_caption": "golf club | golf course | golfer | grass | green | person | lawn | lush | man | park | play | stand | swing | swinge | woman",
+      "rampp_tags": [
+        "grass",
+        "lush",
+        "boy",
+        "lawn",
+        "man",
+        "park",
+        "person"
+      ],
+      "canonical_name": "and a few people walking in the background. the lawn appears to be well-maintained and well-manicured",
+      "aliases": [
+        "grass",
+        "lush",
+        "boy",
+        "lawn",
+        "man"
+      ],
+      "rampp_votes": {
+        "grass": 3,
+        "lush": 3,
+        "boy": 2,
+        "lawn": 2,
+        "man": 2,
+        "park": 2,
+        "person": 2,
+        "ball": 1,
+        "catch": 1,
+        "chase": 1,
+        "child": 1,
+        "green": 1,
+        "play": 1,
+        "stand": 1,
+        "toddler": 1
+      },
+      "category": "group",
+      "label_sources": [
+        "Florence-2"
+      ],
+      "layer_type": "background"
+    }
+  ],
+  "region_layers": {
+    "ordering": [
+      {
+        "id": "region_1",
+        "label": "feet",
+        "layer_type": "foreground",
+        "z_mean": 6.8241
+      },
+      {
+        "id": "region_2",
+        "label": "young",
+        "layer_type": "midground",
+        "z_mean": 13.4934
+      },
+      {
+        "id": "region_3",
+        "label": "person",
+        "layer_type": "background",
+        "z_mean": 25.5507
+      },
+      {
+        "id": "region_4",
+        "label": "rendering",
+        "layer_type": "background",
+        "z_mean": 38.5309
+      },
+      {
+        "id": "region_5",
+        "label": "group",
+        "layer_type": "background",
+        "z_mean": 46.1438
+      }
+    ],
+    "bands": [
+      {
+        "layer_type": "foreground",
+        "region_ids": [
+          "region_1"
+        ]
+      },
+      {
+        "layer_type": "midground",
+        "region_ids": [
+          "region_2"
+        ]
+      },
+      {
+        "layer_type": "background",
+        "region_ids": [
+          "region_3",
+          "region_4",
+          "region_5"
+        ]
+      }
+    ],
+    "depth_quantiles": {
+      "q1": 11.0913,
+      "q2": 20.2283
+    }
+  },
+  "region_adjacency_graph": {
+    "edges": [
+      {
+        "region_a": "region_1",
+        "region_b": "region_2",
+        "shared_border_px": 5337,
+        "depth_delta_m": 6.6693,
+        "depth_relation": "a_in_front",
+        "edge_type": "region_spatial_adjacency"
+      },
+      {
+        "region_a": "region_2",
+        "region_b": "region_3",
+        "shared_border_px": 5643,
+        "depth_delta_m": 12.0573,
+        "depth_relation": "a_in_front",
+        "edge_type": "region_spatial_adjacency"
+      },
+      {
+        "region_a": "region_2",
+        "region_b": "region_4",
+        "shared_border_px": 15,
+        "depth_delta_m": 25.0375,
+        "depth_relation": "a_in_front",
+        "edge_type": "region_spatial_adjacency"
+      },
+      {
+        "region_a": "region_3",
+        "region_b": "region_4",
+        "shared_border_px": 1109,
+        "depth_delta_m": 12.9802,
+        "depth_relation": "a_in_front",
+        "edge_type": "region_spatial_adjacency"
+      },
+      {
+        "region_a": "region_3",
+        "region_b": "region_5",
+        "shared_border_px": 2194,
+        "depth_delta_m": 20.5931,
+        "depth_relation": "a_in_front",
+        "edge_type": "region_spatial_adjacency"
+      }
+    ],
+    "num_edges": 5,
+    "kind": "region_adjacency_graph"
+  },
+  "region_hierarchy": {
+    "edges": [
+      {
+        "parent_object_id": "region_2",
+        "child_object_id": "region_1",
+        "edge_type": "region_depth_order",
+        "containment_ratio": 0.4943
+      },
+      {
+        "parent_object_id": "region_3",
+        "child_object_id": "region_2",
+        "edge_type": "region_depth_order",
+        "containment_ratio": 0.4719
+      },
+      {
+        "parent_object_id": "region_4",
+        "child_object_id": "region_3",
+        "edge_type": "region_depth_order",
+        "containment_ratio": 0.3369
+      },
+      {
+        "parent_object_id": "region_5",
+        "child_object_id": "region_4",
+        "edge_type": "region_depth_order",
+        "containment_ratio": 0.165
+      }
+    ],
+    "root_region_ids": [
+      "region_5"
+    ],
+    "num_edges": 4,
+    "kind": "region_depth_hierarchy",
+    "deprecated": true,
+    "deprecation_note": "Use region_adjacency_graph.json instead. This linear depth-order chain will be removed in a future release."
+  },
+  "region_region_relations": [
+    {
+      "subject_id": "region_1",
+      "subject_label": "region_foreground",
+      "subject_name": "feet",
+      "predicate": "in_front_of",
+      "object_id": "region_2",
+      "object_label": "region_midground",
+      "object_name": "young",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        780
+      ],
+      "object_centroid": [
+        619,
+        411
+      ]
+    },
+    {
+      "subject_id": "region_2",
+      "subject_label": "region_midground",
+      "subject_name": "young",
+      "predicate": "behind",
+      "object_id": "region_1",
+      "object_label": "region_foreground",
+      "object_name": "feet",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        619,
+        411
+      ],
+      "object_centroid": [
+        646,
+        780
+      ]
+    },
+    {
+      "subject_id": "region_1",
+      "subject_label": "region_foreground",
+      "subject_name": "feet",
+      "predicate": "right_of",
+      "object_id": "region_2",
+      "object_label": "region_midground",
+      "object_name": "young",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        780
+      ],
+      "object_centroid": [
+        619,
+        411
+      ]
+    },
+    {
+      "subject_id": "region_2",
+      "subject_label": "region_midground",
+      "subject_name": "young",
+      "predicate": "left_of",
+      "object_id": "region_1",
+      "object_label": "region_foreground",
+      "object_name": "feet",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        619,
+        411
+      ],
+      "object_centroid": [
+        646,
+        780
+      ]
+    },
+    {
+      "subject_id": "region_1",
+      "subject_label": "region_foreground",
+      "subject_name": "feet",
+      "predicate": "below",
+      "object_id": "region_2",
+      "object_label": "region_midground",
+      "object_name": "young",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        780
+      ],
+      "object_centroid": [
+        619,
+        411
+      ]
+    },
+    {
+      "subject_id": "region_2",
+      "subject_label": "region_midground",
+      "subject_name": "young",
+      "predicate": "above",
+      "object_id": "region_1",
+      "object_label": "region_foreground",
+      "object_name": "feet",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        619,
+        411
+      ],
+      "object_centroid": [
+        646,
+        780
+      ]
+    },
+    {
+      "subject_id": "region_1",
+      "subject_label": "region_foreground",
+      "subject_name": "feet",
+      "predicate": "adjacent_to",
+      "object_id": "region_2",
+      "object_label": "region_midground",
+      "object_name": "young",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.6,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        780
+      ],
+      "object_centroid": [
+        619,
+        411
+      ],
+      "shared_border_px": 3598
+    },
+    {
+      "subject_id": "region_2",
+      "subject_label": "region_midground",
+      "subject_name": "young",
+      "predicate": "adjacent_to",
+      "object_id": "region_1",
+      "object_label": "region_foreground",
+      "object_name": "feet",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.6,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        619,
+        411
+      ],
+      "object_centroid": [
+        646,
+        780
+      ],
+      "shared_border_px": 3598
+    },
+    {
+      "subject_id": "region_1",
+      "subject_label": "region_foreground",
+      "subject_name": "feet",
+      "predicate": "in_front_of",
+      "object_id": "region_3",
+      "object_label": "region_background",
+      "object_name": "person",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        780
+      ],
+      "object_centroid": [
+        646,
+        156
+      ]
+    },
+    {
+      "subject_id": "region_3",
+      "subject_label": "region_background",
+      "subject_name": "person",
+      "predicate": "behind",
+      "object_id": "region_1",
+      "object_label": "region_foreground",
+      "object_name": "feet",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        156
+      ],
+      "object_centroid": [
+        646,
+        780
+      ]
+    },
+    {
+      "subject_id": "region_1",
+      "subject_label": "region_foreground",
+      "subject_name": "feet",
+      "predicate": "below",
+      "object_id": "region_3",
+      "object_label": "region_background",
+      "object_name": "person",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        780
+      ],
+      "object_centroid": [
+        646,
+        156
+      ]
+    },
+    {
+      "subject_id": "region_3",
+      "subject_label": "region_background",
+      "subject_name": "person",
+      "predicate": "above",
+      "object_id": "region_1",
+      "object_label": "region_foreground",
+      "object_name": "feet",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        156
+      ],
+      "object_centroid": [
+        646,
+        780
+      ]
+    },
+    {
+      "subject_id": "region_1",
+      "subject_label": "region_foreground",
+      "subject_name": "feet",
+      "predicate": "in_front_of",
+      "object_id": "region_4",
+      "object_label": "region_background",
+      "object_name": "rendering",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        780
+      ],
+      "object_centroid": [
+        460,
+        68
+      ]
+    },
+    {
+      "subject_id": "region_4",
+      "subject_label": "region_background",
+      "subject_name": "rendering",
+      "predicate": "behind",
+      "object_id": "region_1",
+      "object_label": "region_foreground",
+      "object_name": "feet",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        460,
+        68
+      ],
+      "object_centroid": [
+        646,
+        780
+      ]
+    },
+    {
+      "subject_id": "region_1",
+      "subject_label": "region_foreground",
+      "subject_name": "feet",
+      "predicate": "right_of",
+      "object_id": "region_4",
+      "object_label": "region_background",
+      "object_name": "rendering",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        780
+      ],
+      "object_centroid": [
+        460,
+        68
+      ]
+    },
+    {
+      "subject_id": "region_4",
+      "subject_label": "region_background",
+      "subject_name": "rendering",
+      "predicate": "left_of",
+      "object_id": "region_1",
+      "object_label": "region_foreground",
+      "object_name": "feet",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        460,
+        68
+      ],
+      "object_centroid": [
+        646,
+        780
+      ]
+    },
+    {
+      "subject_id": "region_1",
+      "subject_label": "region_foreground",
+      "subject_name": "feet",
+      "predicate": "below",
+      "object_id": "region_4",
+      "object_label": "region_background",
+      "object_name": "rendering",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        780
+      ],
+      "object_centroid": [
+        460,
+        68
+      ]
+    },
+    {
+      "subject_id": "region_4",
+      "subject_label": "region_background",
+      "subject_name": "rendering",
+      "predicate": "above",
+      "object_id": "region_1",
+      "object_label": "region_foreground",
+      "object_name": "feet",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        460,
+        68
+      ],
+      "object_centroid": [
+        646,
+        780
+      ]
+    },
+    {
+      "subject_id": "region_1",
+      "subject_label": "region_foreground",
+      "subject_name": "feet",
+      "predicate": "in_front_of",
+      "object_id": "region_5",
+      "object_label": "region_background",
+      "object_name": "group",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        780
+      ],
+      "object_centroid": [
+        688,
+        60
+      ]
+    },
+    {
+      "subject_id": "region_5",
+      "subject_label": "region_background",
+      "subject_name": "group",
+      "predicate": "behind",
+      "object_id": "region_1",
+      "object_label": "region_foreground",
+      "object_name": "feet",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        688,
+        60
+      ],
+      "object_centroid": [
+        646,
+        780
+      ]
+    },
+    {
+      "subject_id": "region_1",
+      "subject_label": "region_foreground",
+      "subject_name": "feet",
+      "predicate": "left_of",
+      "object_id": "region_5",
+      "object_label": "region_background",
+      "object_name": "group",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        780
+      ],
+      "object_centroid": [
+        688,
+        60
+      ]
+    },
+    {
+      "subject_id": "region_5",
+      "subject_label": "region_background",
+      "subject_name": "group",
+      "predicate": "right_of",
+      "object_id": "region_1",
+      "object_label": "region_foreground",
+      "object_name": "feet",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        688,
+        60
+      ],
+      "object_centroid": [
+        646,
+        780
+      ]
+    },
+    {
+      "subject_id": "region_1",
+      "subject_label": "region_foreground",
+      "subject_name": "feet",
+      "predicate": "below",
+      "object_id": "region_5",
+      "object_label": "region_background",
+      "object_name": "group",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        780
+      ],
+      "object_centroid": [
+        688,
+        60
+      ]
+    },
+    {
+      "subject_id": "region_5",
+      "subject_label": "region_background",
+      "subject_name": "group",
+      "predicate": "above",
+      "object_id": "region_1",
+      "object_label": "region_foreground",
+      "object_name": "feet",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        688,
+        60
+      ],
+      "object_centroid": [
+        646,
+        780
+      ]
+    },
+    {
+      "subject_id": "region_2",
+      "subject_label": "region_midground",
+      "subject_name": "young",
+      "predicate": "in_front_of",
+      "object_id": "region_3",
+      "object_label": "region_background",
+      "object_name": "person",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        619,
+        411
+      ],
+      "object_centroid": [
+        646,
+        156
+      ]
+    },
+    {
+      "subject_id": "region_3",
+      "subject_label": "region_background",
+      "subject_name": "person",
+      "predicate": "behind",
+      "object_id": "region_2",
+      "object_label": "region_midground",
+      "object_name": "young",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        156
+      ],
+      "object_centroid": [
+        619,
+        411
+      ]
+    },
+    {
+      "subject_id": "region_2",
+      "subject_label": "region_midground",
+      "subject_name": "young",
+      "predicate": "left_of",
+      "object_id": "region_3",
+      "object_label": "region_background",
+      "object_name": "person",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        619,
+        411
+      ],
+      "object_centroid": [
+        646,
+        156
+      ]
+    },
+    {
+      "subject_id": "region_3",
+      "subject_label": "region_background",
+      "subject_name": "person",
+      "predicate": "right_of",
+      "object_id": "region_2",
+      "object_label": "region_midground",
+      "object_name": "young",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        156
+      ],
+      "object_centroid": [
+        619,
+        411
+      ]
+    },
+    {
+      "subject_id": "region_2",
+      "subject_label": "region_midground",
+      "subject_name": "young",
+      "predicate": "below",
+      "object_id": "region_3",
+      "object_label": "region_background",
+      "object_name": "person",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        619,
+        411
+      ],
+      "object_centroid": [
+        646,
+        156
+      ]
+    },
+    {
+      "subject_id": "region_3",
+      "subject_label": "region_background",
+      "subject_name": "person",
+      "predicate": "above",
+      "object_id": "region_2",
+      "object_label": "region_midground",
+      "object_name": "young",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        156
+      ],
+      "object_centroid": [
+        619,
+        411
+      ]
+    },
+    {
+      "subject_id": "region_2",
+      "subject_label": "region_midground",
+      "subject_name": "young",
+      "predicate": "adjacent_to",
+      "object_id": "region_3",
+      "object_label": "region_background",
+      "object_name": "person",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.6,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        619,
+        411
+      ],
+      "object_centroid": [
+        646,
+        156
+      ],
+      "shared_border_px": 3817
+    },
+    {
+      "subject_id": "region_3",
+      "subject_label": "region_background",
+      "subject_name": "person",
+      "predicate": "adjacent_to",
+      "object_id": "region_2",
+      "object_label": "region_midground",
+      "object_name": "young",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.6,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        156
+      ],
+      "object_centroid": [
+        619,
+        411
+      ],
+      "shared_border_px": 3817
+    },
+    {
+      "subject_id": "region_2",
+      "subject_label": "region_midground",
+      "subject_name": "young",
+      "predicate": "in_front_of",
+      "object_id": "region_4",
+      "object_label": "region_background",
+      "object_name": "rendering",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        619,
+        411
+      ],
+      "object_centroid": [
+        460,
+        68
+      ]
+    },
+    {
+      "subject_id": "region_4",
+      "subject_label": "region_background",
+      "subject_name": "rendering",
+      "predicate": "behind",
+      "object_id": "region_2",
+      "object_label": "region_midground",
+      "object_name": "young",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        460,
+        68
+      ],
+      "object_centroid": [
+        619,
+        411
+      ]
+    },
+    {
+      "subject_id": "region_2",
+      "subject_label": "region_midground",
+      "subject_name": "young",
+      "predicate": "right_of",
+      "object_id": "region_4",
+      "object_label": "region_background",
+      "object_name": "rendering",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        619,
+        411
+      ],
+      "object_centroid": [
+        460,
+        68
+      ]
+    },
+    {
+      "subject_id": "region_4",
+      "subject_label": "region_background",
+      "subject_name": "rendering",
+      "predicate": "left_of",
+      "object_id": "region_2",
+      "object_label": "region_midground",
+      "object_name": "young",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        460,
+        68
+      ],
+      "object_centroid": [
+        619,
+        411
+      ]
+    },
+    {
+      "subject_id": "region_2",
+      "subject_label": "region_midground",
+      "subject_name": "young",
+      "predicate": "below",
+      "object_id": "region_4",
+      "object_label": "region_background",
+      "object_name": "rendering",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        619,
+        411
+      ],
+      "object_centroid": [
+        460,
+        68
+      ]
+    },
+    {
+      "subject_id": "region_4",
+      "subject_label": "region_background",
+      "subject_name": "rendering",
+      "predicate": "above",
+      "object_id": "region_2",
+      "object_label": "region_midground",
+      "object_name": "young",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        460,
+        68
+      ],
+      "object_centroid": [
+        619,
+        411
+      ]
+    },
+    {
+      "subject_id": "region_2",
+      "subject_label": "region_midground",
+      "subject_name": "young",
+      "predicate": "in_front_of",
+      "object_id": "region_5",
+      "object_label": "region_background",
+      "object_name": "group",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        619,
+        411
+      ],
+      "object_centroid": [
+        688,
+        60
+      ]
+    },
+    {
+      "subject_id": "region_5",
+      "subject_label": "region_background",
+      "subject_name": "group",
+      "predicate": "behind",
+      "object_id": "region_2",
+      "object_label": "region_midground",
+      "object_name": "young",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        688,
+        60
+      ],
+      "object_centroid": [
+        619,
+        411
+      ]
+    },
+    {
+      "subject_id": "region_2",
+      "subject_label": "region_midground",
+      "subject_name": "young",
+      "predicate": "left_of",
+      "object_id": "region_5",
+      "object_label": "region_background",
+      "object_name": "group",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        619,
+        411
+      ],
+      "object_centroid": [
+        688,
+        60
+      ]
+    },
+    {
+      "subject_id": "region_5",
+      "subject_label": "region_background",
+      "subject_name": "group",
+      "predicate": "right_of",
+      "object_id": "region_2",
+      "object_label": "region_midground",
+      "object_name": "young",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        688,
+        60
+      ],
+      "object_centroid": [
+        619,
+        411
+      ]
+    },
+    {
+      "subject_id": "region_2",
+      "subject_label": "region_midground",
+      "subject_name": "young",
+      "predicate": "below",
+      "object_id": "region_5",
+      "object_label": "region_background",
+      "object_name": "group",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        619,
+        411
+      ],
+      "object_centroid": [
+        688,
+        60
+      ]
+    },
+    {
+      "subject_id": "region_5",
+      "subject_label": "region_background",
+      "subject_name": "group",
+      "predicate": "above",
+      "object_id": "region_2",
+      "object_label": "region_midground",
+      "object_name": "young",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        688,
+        60
+      ],
+      "object_centroid": [
+        619,
+        411
+      ]
+    },
+    {
+      "subject_id": "region_3",
+      "subject_label": "region_background",
+      "subject_name": "person",
+      "predicate": "in_front_of",
+      "object_id": "region_4",
+      "object_label": "region_background",
+      "object_name": "rendering",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        156
+      ],
+      "object_centroid": [
+        460,
+        68
+      ]
+    },
+    {
+      "subject_id": "region_4",
+      "subject_label": "region_background",
+      "subject_name": "rendering",
+      "predicate": "behind",
+      "object_id": "region_3",
+      "object_label": "region_background",
+      "object_name": "person",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        460,
+        68
+      ],
+      "object_centroid": [
+        646,
+        156
+      ]
+    },
+    {
+      "subject_id": "region_3",
+      "subject_label": "region_background",
+      "subject_name": "person",
+      "predicate": "right_of",
+      "object_id": "region_4",
+      "object_label": "region_background",
+      "object_name": "rendering",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        156
+      ],
+      "object_centroid": [
+        460,
+        68
+      ]
+    },
+    {
+      "subject_id": "region_4",
+      "subject_label": "region_background",
+      "subject_name": "rendering",
+      "predicate": "left_of",
+      "object_id": "region_3",
+      "object_label": "region_background",
+      "object_name": "person",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        460,
+        68
+      ],
+      "object_centroid": [
+        646,
+        156
+      ]
+    },
+    {
+      "subject_id": "region_3",
+      "subject_label": "region_background",
+      "subject_name": "person",
+      "predicate": "below",
+      "object_id": "region_4",
+      "object_label": "region_background",
+      "object_name": "rendering",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        156
+      ],
+      "object_centroid": [
+        460,
+        68
+      ]
+    },
+    {
+      "subject_id": "region_4",
+      "subject_label": "region_background",
+      "subject_name": "rendering",
+      "predicate": "above",
+      "object_id": "region_3",
+      "object_label": "region_background",
+      "object_name": "person",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        460,
+        68
+      ],
+      "object_centroid": [
+        646,
+        156
+      ]
+    },
+    {
+      "subject_id": "region_3",
+      "subject_label": "region_background",
+      "subject_name": "person",
+      "predicate": "adjacent_to",
+      "object_id": "region_4",
+      "object_label": "region_background",
+      "object_name": "rendering",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.6,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        156
+      ],
+      "object_centroid": [
+        460,
+        68
+      ],
+      "shared_border_px": 776
+    },
+    {
+      "subject_id": "region_4",
+      "subject_label": "region_background",
+      "subject_name": "rendering",
+      "predicate": "adjacent_to",
+      "object_id": "region_3",
+      "object_label": "region_background",
+      "object_name": "person",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.6,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        460,
+        68
+      ],
+      "object_centroid": [
+        646,
+        156
+      ],
+      "shared_border_px": 776
+    },
+    {
+      "subject_id": "region_3",
+      "subject_label": "region_background",
+      "subject_name": "person",
+      "predicate": "in_front_of",
+      "object_id": "region_5",
+      "object_label": "region_background",
+      "object_name": "group",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        156
+      ],
+      "object_centroid": [
+        688,
+        60
+      ]
+    },
+    {
+      "subject_id": "region_5",
+      "subject_label": "region_background",
+      "subject_name": "group",
+      "predicate": "behind",
+      "object_id": "region_3",
+      "object_label": "region_background",
+      "object_name": "person",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        688,
+        60
+      ],
+      "object_centroid": [
+        646,
+        156
+      ]
+    },
+    {
+      "subject_id": "region_3",
+      "subject_label": "region_background",
+      "subject_name": "person",
+      "predicate": "left_of",
+      "object_id": "region_5",
+      "object_label": "region_background",
+      "object_name": "group",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        156
+      ],
+      "object_centroid": [
+        688,
+        60
+      ]
+    },
+    {
+      "subject_id": "region_5",
+      "subject_label": "region_background",
+      "subject_name": "group",
+      "predicate": "right_of",
+      "object_id": "region_3",
+      "object_label": "region_background",
+      "object_name": "person",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        688,
+        60
+      ],
+      "object_centroid": [
+        646,
+        156
+      ]
+    },
+    {
+      "subject_id": "region_3",
+      "subject_label": "region_background",
+      "subject_name": "person",
+      "predicate": "below",
+      "object_id": "region_5",
+      "object_label": "region_background",
+      "object_name": "group",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        156
+      ],
+      "object_centroid": [
+        688,
+        60
+      ]
+    },
+    {
+      "subject_id": "region_5",
+      "subject_label": "region_background",
+      "subject_name": "group",
+      "predicate": "above",
+      "object_id": "region_3",
+      "object_label": "region_background",
+      "object_name": "person",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        688,
+        60
+      ],
+      "object_centroid": [
+        646,
+        156
+      ]
+    },
+    {
+      "subject_id": "region_3",
+      "subject_label": "region_background",
+      "subject_name": "person",
+      "predicate": "adjacent_to",
+      "object_id": "region_5",
+      "object_label": "region_background",
+      "object_name": "group",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.6,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        646,
+        156
+      ],
+      "object_centroid": [
+        688,
+        60
+      ],
+      "shared_border_px": 1499
+    },
+    {
+      "subject_id": "region_5",
+      "subject_label": "region_background",
+      "subject_name": "group",
+      "predicate": "adjacent_to",
+      "object_id": "region_3",
+      "object_label": "region_background",
+      "object_name": "person",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.6,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        688,
+        60
+      ],
+      "object_centroid": [
+        646,
+        156
+      ],
+      "shared_border_px": 1499
+    },
+    {
+      "subject_id": "region_4",
+      "subject_label": "region_background",
+      "subject_name": "rendering",
+      "predicate": "in_front_of",
+      "object_id": "region_5",
+      "object_label": "region_background",
+      "object_name": "group",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        460,
+        68
+      ],
+      "object_centroid": [
+        688,
+        60
+      ]
+    },
+    {
+      "subject_id": "region_5",
+      "subject_label": "region_background",
+      "subject_name": "group",
+      "predicate": "behind",
+      "object_id": "region_4",
+      "object_label": "region_background",
+      "object_name": "rendering",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.7,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        688,
+        60
+      ],
+      "object_centroid": [
+        460,
+        68
+      ]
+    },
+    {
+      "subject_id": "region_4",
+      "subject_label": "region_background",
+      "subject_name": "rendering",
+      "predicate": "left_of",
+      "object_id": "region_5",
+      "object_label": "region_background",
+      "object_name": "group",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        460,
+        68
+      ],
+      "object_centroid": [
+        688,
+        60
+      ]
+    },
+    {
+      "subject_id": "region_5",
+      "subject_label": "region_background",
+      "subject_name": "group",
+      "predicate": "right_of",
+      "object_id": "region_4",
+      "object_label": "region_background",
+      "object_name": "rendering",
+      "object_caption": "",
+      "source": "region_spatial",
+      "score": 0.65,
+      "relation_tier": "region_region",
+      "subject_centroid": [
+        688,
+        60
+      ],
+      "object_centroid": [
+        460,
+        68
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4994 @@
+[
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "pillow",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "object_label": "sleep",
+    "object_name": "making the pillow the focal point of the image.",
+    "object_caption": "sleep",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "pillow",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "sleepwear",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      612,
+      528
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "pillow",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "looking down on the object.",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      877,
+      390
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "pillow",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "couch",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      806,
+      475
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "pillow",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "boy baby",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "pillow",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "child baby",
+    "object_name": "child baby",
+    "object_caption": "child baby",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "pillow",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "child",
+    "object_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "object_caption": "child",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "pillow",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_7_GroundedSAM2",
+    "object_label": "blanket",
+    "object_name": "light brown color.",
+    "object_caption": "blanket",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      99,
+      589
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "pillow",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "object_label": "sleep",
+    "object_name": "making the pillow the focal point of the image.",
+    "object_caption": "sleep",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "couch",
+    "subject_name": "couch",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "looking down on the object.",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      806,
+      475
+    ],
+    "object_centroid": [
+      877,
+      390
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "couch",
+    "subject_name": "couch",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "sleepwear",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      806,
+      475
+    ],
+    "object_centroid": [
+      612,
+      528
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "couch",
+    "subject_name": "couch",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "boy baby",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      806,
+      475
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "couch",
+    "subject_name": "couch",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "child baby",
+    "object_name": "child baby",
+    "object_caption": "child baby",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      806,
+      475
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "couch",
+    "subject_name": "couch",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "child",
+    "object_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "object_caption": "child",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      806,
+      475
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "couch",
+    "subject_name": "couch",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "giving it a textured appearance. the background is a neutral beige color",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      806,
+      475
+    ],
+    "object_centroid": [
+      1165,
+      427
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "couch",
+    "subject_name": "couch",
+    "predicate": "below",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "pillow",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      806,
+      475
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "couch",
+    "subject_name": "couch",
+    "predicate": "below",
+    "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "object_label": "sleep",
+    "object_name": "making the pillow the focal point of the image.",
+    "object_caption": "sleep",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      806,
+      475
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "couch",
+    "subject_name": "couch",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "giving it a textured appearance. the background is a neutral beige color",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      806,
+      475
+    ],
+    "object_centroid": [
+      1165,
+      427
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "couch",
+    "subject_name": "couch",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "looking down on the object.",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      806,
+      475
+    ],
+    "object_centroid": [
+      877,
+      390
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "boy baby",
+    "subject_name": "boy baby",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "child baby",
+    "object_name": "child baby",
+    "object_caption": "child baby",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "boy baby",
+    "subject_name": "boy baby",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "child",
+    "object_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "object_caption": "child",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "boy baby",
+    "subject_name": "boy baby",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "sleepwear",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      612,
+      528
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "boy baby",
+    "subject_name": "boy baby",
+    "predicate": "below",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "couch",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      806,
+      475
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "boy baby",
+    "subject_name": "boy baby",
+    "predicate": "below",
+    "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "looking down on the object.",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      877,
+      390
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "boy baby",
+    "subject_name": "boy baby",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "lay blanket",
+    "object_name": "lay blanket",
+    "object_caption": "lay blanket",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      304,
+      860
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "boy baby",
+    "subject_name": "boy baby",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "object_label": "lay",
+    "object_name": "looking down on the fabric.",
+    "object_caption": "lay",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      304,
+      860
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "boy baby",
+    "subject_name": "boy baby",
+    "predicate": "below",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "pillow",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "boy baby",
+    "subject_name": "boy baby",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "child baby",
+    "object_name": "child baby",
+    "object_caption": "child baby",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "boy baby",
+    "subject_name": "boy baby",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "child",
+    "object_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "object_caption": "child",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "boy baby",
+    "subject_name": "boy baby",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "sleepwear",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      612,
+      528
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "child baby",
+    "subject_name": "child baby",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "boy baby",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "child baby",
+    "subject_name": "child baby",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "child",
+    "object_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "object_caption": "child",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "child baby",
+    "subject_name": "child baby",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "sleepwear",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      612,
+      528
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "child baby",
+    "subject_name": "child baby",
+    "predicate": "below",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "couch",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      806,
+      475
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "child baby",
+    "subject_name": "child baby",
+    "predicate": "below",
+    "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "looking down on the object.",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      877,
+      390
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "child baby",
+    "subject_name": "child baby",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "lay blanket",
+    "object_name": "lay blanket",
+    "object_caption": "lay blanket",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      304,
+      860
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "child baby",
+    "subject_name": "child baby",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "object_label": "lay",
+    "object_name": "looking down on the fabric.",
+    "object_caption": "lay",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      304,
+      860
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "child baby",
+    "subject_name": "child baby",
+    "predicate": "below",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "pillow",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "child baby",
+    "subject_name": "child baby",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "boy baby",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "child baby",
+    "subject_name": "child baby",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "child",
+    "object_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "object_caption": "child",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "child baby",
+    "subject_name": "child baby",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "sleepwear",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      612,
+      528
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "child",
+    "subject_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "boy baby",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "child",
+    "subject_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "child baby",
+    "object_name": "child baby",
+    "object_caption": "child baby",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "child",
+    "subject_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "sleepwear",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      612,
+      528
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "child",
+    "subject_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "predicate": "below",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "couch",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      806,
+      475
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "child",
+    "subject_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "predicate": "below",
+    "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "looking down on the object.",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      877,
+      390
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "child",
+    "subject_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "lay blanket",
+    "object_name": "lay blanket",
+    "object_caption": "lay blanket",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      304,
+      860
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "child",
+    "subject_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "object_label": "lay",
+    "object_name": "looking down on the fabric.",
+    "object_caption": "lay",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      304,
+      860
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "child",
+    "subject_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "predicate": "below",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "pillow",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "child",
+    "subject_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "boy baby",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "child",
+    "subject_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "child baby",
+    "object_name": "child baby",
+    "object_caption": "child baby",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "child",
+    "subject_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "sleepwear",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      680,
+      655
+    ],
+    "object_centroid": [
+      612,
+      528
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "giving it a textured appearance. the background is a neutral beige color",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "looking down on the object.",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      1165,
+      427
+    ],
+    "object_centroid": [
+      877,
+      390
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "giving it a textured appearance. the background is a neutral beige color",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "couch",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      1165,
+      427
+    ],
+    "object_centroid": [
+      806,
+      475
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "giving it a textured appearance. the background is a neutral beige color",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "boy baby",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      1165,
+      427
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "giving it a textured appearance. the background is a neutral beige color",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "child baby",
+    "object_name": "child baby",
+    "object_caption": "child baby",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      1165,
+      427
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "giving it a textured appearance. the background is a neutral beige color",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "child",
+    "object_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "object_caption": "child",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      1165,
+      427
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "giving it a textured appearance. the background is a neutral beige color",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "sleepwear",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      1165,
+      427
+    ],
+    "object_centroid": [
+      612,
+      528
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "giving it a textured appearance. the background is a neutral beige color",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "pillow",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      1165,
+      427
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "giving it a textured appearance. the background is a neutral beige color",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "object_label": "sleep",
+    "object_name": "making the pillow the focal point of the image.",
+    "object_caption": "sleep",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      1165,
+      427
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "giving it a textured appearance. the background is a neutral beige color",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "couch",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      1165,
+      427
+    ],
+    "object_centroid": [
+      806,
+      475
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "lay blanket",
+    "subject_name": "lay blanket",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "object_label": "lay",
+    "object_name": "looking down on the fabric.",
+    "object_caption": "lay",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      304,
+      860
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "lay blanket",
+    "subject_name": "lay blanket",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_7_GroundedSAM2",
+    "object_label": "blanket",
+    "object_name": "light brown color.",
+    "object_caption": "blanket",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      99,
+      589
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "lay blanket",
+    "subject_name": "lay blanket",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "boy baby",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "lay blanket",
+    "subject_name": "lay blanket",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "child baby",
+    "object_name": "child baby",
+    "object_caption": "child baby",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "lay blanket",
+    "subject_name": "lay blanket",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "child",
+    "object_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "object_caption": "child",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "lay blanket",
+    "subject_name": "lay blanket",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "sleepwear",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      612,
+      528
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "lay blanket",
+    "subject_name": "lay blanket",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "couch",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      806,
+      475
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "lay blanket",
+    "subject_name": "lay blanket",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "looking down on the object.",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      877,
+      390
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "lay blanket",
+    "subject_name": "lay blanket",
+    "predicate": "is_next_to",
+    "object_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "object_label": "lay",
+    "object_name": "looking down on the fabric.",
+    "object_caption": "lay",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      304,
+      860
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_7_GroundedSAM2",
+    "subject_label": "blanket",
+    "subject_name": "light brown color.",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "lay blanket",
+    "object_name": "lay blanket",
+    "object_caption": "lay blanket",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      99,
+      589
+    ],
+    "object_centroid": [
+      304,
+      860
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_7_GroundedSAM2",
+    "subject_label": "blanket",
+    "subject_name": "light brown color.",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "object_label": "lay",
+    "object_name": "looking down on the fabric.",
+    "object_caption": "lay",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      99,
+      589
+    ],
+    "object_centroid": [
+      304,
+      860
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_7_GroundedSAM2",
+    "subject_label": "blanket",
+    "subject_name": "light brown color.",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "sleepwear",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      99,
+      589
+    ],
+    "object_centroid": [
+      612,
+      528
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_7_GroundedSAM2",
+    "subject_label": "blanket",
+    "subject_name": "light brown color.",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "boy baby",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      99,
+      589
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_7_GroundedSAM2",
+    "subject_label": "blanket",
+    "subject_name": "light brown color.",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "child baby",
+    "object_name": "child baby",
+    "object_caption": "child baby",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      99,
+      589
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_7_GroundedSAM2",
+    "subject_label": "blanket",
+    "subject_name": "light brown color.",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "child",
+    "object_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "object_caption": "child",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      99,
+      589
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_7_GroundedSAM2",
+    "subject_label": "blanket",
+    "subject_name": "light brown color.",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "pillow",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      99,
+      589
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_7_GroundedSAM2",
+    "subject_label": "blanket",
+    "subject_name": "light brown color.",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "object_label": "sleep",
+    "object_name": "making the pillow the focal point of the image.",
+    "object_caption": "sleep",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      99,
+      589
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "subject_label": "sleep",
+    "subject_name": "making the pillow the focal point of the image.",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "pillow",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "subject_label": "sleep",
+    "subject_name": "making the pillow the focal point of the image.",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "sleepwear",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      612,
+      528
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "subject_label": "sleep",
+    "subject_name": "making the pillow the focal point of the image.",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "looking down on the object.",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      877,
+      390
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "subject_label": "sleep",
+    "subject_name": "making the pillow the focal point of the image.",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "couch",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      806,
+      475
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "subject_label": "sleep",
+    "subject_name": "making the pillow the focal point of the image.",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "boy baby",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "subject_label": "sleep",
+    "subject_name": "making the pillow the focal point of the image.",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "child baby",
+    "object_name": "child baby",
+    "object_caption": "child baby",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "subject_label": "sleep",
+    "subject_name": "making the pillow the focal point of the image.",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "child",
+    "object_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "object_caption": "child",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "subject_label": "sleep",
+    "subject_name": "making the pillow the focal point of the image.",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_7_GroundedSAM2",
+    "object_label": "blanket",
+    "object_name": "light brown color.",
+    "object_caption": "blanket",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      99,
+      589
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "subject_label": "sleep",
+    "subject_name": "making the pillow the focal point of the image.",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "pillow",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      563,
+      147
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "subject_label": "sleepwear",
+    "subject_name": "comfortable fabric. the background is a plain brown color.",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "boy baby",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      612,
+      528
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "subject_label": "sleepwear",
+    "subject_name": "comfortable fabric. the background is a plain brown color.",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "child baby",
+    "object_name": "child baby",
+    "object_caption": "child baby",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      612,
+      528
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "subject_label": "sleepwear",
+    "subject_name": "comfortable fabric. the background is a plain brown color.",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "child",
+    "object_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "object_caption": "child",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      612,
+      528
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "subject_label": "sleepwear",
+    "subject_name": "comfortable fabric. the background is a plain brown color.",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "couch",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      612,
+      528
+    ],
+    "object_centroid": [
+      806,
+      475
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "subject_label": "sleepwear",
+    "subject_name": "comfortable fabric. the background is a plain brown color.",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "looking down on the object.",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      612,
+      528
+    ],
+    "object_centroid": [
+      877,
+      390
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "subject_label": "sleepwear",
+    "subject_name": "comfortable fabric. the background is a plain brown color.",
+    "predicate": "below",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "pillow",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      612,
+      528
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "subject_label": "sleepwear",
+    "subject_name": "comfortable fabric. the background is a plain brown color.",
+    "predicate": "below",
+    "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "object_label": "sleep",
+    "object_name": "making the pillow the focal point of the image.",
+    "object_caption": "sleep",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      612,
+      528
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "subject_label": "sleepwear",
+    "subject_name": "comfortable fabric. the background is a plain brown color.",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "lay blanket",
+    "object_name": "lay blanket",
+    "object_caption": "lay blanket",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      612,
+      528
+    ],
+    "object_centroid": [
+      304,
+      860
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "subject_label": "sleepwear",
+    "subject_name": "comfortable fabric. the background is a plain brown color.",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "boy baby",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      612,
+      528
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "subject_label": "sleepwear",
+    "subject_name": "comfortable fabric. the background is a plain brown color.",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "child baby",
+    "object_name": "child baby",
+    "object_caption": "child baby",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      612,
+      528
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "subject_label": "sleepwear",
+    "subject_name": "comfortable fabric. the background is a plain brown color.",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "child",
+    "object_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "object_caption": "child",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      612,
+      528
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "subject_label": "lay",
+    "subject_name": "looking down on the fabric.",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "lay blanket",
+    "object_name": "lay blanket",
+    "object_caption": "lay blanket",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      304,
+      860
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "subject_label": "lay",
+    "subject_name": "looking down on the fabric.",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_7_GroundedSAM2",
+    "object_label": "blanket",
+    "object_name": "light brown color.",
+    "object_caption": "blanket",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      99,
+      589
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "subject_label": "lay",
+    "subject_name": "looking down on the fabric.",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "boy baby",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "subject_label": "lay",
+    "subject_name": "looking down on the fabric.",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "child baby",
+    "object_name": "child baby",
+    "object_caption": "child baby",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "subject_label": "lay",
+    "subject_name": "looking down on the fabric.",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "child",
+    "object_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "object_caption": "child",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "subject_label": "lay",
+    "subject_name": "looking down on the fabric.",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "sleepwear",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      612,
+      528
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "subject_label": "lay",
+    "subject_name": "looking down on the fabric.",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "couch",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      806,
+      475
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "subject_label": "lay",
+    "subject_name": "looking down on the fabric.",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "looking down on the object.",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      877,
+      390
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "subject_label": "lay",
+    "subject_name": "looking down on the fabric.",
+    "predicate": "is_next_to",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "lay blanket",
+    "object_name": "lay blanket",
+    "object_caption": "lay blanket",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      304,
+      860
+    ],
+    "object_centroid": [
+      304,
+      860
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "looking down on the object.",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "couch",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      877,
+      390
+    ],
+    "object_centroid": [
+      806,
+      475
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "looking down on the object.",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "giving it a textured appearance. the background is a neutral beige color",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      877,
+      390
+    ],
+    "object_centroid": [
+      1165,
+      427
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "looking down on the object.",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "sleepwear",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      877,
+      390
+    ],
+    "object_centroid": [
+      612,
+      528
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "looking down on the object.",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "boy baby",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      877,
+      390
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "looking down on the object.",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "child baby",
+    "object_name": "child baby",
+    "object_caption": "child baby",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      877,
+      390
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "looking down on the object.",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "child",
+    "object_name": "the image is of a baby sitting on a brown background. the baby is wearing a red and white striped onesie with a green frog design on the front. the onesie has a round neckline and long sleeves. the pants are white with blue stripes and have a blue and white polka dot pattern on the bottom. the child is also wearing blue socks and is looking up at the camera with a curious expression.",
+    "object_caption": "child",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      877,
+      390
+    ],
+    "object_centroid": [
+      680,
+      655
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "looking down on the object.",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "pillow",
+    "object_caption": "pillow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      877,
+      390
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "looking down on the object.",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "object_label": "sleep",
+    "object_name": "making the pillow the focal point of the image.",
+    "object_caption": "sleep",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      877,
+      390
+    ],
+    "object_centroid": [
+      563,
+      147
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "looking down on the object.",
+    "predicate": "on",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "couch",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      877,
+      390
+    ],
+    "object_centroid": [
+      806,
+      475
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "baby",
+    "subject_name": "the image shows a baby sitting on a beige couch. the baby is wearing a red and white striped onesie with a green frog design on it. the onesie has a red bow on the front and white stripes on the sleeves. above the baby's head",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "pillow",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.999,
+    "subject_centroid": [
+      604.0,
+      421.0
+    ],
+    "object_centroid": [
+      563.0,
+      147.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "pillow",
+    "predicate": "inside_of",
+    "object_id": "region_2",
+    "object_label": "baby",
+    "object_name": "the image shows a baby sitting on a beige couch. the baby is wearing a red and white striped onesie with a green frog design on it. the onesie has a red bow on the front and white stripes on the sleeves. above the baby's head",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.999,
+    "subject_centroid": [
+      563.0,
+      147.0
+    ],
+    "object_centroid": [
+      604.0,
+      421.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "couch",
+    "subject_name": "couch",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "giving it a textured appearance. the background is a neutral beige color",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9992,
+    "subject_centroid": [
+      806.0,
+      475.0
+    ],
+    "object_centroid": [
+      1165.0,
+      427.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "giving it a textured appearance. the background is a neutral beige color",
+    "predicate": "inside_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9992,
+    "subject_centroid": [
+      1165.0,
+      427.0
+    ],
+    "object_centroid": [
+      806.0,
+      475.0
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "person",
+    "subject_name": "the image shows a person lying on a beige couch with their legs up in the air. the person is wearing a pair of blue and white striped leggings with a pattern of small white dots on the bottom. they are also wearing blue socks with white polka dots. on the left side of the image",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "lay blanket",
+    "object_name": "lay blanket",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9993,
+    "subject_centroid": [
+      636.0,
+      843.0
+    ],
+    "object_centroid": [
+      304.0,
+      860.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "lay blanket",
+    "subject_name": "lay blanket",
+    "predicate": "inside_of",
+    "object_id": "region_1",
+    "object_label": "person",
+    "object_name": "the image shows a person lying on a beige couch with their legs up in the air. the person is wearing a pair of blue and white striped leggings with a pattern of small white dots on the bottom. they are also wearing blue socks with white polka dots. on the left side of the image",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9993,
+    "subject_centroid": [
+      304.0,
+      860.0
+    ],
+    "object_centroid": [
+      636.0,
+      843.0
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "baby",
+    "subject_name": "the image shows a baby sitting on a beige couch. the baby is wearing a red and white striped onesie with a green frog design on it. the onesie has a red bow on the front and white stripes on the sleeves. above the baby's head",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_7_GroundedSAM2",
+    "object_label": "blanket",
+    "object_name": "light brown color.",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9612,
+    "subject_centroid": [
+      604.0,
+      421.0
+    ],
+    "object_centroid": [
+      99.0,
+      589.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_7_GroundedSAM2",
+    "subject_label": "blanket",
+    "subject_name": "light brown color.",
+    "predicate": "inside_of",
+    "object_id": "region_2",
+    "object_label": "baby",
+    "object_name": "the image shows a baby sitting on a beige couch. the baby is wearing a red and white striped onesie with a green frog design on it. the onesie has a red bow on the front and white stripes on the sleeves. above the baby's head",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9612,
+    "subject_centroid": [
+      99.0,
+      589.0
+    ],
+    "object_centroid": [
+      604.0,
+      421.0
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "baby",
+    "subject_name": "the image shows a baby sitting on a beige couch. the baby is wearing a red and white striped onesie with a green frog design on it. the onesie has a red bow on the front and white stripes on the sleeves. above the baby's head",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "object_label": "sleep",
+    "object_name": "making the pillow the focal point of the image.",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.999,
+    "subject_centroid": [
+      604.0,
+      421.0
+    ],
+    "object_centroid": [
+      563.0,
+      147.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_8_GroundedSAM2",
+    "subject_label": "sleep",
+    "subject_name": "making the pillow the focal point of the image.",
+    "predicate": "inside_of",
+    "object_id": "region_2",
+    "object_label": "baby",
+    "object_name": "the image shows a baby sitting on a beige couch. the baby is wearing a red and white striped onesie with a green frog design on it. the onesie has a red bow on the front and white stripes on the sleeves. above the baby's head",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.999,
+    "subject_centroid": [
+      563.0,
+      147.0
+    ],
+    "object_centroid": [
+      604.0,
+      421.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "boy baby",
+    "subject_name": "boy baby",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "object_label": "sleepwear",
+    "object_name": "comfortable fabric. the background is a plain brown color.",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9983,
+    "subject_centroid": [
+      680.0,
+      655.0
+    ],
+    "object_centroid": [
+      612.0,
+      528.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_9_GroundedSAM2",
+    "subject_label": "sleepwear",
+    "subject_name": "comfortable fabric. the background is a plain brown color.",
+    "predicate": "inside_of",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "boy baby",
+    "object_name": "boy baby",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9983,
+    "subject_centroid": [
+      612.0,
+      528.0
+    ],
+    "object_centroid": [
+      680.0,
+      655.0
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "person",
+    "subject_name": "the image shows a person lying on a beige couch with their legs up in the air. the person is wearing a pair of blue and white striped leggings with a pattern of small white dots on the bottom. they are also wearing blue socks with white polka dots. on the left side of the image",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "object_label": "lay",
+    "object_name": "looking down on the fabric.",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9993,
+    "subject_centroid": [
+      636.0,
+      843.0
+    ],
+    "object_centroid": [
+      304.0,
+      860.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_10_GroundedSAM2",
+    "subject_label": "lay",
+    "subject_name": "looking down on the fabric.",
+    "predicate": "inside_of",
+    "object_id": "region_1",
+    "object_label": "person",
+    "object_name": "the image shows a person lying on a beige couch with their legs up in the air. the person is wearing a pair of blue and white striped leggings with a pattern of small white dots on the bottom. they are also wearing blue socks with white polka dots. on the left side of the image",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9993,
+    "subject_centroid": [
+      304.0,
+      860.0
+    ],
+    "object_centroid": [
+      636.0,
+      843.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "couch",
+    "subject_name": "couch",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "object_label": "pillow",
+    "object_name": "looking down on the object.",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9882,
+    "subject_centroid": [
+      806.0,
+      475.0
+    ],
+    "object_centroid": [
+      877.0,
+      390.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_11_GroundedSAM2",
+    "subject_label": "pillow",
+    "subject_name": "looking down on the object.",
+    "predicate": "inside_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9882,
+    "subject_centroid": [
+      877.0,
+      390.0
+    ],
+    "object_centroid": [
+      806.0,
+      475.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "couch",
+    "subject_name": "couch",
+    "predicate": "contains",
+    "object_id": "region_3",
+    "object_label": "sofa",
+    "object_name": "light brown color.",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9412,
+    "subject_centroid": [
+      806.0,
+      475.0
+    ],
+    "object_centroid": [
+      1096.0,
+      187.0
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "sofa",
+    "subject_name": "light brown color.",
+    "predicate": "inside_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9412,
+    "subject_centroid": [
+      1096.0,
+      187.0
+    ],
+    "object_centroid": [
+      806.0,
+      475.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "couch",
+    "subject_name": "couch",
+    "predicate": "contains",
+    "object_id": "region_4",
+    "object_label": "piece",
+    "object_name": "creating a curved shape. the background is a solid",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9308,
+    "subject_centroid": [
+      806.0,
+      475.0
+    ],
+    "object_centroid": [
+      134.0,
+      153.0
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "piece",
+    "subject_name": "creating a curved shape. the background is a solid",
+    "predicate": "inside_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "couch",
+    "object_name": "couch",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9308,
+    "subject_centroid": [
+      134.0,
+      153.0
+    ],
+    "object_centroid": [
+      806.0,
+      475.0
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "in_front_of",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "right_of",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "left_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "below",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "adjacent_to",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      604,
+      421
+    ],
+    "shared_border_px": 3953
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "adjacent_to",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      636,
+      843
+    ],
+    "shared_border_px": 3953
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "in_front_of",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "left_of",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "right_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "below",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "in_front_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      134,
+      153
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "right_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      134,
+      153
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "left_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "below",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      134,
+      153
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "in_front_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "left_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "right_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "below",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "in_front_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "left_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "right_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "person",
+    "predicate": "below",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      636,
+      843
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "person",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      636,
+      843
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "in_front_of",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "behind",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "left_of",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "right_of",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "below",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "above",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "adjacent_to",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ],
+    "shared_border_px": 2515
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "adjacent_to",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      604,
+      421
+    ],
+    "shared_border_px": 2515
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "in_front_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      134,
+      153
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "behind",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "right_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      134,
+      153
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "left_of",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "below",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      134,
+      153
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "above",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "adjacent_to",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      134,
+      153
+    ],
+    "shared_border_px": 1140
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "adjacent_to",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      604,
+      421
+    ],
+    "shared_border_px": 1140
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "in_front_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "behind",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "left_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "right_of",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "below",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "above",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "adjacent_to",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      665,
+      261
+    ],
+    "shared_border_px": 263
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "adjacent_to",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      604,
+      421
+    ],
+    "shared_border_px": 263
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "in_front_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "behind",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "left_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "right_of",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "below",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "above",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      604,
+      421
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "baby",
+    "predicate": "adjacent_to",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      604,
+      421
+    ],
+    "object_centroid": [
+      708,
+      35
+    ],
+    "shared_border_px": 578
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "adjacent_to",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "baby",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      604,
+      421
+    ],
+    "shared_border_px": 578
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "right_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      134,
+      153
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "left_of",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "below",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      134,
+      153
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "above",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "in_front_of",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "behind",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "right_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "left_of",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "above",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "below",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "in_front_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "behind",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "right_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "left_of",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "below",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "above",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_background",
+    "subject_name": "sofa",
+    "predicate": "adjacent_to",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1096,
+      187
+    ],
+    "object_centroid": [
+      708,
+      35
+    ],
+    "shared_border_px": 1714
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "adjacent_to",
+    "object_id": "region_3",
+    "object_label": "region_background",
+    "object_name": "sofa",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      1096,
+      187
+    ],
+    "shared_border_px": 1714
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "in_front_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      134,
+      153
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "behind",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "left_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "right_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      134,
+      153
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "above",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "below",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      134,
+      153
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "in_front_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "behind",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      134,
+      153
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "left_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "right_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      134,
+      153
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "below",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "above",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      134,
+      153
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "piece",
+    "predicate": "adjacent_to",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      134,
+      153
+    ],
+    "object_centroid": [
+      708,
+      35
+    ],
+    "shared_border_px": 1028
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "adjacent_to",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "piece",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      134,
+      153
+    ],
+    "shared_border_px": 1028
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "in_front_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "behind",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "left_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "right_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "background",
+    "predicate": "below",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "window",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      665,
+      261
+    ],
+    "object_centroid": [
+      708,
+      35
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "window",
+    "predicate": "above",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "background",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      708,
+      35
+    ],
+    "object_centroid": [
+      665,
+      261
+    ]
+  }
+]

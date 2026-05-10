@@ -1,0 +1,15 @@
+{
+  "track": "grounded_sam2",
+  "image_path": "/root/labs/citv/images/IMG_9819.png",
+  "files": {
+    "florence_object_captions_json": "scene_graph/grounded_sam2/IMG_9819_florence_object_captions.json",
+    "florence_object_captions_md": "scene_graph/grounded_sam2/IMG_9819_florence_object_captions.md",
+    "florence_scene_caption_json": "scene_graph/grounded_sam2/IMG_9819_florence_scene_caption.json",
+    "florence_scene_caption_md": "scene_graph/grounded_sam2/IMG_9819_florence_scene_caption.md",
+    "fusion_scene_caption_json": "scene_graph/grounded_sam2/IMG_9819_fusion_scene_caption.json",
+    "fusion_scene_caption_md": "scene_graph/grounded_sam2/IMG_9819_fusion_scene_caption.md",
+    "hybrid_scene_caption_json": "scene_graph/grounded_sam2/IMG_9819_hybrid_scene_caption.json",
+    "hybrid_scene_caption_md": "scene_graph/grounded_sam2/IMG_9819_hybrid_scene_caption.md",
+    "caption_comparison_json": "scene_graph/grounded_sam2/IMG_9819_caption_comparison.json"
+  }
+}

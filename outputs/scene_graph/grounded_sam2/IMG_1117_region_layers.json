@@ -1,0 +1,101 @@
+{
+  "ordering": [
+    {
+      "id": "region_1",
+      "label": "young",
+      "layer_type": "midground",
+      "z_mean": 9.085
+    },
+    {
+      "id": "region_6",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 18.0114
+    },
+    {
+      "id": "region_5",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 25.2015
+    },
+    {
+      "id": "region_2",
+      "label": "concrete",
+      "layer_type": "background",
+      "z_mean": 25.7436
+    },
+    {
+      "id": "region_3",
+      "label": "background",
+      "layer_type": "background",
+      "z_mean": 36.9907
+    },
+    {
+      "id": "region_4",
+      "label": "abstract",
+      "layer_type": "background",
+      "z_mean": 37.0803
+    },
+    {
+      "id": "region_8",
+      "label": "blurred",
+      "layer_type": "background",
+      "z_mean": 48.4265
+    },
+    {
+      "id": "region_7",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 50.3089
+    },
+    {
+      "id": "region_9",
+      "label": "abstract",
+      "layer_type": "background",
+      "z_mean": 57.9634
+    },
+    {
+      "id": "region_11",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 59.2457
+    },
+    {
+      "id": "region_10",
+      "label": "blurred",
+      "layer_type": "background",
+      "z_mean": 67.5741
+    }
+  ],
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "region_ids": []
+    },
+    {
+      "layer_type": "midground",
+      "region_ids": [
+        "region_1"
+      ]
+    },
+    {
+      "layer_type": "background",
+      "region_ids": [
+        "region_2",
+        "region_3",
+        "region_4",
+        "region_5",
+        "region_6",
+        "region_7",
+        "region_8",
+        "region_9",
+        "region_10",
+        "region_11"
+      ]
+    }
+  ],
+  "depth_quantiles": {
+    "q1": 6.113,
+    "q2": 13.594
+  }
+}

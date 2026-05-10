@@ -1,0 +1,160 @@
+{
+  "variant": "florence_object",
+  "track": "grounded_sam2",
+  "image_path": "/workspace/citv/images/IMG_1117.png",
+  "count": 19,
+  "objects": [
+    {
+      "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "label": "boy",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "portrait",
+      "florence_caption": "The image is a close-up portrait of a young child, probably around 2-3 years old. The child is wearing a navy blue jacket with a colorful striped pattern in red, yellow, green, and blue. The jacket has a hood and the child is holding a small red object in their hands. They are looking directly at the camera with a slight smile on their face. The background is plain white.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "label": "floor pavement",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "concrete",
+      "florence_caption": "The image is a close-up of a concrete surface. In the center of the image, there is a small, white object that appears to be a silhouette of a person. The object is slightly tilted to the left, as if it is casting a shadow on the ground. The background is blurred, but it seems to be an outdoor setting with trees and a building visible in the distance. The image is taken from a low angle, looking up at the object.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "label": "jacket",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "navy",
+      "florence_caption": "The image is of a navy blue puffer jacket with a hood. The jacket has a zipper in the center, which is open to reveal the interior of the jacket. The zipper is decorated with the colors of the flag - red, yellow, green, and blue. The hood is lined with a soft, warm material, and the jacket appears to be made of a quilted material. The background is plain white.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "label": "baby child",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "portrait",
+      "florence_caption": "The image is a close-up portrait of a young child, probably around 2-3 years old. The child is wearing a navy blue jacket with a colorful striped pattern in red, yellow, green, and blue. The jacket has a hood and the child is holding a small red object in their hands. They are looking directly at the camera with a slight smile on their face. The background is plain white.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "label": "cement concrete",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "concrete",
+      "florence_caption": "The image is a close-up of a concrete surface. In the center of the image, there is a small, white object that appears to be a silhouette of a person. The object is slightly tilted to the left, as if it is casting a shadow on the ground. The background is blurred, but it seems to be an outdoor setting with trees and a building visible in the distance. The image is taken from a low angle, looking up at the object.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "label": "cement concrete floor golf course",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "concrete",
+      "florence_caption": "The image is a close-up of a concrete surface. In the center of the image, there is a small, white object that appears to be a silhouette of a person. The object is slightly tilted to the left, as if it is casting a shadow on the ground. The background is blurred, but it seems to be an outdoor setting with trees and a building visible in the distance. The image is taken from a low angle, looking up at the object.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "label": "creating a sense of depth and dimension. the image appears to be taken from a low angle",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "map",
+      "florence_caption": "The image is a map of the state of California, with a blue sky in the background. The map is in the shape of a triangle, with the top half of the map being a darker shade of green and the bottom half being a lighter shade of blue. The tree in the center of the image is blurred, giving it a dreamy, ethereal quality. The leaves of the tree are visible, creating a sense of depth and dimension. The image appears to be taken from a low angle, looking up at the tree.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "label": "baby boy",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "portrait",
+      "florence_caption": "The image is a close-up portrait of a young boy. He is wearing a navy blue jacket with a colorful patchwork design on the front. The jacket has a hood and a zipper closure. The boy has short dark hair and is smiling at the camera. His hands are clasped together in front of him. The background is plain white.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "label": "and the object is slightly out of focus",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "rendering",
+      "florence_caption": "The image is a 3D rendering of a small, oval-shaped object. The object appears to be made of a light green material, possibly a tree or shrub, with a slightly blurred appearance. The background is a light grey color, and the object is slightly out of focus, making it the focal point of the image. The image is slightly blurred, giving it a soft, dreamy quality.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "label": "cement concrete",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "surface",
+      "florence_caption": "The image is a close-up of a wooden surface. The wood appears to be weathered and has a rough texture. The color of the wood is a light beige or gray, with some areas appearing darker and others lighter. The surface has vertical lines running horizontally across it, creating a diagonal pattern. The image is taken from a slightly angled perspective, looking down on the wood.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "label": "pavement",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "sandy",
+      "florence_caption": "The image is a close-up of a sandy surface. The sand appears to be light grey in color and has a rough texture. In the center of the image, there is a small hole or indentation in the sand. The hole is slightly larger than the surrounding area and is slightly darker than the rest of the surface. There are a few small pink objects scattered around the hole. The image is taken from a top-down perspective, looking down on the sand and the hole in the center.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "label": "concrete floor pavement golf course",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "concrete",
+      "florence_caption": "The image is a close-up of a concrete surface. In the center of the image, there is a small, white object that appears to be a silhouette of a person. The object is slightly tilted to the left, as if it is casting a shadow on the ground. The background is blurred, but it seems to be an outdoor setting with trees and a building visible in the distance. The image is taken from a low angle, looking up at the object.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "label": "cement concrete",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "sandy",
+      "florence_caption": "The image is a close-up of a sandy surface. The sand appears to be light grey in color and has a rough texture. In the center of the image, there is a small hole or indentation in the sand. The hole is slightly larger than the surrounding area and is slightly darker than the rest of the surface. There are a few small pink and purple objects scattered around the hole. The image is taken from a low angle, looking up at the hole and the surrounding sand.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "label": "floor pavement golf course",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "concrete",
+      "florence_caption": "The image is a close-up of a concrete surface. In the center of the image, there is a small, white object that appears to be a silhouette of a person. The object is slightly tilted to the left, as if it is casting a shadow on the ground. The background is blurred, but it seems to be an outdoor setting with trees and a building visible in the distance. The image is taken from a low angle, looking up at the object.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "label": "wear",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "puffer",
+      "florence_caption": "The image is of a puffer jacket with a hood. The jacket is navy blue in color and has a zipper in the center. The zipper is open, revealing the interior of the jacket. On the left side of the zipper, there is a red, yellow, green, and blue striped pattern. The stripes are arranged in a diagonal line, with the red stripe on the top left corner and the yellow stripe in the middle. The hood is lined with a black puffer material and appears to be made of a soft, warm material.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "label": "baby child",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "portrait",
+      "florence_caption": "The image is a close-up portrait of a young boy. He is wearing a navy blue jacket with a colorful patchwork design on the front. The jacket has a hood and a zipper closure. The boy has short dark hair and is smiling at the camera. His hands are clasped together in front of him. The background is plain white.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "label": "cloudy",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "map",
+      "florence_caption": "The image is a map of a mountain range in a light blue color. The mountain range is outlined in a darker shade of blue, with the top half of the mountain being a lighter shade of grey. The top half is a darker blue, while the bottom half is lighter blue. The mountains are arranged in a way that they are overlapping each other, creating a sense of depth and dimension. The image appears to be a 3D rendering, giving it a realistic and detailed look.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "label": "baby child",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "portrait",
+      "florence_caption": "The image is a close-up portrait of a young child, probably around 2-3 years old. The child is wearing a navy blue jacket with a colorful striped pattern in red, yellow, green, and blue. The jacket has a hood and the child is holding a small red object in their hands. They are looking directly at the camera with a slight smile on their face. The background is plain white.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "label": "baby boy",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "portrait",
+      "florence_caption": "The image is a portrait of a young child, probably around 2-3 years old. The child is wearing a blue jacket with a colorful patchwork design on the front. The jacket has a hood and appears to be made of a soft, warm material. The boy is looking directly at the camera with a slight smile on his face. He is holding a small red object in his hands, which could be a toy or a toy. The background is a plain white color.",
+      "selected_caption": ""
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "ordering": [
+    {
+      "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "z": 5.311,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "z": 5.311,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "z": 9.932,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "z": 10.425,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "z": 10.425,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "z": 10.425,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "z": 10.572,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "z": 10.993,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "z": 11.073,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "z": 11.073,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "z": 11.902,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "z": 11.937,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "region_1",
+      "z": 6.4202,
+      "layer_type": "foreground",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_2",
+      "z": 11.2656,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_5",
+      "z": 13.9057,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_4",
+      "z": 16.2386,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_3",
+      "z": 16.4829,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_6",
+      "z": 22.1209,
+      "layer_type": "background",
+      "entity_kind": "region"
+    }
+  ],
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "object_ids": [
+        "grounded_sam2_obj_2_GroundedSAM2",
+        "grounded_sam2_obj_3_GroundedSAM2",
+        "grounded_sam2_obj_4_GroundedSAM2",
+        "grounded_sam2_obj_6_GroundedSAM2",
+        "grounded_sam2_obj_7_GroundedSAM2",
+        "grounded_sam2_obj_10_GroundedSAM2"
+      ],
+      "count": 6,
+      "z_min": 5.311,
+      "z_max": 10.425
+    },
+    {
+      "layer_type": "midground",
+      "object_ids": [
+        "grounded_sam2_obj_5_GroundedSAM2",
+        "grounded_sam2_obj_9_GroundedSAM2"
+      ],
+      "count": 2,
+      "z_min": 10.572,
+      "z_max": 10.993
+    },
+    {
+      "layer_type": "background",
+      "object_ids": [
+        "grounded_sam2_obj_0_GroundedSAM2",
+        "grounded_sam2_obj_1_GroundedSAM2",
+        "grounded_sam2_obj_8_GroundedSAM2",
+        "grounded_sam2_obj_11_GroundedSAM2"
+      ],
+      "count": 4,
+      "z_min": 11.073,
+      "z_max": 11.937
+    }
+  ],
+  "depth_quantiles": {
+    "foreground_max_z": 10.425,
+    "midground_max_z": 11.0197
+  },
+  "regions": [
+    {
+      "region_id": "region_1",
+      "region_index": 1,
+      "layer_type": "foreground",
+      "z_mean": 6.4202,
+      "object_ids": [
+        "grounded_sam2_obj_6_GroundedSAM2",
+        "grounded_sam2_obj_10_GroundedSAM2"
+      ]
+    },
+    {
+      "region_id": "region_2",
+      "region_index": 2,
+      "layer_type": "background",
+      "z_mean": 11.2656,
+      "object_ids": [
+        "grounded_sam2_obj_0_GroundedSAM2",
+        "grounded_sam2_obj_1_GroundedSAM2",
+        "grounded_sam2_obj_2_GroundedSAM2",
+        "grounded_sam2_obj_3_GroundedSAM2",
+        "grounded_sam2_obj_4_GroundedSAM2",
+        "grounded_sam2_obj_5_GroundedSAM2",
+        "grounded_sam2_obj_7_GroundedSAM2",
+        "grounded_sam2_obj_8_GroundedSAM2",
+        "grounded_sam2_obj_9_GroundedSAM2",
+        "grounded_sam2_obj_11_GroundedSAM2"
+      ]
+    },
+    {
+      "region_id": "region_3",
+      "region_index": 3,
+      "layer_type": "background",
+      "z_mean": 16.4829,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_4",
+      "region_index": 4,
+      "layer_type": "background",
+      "z_mean": 16.2386,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_5",
+      "region_index": 5,
+      "layer_type": "background",
+      "z_mean": 13.9057,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_6",
+      "region_index": 6,
+      "layer_type": "background",
+      "z_mean": 22.1209,
+      "object_ids": []
+    }
+  ]
+}

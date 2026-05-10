@@ -1,0 +1,536 @@
+{
+  "edges": [
+    {
+      "parent_object_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "parent_mask_index": 4,
+      "child_mask_index": 0,
+      "containment_ratio": 0.9972,
+      "parent_overlap_ratio": 0.5796,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "parent_mask_index": 0,
+      "child_mask_index": 3,
+      "containment_ratio": 0.9978,
+      "parent_overlap_ratio": 0.3916,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_62_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "parent_mask_index": 62,
+      "child_mask_index": 6,
+      "containment_ratio": 0.9998,
+      "parent_overlap_ratio": 0.1497,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_88_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "parent_mask_index": 88,
+      "child_mask_index": 12,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.8157,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_67_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "parent_mask_index": 67,
+      "child_mask_index": 14,
+      "containment_ratio": 0.998,
+      "parent_overlap_ratio": 0.1712,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_55_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_25_GroundedSAM2",
+      "parent_mask_index": 55,
+      "child_mask_index": 25,
+      "containment_ratio": 0.9998,
+      "parent_overlap_ratio": 0.0623,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_67_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_26_GroundedSAM2",
+      "parent_mask_index": 67,
+      "child_mask_index": 26,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.5576,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_27_GroundedSAM2",
+      "parent_mask_index": 13,
+      "child_mask_index": 27,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.1333,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_25_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_28_GroundedSAM2",
+      "parent_mask_index": 25,
+      "child_mask_index": 28,
+      "containment_ratio": 0.9714,
+      "parent_overlap_ratio": 0.345,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_25_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_30_GroundedSAM2",
+      "parent_mask_index": 25,
+      "child_mask_index": 30,
+      "containment_ratio": 0.9456,
+      "parent_overlap_ratio": 0.1088,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_47_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_32_GroundedSAM2",
+      "parent_mask_index": 47,
+      "child_mask_index": 32,
+      "containment_ratio": 0.974,
+      "parent_overlap_ratio": 0.8701,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_79_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_35_GroundedSAM2",
+      "parent_mask_index": 79,
+      "child_mask_index": 35,
+      "containment_ratio": 0.9965,
+      "parent_overlap_ratio": 0.2756,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_88_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_36_GroundedSAM2",
+      "parent_mask_index": 88,
+      "child_mask_index": 36,
+      "containment_ratio": 0.9636,
+      "parent_overlap_ratio": 0.1031,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_60_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_38_GroundedSAM2",
+      "parent_mask_index": 60,
+      "child_mask_index": 38,
+      "containment_ratio": 0.97,
+      "parent_overlap_ratio": 0.4541,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "region_3",
+      "child_object_id": "grounded_sam2_obj_39_GroundedSAM2",
+      "parent_mask_index": null,
+      "child_mask_index": 39,
+      "containment_ratio": 0.9416,
+      "parent_overlap_ratio": 0.6454,
+      "edge_type": "region_object_membership"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_42_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_41_GroundedSAM2",
+      "parent_mask_index": 42,
+      "child_mask_index": 41,
+      "containment_ratio": 0.9266,
+      "parent_overlap_ratio": 0.5499,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_84_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_42_GroundedSAM2",
+      "parent_mask_index": 84,
+      "child_mask_index": 42,
+      "containment_ratio": 0.9332,
+      "parent_overlap_ratio": 0.1748,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_67_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_43_GroundedSAM2",
+      "parent_mask_index": 67,
+      "child_mask_index": 43,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.335,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_84_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_46_GroundedSAM2",
+      "parent_mask_index": 84,
+      "child_mask_index": 46,
+      "containment_ratio": 0.9728,
+      "parent_overlap_ratio": 0.0949,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_55_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_47_GroundedSAM2",
+      "parent_mask_index": 55,
+      "child_mask_index": 47,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.0533,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "region_3",
+      "child_object_id": "grounded_sam2_obj_48_GroundedSAM2",
+      "parent_mask_index": null,
+      "child_mask_index": 48,
+      "containment_ratio": 0.94,
+      "parent_overlap_ratio": 0.6454,
+      "edge_type": "region_object_membership"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_40_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_50_GroundedSAM2",
+      "parent_mask_index": 40,
+      "child_mask_index": 50,
+      "containment_ratio": 0.9627,
+      "parent_overlap_ratio": 0.0557,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_51_GroundedSAM2",
+      "parent_mask_index": 0,
+      "child_mask_index": 51,
+      "containment_ratio": 0.9977,
+      "parent_overlap_ratio": 0.3916,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_67_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_52_GroundedSAM2",
+      "parent_mask_index": 67,
+      "child_mask_index": 52,
+      "containment_ratio": 0.9987,
+      "parent_overlap_ratio": 0.2644,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_53_GroundedSAM2",
+      "parent_mask_index": 7,
+      "child_mask_index": 53,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.5216,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_47_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_54_GroundedSAM2",
+      "parent_mask_index": 47,
+      "child_mask_index": 54,
+      "containment_ratio": 0.9935,
+      "parent_overlap_ratio": 0.1054,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_39_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_55_GroundedSAM2",
+      "parent_mask_index": 39,
+      "child_mask_index": 55,
+      "containment_ratio": 0.9996,
+      "parent_overlap_ratio": 0.708,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_88_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_56_GroundedSAM2",
+      "parent_mask_index": 88,
+      "child_mask_index": 56,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.4518,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_57_GroundedSAM2",
+      "parent_mask_index": 18,
+      "child_mask_index": 57,
+      "containment_ratio": 0.9908,
+      "parent_overlap_ratio": 0.3116,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_60_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_59_GroundedSAM2",
+      "parent_mask_index": 60,
+      "child_mask_index": 59,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.4615,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "region_4",
+      "child_object_id": "grounded_sam2_obj_60_GroundedSAM2",
+      "parent_mask_index": null,
+      "child_mask_index": 60,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.1127,
+      "edge_type": "region_object_membership"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_60_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_61_GroundedSAM2",
+      "parent_mask_index": 60,
+      "child_mask_index": 61,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.4698,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_25_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_63_GroundedSAM2",
+      "parent_mask_index": 25,
+      "child_mask_index": 63,
+      "containment_ratio": 0.9456,
+      "parent_overlap_ratio": 0.1088,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_64_GroundedSAM2",
+      "parent_mask_index": 4,
+      "child_mask_index": 64,
+      "containment_ratio": 0.9972,
+      "parent_overlap_ratio": 0.5795,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_46_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_65_GroundedSAM2",
+      "parent_mask_index": 46,
+      "child_mask_index": 65,
+      "containment_ratio": 0.999,
+      "parent_overlap_ratio": 0.3432,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_45_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_66_GroundedSAM2",
+      "parent_mask_index": 45,
+      "child_mask_index": 66,
+      "containment_ratio": 0.9954,
+      "parent_overlap_ratio": 0.534,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_50_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_67_GroundedSAM2",
+      "parent_mask_index": 50,
+      "child_mask_index": 67,
+      "containment_ratio": 0.9654,
+      "parent_overlap_ratio": 0.1082,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_43_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_70_GroundedSAM2",
+      "parent_mask_index": 43,
+      "child_mask_index": 70,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.4455,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_46_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_71_GroundedSAM2",
+      "parent_mask_index": 46,
+      "child_mask_index": 71,
+      "containment_ratio": 0.9942,
+      "parent_overlap_ratio": 0.5068,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_55_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_72_GroundedSAM2",
+      "parent_mask_index": 55,
+      "child_mask_index": 72,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.0542,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_72_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_73_GroundedSAM2",
+      "parent_mask_index": 72,
+      "child_mask_index": 73,
+      "containment_ratio": 0.9472,
+      "parent_overlap_ratio": 0.119,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_86_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_74_GroundedSAM2",
+      "parent_mask_index": 86,
+      "child_mask_index": 74,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.4335,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_75_GroundedSAM2",
+      "parent_mask_index": 18,
+      "child_mask_index": 75,
+      "containment_ratio": 0.9323,
+      "parent_overlap_ratio": 0.5777,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_78_GroundedSAM2",
+      "parent_mask_index": 7,
+      "child_mask_index": 78,
+      "containment_ratio": 0.9977,
+      "parent_overlap_ratio": 0.391,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_79_GroundedSAM2",
+      "parent_mask_index": 13,
+      "child_mask_index": 79,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.5403,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_55_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_80_GroundedSAM2",
+      "parent_mask_index": 55,
+      "child_mask_index": 80,
+      "containment_ratio": 0.9999,
+      "parent_overlap_ratio": 0.0999,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_55_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_81_GroundedSAM2",
+      "parent_mask_index": 55,
+      "child_mask_index": 81,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.0864,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_77_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_82_GroundedSAM2",
+      "parent_mask_index": 77,
+      "child_mask_index": 82,
+      "containment_ratio": 0.9621,
+      "parent_overlap_ratio": 0.5091,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_39_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_84_GroundedSAM2",
+      "parent_mask_index": 39,
+      "child_mask_index": 84,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.2682,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_79_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_86_GroundedSAM2",
+      "parent_mask_index": 79,
+      "child_mask_index": 86,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.3017,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_79_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_87_GroundedSAM2",
+      "parent_mask_index": 79,
+      "child_mask_index": 87,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.4597,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_88_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_90_GroundedSAM2",
+      "parent_mask_index": 88,
+      "child_mask_index": 90,
+      "containment_ratio": 0.9985,
+      "parent_overlap_ratio": 0.3254,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_91_GroundedSAM2",
+      "parent_mask_index": 1,
+      "child_mask_index": 91,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.3136,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_40_GroundedSAM2",
+      "child_object_id": "region_2",
+      "parent_mask_index": 40,
+      "child_mask_index": null,
+      "containment_ratio": 0.9285,
+      "parent_overlap_ratio": 0.4199,
+      "edge_type": "region_object_membership"
+    }
+  ],
+  "root_object_ids": [
+    "grounded_sam2_obj_1_GroundedSAM2",
+    "grounded_sam2_obj_2_GroundedSAM2",
+    "grounded_sam2_obj_4_GroundedSAM2",
+    "grounded_sam2_obj_5_GroundedSAM2",
+    "grounded_sam2_obj_7_GroundedSAM2",
+    "grounded_sam2_obj_8_GroundedSAM2",
+    "grounded_sam2_obj_9_GroundedSAM2",
+    "grounded_sam2_obj_10_GroundedSAM2",
+    "grounded_sam2_obj_11_GroundedSAM2",
+    "grounded_sam2_obj_13_GroundedSAM2",
+    "grounded_sam2_obj_15_GroundedSAM2",
+    "grounded_sam2_obj_16_GroundedSAM2",
+    "grounded_sam2_obj_17_GroundedSAM2",
+    "grounded_sam2_obj_18_GroundedSAM2",
+    "grounded_sam2_obj_19_GroundedSAM2",
+    "grounded_sam2_obj_20_GroundedSAM2",
+    "grounded_sam2_obj_21_GroundedSAM2",
+    "grounded_sam2_obj_22_GroundedSAM2",
+    "grounded_sam2_obj_23_GroundedSAM2",
+    "grounded_sam2_obj_24_GroundedSAM2",
+    "grounded_sam2_obj_29_GroundedSAM2",
+    "grounded_sam2_obj_31_GroundedSAM2",
+    "grounded_sam2_obj_33_GroundedSAM2",
+    "grounded_sam2_obj_34_GroundedSAM2",
+    "grounded_sam2_obj_37_GroundedSAM2",
+    "grounded_sam2_obj_40_GroundedSAM2",
+    "grounded_sam2_obj_44_GroundedSAM2",
+    "grounded_sam2_obj_45_GroundedSAM2",
+    "grounded_sam2_obj_49_GroundedSAM2",
+    "grounded_sam2_obj_58_GroundedSAM2",
+    "grounded_sam2_obj_62_GroundedSAM2",
+    "grounded_sam2_obj_68_GroundedSAM2",
+    "grounded_sam2_obj_69_GroundedSAM2",
+    "grounded_sam2_obj_76_GroundedSAM2",
+    "grounded_sam2_obj_77_GroundedSAM2",
+    "grounded_sam2_obj_83_GroundedSAM2",
+    "grounded_sam2_obj_85_GroundedSAM2",
+    "grounded_sam2_obj_88_GroundedSAM2",
+    "grounded_sam2_obj_89_GroundedSAM2",
+    "region_1",
+    "region_3",
+    "region_4",
+    "region_5"
+  ],
+  "num_edges": 54
+}

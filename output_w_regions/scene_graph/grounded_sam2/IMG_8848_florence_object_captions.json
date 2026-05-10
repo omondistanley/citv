@@ -1,0 +1,320 @@
+{
+  "variant": "florence_object",
+  "track": "grounded_sam2",
+  "image_path": "/root/labs/citv/images/IMG_8848.png",
+  "count": 39,
+  "objects": [
+    {
+      "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "label": "boy",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "young",
+      "florence_caption": "The image shows a young child, probably around 2-3 years old, crouching down on the ground. The child is wearing a black jacket, white pants, and brown boots. They are also wearing a red beanie with a black pom-pom on top. The background is a plain beige color. The image appears to be taken from a low angle, looking down at the child.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "label": "shoe",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "rendering",
+      "florence_caption": "The image is a 3D rendering of a shoe. The shoe appears to be a slip-on style with a round toe and a low heel. The upper part of the shoe is made of a soft, suede-like material in a light brown color. The sole is white and has a textured pattern for added grip. The heel is slightly raised and the toe is slightly curved. The overall design is simple and minimalistic.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "label": "shoe",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "cylindrical",
+      "florence_caption": "The image is a close-up of a small, cylindrical object. It appears to be made of a light-colored material, possibly leather or suede, with a smooth texture. The object has a curved shape with a pointed top and a flat bottom. The edges of the object are slightly frayed, giving it a textured appearance. The background is a dark brown color, making the object stand out.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "label": "shoe",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "pair",
+      "florence_caption": "The image shows a pair of brown suede ankle boots. The boots have a low-top design with a round toe and a lace-up closure. The upper part of the boots is made of a soft, suede-like material in a light brown color. The sole of the boot is white and appears to be made of rubber. The background of the image is a solid brown color, making the boots stand out.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "label": "cage fence",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "gate",
+      "florence_caption": "The image shows a close-up of a black metal gate with a chain-link fence. The gate appears to be old and weathered, with peeling paint and rust visible on the surface. On the right side of the gate, there is a blue sign with white text that reads \"No Entry\". The background is blurred, but it seems to be an indoor space with a concrete floor. The image is taken from a low angle, looking up at the gate.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "label": "cage",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "gate",
+      "florence_caption": "The image shows a close-up of a black metal gate with a chain-link fence. The gate appears to be old and weathered, with peeling paint and rust visible on the surface. On the right side of the gate, there is a blue sign with white text that reads \"No Entry\". The background is blurred, but it seems to be an indoor space with a concrete floor. The image is taken from a low angle, looking up at the gate.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "label": "floor pavement",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "rectangular",
+      "florence_caption": "The image is a close-up of a rectangular piece of concrete or stone surface. The surface appears to be old and weathered, with a dark brown color. There are several small holes scattered across the surface, some of which are larger than others. The edges of the surface are jagged and uneven, and there is a small amount of dirt or grime visible. The overall appearance is rough and uneven.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "label": "bulletin board doorway",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "plate",
+      "florence_caption": "The image shows a close-up of a black metal plate or panel. The plate appears to be old and weathered, with visible cracks and scratches on its surface. The edges of the plate are slightly frayed and there is a small hole in the center. The background is a solid brown color. The image is taken from a slightly elevated angle, looking down on the plate.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "label": "fence floor pavement wood floor",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "concrete",
+      "florence_caption": "The image is a close-up of a concrete wall with a diagonal pattern. The wall appears to be old and weathered, with cracks and chips visible on the surface. The sunlight is shining through the gaps in the wall, casting a warm glow on the wall and creating a shadow on the ground below. The image is taken from a low angle, looking up at the wall. The overall mood of the image is peaceful and serene.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "label": "floor pavement",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "concrete",
+      "florence_caption": "The image shows a close-up of a concrete surface. The surface appears to be old and weathered, with some cracks and chips visible. On the right side of the image, there is a small piece of debris scattered on the ground. The background is a dark brown color, and the image is taken from a low angle, looking up at the surface.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "label": "cage doorway",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "grille",
+      "florence_caption": "The image is a close-up of a metal grille or gate. The grille is made up of horizontal bars that are arranged in a grid-like pattern. The bars are dark brown in color and appear to be old and weathered. The top of the grille has a small hole in the center, which could be a vent or a ventilator. The background is a plain beige color. The image is taken from a slightly elevated angle, looking down on the grill.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "label": "floor wood floor",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "concrete",
+      "florence_caption": "The image shows a close-up of a concrete surface. The surface appears to be old and weathered, with some cracks and chips visible. On the right side of the image, there is a small piece of debris scattered on the ground. The background is a dark brown color, and the image is taken from a low angle, looking up at the surface.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "label": "building enclosure",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "fence",
+      "florence_caption": "The image shows a close-up of a metal fence with a grid-like pattern. The fence appears to be old and weathered, with peeling paint and rust visible on the surface. The background is blurred, but it seems to be an indoor space with a concrete wall on the right side. The image is taken from a low angle, looking up at the fence. The sunlight is shining through the fence, casting a warm glow on the ground below. The overall mood of the image is peaceful and serene.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "label": "floor pavement wood floor",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "rendering",
+      "florence_caption": "The image is a 3D rendering of a triangular shape. The shape appears to be made of a light-colored material, possibly stone or concrete, with a rough texture. The surface of the shape is uneven and uneven, with small bumps and grooves scattered throughout. The background is a dark brown color, making the shape stand out. The image is taken from a top-down perspective, looking down on the shape.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "label": "fence",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "gate",
+      "florence_caption": "The image shows a close-up of a black metal gate with a grid-like pattern. The gate appears to be old and weathered, with peeling paint and rust visible on the surface. The background is blurred, but it seems to be an outdoor setting with trees and buildings visible in the distance. The image is taken from a low angle, looking up at the gate. The overall mood of the image is dark and gloomy.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "label": "doorway",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "plate",
+      "florence_caption": "The image is a close-up of a black metal plate with a rectangular shape. The plate appears to be old and weathered, with visible cracks and scratches on its surface. There is a small hole in the center of the plate, possibly for a bolt or nut. The background is a solid dark purple color, which contrasts with the dark metal. The image is taken from a slightly elevated angle, looking down on the plate.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "label": "fence",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "fence",
+      "florence_caption": "The image is a close-up of a black metal fence with a grid-like pattern. The fence appears to be old and weathered, with visible cracks and chips in the metal. The background is blurred, but it seems to be an outdoor setting with trees and a building visible in the distance. The image is taken from a low angle, looking up at the fence. The overall mood of the image is dark and gloomy.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "label": "doorway",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "rendering",
+      "florence_caption": "The image is a 3D rendering of a long, curved object with a metallic sheen. The object appears to be made up of multiple layers of different colors and textures, creating a rainbow-like effect. The top layer is white, while the bottom layer is blue, green, yellow, and orange. The background is a light brown color, and there are a few small pieces of paper scattered around the object. The overall shape of the object is elongated and has a pointed tip.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "label": "floor pavement wood floor",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "rendering",
+      "florence_caption": "The image is a 3D rendering of a rectangular piece of concrete or stone. The surface of the concrete appears to be rough and uneven, with small cracks and crevices scattered across it. The color of the surface is a dark brown, with some areas appearing lighter and others darker. The edges of the slab are slightly jagged and uneven. The overall appearance of the image is rough and weathered.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_19_GroundedSAM2",
+      "label": "cage doorway",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "window",
+      "florence_caption": "The image is a close-up of a window with a grid-like pattern. The window appears to be made of metal or a similar material, with a dark brown color. The grid is made up of small, diamond-shaped holes, creating a lattice-like design. The holes are evenly spaced and run horizontally across the window. The background of the image is blurred, but it seems to be a cityscape with tall buildings and a cloudy sky. The image is taken from a low angle, looking up at the window from below.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_20_GroundedSAM2",
+      "label": "wood floor",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "rectangular",
+      "florence_caption": "The image is a close-up of a rectangular piece of concrete or concrete surface. The surface appears to be old and weathered, with visible cracks and chips in the surface. There are several small holes scattered across the surface, some of which are larger than others. The background is a dark brown color, and the overall texture of the surface is rough and uneven. The image is taken from a top-down perspective, looking down on the edge of the concrete.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_21_GroundedSAM2",
+      "label": "floor wood floor",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "concrete",
+      "florence_caption": "The image is a close-up of a concrete wall with a diagonal pattern. The wall appears to be old and weathered, with cracks and chips visible on the surface. The sunlight is shining through the gaps in the wall, casting a warm glow on the wall and creating a shadow on the ground below. The image is taken from a low angle, looking up at the wall. The overall mood of the image is peaceful and serene.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_22_GroundedSAM2",
+      "label": "cage",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "gate",
+      "florence_caption": "The image shows a close-up of a black metal gate with a chain link fence. The gate appears to be old and weathered, with peeling paint and rust visible on the surface. On the right side of the gate, there is a blue sign with white text that reads \"No Entry\". The background is blurred, but it seems to be an indoor space with other objects visible. The image is taken from a low angle, looking up at the gate.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_23_GroundedSAM2",
+      "label": "giving the cake a textured appearance. the background is a neutral grey color",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "slice",
+      "florence_caption": "The image is a close-up of a slice of cake. The cake appears to be a type of dessert, with a dark brown base and a bright red top. The top of the cake is smooth and glossy, with small white dots scattered throughout. The edges of the top are slightly curled, giving the cake a textured appearance. The background is a neutral grey color, making the cake stand out.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_24_GroundedSAM2",
+      "label": "cage",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "gate",
+      "florence_caption": "The image shows a close-up of a black metal gate with a grid-like pattern. The gate appears to be old and weathered, with peeling paint and rust visible on the surface. The background is blurred, but it seems to be an outdoor setting with trees and a building visible in the distance. The image is taken from a low angle, looking up at the gate.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_25_GroundedSAM2",
+      "label": "floor pavement",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "wall",
+      "florence_caption": "The image is a close-up of a brick wall. The wall appears to be old and weathered, with some cracks and chips visible. The bricks are arranged in a diagonal pattern, with the topmost brick being the largest and the bottommost being the smallest. The image is taken from a low angle, looking up at the wall. There is a small amount of sunlight shining through the bricks, casting a warm glow on the wall and creating a shadow on the ground below. The overall mood of the image is peaceful and serene.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_26_GroundedSAM2",
+      "label": "wood floor",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "surface",
+      "florence_caption": "The image is a close-up of a dark brown surface with a rough texture. The surface appears to be made of concrete or a similar material, with a slightly uneven and uneven surface. There are several small, irregularly shaped spots scattered across the surface, some of which are darker in color than others. The spots are of different sizes and shapes, creating a sense of depth and dimension. The overall appearance of the surface is rough and uneven.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_27_GroundedSAM2",
+      "label": "boy child",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "young",
+      "florence_caption": "The image shows a young child, probably around 2-3 years old, crouching down on the ground. The child is wearing a black jacket, white pants, and brown boots. They are also wearing a red beanie with a black pom-pom on top. The background is a plain beige color. The image appears to be taken from a low angle, looking down at the child.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_28_GroundedSAM2",
+      "label": "pavement",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "concrete",
+      "florence_caption": "The image is a close-up of a concrete surface. The surface appears to be old and weathered, with cracks and peeling paint. The color of the surface is a dark brown, with some areas appearing lighter and others darker. The texture of the concrete is rough and uneven. The image is taken from a top-down perspective, looking down on the surface.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_29_GroundedSAM2",
+      "label": "floor",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "wall",
+      "florence_caption": "The image is a close-up of a brick wall. The wall appears to be old and weathered, with visible cracks and chips in the surface. The bricks are arranged in a diagonal line, with the topmost brick on the left and the bottommost on the right. The background is a dark brown color, and there are small white dots scattered throughout the image. The image is taken from a low angle, looking up at the wall.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_30_GroundedSAM2",
+      "label": "doorway",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "window",
+      "florence_caption": "The image is a close-up of a metal object, which appears to be a part of a larger structure. The object is rectangular in shape and has a dark brown color. It has multiple horizontal bars that are arranged in a grid-like pattern. The bars are evenly spaced and appear to be made of metal. The background is blurred, making the object the focal point of the image. The image is taken from a slightly elevated angle, looking down on the object.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_31_GroundedSAM2",
+      "label": "doorway",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "plate",
+      "florence_caption": "The image is a close-up of a black metal plate with a rectangular shape. The plate appears to be old and weathered, with visible cracks and scratches on its surface. There are two small holes on the left side of the plate, one on the right side, and a small bolt on the bottom right corner. The background is a solid brown color.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_32_GroundedSAM2",
+      "label": "wood floor",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "textured",
+      "florence_caption": "The image is a close-up of a textured surface. The surface appears to be made of a light-colored material, possibly concrete or stone. It has a rough, uneven texture with small bumps and grooves scattered throughout. The color of the surface is a light beige or brown, with some areas appearing darker and others lighter. The texture is uneven and uneven, creating a sense of depth and dimension. The image is taken from a top-down perspective, looking down on the surface.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_33_GroundedSAM2",
+      "label": "wood floor",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "surface",
+      "florence_caption": "The image is a close-up of a dark brown surface with a rough texture. The surface appears to be made of a textured material, possibly concrete or asphalt, with small bumps and grooves scattered across it. In the center of the image, there is a small, oval-shaped indentation in the center. On the right side of the indentation, there are two small orange and yellow objects, possibly rocks or pebbles. The background is a solid, dark brown color.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_34_GroundedSAM2",
+      "label": "wood floor",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "rendering",
+      "florence_caption": "The image is a 3D rendering of a triangular shape. The shape appears to be made of a light-colored material, possibly stone or concrete, with a rough texture. The surface of the shape is uneven and uneven, with small bumps and grooves scattered throughout. The background is a dark brown color, making the shape stand out. The image is taken from a top-down perspective, looking down on the shape.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_35_GroundedSAM2",
+      "label": "boy child",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "young",
+      "florence_caption": "The image shows a young child, probably around 2-3 years old, crouching down on the ground. The child is wearing a black jacket, white pants, and brown boots. They are also wearing a red beanie with a black pom-pom on top. The background is a plain beige color. The image appears to be taken from a low angle, looking down at the child.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_36_GroundedSAM2",
+      "label": "floor",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "abstract",
+      "florence_caption": "The image is an abstract digital art piece with a dark brown background. On the left side of the image, there is a rectangular shape made up of small squares arranged in a grid-like pattern. The squares are of different sizes and colors, creating a mosaic-like effect. In the center of the frame, there are several horizontal lines that form a diagonal pattern, with some overlapping each other. The lines appear to be made of gold or a similar material, giving the image a luxurious and luxurious feel. The overall effect is one of depth and dimensionality.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_37_GroundedSAM2",
+      "label": "shoe",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "shoe",
+      "florence_caption": "The image is a close-up of a shoe. The shoe appears to be made of a light-colored material, possibly leather or suede. The sole of the shoe is white and has a textured pattern. The heel is slightly curved and there is a small indentation on the top of the heel. The background is a plain brown color.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_38_GroundedSAM2",
+      "label": "floor wood floor",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "piece",
+      "florence_caption": "The image is a close-up of a piece of wood with a dark brown background. The wood appears to be old and weathered, with visible cracks and chips in the surface. The edges of the wood are rough and uneven, with some areas appearing to be jagged and chipped. The sunlight is shining through the wood, casting a warm glow on the wood. The overall mood of the image is peaceful and serene.",
+      "selected_caption": ""
+    }
+  ]
+}

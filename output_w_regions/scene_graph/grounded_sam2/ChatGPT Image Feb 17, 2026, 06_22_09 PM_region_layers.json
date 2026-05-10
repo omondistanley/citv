@@ -1,0 +1,123 @@
+{
+  "ordering": [
+    {
+      "id": "region_2",
+      "label": "teddy bear",
+      "layer_type": "foreground",
+      "z_mean": 6.4343
+    },
+    {
+      "id": "region_1",
+      "label": "coat",
+      "layer_type": "foreground",
+      "z_mean": 6.6407
+    },
+    {
+      "id": "region_4",
+      "label": "coat",
+      "layer_type": "midground",
+      "z_mean": 7.7201
+    },
+    {
+      "id": "region_7",
+      "label": "piece",
+      "layer_type": "background",
+      "z_mean": 8.1798
+    },
+    {
+      "id": "region_6",
+      "label": "blurred",
+      "layer_type": "background",
+      "z_mean": 8.619
+    },
+    {
+      "id": "region_5",
+      "label": "blurred",
+      "layer_type": "background",
+      "z_mean": 8.7227
+    },
+    {
+      "id": "region_3",
+      "label": "blurred",
+      "layer_type": "background",
+      "z_mean": 8.7423
+    },
+    {
+      "id": "region_11",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 9.5531
+    },
+    {
+      "id": "region_10",
+      "label": "piece",
+      "layer_type": "background",
+      "z_mean": 9.6521
+    },
+    {
+      "id": "region_8",
+      "label": "curtain",
+      "layer_type": "background",
+      "z_mean": 9.7022
+    },
+    {
+      "id": "region_9",
+      "label": "clothes",
+      "layer_type": "background",
+      "z_mean": 9.9611
+    },
+    {
+      "id": "region_12",
+      "label": "piece",
+      "layer_type": "background",
+      "z_mean": 11.6821
+    },
+    {
+      "id": "region_13",
+      "label": "digital",
+      "layer_type": "background",
+      "z_mean": 11.6826
+    },
+    {
+      "id": "region_14",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 12.6975
+    }
+  ],
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "region_ids": [
+        "region_1",
+        "region_2"
+      ]
+    },
+    {
+      "layer_type": "midground",
+      "region_ids": [
+        "region_4"
+      ]
+    },
+    {
+      "layer_type": "background",
+      "region_ids": [
+        "region_3",
+        "region_5",
+        "region_6",
+        "region_7",
+        "region_8",
+        "region_9",
+        "region_10",
+        "region_11",
+        "region_12",
+        "region_13",
+        "region_14"
+      ]
+    }
+  ],
+  "depth_quantiles": {
+    "q1": 6.994,
+    "q2": 8.152
+  }
+}

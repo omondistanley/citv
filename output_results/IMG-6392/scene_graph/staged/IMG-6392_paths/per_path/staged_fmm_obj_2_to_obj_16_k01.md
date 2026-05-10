@@ -1,0 +1,23 @@
+# Path `staged_fmm_obj_2_to_obj_16_k01`
+
+- rank: 4
+- manifold: ribbon_path
+- action_family: locomotion
+- movement_scope: intra_region
+- boundary_interaction: stays_inside_region
+- dominant_motion: walk
+- confidence: 0.734
+- status: low_confidence
+- rejection_reasons: []
+- uncertainty_reasons: ['ribbon_path_lacks_local_support_evidence', 'two_point_route_shape_underexplained']
+- contradiction_reasons: ['blocking_support_dominates_route']
+- grounding_evidence: {'schema': 'citv_path_grounding_evidence_v1', 'candidate_source': 'fmm_geodesic', 'local_evidence_confidence': 0.6671, 'scene_prior_confidence': 0.7272, 'global_only': False, 'local_evidence_levels': ['region_boundary', 'source', 'target'], 'manifold_type': 'ribbon_path'}
+- source: face
+- target: person
+- motion_labels: ['walk']
+- action_labels: ['fly', 'interact', 'hover', 'peek', 'interact', 'hold', 'continue_within_region', 'fly', 'hover', 'interact', 'intra_region', 'above']
+- render_layers: ['in_front']
+- occlusion_trace: {'mean_visible_fraction': 1.0, 'min_visible_fraction': 1.0, 'occluded_sample_fraction': 0.0, 'occluder_ids': []}
+- trajectory_contract: {'dominant_motion': 'walk', 'shape_type': 'support_aware_ribbon', 'direction_profile': {'available': True, 'heading_start_deg': 0.0, 'heading_end_deg': 0.0, 'image_direction': 'level', 'camera_depth_trend': 'roughly_constant_depth', 'depth_delta_m': -0.0078, 'scale_trend': 'roughly_constant_scale', 'approach_retreat': 'neutral', 'orbit_direction': 'not_orbital'}, 'support_dominant': 'blocking', 'animation_ready': True, 'mean_visible_fraction': 1.0, 'width_mean_px': 40.988}
+- path_shape_contract: {'shape_type': 'support_aware_ribbon', 'straight_line_like': True, 'straightness_ratio': 1.0, 'direction_profile': {'available': True, 'heading_start_deg': 0.0, 'heading_end_deg': 0.0, 'image_direction': 'level', 'camera_depth_trend': 'roughly_constant_depth', 'depth_delta_m': -0.0078, 'scale_trend': 'roughly_constant_scale', 'approach_retreat': 'neutral', 'orbit_direction': 'not_orbital'}, 'support_evidence': {'support_kind_counts': {'blocking': 48}, 'support_grounding_confidence': 0.0, 'movement_scope': 'intra_region', 'boundary_interaction': 'stays_inside_region', 'region_transition_count': 0}, 'shape_justification': ['region_boundary_context_sampled', 'support_trace_sampled'], 'geometry_refs': {'raw_centerline': 'polyline_2d_raw', 'validated_centerline': 'polyline_2d_validated', 'display_centerline': 'display_polyline_2d', 'centerline': 'display_polyline_2d', 'polyline_3d': 'polyline_3d', 'display_polyline_3d': 'display_polyline_3d', 'left_boundary': 'left_boundary_2d', 'right_boundary': 'right_boundary_2d', 'mask_or_effect_refs': []}, 'geometry_quality': {'zigzag_score': 0.0, 'turn_angle_p95': 0.0, 'curvature_energy': 0.0, 'vertical_shoot_score': 0.0, 'depth_jump_count': 0, 'support_snap_displacement_px': {'mean': 0.0, 'max': 0.0}, 'smoothability_status': 'accepted'}, 'rejection_reasons': ['two_point_route_shape_underexplained', 'ribbon_path_lacks_local_support_evidence']}
+- animation_render_contract: {'render_primitive': 'depth_tapered_corridor_plus_actor', 'alpha_policy': 'visibility_profile', 'width_policy': 'depth_width_profile', 'depth_scale_policy': 'metric_depth_trace', 'render_layers': ['in_front'], 'motion_labels': ['walk'], 'action_labels': ['above', 'continue_within_region', 'fly', 'hold', 'hover', 'interact', 'intra_region', 'peek'], 'sample_state_preview_count': 2}

@@ -1,0 +1,96 @@
+{
+  "variant": "florence_object",
+  "track": "grounded_sam2",
+  "image_path": "/root/labs/citv/images/ChatGPT Image Feb 17, 2026, 06_22_09 PM.png",
+  "count": 11,
+  "objects": [
+    {
+      "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "label": "jacket",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "beige",
+      "florence_caption": "The image is of a beige coat hanging on a hanger. The coat is made of a woolen fabric and has a double-breasted design with a notched lapel collar. It has two large black buttons on the front and two smaller black buttons at the back. There are two beige panels on either side of the collar, one on each side, with a small white label on the left side. The sleeves of the coat are also beige and appear to be slightly longer than the waist. The background is a plain beige color.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "label": "coat",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "beige",
+      "florence_caption": "The image is of a beige coat hanging on a hanger. The coat is made of a woolen fabric and has a double-breasted design with a notched lapel collar. It has two rows of black buttons on the front and two flap pockets on the sides. There are also two beige belt cuffs on either side of the waistband. The jacket appears to be a long, loose-fitting style with a loose fit. The background is a plain beige color.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "label": "hanger hang",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "rendering",
+      "florence_caption": "The image is a 3D rendering of a curved object made of a brown fabric. The object appears to be made of wood or a similar material and has a smooth surface. It has a curved shape with a pointed top and a flat bottom. The edges of the object are slightly curled, giving it a textured appearance. The background is a plain beige color.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "label": "trench coat coat",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "beige",
+      "florence_caption": "The image is of a beige coat hanging on a hanger. The coat has a double-breasted design with a notched lapel collar and two flap pockets on the front. There are two brown leather patches on either side of the collar, one on the left side and one in the center. The buttons are black and the coat appears to be made of a woolen fabric. The background is a plain beige color.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "label": "garment",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "coat",
+      "florence_caption": "The image is of a beige-colored coat hanging on a hanger. The coat has a double-breasted design with a notched lapel collar and two flap pockets on the front. There are two black buttons on the left side of the coat, one on each side, and two on the right side. The jacket appears to be made of a wool-like material and has a relaxed fit. The background is a plain beige color.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "label": "hanger hang",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "pendant",
+      "florence_caption": "The image shows a wooden pendant light hanging from the ceiling. The light is made of a light-colored wood, possibly pine or birch, and has a curved shape. The top of the light is a darker shade of brown, while the bottom is a lighter shade of beige. The lampshade is attached to the ceiling with a thin metal rod. In the top left corner of the image, there is a small fish-like object that appears to be floating in the air. The background is a plain beige color.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "label": "jacket",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "fabric",
+      "florence_caption": "The image is a close-up of a white fabric, which appears to be made of a soft, silky material. The fabric has a smooth texture and is slightly wrinkled, giving it a textured appearance. The background is a neutral beige color, making the fabric the focal point of the image. The image is slightly blurred, making it difficult to make out any other details.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "label": "garment",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "fabric",
+      "florence_caption": "The image is a close-up of a white fabric, which appears to be made of a soft, silky material. The fabric has a smooth texture and is slightly wrinkled, giving it a textured appearance. The background is a neutral beige color, making the fabric the focal point of the image. The image is slightly blurred, making it difficult to make out any other details.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "label": "hang",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "rendering",
+      "florence_caption": "The image is a 3D rendering of a long, curved object with a pointed tip. The object appears to be made of metal and has a metallic sheen. The tip is curved and has an orange-colored stripe running along the length of the tip. On the right side of the image, there is a small black dot, which could be a small insect or a small bird. The background is a plain beige color.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "label": "shirt",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "rendering",
+      "florence_caption": "The image is a 3D rendering of a curved wooden object. The object appears to be made of a light-colored material, possibly leather or suede. It has a smooth, curved shape with a pointed top and a flat bottom. The edges of the object are slightly curled, giving it a textured appearance. The background is a plain beige color.",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "label": "trench coat",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "fabric",
+      "florence_caption": "The image is a close-up of a white fabric, which appears to be made of a soft, silky material. The fabric has a smooth texture and is slightly wrinkled, giving it a textured appearance. The background is a neutral beige color, making the fabric the focal point of the image. The image is slightly blurred, making it difficult to make out any other details.",
+      "selected_caption": ""
+    }
+  ]
+}

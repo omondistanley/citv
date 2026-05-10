@@ -1,0 +1,20 @@
+{
+  "variant": "florence_only",
+  "track": "grounded_sam2",
+  "image_path": "/root/labs/citv/images/IMG_7688.png",
+  "source": "Florence2 object captions aggregated",
+  "generated_caption": "The image shows a young child, probably around 2-3 years old, sitting on a gray pavement. The child is wearing a red plaid shirt, brown pants, and beige shoes. They are holding a white cup in their hands and appear to be drinking from it. In front of the child, there is a large white puddle of water that is spilling out onto the pavement. In the background, there are trees and bushes, and a few people can be seen walking around.",
+  "status": "generated_local_florence",
+  "input_files": {
+    "scene_json": "scene_graph/grounded_sam2/IMG_7688_scene.json",
+    "relations_json": "scene_graph/grounded_sam2/IMG_7688_relations.json",
+    "layers_json": "scene_graph/grounded_sam2/IMG_7688_layers.json",
+    "mask_hierarchy_json": "scene_graph/grounded_sam2/IMG_7688_mask_hierarchy.json",
+    "regions_json": "scene_graph/grounded_sam2/IMG_7688_regions.json",
+    "regions_image": "scene_graph/grounded_sam2/IMG_7688_regions.png",
+    "regions_overlay_image": "scene_graph/grounded_sam2/IMG_7688_regions_overlay.png",
+    "region_segmentation_image": "scene_graph/grounded_sam2/IMG_7688_region_segmentation.png",
+    "region_sam2_segmentation_image": "scene_graph/grounded_sam2/IMG_7688_region_sam2_style_segmentation.png",
+    "region_tinted_overlay_image": "scene_graph/grounded_sam2/IMG_7688_region_tinted_overlay.png"
+  }
+}

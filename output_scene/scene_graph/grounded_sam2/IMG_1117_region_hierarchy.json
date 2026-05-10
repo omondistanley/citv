@@ -1,0 +1,71 @@
+{
+  "edges": [
+    {
+      "parent_object_id": "region_6",
+      "child_object_id": "region_1",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.4956
+    },
+    {
+      "parent_object_id": "region_5",
+      "child_object_id": "region_6",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.2853
+    },
+    {
+      "parent_object_id": "region_2",
+      "child_object_id": "region_5",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0211
+    },
+    {
+      "parent_object_id": "region_3",
+      "child_object_id": "region_2",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.3041
+    },
+    {
+      "parent_object_id": "region_4",
+      "child_object_id": "region_3",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0024
+    },
+    {
+      "parent_object_id": "region_8",
+      "child_object_id": "region_4",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.2343
+    },
+    {
+      "parent_object_id": "region_7",
+      "child_object_id": "region_8",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0374
+    },
+    {
+      "parent_object_id": "region_9",
+      "child_object_id": "region_7",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.1321
+    },
+    {
+      "parent_object_id": "region_11",
+      "child_object_id": "region_9",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0216
+    },
+    {
+      "parent_object_id": "region_10",
+      "child_object_id": "region_11",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.1232
+    }
+  ],
+  "root_region_ids": [
+    "region_10"
+  ],
+  "num_edges": 10,
+  "kind": "region_depth_hierarchy",
+  "deprecated": true,
+  "deprecation_note": "Use region_adjacency_graph.json instead. This linear depth-order chain will be removed in a future release."
+}

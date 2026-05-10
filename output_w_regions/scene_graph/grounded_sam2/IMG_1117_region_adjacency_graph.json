@@ -1,0 +1,142 @@
+{
+  "edges": [
+    {
+      "region_a": "region_1",
+      "region_b": "region_2",
+      "shared_border_px": 1854,
+      "depth_delta_m": 16.6577,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_1",
+      "region_b": "region_5",
+      "shared_border_px": 1952,
+      "depth_delta_m": 16.1161,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_1",
+      "region_b": "region_6",
+      "shared_border_px": 748,
+      "depth_delta_m": 8.9258,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_1",
+      "region_b": "region_7",
+      "shared_border_px": 234,
+      "depth_delta_m": 41.2216,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_1",
+      "region_b": "region_8",
+      "shared_border_px": 180,
+      "depth_delta_m": 39.3409,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_1",
+      "region_b": "region_10",
+      "shared_border_px": 64,
+      "depth_delta_m": 58.4887,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_2",
+      "region_b": "region_7",
+      "shared_border_px": 3321,
+      "depth_delta_m": 24.5639,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_2",
+      "region_b": "region_10",
+      "shared_border_px": 68,
+      "depth_delta_m": 41.831,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_3",
+      "region_b": "region_8",
+      "shared_border_px": 325,
+      "depth_delta_m": 11.4344,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_4",
+      "region_b": "region_8",
+      "shared_border_px": 460,
+      "depth_delta_m": 11.3454,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_5",
+      "region_b": "region_6",
+      "shared_border_px": 10,
+      "depth_delta_m": 7.1903,
+      "depth_relation": "b_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_5",
+      "region_b": "region_8",
+      "shared_border_px": 1627,
+      "depth_delta_m": 23.2248,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_5",
+      "region_b": "region_10",
+      "shared_border_px": 34,
+      "depth_delta_m": 42.3726,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_7",
+      "region_b": "region_10",
+      "shared_border_px": 7014,
+      "depth_delta_m": 17.2671,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_7",
+      "region_b": "region_11",
+      "shared_border_px": 430,
+      "depth_delta_m": 8.9386,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_8",
+      "region_b": "region_10",
+      "shared_border_px": 3095,
+      "depth_delta_m": 19.1478,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_9",
+      "region_b": "region_10",
+      "shared_border_px": 730,
+      "depth_delta_m": 9.6082,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    }
+  ],
+  "num_edges": 17,
+  "kind": "region_adjacency_graph"
+}

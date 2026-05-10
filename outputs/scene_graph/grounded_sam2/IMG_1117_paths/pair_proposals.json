@@ -1,0 +1,384 @@
+{
+  "pairs": [
+    {
+      "src_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "proposal_score": 0.4468085106382979
+    },
+    {
+      "src_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "proposal_score": 0.43333333333333335
+    },
+    {
+      "src_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "proposal_score": 0.4294117647058824
+    },
+    {
+      "src_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.42352941176470593
+    },
+    {
+      "src_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "proposal_score": 0.9
+    },
+    {
+      "src_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.8800000000000001
+    },
+    {
+      "src_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "proposal_score": 0.8333333333333334
+    },
+    {
+      "src_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "proposal_score": 0.8
+    },
+    {
+      "src_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "proposal_score": 0.40714285714285714
+    },
+    {
+      "src_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "proposal_score": 0.4066666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "proposal_score": 0.8666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "proposal_score": 0.806896551724138
+    },
+    {
+      "src_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "proposal_score": 0.8800000000000001
+    },
+    {
+      "src_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.8333333333333334
+    },
+    {
+      "src_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.5333333333333333
+    },
+    {
+      "src_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "proposal_score": 0.5
+    },
+    {
+      "src_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "proposal_score": 0.5333333333333333
+    },
+    {
+      "src_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "proposal_score": 0.43783783783783786
+    },
+    {
+      "src_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.4285714285714286
+    },
+    {
+      "src_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "proposal_score": 0.42400000000000004
+    },
+    {
+      "src_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "proposal_score": 0.43157894736842106
+    },
+    {
+      "src_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "proposal_score": 0.4285714285714286
+    },
+    {
+      "src_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "proposal_score": 0.4266666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "proposal_score": 0.42500000000000004
+    },
+    {
+      "src_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "proposal_score": 0.8800000000000001
+    },
+    {
+      "src_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.8333333333333334
+    },
+    {
+      "src_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "proposal_score": 0.43333333333333335
+    },
+    {
+      "src_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "proposal_score": 0.4294117647058824
+    },
+    {
+      "src_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.4266666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "proposal_score": 0.41904761904761906
+    },
+    {
+      "src_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "proposal_score": 0.56
+    },
+    {
+      "src_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "proposal_score": 0.5333333333333333
+    },
+    {
+      "src_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "proposal_score": 0.8800000000000001
+    },
+    {
+      "src_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.8333333333333334
+    },
+    {
+      "src_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "proposal_score": 0.56
+    },
+    {
+      "src_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "proposal_score": 0.5
+    },
+    {
+      "src_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "proposal_score": 0.4
+    },
+    {
+      "src_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "proposal_score": 0.43333333333333335
+    },
+    {
+      "src_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "proposal_score": 0.43333333333333335
+    },
+    {
+      "src_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "proposal_score": 0.42608695652173917
+    },
+    {
+      "src_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "proposal_score": 0.42400000000000004
+    },
+    {
+      "src_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "proposal_score": 0.8666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "proposal_score": 0.806896551724138
+    },
+    {
+      "src_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "proposal_score": 0.5333333333333333
+    },
+    {
+      "src_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "proposal_score": 0.44000000000000006
+    },
+    {
+      "src_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.43157894736842106
+    },
+    {
+      "src_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "proposal_score": 0.42608695652173917
+    },
+    {
+      "src_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "proposal_score": 0.8999999999999999
+    },
+    {
+      "src_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "proposal_score": 0.8666666666666667
+    },
+    {
+      "src_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "proposal_score": 0.806896551724138
+    },
+    {
+      "src_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "proposal_score": 0.4468085106382979
+    },
+    {
+      "src_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "proposal_score": 0.44000000000000006
+    },
+    {
+      "src_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "proposal_score": 0.43783783783783786
+    },
+    {
+      "src_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "tgt_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "proposal_score": 0.42500000000000004
+    }
+  ]
+}
