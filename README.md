@@ -240,6 +240,107 @@ Each hypothesis in **`paths`** is keyed by **`path_id`** and includes geometry a
 
 Related motion exports in the same folder often include **`trajectory_hypotheses.json`**, **`insertion_path_ensembles.json`**, and **`motion_contracts_overlay.png`** when enabled — see **NOTES.md** / **`docs/path_updates.md`** for the fuller contract. Staged or extended bundles may also reference additional action summaries (for example **`action_hypotheses.json`**) from **`metadata`** or artifact manifests when that tier of export is present.
 
+
+### Results walkthrough: input → path JSON → QA visualization
+
+Use this section when reviewing a completed run or when adding screenshots/video to a PR. It is written against the checked-in **`IMG-6392`** sample artifacts, but the same shape applies to any input image stem.
+
+#### 1) Input and stage flow
+
+| Step | Artifact / field | What it proves |
+| --- | --- | --- |
+| Input frame | `images/IMG-6392.png` | Source RGB image that all depth, segmentation, path, and animation records are aligned to. |
+| Scene graph | `mps/scene_graph/grounded_sam2/IMG-6392_scene.json` | Object, region, relation, depth, caption, and metadata anchor for the run. |
+| Depth/regions | `mps/scene_graph/grounded_sam2/IMG-6392_depth_map.png`, `IMG-6392_regions.json`, `IMG-6392_regions_overlay.png` | Metric depth and region partitioning that feed feasible pixels and region-to-region routing. |
+| Path workspace | `mps/scene_graph/grounded_sam2/IMG-6392_paths/` | Bundle root for path hypotheses, traversability maps, motion contracts, per-path images, and animation records. |
+| Final path JSON | `mps/scene_graph/grounded_sam2/IMG-6392_paths/path_hypotheses.json` | The effective “paths.json”: inspect the top-level **`paths`** array, not a separate file named `paths.json`. |
+| Motion contracts | `insertion_path_ensembles.json`, `trajectory_hypotheses.json`, `animation_plan.json` | Additive contracts used by downstream renderers: route families, instant-prior actor motion, and top-K timed path playback. |
+| Visual index | `path_visual_index.json` | Lookup table from **`path_id`** to per-path image, description, diagnostics, and animation record. |
+
+The design target in [`docs/path_updates.md`](docs/path_updates.md) is broader than shortest-path routing: a good animation contract can be a ribbon, blob, volume, contact patch, portal, occlusion pulse, or effect field. The current checked-in path bundle is the implemented, additive version of that idea: legacy-compatible **`polyline_2d`** paths remain available, while motion-contract files and QA overlays confirm whether the geometry, semantic evidence, traversability field, and animation timing agree.
+
+```text
+images/IMG-6392.png
+  └─ scene_understanding.py / staged legacy-equivalent run
+      ├─ depth + regions + objects + relations
+      ├─ path_hypotheses.json              # ranked paths[] records
+      ├─ insertion_path_ensembles.json     # route families / agent footprint contracts
+      ├─ trajectory_hypotheses.json        # object instant-prior motion contracts
+      ├─ animation_plan.json               # top-K timed route playback records
+      ├─ path_visual_index.json            # path_id → image/json/md references
+      └─ PNG/MP4 QA overlays               # human confirmation of JSON contracts
+```
+
+#### 2) What the final JSON contains today
+
+For `IMG-6392`, the materialized `mps` bundle contains **31** ranked path hypotheses, **10** animation-plan paths, **31** insertion-path ensembles, and **8** trajectory hypotheses. A typical `path_hypotheses.json` record includes:
+
+```json
+{
+  "path_id": "rpath_IMG-6392_region_11_to_region_21_k01",
+  "path_num": 1,
+  "path_level": "region",
+  "path_type": "region_to_region",
+  "source_entity": {"type": "region", "id": "region_11", "display_label": "rendering (region_11)"},
+  "target_entity": {"type": "region", "id": "region_21", "display_label": "map (region_21)"},
+  "regions_traversed": ["region_11", "region_21"],
+  "polyline_2d": [[1085, 503], [1092, 502], [1035, 519]],
+  "scores": {
+    "overall_confidence": 0.795876097888519,
+    "geometric_feasibility": 0.9576156088776948,
+    "semantic_plausibility": 0.5
+  },
+  "motion_metrics": {
+    "motion_distance_px": 66.55,
+    "trajectory_type": "traverse"
+  },
+  "semantic_valid": true,
+  "affordance_trace": [{"region": "region_11", "affordance": "interaction_zone"}]
+}
+```
+
+Top-ranked examples in the current sample bundle show both region and object motion:
+
+| Path # | Path id | Level | Review focus |
+| ---: | --- | --- | --- |
+| 1 | `rpath_IMG-6392_region_11_to_region_21_k01` | region | Short region-to-region traverse; easiest sanity check for `polyline_2d` and `animation_plan.json`. |
+| 4 | `rpath_IMG-6392_region_2_to_region_29_k01` | region | Longer cross-image route; useful for traversability and region-contour validation. |
+| 6 | `opath_IMG-6392_grounded_sam2_obj_8_GroundedSAM2_to_grounded_sam2_obj_6_GroundedSAM2_k01` | object | Person-to-person object route; confirms object anchors and motion-type scoring. |
+| 8 | `opath_IMG-6392_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01` | object | Alternate object route; useful for approach/recede direction checks. |
+| 10 | `rpath_IMG-6392_region_23_to_region_29_k02` | region | Region route through a different semantic area; useful for suppression/diagnostic review. |
+
+#### 3) Five best images to include in reviews
+
+These images show different evidence layers for the same input and should be the first five images in a results-oriented README, issue, or PR. They intentionally mix global field checks, top-ranked paths, motion contracts, and per-path object/region examples.
+
+| # | Image | Why it is useful |
+| ---: | --- | --- |
+| 1 | ![Path fields explainer](mps/scene_graph/grounded_sam2/IMG-6392_paths/path_fields_explainer.png) | Confirms the **input RGB**, legacy **cost map**, traversability **speed map**, and overlaid sample paths agree. |
+| 2 | ![Top five path context](mps/scene_graph/grounded_sam2/IMG-6392_paths/path_context_top5.png) | Shows the highest-ranked paths over the scene, with region contours and object boxes. |
+| 3 | ![Motion contracts overlay](mps/scene_graph/grounded_sam2/IMG-6392_paths/motion_contracts_overlay.png) | Validates motion contracts: legacy route lines, geodesic refinements, and trajectory instant-prior arrows. |
+| 4 | ![Per-path region route](mps/scene_graph/grounded_sam2/IMG-6392_paths/images/region/path_rpath_IMG-6392_region_2_to_region_29_k01.png) | Single long region route for checking endpoint anchors, path color, and traversed regions. |
+| 5 | ![Per-path object route](mps/scene_graph/grounded_sam2/IMG-6392_paths/images/object/path_opath_IMG-6392_grounded_sam2_obj_8_GroundedSAM2_to_grounded_sam2_obj_6_GroundedSAM2_k01.png) | Single object-to-object route for checking object anchors and route plausibility around masks. |
+
+#### 4) Five videos to include for animation QA
+
+The checked-in `output_results` run contains MP4 animation QA panels. Use video links for GitHub/Markdown portability; if your renderer supports inline HTML, the same paths can be placed in `<video controls>` tags.
+
+| # | Video | What to inspect |
+| ---: | --- | --- |
+| 1 | [`panel_00_paths_trajectories.mp4`](output_results/IMG-6392/scene_graph/staged/IMG-6392_paths/animation_qa_24/panel_00_paths_trajectories.mp4) | Baseline top-ranked path timing and marker motion. |
+| 2 | [`panel_03_paths_trajectories.mp4`](output_results/IMG-6392/scene_graph/staged/IMG-6392_paths/animation_qa_24/panel_03_paths_trajectories.mp4) | Longer region traverse; confirms interpolation stays on the rendered route. |
+| 3 | [`panel_05_paths_trajectories.mp4`](output_results/IMG-6392/scene_graph/staged/IMG-6392_paths/animation_qa_24/panel_05_paths_trajectories.mp4) | Object-route panel; checks source/target anchoring and object-level motion. |
+| 4 | [`panel_07_paths_trajectories.mp4`](output_results/IMG-6392/scene_graph/staged/IMG-6392_paths/animation_qa_24/panel_07_paths_trajectories.mp4) | Alternate object-route direction; useful for approach/recede sanity checks. |
+| 5 | [`panel_10_paths_trajectories.mp4`](output_results/IMG-6392/scene_graph/staged/IMG-6392_paths/animation_qa_24/panel_10_paths_trajectories.mp4) | Different region family; checks that lower-ranked accepted paths still match JSON geometry. |
+
+#### 5) Review checklist
+
+- **Input alignment:** Every overlay should line up with `images/IMG-6392.png`; mismatches usually mean a resized/cropped image slipped into one stage.
+- **JSON/visual parity:** For each selected **`path_id`**, confirm `polyline_2d`, `path_num`, and source/target labels match `path_visual_index.json` and the corresponding per-path PNG.
+- **Motion-contract parity:** Confirm `trajectory_hypotheses.json` and `insertion_path_ensembles.json` exist when `export_motion_contract_json` is enabled, and that `motion_contracts_overlay.png` draws both route and instant-prior evidence.
+- **Animation parity:** Confirm `animation_plan.json` uses the same **`path_id`** / **`path_num`** as `path_hypotheses.json`, then inspect the five MP4 panels above for timing and route-following errors.
+- **Docs parity:** When future exports add `polyline_3d`, semantic/support traces, visibility profiles, alpha profiles, or non-line manifolds, keep this README section and [`docs/path_updates.md`](docs/path_updates.md) in sync so the displayed result contract matches the actual final JSON.
+
 ---
 
 ## Model Stack
