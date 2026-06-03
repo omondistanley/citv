@@ -11,9 +11,11 @@ renderers can later consume.
 
 User intent is the source of truth. Scene evidence is additive.
 
-The user can tap, draw, upload an actor asset, select scene objects, mark objects
-as required/avoid/behind constraints, and export a grounded contract. The UI does
-not silently replace the user path with generated paths.
+The user can set a start point, set an end point, draw the route between them,
+write what should happen, upload an actor asset, upload their own animation,
+select scene objects, mark objects as required/avoid/behind constraints, and
+export a grounded contract. The UI does not silently replace the user path with
+generated paths.
 
 ## Run
 
@@ -34,18 +36,66 @@ http://localhost:8088/ui/motion-composer/
 1. Upload an image.
 2. Upload a CITV `{stem}_scene.json` file if available.
 3. Upload an actor asset if the user has one.
-4. Choose a tool:
+4. Upload an animation if the user has one. This can be video, GIF, image sequence
+   placeholder, Lottie/JSON, or any future animation reference format.
+5. Choose a tool:
    - `Point`: one-point actions such as peek, shimmer, appear, sit, hold.
-   - `Draw Path`: path actions such as walk, run, roll, slither, drive.
+   - `Start / End`: first click sets start, second click sets end.
+   - `Draw Path`: draw the desired route. If start/end are also set, the exported
+     geometry fuses `start + drawn path + end`.
    - `Region`: area actions such as ripple, drift, swim, smoke, logo field.
    - `Select`: select nearby objects as interaction constraints.
-5. Enter actor text and action text.
-6. Mark scene objects as:
+6. Enter actor text and action/animation direction.
+7. Mark scene objects as:
    - `required`: must interact with this object.
    - `avoid`: should avoid this object.
    - `behind`: should render behind this object when crossed.
-7. Generate preview.
-8. Export `grounded_motion_contract.json`.
+8. Generate preview.
+9. Export `grounded_motion_contract.json`.
+
+## Geometry model
+
+The UI now stores geometry as separate authored parts:
+
+- `start_point`
+- `end_point`
+- `drawn_path_2d`
+- `region_polygon_2d`
+
+At preview/export time, it creates a fused path while still preserving the raw
+parts:
+
+```text
+start + drawn_path_2d + end
+```
+
+This allows the user to specify intent at multiple levels:
+
+- exact start/end anchors;
+- exact drawn route;
+- semantic action text;
+- uploaded animation timing/style;
+- scene object constraints.
+
+## Uploaded animation model
+
+Uploaded animation references are exported as:
+
+```json
+{
+  "uploaded_animation_ref": "browser_uploaded_animation",
+  "uploaded_animation": {
+    "name": "...",
+    "type": "...",
+    "size_bytes": 12345,
+    "retargeting_policy": "preserve_timing_and_style_then_ground_to_scene"
+  }
+}
+```
+
+The browser preview does not yet retarget the uploaded animation frames. It
+preserves the reference so the backend renderer can retarget the uploaded timing,
+style, and motion onto the scene-grounded path.
 
 ## UI layout
 
@@ -53,7 +103,8 @@ The UI follows a canvas-first professional creative-tool layout:
 
 - top bar for ingest/export;
 - left tool rail for direct manipulation;
-- center canvas for image, paths, regions, objects, actor preview, and occlusion;
+- center canvas for image, start/end anchors, paths, regions, objects, actor
+  preview, and occlusion;
 - bottom timeline for preview timing;
 - right inspector for actor/action/constraints/contract JSON.
 
@@ -73,12 +124,14 @@ common in CITV outputs:
 
 It exports:
 
-- exact raw user geometry;
+- exact raw start/end/drawn-path/region geometry;
+- fused user polyline;
 - resampled preview path;
 - approximate depth trace;
 - support trace from nearest region labels;
 - object-box occlusion hints;
 - render layers: `in_front`, `partially_occluded`, `behind_object`;
+- uploaded animation reference and retargeting policy;
 - asset policy with `no_hard_coded_actor_fallback: true`;
 - report showing preserved, adapted, warnings, and scores.
 
@@ -95,7 +148,8 @@ should replace the browser approximations with:
 - path bending inside the user corridor using traversability maps;
 - product-placement compositor hooks for shadows, blur, color match, grain, and
   holdout masks;
-- optional uploaded animation retargeting.
+- uploaded animation retargeting that preserves timing/style while adapting
+  position, scale, occlusion, and contact to the scene.
 
 ## Industry-standard design principles captured
 
@@ -106,5 +160,7 @@ should replace the browser approximations with:
   are stored separately.
 - VFX-style holdout/compositing mindset: render layers and occluder IDs are
   first-class outputs, not hidden rendering side effects.
+- Animation-editor mindset: user-authored key anchors, paths, timing, uploaded
+  motion, and textual direction all coexist instead of competing.
 - Open-vocabulary actor/action input: the UI does not hard-code a finite actor
   catalog.
