@@ -125,3 +125,144 @@ class MotionContract:
 
     def to_json(self) -> Dict[str, Any]:
         return _dataclass_json(self)
+
+
+@dataclass(frozen=True)
+class SceneAdaptationReport:
+    """Transparent record of preserved, adapted, and warned constraints."""
+
+    status: ContractStatus
+    preserved: List[str] = field(default_factory=list)
+    adapted: List[str] = field(default_factory=list)
+    warnings: List[str] = field(default_factory=list)
+    rejected_reasons: List[str] = field(default_factory=list)
+    assumptions: List[str] = field(default_factory=list)
+    scores: Dict[str, float] = field(default_factory=dict)
+
+    def to_json(self) -> Dict[str, Any]:
+        return _dataclass_json(self)
+
+
+@dataclass(frozen=True)
+class GroundedMotionContract:
+    """Scene-enriched contract consumed by renderers and export layers."""
+
+    contract: MotionContract
+    grounded_geometry: Dict[str, Any]
+    traces: Dict[str, Any]
+    rendering: Dict[str, Any]
+    report: SceneAdaptationReport
+    nearest_scene_entities: Dict[str, Any] = field(default_factory=dict)
+    alternatives: List[Dict[str, Any]] = field(default_factory=list)
+    schema_version: str = "citv.grounded_motion_contract.v1"
+
+    def to_json(self) -> Dict[str, Any]:
+        return _dataclass_json(self)
+
+
+_MANIFOLD_KEYWORDS = (
+    ("occlusion_pulse", ("peek", "hide", "duck", "emerge from behind", "behind")),
+    ("portal_path", ("enter", "exit", "disappear", "appear", "through doorway", "portal")),
+    ("contact_patch", ("hold", "touch", "grab", "sit", "lean", "land on", "place on", "bump", "push")),
+    ("volume_path", ("fly", "glide", "hover", "float upward", "air")),
+    ("blob_path", ("swim", "float", "drift", "smoke", "liquid", "water")),
+    ("effect_field", ("shimmer", "glow", "ripple", "wobble", "dissolve", "reflection", "logo appears")),
+    ("contour_path", ("circle", "orbit", "around", "inspect", "trace edge")),
+    ("ribbon_path", ("walk", "run", "crawl", "slither", "roll", "slide", "drive")),
+)
+
+
+def infer_manifold_type(action_text: str, geometry: UserGeometry) -> ManifoldType:
+    """Infer a default manifold without closing the action vocabulary."""
+
+    text = (action_text or "").lower()
+    for manifold, keys in _MANIFOLD_KEYWORDS:
+        if any(k in text for k in keys):
+            return manifold  # type: ignore[return-value]
+    if geometry.mode == "point":
+        return "effect_field"
+    if geometry.mode == "region":
+        return "blob_path"
+    return "ribbon_path"
+
+
+def motion_contract_from_json(payload: Dict[str, Any]) -> MotionContract:
+    actor_payload = payload.get("actor") or {}
+    geom_payload = payload.get("user_geometry") or payload.get("geometry") or {}
+    policy_payload = payload.get("policy") or {}
+    geometry = UserGeometry(
+        mode=geom_payload.get("mode", "polyline"),
+        points=geom_payload.get("points") or geom_payload.get("polyline_2d") or [],
+        source=geom_payload.get("source", "user"),
+        corridor_radius_px=float(geom_payload.get("corridor_radius_px", 28.0)),
+        closed=bool(geom_payload.get("closed", False)),
+        metadata=dict(geom_payload.get("metadata") or {}),
+    )
+    actor = ActorSpec(
+        actor_text=str(actor_payload.get("actor_text") or actor_payload.get("text") or payload.get("actor_text") or ""),
+        actor_source=actor_payload.get("actor_source", "text"),
+        asset_ref=actor_payload.get("asset_ref"),
+        scene_object_id=actor_payload.get("scene_object_id"),
+        visual_style=actor_payload.get("visual_style", "source_preserving"),
+        physical_profile=dict(actor_payload.get("physical_profile") or {}),
+        metadata=dict(actor_payload.get("metadata") or {}),
+    )
+    policy = AdaptationPolicy(
+        preserve_user_geometry=bool(policy_payload.get("preserve_user_geometry", True)),
+        allow_path_bending=bool(policy_payload.get("allow_path_bending", True)),
+        allow_endpoint_snap=bool(policy_payload.get("allow_endpoint_snap", False)),
+        allow_surreal_motion=bool(policy_payload.get("allow_surreal_motion", True)),
+        max_path_deviation_px=float(policy_payload.get("max_path_deviation_px", 36.0)),
+        obstacle_clearance_px=float(policy_payload.get("obstacle_clearance_px", 8.0)),
+        required_object_ids=list(policy_payload.get("required_object_ids") or []),
+        avoid_object_ids=list(policy_payload.get("avoid_object_ids") or []),
+        avoid_region_ids=list(policy_payload.get("avoid_region_ids") or []),
+        must_render_behind_object_ids=list(policy_payload.get("must_render_behind_object_ids") or []),
+        protect_important_scene_regions=bool(policy_payload.get("protect_important_scene_regions", True)),
+        metadata=dict(policy_payload.get("metadata") or {}),
+    )
+    manifold = payload.get("manifold_type")
+    contract = MotionContract(
+        contract_id=str(payload.get("contract_id") or payload.get("id") or "user_contract"),
+        actor=actor,
+        action_text=str(payload.get("action_text") or payload.get("action") or ""),
+        user_geometry=geometry,
+        manifold_type=manifold,
+        duration_s=float(payload.get("duration_s", 4.0)),
+        source=payload.get("source", "user_authored"),
+        uploaded_animation_ref=payload.get("uploaded_animation_ref"),
+        policy=policy,
+        metadata=dict(payload.get("metadata") or {}),
+    )
+    if contract.manifold_type is None:
+        return MotionContract(
+            contract_id=contract.contract_id,
+            actor=contract.actor,
+            action_text=contract.action_text,
+            user_geometry=contract.user_geometry,
+            manifold_type=infer_manifold_type(contract.action_text, contract.user_geometry),
+            duration_s=contract.duration_s,
+            source=contract.source,
+            uploaded_animation_ref=contract.uploaded_animation_ref,
+            policy=contract.policy,
+            metadata=contract.metadata,
+        )
+    return contract
+
+
+def _coerce_point2d(value: Sequence[float]) -> Point2D:
+    if not isinstance(value, (list, tuple)) or len(value) < 2:
+        raise ValueError(f"Invalid 2D point: {value!r}")
+    return (float(value[0]), float(value[1]))
+
+
+def _dataclass_json(value: Any) -> Any:
+    if hasattr(value, "__dataclass_fields__"):
+        return {k: _dataclass_json(v) for k, v in asdict(value).items()}
+    if isinstance(value, tuple):
+        return [_dataclass_json(v) for v in value]
+    if isinstance(value, list):
+        return [_dataclass_json(v) for v in value]
+    if isinstance(value, dict):
+        return {str(k): _dataclass_json(v) for k, v in value.items()}
+    return value
