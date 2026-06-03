@@ -82,6 +82,12 @@ function init() {
   els.timeSlider.addEventListener("input", () => { draw(); updateTimeLabel(); });
   els.exportBtn.addEventListener("click", exportContract);
   els.copyBtn.addEventListener("click", () => navigator.clipboard?.writeText(els.contractPreview.textContent));
+  window.__CITV_MOTION_COMPOSER__ = {
+    buildLocalContract: buildGroundedContract,
+    getScene: () => state.scene,
+    setPreview: (grounded) => { state.preview = grounded; refresh(); },
+    getState: () => state,
+  };
   refresh();
 }
 
@@ -93,169 +99,32 @@ function setTool(tool) {
 }
 function clearAllGeometry() { state.startPoint = null; state.endPoint = null; state.drawnPath = []; state.region = []; state.anchorStep = "start"; state.preview = null; }
 
-function loadImage(event) {
-  const file = event.target.files?.[0]; if (!file) return;
-  const url = URL.createObjectURL(file); const img = new Image();
-  img.onload = () => { state.image = img; state.imageUrl = url; const scale = Math.min(1, 1280 / img.naturalWidth); els.canvas.width = Math.round(img.naturalWidth * scale); els.canvas.height = Math.round(img.naturalHeight * scale); refresh(); };
-  img.src = url;
-}
-function loadActorAsset(event) {
-  const file = event.target.files?.[0]; if (!file) return;
-  state.actorAssetUrl = URL.createObjectURL(file); state.actorImage = null;
-  if (file.type.startsWith("image/")) { const img = new Image(); img.onload = () => { state.actorImage = img; refresh(); }; img.src = state.actorAssetUrl; }
-  refresh();
-}
-function loadAnimation(event) {
-  const file = event.target.files?.[0]; if (!file) return;
-  state.animationFile = { name: file.name, type: file.type || "unknown", size_bytes: file.size };
-  state.animationUrl = URL.createObjectURL(file);
-  refresh();
-}
-async function loadScene(event) {
-  const file = event.target.files?.[0]; if (!file) return;
-  state.scene = JSON.parse(await file.text()); renderObjectList(); refresh();
-}
-
-function canvasPoint(event) {
-  const rect = els.canvas.getBoundingClientRect();
-  return [((event.clientX - rect.left) / rect.width) * els.canvas.width, ((event.clientY - rect.top) / rect.height) * els.canvas.height];
-}
-function onPointerDown(event) {
-  const pt = canvasPoint(event);
-  if (state.tool === "point") { state.startPoint = pt; state.endPoint = null; state.drawnPath = []; }
-  else if (state.tool === "anchors") {
-    if (state.anchorStep === "start" || !state.startPoint) { state.startPoint = pt; state.anchorStep = "end"; }
-    else { state.endPoint = pt; state.anchorStep = "start"; }
-  } else if (state.tool === "draw") { state.isDrawing = true; state.drawnPath = [pt]; }
-  else if (state.tool === "region") { state.isDrawing = true; state.region = [pt]; }
-  else if (state.tool === "select") selectNearestObject(pt);
-  state.preview = null; refresh();
-}
-function onPointerMove(event) {
-  if (!state.isDrawing) return;
-  const pt = canvasPoint(event); const target = state.tool === "region" ? state.region : state.drawnPath; const last = target[target.length - 1];
-  if (!last || distance(last, pt) > 4) target.push(pt);
-  state.preview = null; refresh();
-}
+function loadImage(event) { const file = event.target.files?.[0]; if (!file) return; const url = URL.createObjectURL(file); const img = new Image(); img.onload = () => { state.image = img; state.imageUrl = url; const scale = Math.min(1, 1280 / img.naturalWidth); els.canvas.width = Math.round(img.naturalWidth * scale); els.canvas.height = Math.round(img.naturalHeight * scale); refresh(); }; img.src = url; }
+function loadActorAsset(event) { const file = event.target.files?.[0]; if (!file) return; state.actorAssetUrl = URL.createObjectURL(file); state.actorImage = null; if (file.type.startsWith("image/")) { const img = new Image(); img.onload = () => { state.actorImage = img; refresh(); }; img.src = state.actorAssetUrl; } refresh(); }
+function loadAnimation(event) { const file = event.target.files?.[0]; if (!file) return; state.animationFile = { name: file.name, type: file.type || "unknown", size_bytes: file.size }; state.animationUrl = URL.createObjectURL(file); refresh(); }
+async function loadScene(event) { const file = event.target.files?.[0]; if (!file) return; state.scene = JSON.parse(await file.text()); renderObjectList(); refresh(); }
+function canvasPoint(event) { const rect = els.canvas.getBoundingClientRect(); return [((event.clientX - rect.left) / rect.width) * els.canvas.width, ((event.clientY - rect.top) / rect.height) * els.canvas.height]; }
+function onPointerDown(event) { const pt = canvasPoint(event); if (state.tool === "point") { state.startPoint = pt; state.endPoint = null; state.drawnPath = []; } else if (state.tool === "anchors") { if (state.anchorStep === "start" || !state.startPoint) { state.startPoint = pt; state.anchorStep = "end"; } else { state.endPoint = pt; state.anchorStep = "start"; } } else if (state.tool === "draw") { state.isDrawing = true; state.drawnPath = [pt]; } else if (state.tool === "region") { state.isDrawing = true; state.region = [pt]; } else if (state.tool === "select") selectNearestObject(pt); state.preview = null; refresh(); }
+function onPointerMove(event) { if (!state.isDrawing) return; const pt = canvasPoint(event); const target = state.tool === "region" ? state.region : state.drawnPath; const last = target[target.length - 1]; if (!last || distance(last, pt) > 4) target.push(pt); state.preview = null; refresh(); }
 function onPointerUp() { state.isDrawing = false; }
-function selectNearestObject(pt) {
-  let best = null;
-  for (const obj of getObjects()) { const c = obj.mask_centroid_2d || obj.centroid_2d; if (!Array.isArray(c)) continue; const d = distance(pt, c); if (!best || d < best.d) best = { obj, d }; }
-  if (best && best.d < 60) { state.selectedRequired.has(best.obj.id) ? state.selectedRequired.delete(best.obj.id) : state.selectedRequired.add(best.obj.id); renderObjectList(); }
-}
-
+function selectNearestObject(pt) { let best = null; for (const obj of getObjects()) { const c = obj.mask_centroid_2d || obj.centroid_2d; if (!Array.isArray(c)) continue; const d = distance(pt, c); if (!best || d < best.d) best = { obj, d }; } if (best && best.d < 60) { state.selectedRequired.has(best.obj.id) ? state.selectedRequired.delete(best.obj.id) : state.selectedRequired.add(best.obj.id); renderObjectList(); } }
 function refresh() { updateStatus(); draw(); els.contractPreview.textContent = JSON.stringify(state.preview || buildGroundedContract(), null, 2); }
-function updateStatus() {
-  const pieces = [];
-  pieces.push(state.startPoint ? `Start: ${fmtPoint(state.startPoint)}` : "Start: not set");
-  pieces.push(state.endPoint ? `End: ${fmtPoint(state.endPoint)}` : "End: not set");
-  pieces.push(state.drawnPath.length ? `Drawn path: ${state.drawnPath.length} points` : "Drawn path: none");
-  pieces.push(state.region.length ? `Region: ${state.region.length} points` : "Region: none");
-  els.geometryStatus.textContent = pieces.join(" • ");
-  const uploads = [];
-  if (state.actorAssetUrl) uploads.push("actor asset loaded");
-  if (state.animationFile) uploads.push(`animation: ${state.animationFile.name}`);
-  els.uploadStatus.textContent = uploads.length ? uploads.join(" • ") : "No uploaded actor or animation yet.";
-}
-
-function draw() {
-  ctx.clearRect(0, 0, els.canvas.width, els.canvas.height);
-  if (state.image) ctx.drawImage(state.image, 0, 0, els.canvas.width, els.canvas.height); else drawEmptyState();
-  if (els.showRegions.checked) drawRegions();
-  if (els.showObjects.checked) drawObjects();
-  if (els.showCorridor.checked) drawCorridor();
-  drawUserGeometry();
-  if (els.showAnchors.checked) drawAnchors();
-  if (els.showOcclusion.checked) drawOcclusionPreview();
-  if (els.showActor.checked) drawActorPreview();
-}
+function updateStatus() { const pieces = []; pieces.push(state.startPoint ? `Start: ${fmtPoint(state.startPoint)}` : "Start: not set"); pieces.push(state.endPoint ? `End: ${fmtPoint(state.endPoint)}` : "End: not set"); pieces.push(state.drawnPath.length ? `Drawn path: ${state.drawnPath.length} points` : "Drawn path: none"); pieces.push(state.region.length ? `Region: ${state.region.length} points` : "Region: none"); els.geometryStatus.textContent = pieces.join(" • "); const uploads = []; if (state.actorAssetUrl) uploads.push("actor asset loaded"); if (state.animationFile) uploads.push(`animation: ${state.animationFile.name}`); els.uploadStatus.textContent = uploads.length ? uploads.join(" • ") : "No uploaded actor or animation yet."; }
+function draw() { ctx.clearRect(0, 0, els.canvas.width, els.canvas.height); if (state.image) ctx.drawImage(state.image, 0, 0, els.canvas.width, els.canvas.height); else drawEmptyState(); if (els.showRegions.checked) drawRegions(); if (els.showObjects.checked) drawObjects(); if (els.showCorridor.checked) drawCorridor(); drawUserGeometry(); if (els.showAnchors.checked) drawAnchors(); if (els.showOcclusion.checked) drawOcclusionPreview(); if (els.showActor.checked) drawActorPreview(); }
 function drawEmptyState() { ctx.fillStyle = "#10151e"; ctx.fillRect(0, 0, els.canvas.width, els.canvas.height); ctx.fillStyle = "#8e9bae"; ctx.font = "22px system-ui"; ctx.textAlign = "center"; ctx.fillText("Upload an image to begin", els.canvas.width / 2, els.canvas.height / 2); }
-function drawObjects() {
-  for (const obj of getObjects()) {
-    const box = obj.bbox;
-    if (Array.isArray(box) && box.length >= 4) { ctx.strokeStyle = state.selectedRequired.has(obj.id) ? "#8ad7ff" : state.selectedAvoid.has(obj.id) ? "#ff7d7d" : state.selectedBehind.has(obj.id) ? "#ffd37d" : "rgba(255,255,255,0.42)"; ctx.lineWidth = state.selectedRequired.has(obj.id) || state.selectedAvoid.has(obj.id) || state.selectedBehind.has(obj.id) ? 3 : 1; ctx.strokeRect(box[0], box[1], box[2] - box[0], box[3] - box[1]); }
-    const c = obj.mask_centroid_2d || obj.centroid_2d;
-    if (Array.isArray(c)) { ctx.fillStyle = "rgba(10,13,18,0.78)"; ctx.fillRect(c[0] - 4, c[1] - 18, 120, 18); ctx.fillStyle = "#eef3fb"; ctx.font = "12px system-ui"; ctx.textAlign = "left"; ctx.fillText(obj.canonical_name || obj.label || obj.id || "object", c[0], c[1] - 5); }
-  }
-}
+function drawObjects() { for (const obj of getObjects()) { const box = obj.bbox; if (Array.isArray(box) && box.length >= 4) { ctx.strokeStyle = state.selectedRequired.has(obj.id) ? "#8ad7ff" : state.selectedAvoid.has(obj.id) ? "#ff7d7d" : state.selectedBehind.has(obj.id) ? "#ffd37d" : "rgba(255,255,255,0.42)"; ctx.lineWidth = state.selectedRequired.has(obj.id) || state.selectedAvoid.has(obj.id) || state.selectedBehind.has(obj.id) ? 3 : 1; ctx.strokeRect(box[0], box[1], box[2] - box[0], box[3] - box[1]); } const c = obj.mask_centroid_2d || obj.centroid_2d; if (Array.isArray(c)) { ctx.fillStyle = "rgba(10,13,18,0.78)"; ctx.fillRect(c[0] - 4, c[1] - 18, 120, 18); ctx.fillStyle = "#eef3fb"; ctx.font = "12px system-ui"; ctx.textAlign = "left"; ctx.fillText(obj.canonical_name || obj.label || obj.id || "object", c[0], c[1] - 5); } } }
 function drawRegions() { getRegions().forEach((region, i) => { const c = region.centroid_2d_px || region.centroid_2d; if (!Array.isArray(c)) return; ctx.beginPath(); ctx.arc(c[0], c[1], 22 + (i % 3) * 6, 0, Math.PI * 2); ctx.fillStyle = `rgba(${90 + i * 37 % 120}, ${120 + i * 43 % 100}, 255, 0.11)`; ctx.fill(); ctx.strokeStyle = "rgba(138,215,255,0.35)"; ctx.stroke(); }); }
 function drawCorridor() { const pts = fusedPath(); if (pts.length < 2) return; ctx.save(); ctx.lineJoin = "round"; ctx.lineCap = "round"; ctx.lineWidth = Number(els.corridorRadius.value) * 2; ctx.strokeStyle = "rgba(138,215,255,0.12)"; drawPolyline(pts, false); ctx.restore(); }
-function drawUserGeometry() {
-  if (state.region.length >= 3) { ctx.save(); ctx.strokeStyle = "rgba(215,184,255,0.9)"; ctx.lineWidth = 3; drawPolyline(state.region, true); ctx.restore(); }
-  if (state.drawnPath.length > 1) { ctx.save(); ctx.lineJoin = "round"; ctx.lineCap = "round"; ctx.strokeStyle = "#8ad7ff"; ctx.lineWidth = 4; drawPolyline(state.drawnPath, false); ctx.restore(); }
-}
-function drawAnchors() {
-  if (state.startPoint) drawAnchor(state.startPoint, "S", "#94f2b5");
-  if (state.endPoint) drawAnchor(state.endPoint, "E", "#ffb86b");
-  if (state.startPoint && state.endPoint && state.drawnPath.length < 2) { ctx.save(); ctx.strokeStyle = "rgba(138,215,255,0.85)"; ctx.setLineDash([8, 8]); ctx.lineWidth = 3; drawPolyline([state.startPoint, state.endPoint], false); ctx.restore(); }
-}
+function drawUserGeometry() { if (state.region.length >= 3) { ctx.save(); ctx.strokeStyle = "rgba(215,184,255,0.9)"; ctx.lineWidth = 3; drawPolyline(state.region, true); ctx.restore(); } if (state.drawnPath.length > 1) { ctx.save(); ctx.lineJoin = "round"; ctx.lineCap = "round"; ctx.strokeStyle = "#8ad7ff"; ctx.lineWidth = 4; drawPolyline(state.drawnPath, false); ctx.restore(); } }
+function drawAnchors() { if (state.startPoint) drawAnchor(state.startPoint, "S", "#94f2b5"); if (state.endPoint) drawAnchor(state.endPoint, "E", "#ffb86b"); if (state.startPoint && state.endPoint && state.drawnPath.length < 2) { ctx.save(); ctx.strokeStyle = "rgba(138,215,255,0.85)"; ctx.setLineDash([8, 8]); ctx.lineWidth = 3; drawPolyline([state.startPoint, state.endPoint], false); ctx.restore(); } }
 function drawAnchor(p, label, color) { ctx.save(); ctx.fillStyle = color; ctx.beginPath(); ctx.arc(p[0], p[1], 11, 0, Math.PI * 2); ctx.fill(); ctx.fillStyle = "#071019"; ctx.font = "bold 12px system-ui"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(label, p[0], p[1]); ctx.restore(); }
 function drawOcclusionPreview() { const c = state.preview || buildGroundedContract(); const pts = c.grounded_geometry?.adapted_polyline_2d || []; const layers = c.rendering?.render_layers || []; pts.forEach((p, i) => { if (layers[i] === "partially_occluded" || layers[i] === "behind_object") { ctx.beginPath(); ctx.arc(p[0], p[1], 9, 0, Math.PI * 2); ctx.fillStyle = layers[i] === "behind_object" ? "rgba(255,125,125,0.38)" : "rgba(255,211,125,0.32)"; ctx.fill(); } }); }
-function drawActorPreview() {
-  const c = state.preview || buildGroundedContract(); const pts = c.grounded_geometry?.adapted_polyline_2d || []; if (!pts.length) return;
-  const t = Number(els.timeSlider.value) / 100; const p = pointAt(pts, t); const scaleHint = c.rendering?.depth_scale_hint || []; const scale = scaleHint[Math.floor(t * (scaleHint.length - 1))] || 1;
-  ctx.save(); ctx.translate(p[0], p[1]); ctx.globalAlpha = 0.92;
-  if (state.actorAssetUrl && state.actorImage?.complete) { const w = 68 * scale; ctx.drawImage(state.actorImage, -w / 2, -w / 2, w, w); }
-  else { ctx.fillStyle = "rgba(215,184,255,0.86)"; ctx.beginPath(); ctx.ellipse(0, 0, 24 * scale, 10 * scale, 0, 0, Math.PI * 2); ctx.fill(); ctx.fillStyle = "#0c0f14"; ctx.font = `${Math.max(10, 12 * scale)}px system-ui`; ctx.textAlign = "center"; ctx.fillText((els.actorText.value || "actor").slice(0, 12), 0, 4); }
-  ctx.restore();
-}
+function drawActorPreview() { const c = state.preview || buildGroundedContract(); const pts = c.grounded_geometry?.adapted_polyline_2d || []; if (!pts.length) return; const t = Number(els.timeSlider.value) / 100; const p = pointAt(pts, t); const scaleHint = c.rendering?.depth_scale_hint || []; const scale = scaleHint[Math.floor(t * (scaleHint.length - 1))] || 1; ctx.save(); ctx.translate(p[0], p[1]); ctx.globalAlpha = 0.92; if (state.actorAssetUrl && state.actorImage?.complete) { const w = 68 * scale; ctx.drawImage(state.actorImage, -w / 2, -w / 2, w, w); } else { ctx.fillStyle = "rgba(215,184,255,0.86)"; ctx.beginPath(); ctx.ellipse(0, 0, 24 * scale, 10 * scale, 0, 0, Math.PI * 2); ctx.fill(); ctx.fillStyle = "#0c0f14"; ctx.font = `${Math.max(10, 12 * scale)}px system-ui`; ctx.textAlign = "center"; ctx.fillText((els.actorText.value || "actor").slice(0, 12), 0, 4); } ctx.restore(); }
 function drawPolyline(pts, close) { ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]); for (let i = 1; i < pts.length; i += 1) ctx.lineTo(pts[i][0], pts[i][1]); if (close) ctx.closePath(); ctx.stroke(); }
-
-function renderObjectList() {
-  const objects = getObjects(); if (!objects.length) { els.objectList.className = "object-list empty"; els.objectList.textContent = "No objects found in scene JSON."; return; }
-  els.objectList.className = "object-list"; els.objectList.innerHTML = "";
-  objects.slice(0, 80).forEach((obj) => { const card = document.createElement("div"); card.className = "object-card"; card.innerHTML = `<strong>${escapeHtml(obj.canonical_name || obj.label || obj.id || "object")}</strong><span>${escapeHtml(obj.id || "no-id")}</span>`; const row = document.createElement("div"); row.className = "constraint-row"; [["required", state.selectedRequired], ["avoid", state.selectedAvoid], ["behind", state.selectedBehind]].forEach(([label, set]) => { const btn = document.createElement("button"); btn.type = "button"; btn.textContent = label; btn.className = set.has(obj.id) ? "active" : ""; btn.addEventListener("click", () => { set.has(obj.id) ? set.delete(obj.id) : set.add(obj.id); renderObjectList(); refresh(); }); row.appendChild(btn); }); card.appendChild(row); els.objectList.appendChild(card); });
-}
-
-function buildGroundedContract() {
-  const path = fusedPath(); const mode = state.region.length >= 3 && state.tool === "region" ? "region" : state.startPoint && state.endPoint && state.drawnPath.length > 1 ? "start_end_path" : state.startPoint && state.endPoint ? "start_end" : state.startPoint ? "point" : state.drawnPath.length > 1 ? "polyline" : "polyline";
-  const manifold = els.manifoldType.value === "auto" ? inferManifold(els.actionText.value, mode) : els.manifoldType.value;
-  const contract = {
-    contract_id: `ui_take_${Date.now()}`,
-    actor: { actor_text: els.actorText.value.trim(), actor_source: state.actorAssetUrl ? "uploaded_asset" : "text", asset_ref: state.actorAssetUrl ? "browser_uploaded_actor_asset" : null, visual_style: state.actorAssetUrl ? "source_preserving" : "photorealistic" },
-    action_text: els.actionText.value.trim(),
-    uploaded_animation_ref: state.animationFile ? "browser_uploaded_animation" : null,
-    uploaded_animation: state.animationFile ? { ...state.animationFile, retargeting_policy: "preserve_timing_and_style_then_ground_to_scene" } : null,
-    user_geometry: { mode, start_point: state.startPoint ? pointJson(state.startPoint) : null, end_point: state.endPoint ? pointJson(state.endPoint) : null, drawn_path_2d: state.drawnPath.map(pointJson), region_polygon_2d: state.region.map(pointJson), points: path.map(pointJson), source: geometrySource(mode), corridor_radius_px: Number(els.corridorRadius.value) },
-    manifold_type: manifold,
-    duration_s: Number(els.duration.value),
-    source: "user_authored",
-    policy: { preserve_user_geometry: els.preserveGeometry.checked, allow_path_bending: els.allowBending.checked, max_path_deviation_px: Number(els.maxDeviation.value), required_object_ids: [...state.selectedRequired], avoid_object_ids: [...state.selectedAvoid], must_render_behind_object_ids: [...state.selectedBehind] },
-  };
-  return adaptContractInBrowser(contract);
-}
-function adaptContractInBrowser(contract) {
-  const pts = resample(contract.user_geometry.points, 48); const objects = getObjects();
-  const occluderIds = pts.map((p) => objects.filter((o) => pointInBox(p, o.bbox)).map((o) => o.id).filter(Boolean));
-  const renderLayers = occluderIds.map((ids) => ids.some((id) => contract.policy.must_render_behind_object_ids.includes(id)) ? "behind_object" : ids.length ? "partially_occluded" : "in_front");
-  const visibility = renderLayers.map((l) => l === "behind_object" ? 0.18 : l === "partially_occluded" ? 0.56 : 1); const supportTrace = pts.map(nearestRegionLabel); const depthTrace = pts.map(estimateDepth); const warnings = [];
-  if (!state.scene) warnings.push("Scene JSON not loaded; grounding uses canvas-only approximations.");
-  if (!state.image) warnings.push("Image not loaded; preview canvas is schematic.");
-  if (!contract.user_geometry.start_point && !contract.user_geometry.drawn_path_2d.length) warnings.push("No start point or drawn path yet; set anchors or draw a path.");
-  if (contract.user_geometry.start_point && !contract.user_geometry.end_point && contract.manifold_type !== "effect_field") warnings.push("Start point is set but end point is missing for a path-like action.");
-  if (!state.actorAssetUrl) warnings.push("No actor asset uploaded; renderer must resolve an open-vocabulary asset before final photoreal export.");
-  if (!state.animationFile) warnings.push("No uploaded animation; renderer should generate motion from the action text or selected manifold.");
-  const firstDepth = depthTrace.find(Boolean) || 1;
-  return {
-    schema_version: "citv.grounded_motion_contract.ui.v2",
-    contract,
-    grounded_geometry: { manifold_type: contract.manifold_type, start_point_2d: contract.user_geometry.start_point, end_point_2d: contract.user_geometry.end_point, user_drawn_path_2d: contract.user_geometry.drawn_path_2d, user_region_polygon_2d: contract.user_geometry.region_polygon_2d, user_polyline_2d: contract.user_geometry.points, adapted_polyline_2d: pts, corridor_radius_px: contract.user_geometry.corridor_radius_px, path_preservation_policy: contract.policy },
-    traces: { depth_trace_m: depthTrace, support_trace: supportTrace, visibility_profile: visibility, occluder_ids: occluderIds, semantic_trace: supportTrace.map((s) => s === "unknown" ? "semantic_context_unknown" : `${s}:action_context`) },
-    rendering: { render_layers: renderLayers, alpha_profile: visibility, depth_scale_hint: depthTrace.map((z) => z ? round(firstDepth / z, 3) : null), asset_policy: { actor_source: contract.actor.actor_source, visual_style: contract.actor.visual_style, asset_ref: contract.actor.asset_ref, no_hard_coded_actor_fallback: true }, animation_policy: { uploaded_animation_ref: contract.uploaded_animation_ref, preserve_uploaded_timing: Boolean(contract.uploaded_animation_ref), retarget_to_scene: true } },
-    report: { status: warnings.length ? "accepted_with_warnings" : "accepted", preserved: ["raw_start_point", "raw_end_point", "raw_drawn_path", "actor_text_or_asset", "action_text", "uploaded_animation_reference", "duration_s"], adapted: ["fused anchors and drawn path", "resampled path for preview", "estimated support trace", "estimated occlusion/render layers"], warnings, scores: { user_geometry_preservation: 1, min_visibility: round(Math.min(...visibility), 3), support_known_ratio: round(supportTrace.filter((s) => s !== "unknown").length / Math.max(1, supportTrace.length), 3) } },
-    nearest_scene_entities: { objects: nearestObjects(pts[0] || [0, 0]).slice(0, 8) }, alternatives: [],
-  };
-}
-
-function fusedPath() {
-  if (state.region.length >= 3 && state.tool === "region") return state.region;
-  if (state.startPoint && state.endPoint && state.drawnPath.length > 1) return [state.startPoint, ...state.drawnPath, state.endPoint];
-  if (state.startPoint && state.endPoint) return [state.startPoint, state.endPoint];
-  if (state.startPoint && state.drawnPath.length > 1) return [state.startPoint, ...state.drawnPath];
-  if (state.drawnPath.length > 1) return state.drawnPath;
-  if (state.startPoint) return [state.startPoint];
-  return [];
-}
+function renderObjectList() { const objects = getObjects(); if (!objects.length) { els.objectList.className = "object-list empty"; els.objectList.textContent = "No objects found in scene JSON."; return; } els.objectList.className = "object-list"; els.objectList.innerHTML = ""; objects.slice(0, 80).forEach((obj) => { const card = document.createElement("div"); card.className = "object-card"; card.innerHTML = `<strong>${escapeHtml(obj.canonical_name || obj.label || obj.id || "object")}</strong><span>${escapeHtml(obj.id || "no-id")}</span>`; const row = document.createElement("div"); row.className = "constraint-row"; [["required", state.selectedRequired], ["avoid", state.selectedAvoid], ["behind", state.selectedBehind]].forEach(([label, set]) => { const btn = document.createElement("button"); btn.type = "button"; btn.textContent = label; btn.className = set.has(obj.id) ? "active" : ""; btn.addEventListener("click", () => { set.has(obj.id) ? set.delete(obj.id) : set.add(obj.id); renderObjectList(); refresh(); }); row.appendChild(btn); }); card.appendChild(row); els.objectList.appendChild(card); }); }
+function buildGroundedContract() { const path = fusedPath(); const mode = state.region.length >= 3 && state.tool === "region" ? "region" : state.startPoint && state.endPoint && state.drawnPath.length > 1 ? "start_end_path" : state.startPoint && state.endPoint ? "start_end" : state.startPoint ? "point" : state.drawnPath.length > 1 ? "polyline" : "polyline"; const manifold = els.manifoldType.value === "auto" ? inferManifold(els.actionText.value, mode) : els.manifoldType.value; const contract = { contract_id: `ui_take_${Date.now()}`, actor: { actor_text: els.actorText.value.trim(), actor_source: state.actorAssetUrl ? "uploaded_asset" : "text", asset_ref: state.actorAssetUrl ? "browser_uploaded_actor_asset" : null, visual_style: state.actorAssetUrl ? "source_preserving" : "photorealistic" }, action_text: els.actionText.value.trim(), uploaded_animation_ref: state.animationFile ? "browser_uploaded_animation" : null, uploaded_animation: state.animationFile ? { ...state.animationFile, retargeting_policy: "preserve_timing_and_style_then_ground_to_scene" } : null, user_geometry: { mode, start_point: state.startPoint ? pointJson(state.startPoint) : null, end_point: state.endPoint ? pointJson(state.endPoint) : null, drawn_path_2d: state.drawnPath.map(pointJson), region_polygon_2d: state.region.map(pointJson), points: path.map(pointJson), source: geometrySource(mode), corridor_radius_px: Number(els.corridorRadius.value) }, manifold_type: manifold, duration_s: Number(els.duration.value), source: "user_authored", policy: { preserve_user_geometry: els.preserveGeometry.checked, allow_path_bending: els.allowBending.checked, max_path_deviation_px: Number(els.maxDeviation.value), required_object_ids: [...state.selectedRequired], avoid_object_ids: [...state.selectedAvoid], must_render_behind_object_ids: [...state.selectedBehind] } }; return adaptContractInBrowser(contract); }
+function adaptContractInBrowser(contract) { const pts = resample(contract.user_geometry.points, 48); const objects = getObjects(); const occluderIds = pts.map((p) => objects.filter((o) => pointInBox(p, o.bbox)).map((o) => o.id).filter(Boolean)); const renderLayers = occluderIds.map((ids) => ids.some((id) => contract.policy.must_render_behind_object_ids.includes(id)) ? "behind_object" : ids.length ? "partially_occluded" : "in_front"); const visibility = renderLayers.map((l) => l === "behind_object" ? 0.18 : l === "partially_occluded" ? 0.56 : 1); const supportTrace = pts.map(nearestRegionLabel); const depthTrace = pts.map(estimateDepth); const warnings = []; if (!state.scene) warnings.push("Scene JSON not loaded; grounding uses canvas-only approximations."); if (!state.image) warnings.push("Image not loaded; preview canvas is schematic."); if (!contract.user_geometry.start_point && !contract.user_geometry.drawn_path_2d.length) warnings.push("No start point or drawn path yet; set anchors or draw a path."); if (contract.user_geometry.start_point && !contract.user_geometry.end_point && contract.manifold_type !== "effect_field") warnings.push("Start point is set but end point is missing for a path-like action."); if (!state.actorAssetUrl) warnings.push("No actor asset uploaded; renderer must resolve an open-vocabulary asset before final photoreal export."); if (!state.animationFile) warnings.push("No uploaded animation; renderer should generate motion from the action text or selected manifold."); const firstDepth = depthTrace.find(Boolean) || 1; return { schema_version: "citv.grounded_motion_contract.ui.v2", contract, grounded_geometry: { manifold_type: contract.manifold_type, start_point_2d: contract.user_geometry.start_point, end_point_2d: contract.user_geometry.end_point, user_drawn_path_2d: contract.user_geometry.drawn_path_2d, user_region_polygon_2d: contract.user_geometry.region_polygon_2d, user_polyline_2d: contract.user_geometry.points, adapted_polyline_2d: pts, corridor_radius_px: contract.user_geometry.corridor_radius_px, path_preservation_policy: contract.policy }, traces: { depth_trace_m: depthTrace, support_trace: supportTrace, visibility_profile: visibility, occluder_ids: occluderIds, semantic_trace: supportTrace.map((s) => s === "unknown" ? "semantic_context_unknown" : `${s}:action_context`) }, rendering: { render_layers: renderLayers, alpha_profile: visibility, depth_scale_hint: depthTrace.map((z) => z ? round(firstDepth / z, 3) : null), asset_policy: { actor_source: contract.actor.actor_source, visual_style: contract.actor.visual_style, asset_ref: contract.actor.asset_ref, no_hard_coded_actor_fallback: true }, animation_policy: { uploaded_animation_ref: contract.uploaded_animation_ref, preserve_uploaded_timing: Boolean(contract.uploaded_animation_ref), retarget_to_scene: true } }, report: { status: warnings.length ? "accepted_with_warnings" : "accepted", preserved: ["raw_start_point", "raw_end_point", "raw_drawn_path", "actor_text_or_asset", "action_text", "uploaded_animation_reference", "duration_s"], adapted: ["fused anchors and drawn path", "resampled path for preview", "estimated support trace", "estimated occlusion/render layers"], warnings, scores: { user_geometry_preservation: 1, min_visibility: round(Math.min(...visibility), 3), support_known_ratio: round(supportTrace.filter((s) => s !== "unknown").length / Math.max(1, supportTrace.length), 3) } }, nearest_scene_entities: { objects: nearestObjects(pts[0] || [0, 0]).slice(0, 8) }, alternatives: [] }; }
+function fusedPath() { if (state.region.length >= 3 && state.tool === "region") return state.region; if (state.startPoint && state.endPoint && state.drawnPath.length > 1) return [state.startPoint, ...state.drawnPath, state.endPoint]; if (state.startPoint && state.endPoint) return [state.startPoint, state.endPoint]; if (state.startPoint && state.drawnPath.length > 1) return [state.startPoint, ...state.drawnPath]; if (state.drawnPath.length > 1) return state.drawnPath; if (state.startPoint) return [state.startPoint]; return []; }
 function geometrySource(mode) { return mode === "start_end_path" ? "user_start_end_plus_drawn_path" : mode === "start_end" ? "user_start_end" : mode === "point" ? "user_tap" : mode === "region" ? "user_region" : "user_drawn"; }
 function getObjects() { return Array.isArray(state.scene?.objects) ? state.scene.objects : []; }
 function getRegions() { const r = state.scene?.regions; return Array.isArray(r) ? r : Array.isArray(r?.regions) ? r.regions : []; }
