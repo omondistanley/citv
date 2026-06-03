@@ -93,6 +93,8 @@
 
         <section class="panel">
           <p class="eyebrow">Scene adaptation</p>
+          <label><input id="useBackend" type="checkbox" checked /> Use Python backend grounding when available</label>
+          <div id="apiStatus" class="api-status">Backend not checked yet.</div>
           <label><input id="allowBending" type="checkbox" checked /> Allow path bending inside user corridor</label>
           <label><input id="preserveGeometry" type="checkbox" checked /> Preserve raw user geometry</label>
           <label>Corridor radius <span id="corridorValue">28px</span>
@@ -119,5 +121,6 @@
     </main>
 
     <script src="./app.js"></script>
+    <script src="./backend-bridge.js"></script>
   </body>
 </html>
