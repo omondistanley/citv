@@ -3,6 +3,7 @@ const state = {
   image: null,
   imageUrl: null,
   actorAssetUrl: null,
+  actorImage: null,
   scene: null,
   geometry: [],
   region: [],
@@ -81,23 +82,30 @@ function setTool(tool) {
 function loadImage(event) {
   const file = event.target.files?.[0];
   if (!file) return;
+  const url = URL.createObjectURL(file);
   const img = new Image();
   img.onload = () => {
     state.image = img;
-    state.imageUrl = URL.createObjectURL(file);
+    state.imageUrl = url;
     const maxW = 1280;
     const scale = Math.min(1, maxW / img.naturalWidth);
     els.canvas.width = Math.round(img.naturalWidth * scale);
     els.canvas.height = Math.round(img.naturalHeight * scale);
     refresh();
   };
-  img.src = URL.createObjectURL(file);
+  img.src = url;
 }
 
 function loadActorAsset(event) {
   const file = event.target.files?.[0];
   if (!file) return;
   state.actorAssetUrl = URL.createObjectURL(file);
+  state.actorImage = null;
+  if (file.type.startsWith("image/")) {
+    const img = new Image();
+    img.onload = () => { state.actorImage = img; refresh(); };
+    img.src = state.actorAssetUrl;
+  }
   refresh();
 }
 
@@ -211,8 +219,7 @@ function drawObjects() {
 }
 
 function drawRegions() {
-  const regions = getRegions();
-  regions.forEach((region, i) => {
+  getRegions().forEach((region, i) => {
     const c = region.centroid_2d_px || region.centroid_2d;
     if (!Array.isArray(c)) return;
     ctx.beginPath();
@@ -317,11 +324,7 @@ function renderObjectList() {
     card.innerHTML = `<strong>${escapeHtml(obj.canonical_name || obj.label || obj.id || "object")}</strong><span>${escapeHtml(obj.id || "no-id")}</span>`;
     const row = document.createElement("div");
     row.className = "constraint-row";
-    [
-      ["required", state.selectedRequired],
-      ["avoid", state.selectedAvoid],
-      ["behind", state.selectedBehind],
-    ].forEach(([label, set]) => {
+    [["required", state.selectedRequired], ["avoid", state.selectedAvoid], ["behind", state.selectedBehind]].forEach(([label, set]) => {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.textContent = label;
@@ -381,6 +384,7 @@ function adaptContractInBrowser(contract) {
   if (!state.image) warnings.push("Image not loaded; preview canvas is schematic.");
   if (!contract.user_geometry.points.length) warnings.push("No user geometry yet; tap or draw to make this authored take usable.");
   if (!state.actorAssetUrl) warnings.push("No actor asset uploaded; renderer must resolve an open-vocabulary asset before final photoreal export.");
+  const firstDepth = depthTrace.find(Boolean) || 1;
   return {
     schema_version: "citv.grounded_motion_contract.ui.v1",
     contract,
@@ -401,7 +405,7 @@ function adaptContractInBrowser(contract) {
     rendering: {
       render_layers: renderLayers,
       alpha_profile: visibility,
-      depth_scale_hint: depthTrace.map((z) => z ? round(depthTrace.find(Boolean) / z, 3) : null),
+      depth_scale_hint: depthTrace.map((z) => z ? round(firstDepth / z, 3) : null),
       asset_policy: {
         actor_source: contract.actor.actor_source,
         visual_style: contract.actor.visual_style,
@@ -425,9 +429,7 @@ function adaptContractInBrowser(contract) {
   };
 }
 
-function currentGeometryPoints() {
-  return state.region.length >= 3 && state.tool === "region" ? state.region : state.geometry;
-}
+function currentGeometryPoints() { return state.region.length >= 3 && state.tool === "region" ? state.region : state.geometry; }
 function getObjects() { return Array.isArray(state.scene?.objects) ? state.scene.objects : []; }
 function getRegions() { const r = state.scene?.regions; return Array.isArray(r) ? r : Array.isArray(r?.regions) ? r.regions : []; }
 function distance(a, b) { return Math.hypot(a[0] - b[0], a[1] - b[1]); }
@@ -444,12 +446,5 @@ function updateTimeLabel() { els.timeLabel.textContent = `${round((Number(els.ti
 function togglePlay() { state.playing = !state.playing; els.playBtn.textContent = state.playing ? "Pause" : "Play"; if (state.playing) requestAnimationFrame(playTick); }
 function playTick() { if (!state.playing) return; els.timeSlider.value = (Number(els.timeSlider.value) + 1) % 101; updateTimeLabel(); draw(); requestAnimationFrame(playTick); }
 function exportContract() { const blob = new Blob([els.contractPreview.textContent], { type: "application/json" }); const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "grounded_motion_contract.json"; a.click(); URL.revokeObjectURL(a.href); }
-
-els.actorAssetInput.addEventListener("change", () => {
-  if (!state.actorAssetUrl) return;
-  const img = new Image();
-  img.onload = () => { state.actorImage = img; draw(); };
-  img.src = state.actorAssetUrl;
-});
 
 init();
