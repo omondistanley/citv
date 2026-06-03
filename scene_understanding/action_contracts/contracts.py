@@ -12,7 +12,7 @@ from dataclasses import asdict, dataclass, field
 from typing import Any, Dict, List, Literal, Optional, Sequence, Tuple
 
 Point2D = Tuple[float, float]
-GeometryMode = Literal["point", "start_end", "polyline", "region"]
+GeometryMode = Literal["point", "start_end", "start_end_path", "polyline", "region"]
 ManifoldType = Literal[
     "centerline_path", "ribbon_path", "blob_path", "volume_path",
     "contour_path", "interior_path", "portal_path", "occlusion_pulse",
@@ -25,7 +25,12 @@ ContractStatus = Literal[
 
 @dataclass(frozen=True)
 class UserGeometry:
-    """Immutable geometry created by the user."""
+    """Immutable geometry created by the user.
+
+    ``mode='start_end_path'`` means the UI captured explicit start/end anchors
+    plus a drawn route. The fused ``points`` list is used for sampling, while raw
+    start/end/path parts are preserved in ``metadata``.
+    """
 
     mode: GeometryMode
     points: List[Point2D]
@@ -37,7 +42,7 @@ class UserGeometry:
     def __post_init__(self) -> None:
         pts = [_coerce_point2d(p) for p in self.points]
         object.__setattr__(self, "points", pts)
-        min_pts = {"point": 1, "start_end": 2, "polyline": 2, "region": 3}[self.mode]
+        min_pts = {"point": 1, "start_end": 2, "start_end_path": 2, "polyline": 2, "region": 3}[self.mode]
         if len(pts) < min_pts:
             raise ValueError(f"{self.mode} geometry requires at least {min_pts} point(s)")
         if self.corridor_radius_px < 0:
@@ -191,12 +196,18 @@ def motion_contract_from_json(payload: Dict[str, Any]) -> MotionContract:
     geom_payload = payload.get("user_geometry") or payload.get("geometry") or {}
     policy_payload = payload.get("policy") or {}
     geometry = UserGeometry(
-        mode=geom_payload.get("mode", "polyline"),
+        mode=_normalize_geometry_mode(geom_payload.get("mode", "polyline")),
         points=geom_payload.get("points") or geom_payload.get("polyline_2d") or [],
         source=geom_payload.get("source", "user"),
         corridor_radius_px=float(geom_payload.get("corridor_radius_px", 28.0)),
         closed=bool(geom_payload.get("closed", False)),
-        metadata=dict(geom_payload.get("metadata") or {}),
+        metadata={
+            **dict(geom_payload.get("metadata") or {}),
+            "start_point": geom_payload.get("start_point"),
+            "end_point": geom_payload.get("end_point"),
+            "drawn_path_2d": geom_payload.get("drawn_path_2d") or [],
+            "region_polygon_2d": geom_payload.get("region_polygon_2d") or [],
+        },
     )
     actor = ActorSpec(
         actor_text=str(actor_payload.get("actor_text") or actor_payload.get("text") or payload.get("actor_text") or ""),
@@ -221,6 +232,9 @@ def motion_contract_from_json(payload: Dict[str, Any]) -> MotionContract:
         protect_important_scene_regions=bool(policy_payload.get("protect_important_scene_regions", True)),
         metadata=dict(policy_payload.get("metadata") or {}),
     )
+    metadata = dict(payload.get("metadata") or {})
+    if payload.get("uploaded_animation") is not None:
+        metadata["uploaded_animation"] = payload.get("uploaded_animation")
     manifold = payload.get("manifold_type")
     contract = MotionContract(
         contract_id=str(payload.get("contract_id") or payload.get("id") or "user_contract"),
@@ -232,7 +246,7 @@ def motion_contract_from_json(payload: Dict[str, Any]) -> MotionContract:
         source=payload.get("source", "user_authored"),
         uploaded_animation_ref=payload.get("uploaded_animation_ref"),
         policy=policy,
-        metadata=dict(payload.get("metadata") or {}),
+        metadata=metadata,
     )
     if contract.manifold_type is None:
         return MotionContract(
@@ -248,6 +262,14 @@ def motion_contract_from_json(payload: Dict[str, Any]) -> MotionContract:
             metadata=contract.metadata,
         )
     return contract
+
+
+def _normalize_geometry_mode(mode: str) -> GeometryMode:
+    allowed = {"point", "start_end", "start_end_path", "polyline", "region"}
+    mode_s = str(mode or "polyline")
+    if mode_s not in allowed:
+        return "polyline"
+    return mode_s  # type: ignore[return-value]
 
 
 def _coerce_point2d(value: Sequence[float]) -> Point2D:
