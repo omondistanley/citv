@@ -1,11 +1,11 @@
 # CITV Motion Composer UI
 
-A self-contained browser UI for user-authored, scene-adaptive motion contracts.
+A browser UI plus local Python grounding API for user-authored, scene-adaptive
+motion contracts.
 
-This UI is intentionally additive and build-free. Open `index.html` in a browser
-or serve this folder with any static file server. It does not replace the Python
-pipeline; it creates and previews the same kind of contract that backend
-renderers can later consume.
+The UI is intentionally additive. It does not replace the Python scene pipeline;
+it lets users author motion intent, then calls a local backend endpoint that
+returns a grounded contract for renderers and exporters.
 
 ## Product rule
 
@@ -17,19 +17,36 @@ select scene objects, mark objects as required/avoid/behind constraints, and
 export a grounded contract. The UI does not silently replace the user path with
 generated paths.
 
-## Run
+## Run with backend grounding
 
 From the repo root:
 
 ```bash
-python -m http.server 8088
+python ui/motion-composer/server.py --host 127.0.0.1 --port 8088
 ```
 
 Then open:
 
 ```text
-http://localhost:8088/ui/motion-composer/
+http://127.0.0.1:8088/ui/motion-composer/
 ```
+
+The server does two things:
+
+- serves the static UI;
+- exposes `POST /api/motion/ground`, which calls
+  `scene_understanding.action_contracts.adapt_motion_contract_to_scene`.
+
+## Browser-only fallback
+
+The UI still works if the Python backend is not running. Uncheck:
+
+```text
+Use Python backend grounding when available
+```
+
+or just click `Generate Preview`; if the backend is unavailable, the UI falls back
+to browser-only approximate grounding and records a warning in the exported JSON.
 
 ## Workflow
 
@@ -53,9 +70,42 @@ http://localhost:8088/ui/motion-composer/
 8. Generate preview.
 9. Export `grounded_motion_contract.json`.
 
+## API contract
+
+`POST /api/motion/ground`
+
+Request shape:
+
+```json
+{
+  "motion_contract": { "...": "MotionContract JSON" },
+  "scene_graph": { "...": "optional CITV scene JSON" },
+  "metric_depth_m": [[1.2, 1.3]],
+  "region_label_map": [[1, 1]],
+  "object_masks": {
+    "object_id": [[false, true]]
+  },
+  "sample_count": 72
+}
+```
+
+All grounding arrays are optional. If they are missing, the backend still returns
+a contract, but it reports warnings such as missing metric depth or missing masks.
+The endpoint also supports local repo-relative paths:
+
+```json
+{
+  "metric_depth_path": "output_dir/depth_metric.npy",
+  "region_label_map_path": "output_dir/regions.npy",
+  "object_mask_paths": {
+    "object_id": "output_dir/masks/object_id.npy"
+  }
+}
+```
+
 ## Geometry model
 
-The UI now stores geometry as separate authored parts:
+The UI stores geometry as separate authored parts:
 
 - `start_point`
 - `end_point`
@@ -93,28 +143,21 @@ Uploaded animation references are exported as:
 }
 ```
 
-The browser preview does not yet retarget the uploaded animation frames. It
-preserves the reference so the backend renderer can retarget the uploaded timing,
-style, and motion onto the scene-grounded path.
-
-## UI layout
-
-The UI follows a canvas-first professional creative-tool layout:
-
-- top bar for ingest/export;
-- left tool rail for direct manipulation;
-- center canvas for image, start/end anchors, paths, regions, objects, actor
-  preview, and occlusion;
-- bottom timeline for preview timing;
-- right inspector for actor/action/constraints/contract JSON.
-
-This matches how AR/VFX tools are usually operated: the user manipulates the
-scene first, then the system exposes structured constraints and diagnostics.
+The UI and backend preserve the animation reference and retargeting policy. Full
+frame-level animation retargeting is still a renderer task: extract frames/masks,
+preserve timing/style, then adapt position, scale, occlusion, and contact to the
+scene-grounded path.
 
 ## What is grounded today
 
-The browser prototype can ground against scene JSON fields that are already
-common in CITV outputs:
+Backend grounding can use:
+
+- scene JSON objects/regions;
+- optional metric depth arrays;
+- optional region label maps;
+- optional object masks.
+
+The browser fallback grounds approximately against:
 
 - `objects[].bbox`
 - `objects[].mask_centroid_2d`
@@ -122,34 +165,32 @@ common in CITV outputs:
 - `regions.regions[].centroid_2d_px`
 - `regions.regions[].semantic_label`
 
-It exports:
+Both paths export:
 
 - exact raw start/end/drawn-path/region geometry;
 - fused user polyline;
 - resampled preview path;
-- approximate depth trace;
-- support trace from nearest region labels;
-- object-box occlusion hints;
+- depth trace;
+- support trace;
+- occlusion hints;
 - render layers: `in_front`, `partially_occluded`, `behind_object`;
 - uploaded animation reference and retargeting policy;
 - asset policy with `no_hard_coded_actor_fallback: true`;
 - report showing preserved, adapted, warnings, and scores.
 
-## What the backend should do next
+## Still remaining for full production realism
 
-The UI is designed to hand off to `scene_understanding.action_contracts` and the
-Python scene adapter added in the same branch. The next backend integration
-should replace the browser approximations with:
+The current branch wires the UI to a grounding backend. The full product still
+needs renderer/compositor work:
 
-- metric depth sampling from `depth_metric.npy` or cached depth map;
-- real mask-level occluder sampling instead of bbox-only checks;
-- region label map sampling;
-- nearest object/contact/approach/occlusion anchors;
-- path bending inside the user corridor using traversability maps;
-- product-placement compositor hooks for shadows, blur, color match, grain, and
-  holdout masks;
-- uploaded animation retargeting that preserves timing/style while adapting
-  position, scale, occlusion, and contact to the scene.
+- real mask-level occlusion from CITV mask artifacts;
+- actor/animation frame extraction and alpha mattes;
+- animation retargeting along the grounded path;
+- path optimization inside the user corridor using traversability maps;
+- contact shadows and contact patches;
+- color, blur, grain, and lighting match;
+- multi-take timeline editor;
+- final video/GIF export.
 
 ## Industry-standard design principles captured
 
