@@ -93,7 +93,7 @@ The pipeline runs entirely locally after a one-shot `setup.sh` and produces no c
 - Caption export and prompt bundle routines were updated to include region artifact paths when available.
 - Region context is now available to Florence/fusion/hybrid caption artifacts for better grounding.
 
-### Config Notes Used During This Chat
+### Config Notes 
 
 - Region control switches in `config.py` were aligned to active usage:
   - `regions_enabled = True`
@@ -144,7 +144,7 @@ The pipeline runs entirely locally after a one-shot `setup.sh` and produces no c
 - Updated legacy fallback test to align with current wrapper naming (`Pix2SGWrapper`).
 - Adjusted schema tests to account for additive region keys and optional truth fixture availability.
 
-### Workflow Plan Requested In Chat (For Next Iteration)
+### Workflow Plan (For Next Iteration)
 
 The agreed next-level workflow direction includes:
 
