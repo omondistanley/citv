@@ -1060,44 +1060,8 @@ Florence-2 `predict_relation` used `<CAPTION>` with appended text — broken in
 transformers 5.x. Florence-2 `label_crop` only used `<OD>`, missing the richer
 `<MORE_DETAILED_CAPTION>` output.
 
-**Fixes:**
-1. **RAM++ whole-image tagging** — runs before GroundedSAM2; builds a per-image
-   GDINO query from scene-specific tags. `update_text_query()` added to
-   `GroundedSAM2Wrapper`.
-2. **`label_crop` two-step** — primary: `<MORE_DETAILED_CAPTION>` → noun extraction
-   with `_extract_label_from_caption` (~50-word stoplist); fallback: `<OD>` largest-bbox.
-3. **`predict_relation` task token** — changed from `<CAPTION>` + appended text to
-   `<MORE_DETAILED_CAPTION>` standalone. Fixes `"task token should be the only token"`
-   error in transformers 5.x; relation prediction now executes correctly.
-4. **`all_tied_weights_keys` property setter** — RAM++ shim added a read-only property
-   to `PreTrainedModel` that blocked Florence-2 loading after RAM++. Fixed by adding
-   a setter that stores override via `self.__dict__`.
-5. **RAM++ per-crop labelling** — added as Priority 3 in the label chain, between
-   Florence-2 and GRiT.
-6. **Output cleanup** — per-object mask PNGs removed; output reduced to 7 flat files
-   per image; labelled overlay images (`_sam2_segmentation.png`,
-   `_sam2_tinted_overlay.png`) added with pill-background labels at mask centroids.
 
----
-
-## 14. Dead Code Removed
-
-Removed from `scene_understanding.py` (~745 lines, ~22% of original file):
-
-| Class / Code | Lines | Reason |
-|---|---|---|
-| `FasterRCNNWrapper` | ~120 | Superseded by GroundedSAM2 |
-| `DETRWrapper` | ~80 | Superseded by GroundingDINO |
-| `Pix2SeqWrapper` / OWLViT | ~100 | Checkpoint unavailable; never ran |
-| `SGSGWrapper` (SGTR) | ~330 | SGTR repo removed; no checkpoint |
-| SGTR path setup | ~20 | Dead without SGTR |
-| `_OIV6_PREDICATES` dict | ~70 | Only used by SGSGWrapper |
-| `_save_model_output` | ~20 | Never called |
-| `sgtr_stats` references | ~5 | Caused NameError post-removal |
-
----
-
-## 15. Output File Structure
+## 14. Output File Structure
 
 All outputs land flat inside `output_scene/scene_graph/`. Exactly **7 files per image**,
 no subdirectories, no per-object mask PNGs.
@@ -1198,7 +1162,7 @@ size scaled to `sqrt(mask_area) / 250` (clamped 0.35–0.70).
 
 ---
 
-## 16. Config Reference
+## 15. Config Reference
 
 All settings in `config.py` → `PreprocessConfig` dataclass.
 
@@ -1261,7 +1225,7 @@ All settings in `config.py` → `PreprocessConfig` dataclass.
 
 ---
 
-## 17. Reproduction
+## 16. Reproduction
 
 ```bash
 # 1. Clone repo
