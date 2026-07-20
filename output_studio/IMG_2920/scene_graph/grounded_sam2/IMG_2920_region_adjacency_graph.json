@@ -1,0 +1,86 @@
+{
+  "edges": [
+    {
+      "region_a": "region_1",
+      "region_b": "region_2",
+      "shared_border_px": 5940,
+      "depth_delta_m": 2.6041,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_1",
+      "region_b": "region_3",
+      "shared_border_px": 6432,
+      "depth_delta_m": 2.8028,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_1",
+      "region_b": "region_4",
+      "shared_border_px": 252,
+      "depth_delta_m": 6.9904,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_1",
+      "region_b": "region_5",
+      "shared_border_px": 445,
+      "depth_delta_m": 6.7975,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_1",
+      "region_b": "region_6",
+      "shared_border_px": 20,
+      "depth_delta_m": 10.1935,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_2",
+      "region_b": "region_4",
+      "shared_border_px": 3481,
+      "depth_delta_m": 4.3863,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_2",
+      "region_b": "region_6",
+      "shared_border_px": 180,
+      "depth_delta_m": 7.5894,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_3",
+      "region_b": "region_5",
+      "shared_border_px": 4604,
+      "depth_delta_m": 3.9947,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_4",
+      "region_b": "region_6",
+      "shared_border_px": 1923,
+      "depth_delta_m": 3.2031,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    },
+    {
+      "region_a": "region_5",
+      "region_b": "region_7",
+      "shared_border_px": 2554,
+      "depth_delta_m": 4.673,
+      "depth_relation": "a_in_front",
+      "edge_type": "region_spatial_adjacency"
+    }
+  ],
+  "num_edges": 10,
+  "kind": "region_adjacency_graph"
+}

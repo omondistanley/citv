@@ -1,0 +1,94 @@
+{
+  "ordering": [
+    {
+      "id": "region_1",
+      "label": "building",
+      "layer_type": "foreground",
+      "z_mean": 8.2338
+    },
+    {
+      "id": "region_2",
+      "label": "green | tree | wind",
+      "layer_type": "background",
+      "z_mean": 9.25
+    },
+    {
+      "id": "region_4",
+      "label": "flower",
+      "layer_type": "background",
+      "z_mean": 9.5699
+    },
+    {
+      "id": "region_3",
+      "label": "animation",
+      "layer_type": "background",
+      "z_mean": 9.9948
+    },
+    {
+      "id": "region_6",
+      "label": "tree",
+      "layer_type": "background",
+      "z_mean": 10.4177
+    },
+    {
+      "id": "region_5",
+      "label": "building",
+      "layer_type": "background",
+      "z_mean": 11.8853
+    },
+    {
+      "id": "region_8",
+      "label": "dark",
+      "layer_type": "background",
+      "z_mean": 12.6819
+    },
+    {
+      "id": "region_7",
+      "label": "building",
+      "layer_type": "background",
+      "z_mean": 13.4069
+    },
+    {
+      "id": "region_10",
+      "label": "night view",
+      "layer_type": "background",
+      "z_mean": 14.2971
+    },
+    {
+      "id": "region_9",
+      "label": "building",
+      "layer_type": "background",
+      "z_mean": 14.7401
+    }
+  ],
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "region_ids": [
+        "region_1"
+      ]
+    },
+    {
+      "layer_type": "midground",
+      "region_ids": []
+    },
+    {
+      "layer_type": "background",
+      "region_ids": [
+        "region_2",
+        "region_3",
+        "region_4",
+        "region_5",
+        "region_6",
+        "region_7",
+        "region_8",
+        "region_9",
+        "region_10"
+      ]
+    }
+  ],
+  "depth_quantiles": {
+    "q1": 8.661,
+    "q2": 8.8947
+  }
+}

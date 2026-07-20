@@ -1,0 +1,37 @@
+{
+  "edges": [
+    {
+      "parent_object_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "parent_mask_index": 2,
+      "child_mask_index": 5,
+      "containment_ratio": 0.9996,
+      "parent_overlap_ratio": 0.3047,
+      "edge_type": "object_object_part"
+    },
+    {
+      "parent_object_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "child_object_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "parent_mask_index": 2,
+      "child_mask_index": 6,
+      "containment_ratio": 1.0,
+      "parent_overlap_ratio": 0.5898,
+      "edge_type": "object_object_part"
+    }
+  ],
+  "root_object_ids": [
+    "grounded_sam2_obj_0_GroundedSAM2",
+    "grounded_sam2_obj_1_GroundedSAM2",
+    "grounded_sam2_obj_2_GroundedSAM2",
+    "grounded_sam2_obj_3_GroundedSAM2",
+    "grounded_sam2_obj_4_GroundedSAM2",
+    "region_1",
+    "region_2",
+    "region_3",
+    "region_4",
+    "region_5",
+    "region_6",
+    "region_7"
+  ],
+  "num_edges": 2
+}

@@ -1,0 +1,20 @@
+{
+  "variant": "florence_only",
+  "track": "grounded_sam2",
+  "image_path": "/private/var/folders/_k/s8lgfj6d7k56717h6w7c6qw80000gn/T/gradio/a8e94ee7960f78f1b3e96cb7da29540fb2987b260f032b2887d8e8258f910966/IMG_2920.JPG",
+  "source": "Florence2 object captions aggregated",
+  "generated_caption": "",
+  "status": "pending_external_generation",
+  "input_files": {
+    "scene_json": "scene_graph/grounded_sam2/IMG_2920_scene.json",
+    "relations_json": "scene_graph/grounded_sam2/IMG_2920_relations.json",
+    "layers_json": "scene_graph/grounded_sam2/IMG_2920_layers.json",
+    "mask_hierarchy_json": "scene_graph/grounded_sam2/IMG_2920_mask_hierarchy.json",
+    "regions_json": "scene_graph/grounded_sam2/IMG_2920_regions.json",
+    "regions_image": "scene_graph/grounded_sam2/IMG_2920_regions.png",
+    "regions_overlay_image": "scene_graph/grounded_sam2/IMG_2920_regions_overlay.png",
+    "region_segmentation_image": "scene_graph/grounded_sam2/IMG_2920_region_segmentation.png",
+    "region_sam2_segmentation_image": "scene_graph/grounded_sam2/IMG_2920_region_sam2_style_segmentation.png",
+    "region_tinted_overlay_image": "scene_graph/grounded_sam2/IMG_2920_region_tinted_overlay.png"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "edges": [
+    {
+      "parent_object_id": "region_2",
+      "child_object_id": "region_1",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.2698
+    },
+    {
+      "parent_object_id": "region_3",
+      "child_object_id": "region_2",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0202
+    },
+    {
+      "parent_object_id": "region_5",
+      "child_object_id": "region_3",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.2885
+    },
+    {
+      "parent_object_id": "region_4",
+      "child_object_id": "region_5",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0137
+    },
+    {
+      "parent_object_id": "region_6",
+      "child_object_id": "region_4",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.1858
+    },
+    {
+      "parent_object_id": "region_7",
+      "child_object_id": "region_6",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.069
+    }
+  ],
+  "root_region_ids": [
+    "region_7"
+  ],
+  "num_edges": 6,
+  "kind": "region_depth_hierarchy",
+  "deprecated": true,
+  "deprecation_note": "Use region_adjacency_graph.json instead. This linear depth-order chain will be removed in a future release."
+}

@@ -1,0 +1,5139 @@
+{
+  "rpath_scene_upload_region_3_to_region_9_k01": {
+    "title": "region path: boulder (region_3) \u2192 explosion (region_9)",
+    "summary": "Confidence=0.82. Traverses regions: region_3, region_9. Invalid-pixel crossing ratio: 0.000. Max turn: 4.4\u00b0.",
+    "why_valid": "Traverses regions: region_3, region_9. Invalid-pixel crossing ratio: 0.000. Max turn: 4.4\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.82 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_scene_upload_region_3_to_region_9_k01",
+    "source": {
+      "type": "region",
+      "id": "region_3",
+      "name": "boulder",
+      "display_label": "boulder (region_3)",
+      "start_uv": [
+        860,
+        406
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_9",
+      "name": "explosion",
+      "display_label": "explosion (region_9)",
+      "goal_uv": [
+        641,
+        389
+      ]
+    },
+    "regions_traversed": [
+      "region_3",
+      "region_9"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.9779068976650542,
+      "depth_consistency": 0.9779068976650542,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.8197530739263783,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.7436627590660218
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 4.418620466989156
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          860,
+          406
+        ],
+        [
+          640,
+          389
+        ],
+        [
+          641,
+          389
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 1
+  },
+  "rpath_scene_upload_region_4_to_region_11_k01": {
+    "title": "region path: creek (region_4) \u2192 green | image | plant (region_11)",
+    "summary": "Confidence=0.72. Traverses regions: region_4, region_11. Invalid-pixel crossing ratio: 0.000. Max turn: 54.5\u00b0.",
+    "why_valid": "Traverses regions: region_4, region_11. Invalid-pixel crossing ratio: 0.000. Max turn: 54.5\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.72 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_scene_upload_region_4_to_region_11_k01",
+    "source": {
+      "type": "region",
+      "id": "region_4",
+      "name": "creek",
+      "display_label": "creek (region_4)",
+      "start_uv": [
+        297,
+        297
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_11",
+      "name": "green | image | plant",
+      "display_label": "green | image | plant (region_11)",
+      "goal_uv": [
+        486,
+        31
+      ]
+    },
+    "regions_traversed": [
+      "region_4",
+      "region_11"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.727688388959872,
+      "depth_consistency": 0.727688388959872,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.7200690033473512,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.6435753555839488
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 54.46232220802562
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          297,
+          297
+        ],
+        [
+          487,
+          31
+        ],
+        [
+          486,
+          31
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 15
+  },
+  "rpath_scene_upload_region_4_to_region_14_k01": {
+    "title": "region path: creek (region_4) \u2192 green | tree (region_14)",
+    "summary": "Confidence=0.78. Traverses regions: region_4, region_14. Invalid-pixel crossing ratio: 0.000. Max turn: 12.2\u00b0.",
+    "why_valid": "Traverses regions: region_4, region_14. Invalid-pixel crossing ratio: 0.000. Max turn: 12.2\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.78 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_scene_upload_region_4_to_region_14_k01",
+    "source": {
+      "type": "region",
+      "id": "region_4",
+      "name": "creek",
+      "display_label": "creek (region_4)",
+      "start_uv": [
+        297,
+        297
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_14",
+      "name": "green | tree",
+      "display_label": "green | tree (region_14)",
+      "goal_uv": [
+        392,
+        149
+      ]
+    },
+    "regions_traversed": [
+      "region_4",
+      "region_14"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.9389674657322072,
+      "depth_consistency": 0.9389674657322072,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.7782523248589617,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.7280869862928829
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 12.206506853558556
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          297,
+          297
+        ],
+        [
+          393,
+          148
+        ],
+        [
+          392,
+          149
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 6
+  },
+  "rpath_scene_upload_region_4_to_region_15_k01": {
+    "title": "region path: creek (region_4) \u2192 green | lettuce (region_15)",
+    "summary": "Confidence=0.71. Traverses regions: region_4, region_15. Invalid-pixel crossing ratio: 0.000. Max turn: 59.5\u00b0.",
+    "why_valid": "Traverses regions: region_4, region_15. Invalid-pixel crossing ratio: 0.000. Max turn: 59.5\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.71 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_scene_upload_region_4_to_region_15_k01",
+    "source": {
+      "type": "region",
+      "id": "region_4",
+      "name": "creek",
+      "display_label": "creek (region_4)",
+      "start_uv": [
+        297,
+        297
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_15",
+      "name": "green | lettuce",
+      "display_label": "green | lettuce (region_15)",
+      "goal_uv": [
+        290,
+        167
+      ]
+    },
+    "regions_traversed": [
+      "region_4",
+      "region_15"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.7024761336140173,
+      "depth_consistency": 0.7024761336140173,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.7111812421930692,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.633490453445607
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 59.50477327719653
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          297,
+          297
+        ],
+        [
+          288,
+          166
+        ],
+        [
+          290,
+          167
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 17
+  },
+  "rpath_scene_upload_region_4_to_region_16_k02": {
+    "title": "region path: creek (region_4) \u2192 blanket (region_16)",
+    "summary": "Confidence=0.64. Traverses regions: region_4, region_3, region_16. Invalid-pixel crossing ratio: 0.011. Max turn: 66.5\u00b0.",
+    "why_valid": "Traverses regions: region_4, region_3, region_16. Invalid-pixel crossing ratio: 0.011. Max turn: 66.5\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.64 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_scene_upload_region_4_to_region_16_k02",
+    "source": {
+      "type": "region",
+      "id": "region_4",
+      "name": "creek",
+      "display_label": "creek (region_4)",
+      "start_uv": [
+        297,
+        297
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_16",
+      "name": "blanket",
+      "display_label": "blanket (region_16)",
+      "goal_uv": [
+        277,
+        394
+      ]
+    },
+    "regions_traversed": [
+      "region_4",
+      "region_3",
+      "region_16"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.6566198542857575,
+      "depth_consistency": 0.6566198542857575,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.6362465759085246,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.6151479417143031
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.011111111111111112,
+      "max_turn_deg": 66.45380692062626
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          297,
+          297
+        ],
+        [
+          466,
+          402
+        ],
+        [
+          468,
+          316
+        ],
+        [
+          277,
+          394
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 24
+  },
+  "rpath_scene_upload_region_10_to_region_11_k01": {
+    "title": "region path: animal (region_10) \u2192 green | image | plant (region_11)",
+    "summary": "Confidence=0.68. Traverses regions: region_10, region_4, region_11. Invalid-pixel crossing ratio: 0.022. Max turn: 63.4\u00b0.",
+    "why_valid": "Traverses regions: region_10, region_4, region_11. Invalid-pixel crossing ratio: 0.022. Max turn: 63.4\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.68 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_scene_upload_region_10_to_region_11_k01",
+    "source": {
+      "type": "region",
+      "id": "region_10",
+      "name": "animal",
+      "display_label": "animal (region_10)",
+      "start_uv": [
+        194,
+        39
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_11",
+      "name": "green | image | plant",
+      "display_label": "green | image | plant (region_11)",
+      "goal_uv": [
+        486,
+        31
+      ]
+    },
+    "regions_traversed": [
+      "region_10",
+      "region_4",
+      "region_11"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.6608005371806982,
+      "depth_consistency": 0.6608005371806982,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.6763625821977285,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.6168202148722793
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.022222222222222223,
+      "max_turn_deg": 63.39544811941592
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          194,
+          39
+        ],
+        [
+          185,
+          63
+        ],
+        [
+          487,
+          31
+        ],
+        [
+          486,
+          31
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 21
+  },
+  "rpath_scene_upload_region_11_to_region_13_k01": {
+    "title": "region path: green | image | plant (region_11) \u2192 animal (region_13)",
+    "summary": "Confidence=0.74. Traverses regions: region_11, region_4, region_13. Invalid-pixel crossing ratio: 0.000. Max turn: 44.0\u00b0.",
+    "why_valid": "Traverses regions: region_11, region_4, region_13. Invalid-pixel crossing ratio: 0.000. Max turn: 44.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.74 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_scene_upload_region_11_to_region_13_k01",
+    "source": {
+      "type": "region",
+      "id": "region_11",
+      "name": "green | image | plant",
+      "display_label": "green | image | plant (region_11)",
+      "start_uv": [
+        486,
+        31
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_13",
+      "name": "animal",
+      "display_label": "animal (region_13)",
+      "goal_uv": [
+        327,
+        138
+      ]
+    },
+    "regions_traversed": [
+      "region_11",
+      "region_4",
+      "region_13"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.7798619755367022,
+      "depth_consistency": 0.7798619755367022,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.7379100157897702,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.664444790214681
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 44.02760489265955
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          486,
+          31
+        ],
+        [
+          487,
+          31
+        ],
+        [
+          322,
+          137
+        ],
+        [
+          327,
+          138
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 14
+  },
+  "rpath_scene_upload_region_11_to_region_15_k01": {
+    "title": "region path: green | image | plant (region_11) \u2192 green | lettuce (region_15)",
+    "summary": "Confidence=0.74. Traverses regions: region_11, region_4, region_15. Invalid-pixel crossing ratio: 0.000. Max turn: 60.7\u00b0.",
+    "why_valid": "Traverses regions: region_11, region_4, region_15. Invalid-pixel crossing ratio: 0.000. Max turn: 60.7\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.74 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_scene_upload_region_11_to_region_15_k01",
+    "source": {
+      "type": "region",
+      "id": "region_11",
+      "name": "green | image | plant",
+      "display_label": "green | image | plant (region_11)",
+      "start_uv": [
+        486,
+        31
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_15",
+      "name": "green | lettuce",
+      "display_label": "green | lettuce (region_15)",
+      "goal_uv": [
+        290,
+        167
+      ]
+    },
+    "regions_traversed": [
+      "region_11",
+      "region_4",
+      "region_15"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.6964114783293774,
+      "depth_consistency": 0.6964114783293774,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.7398455219952459,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.6310645913317511
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 60.71770433412451
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          486,
+          31
+        ],
+        [
+          487,
+          31
+        ],
+        [
+          288,
+          166
+        ],
+        [
+          290,
+          167
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 13
+  },
+  "rpath_scene_upload_region_13_to_region_14_k01": {
+    "title": "region path: animal (region_13) \u2192 green | tree (region_14)",
+    "summary": "Confidence=0.71. Traverses regions: region_13, region_4, region_14. Invalid-pixel crossing ratio: 0.000. Max turn: 53.8\u00b0.",
+    "why_valid": "Traverses regions: region_13, region_4, region_14. Invalid-pixel crossing ratio: 0.000. Max turn: 53.8\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.71 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_scene_upload_region_13_to_region_14_k01",
+    "source": {
+      "type": "region",
+      "id": "region_13",
+      "name": "animal",
+      "display_label": "animal (region_13)",
+      "start_uv": [
+        327,
+        138
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_14",
+      "name": "green | tree",
+      "display_label": "green | tree (region_14)",
+      "goal_uv": [
+        392,
+        149
+      ]
+    },
+    "regions_traversed": [
+      "region_13",
+      "region_4",
+      "region_14"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.7309660365278234,
+      "depth_consistency": 0.7309660365278234,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.7146371278746272,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.6448864146111294
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 53.80679269443531
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          327,
+          138
+        ],
+        [
+          322,
+          137
+        ],
+        [
+          393,
+          148
+        ],
+        [
+          392,
+          149
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 16
+  },
+  "rpath_scene_upload_region_13_to_region_16_k02": {
+    "title": "region path: animal (region_13) \u2192 blanket (region_16)",
+    "summary": "Confidence=0.66. Traverses regions: region_13, region_4, region_3, region_16. Invalid-pixel crossing ratio: 0.008. Max turn: 66.5\u00b0.",
+    "why_valid": "Traverses regions: region_13, region_4, region_3, region_16. Invalid-pixel crossing ratio: 0.008. Max turn: 66.5\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.66 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_scene_upload_region_13_to_region_16_k02",
+    "source": {
+      "type": "region",
+      "id": "region_13",
+      "name": "animal",
+      "display_label": "animal (region_13)",
+      "start_uv": [
+        327,
+        138
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_16",
+      "name": "blanket",
+      "display_label": "blanket (region_16)",
+      "goal_uv": [
+        277,
+        394
+      ]
+    },
+    "regions_traversed": [
+      "region_13",
+      "region_4",
+      "region_3",
+      "region_16"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.6593976320635353,
+      "depth_consistency": 0.6593976320635353,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.6625700923308016,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.6162590528254142
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.008333333333333333,
+      "max_turn_deg": 66.45380692062626
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          327,
+          138
+        ],
+        [
+          322,
+          137
+        ],
+        [
+          466,
+          402
+        ],
+        [
+          468,
+          316
+        ],
+        [
+          277,
+          394
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 23
+  },
+  "rpath_scene_upload_region_14_to_region_15_k01": {
+    "title": "region path: green | tree (region_14) \u2192 green | lettuce (region_15)",
+    "summary": "Confidence=0.77. Traverses regions: region_14, region_4, region_15. Invalid-pixel crossing ratio: 0.011. Max turn: 36.3\u00b0.",
+    "why_valid": "Traverses regions: region_14, region_4, region_15. Invalid-pixel crossing ratio: 0.011. Max turn: 36.3\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.77 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_scene_upload_region_14_to_region_15_k01",
+    "source": {
+      "type": "region",
+      "id": "region_14",
+      "name": "green | tree",
+      "display_label": "green | tree (region_14)",
+      "start_uv": [
+        392,
+        149
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_15",
+      "name": "green | lettuce",
+      "display_label": "green | lettuce (region_15)",
+      "goal_uv": [
+        290,
+        167
+      ]
+    },
+    "regions_traversed": [
+      "region_14",
+      "region_4",
+      "region_15"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.8074257402464909,
+      "depth_consistency": 0.8074257402464909,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.7674332996396969,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.6754702960985964
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.011111111111111112,
+      "max_turn_deg": 36.292629728479604
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          392,
+          149
+        ],
+        [
+          393,
+          148
+        ],
+        [
+          288,
+          166
+        ],
+        [
+          290,
+          167
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 12
+  },
+  "rpath_scene_upload_region_14_to_region_16_k02": {
+    "title": "region path: green | tree (region_14) \u2192 blanket (region_16)",
+    "summary": "Confidence=0.68. Traverses regions: region_14, region_4, region_3, region_16. Invalid-pixel crossing ratio: 0.017. Max turn: 66.5\u00b0.",
+    "why_valid": "Traverses regions: region_14, region_4, region_3, region_16. Invalid-pixel crossing ratio: 0.017. Max turn: 66.5\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.68 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_scene_upload_region_14_to_region_16_k02",
+    "source": {
+      "type": "region",
+      "id": "region_14",
+      "name": "green | tree",
+      "display_label": "green | tree (region_14)",
+      "start_uv": [
+        392,
+        149
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_16",
+      "name": "blanket",
+      "display_label": "blanket (region_16)",
+      "goal_uv": [
+        277,
+        394
+      ]
+    },
+    "regions_traversed": [
+      "region_14",
+      "region_4",
+      "region_3",
+      "region_16"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.651064298730202,
+      "depth_consistency": 0.651064298730202,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.682698272484982,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.6129257194920809
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.016666666666666666,
+      "max_turn_deg": 66.45380692062626
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          392,
+          149
+        ],
+        [
+          393,
+          148
+        ],
+        [
+          466,
+          402
+        ],
+        [
+          468,
+          316
+        ],
+        [
+          277,
+          394
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 20
+  },
+  "rpath_scene_upload_region_15_to_region_16_k02": {
+    "title": "region path: green | lettuce (region_15) \u2192 blanket (region_16)",
+    "summary": "Confidence=0.68. Traverses regions: region_15, region_4, region_3, region_16. Invalid-pixel crossing ratio: 0.008. Max turn: 66.5\u00b0.",
+    "why_valid": "Traverses regions: region_15, region_4, region_3, region_16. Invalid-pixel crossing ratio: 0.008. Max turn: 66.5\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.68 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_scene_upload_region_15_to_region_16_k02",
+    "source": {
+      "type": "region",
+      "id": "region_15",
+      "name": "green | lettuce",
+      "display_label": "green | lettuce (region_15)",
+      "start_uv": [
+        290,
+        167
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_16",
+      "name": "blanket",
+      "display_label": "blanket (region_16)",
+      "goal_uv": [
+        277,
+        394
+      ]
+    },
+    "regions_traversed": [
+      "region_15",
+      "region_4",
+      "region_3",
+      "region_16"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.6593976320635353,
+      "depth_consistency": 0.6593976320635353,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.6760550094997152,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.6162590528254142
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.008333333333333333,
+      "max_turn_deg": 66.45380692062626
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          290,
+          167
+        ],
+        [
+          288,
+          166
+        ],
+        [
+          466,
+          402
+        ],
+        [
+          468,
+          316
+        ],
+        [
+          277,
+          394
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 22
+  },
+  "opath_scene_upload_grounded_sam2_obj_0_GroundedSAM2_to_grounded_sam2_obj_1_GroundedSAM2_k01": {
+    "title": "object path: boy (grounded_sam2_obj_0_GroundedSAM2) \u2192 child (grounded_sam2_obj_1_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_scene_upload_grounded_sam2_obj_0_GroundedSAM2_to_grounded_sam2_obj_1_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_0_GroundedSAM2",
+      "name": "boy",
+      "display_label": "boy (grounded_sam2_obj_0_GroundedSAM2)",
+      "start_uv": [
+        1067,
+        662
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_1_GroundedSAM2",
+      "name": "child",
+      "display_label": "child (grounded_sam2_obj_1_GroundedSAM2)",
+      "goal_uv": [
+        1067,
+        662
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4309537410736084,
+      "overall_confidence": 0.6905168190002442,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6864525985717774
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          1067,
+          662
+        ],
+        [
+          1067,
+          662
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 18
+  },
+  "opath_scene_upload_grounded_sam2_obj_1_GroundedSAM2_to_grounded_sam2_obj_0_GroundedSAM2_k01": {
+    "title": "object path: child (grounded_sam2_obj_1_GroundedSAM2) \u2192 boy (grounded_sam2_obj_0_GroundedSAM2)",
+    "summary": "Confidence=0.69. Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_2. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.69 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_scene_upload_grounded_sam2_obj_1_GroundedSAM2_to_grounded_sam2_obj_0_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_1_GroundedSAM2",
+      "name": "child",
+      "display_label": "child (grounded_sam2_obj_1_GroundedSAM2)",
+      "start_uv": [
+        1067,
+        662
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_0_GroundedSAM2",
+      "name": "boy",
+      "display_label": "boy (grounded_sam2_obj_0_GroundedSAM2)",
+      "goal_uv": [
+        1067,
+        662
+      ]
+    },
+    "regions_traversed": [
+      "region_2"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4309537410736084,
+      "overall_confidence": 0.6905168190002442,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6864525985717774
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          1067,
+          662
+        ],
+        [
+          1067,
+          662
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 19
+  },
+  "opath_scene_upload_grounded_sam2_obj_23_GroundedSAM2_to_grounded_sam2_obj_24_GroundedSAM2_k01": {
+    "title": "object path: creek (grounded_sam2_obj_23_GroundedSAM2) \u2192 creek (grounded_sam2_obj_24_GroundedSAM2)",
+    "summary": "Confidence=0.77. Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.77 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_scene_upload_grounded_sam2_obj_23_GroundedSAM2_to_grounded_sam2_obj_24_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_23_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_23_GroundedSAM2)",
+      "start_uv": [
+        447,
+        572
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_24_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_24_GroundedSAM2)",
+      "goal_uv": [
+        437,
+        557
+      ]
+    },
+    "regions_traversed": [
+      "region_4"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.48134258637825644,
+      "overall_confidence": 0.7723348082302856,
+      "motion_primary_score": 0.9539147951864027,
+      "depth_alignment_score": 0.8568980291345318,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6945148138205212
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          446,
+          571
+        ],
+        [
+          446,
+          571
+        ],
+        [
+          446,
+          571
+        ],
+        [
+          446,
+          571
+        ],
+        [
+          446,
+          571
+        ],
+        [
+          446,
+          571
+        ],
+        [
+          446,
+          571
+        ],
+        [
+          445,
+          570
+        ],
+        [
+          445,
+          570
+        ],
+        [
+          445,
+          570
+        ],
+        [
+          445,
+          570
+        ],
+        [
+          445,
+          570
+        ],
+        [
+          445,
+          570
+        ],
+        [
+          445,
+          570
+        ],
+        [
+          444,
+          569
+        ],
+        [
+          444,
+          569
+        ],
+        [
+          444,
+          569
+        ],
+        [
+          444,
+          569
+        ],
+        [
+          444,
+          569
+        ],
+        [
+          444,
+          569
+        ],
+        [
+          444,
+          569
+        ],
+        [
+          443,
+          568
+        ],
+        [
+          443,
+          568
+        ],
+        [
+          443,
+          568
+        ],
+        [
+          443,
+          568
+        ],
+        [
+          443,
+          568
+        ],
+        [
+          443,
+          568
+        ],
+        [
+          443,
+          568
+        ],
+        [
+          442,
+          567
+        ],
+        [
+          442,
+          567
+        ],
+        [
+          442,
+          567
+        ],
+        [
+          442,
+          567
+        ],
+        [
+          442,
+          567
+        ],
+        [
+          442,
+          567
+        ],
+        [
+          442,
+          567
+        ],
+        [
+          441,
+          566
+        ],
+        [
+          441,
+          566
+        ],
+        [
+          441,
+          566
+        ],
+        [
+          441,
+          566
+        ],
+        [
+          441,
+          566
+        ],
+        [
+          441,
+          566
+        ],
+        [
+          441,
+          566
+        ],
+        [
+          440,
+          565
+        ],
+        [
+          440,
+          565
+        ],
+        [
+          440,
+          565
+        ],
+        [
+          440,
+          565
+        ],
+        [
+          440,
+          565
+        ],
+        [
+          440,
+          565
+        ],
+        [
+          440,
+          565
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          557
+        ],
+        [
+          437,
+          557
+        ],
+        [
+          437,
+          557
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 9
+  },
+  "opath_scene_upload_grounded_sam2_obj_24_GroundedSAM2_to_grounded_sam2_obj_23_GroundedSAM2_k01": {
+    "title": "object path: creek (grounded_sam2_obj_24_GroundedSAM2) \u2192 creek (grounded_sam2_obj_23_GroundedSAM2)",
+    "summary": "Confidence=0.77. Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.77 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_scene_upload_grounded_sam2_obj_24_GroundedSAM2_to_grounded_sam2_obj_23_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_24_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_24_GroundedSAM2)",
+      "start_uv": [
+        437,
+        557
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_23_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_23_GroundedSAM2)",
+      "goal_uv": [
+        447,
+        572
+      ]
+    },
+    "regions_traversed": [
+      "region_4"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4812188191960255,
+      "overall_confidence": 0.7723209463058758,
+      "motion_primary_score": 0.9539147951864027,
+      "depth_alignment_score": 0.8568980291345318,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6944950110713642
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          437,
+          557
+        ],
+        [
+          437,
+          557
+        ],
+        [
+          437,
+          557
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          559
+        ],
+        [
+          437,
+          559
+        ],
+        [
+          437,
+          559
+        ],
+        [
+          437,
+          559
+        ],
+        [
+          437,
+          559
+        ],
+        [
+          437,
+          559
+        ],
+        [
+          438,
+          560
+        ],
+        [
+          438,
+          560
+        ],
+        [
+          438,
+          560
+        ],
+        [
+          438,
+          560
+        ],
+        [
+          438,
+          560
+        ],
+        [
+          438,
+          560
+        ],
+        [
+          438,
+          560
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          440,
+          565
+        ],
+        [
+          440,
+          565
+        ],
+        [
+          440,
+          565
+        ],
+        [
+          440,
+          565
+        ],
+        [
+          440,
+          565
+        ],
+        [
+          440,
+          565
+        ],
+        [
+          440,
+          565
+        ],
+        [
+          441,
+          566
+        ],
+        [
+          441,
+          566
+        ],
+        [
+          441,
+          566
+        ],
+        [
+          441,
+          566
+        ],
+        [
+          441,
+          566
+        ],
+        [
+          441,
+          566
+        ],
+        [
+          441,
+          566
+        ],
+        [
+          442,
+          567
+        ],
+        [
+          442,
+          567
+        ],
+        [
+          442,
+          567
+        ],
+        [
+          442,
+          567
+        ],
+        [
+          442,
+          567
+        ],
+        [
+          442,
+          567
+        ],
+        [
+          442,
+          567
+        ],
+        [
+          443,
+          568
+        ],
+        [
+          443,
+          568
+        ],
+        [
+          443,
+          568
+        ],
+        [
+          443,
+          568
+        ],
+        [
+          443,
+          568
+        ],
+        [
+          443,
+          568
+        ],
+        [
+          443,
+          568
+        ],
+        [
+          444,
+          569
+        ],
+        [
+          444,
+          569
+        ],
+        [
+          444,
+          569
+        ],
+        [
+          444,
+          569
+        ],
+        [
+          444,
+          569
+        ],
+        [
+          444,
+          569
+        ],
+        [
+          444,
+          569
+        ],
+        [
+          445,
+          570
+        ],
+        [
+          445,
+          570
+        ],
+        [
+          445,
+          570
+        ],
+        [
+          445,
+          570
+        ],
+        [
+          445,
+          570
+        ],
+        [
+          445,
+          570
+        ],
+        [
+          445,
+          570
+        ],
+        [
+          446,
+          571
+        ],
+        [
+          446,
+          571
+        ],
+        [
+          446,
+          571
+        ],
+        [
+          446,
+          571
+        ],
+        [
+          446,
+          571
+        ],
+        [
+          446,
+          571
+        ],
+        [
+          446,
+          571
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 10
+  },
+  "opath_scene_upload_grounded_sam2_obj_27_GroundedSAM2_to_grounded_sam2_obj_23_GroundedSAM2_k01": {
+    "title": "object path: creek (grounded_sam2_obj_27_GroundedSAM2) \u2192 creek (grounded_sam2_obj_23_GroundedSAM2)",
+    "summary": "Confidence=0.78. Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.78 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_scene_upload_grounded_sam2_obj_27_GroundedSAM2_to_grounded_sam2_obj_23_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_27_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_27_GroundedSAM2)",
+      "start_uv": [
+        441,
+        581
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_23_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_23_GroundedSAM2)",
+      "goal_uv": [
+        447,
+        572
+      ]
+    },
+    "regions_traversed": [
+      "region_4"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4910621910045544,
+      "overall_confidence": 0.7805461075662128,
+      "motion_primary_score": 0.9776571405790088,
+      "depth_alignment_score": 0.9756097560975623,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6960699505607288
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          441,
+          581
+        ],
+        [
+          441,
+          581
+        ],
+        [
+          441,
+          581
+        ],
+        [
+          441,
+          581
+        ],
+        [
+          441,
+          581
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 4
+  },
+  "opath_scene_upload_grounded_sam2_obj_27_GroundedSAM2_to_grounded_sam2_obj_24_GroundedSAM2_k01": {
+    "title": "object path: creek (grounded_sam2_obj_27_GroundedSAM2) \u2192 creek (grounded_sam2_obj_24_GroundedSAM2)",
+    "summary": "Confidence=0.77. Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.77 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_scene_upload_grounded_sam2_obj_27_GroundedSAM2_to_grounded_sam2_obj_24_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_27_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_27_GroundedSAM2)",
+      "start_uv": [
+        441,
+        581
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_24_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_24_GroundedSAM2)",
+      "goal_uv": [
+        437,
+        557
+      ]
+    },
+    "regions_traversed": [
+      "region_4"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.48629972214500106,
+      "overall_confidence": 0.7724004378109242,
+      "motion_primary_score": 0.9522828964356133,
+      "depth_alignment_score": 0.8389261744966442,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6953079555432002
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          441,
+          581
+        ],
+        [
+          441,
+          581
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          440,
+          577
+        ],
+        [
+          440,
+          577
+        ],
+        [
+          440,
+          577
+        ],
+        [
+          440,
+          577
+        ],
+        [
+          440,
+          577
+        ],
+        [
+          439,
+          576
+        ],
+        [
+          439,
+          576
+        ],
+        [
+          439,
+          576
+        ],
+        [
+          439,
+          576
+        ],
+        [
+          439,
+          576
+        ],
+        [
+          439,
+          575
+        ],
+        [
+          439,
+          575
+        ],
+        [
+          439,
+          575
+        ],
+        [
+          439,
+          575
+        ],
+        [
+          439,
+          574
+        ],
+        [
+          439,
+          574
+        ],
+        [
+          439,
+          574
+        ],
+        [
+          439,
+          573
+        ],
+        [
+          439,
+          573
+        ],
+        [
+          439,
+          573
+        ],
+        [
+          439,
+          573
+        ],
+        [
+          439,
+          572
+        ],
+        [
+          439,
+          572
+        ],
+        [
+          439,
+          572
+        ],
+        [
+          439,
+          572
+        ],
+        [
+          439,
+          571
+        ],
+        [
+          439,
+          571
+        ],
+        [
+          439,
+          571
+        ],
+        [
+          439,
+          570
+        ],
+        [
+          439,
+          570
+        ],
+        [
+          439,
+          570
+        ],
+        [
+          439,
+          570
+        ],
+        [
+          439,
+          569
+        ],
+        [
+          439,
+          569
+        ],
+        [
+          439,
+          569
+        ],
+        [
+          439,
+          569
+        ],
+        [
+          439,
+          568
+        ],
+        [
+          439,
+          568
+        ],
+        [
+          439,
+          568
+        ],
+        [
+          439,
+          568
+        ],
+        [
+          439,
+          567
+        ],
+        [
+          439,
+          567
+        ],
+        [
+          439,
+          567
+        ],
+        [
+          439,
+          566
+        ],
+        [
+          439,
+          566
+        ],
+        [
+          439,
+          566
+        ],
+        [
+          439,
+          566
+        ],
+        [
+          439,
+          565
+        ],
+        [
+          439,
+          565
+        ],
+        [
+          439,
+          565
+        ],
+        [
+          439,
+          565
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          557
+        ],
+        [
+          437,
+          557
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 8
+  },
+  "opath_scene_upload_grounded_sam2_obj_30_GroundedSAM2_to_grounded_sam2_obj_23_GroundedSAM2_k01": {
+    "title": "object path: creek (grounded_sam2_obj_30_GroundedSAM2) \u2192 creek (grounded_sam2_obj_23_GroundedSAM2)",
+    "summary": "Confidence=0.78. Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.78 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_scene_upload_grounded_sam2_obj_30_GroundedSAM2_to_grounded_sam2_obj_23_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_30_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_30_GroundedSAM2)",
+      "start_uv": [
+        441,
+        580
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_23_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_23_GroundedSAM2)",
+      "goal_uv": [
+        447,
+        572
+      ]
+    },
+    "regions_traversed": [
+      "region_4"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4910915375997623,
+      "overall_confidence": 0.7814526173897831,
+      "motion_primary_score": 0.9806678839286989,
+      "depth_alignment_score": 0.9727626459143981,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.696074646015962
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          442,
+          578
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          443,
+          577
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          444,
+          576
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          445,
+          575
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          446,
+          574
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          573
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 3
+  },
+  "opath_scene_upload_grounded_sam2_obj_30_GroundedSAM2_to_grounded_sam2_obj_24_GroundedSAM2_k01": {
+    "title": "object path: creek (grounded_sam2_obj_30_GroundedSAM2) \u2192 creek (grounded_sam2_obj_24_GroundedSAM2)",
+    "summary": "Confidence=0.77. Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.77 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_scene_upload_grounded_sam2_obj_30_GroundedSAM2_to_grounded_sam2_obj_24_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_30_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_30_GroundedSAM2)",
+      "start_uv": [
+        441,
+        580
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_24_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_24_GroundedSAM2)",
+      "goal_uv": [
+        437,
+        557
+      ]
+    },
+    "regions_traversed": [
+      "region_4"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4858456011861563,
+      "overall_confidence": 0.7720863702823977,
+      "motion_primary_score": 0.9514055431651607,
+      "depth_alignment_score": 0.8368200836820082,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6952352961897851
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          580
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          579
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          440,
+          577
+        ],
+        [
+          440,
+          577
+        ],
+        [
+          440,
+          577
+        ],
+        [
+          440,
+          577
+        ],
+        [
+          440,
+          577
+        ],
+        [
+          439,
+          576
+        ],
+        [
+          439,
+          576
+        ],
+        [
+          439,
+          576
+        ],
+        [
+          439,
+          576
+        ],
+        [
+          439,
+          576
+        ],
+        [
+          439,
+          575
+        ],
+        [
+          439,
+          575
+        ],
+        [
+          439,
+          575
+        ],
+        [
+          439,
+          575
+        ],
+        [
+          439,
+          574
+        ],
+        [
+          439,
+          574
+        ],
+        [
+          439,
+          574
+        ],
+        [
+          439,
+          574
+        ],
+        [
+          439,
+          573
+        ],
+        [
+          439,
+          573
+        ],
+        [
+          439,
+          573
+        ],
+        [
+          439,
+          573
+        ],
+        [
+          439,
+          572
+        ],
+        [
+          439,
+          572
+        ],
+        [
+          439,
+          572
+        ],
+        [
+          439,
+          571
+        ],
+        [
+          439,
+          571
+        ],
+        [
+          439,
+          571
+        ],
+        [
+          439,
+          571
+        ],
+        [
+          439,
+          570
+        ],
+        [
+          439,
+          570
+        ],
+        [
+          439,
+          570
+        ],
+        [
+          439,
+          570
+        ],
+        [
+          439,
+          569
+        ],
+        [
+          439,
+          569
+        ],
+        [
+          439,
+          569
+        ],
+        [
+          439,
+          569
+        ],
+        [
+          439,
+          568
+        ],
+        [
+          439,
+          568
+        ],
+        [
+          439,
+          568
+        ],
+        [
+          439,
+          568
+        ],
+        [
+          439,
+          567
+        ],
+        [
+          439,
+          567
+        ],
+        [
+          439,
+          567
+        ],
+        [
+          439,
+          567
+        ],
+        [
+          439,
+          566
+        ],
+        [
+          439,
+          566
+        ],
+        [
+          439,
+          566
+        ],
+        [
+          439,
+          566
+        ],
+        [
+          439,
+          565
+        ],
+        [
+          439,
+          565
+        ],
+        [
+          439,
+          565
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          557
+        ],
+        [
+          437,
+          557
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 11
+  },
+  "opath_scene_upload_grounded_sam2_obj_31_GroundedSAM2_to_grounded_sam2_obj_23_GroundedSAM2_k01": {
+    "title": "object path: creek (grounded_sam2_obj_31_GroundedSAM2) \u2192 creek (grounded_sam2_obj_23_GroundedSAM2)",
+    "summary": "Confidence=0.78. Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.78 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_scene_upload_grounded_sam2_obj_31_GroundedSAM2_to_grounded_sam2_obj_23_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_31_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_31_GroundedSAM2)",
+      "start_uv": [
+        439,
+        579
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_23_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_23_GroundedSAM2)",
+      "goal_uv": [
+        447,
+        572
+      ]
+    },
+    "regions_traversed": [
+      "region_4"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4778949239601692,
+      "overall_confidence": 0.783073954360223,
+      "motion_primary_score": 0.9909990762556131,
+      "depth_alignment_score": 0.992063492063493,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6939631878336272
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          439,
+          579
+        ],
+        [
+          439,
+          579
+        ],
+        [
+          439,
+          579
+        ],
+        [
+          439,
+          579
+        ],
+        [
+          439,
+          579
+        ],
+        [
+          440,
+          579
+        ],
+        [
+          440,
+          579
+        ],
+        [
+          440,
+          579
+        ],
+        [
+          440,
+          579
+        ],
+        [
+          440,
+          579
+        ],
+        [
+          440,
+          579
+        ],
+        [
+          440,
+          579
+        ],
+        [
+          440,
+          579
+        ],
+        [
+          440,
+          579
+        ],
+        [
+          440,
+          579
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          441,
+          578
+        ],
+        [
+          442,
+          577
+        ],
+        [
+          442,
+          577
+        ],
+        [
+          442,
+          577
+        ],
+        [
+          442,
+          577
+        ],
+        [
+          442,
+          577
+        ],
+        [
+          442,
+          577
+        ],
+        [
+          442,
+          577
+        ],
+        [
+          442,
+          577
+        ],
+        [
+          442,
+          577
+        ],
+        [
+          442,
+          577
+        ],
+        [
+          442,
+          577
+        ],
+        [
+          442,
+          577
+        ],
+        [
+          443,
+          576
+        ],
+        [
+          443,
+          576
+        ],
+        [
+          443,
+          576
+        ],
+        [
+          443,
+          576
+        ],
+        [
+          443,
+          576
+        ],
+        [
+          443,
+          576
+        ],
+        [
+          443,
+          576
+        ],
+        [
+          443,
+          576
+        ],
+        [
+          443,
+          576
+        ],
+        [
+          443,
+          576
+        ],
+        [
+          443,
+          576
+        ],
+        [
+          443,
+          576
+        ],
+        [
+          444,
+          575
+        ],
+        [
+          444,
+          575
+        ],
+        [
+          444,
+          575
+        ],
+        [
+          444,
+          575
+        ],
+        [
+          444,
+          575
+        ],
+        [
+          444,
+          575
+        ],
+        [
+          444,
+          575
+        ],
+        [
+          444,
+          575
+        ],
+        [
+          444,
+          575
+        ],
+        [
+          444,
+          575
+        ],
+        [
+          444,
+          575
+        ],
+        [
+          444,
+          575
+        ],
+        [
+          444,
+          575
+        ],
+        [
+          445,
+          574
+        ],
+        [
+          445,
+          574
+        ],
+        [
+          445,
+          574
+        ],
+        [
+          445,
+          574
+        ],
+        [
+          445,
+          574
+        ],
+        [
+          445,
+          574
+        ],
+        [
+          445,
+          574
+        ],
+        [
+          445,
+          574
+        ],
+        [
+          445,
+          574
+        ],
+        [
+          445,
+          574
+        ],
+        [
+          445,
+          574
+        ],
+        [
+          445,
+          574
+        ],
+        [
+          446,
+          573
+        ],
+        [
+          446,
+          573
+        ],
+        [
+          446,
+          573
+        ],
+        [
+          446,
+          573
+        ],
+        [
+          446,
+          573
+        ],
+        [
+          446,
+          573
+        ],
+        [
+          446,
+          573
+        ],
+        [
+          446,
+          573
+        ],
+        [
+          446,
+          573
+        ],
+        [
+          446,
+          573
+        ],
+        [
+          446,
+          573
+        ],
+        [
+          446,
+          573
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ],
+        [
+          447,
+          572
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 2
+  },
+  "opath_scene_upload_grounded_sam2_obj_31_GroundedSAM2_to_grounded_sam2_obj_24_GroundedSAM2_k01": {
+    "title": "object path: creek (grounded_sam2_obj_31_GroundedSAM2) \u2192 creek (grounded_sam2_obj_24_GroundedSAM2)",
+    "summary": "Confidence=0.77. Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_4. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.77 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_scene_upload_grounded_sam2_obj_31_GroundedSAM2_to_grounded_sam2_obj_24_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_31_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_31_GroundedSAM2)",
+      "start_uv": [
+        439,
+        579
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_24_GroundedSAM2",
+      "name": "creek",
+      "display_label": "creek (grounded_sam2_obj_24_GroundedSAM2)",
+      "goal_uv": [
+        437,
+        557
+      ]
+    },
+    "regions_traversed": [
+      "region_4"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4861408515522877,
+      "overall_confidence": 0.774853237546859,
+      "motion_primary_score": 0.9605182072433426,
+      "depth_alignment_score": 0.8510638297872335,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6952825362483661
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          439,
+          579
+        ],
+        [
+          439,
+          579
+        ],
+        [
+          439,
+          579
+        ],
+        [
+          439,
+          578
+        ],
+        [
+          439,
+          578
+        ],
+        [
+          439,
+          578
+        ],
+        [
+          439,
+          578
+        ],
+        [
+          439,
+          577
+        ],
+        [
+          439,
+          577
+        ],
+        [
+          439,
+          577
+        ],
+        [
+          439,
+          577
+        ],
+        [
+          439,
+          576
+        ],
+        [
+          439,
+          576
+        ],
+        [
+          439,
+          576
+        ],
+        [
+          439,
+          576
+        ],
+        [
+          439,
+          575
+        ],
+        [
+          439,
+          575
+        ],
+        [
+          439,
+          575
+        ],
+        [
+          439,
+          575
+        ],
+        [
+          439,
+          574
+        ],
+        [
+          439,
+          574
+        ],
+        [
+          439,
+          574
+        ],
+        [
+          439,
+          574
+        ],
+        [
+          439,
+          573
+        ],
+        [
+          439,
+          573
+        ],
+        [
+          439,
+          573
+        ],
+        [
+          439,
+          573
+        ],
+        [
+          439,
+          573
+        ],
+        [
+          439,
+          572
+        ],
+        [
+          439,
+          572
+        ],
+        [
+          439,
+          572
+        ],
+        [
+          439,
+          572
+        ],
+        [
+          439,
+          571
+        ],
+        [
+          439,
+          571
+        ],
+        [
+          439,
+          571
+        ],
+        [
+          439,
+          571
+        ],
+        [
+          439,
+          570
+        ],
+        [
+          439,
+          570
+        ],
+        [
+          439,
+          570
+        ],
+        [
+          439,
+          570
+        ],
+        [
+          439,
+          569
+        ],
+        [
+          439,
+          569
+        ],
+        [
+          439,
+          569
+        ],
+        [
+          439,
+          569
+        ],
+        [
+          439,
+          568
+        ],
+        [
+          439,
+          568
+        ],
+        [
+          439,
+          568
+        ],
+        [
+          439,
+          568
+        ],
+        [
+          439,
+          567
+        ],
+        [
+          439,
+          567
+        ],
+        [
+          439,
+          567
+        ],
+        [
+          439,
+          567
+        ],
+        [
+          439,
+          567
+        ],
+        [
+          439,
+          566
+        ],
+        [
+          439,
+          566
+        ],
+        [
+          439,
+          566
+        ],
+        [
+          439,
+          566
+        ],
+        [
+          439,
+          565
+        ],
+        [
+          439,
+          565
+        ],
+        [
+          439,
+          565
+        ],
+        [
+          439,
+          565
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          564
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          563
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          562
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          561
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          439,
+          560
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          438,
+          559
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          558
+        ],
+        [
+          437,
+          557
+        ],
+        [
+          437,
+          557
+        ],
+        [
+          437,
+          557
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 7
+  },
+  "opath_scene_upload_grounded_sam2_obj_33_GroundedSAM2_to_grounded_sam2_obj_6_GroundedSAM2_k01": {
+    "title": "object path: fern (grounded_sam2_obj_33_GroundedSAM2) \u2192 fern (grounded_sam2_obj_6_GroundedSAM2)",
+    "summary": "Confidence=0.78. Traverses regions: region_3. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_3. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.78 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_scene_upload_grounded_sam2_obj_33_GroundedSAM2_to_grounded_sam2_obj_6_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_33_GroundedSAM2",
+      "name": "fern",
+      "display_label": "fern (grounded_sam2_obj_33_GroundedSAM2)",
+      "start_uv": [
+        852,
+        169
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_6_GroundedSAM2",
+      "name": "fern",
+      "display_label": "fern (grounded_sam2_obj_6_GroundedSAM2)",
+      "goal_uv": [
+        857,
+        169
+      ]
+    },
+    "regions_traversed": [
+      "region_3"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.46313438999156153,
+      "overall_confidence": 0.7792681105025843,
+      "motion_primary_score": 0.9838235294117645,
+      "depth_alignment_score": 0.9191176470588227,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6916015023986499
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          852,
+          169
+        ],
+        [
+          852,
+          169
+        ],
+        [
+          852,
+          169
+        ],
+        [
+          852,
+          169
+        ],
+        [
+          852,
+          169
+        ],
+        [
+          852,
+          169
+        ],
+        [
+          852,
+          169
+        ],
+        [
+          852,
+          169
+        ],
+        [
+          852,
+          169
+        ],
+        [
+          852,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          853,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          854,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          855,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          856,
+          169
+        ],
+        [
+          857,
+          169
+        ],
+        [
+          857,
+          169
+        ],
+        [
+          857,
+          169
+        ],
+        [
+          857,
+          169
+        ],
+        [
+          857,
+          169
+        ],
+        [
+          857,
+          169
+        ],
+        [
+          857,
+          169
+        ],
+        [
+          857,
+          169
+        ],
+        [
+          857,
+          169
+        ],
+        [
+          857,
+          169
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 5
+  }
+}

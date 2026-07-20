@@ -1,0 +1,186 @@
+{
+  "ordering": [
+    {
+      "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "z": 6.502,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "z": 7.604,
+      "layer_type": "foreground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "z": 7.647,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "z": 10.908,
+      "layer_type": "midground",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "z": 14.11,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "z": 14.11,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "z": 14.11,
+      "layer_type": "background",
+      "entity_kind": "object"
+    },
+    {
+      "object_id": "region_1",
+      "z": 7.0472,
+      "layer_type": "foreground",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_2",
+      "z": 9.6513,
+      "layer_type": "midground",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_3",
+      "z": 9.85,
+      "layer_type": "midground",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_5",
+      "z": 13.8447,
+      "layer_type": "midground",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_4",
+      "z": 14.0376,
+      "layer_type": "midground",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_6",
+      "z": 17.2407,
+      "layer_type": "background",
+      "entity_kind": "region"
+    },
+    {
+      "object_id": "region_7",
+      "z": 18.5177,
+      "layer_type": "background",
+      "entity_kind": "region"
+    }
+  ],
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "object_ids": [
+        "grounded_sam2_obj_0_GroundedSAM2",
+        "grounded_sam2_obj_5_GroundedSAM2"
+      ],
+      "count": 2,
+      "z_min": 6.502,
+      "z_max": 7.604
+    },
+    {
+      "layer_type": "midground",
+      "object_ids": [
+        "grounded_sam2_obj_1_GroundedSAM2",
+        "grounded_sam2_obj_6_GroundedSAM2"
+      ],
+      "count": 2,
+      "z_min": 7.647,
+      "z_max": 10.908
+    },
+    {
+      "layer_type": "background",
+      "object_ids": [
+        "grounded_sam2_obj_2_GroundedSAM2",
+        "grounded_sam2_obj_3_GroundedSAM2",
+        "grounded_sam2_obj_4_GroundedSAM2"
+      ],
+      "count": 3,
+      "z_min": 14.11,
+      "z_max": 14.11
+    }
+  ],
+  "depth_quantiles": {
+    "foreground_max_z": 7.647,
+    "midground_max_z": 14.11
+  },
+  "regions": [
+    {
+      "region_id": "region_1",
+      "region_index": 1,
+      "layer_type": "foreground",
+      "z_mean": 7.0472,
+      "object_ids": [
+        "grounded_sam2_obj_0_GroundedSAM2",
+        "grounded_sam2_obj_2_GroundedSAM2",
+        "grounded_sam2_obj_3_GroundedSAM2",
+        "grounded_sam2_obj_4_GroundedSAM2",
+        "grounded_sam2_obj_6_GroundedSAM2"
+      ]
+    },
+    {
+      "region_id": "region_2",
+      "region_index": 2,
+      "layer_type": "midground",
+      "z_mean": 9.6513,
+      "object_ids": [
+        "grounded_sam2_obj_5_GroundedSAM2"
+      ]
+    },
+    {
+      "region_id": "region_3",
+      "region_index": 3,
+      "layer_type": "midground",
+      "z_mean": 9.85,
+      "object_ids": [
+        "grounded_sam2_obj_1_GroundedSAM2"
+      ]
+    },
+    {
+      "region_id": "region_4",
+      "region_index": 4,
+      "layer_type": "midground",
+      "z_mean": 14.0376,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_5",
+      "region_index": 5,
+      "layer_type": "midground",
+      "z_mean": 13.8447,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_6",
+      "region_index": 6,
+      "layer_type": "background",
+      "z_mean": 17.2407,
+      "object_ids": []
+    },
+    {
+      "region_id": "region_7",
+      "region_index": 7,
+      "layer_type": "background",
+      "z_mean": 18.5177,
+      "object_ids": []
+    }
+  ]
+}

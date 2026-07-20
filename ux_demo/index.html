@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CITV Motion Studio</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="panel">
+        <header class="brand">
+          <div>
+            <h1>CITV Motion Studio</h1>
+            <p id="statusText">No scene loaded</p>
+          </div>
+        </header>
+
+        <section class="control-group">
+          <div class="group-title">Data</div>
+          <button id="loadSampleBtn" class="primary">Load Bundled Sample</button>
+          <label class="file-row">
+            <span>Scene image</span>
+            <input id="sceneImageInput" type="file" accept="image/*">
+          </label>
+          <label class="file-row">
+            <span>Actor image</span>
+            <input id="actorImageInput" type="file" accept="image/*">
+          </label>
+          <label class="file-row">
+            <span>Scene JSON</span>
+            <input id="sceneJsonInput" type="file" accept="application/json,.json">
+          </label>
+          <label class="file-row">
+            <span>Paths JSON</span>
+            <input id="pathsJsonInput" type="file" accept="application/json,.json">
+          </label>
+        </section>
+
+        <section class="control-group">
+          <div class="group-title">Selection</div>
+          <div class="segmented" role="group" aria-label="Selection mode">
+            <button id="sourceModeBtn" class="selected">Source</button>
+            <button id="targetModeBtn">Target</button>
+          </div>
+          <div class="selection-readout">
+            <div>
+              <span>Source</span>
+              <strong id="sourceReadout">None</strong>
+            </div>
+            <div>
+              <span>Target</span>
+              <strong id="targetReadout">None</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="control-group">
+          <div class="group-title">Action</div>
+          <select id="actionPreset">
+            <option value="walk">Walk</option>
+            <option value="run">Run</option>
+            <option value="fly">Fly</option>
+            <option value="orbit">Orbit</option>
+            <option value="emerge">Emerge</option>
+            <option value="disappear">Disappear</option>
+            <option value="touch">Touch</option>
+            <option value="ripple">Ripple</option>
+            <option value="custom">Custom</option>
+          </select>
+          <textarea id="customPrompt" rows="3" placeholder="Custom action"></textarea>
+        </section>
+
+        <section class="control-group">
+          <div class="group-title">Path</div>
+          <select id="pathSelect"></select>
+          <div class="metric-grid">
+            <div>
+              <span>Confidence</span>
+              <strong id="confidenceReadout">-</strong>
+            </div>
+            <div>
+              <span>Manifold</span>
+              <strong id="manifoldReadout">centerline_path</strong>
+            </div>
+          </div>
+          <div class="button-row">
+            <button id="previewBtn">Preview</button>
+            <button id="stopBtn">Stop</button>
+          </div>
+        </section>
+
+        <section class="control-group grow">
+          <div class="group-title">Contract</div>
+          <textarea id="contractOutput" rows="10" readonly></textarea>
+          <div class="button-row">
+            <button id="buildContractBtn" class="primary">Build Contract</button>
+            <button id="downloadContractBtn">Download JSON</button>
+          </div>
+        </section>
+      </aside>
+
+      <section class="stage">
+        <div class="toolbar">
+          <div id="sceneTitle">Untitled scene</div>
+          <div id="pathTitle">No path selected</div>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="sceneCanvas"></canvas>
+        </div>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

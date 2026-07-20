@@ -1,0 +1,556 @@
+{
+  "schema": "citv_insertion_path_ensembles_bundle_v1",
+  "version": "1.0",
+  "image_stem": "IMG_2920",
+  "track": "grounded_sam2",
+  "image_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "ensembles": [
+    {
+      "path_family_id": "rpath_IMG_2920_region_2_to_region_6_k02",
+      "path_family": "region_region",
+      "path_type": "region_to_region",
+      "agent_model": {
+        "class": "generic_box",
+        "footprint_m": 0.45,
+        "clearance_m": 0.15
+      },
+      "endpoints": {
+        "start": {
+          "kind": "region",
+          "id": "region_2",
+          "manifold": "anchor_uv",
+          "display_label": "animal (region_2)"
+        },
+        "goal": {
+          "kind": "region",
+          "id": "region_6",
+          "manifold": "anchor_uv",
+          "display_label": "cloud (region_6)"
+        }
+      },
+      "traversability_field_ref": "scene_graph/grounded_sam2/IMG_2920_paths/path_cost_map.npy",
+      "traversability_speed_map_ref": "scene_graph/grounded_sam2/IMG_2920_paths/path_traversability_speed.npy",
+      "hypotheses": [
+        {
+          "hypothesis_id": "rpath_IMG_2920_region_2_to_region_6_k02_h0",
+          "legacy_path_id": "rpath_IMG_2920_region_2_to_region_6_k02",
+          "polyline_2d": [
+            [
+              168.0,
+              309.0
+            ],
+            [
+              431.0,
+              49.0
+            ],
+            [
+              368.0,
+              54.0
+            ]
+          ],
+          "corridor": null,
+          "topology_hint": {
+            "regions_traversed": [
+              "region_2",
+              "region_6"
+            ]
+          },
+          "scores": {
+            "geometric_feasibility": 0.7993321269119773,
+            "depth_consistency": 0.7993321269119773,
+            "relation_consistency": 0.5,
+            "semantic_plausibility": 0.5,
+            "overall_confidence": 0.7479195501063929,
+            "action_fit": 0.575,
+            "hybrid_overall": 0.672232850764791
+          },
+          "route_kind": "legacy_primary"
+        }
+      ],
+      "workflow_conditioning": {
+        "relation_ids": [
+          "relation_index_46",
+          "relation_index_47",
+          "relation_index_48",
+          "relation_index_49",
+          "relation_index_50",
+          "relation_index_51",
+          "relation_index_52",
+          "relation_index_53",
+          "relation_index_78",
+          "relation_index_79",
+          "relation_index_80",
+          "relation_index_81",
+          "relation_index_82",
+          "relation_index_83",
+          "relation_index_90",
+          "relation_index_91",
+          "relation_index_92",
+          "relation_index_93",
+          "relation_index_94",
+          "relation_index_95",
+          "relation_index_96",
+          "relation_index_97",
+          "relation_index_98",
+          "relation_index_99",
+          "relation_index_100",
+          "relation_index_101",
+          "relation_index_102",
+          "relation_index_103",
+          "relation_index_104",
+          "relation_index_105",
+          "relation_index_106",
+          "relation_index_107",
+          "relation_index_108",
+          "relation_index_109",
+          "relation_index_110",
+          "relation_index_111",
+          "relation_index_112",
+          "relation_index_113",
+          "relation_index_114",
+          "relation_index_115",
+          "relation_index_116",
+          "relation_index_117",
+          "relation_index_118",
+          "relation_index_119",
+          "relation_index_120",
+          "relation_index_121",
+          "relation_index_136",
+          "relation_index_137",
+          "relation_index_138",
+          "relation_index_139",
+          "relation_index_140",
+          "relation_index_141",
+          "relation_index_152",
+          "relation_index_153",
+          "relation_index_154",
+          "relation_index_155",
+          "relation_index_156",
+          "relation_index_157",
+          "relation_index_158",
+          "relation_index_159",
+          "relation_index_166",
+          "relation_index_167",
+          "relation_index_168",
+          "relation_index_169",
+          "relation_index_170",
+          "relation_index_171",
+          "relation_index_180",
+          "relation_index_181",
+          "relation_index_182",
+          "relation_index_183",
+          "relation_index_184",
+          "relation_index_185"
+        ]
+      },
+      "notes": "adapter_from_legacy_path_hypothesis_plus_optional_geodesic",
+      "regions_traversed": [
+        "region_2",
+        "region_6"
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    {
+      "path_family_id": "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01",
+      "path_family": "object_object",
+      "path_type": "object_to_object",
+      "agent_model": {
+        "class": "generic_box",
+        "footprint_m": 0.45,
+        "clearance_m": 0.15
+      },
+      "endpoints": {
+        "start": {
+          "kind": "object",
+          "id": "grounded_sam2_obj_2_GroundedSAM2",
+          "manifold": "centroid_uv",
+          "display_label": "armchair chair couch (grounded_sam2_obj_2_GroundedSAM2)"
+        },
+        "goal": {
+          "kind": "object",
+          "id": "grounded_sam2_obj_3_GroundedSAM2",
+          "manifold": "centroid_uv",
+          "display_label": "armchair chair (grounded_sam2_obj_3_GroundedSAM2)"
+        }
+      },
+      "traversability_field_ref": "scene_graph/grounded_sam2/IMG_2920_paths/path_cost_map.npy",
+      "traversability_speed_map_ref": "scene_graph/grounded_sam2/IMG_2920_paths/path_traversability_speed.npy",
+      "hypotheses": [
+        {
+          "hypothesis_id": "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01_h0",
+          "legacy_path_id": "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01",
+          "polyline_2d": [
+            [
+              263.0,
+              447.0
+            ],
+            [
+              263.0,
+              447.0
+            ]
+          ],
+          "corridor": null,
+          "topology_hint": {
+            "regions_traversed": [
+              "region_1"
+            ]
+          },
+          "scores": {
+            "geometric_feasibility": 1.0,
+            "depth_consistency": 1.0,
+            "relation_consistency": 0.6,
+            "semantic_plausibility": 0.6,
+            "image_alignment_score": 0.4965149164199829,
+            "overall_confidence": 0.6978596706390382,
+            "motion_primary_score": 0.7,
+            "depth_alignment_score": 1.0,
+            "action_fit": 0.625,
+            "hybrid_overall": 0.6969423866271974
+          },
+          "route_kind": "legacy_primary"
+        }
+      ],
+      "workflow_conditioning": {
+        "relation_ids": [
+          "relation_index_0",
+          "relation_index_1",
+          "relation_index_7",
+          "relation_index_8",
+          "relation_index_12",
+          "relation_index_13",
+          "relation_index_14",
+          "relation_index_15",
+          "relation_index_16",
+          "relation_index_17",
+          "relation_index_18",
+          "relation_index_19",
+          "relation_index_20",
+          "relation_index_21",
+          "relation_index_22",
+          "relation_index_23",
+          "relation_index_24",
+          "relation_index_25",
+          "relation_index_31",
+          "relation_index_32",
+          "relation_index_36",
+          "relation_index_37",
+          "relation_index_42",
+          "relation_index_43",
+          "relation_index_44",
+          "relation_index_45"
+        ]
+      },
+      "notes": "adapter_from_legacy_path_hypothesis_plus_optional_geodesic",
+      "regions_traversed": [
+        "region_1"
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    {
+      "path_family_id": "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+      "path_family": "object_object",
+      "path_type": "object_to_object",
+      "agent_model": {
+        "class": "generic_box",
+        "footprint_m": 0.45,
+        "clearance_m": 0.15
+      },
+      "endpoints": {
+        "start": {
+          "kind": "object",
+          "id": "grounded_sam2_obj_2_GroundedSAM2",
+          "manifold": "centroid_uv",
+          "display_label": "armchair chair couch (grounded_sam2_obj_2_GroundedSAM2)"
+        },
+        "goal": {
+          "kind": "object",
+          "id": "grounded_sam2_obj_4_GroundedSAM2",
+          "manifold": "centroid_uv",
+          "display_label": "blue (grounded_sam2_obj_4_GroundedSAM2)"
+        }
+      },
+      "traversability_field_ref": "scene_graph/grounded_sam2/IMG_2920_paths/path_cost_map.npy",
+      "traversability_speed_map_ref": "scene_graph/grounded_sam2/IMG_2920_paths/path_traversability_speed.npy",
+      "hypotheses": [
+        {
+          "hypothesis_id": "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01_h0",
+          "legacy_path_id": "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+          "polyline_2d": [
+            [
+              263.0,
+              447.0
+            ],
+            [
+              263.0,
+              447.0
+            ]
+          ],
+          "corridor": null,
+          "topology_hint": {
+            "regions_traversed": [
+              "region_1"
+            ]
+          },
+          "scores": {
+            "geometric_feasibility": 1.0,
+            "depth_consistency": 1.0,
+            "relation_consistency": 0.6,
+            "semantic_plausibility": 0.6,
+            "image_alignment_score": 0.4965149164199829,
+            "overall_confidence": 0.6978596706390382,
+            "motion_primary_score": 0.7,
+            "depth_alignment_score": 1.0,
+            "action_fit": 0.625,
+            "hybrid_overall": 0.6969423866271974
+          },
+          "route_kind": "legacy_primary"
+        }
+      ],
+      "workflow_conditioning": {
+        "relation_ids": [
+          "relation_index_0",
+          "relation_index_2",
+          "relation_index_7",
+          "relation_index_9",
+          "relation_index_12",
+          "relation_index_13",
+          "relation_index_14",
+          "relation_index_15",
+          "relation_index_16",
+          "relation_index_17",
+          "relation_index_18",
+          "relation_index_19",
+          "relation_index_24",
+          "relation_index_25",
+          "relation_index_26",
+          "relation_index_27",
+          "relation_index_28",
+          "relation_index_29",
+          "relation_index_31",
+          "relation_index_33",
+          "relation_index_36",
+          "relation_index_38",
+          "relation_index_42",
+          "relation_index_43",
+          "relation_index_44",
+          "relation_index_45"
+        ]
+      },
+      "notes": "adapter_from_legacy_path_hypothesis_plus_optional_geodesic",
+      "regions_traversed": [
+        "region_1"
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    {
+      "path_family_id": "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01",
+      "path_family": "object_object",
+      "path_type": "object_to_object",
+      "agent_model": {
+        "class": "generic_box",
+        "footprint_m": 0.45,
+        "clearance_m": 0.15
+      },
+      "endpoints": {
+        "start": {
+          "kind": "object",
+          "id": "grounded_sam2_obj_3_GroundedSAM2",
+          "manifold": "centroid_uv",
+          "display_label": "armchair chair (grounded_sam2_obj_3_GroundedSAM2)"
+        },
+        "goal": {
+          "kind": "object",
+          "id": "grounded_sam2_obj_2_GroundedSAM2",
+          "manifold": "centroid_uv",
+          "display_label": "armchair chair couch (grounded_sam2_obj_2_GroundedSAM2)"
+        }
+      },
+      "traversability_field_ref": "scene_graph/grounded_sam2/IMG_2920_paths/path_cost_map.npy",
+      "traversability_speed_map_ref": "scene_graph/grounded_sam2/IMG_2920_paths/path_traversability_speed.npy",
+      "hypotheses": [
+        {
+          "hypothesis_id": "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01_h0",
+          "legacy_path_id": "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01",
+          "polyline_2d": [
+            [
+              263.0,
+              447.0
+            ],
+            [
+              263.0,
+              447.0
+            ]
+          ],
+          "corridor": null,
+          "topology_hint": {
+            "regions_traversed": [
+              "region_1"
+            ]
+          },
+          "scores": {
+            "geometric_feasibility": 1.0,
+            "depth_consistency": 1.0,
+            "relation_consistency": 0.6,
+            "semantic_plausibility": 0.6,
+            "image_alignment_score": 0.4965149164199829,
+            "overall_confidence": 0.6978596706390382,
+            "motion_primary_score": 0.7,
+            "depth_alignment_score": 1.0,
+            "action_fit": 0.625,
+            "hybrid_overall": 0.6969423866271974
+          },
+          "route_kind": "legacy_primary"
+        }
+      ],
+      "workflow_conditioning": {
+        "relation_ids": [
+          "relation_index_0",
+          "relation_index_1",
+          "relation_index_7",
+          "relation_index_8",
+          "relation_index_12",
+          "relation_index_13",
+          "relation_index_14",
+          "relation_index_15",
+          "relation_index_16",
+          "relation_index_17",
+          "relation_index_18",
+          "relation_index_19",
+          "relation_index_20",
+          "relation_index_21",
+          "relation_index_22",
+          "relation_index_23",
+          "relation_index_24",
+          "relation_index_25",
+          "relation_index_31",
+          "relation_index_32",
+          "relation_index_36",
+          "relation_index_37",
+          "relation_index_42",
+          "relation_index_43",
+          "relation_index_44",
+          "relation_index_45"
+        ]
+      },
+      "notes": "adapter_from_legacy_path_hypothesis_plus_optional_geodesic",
+      "regions_traversed": [
+        "region_1"
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    {
+      "path_family_id": "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+      "path_family": "object_object",
+      "path_type": "object_to_object",
+      "agent_model": {
+        "class": "generic_box",
+        "footprint_m": 0.45,
+        "clearance_m": 0.15
+      },
+      "endpoints": {
+        "start": {
+          "kind": "object",
+          "id": "grounded_sam2_obj_3_GroundedSAM2",
+          "manifold": "centroid_uv",
+          "display_label": "armchair chair (grounded_sam2_obj_3_GroundedSAM2)"
+        },
+        "goal": {
+          "kind": "object",
+          "id": "grounded_sam2_obj_4_GroundedSAM2",
+          "manifold": "centroid_uv",
+          "display_label": "blue (grounded_sam2_obj_4_GroundedSAM2)"
+        }
+      },
+      "traversability_field_ref": "scene_graph/grounded_sam2/IMG_2920_paths/path_cost_map.npy",
+      "traversability_speed_map_ref": "scene_graph/grounded_sam2/IMG_2920_paths/path_traversability_speed.npy",
+      "hypotheses": [
+        {
+          "hypothesis_id": "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01_h0",
+          "legacy_path_id": "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+          "polyline_2d": [
+            [
+              263.0,
+              447.0
+            ],
+            [
+              263.0,
+              447.0
+            ]
+          ],
+          "corridor": null,
+          "topology_hint": {
+            "regions_traversed": [
+              "region_1"
+            ]
+          },
+          "scores": {
+            "geometric_feasibility": 1.0,
+            "depth_consistency": 1.0,
+            "relation_consistency": 0.6,
+            "semantic_plausibility": 0.6,
+            "image_alignment_score": 0.4965149164199829,
+            "overall_confidence": 0.6978596706390382,
+            "motion_primary_score": 0.7,
+            "depth_alignment_score": 1.0,
+            "action_fit": 0.625,
+            "hybrid_overall": 0.6969423866271974
+          },
+          "route_kind": "legacy_primary"
+        }
+      ],
+      "workflow_conditioning": {
+        "relation_ids": [
+          "relation_index_1",
+          "relation_index_2",
+          "relation_index_8",
+          "relation_index_9",
+          "relation_index_12",
+          "relation_index_13",
+          "relation_index_18",
+          "relation_index_19",
+          "relation_index_20",
+          "relation_index_21",
+          "relation_index_22",
+          "relation_index_23",
+          "relation_index_24",
+          "relation_index_25",
+          "relation_index_26",
+          "relation_index_27",
+          "relation_index_28",
+          "relation_index_29",
+          "relation_index_32",
+          "relation_index_33",
+          "relation_index_37",
+          "relation_index_38"
+        ]
+      },
+      "notes": "adapter_from_legacy_path_hypothesis_plus_optional_geodesic",
+      "regions_traversed": [
+        "region_1"
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    }
+  ]
+}

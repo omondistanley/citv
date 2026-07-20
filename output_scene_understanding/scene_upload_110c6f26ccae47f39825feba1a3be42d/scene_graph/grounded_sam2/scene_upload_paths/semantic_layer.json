@@ -1,0 +1,642 @@
+{
+  "semantic_enabled": true,
+  "entities": [
+    {
+      "id": "grounded_sam2_obj_0_GroundedSAM2",
+      "name": "boy",
+      "normalized_name": "boy",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_1_GroundedSAM2",
+      "name": "child",
+      "normalized_name": "child",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_2_GroundedSAM2",
+      "name": "log",
+      "normalized_name": "log",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_3_GroundedSAM2",
+      "name": "stone",
+      "normalized_name": "stone",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "stone",
+      "normalized_name": "stone",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_5_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_6_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_7_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_8_GroundedSAM2",
+      "name": "creek",
+      "normalized_name": "creek",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_9_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_10_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_11_GroundedSAM2",
+      "name": "stone",
+      "normalized_name": "stone",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_12_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_13_GroundedSAM2",
+      "name": "creek",
+      "normalized_name": "creek",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_14_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_15_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_16_GroundedSAM2",
+      "name": "stone",
+      "normalized_name": "stone",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_17_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_18_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_19_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_20_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_21_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_22_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_23_GroundedSAM2",
+      "name": "creek",
+      "normalized_name": "creek",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_24_GroundedSAM2",
+      "name": "creek",
+      "normalized_name": "creek",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_25_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_26_GroundedSAM2",
+      "name": "creek",
+      "normalized_name": "creek",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_27_GroundedSAM2",
+      "name": "creek",
+      "normalized_name": "creek",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_28_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_29_GroundedSAM2",
+      "name": "cave",
+      "normalized_name": "cave",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_30_GroundedSAM2",
+      "name": "creek",
+      "normalized_name": "creek",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_31_GroundedSAM2",
+      "name": "creek",
+      "normalized_name": "creek",
+      "role": "entity",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_32_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_33_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_34_GroundedSAM2",
+      "name": "cave",
+      "normalized_name": "cave",
+      "role": "entity",
+      "kind": "object"
+    }
+  ],
+  "actors": [
+    {
+      "id": "grounded_sam2_obj_5_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_6_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_7_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_9_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_10_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_12_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_14_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_15_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_17_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_18_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_19_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_20_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_21_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_22_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_25_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_28_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_32_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    },
+    {
+      "id": "grounded_sam2_obj_33_GroundedSAM2",
+      "name": "fern",
+      "normalized_name": "fern",
+      "role": "actor",
+      "kind": "object"
+    }
+  ],
+  "region_affordances": [
+    {
+      "region_id": "region_1",
+      "region_name": "region_1",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_2",
+      "region_name": "region_2",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_3",
+      "region_name": "region_3",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_4",
+      "region_name": "region_4",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_5",
+      "region_name": "region_5",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_6",
+      "region_name": "region_6",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_7",
+      "region_name": "region_7",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_8",
+      "region_name": "region_8",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_9",
+      "region_name": "region_9",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_10",
+      "region_name": "region_10",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_11",
+      "region_name": "region_11",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_12",
+      "region_name": "region_12",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_13",
+      "region_name": "region_13",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_14",
+      "region_name": "region_14",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_15",
+      "region_name": "region_15",
+      "affordance": "interaction_zone"
+    },
+    {
+      "region_id": "region_16",
+      "region_name": "region_16",
+      "affordance": "interaction_zone"
+    }
+  ],
+  "actor_intents": [
+    {
+      "actor_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_19_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_20_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_21_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_22_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_25_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_28_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_32_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    },
+    {
+      "actor_id": "grounded_sam2_obj_33_GroundedSAM2",
+      "intent_candidates": [
+        "traverse",
+        "approach",
+        "inspect",
+        "idle",
+        "avoid"
+      ]
+    }
+  ]
+}

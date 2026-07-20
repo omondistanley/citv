@@ -1,0 +1,591 @@
+{
+  "metadata": {
+    "image_path": "/private/var/folders/_k/s8lgfj6d7k56717h6w7c6qw80000gn/T/gradio/a8e94ee7960f78f1b3e96cb7da29540fb2987b260f032b2887d8e8258f910966/IMG_2920.JPG",
+    "image_stem": "IMG_2920",
+    "timestamp": "2026-05-10 22:15:22",
+    "image_size": [
+      1280,
+      720
+    ],
+    "matching_mode": "A"
+  },
+  "depth": {
+    "depth_map_path": "depth/IMG_2920_depth_metric.npy",
+    "depth_map_image_path": "scene_graph/grounded_sam2/IMG_2920_depth_map.png",
+    "depth_min": 5.304370403289795,
+    "depth_max": 22.891281127929688,
+    "depth_mean": 10.227208137512207
+  },
+  "segmentation": {
+    "model": "SAM2",
+    "mode": "automatic_mask_generator",
+    "segmentation_map_image_path": "scene_graph/grounded_sam2/IMG_2920_segmentation.png",
+    "num_auto_masks": 7,
+    "match_strategy": "iou_with_detection_bbox"
+  },
+  "depth_mask": {
+    "mapping_image_path": "scene_graph/grounded_sam2/IMG_2920_depth_mask_mapping_A.png",
+    "objects": [
+      {
+        "id": "grounded_sam2_obj_0_GroundingDINO",
+        "entity_kind": "object",
+        "label": "dog",
+        "bbox": [
+          53.502044677734375,
+          0.7723474502563477,
+          861.527587890625,
+          714.24609375
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 0,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 6.0252,
+          "max": 9.6009,
+          "mean": 7.2082,
+          "median": 6.9977,
+          "std": 0.7697,
+          "num_pixels": 333678,
+          "z_val": 6.5018,
+          "z_val_pixels": 166527,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0236
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.528,
+          "y": -0.065,
+          "z": 6.502
+        },
+        "mask_centroid_2d": [
+          550,
+          349
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_1_GroundingDINO",
+        "entity_kind": "object",
+        "label": "floor",
+        "bbox": [
+          930.34130859375,
+          164.29356384277344,
+          1277.468994140625,
+          717.9026489257812
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 7.822,
+          "max": 21.1354,
+          "mean": 13.2528,
+          "median": 12.7447,
+          "std": 3.7572,
+          "num_pixels": 169650,
+          "z_val": 10.9082,
+          "z_val_pixels": 84340,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.3713
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.733,
+          "y": 1.378,
+          "z": 10.908
+        },
+        "mask_centroid_2d": [
+          1121,
+          500
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_2_GroundingDINO",
+        "entity_kind": "object",
+        "label": "armchair chair couch",
+        "bbox": [
+          0.78399658203125,
+          0.0,
+          1006.3507690429688,
+          716.9675903320312
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 2,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.3598,
+          "max": 16.7971,
+          "mean": 9.9203,
+          "median": 8.9611,
+          "std": 3.1939,
+          "num_pixels": 322354,
+          "z_val": 14.1103,
+          "z_val_pixels": 13317,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.3984
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.799,
+          "y": 1.107,
+          "z": 14.11
+        },
+        "mask_centroid_2d": [
+          263,
+          447
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_3_GroundingDINO",
+        "entity_kind": "object",
+        "label": "armchair chair",
+        "bbox": [
+          0.0,
+          2.495269775390625,
+          1011.129638671875,
+          717.09130859375
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 3,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.3598,
+          "max": 16.7965,
+          "mean": 9.92,
+          "median": 8.9608,
+          "std": 3.1937,
+          "num_pixels": 322339,
+          "z_val": 14.1099,
+          "z_val_pixels": 13309,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.398
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.799,
+          "y": 1.107,
+          "z": 14.11
+        },
+        "mask_centroid_2d": [
+          263,
+          447
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_4_GroundingDINO",
+        "entity_kind": "object",
+        "label": "blue",
+        "bbox": [
+          10.479888916015625,
+          0.0,
+          1000.078857421875,
+          717.2603759765625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 4,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.3598,
+          "max": 16.798,
+          "mean": 9.9207,
+          "median": 8.9608,
+          "std": 3.1944,
+          "num_pixels": 322350,
+          "z_val": 14.1099,
+          "z_val_pixels": 13307,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.4
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.799,
+          "y": 1.107,
+          "z": 14.11
+        },
+        "mask_centroid_2d": [
+          263,
+          447
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_5_GroundingDINO",
+        "entity_kind": "object",
+        "label": "blue",
+        "bbox": [
+          0.0,
+          0.0,
+          358.1216735839844,
+          698.4910888671875
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 5,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 6.2823,
+          "max": 15.1341,
+          "mean": 9.835,
+          "median": 9.0778,
+          "std": 2.3098,
+          "num_pixels": 98576,
+          "z_val": 7.6039,
+          "z_val_pixels": 29354,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.128
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.8,
+          "y": -0.782,
+          "z": 7.604
+        },
+        "mask_centroid_2d": [
+          86,
+          246
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_6_GroundingDINO",
+        "entity_kind": "object",
+        "label": "blue",
+        "bbox": [
+          1.6650962829589844,
+          0.0,
+          467.496337890625,
+          715.6597290039062
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 6,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.3603,
+          "max": 16.5817,
+          "mean": 9.4679,
+          "median": 8.4308,
+          "std": 3.0792,
+          "num_pixels": 187190,
+          "z_val": 7.647,
+          "z_val_pixels": 44269,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.0869
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.208,
+          "y": 0.6,
+          "z": 7.647
+        },
+        "mask_centroid_2d": [
+          175,
+          447
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_1",
+        "entity_kind": "region",
+        "label": "foreground",
+        "bbox": [
+          0,
+          0,
+          1279,
+          719
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.6841,
+          "max": 8.344,
+          "mean": 7.0472,
+          "median": 6.9669,
+          "std": 0.6251,
+          "num_pixels": 439022,
+          "z_val": 6.531,
+          "z_val_pixels": 193670,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.1694
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.725,
+          "y": 0.395,
+          "z": 6.531
+        },
+        "mask_centroid_2d": [
+          517,
+          427
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_2",
+        "entity_kind": "region",
+        "label": "midground",
+        "bbox": [
+          31,
+          0,
+          491,
+          548
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 8.4193,
+          "max": 11.2888,
+          "mean": 9.6513,
+          "median": 9.6122,
+          "std": 0.7011,
+          "num_pixels": 96138,
+          "z_val": 9.6005,
+          "z_val_pixels": 35312,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1092
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.088,
+          "y": -0.442,
+          "z": 9.6
+        },
+        "mask_centroid_2d": [
+          168,
+          309
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_3",
+        "entity_kind": "region",
+        "label": "midground",
+        "bbox": [
+          730,
+          0,
+          1279,
+          712
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 8.4084,
+          "max": 11.7719,
+          "mean": 9.85,
+          "median": 9.7433,
+          "std": 0.9566,
+          "num_pixels": 87941,
+          "z_val": 9.1114,
+          "z_val_pixels": 28076,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2362
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.14,
+          "y": 1.447,
+          "z": 9.111
+        },
+        "mask_centroid_2d": [
+          1022,
+          536
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_4",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          159,
+          0,
+          488,
+          335
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 11.8373,
+          "max": 16.1989,
+          "mean": 14.0376,
+          "median": 14.1738,
+          "std": 1.1178,
+          "num_pixels": 47893,
+          "z_val": 14.3453,
+          "z_val_pixels": 23314,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.083
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.943,
+          "y": -2.731,
+          "z": 14.345
+        },
+        "mask_centroid_2d": [
+          258,
+          149
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_5",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          742,
+          0,
+          1279,
+          515
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 11.8372,
+          "max": 16.1847,
+          "mean": 13.8447,
+          "median": 13.7586,
+          "std": 1.1646,
+          "num_pixels": 115510,
+          "z_val": 12.3375,
+          "z_val_pixels": 27568,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5968
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.751,
+          "y": -0.868,
+          "z": 12.337
+        },
+        "mask_centroid_2d": [
+          977,
+          282
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_6",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          303,
+          0,
+          475,
+          149
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 16.1994,
+          "max": 19.0339,
+          "mean": 17.2407,
+          "median": 17.1221,
+          "std": 0.7414,
+          "num_pixels": 12442,
+          "z_val": 16.393,
+          "z_val_pixels": 6028,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.9174
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.022,
+          "y": -4.525,
+          "z": 16.393
+        },
+        "mask_centroid_2d": [
+          368,
+          54
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_7",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          965,
+          0,
+          1279,
+          388
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 16.1994,
+          "max": 21.1279,
+          "mean": 18.5177,
+          "median": 18.524,
+          "std": 1.072,
+          "num_pixels": 98185,
+          "z_val": 19.1818,
+          "z_val_pixels": 45098,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.7716
+        },
+        "coordinates_3d_from_mask": {
+          "x": 8.479,
+          "y": -3.27,
+          "z": 19.182
+        },
+        "mask_centroid_2d": [
+          1130,
+          171
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      }
+    ]
+  }
+}

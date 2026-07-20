@@ -1,0 +1,916 @@
+{
+  "schema": "citv_insertion_path_ensembles_bundle_v1",
+  "version": "1.0",
+  "image_stem": "IMG_4323",
+  "track": "grounded_sam2",
+  "image_size": {
+    "width": 1280,
+    "height": 853
+  },
+  "ensembles": [
+    {
+      "path_family_id": "rpath_IMG_4323_region_1_to_region_5_k02",
+      "path_family": "region_region",
+      "path_type": "region_to_region",
+      "agent_model": {
+        "class": "generic_box",
+        "footprint_m": 0.45,
+        "clearance_m": 0.15
+      },
+      "endpoints": {
+        "start": {
+          "kind": "region",
+          "id": "region_1",
+          "manifold": "anchor_uv",
+          "display_label": "building (region_1)"
+        },
+        "goal": {
+          "kind": "region",
+          "id": "region_5",
+          "manifold": "anchor_uv",
+          "display_label": "building (region_5)"
+        }
+      },
+      "traversability_field_ref": "scene_graph/grounded_sam2/IMG_4323_paths/path_cost_map.npy",
+      "traversability_speed_map_ref": "scene_graph/grounded_sam2/IMG_4323_paths/path_traversability_speed.npy",
+      "hypotheses": [
+        {
+          "hypothesis_id": "rpath_IMG_4323_region_1_to_region_5_k02_h0",
+          "legacy_path_id": "rpath_IMG_4323_region_1_to_region_5_k02",
+          "polyline_2d": [
+            [
+              700.0,
+              812.0
+            ],
+            [
+              858.0,
+              582.0
+            ],
+            [
+              652.0,
+              591.0
+            ],
+            [
+              778.0,
+              666.0
+            ]
+          ],
+          "corridor": null,
+          "topology_hint": {
+            "regions_traversed": [
+              "region_1",
+              "region_7",
+              "region_5"
+            ]
+          },
+          "scores": {
+            "geometric_feasibility": 0.734944978221802,
+            "depth_consistency": 0.734944978221802,
+            "relation_consistency": 0.5,
+            "semantic_plausibility": 0.5,
+            "overall_confidence": 0.6636116790380706,
+            "action_fit": 0.575,
+            "hybrid_overall": 0.6464779912887209
+          },
+          "route_kind": "legacy_primary"
+        }
+      ],
+      "workflow_conditioning": {
+        "relation_ids": [
+          "relation_index_32",
+          "relation_index_33",
+          "relation_index_34",
+          "relation_index_35",
+          "relation_index_36",
+          "relation_index_37",
+          "relation_index_44",
+          "relation_index_45",
+          "relation_index_46",
+          "relation_index_47",
+          "relation_index_48",
+          "relation_index_49",
+          "relation_index_50",
+          "relation_index_51",
+          "relation_index_52",
+          "relation_index_53",
+          "relation_index_54",
+          "relation_index_55",
+          "relation_index_56",
+          "relation_index_57",
+          "relation_index_58",
+          "relation_index_59",
+          "relation_index_60",
+          "relation_index_61",
+          "relation_index_62",
+          "relation_index_63",
+          "relation_index_64",
+          "relation_index_65",
+          "relation_index_66",
+          "relation_index_67",
+          "relation_index_68",
+          "relation_index_69",
+          "relation_index_70",
+          "relation_index_71",
+          "relation_index_72",
+          "relation_index_73",
+          "relation_index_74",
+          "relation_index_75",
+          "relation_index_76",
+          "relation_index_77",
+          "relation_index_78",
+          "relation_index_79",
+          "relation_index_80",
+          "relation_index_81",
+          "relation_index_82",
+          "relation_index_83",
+          "relation_index_84",
+          "relation_index_85",
+          "relation_index_86",
+          "relation_index_87",
+          "relation_index_88",
+          "relation_index_89",
+          "relation_index_90",
+          "relation_index_91",
+          "relation_index_92",
+          "relation_index_93",
+          "relation_index_94",
+          "relation_index_95",
+          "relation_index_96",
+          "relation_index_97",
+          "relation_index_98",
+          "relation_index_99",
+          "relation_index_100",
+          "relation_index_101",
+          "relation_index_108",
+          "relation_index_109",
+          "relation_index_110",
+          "relation_index_111",
+          "relation_index_112",
+          "relation_index_113",
+          "relation_index_114",
+          "relation_index_115",
+          "relation_index_140",
+          "relation_index_141",
+          "relation_index_142",
+          "relation_index_143",
+          "relation_index_144",
+          "relation_index_145",
+          "relation_index_150",
+          "relation_index_151",
+          "relation_index_152",
+          "relation_index_153",
+          "relation_index_154",
+          "relation_index_155",
+          "relation_index_156",
+          "relation_index_157",
+          "relation_index_182",
+          "relation_index_183",
+          "relation_index_184",
+          "relation_index_185",
+          "relation_index_186",
+          "relation_index_187",
+          "relation_index_188",
+          "relation_index_189",
+          "relation_index_190",
+          "relation_index_191",
+          "relation_index_192",
+          "relation_index_193",
+          "relation_index_194",
+          "relation_index_195",
+          "relation_index_218",
+          "relation_index_219",
+          "relation_index_220",
+          "relation_index_221",
+          "relation_index_222",
+          "relation_index_223",
+          "relation_index_224",
+          "relation_index_225",
+          "relation_index_226",
+          "relation_index_227",
+          "relation_index_228",
+          "relation_index_229",
+          "relation_index_230",
+          "relation_index_231",
+          "relation_index_232",
+          "relation_index_233",
+          "relation_index_234",
+          "relation_index_235",
+          "relation_index_236",
+          "relation_index_237",
+          "relation_index_238",
+          "relation_index_239",
+          "relation_index_240",
+          "relation_index_241",
+          "relation_index_242",
+          "relation_index_243",
+          "relation_index_244",
+          "relation_index_245",
+          "relation_index_246",
+          "relation_index_247",
+          "relation_index_248",
+          "relation_index_249",
+          "relation_index_250",
+          "relation_index_251",
+          "relation_index_252",
+          "relation_index_253",
+          "relation_index_254",
+          "relation_index_255",
+          "relation_index_256",
+          "relation_index_257",
+          "relation_index_258",
+          "relation_index_259",
+          "relation_index_278",
+          "relation_index_279",
+          "relation_index_280",
+          "relation_index_281",
+          "relation_index_282",
+          "relation_index_283",
+          "relation_index_296",
+          "relation_index_297",
+          "relation_index_298",
+          "relation_index_299",
+          "relation_index_300",
+          "relation_index_301",
+          "relation_index_302",
+          "relation_index_303",
+          "relation_index_310",
+          "relation_index_311",
+          "relation_index_312",
+          "relation_index_313",
+          "relation_index_314",
+          "relation_index_315",
+          "relation_index_316",
+          "relation_index_317",
+          "relation_index_318",
+          "relation_index_319"
+        ]
+      },
+      "notes": "adapter_from_legacy_path_hypothesis_plus_optional_geodesic",
+      "regions_traversed": [
+        "region_1",
+        "region_7",
+        "region_5"
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    {
+      "path_family_id": "rpath_IMG_4323_region_3_to_region_5_k01",
+      "path_family": "region_region",
+      "path_type": "region_to_region",
+      "agent_model": {
+        "class": "generic_box",
+        "footprint_m": 0.45,
+        "clearance_m": 0.15
+      },
+      "endpoints": {
+        "start": {
+          "kind": "region",
+          "id": "region_3",
+          "manifold": "anchor_uv",
+          "display_label": "animation (region_3)"
+        },
+        "goal": {
+          "kind": "region",
+          "id": "region_5",
+          "manifold": "anchor_uv",
+          "display_label": "building (region_5)"
+        }
+      },
+      "traversability_field_ref": "scene_graph/grounded_sam2/IMG_4323_paths/path_cost_map.npy",
+      "traversability_speed_map_ref": "scene_graph/grounded_sam2/IMG_4323_paths/path_traversability_speed.npy",
+      "hypotheses": [
+        {
+          "hypothesis_id": "rpath_IMG_4323_region_3_to_region_5_k01_h0",
+          "legacy_path_id": "rpath_IMG_4323_region_3_to_region_5_k01",
+          "polyline_2d": [
+            [
+              496.0,
+              721.0
+            ],
+            [
+              489.0,
+              723.0
+            ],
+            [
+              778.0,
+              666.0
+            ]
+          ],
+          "corridor": null,
+          "topology_hint": {
+            "regions_traversed": [
+              "region_3",
+              "region_5"
+            ]
+          },
+          "scores": {
+            "geometric_feasibility": 0.9593930915108989,
+            "depth_consistency": 0.9593930915108989,
+            "relation_consistency": 0.5,
+            "semantic_plausibility": 0.5,
+            "overall_confidence": 0.8110465029259206,
+            "action_fit": 0.575,
+            "hybrid_overall": 0.7362572366043596
+          },
+          "route_kind": "legacy_primary"
+        }
+      ],
+      "workflow_conditioning": {
+        "relation_ids": [
+          "relation_index_50",
+          "relation_index_51",
+          "relation_index_52",
+          "relation_index_53",
+          "relation_index_54",
+          "relation_index_55",
+          "relation_index_62",
+          "relation_index_63",
+          "relation_index_64",
+          "relation_index_65",
+          "relation_index_66",
+          "relation_index_67",
+          "relation_index_68",
+          "relation_index_69",
+          "relation_index_102",
+          "relation_index_103",
+          "relation_index_108",
+          "relation_index_109",
+          "relation_index_110",
+          "relation_index_111",
+          "relation_index_112",
+          "relation_index_113",
+          "relation_index_114",
+          "relation_index_115",
+          "relation_index_146",
+          "relation_index_147",
+          "relation_index_148",
+          "relation_index_149",
+          "relation_index_150",
+          "relation_index_151",
+          "relation_index_152",
+          "relation_index_153",
+          "relation_index_154",
+          "relation_index_155",
+          "relation_index_156",
+          "relation_index_157",
+          "relation_index_158",
+          "relation_index_159",
+          "relation_index_160",
+          "relation_index_161",
+          "relation_index_162",
+          "relation_index_163",
+          "relation_index_164",
+          "relation_index_165",
+          "relation_index_166",
+          "relation_index_167",
+          "relation_index_168",
+          "relation_index_169",
+          "relation_index_170",
+          "relation_index_171",
+          "relation_index_172",
+          "relation_index_173",
+          "relation_index_174",
+          "relation_index_175",
+          "relation_index_176",
+          "relation_index_177",
+          "relation_index_178",
+          "relation_index_179",
+          "relation_index_180",
+          "relation_index_181",
+          "relation_index_182",
+          "relation_index_183",
+          "relation_index_184",
+          "relation_index_185",
+          "relation_index_186",
+          "relation_index_187",
+          "relation_index_188",
+          "relation_index_189",
+          "relation_index_190",
+          "relation_index_191",
+          "relation_index_192",
+          "relation_index_193",
+          "relation_index_194",
+          "relation_index_195",
+          "relation_index_224",
+          "relation_index_225",
+          "relation_index_226",
+          "relation_index_227",
+          "relation_index_228",
+          "relation_index_229",
+          "relation_index_230",
+          "relation_index_231",
+          "relation_index_232",
+          "relation_index_233",
+          "relation_index_234",
+          "relation_index_235",
+          "relation_index_236",
+          "relation_index_237",
+          "relation_index_238",
+          "relation_index_239",
+          "relation_index_240",
+          "relation_index_241",
+          "relation_index_242",
+          "relation_index_243",
+          "relation_index_244",
+          "relation_index_245",
+          "relation_index_246",
+          "relation_index_247",
+          "relation_index_248",
+          "relation_index_249",
+          "relation_index_250",
+          "relation_index_251",
+          "relation_index_252",
+          "relation_index_253",
+          "relation_index_254",
+          "relation_index_255",
+          "relation_index_256",
+          "relation_index_257",
+          "relation_index_258",
+          "relation_index_259"
+        ]
+      },
+      "notes": "adapter_from_legacy_path_hypothesis_plus_optional_geodesic",
+      "regions_traversed": [
+        "region_3",
+        "region_5"
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    {
+      "path_family_id": "rpath_IMG_4323_region_5_to_region_8_k01",
+      "path_family": "region_region",
+      "path_type": "region_to_region",
+      "agent_model": {
+        "class": "generic_box",
+        "footprint_m": 0.45,
+        "clearance_m": 0.15
+      },
+      "endpoints": {
+        "start": {
+          "kind": "region",
+          "id": "region_5",
+          "manifold": "anchor_uv",
+          "display_label": "building (region_5)"
+        },
+        "goal": {
+          "kind": "region",
+          "id": "region_8",
+          "manifold": "anchor_uv",
+          "display_label": "dark (region_8)"
+        }
+      },
+      "traversability_field_ref": "scene_graph/grounded_sam2/IMG_4323_paths/path_cost_map.npy",
+      "traversability_speed_map_ref": "scene_graph/grounded_sam2/IMG_4323_paths/path_traversability_speed.npy",
+      "hypotheses": [
+        {
+          "hypothesis_id": "rpath_IMG_4323_region_5_to_region_8_k01_h0",
+          "legacy_path_id": "rpath_IMG_4323_region_5_to_region_8_k01",
+          "polyline_2d": [
+            [
+              778.0,
+              666.0
+            ],
+            [
+              36.0,
+              778.0
+            ],
+            [
+              43.0,
+              781.0
+            ]
+          ],
+          "corridor": null,
+          "topology_hint": {
+            "regions_traversed": [
+              "region_5",
+              "region_8"
+            ]
+          },
+          "scores": {
+            "geometric_feasibility": 0.8244222733645226,
+            "depth_consistency": 0.8244222733645226,
+            "relation_consistency": 0.5,
+            "semantic_plausibility": 0.5,
+            "overall_confidence": 0.7759166581198741,
+            "action_fit": 0.575,
+            "hybrid_overall": 0.6822689093458091
+          },
+          "route_kind": "legacy_primary"
+        }
+      ],
+      "workflow_conditioning": {
+        "relation_ids": [
+          "relation_index_62",
+          "relation_index_63",
+          "relation_index_64",
+          "relation_index_65",
+          "relation_index_66",
+          "relation_index_67",
+          "relation_index_68",
+          "relation_index_69",
+          "relation_index_84",
+          "relation_index_85",
+          "relation_index_86",
+          "relation_index_87",
+          "relation_index_88",
+          "relation_index_89",
+          "relation_index_108",
+          "relation_index_109",
+          "relation_index_110",
+          "relation_index_111",
+          "relation_index_112",
+          "relation_index_113",
+          "relation_index_114",
+          "relation_index_115",
+          "relation_index_128",
+          "relation_index_129",
+          "relation_index_130",
+          "relation_index_131",
+          "relation_index_132",
+          "relation_index_133",
+          "relation_index_150",
+          "relation_index_151",
+          "relation_index_152",
+          "relation_index_153",
+          "relation_index_154",
+          "relation_index_155",
+          "relation_index_156",
+          "relation_index_157",
+          "relation_index_170",
+          "relation_index_171",
+          "relation_index_172",
+          "relation_index_173",
+          "relation_index_174",
+          "relation_index_175",
+          "relation_index_188",
+          "relation_index_189",
+          "relation_index_190",
+          "relation_index_191",
+          "relation_index_192",
+          "relation_index_193",
+          "relation_index_194",
+          "relation_index_195",
+          "relation_index_208",
+          "relation_index_209",
+          "relation_index_210",
+          "relation_index_211",
+          "relation_index_224",
+          "relation_index_225",
+          "relation_index_226",
+          "relation_index_227",
+          "relation_index_228",
+          "relation_index_229",
+          "relation_index_230",
+          "relation_index_231",
+          "relation_index_232",
+          "relation_index_233",
+          "relation_index_234",
+          "relation_index_235",
+          "relation_index_236",
+          "relation_index_237",
+          "relation_index_238",
+          "relation_index_239",
+          "relation_index_240",
+          "relation_index_241",
+          "relation_index_242",
+          "relation_index_243",
+          "relation_index_244",
+          "relation_index_245",
+          "relation_index_246",
+          "relation_index_247",
+          "relation_index_248",
+          "relation_index_249",
+          "relation_index_250",
+          "relation_index_251",
+          "relation_index_252",
+          "relation_index_253",
+          "relation_index_254",
+          "relation_index_255",
+          "relation_index_256",
+          "relation_index_257",
+          "relation_index_258",
+          "relation_index_259",
+          "relation_index_266",
+          "relation_index_267",
+          "relation_index_268",
+          "relation_index_269",
+          "relation_index_270",
+          "relation_index_271",
+          "relation_index_284",
+          "relation_index_285",
+          "relation_index_286",
+          "relation_index_287",
+          "relation_index_304",
+          "relation_index_305",
+          "relation_index_306",
+          "relation_index_307",
+          "relation_index_308",
+          "relation_index_309",
+          "relation_index_310",
+          "relation_index_311",
+          "relation_index_312",
+          "relation_index_313",
+          "relation_index_314",
+          "relation_index_315"
+        ]
+      },
+      "notes": "adapter_from_legacy_path_hypothesis_plus_optional_geodesic",
+      "regions_traversed": [
+        "region_5",
+        "region_8"
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    {
+      "path_family_id": "rpath_IMG_4323_region_6_to_region_8_k02",
+      "path_family": "region_region",
+      "path_type": "region_to_region",
+      "agent_model": {
+        "class": "generic_box",
+        "footprint_m": 0.45,
+        "clearance_m": 0.15
+      },
+      "endpoints": {
+        "start": {
+          "kind": "region",
+          "id": "region_6",
+          "manifold": "anchor_uv",
+          "display_label": "tree (region_6)"
+        },
+        "goal": {
+          "kind": "region",
+          "id": "region_8",
+          "manifold": "anchor_uv",
+          "display_label": "dark (region_8)"
+        }
+      },
+      "traversability_field_ref": "scene_graph/grounded_sam2/IMG_4323_paths/path_cost_map.npy",
+      "traversability_speed_map_ref": "scene_graph/grounded_sam2/IMG_4323_paths/path_traversability_speed.npy",
+      "hypotheses": [
+        {
+          "hypothesis_id": "rpath_IMG_4323_region_6_to_region_8_k02_h0",
+          "legacy_path_id": "rpath_IMG_4323_region_6_to_region_8_k02",
+          "polyline_2d": [
+            [
+              482.0,
+              755.0
+            ],
+            [
+              489.0,
+              766.0
+            ],
+            [
+              36.0,
+              778.0
+            ],
+            [
+              43.0,
+              781.0
+            ]
+          ],
+          "corridor": null,
+          "topology_hint": {
+            "regions_traversed": [
+              "region_6",
+              "region_5",
+              "region_8"
+            ]
+          },
+          "scores": {
+            "geometric_feasibility": 0.7047688908291817,
+            "depth_consistency": 0.7047688908291817,
+            "relation_consistency": 0.5,
+            "semantic_plausibility": 0.5,
+            "overall_confidence": 0.7151187206304814,
+            "action_fit": 0.575,
+            "hybrid_overall": 0.6344075563316728
+          },
+          "route_kind": "legacy_primary"
+        }
+      ],
+      "workflow_conditioning": {
+        "relation_ids": [
+          "relation_index_70",
+          "relation_index_71",
+          "relation_index_72",
+          "relation_index_73",
+          "relation_index_74",
+          "relation_index_75",
+          "relation_index_84",
+          "relation_index_85",
+          "relation_index_86",
+          "relation_index_87",
+          "relation_index_88",
+          "relation_index_89",
+          "relation_index_116",
+          "relation_index_117",
+          "relation_index_118",
+          "relation_index_119",
+          "relation_index_120",
+          "relation_index_121",
+          "relation_index_128",
+          "relation_index_129",
+          "relation_index_130",
+          "relation_index_131",
+          "relation_index_132",
+          "relation_index_133",
+          "relation_index_158",
+          "relation_index_159",
+          "relation_index_160",
+          "relation_index_161",
+          "relation_index_162",
+          "relation_index_163",
+          "relation_index_170",
+          "relation_index_171",
+          "relation_index_172",
+          "relation_index_173",
+          "relation_index_174",
+          "relation_index_175",
+          "relation_index_196",
+          "relation_index_197",
+          "relation_index_198",
+          "relation_index_199",
+          "relation_index_200",
+          "relation_index_201",
+          "relation_index_208",
+          "relation_index_209",
+          "relation_index_210",
+          "relation_index_211",
+          "relation_index_224",
+          "relation_index_225",
+          "relation_index_226",
+          "relation_index_227",
+          "relation_index_228",
+          "relation_index_229",
+          "relation_index_238",
+          "relation_index_239",
+          "relation_index_240",
+          "relation_index_241",
+          "relation_index_242",
+          "relation_index_243",
+          "relation_index_244",
+          "relation_index_245",
+          "relation_index_260",
+          "relation_index_261",
+          "relation_index_262",
+          "relation_index_263",
+          "relation_index_264",
+          "relation_index_265",
+          "relation_index_266",
+          "relation_index_267",
+          "relation_index_268",
+          "relation_index_269",
+          "relation_index_270",
+          "relation_index_271",
+          "relation_index_272",
+          "relation_index_273",
+          "relation_index_274",
+          "relation_index_275",
+          "relation_index_276",
+          "relation_index_277",
+          "relation_index_278",
+          "relation_index_279",
+          "relation_index_280",
+          "relation_index_281",
+          "relation_index_282",
+          "relation_index_283",
+          "relation_index_284",
+          "relation_index_285",
+          "relation_index_286",
+          "relation_index_287",
+          "relation_index_304",
+          "relation_index_305",
+          "relation_index_306",
+          "relation_index_307",
+          "relation_index_308",
+          "relation_index_309",
+          "relation_index_310",
+          "relation_index_311",
+          "relation_index_312",
+          "relation_index_313",
+          "relation_index_314",
+          "relation_index_315"
+        ]
+      },
+      "notes": "adapter_from_legacy_path_hypothesis_plus_optional_geodesic",
+      "regions_traversed": [
+        "region_6",
+        "region_5",
+        "region_8"
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    {
+      "path_family_id": "opath_IMG_4323_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01",
+      "path_family": "object_object",
+      "path_type": "object_to_object",
+      "agent_model": {
+        "class": "generic_box",
+        "footprint_m": 0.45,
+        "clearance_m": 0.15
+      },
+      "endpoints": {
+        "start": {
+          "kind": "object",
+          "id": "grounded_sam2_obj_2_GroundedSAM2",
+          "manifold": "centroid_uv",
+          "display_label": "face (grounded_sam2_obj_2_GroundedSAM2)"
+        },
+        "goal": {
+          "kind": "object",
+          "id": "grounded_sam2_obj_3_GroundedSAM2",
+          "manifold": "centroid_uv",
+          "display_label": "sculpture yellow (grounded_sam2_obj_3_GroundedSAM2)"
+        }
+      },
+      "traversability_field_ref": "scene_graph/grounded_sam2/IMG_4323_paths/path_cost_map.npy",
+      "traversability_speed_map_ref": "scene_graph/grounded_sam2/IMG_4323_paths/path_traversability_speed.npy",
+      "hypotheses": [
+        {
+          "hypothesis_id": "opath_IMG_4323_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01_h0",
+          "legacy_path_id": "opath_IMG_4323_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01",
+          "polyline_2d": [
+            [
+              858.0,
+              700.0
+            ],
+            [
+              858.0,
+              700.0
+            ]
+          ],
+          "corridor": null,
+          "topology_hint": {
+            "regions_traversed": [
+              "region_1"
+            ]
+          },
+          "scores": {
+            "geometric_feasibility": 1.0,
+            "depth_consistency": 1.0,
+            "relation_consistency": 0.6,
+            "semantic_plausibility": 0.6,
+            "image_alignment_score": 0.4782528877258301,
+            "overall_confidence": 0.6958143234252929,
+            "motion_primary_score": 0.7,
+            "depth_alignment_score": 1.0,
+            "action_fit": 0.625,
+            "hybrid_overall": 0.6940204620361329
+          },
+          "route_kind": "legacy_primary"
+        }
+      ],
+      "workflow_conditioning": {
+        "relation_ids": [
+          "relation_index_0",
+          "relation_index_1",
+          "relation_index_6",
+          "relation_index_7",
+          "relation_index_10",
+          "relation_index_11",
+          "relation_index_12",
+          "relation_index_13",
+          "relation_index_14",
+          "relation_index_15",
+          "relation_index_16",
+          "relation_index_17",
+          "relation_index_18",
+          "relation_index_19",
+          "relation_index_21",
+          "relation_index_22",
+          "relation_index_25",
+          "relation_index_26",
+          "relation_index_30",
+          "relation_index_31",
+          "relation_index_32",
+          "relation_index_33",
+          "relation_index_34",
+          "relation_index_35",
+          "relation_index_38",
+          "relation_index_39"
+        ]
+      },
+      "notes": "adapter_from_legacy_path_hypothesis_plus_optional_geodesic",
+      "regions_traversed": [
+        "region_1"
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,1028 @@
+{
+  "schema": "citv_trajectory_viz_v2_manifest_v3",
+  "path_stem": "IMG_4000",
+  "draw_scope": "all_valid",
+  "prefer_geodesic": true,
+  "truncated": false,
+  "total_candidates": 98,
+  "drawn_count": 98,
+  "max_paths": 500,
+  "ink_bgr": [
+    15,
+    15,
+    15
+  ],
+  "outline_enabled": false,
+  "paths": [
+    {
+      "path_id": "rpath_IMG_4000_region_5_to_region_24_k02",
+      "path_num": 98,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6215761526471786
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_5_to_region_12_k02",
+      "path_num": 97,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6308595883530012
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_5_to_region_26_k02",
+      "path_num": 96,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.63853352933892
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_29_k01",
+      "path_num": 95,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.644083484660031
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_29_k01",
+      "path_num": 94,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6485242605594028
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_5_to_region_17_k02",
+      "path_num": 93,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6503790079224867
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_29_k01",
+      "path_num": 92,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.65142123321629
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_20_to_region_29_k01",
+      "path_num": 91,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6531368099333996
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_24_to_region_29_k01",
+      "path_num": 90,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.653771710039956
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_5_to_region_25_k02",
+      "path_num": 89,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6634239213086434
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_27_to_region_34_k01",
+      "path_num": 88,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6642681299446759
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_29_k01",
+      "path_num": 87,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6702729596356848
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_19_to_region_30_k02",
+      "path_num": 86,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6716487779274085
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_20_to_region_26_k01",
+      "path_num": 85,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6836308891410272
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_24_k01",
+      "path_num": 84,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.683838400690308
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_34_k01",
+      "path_num": 83,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6855401462762414
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_34_k02",
+      "path_num": 82,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6856665523888796
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_20_to_region_24_k01",
+      "path_num": 81,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6914552793171379
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_19_to_region_24_k01",
+      "path_num": 80,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6930139033651738
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_5_to_region_13_k01",
+      "path_num": 79,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.696555703109843
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_5_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01",
+      "path_num": 77,
+      "polyline_source": "polyline_2d",
+      "point_count": 2,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6968170912663538
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01",
+      "path_num": 78,
+      "polyline_source": "polyline_2d",
+      "point_count": 2,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6968170912663538
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_10_GroundedSAM2_k01",
+      "path_num": 75,
+      "polyline_source": "polyline_2d",
+      "point_count": 2,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6975054035186768
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_10_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01",
+      "path_num": 76,
+      "polyline_source": "polyline_2d",
+      "point_count": 2,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6975054035186768
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_26_to_region_34_k01",
+      "path_num": 74,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6979573640077495
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_24_to_region_31_k02",
+      "path_num": 73,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6997538419099667
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_19_to_region_26_k01",
+      "path_num": 72,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7010936725113406
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_26_k01",
+      "path_num": 71,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7021832749553101
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_18_to_region_26_k01",
+      "path_num": 70,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7028835799368286
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_19_to_region_22_k01",
+      "path_num": 69,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7045077612192351
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_26_k01",
+      "path_num": 68,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.707207791188208
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_12_k01",
+      "path_num": 67,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7083386287334199
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_25_to_region_34_k01",
+      "path_num": 66,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7086014544175718
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_24_to_region_27_k01",
+      "path_num": 65,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7096975564093547
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_19_to_region_27_k01",
+      "path_num": 64,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7104055540163545
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_26_to_region_31_k03",
+      "path_num": 63,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7105613742421255
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_26_k01",
+      "path_num": 62,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.711737479908046
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_23_to_region_26_k01",
+      "path_num": 61,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7140804642381953
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_20_k01",
+      "path_num": 60,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7184575076895372
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_30_k02",
+      "path_num": 59,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7190877090273406
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_24_to_region_34_k01",
+      "path_num": 58,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7194684760585152
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_23_to_region_27_k01",
+      "path_num": 57,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7214459383918783
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_24_k01",
+      "path_num": 56,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7217635331030161
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_15_k01",
+      "path_num": 55,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.724163895568183
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+      "path_num": 54,
+      "polyline_source": "polyline_geodesic_2d",
+      "point_count": 96,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7257134185219543
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_26_to_region_30_k03",
+      "path_num": 53,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7259029753875457
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_19_to_region_25_k01",
+      "path_num": 52,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7262712563755546
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_9_to_region_30_k02",
+      "path_num": 51,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7268848435448649
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_15_k01",
+      "path_num": 50,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7269071633271809
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_22_to_region_23_k01",
+      "path_num": 49,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7280248812583668
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_18_to_region_30_k02",
+      "path_num": 48,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7283809561365684
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_16_k01",
+      "path_num": 47,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7284570537492732
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_12_GroundedSAM2_k01",
+      "path_num": 45,
+      "polyline_source": "polyline_geodesic_2d",
+      "point_count": 96,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7305805637025764
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_12_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+      "path_num": 46,
+      "polyline_source": "polyline_geodesic_2d",
+      "point_count": 96,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7305805637025764
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_26_to_region_34_k03",
+      "path_num": 44,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7313480294464045
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_20_k01",
+      "path_num": 43,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7315516936382196
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_12_GroundedSAM2_k01",
+      "path_num": 42,
+      "polyline_source": "polyline_geodesic_2d",
+      "point_count": 96,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.732151929546982
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_30_k02",
+      "path_num": 41,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.732319783918515
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_24_to_region_30_k02",
+      "path_num": 40,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7325053598743225
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_24_k01",
+      "path_num": 39,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7330915448202033
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_25_to_region_31_k02",
+      "path_num": 38,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7337528155495374
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_21_to_region_33_k01",
+      "path_num": 37,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7357905607976429
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_7_k01",
+      "path_num": 36,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7360336132232186
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_24_k01",
+      "path_num": 35,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7386119770211277
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_25_to_region_30_k02",
+      "path_num": 34,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.74158267954726
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_18_to_region_27_k01",
+      "path_num": 33,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7426307043674345
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_24_k01",
+      "path_num": 32,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.743068271994948
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_25_k01",
+      "path_num": 31,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7434315100369816
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_18_to_region_25_k01",
+      "path_num": 30,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7437608529811162
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_25_k01",
+      "path_num": 29,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7442362798810911
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_20_k01",
+      "path_num": 28,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7456918500584919
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_13_GroundedSAM2_to_grounded_sam2_obj_8_GroundedSAM2_k01",
+      "path_num": 27,
+      "polyline_source": "polyline_geodesic_2d",
+      "point_count": 96,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7478434646603421
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_25_k01",
+      "path_num": 26,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7481213752168018
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_22_k01",
+      "path_num": 25,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.748512619406605
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_27_k01",
+      "path_num": 24,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7547887603530141
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_25_to_region_34_k02",
+      "path_num": 23,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7594716819485652
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_30_k02",
+      "path_num": 22,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7614648875600967
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_17_k01",
+      "path_num": 21,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.762079528071024
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_23_to_region_24_k01",
+      "path_num": 20,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7621644453267153
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_27_k01",
+      "path_num": 19,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.762456200534295
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_24_to_region_34_k02",
+      "path_num": 18,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7657453996903861
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_27_k01",
+      "path_num": 17,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7674461500370158
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_22_k01",
+      "path_num": 16,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7701114591598122
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_8_GroundedSAM2_to_grounded_sam2_obj_13_GroundedSAM2_k01",
+      "path_num": 15,
+      "polyline_source": "polyline_geodesic_2d",
+      "point_count": 96,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.770666378287172
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_27_k01",
+      "path_num": 14,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7724858206181331
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_9_to_region_16_k01",
+      "path_num": 13,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7733348639625122
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_22_k01",
+      "path_num": 12,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7743907495514697
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_20_k01",
+      "path_num": 11,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.77478145377296
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_22_k01",
+      "path_num": 10,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7785884862700665
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_17_k01",
+      "path_num": 9,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7787393170228023
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_30_k02",
+      "path_num": 8,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7830782111447886
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_17_k01",
+      "path_num": 7,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7858140279348629
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01",
+      "path_num": 6,
+      "polyline_source": "polyline_geodesic_2d",
+      "point_count": 96,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7872662003438076
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_20_to_region_34_k01",
+      "path_num": 5,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7967500000000001
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_10_k01",
+      "path_num": 4,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.8010022542288333
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_27_k01",
+      "path_num": 3,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.8057984911779199
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_22_k01",
+      "path_num": 2,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.812503758369095
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_17_k01",
+      "path_num": 1,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.8267500000000001
+    }
+  ],
+  "files": {
+    "all_ink": "scene_graph/grounded_sam2/IMG_4000_paths/trajectory_viz_v2/traj_v2_all_ink.png",
+    "all_ink_context": "scene_graph/grounded_sam2/IMG_4000_paths/trajectory_viz_v2/traj_v2_all_ink_context.png",
+    "topk_ink_context": "scene_graph/grounded_sam2/IMG_4000_paths/trajectory_viz_v2/traj_v2_topK_ink_context.png",
+    "geodesic_compare": "scene_graph/grounded_sam2/IMG_4000_paths/trajectory_viz_v2/traj_v2_geodesic_compare.png",
+    "alternates_faint": "scene_graph/grounded_sam2/IMG_4000_paths/trajectory_viz_v2/traj_v2_alternates_faint.png",
+    "underlay_final": "scene_graph/grounded_sam2/IMG_4000_paths/trajectory_viz_v2/traj_v2_underlay_final.png",
+    "underlay_final_context": "scene_graph/grounded_sam2/IMG_4000_paths/trajectory_viz_v2/traj_v2_underlay_final_context.png",
+    "suppressed_residual": "scene_graph/grounded_sam2/IMG_4000_paths/trajectory_viz_v2/traj_v2_suppressed_residual.png"
+  },
+  "phase2": {
+    "topk": 8,
+    "geodesic_compare_path_count": 7
+  },
+  "phase3": {
+    "enabled": true,
+    "layer_counts_plain": {
+      "all_candidates_drawn": 98,
+      "recommended_drawn": 98,
+      "final_ink_drawn": 12
+    },
+    "layer_counts_context": {
+      "all_candidates_drawn": 98,
+      "recommended_drawn": 98,
+      "final_ink_drawn": 12
+    },
+    "suppressed_paths_drawn": 0,
+    "final_top": 12,
+    "all_layer_polyline_2d_only": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "batch_size": 3,
+  "total_paths": 5,
+  "batches": [
+    {
+      "batch_num": 1,
+      "index_start": 1,
+      "index_end": 3,
+      "image": "scene_graph/grounded_sam2/IMG_4323_paths/images/context_triplets/01_paths_001_003.png",
+      "path_ids": [
+        "rpath_IMG_4323_region_3_to_region_5_k01",
+        "rpath_IMG_4323_region_5_to_region_8_k01",
+        "rpath_IMG_4323_region_6_to_region_8_k02"
+      ],
+      "path_nums": [
+        1,
+        2,
+        3
+      ],
+      "summaries": [
+        "P1: animation (region_3) -> building (region_5) via region_3, region_5",
+        "P2: building (region_5) -> dark (region_8) via region_5, region_8",
+        "P3: tree (region_6) -> dark (region_8) via region_6, region_5, region_8"
+      ]
+    },
+    {
+      "batch_num": 2,
+      "index_start": 4,
+      "index_end": 5,
+      "image": "scene_graph/grounded_sam2/IMG_4323_paths/images/context_triplets/02_paths_004_005.png",
+      "path_ids": [
+        "opath_IMG_4323_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01",
+        "rpath_IMG_4323_region_1_to_region_5_k02"
+      ],
+      "path_nums": [
+        4,
+        5
+      ],
+      "summaries": [
+        "P4: face (grounded_sam2_obj\u2026 -> sculpture yellow (groun\u2026 via region_1",
+        "P5: building (region_1) -> building (region_5) via region_1, region_7, region_5"
+      ]
+    }
+  ]
+}

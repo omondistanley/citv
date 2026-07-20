@@ -1,0 +1,174 @@
+{
+  "batch_size": 3,
+  "total_paths": 24,
+  "batches": [
+    {
+      "batch_num": 1,
+      "index_start": 1,
+      "index_end": 3,
+      "image": "scene_graph/grounded_sam2/scene_upload_paths/images/context_triplets/01_paths_001_003.png",
+      "path_ids": [
+        "rpath_scene_upload_region_3_to_region_9_k01",
+        "opath_scene_upload_grounded_sam2_obj_31_GroundedSAM2_to_grounded_sam2_obj_23_GroundedSAM2_k01",
+        "opath_scene_upload_grounded_sam2_obj_30_GroundedSAM2_to_grounded_sam2_obj_23_GroundedSAM2_k01"
+      ],
+      "path_nums": [
+        1,
+        2,
+        3
+      ],
+      "summaries": [
+        "P1: boulder (region_3) -> explosion (region_9) via region_3, region_9",
+        "P2: creek (grounded_sam2_ob\u2026 -> creek (grounded_sam2_ob\u2026 via region_4",
+        "P3: creek (grounded_sam2_ob\u2026 -> creek (grounded_sam2_ob\u2026 via region_4"
+      ]
+    },
+    {
+      "batch_num": 2,
+      "index_start": 4,
+      "index_end": 6,
+      "image": "scene_graph/grounded_sam2/scene_upload_paths/images/context_triplets/02_paths_004_006.png",
+      "path_ids": [
+        "opath_scene_upload_grounded_sam2_obj_27_GroundedSAM2_to_grounded_sam2_obj_23_GroundedSAM2_k01",
+        "opath_scene_upload_grounded_sam2_obj_33_GroundedSAM2_to_grounded_sam2_obj_6_GroundedSAM2_k01",
+        "rpath_scene_upload_region_4_to_region_14_k01"
+      ],
+      "path_nums": [
+        4,
+        5,
+        6
+      ],
+      "summaries": [
+        "P4: creek (grounded_sam2_ob\u2026 -> creek (grounded_sam2_ob\u2026 via region_4",
+        "P5: fern (grounded_sam2_obj\u2026 -> fern (grounded_sam2_obj\u2026 via region_3",
+        "P6: creek (region_4) -> green | tree (region_14) via region_4, region_14"
+      ]
+    },
+    {
+      "batch_num": 3,
+      "index_start": 7,
+      "index_end": 9,
+      "image": "scene_graph/grounded_sam2/scene_upload_paths/images/context_triplets/03_paths_007_009.png",
+      "path_ids": [
+        "opath_scene_upload_grounded_sam2_obj_31_GroundedSAM2_to_grounded_sam2_obj_24_GroundedSAM2_k01",
+        "opath_scene_upload_grounded_sam2_obj_27_GroundedSAM2_to_grounded_sam2_obj_24_GroundedSAM2_k01",
+        "opath_scene_upload_grounded_sam2_obj_23_GroundedSAM2_to_grounded_sam2_obj_24_GroundedSAM2_k01"
+      ],
+      "path_nums": [
+        7,
+        8,
+        9
+      ],
+      "summaries": [
+        "P7: creek (grounded_sam2_ob\u2026 -> creek (grounded_sam2_ob\u2026 via region_4",
+        "P8: creek (grounded_sam2_ob\u2026 -> creek (grounded_sam2_ob\u2026 via region_4",
+        "P9: creek (grounded_sam2_ob\u2026 -> creek (grounded_sam2_ob\u2026 via region_4"
+      ]
+    },
+    {
+      "batch_num": 4,
+      "index_start": 10,
+      "index_end": 12,
+      "image": "scene_graph/grounded_sam2/scene_upload_paths/images/context_triplets/04_paths_010_012.png",
+      "path_ids": [
+        "opath_scene_upload_grounded_sam2_obj_24_GroundedSAM2_to_grounded_sam2_obj_23_GroundedSAM2_k01",
+        "opath_scene_upload_grounded_sam2_obj_30_GroundedSAM2_to_grounded_sam2_obj_24_GroundedSAM2_k01",
+        "rpath_scene_upload_region_14_to_region_15_k01"
+      ],
+      "path_nums": [
+        10,
+        11,
+        12
+      ],
+      "summaries": [
+        "P10: creek (grounded_sam2_ob\u2026 -> creek (grounded_sam2_ob\u2026 via region_4",
+        "P11: creek (grounded_sam2_ob\u2026 -> creek (grounded_sam2_ob\u2026 via region_4",
+        "P12: green | tree (region_14) -> green | lettuce (region\u2026 via region_14, region_4, region_15"
+      ]
+    },
+    {
+      "batch_num": 5,
+      "index_start": 13,
+      "index_end": 15,
+      "image": "scene_graph/grounded_sam2/scene_upload_paths/images/context_triplets/05_paths_013_015.png",
+      "path_ids": [
+        "rpath_scene_upload_region_11_to_region_15_k01",
+        "rpath_scene_upload_region_11_to_region_13_k01",
+        "rpath_scene_upload_region_4_to_region_11_k01"
+      ],
+      "path_nums": [
+        13,
+        14,
+        15
+      ],
+      "summaries": [
+        "P13: green | image | plant (\u2026 -> green | lettuce (region\u2026 via region_11, region_4, region_15",
+        "P14: green | image | plant (\u2026 -> animal (region_13) via region_11, region_4, region_13",
+        "P15: creek (region_4) -> green | image | plant (\u2026 via region_4, region_11"
+      ]
+    },
+    {
+      "batch_num": 6,
+      "index_start": 16,
+      "index_end": 18,
+      "image": "scene_graph/grounded_sam2/scene_upload_paths/images/context_triplets/06_paths_016_018.png",
+      "path_ids": [
+        "rpath_scene_upload_region_13_to_region_14_k01",
+        "rpath_scene_upload_region_4_to_region_15_k01",
+        "opath_scene_upload_grounded_sam2_obj_0_GroundedSAM2_to_grounded_sam2_obj_1_GroundedSAM2_k01"
+      ],
+      "path_nums": [
+        16,
+        17,
+        18
+      ],
+      "summaries": [
+        "P16: animal (region_13) -> green | tree (region_14) via region_13, region_4, region_14",
+        "P17: creek (region_4) -> green | lettuce (region\u2026 via region_4, region_15",
+        "P18: boy (grounded_sam2_obj_\u2026 -> child (grounded_sam2_ob\u2026 via region_2"
+      ]
+    },
+    {
+      "batch_num": 7,
+      "index_start": 19,
+      "index_end": 21,
+      "image": "scene_graph/grounded_sam2/scene_upload_paths/images/context_triplets/07_paths_019_021.png",
+      "path_ids": [
+        "opath_scene_upload_grounded_sam2_obj_1_GroundedSAM2_to_grounded_sam2_obj_0_GroundedSAM2_k01",
+        "rpath_scene_upload_region_14_to_region_16_k02",
+        "rpath_scene_upload_region_10_to_region_11_k01"
+      ],
+      "path_nums": [
+        19,
+        20,
+        21
+      ],
+      "summaries": [
+        "P19: child (grounded_sam2_ob\u2026 -> boy (grounded_sam2_obj_\u2026 via region_2",
+        "P20: green | tree (region_14) -> blanket (region_16) via region_14, region_4, region_3, region\u2026",
+        "P21: animal (region_10) -> green | image | plant (\u2026 via region_10, region_4, region_11"
+      ]
+    },
+    {
+      "batch_num": 8,
+      "index_start": 22,
+      "index_end": 24,
+      "image": "scene_graph/grounded_sam2/scene_upload_paths/images/context_triplets/08_paths_022_024.png",
+      "path_ids": [
+        "rpath_scene_upload_region_15_to_region_16_k02",
+        "rpath_scene_upload_region_13_to_region_16_k02",
+        "rpath_scene_upload_region_4_to_region_16_k02"
+      ],
+      "path_nums": [
+        22,
+        23,
+        24
+      ],
+      "summaries": [
+        "P22: green | lettuce (region\u2026 -> blanket (region_16) via region_15, region_4, region_3, region\u2026",
+        "P23: animal (region_13) -> blanket (region_16) via region_13, region_4, region_3, region\u2026",
+        "P24: creek (region_4) -> blanket (region_16) via region_4, region_3, region_16"
+      ]
+    }
+  ]
+}

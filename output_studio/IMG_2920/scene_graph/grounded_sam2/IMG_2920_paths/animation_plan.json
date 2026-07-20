@@ -1,0 +1,219 @@
+{
+  "fps": 24,
+  "paths": [
+    {
+      "path_id": "rpath_IMG_2920_region_2_to_region_6_k02",
+      "path_num": 1,
+      "action_fit_confidence": 0.7479195501063929,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "walk",
+          "t0_s": 0.5,
+          "t1_s": 5.912762898007275
+        }
+      ],
+      "trajectory_points": [
+        [
+          168,
+          309
+        ],
+        [
+          431,
+          49
+        ],
+        [
+          368,
+          54
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG_2920_region_2_to_region_6_k02"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "walk",
+          "path_id": "rpath_IMG_2920_region_2_to_region_6_k02"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 5.912762898007275
+    },
+    {
+      "path_id": "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01",
+      "path_num": 2,
+      "action_fit_confidence": 0.6978596706390382,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "walk",
+          "t0_s": 0.5,
+          "t1_s": 0.5
+        }
+      ],
+      "trajectory_points": [
+        [
+          263,
+          447
+        ],
+        [
+          263,
+          447
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "walk",
+          "path_id": "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 0.5
+    },
+    {
+      "path_id": "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+      "path_num": 3,
+      "action_fit_confidence": 0.6978596706390382,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "walk",
+          "t0_s": 0.5,
+          "t1_s": 0.5
+        }
+      ],
+      "trajectory_points": [
+        [
+          263,
+          447
+        ],
+        [
+          263,
+          447
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "walk",
+          "path_id": "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 0.5
+    },
+    {
+      "path_id": "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01",
+      "path_num": 4,
+      "action_fit_confidence": 0.6978596706390382,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "walk",
+          "t0_s": 0.5,
+          "t1_s": 0.5
+        }
+      ],
+      "trajectory_points": [
+        [
+          263,
+          447
+        ],
+        [
+          263,
+          447
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "walk",
+          "path_id": "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 0.5
+    },
+    {
+      "path_id": "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+      "path_num": 5,
+      "action_fit_confidence": 0.6978596706390382,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "walk",
+          "t0_s": 0.5,
+          "t1_s": 0.5
+        }
+      ],
+      "trajectory_points": [
+        [
+          263,
+          447
+        ],
+        [
+          263,
+          447
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "walk",
+          "path_id": "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 0.5
+    }
+  ]
+}

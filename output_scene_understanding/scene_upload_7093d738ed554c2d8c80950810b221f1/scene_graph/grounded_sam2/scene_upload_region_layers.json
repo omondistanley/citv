@@ -1,0 +1,137 @@
+{
+  "ordering": [
+    {
+      "id": "region_2",
+      "label": "blue | boy | floor | hole | land | log | man | puddle | stone | selfie | shirt | stand | stump | tree trunk",
+      "layer_type": "foreground",
+      "z_mean": 8.7434
+    },
+    {
+      "id": "region_1",
+      "label": "bird",
+      "layer_type": "foreground",
+      "z_mean": 10.8057
+    },
+    {
+      "id": "region_3",
+      "label": "boulder",
+      "layer_type": "midground",
+      "z_mean": 12.7196
+    },
+    {
+      "id": "region_9",
+      "label": "explosion",
+      "layer_type": "midground",
+      "z_mean": 16.3668
+    },
+    {
+      "id": "region_7",
+      "label": "green",
+      "layer_type": "midground",
+      "z_mean": 16.4949
+    },
+    {
+      "id": "region_8",
+      "label": "animal",
+      "layer_type": "midground",
+      "z_mean": 17.2458
+    },
+    {
+      "id": "region_5",
+      "label": "animal",
+      "layer_type": "background",
+      "z_mean": 18.4409
+    },
+    {
+      "id": "region_4",
+      "label": "creek",
+      "layer_type": "background",
+      "z_mean": 19.1764
+    },
+    {
+      "id": "region_6",
+      "label": "flower",
+      "layer_type": "background",
+      "z_mean": 20.6695
+    },
+    {
+      "id": "region_14",
+      "label": "green | tree",
+      "layer_type": "background",
+      "z_mean": 23.2223
+    },
+    {
+      "id": "region_12",
+      "label": "green | sky",
+      "layer_type": "background",
+      "z_mean": 23.3325
+    },
+    {
+      "id": "region_13",
+      "label": "animal",
+      "layer_type": "background",
+      "z_mean": 23.3662
+    },
+    {
+      "id": "region_11",
+      "label": "green | image | plant",
+      "layer_type": "background",
+      "z_mean": 23.8196
+    },
+    {
+      "id": "region_15",
+      "label": "green | lettuce",
+      "layer_type": "background",
+      "z_mean": 24.2098
+    },
+    {
+      "id": "region_10",
+      "label": "animal",
+      "layer_type": "background",
+      "z_mean": 24.9777
+    },
+    {
+      "id": "region_16",
+      "label": "blanket",
+      "layer_type": "background",
+      "z_mean": 26.8927
+    }
+  ],
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "region_ids": [
+        "region_1",
+        "region_2"
+      ]
+    },
+    {
+      "layer_type": "midground",
+      "region_ids": [
+        "region_3",
+        "region_7",
+        "region_8",
+        "region_9"
+      ]
+    },
+    {
+      "layer_type": "background",
+      "region_ids": [
+        "region_4",
+        "region_5",
+        "region_6",
+        "region_10",
+        "region_11",
+        "region_12",
+        "region_13",
+        "region_14",
+        "region_15",
+        "region_16"
+      ]
+    }
+  ],
+  "depth_quantiles": {
+    "q1": 12.1983,
+    "q2": 17.9727
+  }
+}

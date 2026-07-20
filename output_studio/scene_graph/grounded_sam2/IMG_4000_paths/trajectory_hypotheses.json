@@ -1,0 +1,572 @@
+{
+  "schema": "citv_trajectory_hypotheses_bundle_v1",
+  "version": "1.0",
+  "image_stem": "IMG_4000",
+  "track": "grounded_sam2",
+  "image_size": {
+    "width": 1280,
+    "height": 853
+  },
+  "hypotheses": [
+    {
+      "trajectory_id": "traj_IMG_4000_grounded_sam2_obj_0_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_0_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "animal bird"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG_4000_grounded_sam2_obj_0_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 659.6884155273438,
+              "y_px": 641.5520629882812,
+              "theta_rad": 0.2524966584357261,
+              "z_m": 11.67
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 665.4981658438007,
+              "y_px": 643.0509963625273,
+              "theta_rad": 0.2524966584357261,
+              "z_m": 11.67
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG_4000_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_0",
+          "relation_index_1",
+          "relation_index_2",
+          "relation_index_3",
+          "relation_index_4",
+          "relation_index_5",
+          "relation_index_6",
+          "relation_index_7",
+          "relation_index_8",
+          "relation_index_18",
+          "relation_index_28",
+          "relation_index_38",
+          "relation_index_43",
+          "relation_index_51",
+          "relation_index_59",
+          "relation_index_70",
+          "relation_index_82",
+          "relation_index_95",
+          "relation_index_102",
+          "relation_index_110",
+          "relation_index_123",
+          "relation_index_132",
+          "relation_index_142",
+          "relation_index_147"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    },
+    {
+      "trajectory_id": "traj_IMG_4000_grounded_sam2_obj_1_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_1_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "animal bird"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG_4000_grounded_sam2_obj_1_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 600.5807495117188,
+              "y_px": 615.5457153320312,
+              "theta_rad": 0.44572792673883493,
+              "z_m": 13.375
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 605.9945320186367,
+              "y_px": 618.1324041358475,
+              "theta_rad": 0.44572792673883493,
+              "z_m": 13.375
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG_4000_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_0",
+          "relation_index_8",
+          "relation_index_9",
+          "relation_index_10",
+          "relation_index_11",
+          "relation_index_12",
+          "relation_index_13",
+          "relation_index_14",
+          "relation_index_15",
+          "relation_index_17",
+          "relation_index_27",
+          "relation_index_44",
+          "relation_index_49",
+          "relation_index_60",
+          "relation_index_79",
+          "relation_index_81",
+          "relation_index_124",
+          "relation_index_131",
+          "relation_index_148"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    },
+    {
+      "trajectory_id": "traj_IMG_4000_grounded_sam2_obj_2_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_2_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "animal bird horse"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG_4000_grounded_sam2_obj_2_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 400.5848693847656,
+              "y_px": 609.3831176757812,
+              "theta_rad": -2.835524092504572,
+              "z_m": 15.012
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 394.86371622597227,
+              "y_px": 607.5752441919255,
+              "theta_rad": -2.835524092504572,
+              "z_m": 15.012
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG_4000_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_12",
+          "relation_index_16",
+          "relation_index_17",
+          "relation_index_18",
+          "relation_index_19",
+          "relation_index_20",
+          "relation_index_21",
+          "relation_index_22",
+          "relation_index_23",
+          "relation_index_25",
+          "relation_index_54",
+          "relation_index_80",
+          "relation_index_127",
+          "relation_index_129",
+          "relation_index_152",
+          "relation_index_153"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    },
+    {
+      "trajectory_id": "traj_IMG_4000_grounded_sam2_obj_3_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_3_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "chair"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG_4000_grounded_sam2_obj_3_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 56.09702682495117,
+              "y_px": 800.4014892578125,
+              "theta_rad": 1.8611326220383881,
+              "z_m": 5.621
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 54.379380054232826,
+              "y_px": 806.1503751995442,
+              "theta_rad": 1.8611326220383881,
+              "z_m": 5.621
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG_4000_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_24",
+          "relation_index_25",
+          "relation_index_26",
+          "relation_index_27",
+          "relation_index_28",
+          "relation_index_29",
+          "relation_index_30",
+          "relation_index_31",
+          "relation_index_128",
+          "relation_index_154",
+          "relation_index_155"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    },
+    {
+      "trajectory_id": "traj_IMG_4000_grounded_sam2_obj_4_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_4_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "building"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG_4000_grounded_sam2_obj_4_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 918.8827514648438,
+              "y_px": 494.57373046875,
+              "theta_rad": -2.686039396610021,
+              "z_m": 34.824
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 913.4946449341077,
+              "y_px": 491.9339751745154,
+              "theta_rad": -2.686039396610021,
+              "z_m": 34.824
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG_4000_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_32",
+          "relation_index_33",
+          "relation_index_34",
+          "relation_index_35",
+          "relation_index_36",
+          "relation_index_37",
+          "relation_index_38",
+          "relation_index_39",
+          "relation_index_65",
+          "relation_index_76",
+          "relation_index_89",
+          "relation_index_97",
+          "relation_index_106",
+          "relation_index_114",
+          "relation_index_137",
+          "relation_index_156",
+          "relation_index_157"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    },
+    {
+      "trajectory_id": "traj_IMG_4000_grounded_sam2_obj_5_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_5_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "ledge"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG_4000_grounded_sam2_obj_5_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 662.6904296875,
+              "y_px": 758.0426635742188,
+              "theta_rad": -1.1753197104842035,
+              "z_m": 6.053
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 665.0019180493106,
+              "y_px": 752.5057852521663,
+              "theta_rad": -1.1753197104842035,
+              "z_m": 6.053
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG_4000_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_2",
+          "relation_index_10",
+          "relation_index_22",
+          "relation_index_30",
+          "relation_index_40",
+          "relation_index_41",
+          "relation_index_42",
+          "relation_index_43",
+          "relation_index_44",
+          "relation_index_45",
+          "relation_index_46",
+          "relation_index_47",
+          "relation_index_56",
+          "relation_index_86",
+          "relation_index_120",
+          "relation_index_134",
+          "relation_index_144",
+          "relation_index_172",
+          "relation_index_173"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    },
+    {
+      "trajectory_id": "traj_IMG_4000_grounded_sam2_obj_6_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_6_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "park"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG_4000_grounded_sam2_obj_6_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 620.6861572265625,
+              "y_px": 370.918212890625,
+              "theta_rad": -2.3959599411188632,
+              "z_m": 16.685
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 616.2782044622415,
+              "y_px": 366.8475922466058,
+              "theta_rad": -2.3959599411188632,
+              "z_m": 16.685
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG_4000_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_6",
+          "relation_index_14",
+          "relation_index_20",
+          "relation_index_39",
+          "relation_index_48",
+          "relation_index_49",
+          "relation_index_50",
+          "relation_index_51",
+          "relation_index_52",
+          "relation_index_53",
+          "relation_index_54",
+          "relation_index_55",
+          "relation_index_71",
+          "relation_index_72",
+          "relation_index_84",
+          "relation_index_111",
+          "relation_index_119",
+          "relation_index_160",
+          "relation_index_161",
+          "relation_index_176",
+          "relation_index_177"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    },
+    {
+      "trajectory_id": "traj_IMG_4000_grounded_sam2_obj_7_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_7_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "ledge park"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG_4000_grounded_sam2_obj_7_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 662.5859985351562,
+              "y_px": 757.9901733398438,
+              "theta_rad": -1.1752695832718252,
+              "z_m": 6.054
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 664.8977644423383,
+              "y_px": 752.4534108932156,
+              "theta_rad": -1.1752695832718252,
+              "z_m": 6.054
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG_4000_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_3",
+          "relation_index_11",
+          "relation_index_23",
+          "relation_index_31",
+          "relation_index_40",
+          "relation_index_56",
+          "relation_index_57",
+          "relation_index_58",
+          "relation_index_59",
+          "relation_index_60",
+          "relation_index_61",
+          "relation_index_62",
+          "relation_index_63",
+          "relation_index_87",
+          "relation_index_121",
+          "relation_index_135",
+          "relation_index_145"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG_4000_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    }
+  ]
+}

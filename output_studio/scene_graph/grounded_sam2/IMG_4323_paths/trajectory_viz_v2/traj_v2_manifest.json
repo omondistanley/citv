@@ -1,0 +1,98 @@
+{
+  "schema": "citv_trajectory_viz_v2_manifest_v3",
+  "path_stem": "IMG_4323",
+  "draw_scope": "all_valid",
+  "prefer_geodesic": true,
+  "truncated": false,
+  "total_candidates": 5,
+  "drawn_count": 5,
+  "max_paths": 500,
+  "ink_bgr": [
+    15,
+    15,
+    15
+  ],
+  "outline_enabled": false,
+  "paths": [
+    {
+      "path_id": "rpath_IMG_4323_region_1_to_region_5_k02",
+      "path_num": 5,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6636116790380706
+    },
+    {
+      "path_id": "opath_IMG_4323_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01",
+      "path_num": 4,
+      "polyline_source": "polyline_2d",
+      "point_count": 2,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.6958143234252929
+    },
+    {
+      "path_id": "rpath_IMG_4323_region_6_to_region_8_k02",
+      "path_num": 3,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7151187206304814
+    },
+    {
+      "path_id": "rpath_IMG_4323_region_5_to_region_8_k01",
+      "path_num": 2,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.7759166581198741
+    },
+    {
+      "path_id": "rpath_IMG_4323_region_3_to_region_5_k01",
+      "path_num": 1,
+      "polyline_source": "polyline_2d",
+      "point_count": 24,
+      "drawn": true,
+      "suppressed": false,
+      "suppressed_reason": "",
+      "overall_confidence": 0.8110465029259206
+    }
+  ],
+  "files": {
+    "all_ink": "scene_graph/grounded_sam2/IMG_4323_paths/trajectory_viz_v2/traj_v2_all_ink.png",
+    "all_ink_context": "scene_graph/grounded_sam2/IMG_4323_paths/trajectory_viz_v2/traj_v2_all_ink_context.png",
+    "topk_ink_context": "scene_graph/grounded_sam2/IMG_4323_paths/trajectory_viz_v2/traj_v2_topK_ink_context.png",
+    "geodesic_compare": "scene_graph/grounded_sam2/IMG_4323_paths/trajectory_viz_v2/traj_v2_geodesic_compare.png",
+    "alternates_faint": "scene_graph/grounded_sam2/IMG_4323_paths/trajectory_viz_v2/traj_v2_alternates_faint.png",
+    "underlay_final": "scene_graph/grounded_sam2/IMG_4323_paths/trajectory_viz_v2/traj_v2_underlay_final.png",
+    "underlay_final_context": "scene_graph/grounded_sam2/IMG_4323_paths/trajectory_viz_v2/traj_v2_underlay_final_context.png",
+    "suppressed_residual": "scene_graph/grounded_sam2/IMG_4323_paths/trajectory_viz_v2/traj_v2_suppressed_residual.png"
+  },
+  "phase2": {
+    "topk": 8,
+    "geodesic_compare_path_count": 0
+  },
+  "phase3": {
+    "enabled": true,
+    "layer_counts_plain": {
+      "all_candidates_drawn": 5,
+      "recommended_drawn": 5,
+      "final_ink_drawn": 5
+    },
+    "layer_counts_context": {
+      "all_candidates_drawn": 5,
+      "recommended_drawn": 5,
+      "final_ink_drawn": 5
+    },
+    "suppressed_paths_drawn": 0,
+    "final_top": 12,
+    "all_layer_polyline_2d_only": true
+  }
+}

@@ -1,0 +1,6730 @@
+[
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "face",
+    "subject_name": "face",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "face",
+    "object_name": "face",
+    "object_caption": "face",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      861,
+      647
+    ],
+    "object_centroid": [
+      858,
+      700
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "face",
+    "subject_name": "face",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "sculpture yellow",
+    "object_name": "sculpture yellow",
+    "object_caption": "sculpture yellow",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      861,
+      647
+    ],
+    "object_centroid": [
+      858,
+      700
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "face",
+    "subject_name": "face",
+    "predicate": "above",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "yellow",
+    "object_name": "yellow",
+    "object_caption": "yellow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      861,
+      647
+    ],
+    "object_centroid": [
+      858,
+      772
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "face",
+    "subject_name": "face",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "ledge",
+    "object_name": "ledge",
+    "object_caption": "ledge",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      861,
+      647
+    ],
+    "object_centroid": [
+      591,
+      830
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "face",
+    "subject_name": "face",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "building",
+    "object_name": "building",
+    "object_caption": "building",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      861,
+      647
+    ],
+    "object_centroid": [
+      629,
+      367
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "building",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "face",
+    "object_name": "face",
+    "object_caption": "face",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      629,
+      367
+    ],
+    "object_centroid": [
+      861,
+      647
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "building",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "face",
+    "object_name": "face",
+    "object_caption": "face",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      629,
+      367
+    ],
+    "object_centroid": [
+      858,
+      700
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "building",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "sculpture yellow",
+    "object_name": "sculpture yellow",
+    "object_caption": "sculpture yellow",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      629,
+      367
+    ],
+    "object_centroid": [
+      858,
+      700
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "building",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "ledge",
+    "object_name": "ledge",
+    "object_caption": "ledge",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      629,
+      367
+    ],
+    "object_centroid": [
+      591,
+      830
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "building",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "yellow",
+    "object_name": "yellow",
+    "object_caption": "yellow",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      629,
+      367
+    ],
+    "object_centroid": [
+      858,
+      772
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "face",
+    "subject_name": "face",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "sculpture yellow",
+    "object_name": "sculpture yellow",
+    "object_caption": "sculpture yellow",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      858,
+      700
+    ],
+    "object_centroid": [
+      858,
+      700
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "face",
+    "subject_name": "face",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "face",
+    "object_name": "face",
+    "object_caption": "face",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      858,
+      700
+    ],
+    "object_centroid": [
+      861,
+      647
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "face",
+    "subject_name": "face",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "yellow",
+    "object_name": "yellow",
+    "object_caption": "yellow",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      858,
+      700
+    ],
+    "object_centroid": [
+      858,
+      772
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "face",
+    "subject_name": "face",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "ledge",
+    "object_name": "ledge",
+    "object_caption": "ledge",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      858,
+      700
+    ],
+    "object_centroid": [
+      591,
+      830
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "face",
+    "subject_name": "face",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "building",
+    "object_name": "building",
+    "object_caption": "building",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      858,
+      700
+    ],
+    "object_centroid": [
+      629,
+      367
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "sculpture yellow",
+    "subject_name": "sculpture yellow",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "face",
+    "object_name": "face",
+    "object_caption": "face",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      858,
+      700
+    ],
+    "object_centroid": [
+      858,
+      700
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "sculpture yellow",
+    "subject_name": "sculpture yellow",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "face",
+    "object_name": "face",
+    "object_caption": "face",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      858,
+      700
+    ],
+    "object_centroid": [
+      861,
+      647
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "sculpture yellow",
+    "subject_name": "sculpture yellow",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "yellow",
+    "object_name": "yellow",
+    "object_caption": "yellow",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      858,
+      700
+    ],
+    "object_centroid": [
+      858,
+      772
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "sculpture yellow",
+    "subject_name": "sculpture yellow",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "ledge",
+    "object_name": "ledge",
+    "object_caption": "ledge",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      858,
+      700
+    ],
+    "object_centroid": [
+      591,
+      830
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "sculpture yellow",
+    "subject_name": "sculpture yellow",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "building",
+    "object_name": "building",
+    "object_caption": "building",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      858,
+      700
+    ],
+    "object_centroid": [
+      629,
+      367
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "ledge",
+    "subject_name": "ledge",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "yellow",
+    "object_name": "yellow",
+    "object_caption": "yellow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      591,
+      830
+    ],
+    "object_centroid": [
+      858,
+      772
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "ledge",
+    "subject_name": "ledge",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "face",
+    "object_name": "face",
+    "object_caption": "face",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      591,
+      830
+    ],
+    "object_centroid": [
+      858,
+      700
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "ledge",
+    "subject_name": "ledge",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "sculpture yellow",
+    "object_name": "sculpture yellow",
+    "object_caption": "sculpture yellow",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      591,
+      830
+    ],
+    "object_centroid": [
+      858,
+      700
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "ledge",
+    "subject_name": "ledge",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "face",
+    "object_name": "face",
+    "object_caption": "face",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      591,
+      830
+    ],
+    "object_centroid": [
+      861,
+      647
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "ledge",
+    "subject_name": "ledge",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "building",
+    "object_name": "building",
+    "object_caption": "building",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      591,
+      830
+    ],
+    "object_centroid": [
+      629,
+      367
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "yellow",
+    "subject_name": "yellow",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "face",
+    "object_name": "face",
+    "object_caption": "face",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      858,
+      772
+    ],
+    "object_centroid": [
+      858,
+      700
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "yellow",
+    "subject_name": "yellow",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "sculpture yellow",
+    "object_name": "sculpture yellow",
+    "object_caption": "sculpture yellow",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      858,
+      772
+    ],
+    "object_centroid": [
+      858,
+      700
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "yellow",
+    "subject_name": "yellow",
+    "predicate": "below",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "face",
+    "object_name": "face",
+    "object_caption": "face",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      858,
+      772
+    ],
+    "object_centroid": [
+      861,
+      647
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "yellow",
+    "subject_name": "yellow",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "ledge",
+    "object_name": "ledge",
+    "object_caption": "ledge",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      858,
+      772
+    ],
+    "object_centroid": [
+      591,
+      830
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "yellow",
+    "subject_name": "yellow",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "building",
+    "object_name": "building",
+    "object_caption": "building",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      858,
+      772
+    ],
+    "object_centroid": [
+      629,
+      367
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "face",
+    "subject_name": "face",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "face",
+    "object_name": "face",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 1.0,
+    "subject_centroid": [
+      858.0,
+      700.0
+    ],
+    "object_centroid": [
+      861.0,
+      647.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "face",
+    "subject_name": "face",
+    "predicate": "inside_of",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "face",
+    "object_name": "face",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 1.0,
+    "subject_centroid": [
+      861.0,
+      647.0
+    ],
+    "object_centroid": [
+      858.0,
+      700.0
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "building",
+    "subject_name": "building | eye | face | ledge | stare | yellow",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "face",
+    "object_name": "face",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9868,
+    "subject_centroid": [
+      700.0,
+      812.0
+    ],
+    "object_centroid": [
+      858.0,
+      700.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "face",
+    "subject_name": "face",
+    "predicate": "inside_of",
+    "object_id": "region_1",
+    "object_label": "building",
+    "object_name": "building | eye | face | ledge | stare | yellow",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9868,
+    "subject_centroid": [
+      858.0,
+      700.0
+    ],
+    "object_centroid": [
+      700.0,
+      812.0
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "building",
+    "subject_name": "building | eye | face | ledge | stare | yellow",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "sculpture yellow",
+    "object_name": "sculpture yellow",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9868,
+    "subject_centroid": [
+      700.0,
+      812.0
+    ],
+    "object_centroid": [
+      858.0,
+      700.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "sculpture yellow",
+    "subject_name": "sculpture yellow",
+    "predicate": "inside_of",
+    "object_id": "region_1",
+    "object_label": "building",
+    "object_name": "building | eye | face | ledge | stare | yellow",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9868,
+    "subject_centroid": [
+      858.0,
+      700.0
+    ],
+    "object_centroid": [
+      700.0,
+      812.0
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "building",
+    "subject_name": "building | eye | face | ledge | stare | yellow",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "ledge",
+    "object_name": "ledge",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9981,
+    "subject_centroid": [
+      700.0,
+      812.0
+    ],
+    "object_centroid": [
+      591.0,
+      830.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "ledge",
+    "subject_name": "ledge",
+    "predicate": "inside_of",
+    "object_id": "region_1",
+    "object_label": "building",
+    "object_name": "building | eye | face | ledge | stare | yellow",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9981,
+    "subject_centroid": [
+      591.0,
+      830.0
+    ],
+    "object_centroid": [
+      700.0,
+      812.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "face",
+    "subject_name": "face",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "yellow",
+    "object_name": "yellow",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9972,
+    "subject_centroid": [
+      858.0,
+      700.0
+    ],
+    "object_centroid": [
+      858.0,
+      772.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "yellow",
+    "subject_name": "yellow",
+    "predicate": "inside_of",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "face",
+    "object_name": "face",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9972,
+    "subject_centroid": [
+      858.0,
+      772.0
+    ],
+    "object_centroid": [
+      858.0,
+      700.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "building",
+    "subject_name": "building",
+    "predicate": "contains",
+    "object_id": "region_7",
+    "object_label": "building",
+    "object_name": "building | city view | office building | reflection | rise building | tile wall | window",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9924,
+    "subject_centroid": [
+      629.0,
+      367.0
+    ],
+    "object_centroid": [
+      721.0,
+      371.0
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "building",
+    "subject_name": "building | city view | office building | reflection | rise building | tile wall | window",
+    "predicate": "inside_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "building",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9924,
+    "subject_centroid": [
+      721.0,
+      371.0
+    ],
+    "object_centroid": [
+      629.0,
+      367.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "building",
+    "subject_name": "building",
+    "predicate": "contains",
+    "object_id": "region_9",
+    "object_label": "building",
+    "object_name": "building | draw | office building | window",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 1.0,
+    "subject_centroid": [
+      629.0,
+      367.0
+    ],
+    "object_centroid": [
+      403.0,
+      209.0
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "building",
+    "subject_name": "building | draw | office building | window",
+    "predicate": "inside_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "building",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 1.0,
+    "subject_centroid": [
+      403.0,
+      209.0
+    ],
+    "object_centroid": [
+      629.0,
+      367.0
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "right_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "below",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "left_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "below",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "right_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "below",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "below",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "adjacent_to",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      778,
+      666
+    ],
+    "shared_border_px": 3638
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "adjacent_to",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      700,
+      812
+    ],
+    "shared_border_px": 3638
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "left_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "below",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "below",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "adjacent_to",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      721,
+      371
+    ],
+    "shared_border_px": 218
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "adjacent_to",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      700,
+      812
+    ],
+    "shared_border_px": 218
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "left_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "below",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "below",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "right_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "below",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      700,
+      812
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      700,
+      812
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "right_of",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "left_of",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "right_of",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "left_of",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "above",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "below",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "in_front_of",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "right_of",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "below",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "adjacent_to",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      778,
+      666
+    ],
+    "shared_border_px": 3970
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "adjacent_to",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ],
+    "shared_border_px": 3970
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "in_front_of",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "behind",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "right_of",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "left_of",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "above",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "below",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "in_front_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "right_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "below",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "in_front_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "behind",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "right_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "left_of",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "above",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "below",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "in_front_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "right_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "below",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "in_front_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "behind",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "right_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "left_of",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_foreground",
+    "subject_name": "green | tree | wind",
+    "predicate": "below",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1179,
+      716
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "above",
+    "object_id": "region_2",
+    "object_label": "region_foreground",
+    "object_name": "green | tree | wind",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      1179,
+      716
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "left_of",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "right_of",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "above",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "below",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "in_front_of",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "left_of",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "below",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "adjacent_to",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      778,
+      666
+    ],
+    "shared_border_px": 2395
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "adjacent_to",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      496,
+      721
+    ],
+    "shared_border_px": 2395
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "right_of",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "left_of",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "above",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "below",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "adjacent_to",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      482,
+      755
+    ],
+    "shared_border_px": 241
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "adjacent_to",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      496,
+      721
+    ],
+    "shared_border_px": 241
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "in_front_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "left_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "below",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "in_front_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "behind",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "right_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "left_of",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "above",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "below",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "in_front_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "right_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "below",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "in_front_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "behind",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "left_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "right_of",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_foreground",
+    "subject_name": "animation",
+    "predicate": "below",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      496,
+      721
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "above",
+    "object_id": "region_3",
+    "object_label": "region_foreground",
+    "object_name": "animation",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      496,
+      721
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "in_front_of",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "right_of",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "below",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "adjacent_to",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      778,
+      666
+    ],
+    "shared_border_px": 473
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "adjacent_to",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ],
+    "shared_border_px": 473
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "in_front_of",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "behind",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "right_of",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "left_of",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "below",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "above",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "in_front_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "right_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "below",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "in_front_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "behind",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "right_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "left_of",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "in_front_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "right_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "below",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "in_front_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "behind",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "right_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "left_of",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_foreground",
+    "subject_name": "flower",
+    "predicate": "below",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1035,
+      771
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "above",
+    "object_id": "region_4",
+    "object_label": "region_foreground",
+    "object_name": "flower",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      1035,
+      771
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "in_front_of",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "left_of",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "below",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "below",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "adjacent_to",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      721,
+      371
+    ],
+    "shared_border_px": 6151
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "adjacent_to",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      778,
+      666
+    ],
+    "shared_border_px": 6151
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "behind",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "left_of",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "below",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "adjacent_to",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      43,
+      781
+    ],
+    "shared_border_px": 623
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "adjacent_to",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      778,
+      666
+    ],
+    "shared_border_px": 623
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "below",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "behind",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "right_of",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "below",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "above",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      778,
+      666
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_foreground",
+    "subject_name": "building",
+    "predicate": "adjacent_to",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      778,
+      666
+    ],
+    "object_centroid": [
+      877,
+      543
+    ],
+    "shared_border_px": 35
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "adjacent_to",
+    "object_id": "region_5",
+    "object_label": "region_foreground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      778,
+      666
+    ],
+    "shared_border_px": 35
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "in_front_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "left_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "below",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "in_front_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "behind",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "right_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "left_of",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "above",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "below",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "in_front_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "right_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "below",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "in_front_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "behind",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "left_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "right_of",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_foreground",
+    "subject_name": "tree",
+    "predicate": "below",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      482,
+      755
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "above",
+    "object_id": "region_6",
+    "object_label": "region_foreground",
+    "object_name": "tree",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      482,
+      755
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "left_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "below",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "below",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "adjacent_to",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      403,
+      209
+    ],
+    "shared_border_px": 7561
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "adjacent_to",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      721,
+      371
+    ],
+    "shared_border_px": 7561
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "in_front_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "behind",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "right_of",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "below",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      721,
+      371
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_midground",
+    "subject_name": "building",
+    "predicate": "adjacent_to",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      721,
+      371
+    ],
+    "object_centroid": [
+      877,
+      543
+    ],
+    "shared_border_px": 324
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "adjacent_to",
+    "object_id": "region_7",
+    "object_label": "region_midground",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      721,
+      371
+    ],
+    "shared_border_px": 324
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "in_front_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "behind",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "left_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "right_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "below",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "in_front_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "behind",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "left_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "right_of",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_8",
+    "subject_label": "region_foreground",
+    "subject_name": "dark",
+    "predicate": "below",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      43,
+      781
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "above",
+    "object_id": "region_8",
+    "object_label": "region_foreground",
+    "object_name": "dark",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      43,
+      781
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "left_of",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "right_of",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  },
+  {
+    "subject_id": "region_9",
+    "subject_label": "region_background",
+    "subject_name": "building",
+    "predicate": "above",
+    "object_id": "region_10",
+    "object_label": "region_background",
+    "object_name": "night view",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      403,
+      209
+    ],
+    "object_centroid": [
+      877,
+      543
+    ]
+  },
+  {
+    "subject_id": "region_10",
+    "subject_label": "region_background",
+    "subject_name": "night view",
+    "predicate": "below",
+    "object_id": "region_9",
+    "object_label": "region_background",
+    "object_name": "building",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      877,
+      543
+    ],
+    "object_centroid": [
+      403,
+      209
+    ]
+  }
+]

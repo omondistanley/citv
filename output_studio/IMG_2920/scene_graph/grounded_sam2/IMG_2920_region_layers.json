@@ -1,0 +1,74 @@
+{
+  "ordering": [
+    {
+      "id": "region_1",
+      "label": "armchair",
+      "layer_type": "foreground",
+      "z_mean": 7.0472
+    },
+    {
+      "id": "region_2",
+      "label": "animal",
+      "layer_type": "midground",
+      "z_mean": 9.6513
+    },
+    {
+      "id": "region_3",
+      "label": "brush",
+      "layer_type": "midground",
+      "z_mean": 9.85
+    },
+    {
+      "id": "region_5",
+      "label": "blanket",
+      "layer_type": "midground",
+      "z_mean": 13.8447
+    },
+    {
+      "id": "region_4",
+      "label": "blanket",
+      "layer_type": "midground",
+      "z_mean": 14.0376
+    },
+    {
+      "id": "region_6",
+      "label": "cloud",
+      "layer_type": "background",
+      "z_mean": 17.2407
+    },
+    {
+      "id": "region_7",
+      "label": "floor",
+      "layer_type": "background",
+      "z_mean": 18.5177
+    }
+  ],
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "region_ids": [
+        "region_1"
+      ]
+    },
+    {
+      "layer_type": "midground",
+      "region_ids": [
+        "region_2",
+        "region_3",
+        "region_4",
+        "region_5"
+      ]
+    },
+    {
+      "layer_type": "background",
+      "region_ids": [
+        "region_6",
+        "region_7"
+      ]
+    }
+  ],
+  "depth_quantiles": {
+    "q1": 7.647,
+    "q2": 14.11
+  }
+}

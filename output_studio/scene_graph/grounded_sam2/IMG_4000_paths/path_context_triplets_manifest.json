@@ -1,0 +1,696 @@
+{
+  "batch_size": 3,
+  "total_paths": 98,
+  "batches": [
+    {
+      "batch_num": 1,
+      "index_start": 1,
+      "index_end": 3,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/01_paths_001_003.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_3_to_region_17_k01",
+        "rpath_IMG_4000_region_17_to_region_22_k01",
+        "rpath_IMG_4000_region_17_to_region_27_k01"
+      ],
+      "path_nums": [
+        1,
+        2,
+        3
+      ],
+      "summaries": [
+        "P1: animal (region_3) -> bud (region_17) via region_3, region_17",
+        "P2: bud (region_17) -> branch (region_22) via region_17, region_3, region_22",
+        "P3: bud (region_17) -> dark (region_27) via region_17, region_3, region_27"
+      ]
+    },
+    {
+      "batch_num": 2,
+      "index_start": 4,
+      "index_end": 6,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/02_paths_004_006.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_3_to_region_10_k01",
+        "rpath_IMG_4000_region_20_to_region_34_k01",
+        "opath_IMG_4000_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01"
+      ],
+      "path_nums": [
+        4,
+        5,
+        6
+      ],
+      "summaries": [
+        "P4: animal (region_3) -> animal (region_10) via region_3, region_10",
+        "P5: bush (region_20) -> green | image | paper b\u2026 via region_20, region_34",
+        "P6: park (grounded_sam2_obj\u2026 -> ledge park (grounded_sa\u2026 via region_2"
+      ]
+    },
+    {
+      "batch_num": 3,
+      "index_start": 7,
+      "index_end": 9,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/03_paths_007_009.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_12_to_region_17_k01",
+        "rpath_IMG_4000_region_17_to_region_30_k02",
+        "rpath_IMG_4000_region_7_to_region_17_k01"
+      ],
+      "path_nums": [
+        7,
+        8,
+        9
+      ],
+      "summaries": [
+        "P7: figurine (region_12) -> bud (region_17) via region_12, region_3, region_17",
+        "P8: bud (region_17) -> brick building (region_\u2026 via region_17, region_3, region_30",
+        "P9: animal (region_7) -> bud (region_17) via region_7, region_3, region_17"
+      ]
+    },
+    {
+      "batch_num": 4,
+      "index_start": 10,
+      "index_end": 12,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/04_paths_010_012.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_10_to_region_22_k01",
+        "rpath_IMG_4000_region_17_to_region_20_k01",
+        "rpath_IMG_4000_region_3_to_region_22_k01"
+      ],
+      "path_nums": [
+        10,
+        11,
+        12
+      ],
+      "summaries": [
+        "P10: animal (region_10) -> branch (region_22) via region_10, region_3, region_22",
+        "P11: bud (region_17) -> bush (region_20) via region_17, region_3, region_20",
+        "P12: animal (region_3) -> branch (region_22) via region_3, region_22"
+      ]
+    },
+    {
+      "batch_num": 5,
+      "index_start": 13,
+      "index_end": 15,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/05_paths_013_015.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_9_to_region_16_k01",
+        "rpath_IMG_4000_region_3_to_region_27_k01",
+        "opath_IMG_4000_grounded_sam2_obj_8_GroundedSAM2_to_grounded_sam2_obj_13_GroundedSAM2_k01"
+      ],
+      "path_nums": [
+        13,
+        14,
+        15
+      ],
+      "summaries": [
+        "P13: animal (region_9) -> create (region_16) via region_9, region_3, region_16",
+        "P14: animal (region_3) -> dark (region_27) via region_3, region_27",
+        "P15: building (grounded_sam2\u2026 -> building (grounded_sam2\u2026 via region_30"
+      ]
+    },
+    {
+      "batch_num": 6,
+      "index_start": 16,
+      "index_end": 18,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/06_paths_016_018.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_7_to_region_22_k01",
+        "rpath_IMG_4000_region_10_to_region_27_k01",
+        "rpath_IMG_4000_region_24_to_region_34_k02"
+      ],
+      "path_nums": [
+        16,
+        17,
+        18
+      ],
+      "summaries": [
+        "P16: animal (region_7) -> branch (region_22) via region_7, region_3, region_22",
+        "P17: animal (region_10) -> dark (region_27) via region_10, region_3, region_27",
+        "P18: camouflage (region_24) -> green | image | paper b\u2026 via region_24, region_3, region_34"
+      ]
+    },
+    {
+      "batch_num": 7,
+      "index_start": 19,
+      "index_end": 21,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/07_paths_019_021.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_12_to_region_27_k01",
+        "rpath_IMG_4000_region_23_to_region_24_k01",
+        "rpath_IMG_4000_region_10_to_region_17_k01"
+      ],
+      "path_nums": [
+        19,
+        20,
+        21
+      ],
+      "summaries": [
+        "P19: figurine (region_12) -> dark (region_27) via region_12, region_3, region_27",
+        "P20: green | image | tree (r\u2026 -> camouflage (region_24) via region_23, region_3, region_24",
+        "P21: animal (region_10) -> bud (region_17) via region_10, region_3, region_17"
+      ]
+    },
+    {
+      "batch_num": 8,
+      "index_start": 22,
+      "index_end": 24,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/08_paths_022_024.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_3_to_region_30_k02",
+        "rpath_IMG_4000_region_25_to_region_34_k02",
+        "rpath_IMG_4000_region_7_to_region_27_k01"
+      ],
+      "path_nums": [
+        22,
+        23,
+        24
+      ],
+      "summaries": [
+        "P22: animal (region_3) -> brick building (region_\u2026 via region_3, region_30",
+        "P23: dew (region_25) -> green | image | paper b\u2026 via region_25, region_3, region_34",
+        "P24: animal (region_7) -> dark (region_27) via region_7, region_3, region_27"
+      ]
+    },
+    {
+      "batch_num": 9,
+      "index_start": 25,
+      "index_end": 27,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/09_paths_025_027.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_12_to_region_22_k01",
+        "rpath_IMG_4000_region_10_to_region_25_k01",
+        "opath_IMG_4000_grounded_sam2_obj_13_GroundedSAM2_to_grounded_sam2_obj_8_GroundedSAM2_k01"
+      ],
+      "path_nums": [
+        25,
+        26,
+        27
+      ],
+      "summaries": [
+        "P25: figurine (region_12) -> branch (region_22) via region_12, region_3, region_22",
+        "P26: animal (region_10) -> dew (region_25) via region_10, region_3, region_25",
+        "P27: building (grounded_sam2\u2026 -> building (grounded_sam2\u2026 via region_30"
+      ]
+    },
+    {
+      "batch_num": 10,
+      "index_start": 28,
+      "index_end": 30,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/10_paths_028_030.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_12_to_region_20_k01",
+        "rpath_IMG_4000_region_3_to_region_25_k01",
+        "rpath_IMG_4000_region_18_to_region_25_k01"
+      ],
+      "path_nums": [
+        28,
+        29,
+        30
+      ],
+      "summaries": [
+        "P28: figurine (region_12) -> bush (region_20) via region_12, region_3, region_20",
+        "P29: animal (region_3) -> dew (region_25) via region_3, region_25",
+        "P30: animal (region_18) -> dew (region_25) via region_18, region_3, region_25"
+      ]
+    },
+    {
+      "batch_num": 11,
+      "index_start": 31,
+      "index_end": 33,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/11_paths_031_033.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_7_to_region_25_k01",
+        "rpath_IMG_4000_region_10_to_region_24_k01",
+        "rpath_IMG_4000_region_18_to_region_27_k01"
+      ],
+      "path_nums": [
+        31,
+        32,
+        33
+      ],
+      "summaries": [
+        "P31: animal (region_7) -> dew (region_25) via region_7, region_3, region_25",
+        "P32: animal (region_10) -> camouflage (region_24) via region_10, region_3, region_24",
+        "P33: animal (region_18) -> dark (region_27) via region_18, region_3, region_27"
+      ]
+    },
+    {
+      "batch_num": 12,
+      "index_start": 34,
+      "index_end": 36,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/12_paths_034_036.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_25_to_region_30_k02",
+        "rpath_IMG_4000_region_3_to_region_24_k01",
+        "rpath_IMG_4000_region_3_to_region_7_k01"
+      ],
+      "path_nums": [
+        34,
+        35,
+        36
+      ],
+      "summaries": [
+        "P34: dew (region_25) -> brick building (region_\u2026 via region_25, region_3, region_30",
+        "P35: animal (region_3) -> camouflage (region_24) via region_3, region_24",
+        "P36: animal (region_3) -> animal (region_7) via region_3, region_7"
+      ]
+    },
+    {
+      "batch_num": 13,
+      "index_start": 37,
+      "index_end": 39,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/13_paths_037_039.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_21_to_region_33_k01",
+        "rpath_IMG_4000_region_25_to_region_31_k02",
+        "rpath_IMG_4000_region_7_to_region_24_k01"
+      ],
+      "path_nums": [
+        37,
+        38,
+        39
+      ],
+      "summaries": [
+        "P37: green | image | lamp po\u2026 -> green | image | liquid \u2026 via region_21, region_33",
+        "P38: dew (region_25) -> green | image | tree (r\u2026 via region_25, region_3, region_31",
+        "P39: animal (region_7) -> camouflage (region_24) via region_7, region_3, region_24"
+      ]
+    },
+    {
+      "batch_num": 14,
+      "index_start": 40,
+      "index_end": 42,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/14_paths_040_042.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_24_to_region_30_k02",
+        "rpath_IMG_4000_region_12_to_region_30_k02",
+        "opath_IMG_4000_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_12_GroundedSAM2_k01"
+      ],
+      "path_nums": [
+        40,
+        41,
+        42
+      ],
+      "summaries": [
+        "P40: camouflage (region_24) -> brick building (region_\u2026 via region_24, region_3, region_30",
+        "P41: figurine (region_12) -> brick building (region_\u2026 via region_12, region_3, region_30",
+        "P42: building (grounded_sam2\u2026 -> building (grounded_sam2\u2026 via region_30"
+      ]
+    },
+    {
+      "batch_num": 15,
+      "index_start": 43,
+      "index_end": 45,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/15_paths_043_045.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_3_to_region_20_k01",
+        "rpath_IMG_4000_region_26_to_region_34_k03",
+        "opath_IMG_4000_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_12_GroundedSAM2_k01"
+      ],
+      "path_nums": [
+        43,
+        44,
+        45
+      ],
+      "summaries": [
+        "P43: animal (region_3) -> bush (region_20) via region_3, region_20",
+        "P44: green | lush | tree (re\u2026 -> green | image | paper b\u2026 via region_26, region_3, region_34",
+        "P45: building (grounded_sam2\u2026 -> building (grounded_sam2\u2026 via region_30"
+      ]
+    },
+    {
+      "batch_num": 16,
+      "index_start": 46,
+      "index_end": 48,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/16_paths_046_048.png",
+      "path_ids": [
+        "opath_IMG_4000_grounded_sam2_obj_12_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+        "rpath_IMG_4000_region_3_to_region_16_k01",
+        "rpath_IMG_4000_region_18_to_region_30_k02"
+      ],
+      "path_nums": [
+        46,
+        47,
+        48
+      ],
+      "summaries": [
+        "P46: building (grounded_sam2\u2026 -> building (grounded_sam2\u2026 via region_30",
+        "P47: animal (region_3) -> create (region_16) via region_3, region_16",
+        "P48: animal (region_18) -> brick building (region_\u2026 via region_18, region_3, region_30"
+      ]
+    },
+    {
+      "batch_num": 17,
+      "index_start": 49,
+      "index_end": 51,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/17_paths_049_051.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_22_to_region_23_k01",
+        "rpath_IMG_4000_region_7_to_region_15_k01",
+        "rpath_IMG_4000_region_9_to_region_30_k02"
+      ],
+      "path_nums": [
+        49,
+        50,
+        51
+      ],
+      "summaries": [
+        "P49: branch (region_22) -> green | image | tree (r\u2026 via region_22, region_3, region_23",
+        "P50: animal (region_7) -> green | kite | screen |\u2026 via region_7, region_3, region_15",
+        "P51: animal (region_9) -> brick building (region_\u2026 via region_9, region_3, region_30"
+      ]
+    },
+    {
+      "batch_num": 18,
+      "index_start": 52,
+      "index_end": 54,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/18_paths_052_054.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_19_to_region_25_k01",
+        "rpath_IMG_4000_region_26_to_region_30_k03",
+        "opath_IMG_4000_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01"
+      ],
+      "path_nums": [
+        52,
+        53,
+        54
+      ],
+      "summaries": [
+        "P52: christmas tree (region_\u2026 -> dew (region_25) via region_19, region_3, region_25",
+        "P53: green | lush | tree (re\u2026 -> brick building (region_\u2026 via region_26, region_3, region_30",
+        "P54: building (grounded_sam2\u2026 -> building (grounded_sam2\u2026 via region_30"
+      ]
+    },
+    {
+      "batch_num": 19,
+      "index_start": 55,
+      "index_end": 57,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/19_paths_055_057.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_12_to_region_15_k01",
+        "rpath_IMG_4000_region_17_to_region_24_k01",
+        "rpath_IMG_4000_region_23_to_region_27_k01"
+      ],
+      "path_nums": [
+        55,
+        56,
+        57
+      ],
+      "summaries": [
+        "P55: figurine (region_12) -> green | kite | screen |\u2026 via region_12, region_3, region_15",
+        "P56: bud (region_17) -> camouflage (region_24) via region_17, region_3, region_24",
+        "P57: green | image | tree (r\u2026 -> dark (region_27) via region_23, region_3, region_27"
+      ]
+    },
+    {
+      "batch_num": 20,
+      "index_start": 58,
+      "index_end": 60,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/20_paths_058_060.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_24_to_region_34_k01",
+        "rpath_IMG_4000_region_10_to_region_30_k02",
+        "rpath_IMG_4000_region_10_to_region_20_k01"
+      ],
+      "path_nums": [
+        58,
+        59,
+        60
+      ],
+      "summaries": [
+        "P58: camouflage (region_24) -> green | image | paper b\u2026 via region_24, region_3, region_20, regio\u2026",
+        "P59: animal (region_10) -> brick building (region_\u2026 via region_10, region_3, region_30",
+        "P60: animal (region_10) -> bush (region_20) via region_10, region_3, region_20"
+      ]
+    },
+    {
+      "batch_num": 21,
+      "index_start": 61,
+      "index_end": 63,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/21_paths_061_063.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_23_to_region_26_k01",
+        "rpath_IMG_4000_region_10_to_region_26_k01",
+        "rpath_IMG_4000_region_26_to_region_31_k03"
+      ],
+      "path_nums": [
+        61,
+        62,
+        63
+      ],
+      "summaries": [
+        "P61: green | image | tree (r\u2026 -> green | lush | tree (re\u2026 via region_23, region_3, region_26",
+        "P62: animal (region_10) -> green | lush | tree (re\u2026 via region_10, region_3, region_26",
+        "P63: green | lush | tree (re\u2026 -> green | image | tree (r\u2026 via region_26, region_3, region_31"
+      ]
+    },
+    {
+      "batch_num": 22,
+      "index_start": 64,
+      "index_end": 66,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/22_paths_064_066.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_19_to_region_27_k01",
+        "rpath_IMG_4000_region_24_to_region_27_k01",
+        "rpath_IMG_4000_region_25_to_region_34_k01"
+      ],
+      "path_nums": [
+        64,
+        65,
+        66
+      ],
+      "summaries": [
+        "P64: christmas tree (region_\u2026 -> dark (region_27) via region_19, region_3, region_27",
+        "P65: camouflage (region_24) -> dark (region_27) via region_24, region_3, region_27",
+        "P66: dew (region_25) -> green | image | paper b\u2026 via region_25, region_3, region_20, regio\u2026"
+      ]
+    },
+    {
+      "batch_num": 23,
+      "index_start": 67,
+      "index_end": 69,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/23_paths_067_069.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_3_to_region_12_k01",
+        "rpath_IMG_4000_region_3_to_region_26_k01",
+        "rpath_IMG_4000_region_19_to_region_22_k01"
+      ],
+      "path_nums": [
+        67,
+        68,
+        69
+      ],
+      "summaries": [
+        "P67: animal (region_3) -> figurine (region_12) via region_3, region_12",
+        "P68: animal (region_3) -> green | lush | tree (re\u2026 via region_3, region_26",
+        "P69: christmas tree (region_\u2026 -> branch (region_22) via region_19, region_3, region_22"
+      ]
+    },
+    {
+      "batch_num": 24,
+      "index_start": 70,
+      "index_end": 72,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/24_paths_070_072.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_18_to_region_26_k01",
+        "rpath_IMG_4000_region_7_to_region_26_k01",
+        "rpath_IMG_4000_region_19_to_region_26_k01"
+      ],
+      "path_nums": [
+        70,
+        71,
+        72
+      ],
+      "summaries": [
+        "P70: animal (region_18) -> green | lush | tree (re\u2026 via region_18, region_3, region_26",
+        "P71: animal (region_7) -> green | lush | tree (re\u2026 via region_7, region_3, region_26",
+        "P72: christmas tree (region_\u2026 -> green | lush | tree (re\u2026 via region_19, region_3, region_26"
+      ]
+    },
+    {
+      "batch_num": 25,
+      "index_start": 73,
+      "index_end": 75,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/25_paths_073_075.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_24_to_region_31_k02",
+        "rpath_IMG_4000_region_26_to_region_34_k01",
+        "opath_IMG_4000_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_10_GroundedSAM2_k01"
+      ],
+      "path_nums": [
+        73,
+        74,
+        75
+      ],
+      "summaries": [
+        "P73: camouflage (region_24) -> green | image | tree (r\u2026 via region_24, region_3, region_31",
+        "P74: green | lush | tree (re\u2026 -> green | image | paper b\u2026 via region_26, region_3, region_20, regio\u2026",
+        "P75: animal bird horse (grou\u2026 -> bird horse (grounded_sa\u2026 via region_3"
+      ]
+    },
+    {
+      "batch_num": 26,
+      "index_start": 76,
+      "index_end": 78,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/26_paths_076_078.png",
+      "path_ids": [
+        "opath_IMG_4000_grounded_sam2_obj_10_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01",
+        "opath_IMG_4000_grounded_sam2_obj_5_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01",
+        "opath_IMG_4000_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01"
+      ],
+      "path_nums": [
+        76,
+        77,
+        78
+      ],
+      "summaries": [
+        "P76: bird horse (grounded_sa\u2026 -> animal bird horse (grou\u2026 via region_3",
+        "P77: ledge (grounded_sam2_ob\u2026 -> ledge park (grounded_sa\u2026 via region_2",
+        "P78: ledge park (grounded_sa\u2026 -> ledge (grounded_sam2_ob\u2026 via region_2"
+      ]
+    },
+    {
+      "batch_num": 27,
+      "index_start": 79,
+      "index_end": 81,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/27_paths_079_081.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_5_to_region_13_k01",
+        "rpath_IMG_4000_region_19_to_region_24_k01",
+        "rpath_IMG_4000_region_20_to_region_24_k01"
+      ],
+      "path_nums": [
+        79,
+        80,
+        81
+      ],
+      "summaries": [
+        "P79: bonsai (region_5) -> bottle (region_13) via region_5, region_28, region_13",
+        "P80: christmas tree (region_\u2026 -> camouflage (region_24) via region_19, region_3, region_24",
+        "P81: bush (region_20) -> camouflage (region_24) via region_20, region_3, region_24"
+      ]
+    },
+    {
+      "batch_num": 28,
+      "index_start": 82,
+      "index_end": 84,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/28_paths_082_084.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_12_to_region_34_k02",
+        "rpath_IMG_4000_region_17_to_region_34_k01",
+        "rpath_IMG_4000_region_12_to_region_24_k01"
+      ],
+      "path_nums": [
+        82,
+        83,
+        84
+      ],
+      "summaries": [
+        "P82: figurine (region_12) -> green | image | paper b\u2026 via region_12, region_3, region_34",
+        "P83: bud (region_17) -> green | image | paper b\u2026 via region_17, region_3, region_20, regio\u2026",
+        "P84: figurine (region_12) -> camouflage (region_24) via region_12, region_3, region_24"
+      ]
+    },
+    {
+      "batch_num": 29,
+      "index_start": 85,
+      "index_end": 87,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/29_paths_085_087.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_20_to_region_26_k01",
+        "rpath_IMG_4000_region_19_to_region_30_k02",
+        "rpath_IMG_4000_region_10_to_region_29_k01"
+      ],
+      "path_nums": [
+        85,
+        86,
+        87
+      ],
+      "summaries": [
+        "P85: bush (region_20) -> green | lush | tree (re\u2026 via region_20, region_3, region_26",
+        "P86: christmas tree (region_\u2026 -> brick building (region_\u2026 via region_19, region_3, region_30",
+        "P87: animal (region_10) -> green | image (region_2\u2026 via region_10, region_3, region_20, regio\u2026"
+      ]
+    },
+    {
+      "batch_num": 30,
+      "index_start": 88,
+      "index_end": 90,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/30_paths_088_090.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_27_to_region_34_k01",
+        "rpath_IMG_4000_region_5_to_region_25_k02",
+        "rpath_IMG_4000_region_24_to_region_29_k01"
+      ],
+      "path_nums": [
+        88,
+        89,
+        90
+      ],
+      "summaries": [
+        "P88: dark (region_27) -> green | image | paper b\u2026 via region_27, region_3, region_20, regio\u2026",
+        "P89: bonsai (region_5) -> dew (region_25) via region_5, region_2, region_3, region_\u2026",
+        "P90: camouflage (region_24) -> green | image (region_2\u2026 via region_24, region_3, region_20, regio\u2026"
+      ]
+    },
+    {
+      "batch_num": 31,
+      "index_start": 91,
+      "index_end": 93,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/31_paths_091_093.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_20_to_region_29_k01",
+        "rpath_IMG_4000_region_17_to_region_29_k01",
+        "rpath_IMG_4000_region_5_to_region_17_k02"
+      ],
+      "path_nums": [
+        91,
+        92,
+        93
+      ],
+      "summaries": [
+        "P91: bush (region_20) -> green | image (region_2\u2026 via region_20, region_29",
+        "P92: bud (region_17) -> green | image (region_2\u2026 via region_17, region_3, region_20, regio\u2026",
+        "P93: bonsai (region_5) -> bud (region_17) via region_5, region_2, region_3, region_\u2026"
+      ]
+    },
+    {
+      "batch_num": 32,
+      "index_start": 94,
+      "index_end": 96,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/32_paths_094_096.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_3_to_region_29_k01",
+        "rpath_IMG_4000_region_12_to_region_29_k01",
+        "rpath_IMG_4000_region_5_to_region_26_k02"
+      ],
+      "path_nums": [
+        94,
+        95,
+        96
+      ],
+      "summaries": [
+        "P94: animal (region_3) -> green | image (region_2\u2026 via region_3, region_20, region_29",
+        "P95: figurine (region_12) -> green | image (region_2\u2026 via region_12, region_3, region_20, regio\u2026",
+        "P96: bonsai (region_5) -> green | lush | tree (re\u2026 via region_5, region_2, region_26"
+      ]
+    },
+    {
+      "batch_num": 33,
+      "index_start": 97,
+      "index_end": 98,
+      "image": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets/33_paths_097_098.png",
+      "path_ids": [
+        "rpath_IMG_4000_region_5_to_region_12_k02",
+        "rpath_IMG_4000_region_5_to_region_24_k02"
+      ],
+      "path_nums": [
+        97,
+        98
+      ],
+      "summaries": [
+        "P97: bonsai (region_5) -> figurine (region_12) via region_5, region_2, region_3, region_\u2026",
+        "P98: bonsai (region_5) -> camouflage (region_24) via region_5, region_2, region_3, region_\u2026"
+      ]
+    }
+  ]
+}

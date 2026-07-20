@@ -1,0 +1,64 @@
+{
+  "variant": "florence_object",
+  "track": "grounded_sam2",
+  "image_path": "/private/var/folders/_k/s8lgfj6d7k56717h6w7c6qw80000gn/T/gradio/a8e94ee7960f78f1b3e96cb7da29540fb2987b260f032b2887d8e8258f910966/IMG_2920.JPG",
+  "count": 7,
+  "objects": [
+    {
+      "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "label": "dog",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "label": "floor",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "label": "armchair chair couch",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "label": "armchair chair",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "label": "blue",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "label": "blue",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "label": "blue",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    }
+  ]
+}

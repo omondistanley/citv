@@ -1,0 +1,48 @@
+{
+  "schema": "citv_path_fields_legend_v1",
+  "image_stem": "IMG_4000",
+  "panels": [
+    {
+      "id": "rgb",
+      "title": "RGB + sample paths",
+      "description": "Scene color. Colored polylines = top-ranked legacy routes (polyline_2d). Green = geodesic when present."
+    },
+    {
+      "id": "path_cost_map",
+      "title": "path_cost_map (legacy A*)",
+      "value_range": [
+        0.0,
+        1.0
+      ],
+      "colormap": "INFERNO",
+      "bright_means": "higher cost (more expensive to traverse)",
+      "components": [
+        "RGB Sobel edges (strong edges cost more)",
+        "Gaussian-smoothed union of object masks (obstacle cost)",
+        "Penalty outside depth-partition regions (label <= 0)",
+        "1 - distance-to-free-space from obstacles (centering / open corridor bias)"
+      ],
+      "does_not_use": [
+        "metric_depth_m"
+      ]
+    },
+    {
+      "id": "path_traversability_speed",
+      "title": "path_traversability_speed (geodesic)",
+      "value_range": "trav_speed_floor .. 1.0 (see config)",
+      "colormap": "VIRIDIS",
+      "bright_means": "higher speed (easier motion; geodesic prefers these pixels)",
+      "components": [
+        "Feasible = (region label > 0) AND NOT obstacle mask; elsewhere low speed floor",
+        "Depth-gradient flatness: exp(-|grad z| / scale) when metric depth is available",
+        "Mild RGB edge penalty: 1 - w_edge * normalized Sobel magnitude"
+      ],
+      "exported_speed_png": true,
+      "traversability_meta": {
+        "feasible_ratio": 0.05949040152403282,
+        "speed_mean": 0.5835325717926025
+      }
+    }
+  ],
+  "reading_tip": "Compare cost vs speed: texture can dominate cost, while depth jumps dominate speed."
+}

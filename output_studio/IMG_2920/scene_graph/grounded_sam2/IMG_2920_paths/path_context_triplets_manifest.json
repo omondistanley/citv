@@ -1,0 +1,45 @@
+{
+  "batch_size": 3,
+  "total_paths": 5,
+  "batches": [
+    {
+      "batch_num": 1,
+      "index_start": 1,
+      "index_end": 3,
+      "image": "scene_graph/grounded_sam2/IMG_2920_paths/images/context_triplets/01_paths_001_003.png",
+      "path_ids": [
+        "rpath_IMG_2920_region_2_to_region_6_k02",
+        "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01",
+        "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01"
+      ],
+      "path_nums": [
+        1,
+        2,
+        3
+      ],
+      "summaries": [
+        "P1: animal (region_2) -> cloud (region_6) via region_2, region_6",
+        "P2: armchair chair couch (g\u2026 -> armchair chair (grounde\u2026 via region_1",
+        "P3: armchair chair couch (g\u2026 -> blue (grounded_sam2_obj\u2026 via region_1"
+      ]
+    },
+    {
+      "batch_num": 2,
+      "index_start": 4,
+      "index_end": 5,
+      "image": "scene_graph/grounded_sam2/IMG_2920_paths/images/context_triplets/02_paths_004_005.png",
+      "path_ids": [
+        "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01",
+        "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01"
+      ],
+      "path_nums": [
+        4,
+        5
+      ],
+      "summaries": [
+        "P4: armchair chair (grounde\u2026 -> armchair chair couch (g\u2026 via region_1",
+        "P5: armchair chair (grounde\u2026 -> blue (grounded_sam2_obj\u2026 via region_1"
+      ]
+    }
+  ]
+}

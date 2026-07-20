@@ -1,0 +1,12 @@
+{
+  "variant": "hybrid",
+  "track": "grounded_sam2",
+  "image_path": "/private/var/folders/_k/s8lgfj6d7k56717h6w7c6qw80000gn/T/gradio/a8e94ee7960f78f1b3e96cb7da29540fb2987b260f032b2887d8e8258f910966/IMG_2920.JPG",
+  "status": "pending_external_generation",
+  "inputs": {
+    "florence_object_captions": "scene_graph/grounded_sam2/IMG_2920_florence_object_captions.json",
+    "florence_scene_caption": "scene_graph/grounded_sam2/IMG_2920_florence_scene_caption.json",
+    "fusion_scene_caption": "scene_graph/grounded_sam2/IMG_2920_fusion_scene_caption.json"
+  },
+  "generated_caption": ""
+}

@@ -1,0 +1,2389 @@
+{
+  "paths": [
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_17_k01",
+      "path_num": 1,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 1.0,
+        "depth_consistency": 1.0,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.8267500000000001,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.7525000000000001
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 0.0
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_22_k01",
+      "path_num": 2,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.9649503364399985,
+        "depth_consistency": 0.9649503364399985,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.812503758369095,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.7384801345759995
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 4.787710489778076
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_27_k01",
+      "path_num": 3,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.9269824977985438,
+        "depth_consistency": 0.9269824977985438,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.8057984911779199,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.7232929991194176
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 10.15905599584679
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_10_k01",
+      "path_num": 4,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.9175092578164952,
+        "depth_consistency": 0.9175092578164952,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.8010022542288333,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.7195037031265982
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 16.49814843670096
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_20_to_region_34_k01",
+      "path_num": 5,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 1.0,
+        "depth_consistency": 1.0,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7967500000000001,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.7525000000000001
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 0.0
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01",
+      "path_num": 6,
+      "path_level": "object",
+      "scores": {
+        "geometric_feasibility": 1.0,
+        "depth_consistency": 1.0,
+        "relation_consistency": 0.6,
+        "semantic_plausibility": 0.6,
+        "image_alignment_score": 0.4917512536048889,
+        "overall_confidence": 0.7872662003438076,
+        "motion_primary_score": 0.9998001998002,
+        "depth_alignment_score": 0.9990009990009996,
+        "action_fit": 0.625,
+        "hybrid_overall": 0.6961802005767823
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 0.0
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_17_k01",
+      "path_num": 7,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.9479107212536665,
+        "depth_consistency": 0.9479107212536665,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7858140279348629,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.7316642885014666
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 10.417855749266705
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_30_k02",
+      "path_num": 8,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.9587438152728323,
+        "depth_consistency": 0.9587438152728323,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7830782111447886,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.7359975261091329
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 8.251236945433549
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_17_k01",
+      "path_num": 9,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8469041326267873,
+        "depth_consistency": 0.8469041326267873,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7787393170228023,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.691261653050715
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 26.17472903019808
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_22_k01",
+      "path_num": 10,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8352644970451549,
+        "depth_consistency": 0.8352644970451549,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7785884862700665,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.686605798818062
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 28.502656146524554
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_20_k01",
+      "path_num": 11,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.9147299637452465,
+        "depth_consistency": 0.9147299637452465,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.77478145377296,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.7183919854980987
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 12.609562806506244
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_22_k01",
+      "path_num": 12,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8194119290039875,
+        "depth_consistency": 0.8194119290039875,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7743907495514697,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.680264771601595
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 32.78428086586916
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_9_to_region_16_k01",
+      "path_num": 13,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8228271131621565,
+        "depth_consistency": 0.8228271131621565,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7733348639625122,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6816308452648627
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 35.434577367568686
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_27_k01",
+      "path_num": 14,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8073088245293134,
+        "depth_consistency": 0.8073088245293134,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7724858206181331,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6754235298117255
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 38.53823509413733
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_8_GroundedSAM2_to_grounded_sam2_obj_13_GroundedSAM2_k01",
+      "path_num": 15,
+      "path_level": "object",
+      "scores": {
+        "geometric_feasibility": 1.0,
+        "depth_consistency": 1.0,
+        "relation_consistency": 0.6,
+        "semantic_plausibility": 0.6,
+        "image_alignment_score": 0.4369630335519711,
+        "overall_confidence": 0.770666378287172,
+        "motion_primary_score": 0.9649217284311706,
+        "depth_alignment_score": 0.93283582089552,
+        "action_fit": 0.625,
+        "hybrid_overall": 0.6874140853683155
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 0.0
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_22_k01",
+      "path_num": 16,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8150135540655707,
+        "depth_consistency": 0.8150135540655707,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7701114591598122,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6785054216262284
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 34.77506696466363
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_27_k01",
+      "path_num": 17,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7911921939422291,
+        "depth_consistency": 0.7911921939422291,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7674461500370158,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6689768775768917
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 39.53933898933198
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_24_to_region_34_k02",
+      "path_num": 18,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.9779601163451718,
+        "depth_consistency": 0.9779601163451718,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7657453996903861,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.7436840465380687
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 4.407976730965638
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_27_k01",
+      "path_num": 19,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8553927234629198,
+        "depth_consistency": 0.8553927234629198,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.762456200534295,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.694657089385168
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 26.69923308519381
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_23_to_region_24_k01",
+      "path_num": 20,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8745415569194753,
+        "depth_consistency": 0.8745415569194753,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7621644453267153,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.7023166227677902
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 25.091688616104936
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_17_k01",
+      "path_num": 21,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7722523353757642,
+        "depth_consistency": 0.7722523353757642,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.762079528071024,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6614009341503058
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 38.882866258180485
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_30_k02",
+      "path_num": 22,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.9104476481911877,
+        "depth_consistency": 0.9104476481911877,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7614648875600967,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.7166790592764751
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 14.577137028429117
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_25_to_region_34_k02",
+      "path_num": 23,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.9381749090824688,
+        "depth_consistency": 0.9381749090824688,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7594716819485652,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.7277699636329875
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 12.365018183506239
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_27_k01",
+      "path_num": 24,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7531407721893978,
+        "depth_consistency": 0.7531407721893978,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7547887603530141,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6537563088757592
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 49.371845562120434
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_22_k01",
+      "path_num": 25,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8180095356156648,
+        "depth_consistency": 0.8180095356156648,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.748512619406605,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.679703814246266
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 34.175870654644825
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_25_k01",
+      "path_num": 26,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7224599037691202,
+        "depth_consistency": 0.7224599037691202,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7481213752168018,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6414839615076481
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 53.285797023953755
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_13_GroundedSAM2_to_grounded_sam2_obj_8_GroundedSAM2_k01",
+      "path_num": 27,
+      "path_level": "object",
+      "scores": {
+        "geometric_feasibility": 1.0,
+        "depth_consistency": 1.0,
+        "relation_consistency": 0.6,
+        "semantic_plausibility": 0.6,
+        "image_alignment_score": 0.43407987616956234,
+        "overall_confidence": 0.7478434646603421,
+        "motion_primary_score": 0.8899217284311707,
+        "depth_alignment_score": 0.93283582089552,
+        "action_fit": 0.625,
+        "hybrid_overall": 0.68695278018713
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 0.0
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_20_k01",
+      "path_num": 28,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8897524866878928,
+        "depth_consistency": 0.8897524866878928,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7456918500584919,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.7084009946751572
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 19.827280440199235
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_25_k01",
+      "path_num": 29,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7064414539536197,
+        "depth_consistency": 0.7064414539536197,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7442362798810911,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.635076581581448
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 55.37837587594273
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_18_to_region_25_k01",
+      "path_num": 30,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.706691254712861,
+        "depth_consistency": 0.706691254712861,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7437608529811162,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6351765018851444
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 54.21730461298334
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_25_k01",
+      "path_num": 31,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.713304563608369,
+        "depth_consistency": 0.713304563608369,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7434315100369816,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6378218254433476
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 57.339087278326204
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_24_k01",
+      "path_num": 32,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7901350394821641,
+        "depth_consistency": 0.7901350394821641,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.743068271994948,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6685540157928658
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 39.75076988134496
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_18_to_region_27_k01",
+      "path_num": 33,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7021065213407993,
+        "depth_consistency": 0.7021065213407993,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7426307043674345,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6333426085363197
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 55.13425128739568
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_25_to_region_30_k02",
+      "path_num": 34,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8093776605672371,
+        "depth_consistency": 0.8093776605672371,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.74158267954726,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.676251064226895
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 38.12446788655257
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_24_k01",
+      "path_num": 35,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8010056668154267,
+        "depth_consistency": 0.8010056668154267,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7386119770211277,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6729022667261708
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 36.46553330358132
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_7_k01",
+      "path_num": 36,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7098531776190435,
+        "depth_consistency": 0.7098531776190435,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7360336132232186,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6364412710476175
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 58.02936447619128
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_21_to_region_33_k01",
+      "path_num": 37,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8093740901435211,
+        "depth_consistency": 0.8093740901435211,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7357905607976429,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6762496360574085
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 38.12518197129576
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_25_to_region_31_k02",
+      "path_num": 38,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6845235971291581,
+        "depth_consistency": 0.6845235971291581,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7337528155495374,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6263094388516633
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 63.09528057416837
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_24_k01",
+      "path_num": 39,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7618827724193615,
+        "depth_consistency": 0.7618827724193615,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7330915448202033,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6572531089677447
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 43.17900107168324
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_24_to_region_30_k02",
+      "path_num": 40,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8332648907491851,
+        "depth_consistency": 0.8332648907491851,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7325053598743225,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6858059562996741
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 33.34702185016299
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_30_k02",
+      "path_num": 41,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8468154027751708,
+        "depth_consistency": 0.8468154027751708,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.732319783918515,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6912261611100683
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 30.63691944496584
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_12_GroundedSAM2_k01",
+      "path_num": 42,
+      "path_level": "object",
+      "scores": {
+        "geometric_feasibility": 1.0,
+        "depth_consistency": 1.0,
+        "relation_consistency": 0.6,
+        "semantic_plausibility": 0.6,
+        "image_alignment_score": 0.450341135263443,
+        "overall_confidence": 0.732151929546982,
+        "motion_primary_score": 0.8315457413249212,
+        "depth_alignment_score": 0.15772870662460567,
+        "action_fit": 0.625,
+        "hybrid_overall": 0.689554581642151
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 0.0
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_20_k01",
+      "path_num": 43,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7878703196551546,
+        "depth_consistency": 0.7878703196551546,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7315516936382196,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.667648127862062
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 42.425936068969065
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_26_to_region_34_k03",
+      "path_num": 44,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8473247558601191,
+        "depth_consistency": 0.8473247558601191,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7313480294464045,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6914299023440478
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 30.53504882797617
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_12_GroundedSAM2_k01",
+      "path_num": 45,
+      "path_level": "object",
+      "scores": {
+        "geometric_feasibility": 1.0,
+        "depth_consistency": 1.0,
+        "relation_consistency": 0.6,
+        "semantic_plausibility": 0.6,
+        "image_alignment_score": 0.4501156024634838,
+        "overall_confidence": 0.7305805637025764,
+        "motion_primary_score": 0.8263920540888875,
+        "depth_alignment_score": 0.23702299123014944,
+        "action_fit": 0.625,
+        "hybrid_overall": 0.6895184963941575
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 0.0
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_12_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+      "path_num": 46,
+      "path_level": "object",
+      "scores": {
+        "geometric_feasibility": 1.0,
+        "depth_consistency": 1.0,
+        "relation_consistency": 0.6,
+        "semantic_plausibility": 0.6,
+        "image_alignment_score": 0.4501156024634838,
+        "overall_confidence": 0.7305805637025764,
+        "motion_primary_score": 0.8263920540888873,
+        "depth_alignment_score": 0.23702299123014944,
+        "action_fit": 0.625,
+        "hybrid_overall": 0.6895184963941575
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 0.0
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_16_k01",
+      "path_num": 47,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6542003015331008,
+        "depth_consistency": 0.6542003015331008,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7284570537492732,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6141801206132403
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 69.15993969337984
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_18_to_region_30_k02",
+      "path_num": 48,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8194568214299222,
+        "depth_consistency": 0.8194568214299222,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7283809561365684,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6802827285719689
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 31.66419126957111
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_22_to_region_23_k01",
+      "path_num": 49,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6828252558853899,
+        "depth_consistency": 0.6828252558853899,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7280248812583668,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6256301023541561
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 63.43494882292202
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_15_k01",
+      "path_num": 50,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6644211191182181,
+        "depth_consistency": 0.6644211191182181,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7269071633271809,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6182684476472873
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 64.89355395413416
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_9_to_region_30_k02",
+      "path_num": 51,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7585087932658605,
+        "depth_consistency": 0.7585087932658605,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7268848435448649,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6559035173063442
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 43.85379690238344
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_19_to_region_25_k01",
+      "path_num": 52,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7257074469145122,
+        "depth_consistency": 0.7257074469145122,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7262712563755546,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6427829787658049
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 50.41406617265313
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_26_to_region_30_k03",
+      "path_num": 53,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8044533718054447,
+        "depth_consistency": 0.8044533718054447,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7259029753875457,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6742813487221779
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 39.109325638911045
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+      "path_num": 54,
+      "path_level": "object",
+      "scores": {
+        "geometric_feasibility": 1.0,
+        "depth_consistency": 1.0,
+        "relation_consistency": 0.6,
+        "semantic_plausibility": 0.6,
+        "image_alignment_score": 0.4213090296834707,
+        "overall_confidence": 0.7257134185219543,
+        "motion_primary_score": 0.8209226906580187,
+        "depth_alignment_score": 0.10461345329009314,
+        "action_fit": 0.625,
+        "hybrid_overall": 0.6849094447493553
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 0.0
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_15_k01",
+      "path_num": 55,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7513196038725016,
+        "depth_consistency": 0.7513196038725016,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.724163895568183,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6530278415490007
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 43.06941255883301
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_24_k01",
+      "path_num": 56,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7185403589147499,
+        "depth_consistency": 0.7185403589147499,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7217635331030161,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6399161435659
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 49.625261550383364
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_23_to_region_27_k01",
+      "path_num": 57,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6329653329048868,
+        "depth_consistency": 0.6329653329048868,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7214459383918783,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6056861331619547
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 68.96248897457819
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_24_to_region_34_k01",
+      "path_num": 58,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8609815566415274,
+        "depth_consistency": 0.8609815566415274,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7194684760585152,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.696892622656611
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 24.470355338361163
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_30_k02",
+      "path_num": 59,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7405024680187953,
+        "depth_consistency": 0.7405024680187953,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7190877090273406,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6487009872075181
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 47.45506195179649
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_20_k01",
+      "path_num": 60,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7097753532899863,
+        "depth_consistency": 0.7097753532899863,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7184575076895372,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6364101413159946
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 55.822707119780524
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_23_to_region_26_k01",
+      "path_num": 61,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6901417283741685,
+        "depth_consistency": 0.6901417283741685,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7140804642381953,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6285566913496675
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 59.74943210294408
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_26_k01",
+      "path_num": 62,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.673933078949454,
+        "depth_consistency": 0.673933078949454,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.711737479908046,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6220732315797817
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 65.2133842101092
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_26_to_region_31_k03",
+      "path_num": 63,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6795209281942756,
+        "depth_consistency": 0.6795209281942756,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7105613742421255,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6243083712777103
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 64.09581436114489
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_19_to_region_27_k01",
+      "path_num": 64,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6684013897918122,
+        "depth_consistency": 0.6684013897918122,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7104055540163545,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.619860555916725
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 64.09749981941536
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_24_to_region_27_k01",
+      "path_num": 65,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6886119212260375,
+        "depth_consistency": 0.6886119212260375,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7096975564093547,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.627944768490415
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 62.2776157547925
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_25_to_region_34_k01",
+      "path_num": 66,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.8644479331091104,
+        "depth_consistency": 0.8644479331091104,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7086014544175718,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6982791732436442
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 25.443746711511256
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_12_k01",
+      "path_num": 67,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6876043558628182,
+        "depth_consistency": 0.6876043558628182,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7083386287334199,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6275417423451274
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 59.145795494103
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_26_k01",
+      "path_num": 68,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6834566630125314,
+        "depth_consistency": 0.6834566630125314,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.707207791188208,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6258826652050126
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 63.30866739749373
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_19_to_region_22_k01",
+      "path_num": 69,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6496291481910454,
+        "depth_consistency": 0.6496291481910454,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7045077612192351,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6123516592764182
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 65.62972591734645
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_18_to_region_26_k01",
+      "path_num": 70,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6422842683752719,
+        "depth_consistency": 0.6422842683752719,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7028835799368286,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6094137073501088
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 64.87647965827895
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_26_k01",
+      "path_num": 71,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6466178362709528,
+        "depth_consistency": 0.6466178362709528,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7021832749553101,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6111471345083812
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 68.45421052358722
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_19_to_region_26_k01",
+      "path_num": 72,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7168868842882976,
+        "depth_consistency": 0.7168868842882976,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.7010936725113406,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6392547537153191
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 56.622623142340466
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_24_to_region_31_k02",
+      "path_num": 73,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.643454644481981,
+        "depth_consistency": 0.643454644481981,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6997538419099667,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6098818577927925
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 69.08684888138158
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_26_to_region_34_k01",
+      "path_num": 74,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7875471193046895,
+        "depth_consistency": 0.7875471193046895,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6979573640077495,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6675188477218759
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 40.823909472395435
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_10_GroundedSAM2_k01",
+      "path_num": 75,
+      "path_level": "object",
+      "scores": {
+        "geometric_feasibility": 1.0,
+        "depth_consistency": 1.0,
+        "relation_consistency": 0.6,
+        "semantic_plausibility": 0.6,
+        "image_alignment_score": 0.4933518171310425,
+        "overall_confidence": 0.6975054035186768,
+        "motion_primary_score": 0.7,
+        "depth_alignment_score": 1.0,
+        "action_fit": 0.625,
+        "hybrid_overall": 0.6964362907409669
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 0.0
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_10_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01",
+      "path_num": 76,
+      "path_level": "object",
+      "scores": {
+        "geometric_feasibility": 1.0,
+        "depth_consistency": 1.0,
+        "relation_consistency": 0.6,
+        "semantic_plausibility": 0.6,
+        "image_alignment_score": 0.4933518171310425,
+        "overall_confidence": 0.6975054035186768,
+        "motion_primary_score": 0.7,
+        "depth_alignment_score": 1.0,
+        "action_fit": 0.625,
+        "hybrid_overall": 0.6964362907409669
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 0.0
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_5_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01",
+      "path_num": 77,
+      "path_level": "object",
+      "scores": {
+        "geometric_feasibility": 1.0,
+        "depth_consistency": 1.0,
+        "relation_consistency": 0.6,
+        "semantic_plausibility": 0.6,
+        "image_alignment_score": 0.4877413511276245,
+        "overall_confidence": 0.6968170912663538,
+        "motion_primary_score": 0.6998001998001997,
+        "depth_alignment_score": 0.9990009990009987,
+        "action_fit": 0.625,
+        "hybrid_overall": 0.69553861618042
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 0.0
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01",
+      "path_num": 78,
+      "path_level": "object",
+      "scores": {
+        "geometric_feasibility": 1.0,
+        "depth_consistency": 1.0,
+        "relation_consistency": 0.6,
+        "semantic_plausibility": 0.6,
+        "image_alignment_score": 0.4877413511276245,
+        "overall_confidence": 0.6968170912663538,
+        "motion_primary_score": 0.6998001998001997,
+        "depth_alignment_score": 0.9990009990009987,
+        "action_fit": 0.625,
+        "hybrid_overall": 0.69553861618042
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 0.0
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_5_to_region_13_k01",
+      "path_num": 79,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6614216427040007,
+        "depth_consistency": 0.6614216427040007,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.696555703109843,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6170686570816003
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 61.0490047925332
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_19_to_region_24_k01",
+      "path_num": 80,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6915410301864797,
+        "depth_consistency": 0.6915410301864797,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6930139033651738,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6291164120745919
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 61.69179396270406
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_20_to_region_24_k01",
+      "path_num": 81,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6982640468860813,
+        "depth_consistency": 0.6982640468860813,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6914552793171379,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6318056187544326
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 58.124968400561514
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_34_k02",
+      "path_num": 82,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6711774408260133,
+        "depth_consistency": 0.6711774408260133,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6856665523888796,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6209709763304053
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 65.76451183479735
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_34_k01",
+      "path_num": 83,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.625071195337918,
+        "depth_consistency": 0.625071195337918,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6855401462762414,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6025284781351673
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 69.9857609324164
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_24_k01",
+      "path_num": 84,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6636911012198763,
+        "depth_consistency": 0.6636911012198763,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.683838400690308,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6179764404879505
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 65.03955753380254
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_20_to_region_26_k01",
+      "path_num": 85,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6630551967526328,
+        "depth_consistency": 0.6630551967526328,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6836308891410272,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6177220787010532
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 67.38896064947343
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_19_to_region_30_k02",
+      "path_num": 86,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6553303226164517,
+        "depth_consistency": 0.6553303226164517,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6716487779274085,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6146321290465807
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 64.4894910322652
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_29_k01",
+      "path_num": 87,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6990142011550522,
+        "depth_consistency": 0.6990142011550522,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6702729596356848,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.632105680462021
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 58.5304931023229
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_27_to_region_34_k01",
+      "path_num": 88,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6646058732711937,
+        "depth_consistency": 0.6646058732711937,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6642681299446759,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6183423493084775
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 63.7454920124279
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_5_to_region_25_k02",
+      "path_num": 89,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6828303093654611,
+        "depth_consistency": 0.6828303093654611,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6634239213086434,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6256321237461845
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 63.43393812690777
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_24_to_region_29_k01",
+      "path_num": 90,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6740398709230245,
+        "depth_consistency": 0.6740398709230245,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.653771710039956,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6221159483692099
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 63.52535914872843
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_20_to_region_29_k01",
+      "path_num": 91,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7052085496274431,
+        "depth_consistency": 0.7052085496274431,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6531368099333996,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6345834198509773
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 58.95829007451139
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_29_k01",
+      "path_num": 92,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6906808678217188,
+        "depth_consistency": 0.6906808678217188,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.65142123321629,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6287723471286876
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 58.5304931023229
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_5_to_region_17_k02",
+      "path_num": 93,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.676893085162831,
+        "depth_consistency": 0.676893085162831,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6503790079224867,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6232572340651324
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 64.6213829674338
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_29_k01",
+      "path_num": 94,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.7073475344883855,
+        "depth_consistency": 0.7073475344883855,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6485242605594028,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6354390137953543
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 58.5304931023229
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_29_k01",
+      "path_num": 95,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6990142011550522,
+        "depth_consistency": 0.6990142011550522,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.644083484660031,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.632105680462021
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 58.5304931023229
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_5_to_region_26_k02",
+      "path_num": 96,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6559176989481534,
+        "depth_consistency": 0.6559176989481534,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.63853352933892,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6148670795792615
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 68.8164602103693
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_5_to_region_12_k02",
+      "path_num": 97,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6828303093654611,
+        "depth_consistency": 0.6828303093654611,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6308595883530012,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6256321237461845
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 63.43393812690777
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_5_to_region_24_k02",
+      "path_num": 98,
+      "path_level": "region",
+      "scores": {
+        "geometric_feasibility": 0.6744969760321278,
+        "depth_consistency": 0.6744969760321278,
+        "relation_consistency": 0.5,
+        "semantic_plausibility": 0.5,
+        "overall_confidence": 0.6215761526471786,
+        "action_fit": 0.575,
+        "hybrid_overall": 0.6222987904128512
+      },
+      "diagnostics": {
+        "far_background_ratio": 0.0,
+        "obstacle_ratio": 0.0,
+        "walkable_ratio": 1.0,
+        "curvature_deg": 63.43393812690777
+      },
+      "semantic_reasons": [
+        "regions are mostly traversable/interactive",
+        "lexical semantic match=0.00"
+      ]
+    }
+  ]
+}

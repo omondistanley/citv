@@ -1,0 +1,353 @@
+{
+  "rpath_IMG_2920_region_2_to_region_6_k02": {
+    "title": "region path: animal (region_2) \u2192 cloud (region_6)",
+    "summary": "Confidence=0.75. Traverses regions: region_2, region_6. Invalid-pixel crossing ratio: 0.000. Max turn: 40.1\u00b0.",
+    "why_valid": "Traverses regions: region_2, region_6. Invalid-pixel crossing ratio: 0.000. Max turn: 40.1\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.75 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_IMG_2920_region_2_to_region_6_k02",
+    "source": {
+      "type": "region",
+      "id": "region_2",
+      "name": "animal",
+      "display_label": "animal (region_2)",
+      "start_uv": [
+        168,
+        309
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_6",
+      "name": "cloud",
+      "display_label": "cloud (region_6)",
+      "goal_uv": [
+        368,
+        54
+      ]
+    },
+    "regions_traversed": [
+      "region_2",
+      "region_6"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.7993321269119773,
+      "depth_consistency": 0.7993321269119773,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.7479195501063929,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.672232850764791
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 40.13357461760453
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          168,
+          309
+        ],
+        [
+          431,
+          49
+        ],
+        [
+          368,
+          54
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 1
+  },
+  "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01": {
+    "title": "object path: armchair chair couch (grounded_sam2_obj_2_GroundedSAM2) \u2192 armchair chair (grounded_sam2_obj_3_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_2_GroundedSAM2",
+      "name": "armchair chair couch",
+      "display_label": "armchair chair couch (grounded_sam2_obj_2_GroundedSAM2)",
+      "start_uv": [
+        263,
+        447
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_3_GroundedSAM2",
+      "name": "armchair chair",
+      "display_label": "armchair chair (grounded_sam2_obj_3_GroundedSAM2)",
+      "goal_uv": [
+        263,
+        447
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4965149164199829,
+      "overall_confidence": 0.6978596706390382,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6969423866271974
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          263,
+          447
+        ],
+        [
+          263,
+          447
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 2
+  },
+  "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01": {
+    "title": "object path: armchair chair couch (grounded_sam2_obj_2_GroundedSAM2) \u2192 blue (grounded_sam2_obj_4_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_2920_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_2_GroundedSAM2",
+      "name": "armchair chair couch",
+      "display_label": "armchair chair couch (grounded_sam2_obj_2_GroundedSAM2)",
+      "start_uv": [
+        263,
+        447
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "blue",
+      "display_label": "blue (grounded_sam2_obj_4_GroundedSAM2)",
+      "goal_uv": [
+        263,
+        447
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4965149164199829,
+      "overall_confidence": 0.6978596706390382,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6969423866271974
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          263,
+          447
+        ],
+        [
+          263,
+          447
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 3
+  },
+  "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01": {
+    "title": "object path: armchair chair (grounded_sam2_obj_3_GroundedSAM2) \u2192 armchair chair couch (grounded_sam2_obj_2_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_3_GroundedSAM2",
+      "name": "armchair chair",
+      "display_label": "armchair chair (grounded_sam2_obj_3_GroundedSAM2)",
+      "start_uv": [
+        263,
+        447
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_2_GroundedSAM2",
+      "name": "armchair chair couch",
+      "display_label": "armchair chair couch (grounded_sam2_obj_2_GroundedSAM2)",
+      "goal_uv": [
+        263,
+        447
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4965149164199829,
+      "overall_confidence": 0.6978596706390382,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6969423866271974
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          263,
+          447
+        ],
+        [
+          263,
+          447
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 4
+  },
+  "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01": {
+    "title": "object path: armchair chair (grounded_sam2_obj_3_GroundedSAM2) \u2192 blue (grounded_sam2_obj_4_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_2920_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_3_GroundedSAM2",
+      "name": "armchair chair",
+      "display_label": "armchair chair (grounded_sam2_obj_3_GroundedSAM2)",
+      "start_uv": [
+        263,
+        447
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_4_GroundedSAM2",
+      "name": "blue",
+      "display_label": "blue (grounded_sam2_obj_4_GroundedSAM2)",
+      "goal_uv": [
+        263,
+        447
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4965149164199829,
+      "overall_confidence": 0.6978596706390382,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6969423866271974
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          263,
+          447
+        ],
+        [
+          263,
+          447
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 5
+  }
+}

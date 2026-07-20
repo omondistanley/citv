@@ -1,0 +1,12 @@
+{
+  "variant": "hybrid",
+  "track": "grounded_sam2",
+  "image_path": "/private/var/folders/_k/s8lgfj6d7k56717h6w7c6qw80000gn/T/citv_motion_composer_bi35_fua/scene_upload.png",
+  "status": "pending_external_generation",
+  "inputs": {
+    "florence_object_captions": "scene_graph/grounded_sam2/scene_upload_florence_object_captions.json",
+    "florence_scene_caption": "scene_graph/grounded_sam2/scene_upload_florence_scene_caption.json",
+    "fusion_scene_caption": "scene_graph/grounded_sam2/scene_upload_fusion_scene_caption.json"
+  },
+  "generated_caption": ""
+}

@@ -1,0 +1,928 @@
+{
+  "paths": {
+    "rpath_IMG_4000_region_3_to_region_17_k01": {
+      "path_id": "rpath_IMG_4000_region_3_to_region_17_k01",
+      "path_num": 1,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_3_to_region_17_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_17_to_region_22_k01": {
+      "path_id": "rpath_IMG_4000_region_17_to_region_22_k01",
+      "path_num": 2,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_17_to_region_22_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_17_to_region_27_k01": {
+      "path_id": "rpath_IMG_4000_region_17_to_region_27_k01",
+      "path_num": 3,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_17_to_region_27_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_3_to_region_10_k01": {
+      "path_id": "rpath_IMG_4000_region_3_to_region_10_k01",
+      "path_num": 4,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_3_to_region_10_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_20_to_region_34_k01": {
+      "path_id": "rpath_IMG_4000_region_20_to_region_34_k01",
+      "path_num": 5,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_20_to_region_34_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "opath_IMG_4000_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01": {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01",
+      "path_num": 6,
+      "level": "object",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/object/path_opath_IMG_4000_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_12_to_region_17_k01": {
+      "path_id": "rpath_IMG_4000_region_12_to_region_17_k01",
+      "path_num": 7,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_12_to_region_17_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_17_to_region_30_k02": {
+      "path_id": "rpath_IMG_4000_region_17_to_region_30_k02",
+      "path_num": 8,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_17_to_region_30_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_7_to_region_17_k01": {
+      "path_id": "rpath_IMG_4000_region_7_to_region_17_k01",
+      "path_num": 9,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_7_to_region_17_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_10_to_region_22_k01": {
+      "path_id": "rpath_IMG_4000_region_10_to_region_22_k01",
+      "path_num": 10,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_10_to_region_22_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_17_to_region_20_k01": {
+      "path_id": "rpath_IMG_4000_region_17_to_region_20_k01",
+      "path_num": 11,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_17_to_region_20_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_3_to_region_22_k01": {
+      "path_id": "rpath_IMG_4000_region_3_to_region_22_k01",
+      "path_num": 12,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_3_to_region_22_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_9_to_region_16_k01": {
+      "path_id": "rpath_IMG_4000_region_9_to_region_16_k01",
+      "path_num": 13,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_9_to_region_16_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_3_to_region_27_k01": {
+      "path_id": "rpath_IMG_4000_region_3_to_region_27_k01",
+      "path_num": 14,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_3_to_region_27_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "opath_IMG_4000_grounded_sam2_obj_8_GroundedSAM2_to_grounded_sam2_obj_13_GroundedSAM2_k01": {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_8_GroundedSAM2_to_grounded_sam2_obj_13_GroundedSAM2_k01",
+      "path_num": 15,
+      "level": "object",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/object/path_opath_IMG_4000_grounded_sam2_obj_8_GroundedSAM2_to_grounded_sam2_obj_13_GroundedSAM2_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_7_to_region_22_k01": {
+      "path_id": "rpath_IMG_4000_region_7_to_region_22_k01",
+      "path_num": 16,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_7_to_region_22_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_10_to_region_27_k01": {
+      "path_id": "rpath_IMG_4000_region_10_to_region_27_k01",
+      "path_num": 17,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_10_to_region_27_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_24_to_region_34_k02": {
+      "path_id": "rpath_IMG_4000_region_24_to_region_34_k02",
+      "path_num": 18,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_24_to_region_34_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_12_to_region_27_k01": {
+      "path_id": "rpath_IMG_4000_region_12_to_region_27_k01",
+      "path_num": 19,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_12_to_region_27_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_23_to_region_24_k01": {
+      "path_id": "rpath_IMG_4000_region_23_to_region_24_k01",
+      "path_num": 20,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_23_to_region_24_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_10_to_region_17_k01": {
+      "path_id": "rpath_IMG_4000_region_10_to_region_17_k01",
+      "path_num": 21,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_10_to_region_17_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_3_to_region_30_k02": {
+      "path_id": "rpath_IMG_4000_region_3_to_region_30_k02",
+      "path_num": 22,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_3_to_region_30_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_25_to_region_34_k02": {
+      "path_id": "rpath_IMG_4000_region_25_to_region_34_k02",
+      "path_num": 23,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_25_to_region_34_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_7_to_region_27_k01": {
+      "path_id": "rpath_IMG_4000_region_7_to_region_27_k01",
+      "path_num": 24,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_7_to_region_27_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_12_to_region_22_k01": {
+      "path_id": "rpath_IMG_4000_region_12_to_region_22_k01",
+      "path_num": 25,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_12_to_region_22_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_10_to_region_25_k01": {
+      "path_id": "rpath_IMG_4000_region_10_to_region_25_k01",
+      "path_num": 26,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_10_to_region_25_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "opath_IMG_4000_grounded_sam2_obj_13_GroundedSAM2_to_grounded_sam2_obj_8_GroundedSAM2_k01": {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_13_GroundedSAM2_to_grounded_sam2_obj_8_GroundedSAM2_k01",
+      "path_num": 27,
+      "level": "object",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/object/path_opath_IMG_4000_grounded_sam2_obj_13_GroundedSAM2_to_grounded_sam2_obj_8_GroundedSAM2_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_12_to_region_20_k01": {
+      "path_id": "rpath_IMG_4000_region_12_to_region_20_k01",
+      "path_num": 28,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_12_to_region_20_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_3_to_region_25_k01": {
+      "path_id": "rpath_IMG_4000_region_3_to_region_25_k01",
+      "path_num": 29,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_3_to_region_25_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_18_to_region_25_k01": {
+      "path_id": "rpath_IMG_4000_region_18_to_region_25_k01",
+      "path_num": 30,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_18_to_region_25_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_7_to_region_25_k01": {
+      "path_id": "rpath_IMG_4000_region_7_to_region_25_k01",
+      "path_num": 31,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_7_to_region_25_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_10_to_region_24_k01": {
+      "path_id": "rpath_IMG_4000_region_10_to_region_24_k01",
+      "path_num": 32,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_10_to_region_24_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_18_to_region_27_k01": {
+      "path_id": "rpath_IMG_4000_region_18_to_region_27_k01",
+      "path_num": 33,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_18_to_region_27_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_25_to_region_30_k02": {
+      "path_id": "rpath_IMG_4000_region_25_to_region_30_k02",
+      "path_num": 34,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_25_to_region_30_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_3_to_region_24_k01": {
+      "path_id": "rpath_IMG_4000_region_3_to_region_24_k01",
+      "path_num": 35,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_3_to_region_24_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_3_to_region_7_k01": {
+      "path_id": "rpath_IMG_4000_region_3_to_region_7_k01",
+      "path_num": 36,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_3_to_region_7_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_21_to_region_33_k01": {
+      "path_id": "rpath_IMG_4000_region_21_to_region_33_k01",
+      "path_num": 37,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_21_to_region_33_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_25_to_region_31_k02": {
+      "path_id": "rpath_IMG_4000_region_25_to_region_31_k02",
+      "path_num": 38,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_25_to_region_31_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_7_to_region_24_k01": {
+      "path_id": "rpath_IMG_4000_region_7_to_region_24_k01",
+      "path_num": 39,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_7_to_region_24_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_24_to_region_30_k02": {
+      "path_id": "rpath_IMG_4000_region_24_to_region_30_k02",
+      "path_num": 40,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_24_to_region_30_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_12_to_region_30_k02": {
+      "path_id": "rpath_IMG_4000_region_12_to_region_30_k02",
+      "path_num": 41,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_12_to_region_30_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "opath_IMG_4000_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_12_GroundedSAM2_k01": {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_12_GroundedSAM2_k01",
+      "path_num": 42,
+      "level": "object",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/object/path_opath_IMG_4000_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_12_GroundedSAM2_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_3_to_region_20_k01": {
+      "path_id": "rpath_IMG_4000_region_3_to_region_20_k01",
+      "path_num": 43,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_3_to_region_20_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_26_to_region_34_k03": {
+      "path_id": "rpath_IMG_4000_region_26_to_region_34_k03",
+      "path_num": 44,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_26_to_region_34_k03.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "opath_IMG_4000_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_12_GroundedSAM2_k01": {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_12_GroundedSAM2_k01",
+      "path_num": 45,
+      "level": "object",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/object/path_opath_IMG_4000_grounded_sam2_obj_4_GroundedSAM2_to_grounded_sam2_obj_12_GroundedSAM2_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "opath_IMG_4000_grounded_sam2_obj_12_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01": {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_12_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+      "path_num": 46,
+      "level": "object",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/object/path_opath_IMG_4000_grounded_sam2_obj_12_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_3_to_region_16_k01": {
+      "path_id": "rpath_IMG_4000_region_3_to_region_16_k01",
+      "path_num": 47,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_3_to_region_16_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_18_to_region_30_k02": {
+      "path_id": "rpath_IMG_4000_region_18_to_region_30_k02",
+      "path_num": 48,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_18_to_region_30_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_22_to_region_23_k01": {
+      "path_id": "rpath_IMG_4000_region_22_to_region_23_k01",
+      "path_num": 49,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_22_to_region_23_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_7_to_region_15_k01": {
+      "path_id": "rpath_IMG_4000_region_7_to_region_15_k01",
+      "path_num": 50,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_7_to_region_15_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_9_to_region_30_k02": {
+      "path_id": "rpath_IMG_4000_region_9_to_region_30_k02",
+      "path_num": 51,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_9_to_region_30_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_19_to_region_25_k01": {
+      "path_id": "rpath_IMG_4000_region_19_to_region_25_k01",
+      "path_num": 52,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_19_to_region_25_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_26_to_region_30_k03": {
+      "path_id": "rpath_IMG_4000_region_26_to_region_30_k03",
+      "path_num": 53,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_26_to_region_30_k03.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "opath_IMG_4000_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01": {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01",
+      "path_num": 54,
+      "level": "object",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/object/path_opath_IMG_4000_grounded_sam2_obj_17_GroundedSAM2_to_grounded_sam2_obj_4_GroundedSAM2_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_12_to_region_15_k01": {
+      "path_id": "rpath_IMG_4000_region_12_to_region_15_k01",
+      "path_num": 55,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_12_to_region_15_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_17_to_region_24_k01": {
+      "path_id": "rpath_IMG_4000_region_17_to_region_24_k01",
+      "path_num": 56,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_17_to_region_24_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_23_to_region_27_k01": {
+      "path_id": "rpath_IMG_4000_region_23_to_region_27_k01",
+      "path_num": 57,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_23_to_region_27_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_24_to_region_34_k01": {
+      "path_id": "rpath_IMG_4000_region_24_to_region_34_k01",
+      "path_num": 58,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_24_to_region_34_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_10_to_region_30_k02": {
+      "path_id": "rpath_IMG_4000_region_10_to_region_30_k02",
+      "path_num": 59,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_10_to_region_30_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_10_to_region_20_k01": {
+      "path_id": "rpath_IMG_4000_region_10_to_region_20_k01",
+      "path_num": 60,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_10_to_region_20_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_23_to_region_26_k01": {
+      "path_id": "rpath_IMG_4000_region_23_to_region_26_k01",
+      "path_num": 61,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_23_to_region_26_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_10_to_region_26_k01": {
+      "path_id": "rpath_IMG_4000_region_10_to_region_26_k01",
+      "path_num": 62,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_10_to_region_26_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_26_to_region_31_k03": {
+      "path_id": "rpath_IMG_4000_region_26_to_region_31_k03",
+      "path_num": 63,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_26_to_region_31_k03.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_19_to_region_27_k01": {
+      "path_id": "rpath_IMG_4000_region_19_to_region_27_k01",
+      "path_num": 64,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_19_to_region_27_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_24_to_region_27_k01": {
+      "path_id": "rpath_IMG_4000_region_24_to_region_27_k01",
+      "path_num": 65,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_24_to_region_27_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_25_to_region_34_k01": {
+      "path_id": "rpath_IMG_4000_region_25_to_region_34_k01",
+      "path_num": 66,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_25_to_region_34_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_3_to_region_12_k01": {
+      "path_id": "rpath_IMG_4000_region_3_to_region_12_k01",
+      "path_num": 67,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_3_to_region_12_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_3_to_region_26_k01": {
+      "path_id": "rpath_IMG_4000_region_3_to_region_26_k01",
+      "path_num": 68,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_3_to_region_26_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_19_to_region_22_k01": {
+      "path_id": "rpath_IMG_4000_region_19_to_region_22_k01",
+      "path_num": 69,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_19_to_region_22_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_18_to_region_26_k01": {
+      "path_id": "rpath_IMG_4000_region_18_to_region_26_k01",
+      "path_num": 70,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_18_to_region_26_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_7_to_region_26_k01": {
+      "path_id": "rpath_IMG_4000_region_7_to_region_26_k01",
+      "path_num": 71,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_7_to_region_26_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_19_to_region_26_k01": {
+      "path_id": "rpath_IMG_4000_region_19_to_region_26_k01",
+      "path_num": 72,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_19_to_region_26_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_24_to_region_31_k02": {
+      "path_id": "rpath_IMG_4000_region_24_to_region_31_k02",
+      "path_num": 73,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_24_to_region_31_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_26_to_region_34_k01": {
+      "path_id": "rpath_IMG_4000_region_26_to_region_34_k01",
+      "path_num": 74,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_26_to_region_34_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "opath_IMG_4000_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_10_GroundedSAM2_k01": {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_10_GroundedSAM2_k01",
+      "path_num": 75,
+      "level": "object",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/object/path_opath_IMG_4000_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_10_GroundedSAM2_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "opath_IMG_4000_grounded_sam2_obj_10_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01": {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_10_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01",
+      "path_num": 76,
+      "level": "object",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/object/path_opath_IMG_4000_grounded_sam2_obj_10_GroundedSAM2_to_grounded_sam2_obj_2_GroundedSAM2_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "opath_IMG_4000_grounded_sam2_obj_5_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01": {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_5_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01",
+      "path_num": 77,
+      "level": "object",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/object/path_opath_IMG_4000_grounded_sam2_obj_5_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "opath_IMG_4000_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01": {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01",
+      "path_num": 78,
+      "level": "object",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/object/path_opath_IMG_4000_grounded_sam2_obj_7_GroundedSAM2_to_grounded_sam2_obj_5_GroundedSAM2_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_5_to_region_13_k01": {
+      "path_id": "rpath_IMG_4000_region_5_to_region_13_k01",
+      "path_num": 79,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_5_to_region_13_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_19_to_region_24_k01": {
+      "path_id": "rpath_IMG_4000_region_19_to_region_24_k01",
+      "path_num": 80,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_19_to_region_24_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_20_to_region_24_k01": {
+      "path_id": "rpath_IMG_4000_region_20_to_region_24_k01",
+      "path_num": 81,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_20_to_region_24_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_12_to_region_34_k02": {
+      "path_id": "rpath_IMG_4000_region_12_to_region_34_k02",
+      "path_num": 82,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_12_to_region_34_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_17_to_region_34_k01": {
+      "path_id": "rpath_IMG_4000_region_17_to_region_34_k01",
+      "path_num": 83,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_17_to_region_34_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_12_to_region_24_k01": {
+      "path_id": "rpath_IMG_4000_region_12_to_region_24_k01",
+      "path_num": 84,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_12_to_region_24_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_20_to_region_26_k01": {
+      "path_id": "rpath_IMG_4000_region_20_to_region_26_k01",
+      "path_num": 85,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_20_to_region_26_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_19_to_region_30_k02": {
+      "path_id": "rpath_IMG_4000_region_19_to_region_30_k02",
+      "path_num": 86,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_19_to_region_30_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_10_to_region_29_k01": {
+      "path_id": "rpath_IMG_4000_region_10_to_region_29_k01",
+      "path_num": 87,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_10_to_region_29_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_27_to_region_34_k01": {
+      "path_id": "rpath_IMG_4000_region_27_to_region_34_k01",
+      "path_num": 88,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_27_to_region_34_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_5_to_region_25_k02": {
+      "path_id": "rpath_IMG_4000_region_5_to_region_25_k02",
+      "path_num": 89,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_5_to_region_25_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_24_to_region_29_k01": {
+      "path_id": "rpath_IMG_4000_region_24_to_region_29_k01",
+      "path_num": 90,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_24_to_region_29_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_20_to_region_29_k01": {
+      "path_id": "rpath_IMG_4000_region_20_to_region_29_k01",
+      "path_num": 91,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_20_to_region_29_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_17_to_region_29_k01": {
+      "path_id": "rpath_IMG_4000_region_17_to_region_29_k01",
+      "path_num": 92,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_17_to_region_29_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_5_to_region_17_k02": {
+      "path_id": "rpath_IMG_4000_region_5_to_region_17_k02",
+      "path_num": 93,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_5_to_region_17_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_3_to_region_29_k01": {
+      "path_id": "rpath_IMG_4000_region_3_to_region_29_k01",
+      "path_num": 94,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_3_to_region_29_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_12_to_region_29_k01": {
+      "path_id": "rpath_IMG_4000_region_12_to_region_29_k01",
+      "path_num": 95,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_12_to_region_29_k01.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_5_to_region_26_k02": {
+      "path_id": "rpath_IMG_4000_region_5_to_region_26_k02",
+      "path_num": 96,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_5_to_region_26_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_5_to_region_12_k02": {
+      "path_id": "rpath_IMG_4000_region_5_to_region_12_k02",
+      "path_num": 97,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_5_to_region_12_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    },
+    "rpath_IMG_4000_region_5_to_region_24_k02": {
+      "path_id": "rpath_IMG_4000_region_5_to_region_24_k02",
+      "path_num": 98,
+      "level": "region",
+      "per_path_image": "scene_graph/grounded_sam2/IMG_4000_paths/images/region/path_rpath_IMG_4000_region_5_to_region_24_k02.png",
+      "description_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_descriptions.json",
+      "animation_record": "scene_graph/grounded_sam2/IMG_4000_paths/animation_plan.json",
+      "diagnostics_record": "scene_graph/grounded_sam2/IMG_4000_paths/path_diagnostics.json"
+    }
+  },
+  "stages": {
+    "00_pair_proposals": {
+      "global": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/00_pair_proposals/global/IMG_4000_00_pair_proposals_global.png",
+      "region": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/00_pair_proposals/region/IMG_4000_00_pair_proposals_region.png",
+      "object": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/00_pair_proposals/object/IMG_4000_00_pair_proposals_object.png",
+      "mask": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/00_pair_proposals/mask/IMG_4000_00_pair_proposals_mask.png"
+    },
+    "01_cost_map": {
+      "global": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/01_cost_map/global/IMG_4000_01_cost_map_global.png",
+      "region": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/01_cost_map/region/IMG_4000_01_cost_map_region.png",
+      "object": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/01_cost_map/object/IMG_4000_01_cost_map_object.png",
+      "mask": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/01_cost_map/mask/IMG_4000_01_cost_map_mask.png"
+    },
+    "02_coarse_routes": {
+      "global": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/02_coarse_routes/global/IMG_4000_02_coarse_routes_global.png",
+      "region": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/02_coarse_routes/region/IMG_4000_02_coarse_routes_region.png",
+      "object": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/02_coarse_routes/object/IMG_4000_02_coarse_routes_object.png",
+      "mask": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/02_coarse_routes/mask/IMG_4000_02_coarse_routes_mask.png"
+    },
+    "03_refined_routes": {
+      "global": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/03_refined_routes/global/IMG_4000_03_refined_routes_global.png",
+      "region": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/03_refined_routes/region/IMG_4000_03_refined_routes_region.png",
+      "object": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/03_refined_routes/object/IMG_4000_03_refined_routes_object.png",
+      "mask": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/03_refined_routes/mask/IMG_4000_03_refined_routes_mask.png"
+    },
+    "04_semantic_hard_filtered": {
+      "global": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/04_semantic_hard_filtered/global/IMG_4000_04_semantic_hard_filtered_global.png",
+      "region": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/04_semantic_hard_filtered/region/IMG_4000_04_semantic_hard_filtered_region.png",
+      "object": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/04_semantic_hard_filtered/object/IMG_4000_04_semantic_hard_filtered_object.png",
+      "mask": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/04_semantic_hard_filtered/mask/IMG_4000_04_semantic_hard_filtered_mask.png"
+    },
+    "05_ranked_topk": {
+      "global": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/05_ranked_topk/global/IMG_4000_05_ranked_topk_global.png",
+      "region": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/05_ranked_topk/region/IMG_4000_05_ranked_topk_region.png",
+      "object": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/05_ranked_topk/object/IMG_4000_05_ranked_topk_object.png",
+      "mask": "scene_graph/grounded_sam2/IMG_4000_paths/images/stages/05_ranked_topk/mask/IMG_4000_05_ranked_topk_mask.png"
+    }
+  },
+  "triplet_context_batches": {
+    "images_root": "scene_graph/grounded_sam2/IMG_4000_paths/images/context_triplets",
+    "manifest": "scene_graph/grounded_sam2/IMG_4000_paths/path_context_triplets_manifest.json"
+  }
+}

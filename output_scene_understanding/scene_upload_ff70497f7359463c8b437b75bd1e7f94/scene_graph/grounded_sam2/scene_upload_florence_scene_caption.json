@@ -1,0 +1,20 @@
+{
+  "variant": "florence_only",
+  "track": "grounded_sam2",
+  "image_path": "/private/var/folders/_k/s8lgfj6d7k56717h6w7c6qw80000gn/T/citv_motion_composer__7fcx88c/scene_upload.png",
+  "source": "Florence2 object captions aggregated",
+  "generated_caption": "",
+  "status": "pending_external_generation",
+  "input_files": {
+    "scene_json": "scene_graph/grounded_sam2/scene_upload_scene.json",
+    "relations_json": "scene_graph/grounded_sam2/scene_upload_relations.json",
+    "layers_json": "scene_graph/grounded_sam2/scene_upload_layers.json",
+    "mask_hierarchy_json": "scene_graph/grounded_sam2/scene_upload_mask_hierarchy.json",
+    "regions_json": "scene_graph/grounded_sam2/scene_upload_regions.json",
+    "regions_image": "scene_graph/grounded_sam2/scene_upload_regions.png",
+    "regions_overlay_image": "scene_graph/grounded_sam2/scene_upload_regions_overlay.png",
+    "region_segmentation_image": "scene_graph/grounded_sam2/scene_upload_region_segmentation.png",
+    "region_sam2_segmentation_image": "scene_graph/grounded_sam2/scene_upload_region_sam2_style_segmentation.png",
+    "region_tinted_overlay_image": "scene_graph/grounded_sam2/scene_upload_region_tinted_overlay.png"
+  }
+}

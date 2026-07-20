@@ -1,0 +1,366 @@
+{
+  "rpath_IMG_4323_region_1_to_region_5_k02": {
+    "title": "region path: building (region_1) \u2192 building (region_5)",
+    "summary": "Confidence=0.66. Traverses regions: region_1, region_7, region_5. Invalid-pixel crossing ratio: 0.000. Max turn: 53.0\u00b0.",
+    "why_valid": "Traverses regions: region_1, region_7, region_5. Invalid-pixel crossing ratio: 0.000. Max turn: 53.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.66 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_IMG_4323_region_1_to_region_5_k02",
+    "source": {
+      "type": "region",
+      "id": "region_1",
+      "name": "building",
+      "display_label": "building (region_1)",
+      "start_uv": [
+        700,
+        812
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_5",
+      "name": "building",
+      "display_label": "building (region_5)",
+      "goal_uv": [
+        778,
+        666
+      ]
+    },
+    "regions_traversed": [
+      "region_1",
+      "region_7",
+      "region_5"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.734944978221802,
+      "depth_consistency": 0.734944978221802,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.6636116790380706,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.6464779912887209
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 53.011004355639585
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          700,
+          812
+        ],
+        [
+          858,
+          582
+        ],
+        [
+          652,
+          591
+        ],
+        [
+          778,
+          666
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 5
+  },
+  "rpath_IMG_4323_region_3_to_region_5_k01": {
+    "title": "region path: animation (region_3) \u2192 building (region_5)",
+    "summary": "Confidence=0.81. Traverses regions: region_3, region_5. Invalid-pixel crossing ratio: 0.017. Max turn: 4.8\u00b0.",
+    "why_valid": "Traverses regions: region_3, region_5. Invalid-pixel crossing ratio: 0.017. Max turn: 4.8\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.81 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_IMG_4323_region_3_to_region_5_k01",
+    "source": {
+      "type": "region",
+      "id": "region_3",
+      "name": "animation",
+      "display_label": "animation (region_3)",
+      "start_uv": [
+        496,
+        721
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_5",
+      "name": "building",
+      "display_label": "building (region_5)",
+      "goal_uv": [
+        778,
+        666
+      ]
+    },
+    "regions_traversed": [
+      "region_3",
+      "region_5"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.9593930915108989,
+      "depth_consistency": 0.9593930915108989,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.8110465029259206,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.7362572366043596
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.016666666666666666,
+      "max_turn_deg": 4.788048364486875
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          496,
+          721
+        ],
+        [
+          489,
+          723
+        ],
+        [
+          778,
+          666
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 1
+  },
+  "rpath_IMG_4323_region_5_to_region_8_k01": {
+    "title": "region path: building (region_5) \u2192 dark (region_8)",
+    "summary": "Confidence=0.78. Traverses regions: region_5, region_8. Invalid-pixel crossing ratio: 0.017. Max turn: 31.8\u00b0.",
+    "why_valid": "Traverses regions: region_5, region_8. Invalid-pixel crossing ratio: 0.017. Max turn: 31.8\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.78 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_IMG_4323_region_5_to_region_8_k01",
+    "source": {
+      "type": "region",
+      "id": "region_5",
+      "name": "building",
+      "display_label": "building (region_5)",
+      "start_uv": [
+        778,
+        666
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_8",
+      "name": "dark",
+      "display_label": "dark (region_8)",
+      "goal_uv": [
+        43,
+        781
+      ]
+    },
+    "regions_traversed": [
+      "region_5",
+      "region_8"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.8244222733645226,
+      "depth_consistency": 0.8244222733645226,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.7759166581198741,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.6822689093458091
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.016666666666666666,
+      "max_turn_deg": 31.782211993762143
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          778,
+          666
+        ],
+        [
+          36,
+          778
+        ],
+        [
+          43,
+          781
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 2
+  },
+  "rpath_IMG_4323_region_6_to_region_8_k02": {
+    "title": "region path: tree (region_6) \u2192 dark (region_8)",
+    "summary": "Confidence=0.72. Traverses regions: region_6, region_5, region_8. Invalid-pixel crossing ratio: 0.000. Max turn: 59.0\u00b0.",
+    "why_valid": "Traverses regions: region_6, region_5, region_8. Invalid-pixel crossing ratio: 0.000. Max turn: 59.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.72 computed from geometric validity + evidence coverage.",
+    "path_id": "rpath_IMG_4323_region_6_to_region_8_k02",
+    "source": {
+      "type": "region",
+      "id": "region_6",
+      "name": "tree",
+      "display_label": "tree (region_6)",
+      "start_uv": [
+        482,
+        755
+      ]
+    },
+    "target": {
+      "type": "region",
+      "id": "region_8",
+      "name": "dark",
+      "display_label": "dark (region_8)",
+      "goal_uv": [
+        43,
+        781
+      ]
+    },
+    "regions_traversed": [
+      "region_6",
+      "region_5",
+      "region_8"
+    ],
+    "scores": {
+      "geometric_feasibility": 0.7047688908291817,
+      "depth_consistency": 0.7047688908291817,
+      "relation_consistency": 0.5,
+      "semantic_plausibility": 0.5,
+      "overall_confidence": 0.7151187206304814,
+      "action_fit": 0.575,
+      "hybrid_overall": 0.6344075563316728
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 59.04622183416365
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          482,
+          755
+        ],
+        [
+          489,
+          766
+        ],
+        [
+          36,
+          778
+        ],
+        [
+          43,
+          781
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 3
+  },
+  "opath_IMG_4323_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01": {
+    "title": "object path: face (grounded_sam2_obj_2_GroundedSAM2) \u2192 sculpture yellow (grounded_sam2_obj_3_GroundedSAM2)",
+    "summary": "Confidence=0.70. Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "why_valid": "Traverses regions: region_1. Invalid-pixel crossing ratio: 0.000. Max turn: 0.0\u00b0.",
+    "assumptions": "Single-image hypothesis; not a temporal track.",
+    "confidence_explanation": "Overall confidence=0.70 computed from geometric validity + evidence coverage.",
+    "path_id": "opath_IMG_4323_grounded_sam2_obj_2_GroundedSAM2_to_grounded_sam2_obj_3_GroundedSAM2_k01",
+    "source": {
+      "type": "object",
+      "id": "grounded_sam2_obj_2_GroundedSAM2",
+      "name": "face",
+      "display_label": "face (grounded_sam2_obj_2_GroundedSAM2)",
+      "start_uv": [
+        858,
+        700
+      ]
+    },
+    "target": {
+      "type": "object",
+      "id": "grounded_sam2_obj_3_GroundedSAM2",
+      "name": "sculpture yellow",
+      "display_label": "sculpture yellow (grounded_sam2_obj_3_GroundedSAM2)",
+      "goal_uv": [
+        858,
+        700
+      ]
+    },
+    "regions_traversed": [
+      "region_1"
+    ],
+    "scores": {
+      "geometric_feasibility": 1.0,
+      "depth_consistency": 1.0,
+      "relation_consistency": 0.6,
+      "semantic_plausibility": 0.6,
+      "image_alignment_score": 0.4782528877258301,
+      "overall_confidence": 0.6958143234252929,
+      "motion_primary_score": 0.7,
+      "depth_alignment_score": 1.0,
+      "action_fit": 0.625,
+      "hybrid_overall": 0.6940204620361329
+    },
+    "validity_checks": {
+      "ok": true,
+      "invalid_ratio": 0.0,
+      "max_turn_deg": 0.0
+    },
+    "grounded_inputs": {
+      "polyline_2d": [
+        [
+          858,
+          700
+        ],
+        [
+          858,
+          700
+        ]
+      ],
+      "constraints_applied": {
+        "image_bounds_enforced": true,
+        "region_adjacency_enforced": true,
+        "occupancy_avoidance_enforced": true
+      }
+    },
+    "semantic_source": "local",
+    "llm_status": "disabled",
+    "llm_error": "",
+    "semantic_summary": "Semantic plausibility 0.65; regions are mostly traversable/interactive; lexical semantic match=0.00",
+    "path_num": 4
+  }
+}

@@ -1,0 +1,861 @@
+{
+  "fps": 24,
+  "paths": [
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_17_k01",
+      "path_num": 1,
+      "action_fit_confidence": 0.8267500000000001,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 2.2679869280562506
+        }
+      ],
+      "trajectory_points": [
+        [
+          769,
+          258
+        ],
+        [
+          510,
+          315
+        ],
+        [
+          510,
+          315
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG_4000_region_3_to_region_17_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG_4000_region_3_to_region_17_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 2.2679869280562506
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_22_k01",
+      "path_num": 2,
+      "action_fit_confidence": 0.812503758369095,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 1.7086083504570688
+        }
+      ],
+      "trajectory_points": [
+        [
+          510,
+          315
+        ],
+        [
+          510,
+          315
+        ],
+        [
+          418,
+          466
+        ],
+        [
+          420,
+          462
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG_4000_region_17_to_region_22_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG_4000_region_17_to_region_22_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 1.7086083504570688
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_27_k01",
+      "path_num": 3,
+      "action_fit_confidence": 0.8057984911779199,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 2.8500734933947007
+        }
+      ],
+      "trajectory_points": [
+        [
+          510,
+          315
+        ],
+        [
+          510,
+          315
+        ],
+        [
+          448,
+          661
+        ],
+        [
+          448,
+          660
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG_4000_region_17_to_region_27_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG_4000_region_17_to_region_27_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 2.8500734933947007
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_3_to_region_10_k01",
+      "path_num": 4,
+      "action_fit_confidence": 0.8010022542288333,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 1.4912722610184495
+        }
+      ],
+      "trajectory_points": [
+        [
+          769,
+          258
+        ],
+        [
+          869,
+          151
+        ],
+        [
+          868,
+          153
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG_4000_region_3_to_region_10_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG_4000_region_3_to_region_10_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 1.4912722610184495
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_20_to_region_34_k01",
+      "path_num": 5,
+      "action_fit_confidence": 0.7967500000000001,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 1.848332303254654
+        }
+      ],
+      "trajectory_points": [
+        [
+          738,
+          507
+        ],
+        [
+          567,
+          615
+        ],
+        [
+          567,
+          615
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG_4000_region_20_to_region_34_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG_4000_region_20_to_region_34_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 1.848332303254654
+    },
+    {
+      "path_id": "opath_IMG_4000_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01",
+      "path_num": 6,
+      "action_fit_confidence": 0.7872662003438076,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 0.5133333333333333
+        }
+      ],
+      "trajectory_points": [
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          690,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          691,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ],
+        [
+          692,
+          771
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "opath_IMG_4000_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "opath_IMG_4000_grounded_sam2_obj_15_GroundedSAM2_to_grounded_sam2_obj_7_GroundedSAM2_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 0.5133333333333333
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_12_to_region_17_k01",
+      "path_num": 7,
+      "action_fit_confidence": 0.7858140279348629,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 1.1909084347731116
+        }
+      ],
+      "trajectory_points": [
+        [
+          450,
+          236
+        ],
+        [
+          449,
+          234
+        ],
+        [
+          510,
+          315
+        ],
+        [
+          510,
+          315
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG_4000_region_12_to_region_17_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG_4000_region_12_to_region_17_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 1.1909084347731116
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_17_to_region_30_k02",
+      "path_num": 8,
+      "action_fit_confidence": 0.7830782111447886,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 5.525724354065056
+        }
+      ],
+      "trajectory_points": [
+        [
+          510,
+          315
+        ],
+        [
+          510,
+          315
+        ],
+        [
+          1048,
+          620
+        ],
+        [
+          941,
+          537
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG_4000_region_17_to_region_30_k02"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG_4000_region_17_to_region_30_k02"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 5.525724354065056
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_7_to_region_17_k01",
+      "path_num": 9,
+      "action_fit_confidence": 0.7787393170228023,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 3.1607595949202025
+        }
+      ],
+      "trajectory_points": [
+        [
+          830,
+          117
+        ],
+        [
+          842,
+          116
+        ],
+        [
+          510,
+          315
+        ],
+        [
+          510,
+          315
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG_4000_region_7_to_region_17_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG_4000_region_7_to_region_17_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 3.1607595949202025
+    },
+    {
+      "path_id": "rpath_IMG_4000_region_10_to_region_22_k01",
+      "path_num": 10,
+      "action_fit_confidence": 0.7785884862700665,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 4.212151583077697
+        }
+      ],
+      "trajectory_points": [
+        [
+          868,
+          153
+        ],
+        [
+          869,
+          151
+        ],
+        [
+          418,
+          466
+        ],
+        [
+          420,
+          462
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG_4000_region_10_to_region_22_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG_4000_region_10_to_region_22_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 4.212151583077697
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "variant": "florence_object",
+  "track": "grounded_sam2",
+  "image_path": "/private/var/folders/_k/s8lgfj6d7k56717h6w7c6qw80000gn/T/gradio/81ce6b4d0a8eb21447d5b3d1840d21de95bddd80a87137d2e6c3925bb4caa6da/IMG_4000.JPG",
+  "count": 19,
+  "objects": [
+    {
+      "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+      "label": "animal bird",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+      "label": "animal bird",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+      "label": "animal bird horse",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+      "label": "chair",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+      "label": "building",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+      "label": "ledge",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+      "label": "park",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_7_GroundedSAM2",
+      "label": "ledge park",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_8_GroundedSAM2",
+      "label": "building",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_9_GroundedSAM2",
+      "label": "park",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_10_GroundedSAM2",
+      "label": "bird horse",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_11_GroundedSAM2",
+      "label": "chair",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_12_GroundedSAM2",
+      "label": "building",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_13_GroundedSAM2",
+      "label": "building",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_14_GroundedSAM2",
+      "label": "building",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_15_GroundedSAM2",
+      "label": "park",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_16_GroundedSAM2",
+      "label": "ledge",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_17_GroundedSAM2",
+      "label": "building",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    },
+    {
+      "object_id": "grounded_sam2_obj_18_GroundedSAM2",
+      "label": "ledge",
+      "segmentor": "GroundedSAM2",
+      "florence_label": "object",
+      "florence_caption": "object",
+      "selected_caption": ""
+    }
+  ]
+}

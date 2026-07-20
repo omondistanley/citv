@@ -1,0 +1,2151 @@
+{
+  "metadata": {
+    "image_path": "/private/var/folders/_k/s8lgfj6d7k56717h6w7c6qw80000gn/T/gradio/81ce6b4d0a8eb21447d5b3d1840d21de95bddd80a87137d2e6c3925bb4caa6da/IMG_4000.JPG",
+    "image_stem": "IMG_4000",
+    "timestamp": "2026-05-10 17:29:16",
+    "image_size": [
+      1280,
+      853
+    ],
+    "matching_mode": "A"
+  },
+  "depth": {
+    "depth_map_path": "depth/IMG_4000_depth_metric.npy",
+    "depth_map_image_path": "scene_graph/grounded_sam2/IMG_4000_depth_map.png",
+    "depth_min": 4.377108573913574,
+    "depth_max": 42.879493713378906,
+    "depth_mean": 17.76144790649414
+  },
+  "segmentation": {
+    "model": "SAM2",
+    "mode": "automatic_mask_generator",
+    "segmentation_map_image_path": "scene_graph/grounded_sam2/IMG_4000_segmentation.png",
+    "num_auto_masks": 19,
+    "match_strategy": "iou_with_detection_bbox"
+  },
+  "depth_mask": {
+    "mapping_image_path": "scene_graph/grounded_sam2/IMG_4000_depth_mask_mapping_A.png",
+    "objects": [
+      {
+        "id": "grounded_sam2_obj_0_GroundingDINO",
+        "entity_kind": "object",
+        "label": "animal bird",
+        "bbox": [
+          614.2565307617188,
+          556.8219604492188,
+          710.2686157226562,
+          718.286865234375
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 0,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 9.0614,
+          "max": 14.1722,
+          "mean": 11.6122,
+          "median": 11.6831,
+          "std": 1.2047,
+          "num_pixels": 6570,
+          "z_val": 11.6696,
+          "z_val_pixels": 3241,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.8938
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.221,
+          "y": 2.29,
+          "z": 11.67
+        },
+        "mask_centroid_2d": [
+          661,
+          644
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_1_GroundingDINO",
+        "entity_kind": "object",
+        "label": "animal bird",
+        "bbox": [
+          566.7223510742188,
+          555.0184326171875,
+          634.0740966796875,
+          683.507568359375
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 12.018,
+          "max": 15.8775,
+          "mean": 13.762,
+          "median": 13.7122,
+          "std": 0.6306,
+          "num_pixels": 3457,
+          "z_val": 13.3755,
+          "z_val_pixels": 1681,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.1902
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.471,
+          "y": 2.287,
+          "z": 13.375
+        },
+        "mask_centroid_2d": [
+          601,
+          616
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_2_GroundingDINO",
+        "entity_kind": "object",
+        "label": "animal bird horse",
+        "bbox": [
+          274.5467834472656,
+          527.4107055664062,
+          547.3652954101562,
+          683.931640625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 2,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 14.2689,
+          "max": 15.9438,
+          "mean": 15.0861,
+          "median": 15.073,
+          "std": 0.3397,
+          "num_pixels": 18435,
+          "z_val": 15.0123,
+          "z_val_pixels": 7858,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.9648
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.318,
+          "y": 2.444,
+          "z": 15.012
+        },
+        "mask_centroid_2d": [
+          395,
+          607
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_3_GroundingDINO",
+        "entity_kind": "object",
+        "label": "chair",
+        "bbox": [
+          0.3887176513671875,
+          746.0358276367188,
+          121.07899475097656,
+          851.654052734375
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 3,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.2497,
+          "max": 5.8949,
+          "mean": 5.5644,
+          "median": 5.5794,
+          "std": 0.1289,
+          "num_pixels": 10991,
+          "z_val": 5.6214,
+          "z_val_pixels": 5499,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.5225
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.967,
+          "y": 1.894,
+          "z": 5.621
+        },
+        "mask_centroid_2d": [
+          55,
+          800
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_4_GroundingDINO",
+        "entity_kind": "object",
+        "label": "building",
+        "bbox": [
+          454.5235900878906,
+          338.66357421875,
+          1117.869140625,
+          649.1024169921875
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 4,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.8253,
+          "max": 39.4685,
+          "mean": 29.5351,
+          "median": 30.4113,
+          "std": 4.7669,
+          "num_pixels": 92250,
+          "z_val": 34.8238,
+          "z_val_pixels": 42758,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.1523
+        },
+        "coordinates_3d_from_mask": {
+          "x": 8.89,
+          "y": 1.963,
+          "z": 34.824
+        },
+        "mask_centroid_2d": [
+          923,
+          489
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_5_GroundingDINO",
+        "entity_kind": "object",
+        "label": "ledge",
+        "bbox": [
+          3.3249664306640625,
+          644.6556396484375,
+          1275.0947265625,
+          847.989501953125
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 5,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.4039,
+          "max": 12.191,
+          "mean": 7.4736,
+          "median": 7.0071,
+          "std": 2.0205,
+          "num_pixels": 208571,
+          "z_val": 6.0535,
+          "z_val_pixels": 56115,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2502
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.284,
+          "y": 1.881,
+          "z": 6.053
+        },
+        "mask_centroid_2d": [
+          692,
+          771
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_6_GroundingDINO",
+        "entity_kind": "object",
+        "label": "park",
+        "bbox": [
+          0.0,
+          2.907468795776367,
+          1279.699462890625,
+          853.0
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 6,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 5.6299,
+          "max": 30.9407,
+          "mean": 18.1856,
+          "median": 17.9748,
+          "std": 5.5355,
+          "num_pixels": 812147,
+          "z_val": 16.6855,
+          "z_val_pixels": 303024,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.2139
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.452,
+          "y": -0.489,
+          "z": 16.685
+        },
+        "mask_centroid_2d": [
+          610,
+          394
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_7_GroundingDINO",
+        "entity_kind": "object",
+        "label": "ledge park",
+        "bbox": [
+          0.4053497314453125,
+          628.5064697265625,
+          1279.92236328125,
+          852.877197265625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 7,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.4039,
+          "max": 12.1982,
+          "mean": 7.4795,
+          "median": 7.0105,
+          "std": 2.025,
+          "num_pixels": 208701,
+          "z_val": 6.0543,
+          "z_val_pixels": 56207,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2113
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.284,
+          "y": 1.882,
+          "z": 6.054
+        },
+        "mask_centroid_2d": [
+          692,
+          771
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_8_GroundingDINO",
+        "entity_kind": "object",
+        "label": "building",
+        "bbox": [
+          660.505859375,
+          339.36944580078125,
+          1077.5030517578125,
+          644.010009765625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 8,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 17.8951,
+          "max": 40.2442,
+          "mean": 29.5846,
+          "median": 31.1213,
+          "std": 5.1112,
+          "num_pixels": 79200,
+          "z_val": 34.0982,
+          "z_val_pixels": 38719,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.1354
+        },
+        "coordinates_3d_from_mask": {
+          "x": 7.29,
+          "y": 1.892,
+          "z": 34.098
+        },
+        "mask_centroid_2d": [
+          877,
+          488
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_9_GroundingDINO",
+        "entity_kind": "object",
+        "label": "park",
+        "bbox": [
+          0.6025314331054688,
+          6.997107982635498,
+          1279.5478515625,
+          675.8635864257812
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 9,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 12.4539,
+          "max": 28.7134,
+          "mean": 19.202,
+          "median": 18.3228,
+          "std": 3.8336,
+          "num_pixels": 678480,
+          "z_val": 16.5955,
+          "z_val_pixels": 293886,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.9462
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.539,
+          "y": -2.343,
+          "z": 16.595
+        },
+        "mask_centroid_2d": [
+          676,
+          270
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_10_GroundingDINO",
+        "entity_kind": "object",
+        "label": "bird horse",
+        "bbox": [
+          273.270263671875,
+          528.2815551757812,
+          549.1644287109375,
+          680.2030639648438
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 10,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 14.2689,
+          "max": 15.9448,
+          "mean": 15.0862,
+          "median": 15.0732,
+          "std": 0.3397,
+          "num_pixels": 18455,
+          "z_val": 15.0123,
+          "z_val_pixels": 7872,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.974
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.318,
+          "y": 2.444,
+          "z": 15.012
+        },
+        "mask_centroid_2d": [
+          395,
+          607
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_11_GroundingDINO",
+        "entity_kind": "object",
+        "label": "chair",
+        "bbox": [
+          921.3560791015625,
+          612.3973999023438,
+          962.4636840820312,
+          646.265625
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 11,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 29.6312,
+          "max": 33.7434,
+          "mean": 31.628,
+          "median": 31.569,
+          "std": 1.0399,
+          "num_pixels": 967,
+          "z_val": 30.3021,
+          "z_val_pixels": 475,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2317
+        },
+        "coordinates_3d_from_mask": {
+          "x": 8.228,
+          "y": 5.536,
+          "z": 30.302
+        },
+        "mask_centroid_2d": [
+          941,
+          629
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_12_GroundingDINO",
+        "entity_kind": "object",
+        "label": "building",
+        "bbox": [
+          413.403564453125,
+          324.00079345703125,
+          1279.9830322265625,
+          658.2140502929688
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 12,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 17.3594,
+          "max": 38.1561,
+          "mean": 28.0974,
+          "median": 28.077,
+          "std": 4.8405,
+          "num_pixels": 123818,
+          "z_val": 31.6051,
+          "z_val_pixels": 55137,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 4.4674
+        },
+        "coordinates_3d_from_mask": {
+          "x": 8.667,
+          "y": 1.611,
+          "z": 31.605
+        },
+        "mask_centroid_2d": [
+          944,
+          483
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_13_GroundingDINO",
+        "entity_kind": "object",
+        "label": "building",
+        "bbox": [
+          648.248291015625,
+          344.0674133300781,
+          975.725830078125,
+          644.1199340820312
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 13,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 19.61,
+          "max": 40.5596,
+          "mean": 30.8413,
+          "median": 32.6974,
+          "std": 4.7077,
+          "num_pixels": 49985,
+          "z_val": 34.17,
+          "z_val_pixels": 24199,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.0158
+        },
+        "coordinates_3d_from_mask": {
+          "x": 6.011,
+          "y": 2.296,
+          "z": 34.17
+        },
+        "mask_centroid_2d": [
+          835,
+          501
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_14_GroundingDINO",
+        "entity_kind": "object",
+        "label": "building",
+        "bbox": [
+          667.2268676757812,
+          348.5798645019531,
+          962.3643798828125,
+          548.3272705078125
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 14,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 15.3684,
+          "max": 37.7374,
+          "mean": 25.8322,
+          "median": 25.3965,
+          "std": 5.8749,
+          "num_pixels": 32779,
+          "z_val": 20.8583,
+          "z_val_pixels": 15542,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 6.982
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.234,
+          "y": -0.066,
+          "z": 20.858
+        },
+        "mask_centroid_2d": [
+          865,
+          423
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_15_GroundingDINO",
+        "entity_kind": "object",
+        "label": "park",
+        "bbox": [
+          1.6366195678710938,
+          324.9181213378906,
+          1277.40673828125,
+          843.1358032226562
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 15,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.4039,
+          "max": 12.1416,
+          "mean": 7.4479,
+          "median": 7.0002,
+          "std": 1.991,
+          "num_pixels": 206751,
+          "z_val": 6.055,
+          "z_val_pixels": 54771,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.4639
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.273,
+          "y": 1.882,
+          "z": 6.055
+        },
+        "mask_centroid_2d": [
+          690,
+          771
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_16_GroundingDINO",
+        "entity_kind": "object",
+        "label": "ledge",
+        "bbox": [
+          1.4850234985351562,
+          638.8881225585938,
+          460.933349609375,
+          849.6991577148438
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 16,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 8.0432,
+          "max": 11.5643,
+          "mean": 9.8925,
+          "median": 9.8973,
+          "std": 0.7517,
+          "num_pixels": 31520,
+          "z_val": 9.5463,
+          "z_val_pixels": 13633,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.7948
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.297,
+          "y": 2.528,
+          "z": 9.546
+        },
+        "mask_centroid_2d": [
+          141,
+          720
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_17_GroundingDINO",
+        "entity_kind": "object",
+        "label": "building",
+        "bbox": [
+          680.7516479492188,
+          333.83856201171875,
+          1164.7080078125,
+          645.0980224609375
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 17,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.2083,
+          "max": 39.1344,
+          "mean": 29.1709,
+          "median": 29.7212,
+          "std": 4.7231,
+          "num_pixels": 109612,
+          "z_val": 26.2652,
+          "z_val_pixels": 51991,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.518
+        },
+        "coordinates_3d_from_mask": {
+          "x": 7.203,
+          "y": 1.481,
+          "z": 26.265
+        },
+        "mask_centroid_2d": [
+          944,
+          489
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "grounded_sam2_obj_18_GroundingDINO",
+        "entity_kind": "object",
+        "label": "ledge",
+        "bbox": [
+          188.19454956054688,
+          675.8009643554688,
+          1276.12255859375,
+          853.0
+        ],
+        "source_model": "GroundingDINO",
+        "segmentor": "GroundedSAM2",
+        "sam2_mask_index": 18,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.4039,
+          "max": 11.6401,
+          "mean": 6.7596,
+          "median": 6.5965,
+          "std": 1.5449,
+          "num_pixels": 173501,
+          "z_val": 6.0594,
+          "z_val_pixels": 47876,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5611
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.667,
+          "y": 1.927,
+          "z": 6.059
+        },
+        "mask_centroid_2d": [
+          762,
+          779
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_1",
+        "entity_kind": "region",
+        "label": "foreground",
+        "bbox": [
+          0,
+          21,
+          119,
+          182
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 8.7408,
+          "max": 9.9701,
+          "mean": 9.3386,
+          "median": 9.2829,
+          "std": 0.2641,
+          "num_pixels": 13808,
+          "z_val": 9.2501,
+          "z_val_pixels": 6870,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.809
+        },
+        "coordinates_3d_from_mask": {
+          "x": -4.94,
+          "y": -2.616,
+          "z": 9.25
+        },
+        "mask_centroid_2d": [
+          48,
+          113
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_2",
+        "entity_kind": "region",
+        "label": "foreground",
+        "bbox": [
+          0,
+          625,
+          1279,
+          852
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 4.3771,
+          "max": 11.0261,
+          "mean": 7.0818,
+          "median": 6.8164,
+          "std": 1.7029,
+          "num_pixels": 215511,
+          "z_val": 6.1149,
+          "z_val_pixels": 59015,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 4.285
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.011,
+          "y": 1.939,
+          "z": 6.115
+        },
+        "mask_centroid_2d": [
+          638,
+          778
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_3",
+        "entity_kind": "region",
+        "label": "midground",
+        "bbox": [
+          0,
+          0,
+          1279,
+          717
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 12.994,
+          "max": 18.6941,
+          "mean": 16.2108,
+          "median": 16.3293,
+          "std": 1.3522,
+          "num_pixels": 364527,
+          "z_val": 16.2717,
+          "z_val_pixels": 100223,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.3896
+        },
+        "coordinates_3d_from_mask": {
+          "x": 1.894,
+          "y": -2.473,
+          "z": 16.272
+        },
+        "mask_centroid_2d": [
+          769,
+          258
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_4",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          0,
+          0,
+          92,
+          73
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 19.5659,
+          "max": 25.4586,
+          "mean": 22.9307,
+          "median": 22.9439,
+          "std": 1.5276,
+          "num_pixels": 2596,
+          "z_val": 21.7973,
+          "z_val_pixels": 823,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.6581
+        },
+        "coordinates_3d_from_mask": {
+          "x": -11.68,
+          "y": -7.797,
+          "z": 21.797
+        },
+        "mask_centroid_2d": [
+          46,
+          30
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_5",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          0,
+          0,
+          506,
+          650
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7018,
+          "max": 24.679,
+          "mean": 20.7148,
+          "median": 20.3119,
+          "std": 1.612,
+          "num_pixels": 99934,
+          "z_val": 18.9111,
+          "z_val_pixels": 40687,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.2962
+        },
+        "coordinates_3d_from_mask": {
+          "x": -7.472,
+          "y": -0.589,
+          "z": 18.911
+        },
+        "mask_centroid_2d": [
+          202,
+          392
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_6",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          894,
+          60,
+          949,
+          116
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7066,
+          "max": 22.7049,
+          "mean": 20.5929,
+          "median": 20.7403,
+          "std": 1.0582,
+          "num_pixels": 1767,
+          "z_val": 21.884,
+          "z_val_pixels": 866,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.8953
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.587,
+          "y": -6.722,
+          "z": 21.884
+        },
+        "mask_centroid_2d": [
+          923,
+          86
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_7",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          759,
+          72,
+          923,
+          163
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7019,
+          "max": 21.6878,
+          "mean": 19.9853,
+          "median": 19.9231,
+          "std": 0.8036,
+          "num_pixels": 5269,
+          "z_val": 19.6724,
+          "z_val_pixels": 2130,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.8661
+        },
+        "coordinates_3d_from_mask": {
+          "x": 3.372,
+          "y": -5.493,
+          "z": 19.672
+        },
+        "mask_centroid_2d": [
+          830,
+          117
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_8",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          532,
+          100,
+          757,
+          286
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7019,
+          "max": 21.5322,
+          "mean": 19.5712,
+          "median": 19.3594,
+          "std": 0.6978,
+          "num_pixels": 12518,
+          "z_val": 18.914,
+          "z_val_pixels": 4365,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.242
+        },
+        "coordinates_3d_from_mask": {
+          "x": -0.222,
+          "y": -4.086,
+          "z": 18.914
+        },
+        "mask_centroid_2d": [
+          627,
+          187
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_9",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          944,
+          116,
+          1004,
+          154
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.703,
+          "max": 21.8251,
+          "mean": 20.1191,
+          "median": 20.1856,
+          "std": 0.7223,
+          "num_pixels": 1361,
+          "z_val": 20.8375,
+          "z_val_pixels": 628,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.1687
+        },
+        "coordinates_3d_from_mask": {
+          "x": 6.354,
+          "y": -5.442,
+          "z": 20.837
+        },
+        "mask_centroid_2d": [
+          978,
+          137
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_10",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          835,
+          132,
+          898,
+          167
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7025,
+          "max": 23.458,
+          "mean": 20.6842,
+          "median": 20.5238,
+          "std": 1.3756,
+          "num_pixels": 1037,
+          "z_val": 23.3711,
+          "z_val_pixels": 410,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.585
+        },
+        "coordinates_3d_from_mask": {
+          "x": 4.807,
+          "y": -5.766,
+          "z": 23.371
+        },
+        "mask_centroid_2d": [
+          868,
+          153
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_11",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          922,
+          166,
+          1101,
+          256
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7026,
+          "max": 22.106,
+          "mean": 20.0482,
+          "median": 19.9605,
+          "std": 0.8497,
+          "num_pixels": 7127,
+          "z_val": 19.4361,
+          "z_val_pixels": 2838,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.0998
+        },
+        "coordinates_3d_from_mask": {
+          "x": 6.68,
+          "y": -3.901,
+          "z": 19.436
+        },
+        "mask_centroid_2d": [
+          1021,
+          204
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_12",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          428,
+          210,
+          471,
+          255
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.702,
+          "max": 24.0462,
+          "mean": 20.5571,
+          "median": 20.2606,
+          "std": 1.4083,
+          "num_pixels": 980,
+          "z_val": 18.833,
+          "z_val_pixels": 339,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.3926
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.228,
+          "y": -3.236,
+          "z": 18.833
+        },
+        "mask_centroid_2d": [
+          450,
+          236
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_13",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          179,
+          220,
+          214,
+          250
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 24.6876,
+          "max": 25.4598,
+          "mean": 25.1352,
+          "median": 25.1675,
+          "std": 0.2206,
+          "num_pixels": 520,
+          "z_val": 24.7361,
+          "z_val_pixels": 244,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.6493
+        },
+        "coordinates_3d_from_mask": {
+          "x": -9.908,
+          "y": -4.296,
+          "z": 24.736
+        },
+        "mask_centroid_2d": [
+          196,
+          234
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_14",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          905,
+          233,
+          1107,
+          351
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7022,
+          "max": 24.7096,
+          "mean": 21.1558,
+          "median": 20.9643,
+          "std": 1.588,
+          "num_pixels": 10286,
+          "z_val": 20.4149,
+          "z_val_pixels": 3298,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.1992
+        },
+        "coordinates_3d_from_mask": {
+          "x": 6.777,
+          "y": -2.753,
+          "z": 20.415
+        },
+        "mask_centroid_2d": [
+          1008,
+          277
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_15",
+        "entity_kind": "region",
+        "label": "midground",
+        "bbox": [
+          455,
+          252,
+          533,
+          307
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7021,
+          "max": 19.8908,
+          "mean": 19.2228,
+          "median": 19.1802,
+          "std": 0.2738,
+          "num_pixels": 1516,
+          "z_val": 19.1811,
+          "z_val_pixels": 528,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3501
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.561,
+          "y": -2.57,
+          "z": 19.181
+        },
+        "mask_centroid_2d": [
+          492,
+          278
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_16",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          1156,
+          287,
+          1202,
+          376
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7034,
+          "max": 23.4201,
+          "mean": 20.78,
+          "median": 20.6323,
+          "std": 1.1613,
+          "num_pixels": 2264,
+          "z_val": 22.1163,
+          "z_val_pixels": 1006,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.8028
+        },
+        "coordinates_3d_from_mask": {
+          "x": 10.754,
+          "y": -2.085,
+          "z": 22.116
+        },
+        "mask_centroid_2d": [
+          1179,
+          322
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_17",
+        "entity_kind": "region",
+        "label": "midground",
+        "bbox": [
+          480,
+          302,
+          543,
+          336
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7019,
+          "max": 20.07,
+          "mean": 19.1168,
+          "median": 19.0565,
+          "std": 0.3307,
+          "num_pixels": 847,
+          "z_val": 19.1952,
+          "z_val_pixels": 185,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.679
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.251,
+          "y": -1.931,
+          "z": 19.195
+        },
+        "mask_centroid_2d": [
+          510,
+          315
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_18",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          913,
+          302,
+          955,
+          337
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7046,
+          "max": 23.3411,
+          "mean": 20.2184,
+          "median": 19.9503,
+          "std": 1.1825,
+          "num_pixels": 574,
+          "z_val": 21.2385,
+          "z_val_pixels": 217,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 2.211
+        },
+        "coordinates_3d_from_mask": {
+          "x": 5.671,
+          "y": -1.983,
+          "z": 21.239
+        },
+        "mask_centroid_2d": [
+          936,
+          323
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_19",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          1075,
+          306,
+          1137,
+          368
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7024,
+          "max": 24.0759,
+          "mean": 20.3031,
+          "median": 19.7066,
+          "std": 1.4957,
+          "num_pixels": 1677,
+          "z_val": 19.213,
+          "z_val_pixels": 583,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.7457
+        },
+        "coordinates_3d_from_mask": {
+          "x": 8.111,
+          "y": -1.43,
+          "z": 19.213
+        },
+        "mask_centroid_2d": [
+          1108,
+          344
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_20",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          342,
+          327,
+          1204,
+          678
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7019,
+          "max": 25.46,
+          "mean": 21.9891,
+          "median": 21.8775,
+          "std": 1.7584,
+          "num_pixels": 84326,
+          "z_val": 22.9263,
+          "z_val_pixels": 15612,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.2715
+        },
+        "coordinates_3d_from_mask": {
+          "x": 2.027,
+          "y": 1.665,
+          "z": 22.926
+        },
+        "mask_centroid_2d": [
+          738,
+          507
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_21",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          1227,
+          373,
+          1279,
+          667
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7023,
+          "max": 25.4588,
+          "mean": 22.311,
+          "median": 22.4,
+          "std": 1.8863,
+          "num_pixels": 7716,
+          "z_val": 19.6139,
+          "z_val_pixels": 1599,
+          "possibly_transparent": true,
+          "depth_separation_from_background": 0.1261
+        },
+        "coordinates_3d_from_mask": {
+          "x": 10.829,
+          "y": 1.955,
+          "z": 19.614
+        },
+        "mask_centroid_2d": [
+          1252,
+          537
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_22",
+        "entity_kind": "region",
+        "label": "midground",
+        "bbox": [
+          362,
+          411,
+          469,
+          518
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7265,
+          "max": 19.7766,
+          "mean": 19.1679,
+          "median": 19.136,
+          "std": 0.2238,
+          "num_pixels": 2323,
+          "z_val": 19.1261,
+          "z_val_pixels": 715,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.3317
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.796,
+          "y": 0.613,
+          "z": 19.126
+        },
+        "mask_centroid_2d": [
+          420,
+          462
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_23",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          505,
+          449,
+          546,
+          477
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7024,
+          "max": 21.8016,
+          "mean": 19.8093,
+          "median": 19.572,
+          "std": 0.8884,
+          "num_pixels": 610,
+          "z_val": 19.6917,
+          "z_val_pixels": 264,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.7062
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.132,
+          "y": 0.702,
+          "z": 19.692
+        },
+        "mask_centroid_2d": [
+          520,
+          466
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_24",
+        "entity_kind": "region",
+        "label": "midground",
+        "bbox": [
+          177,
+          516,
+          331,
+          590
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7036,
+          "max": 20.5236,
+          "mean": 19.4108,
+          "median": 19.3303,
+          "std": 0.4493,
+          "num_pixels": 3904,
+          "z_val": 18.9841,
+          "z_val_pixels": 1270,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.5908
+        },
+        "coordinates_3d_from_mask": {
+          "x": -6.491,
+          "y": 2.269,
+          "z": 18.984
+        },
+        "mask_centroid_2d": [
+          261,
+          559
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_25",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          500,
+          596,
+          537,
+          654
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 19.0198,
+          "max": 22.6155,
+          "mean": 20.7908,
+          "median": 20.8539,
+          "std": 0.6966,
+          "num_pixels": 1602,
+          "z_val": 20.9132,
+          "z_val_pixels": 797,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 4.0826
+        },
+        "coordinates_3d_from_mask": {
+          "x": -2.302,
+          "y": 3.707,
+          "z": 20.913
+        },
+        "mask_centroid_2d": [
+          518,
+          623
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_26",
+        "entity_kind": "region",
+        "label": "midground",
+        "bbox": [
+          225,
+          602,
+          310,
+          665
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7069,
+          "max": 19.9871,
+          "mean": 19.3125,
+          "median": 19.3222,
+          "std": 0.3062,
+          "num_pixels": 2431,
+          "z_val": 19.4381,
+          "z_val_pixels": 1102,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 0.479
+        },
+        "coordinates_3d_from_mask": {
+          "x": -6.593,
+          "y": 3.744,
+          "z": 19.438
+        },
+        "mask_centroid_2d": [
+          264,
+          640
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_27",
+        "entity_kind": "region",
+        "label": "midground",
+        "bbox": [
+          438,
+          642,
+          461,
+          677
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 18.7027,
+          "max": 20.0043,
+          "mean": 19.2288,
+          "median": 19.1462,
+          "std": 0.3332,
+          "num_pixels": 649,
+          "z_val": 19.1228,
+          "z_val_pixels": 320,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 1.9588
+        },
+        "coordinates_3d_from_mask": {
+          "x": -3.312,
+          "y": 4.028,
+          "z": 19.123
+        },
+        "mask_centroid_2d": [
+          448,
+          660
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_28",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          0,
+          0,
+          338,
+          411
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 25.4601,
+          "max": 31.4851,
+          "mean": 27.8044,
+          "median": 27.7962,
+          "std": 1.2134,
+          "num_pixels": 70684,
+          "z_val": 27.6592,
+          "z_val_pixels": 27517,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.6035
+        },
+        "coordinates_3d_from_mask": {
+          "x": -12.127,
+          "y": -6.475,
+          "z": 27.659
+        },
+        "mask_centroid_2d": [
+          154,
+          167
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_29",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          647,
+          386,
+          703,
+          412
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 25.4617,
+          "max": 30.3391,
+          "mean": 27.5592,
+          "median": 27.4122,
+          "std": 1.3368,
+          "num_pixels": 646,
+          "z_val": 26.4745,
+          "z_val_pixels": 240,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 3.8007
+        },
+        "coordinates_3d_from_mask": {
+          "x": 0.812,
+          "y": -0.657,
+          "z": 26.474
+        },
+        "mask_centroid_2d": [
+          674,
+          399
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_30",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          640,
+          386,
+          1166,
+          672
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 25.4612,
+          "max": 38.057,
+          "mean": 31.213,
+          "median": 31.5368,
+          "std": 3.2097,
+          "num_pixels": 91829,
+          "z_val": 31.6943,
+          "z_val_pixels": 39928,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 7.2652
+        },
+        "coordinates_3d_from_mask": {
+          "x": 8.606,
+          "y": 3.159,
+          "z": 31.694
+        },
+        "mask_centroid_2d": [
+          941,
+          537
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_31",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          1153,
+          460,
+          1180,
+          667
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 25.4614,
+          "max": 33.9075,
+          "mean": 29.0223,
+          "median": 28.7348,
+          "std": 2.1093,
+          "num_pixels": 3230,
+          "z_val": 30.0173,
+          "z_val_pixels": 874,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 6.47
+        },
+        "coordinates_3d_from_mask": {
+          "x": 14.298,
+          "y": 3.75,
+          "z": 30.017
+        },
+        "mask_centroid_2d": [
+          1168,
+          565
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_32",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          1264,
+          485,
+          1279,
+          649
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 25.4823,
+          "max": 33.3238,
+          "mean": 28.943,
+          "median": 28.72,
+          "std": 1.914,
+          "num_pixels": 1960,
+          "z_val": 33.2729,
+          "z_val_pixels": 388,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 5.5531
+        },
+        "coordinates_3d_from_mask": {
+          "x": 19.0,
+          "y": 4.337,
+          "z": 33.273
+        },
+        "mask_centroid_2d": [
+          1273,
+          571
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_33",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          1233,
+          556,
+          1252,
+          610
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 25.4652,
+          "max": 33.6568,
+          "mean": 29.2338,
+          "median": 29.2446,
+          "std": 2.3454,
+          "num_pixels": 650,
+          "z_val": 31.9967,
+          "z_val_pixels": 319,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 6.4558
+        },
+        "coordinates_3d_from_mask": {
+          "x": 17.376,
+          "y": 4.402,
+          "z": 31.997
+        },
+        "mask_centroid_2d": [
+          1242,
+          579
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      },
+      {
+        "id": "region_34",
+        "entity_kind": "region",
+        "label": "background",
+        "bbox": [
+          549,
+          590,
+          582,
+          638
+        ],
+        "source_model": "depth_partition",
+        "segmentor": "depth_partition",
+        "sam2_mask_index": -1,
+        "mask_path": null,
+        "masked_depth_path": null,
+        "depth_stats": {
+          "min": 25.4676,
+          "max": 29.3943,
+          "mean": 27.268,
+          "median": 27.3125,
+          "std": 1.0614,
+          "num_pixels": 860,
+          "z_val": 28.3304,
+          "z_val_pixels": 408,
+          "possibly_transparent": false,
+          "depth_separation_from_background": 4.0896
+        },
+        "coordinates_3d_from_mask": {
+          "x": -1.866,
+          "y": 4.818,
+          "z": 28.33
+        },
+        "mask_centroid_2d": [
+          567,
+          615
+        ],
+        "depth_stats_no_erosion": null,
+        "coordinates_3d_no_erosion": null,
+        "mask_centroid_2d_no_erosion": null
+      }
+    ]
+  }
+}

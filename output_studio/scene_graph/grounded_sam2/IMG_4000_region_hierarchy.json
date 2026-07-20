@@ -1,0 +1,209 @@
+{
+  "edges": [
+    {
+      "parent_object_id": "region_1",
+      "child_object_id": "region_2",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.2417
+    },
+    {
+      "parent_object_id": "region_3",
+      "child_object_id": "region_1",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.4239
+    },
+    {
+      "parent_object_id": "region_17",
+      "child_object_id": "region_3",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.152
+    },
+    {
+      "parent_object_id": "region_22",
+      "child_object_id": "region_17",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0027
+    },
+    {
+      "parent_object_id": "region_15",
+      "child_object_id": "region_22",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0029
+    },
+    {
+      "parent_object_id": "region_27",
+      "child_object_id": "region_15",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0003
+    },
+    {
+      "parent_object_id": "region_26",
+      "child_object_id": "region_27",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0043
+    },
+    {
+      "parent_object_id": "region_24",
+      "child_object_id": "region_26",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0051
+    },
+    {
+      "parent_object_id": "region_8",
+      "child_object_id": "region_24",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0082
+    },
+    {
+      "parent_object_id": "region_23",
+      "child_object_id": "region_8",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.012
+    },
+    {
+      "parent_object_id": "region_7",
+      "child_object_id": "region_23",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0088
+    },
+    {
+      "parent_object_id": "region_11",
+      "child_object_id": "region_7",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0031
+    },
+    {
+      "parent_object_id": "region_9",
+      "child_object_id": "region_11",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0035
+    },
+    {
+      "parent_object_id": "region_18",
+      "child_object_id": "region_9",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0049
+    },
+    {
+      "parent_object_id": "region_19",
+      "child_object_id": "region_18",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0042
+    },
+    {
+      "parent_object_id": "region_12",
+      "child_object_id": "region_19",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0124
+    },
+    {
+      "parent_object_id": "region_6",
+      "child_object_id": "region_12",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0017
+    },
+    {
+      "parent_object_id": "region_10",
+      "child_object_id": "region_6",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0044
+    },
+    {
+      "parent_object_id": "region_5",
+      "child_object_id": "region_10",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0015
+    },
+    {
+      "parent_object_id": "region_16",
+      "child_object_id": "region_5",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0031
+    },
+    {
+      "parent_object_id": "region_25",
+      "child_object_id": "region_16",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0005
+    },
+    {
+      "parent_object_id": "region_14",
+      "child_object_id": "region_25",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0173
+    },
+    {
+      "parent_object_id": "region_20",
+      "child_object_id": "region_14",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0379
+    },
+    {
+      "parent_object_id": "region_21",
+      "child_object_id": "region_20",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0144
+    },
+    {
+      "parent_object_id": "region_4",
+      "child_object_id": "region_21",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.027
+    },
+    {
+      "parent_object_id": "region_13",
+      "child_object_id": "region_4",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0877
+    },
+    {
+      "parent_object_id": "region_34",
+      "child_object_id": "region_13",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0782
+    },
+    {
+      "parent_object_id": "region_29",
+      "child_object_id": "region_34",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0106
+    },
+    {
+      "parent_object_id": "region_28",
+      "child_object_id": "region_29",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0088
+    },
+    {
+      "parent_object_id": "region_32",
+      "child_object_id": "region_28",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0393
+    },
+    {
+      "parent_object_id": "region_31",
+      "child_object_id": "region_32",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0027
+    },
+    {
+      "parent_object_id": "region_33",
+      "child_object_id": "region_31",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0072
+    },
+    {
+      "parent_object_id": "region_30",
+      "child_object_id": "region_33",
+      "edge_type": "region_depth_order",
+      "containment_ratio": 0.0634
+    }
+  ],
+  "root_region_ids": [
+    "region_30"
+  ],
+  "num_edges": 33,
+  "kind": "region_depth_hierarchy",
+  "deprecated": true,
+  "deprecation_note": "Use region_adjacency_graph.json instead. This linear depth-order chain will be removed in a future release."
+}

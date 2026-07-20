@@ -1,0 +1,263 @@
+{
+  "ordering": [
+    {
+      "id": "region_2",
+      "label": "bird",
+      "layer_type": "foreground",
+      "z_mean": 7.0818
+    },
+    {
+      "id": "region_1",
+      "label": "blue | flag | flag pole | green | pole | sky | wave | wind",
+      "layer_type": "foreground",
+      "z_mean": 9.3386
+    },
+    {
+      "id": "region_3",
+      "label": "animal",
+      "layer_type": "midground",
+      "z_mean": 16.2108
+    },
+    {
+      "id": "region_17",
+      "label": "bud",
+      "layer_type": "midground",
+      "z_mean": 19.1168
+    },
+    {
+      "id": "region_22",
+      "label": "branch",
+      "layer_type": "midground",
+      "z_mean": 19.1679
+    },
+    {
+      "id": "region_15",
+      "label": "green | kite | screen | umbrella",
+      "layer_type": "midground",
+      "z_mean": 19.2228
+    },
+    {
+      "id": "region_27",
+      "label": "dark",
+      "layer_type": "midground",
+      "z_mean": 19.2288
+    },
+    {
+      "id": "region_26",
+      "label": "green | lush | tree",
+      "layer_type": "midground",
+      "z_mean": 19.3125
+    },
+    {
+      "id": "region_24",
+      "label": "camouflage",
+      "layer_type": "midground",
+      "z_mean": 19.4108
+    },
+    {
+      "id": "region_8",
+      "label": "create",
+      "layer_type": "midground",
+      "z_mean": 19.5712
+    },
+    {
+      "id": "region_23",
+      "label": "green | image | tree",
+      "layer_type": "midground",
+      "z_mean": 19.8093
+    },
+    {
+      "id": "region_7",
+      "label": "animal",
+      "layer_type": "midground",
+      "z_mean": 19.9853
+    },
+    {
+      "id": "region_11",
+      "label": "green | shape | tree",
+      "layer_type": "midground",
+      "z_mean": 20.0482
+    },
+    {
+      "id": "region_9",
+      "label": "animal",
+      "layer_type": "midground",
+      "z_mean": 20.1191
+    },
+    {
+      "id": "region_18",
+      "label": "animal",
+      "layer_type": "midground",
+      "z_mean": 20.2184
+    },
+    {
+      "id": "region_19",
+      "label": "christmas tree",
+      "layer_type": "midground",
+      "z_mean": 20.3031
+    },
+    {
+      "id": "region_12",
+      "label": "figurine",
+      "layer_type": "midground",
+      "z_mean": 20.5571
+    },
+    {
+      "id": "region_6",
+      "label": "leaf",
+      "layer_type": "midground",
+      "z_mean": 20.5929
+    },
+    {
+      "id": "region_10",
+      "label": "animal",
+      "layer_type": "midground",
+      "z_mean": 20.6842
+    },
+    {
+      "id": "region_5",
+      "label": "bonsai",
+      "layer_type": "midground",
+      "z_mean": 20.7148
+    },
+    {
+      "id": "region_16",
+      "label": "create",
+      "layer_type": "midground",
+      "z_mean": 20.78
+    },
+    {
+      "id": "region_25",
+      "label": "dew",
+      "layer_type": "midground",
+      "z_mean": 20.7908
+    },
+    {
+      "id": "region_14",
+      "label": "animal",
+      "layer_type": "background",
+      "z_mean": 21.1558
+    },
+    {
+      "id": "region_20",
+      "label": "bush",
+      "layer_type": "background",
+      "z_mean": 21.9891
+    },
+    {
+      "id": "region_21",
+      "label": "green | image | lamp post | lush | park | park bench | pole | swing | tree",
+      "layer_type": "background",
+      "z_mean": 22.311
+    },
+    {
+      "id": "region_4",
+      "label": "confetti",
+      "layer_type": "background",
+      "z_mean": 22.9307
+    },
+    {
+      "id": "region_13",
+      "label": "bottle",
+      "layer_type": "background",
+      "z_mean": 25.1352
+    },
+    {
+      "id": "region_34",
+      "label": "green | image | paper bag | shopping bag",
+      "layer_type": "background",
+      "z_mean": 27.268
+    },
+    {
+      "id": "region_29",
+      "label": "green | image",
+      "layer_type": "background",
+      "z_mean": 27.5592
+    },
+    {
+      "id": "region_28",
+      "label": "green | street sign | tree",
+      "layer_type": "background",
+      "z_mean": 27.8044
+    },
+    {
+      "id": "region_32",
+      "label": "car",
+      "layer_type": "background",
+      "z_mean": 28.943
+    },
+    {
+      "id": "region_31",
+      "label": "green | image | tree",
+      "layer_type": "background",
+      "z_mean": 29.0223
+    },
+    {
+      "id": "region_33",
+      "label": "green | image | liquid",
+      "layer_type": "background",
+      "z_mean": 29.2338
+    },
+    {
+      "id": "region_30",
+      "label": "brick building",
+      "layer_type": "background",
+      "z_mean": 31.213
+    }
+  ],
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "region_ids": [
+        "region_1",
+        "region_2"
+      ]
+    },
+    {
+      "layer_type": "midground",
+      "region_ids": [
+        "region_3",
+        "region_5",
+        "region_6",
+        "region_7",
+        "region_8",
+        "region_9",
+        "region_10",
+        "region_11",
+        "region_12",
+        "region_15",
+        "region_16",
+        "region_17",
+        "region_18",
+        "region_19",
+        "region_22",
+        "region_23",
+        "region_24",
+        "region_25",
+        "region_26",
+        "region_27"
+      ]
+    },
+    {
+      "layer_type": "background",
+      "region_ids": [
+        "region_4",
+        "region_13",
+        "region_14",
+        "region_20",
+        "region_21",
+        "region_28",
+        "region_29",
+        "region_30",
+        "region_31",
+        "region_32",
+        "region_33",
+        "region_34"
+      ]
+    }
+  ],
+  "depth_quantiles": {
+    "q1": 11.67,
+    "q2": 20.858
+  }
+}

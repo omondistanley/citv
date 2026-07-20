@@ -1,0 +1,3922 @@
+[
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "dog",
+    "subject_name": "dog",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "armchair chair couch",
+    "object_name": "armchair chair couch",
+    "object_caption": "armchair chair couch",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      550,
+      349
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "dog",
+    "subject_name": "dog",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "armchair chair",
+    "object_name": "armchair chair",
+    "object_caption": "armchair chair",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      550,
+      349
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "dog",
+    "subject_name": "dog",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      550,
+      349
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "dog",
+    "subject_name": "dog",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      550,
+      349
+    ],
+    "object_centroid": [
+      175,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "dog",
+    "subject_name": "dog",
+    "predicate": "right_of",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      550,
+      349
+    ],
+    "object_centroid": [
+      86,
+      246
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "subject_label": "dog",
+    "subject_name": "dog",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "floor",
+    "object_name": "floor",
+    "object_caption": "floor",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      550,
+      349
+    ],
+    "object_centroid": [
+      1121,
+      500
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "floor",
+    "subject_name": "floor",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "dog",
+    "object_name": "dog",
+    "object_caption": "dog",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      1121,
+      500
+    ],
+    "object_centroid": [
+      550,
+      349
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "floor",
+    "subject_name": "floor",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "armchair chair couch",
+    "object_name": "armchair chair couch",
+    "object_caption": "armchair chair couch",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      1121,
+      500
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "floor",
+    "subject_name": "floor",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "armchair chair",
+    "object_name": "armchair chair",
+    "object_caption": "armchair chair",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      1121,
+      500
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "floor",
+    "subject_name": "floor",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      1121,
+      500
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "floor",
+    "subject_name": "floor",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      1121,
+      500
+    ],
+    "object_centroid": [
+      175,
+      447
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "subject_label": "floor",
+    "subject_name": "floor",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      1121,
+      500
+    ],
+    "object_centroid": [
+      86,
+      246
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "armchair chair couch",
+    "subject_name": "armchair chair couch",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "armchair chair",
+    "object_name": "armchair chair",
+    "object_caption": "armchair chair",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "armchair chair couch",
+    "subject_name": "armchair chair couch",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "armchair chair couch",
+    "subject_name": "armchair chair couch",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      175,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "armchair chair couch",
+    "subject_name": "armchair chair couch",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      86,
+      246
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "armchair chair couch",
+    "subject_name": "armchair chair couch",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "dog",
+    "object_name": "dog",
+    "object_caption": "dog",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      550,
+      349
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "armchair chair couch",
+    "subject_name": "armchair chair couch",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "floor",
+    "object_name": "floor",
+    "object_caption": "floor",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      1121,
+      500
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "armchair chair",
+    "subject_name": "armchair chair",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "armchair chair couch",
+    "object_name": "armchair chair couch",
+    "object_caption": "armchair chair couch",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "armchair chair",
+    "subject_name": "armchair chair",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "armchair chair",
+    "subject_name": "armchair chair",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      175,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "armchair chair",
+    "subject_name": "armchair chair",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      86,
+      246
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "armchair chair",
+    "subject_name": "armchair chair",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "dog",
+    "object_name": "dog",
+    "object_caption": "dog",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      550,
+      349
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "subject_label": "armchair chair",
+    "subject_name": "armchair chair",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "floor",
+    "object_name": "floor",
+    "object_caption": "floor",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      1121,
+      500
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "armchair chair couch",
+    "object_name": "armchair chair couch",
+    "object_caption": "armchair chair couch",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "armchair chair",
+    "object_name": "armchair chair",
+    "object_caption": "armchair chair",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      175,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      86,
+      246
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "dog",
+    "object_name": "dog",
+    "object_caption": "dog",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      550,
+      349
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "behind",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "floor",
+    "object_name": "floor",
+    "object_caption": "floor",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      263,
+      447
+    ],
+    "object_centroid": [
+      1121,
+      500
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      86,
+      246
+    ],
+    "object_centroid": [
+      175,
+      447
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "armchair chair couch",
+    "object_name": "armchair chair couch",
+    "object_caption": "armchair chair couch",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      86,
+      246
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "armchair chair",
+    "object_name": "armchair chair",
+    "object_caption": "armchair chair",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      86,
+      246
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      86,
+      246
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "dog",
+    "object_name": "dog",
+    "object_caption": "dog",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      86,
+      246
+    ],
+    "object_centroid": [
+      550,
+      349
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "floor",
+    "object_name": "floor",
+    "object_caption": "floor",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      86,
+      246
+    ],
+    "object_centroid": [
+      1121,
+      500
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "armchair chair couch",
+    "object_name": "armchair chair couch",
+    "object_caption": "armchair chair couch",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      175,
+      447
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_3_GroundedSAM2",
+    "object_label": "armchair chair",
+    "object_name": "armchair chair",
+    "object_caption": "armchair chair",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      175,
+      447
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_4_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      175,
+      447
+    ],
+    "object_centroid": [
+      263,
+      447
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "overlapping",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "blue",
+    "source": "Pix2SG",
+    "score": 0.85,
+    "subject_centroid": [
+      175,
+      447
+    ],
+    "object_centroid": [
+      86,
+      246
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "left_of",
+    "object_id": "grounded_sam2_obj_0_GroundedSAM2",
+    "object_label": "dog",
+    "object_name": "dog",
+    "object_caption": "dog",
+    "source": "Pix2SG",
+    "score": 0.7,
+    "subject_centroid": [
+      175,
+      447
+    ],
+    "object_centroid": [
+      550,
+      349
+    ],
+    "relation_tier": "intra_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "in_front_of",
+    "object_id": "grounded_sam2_obj_1_GroundedSAM2",
+    "object_label": "floor",
+    "object_name": "floor",
+    "object_caption": "floor",
+    "source": "Pix2SG",
+    "score": 0.75,
+    "subject_centroid": [
+      175,
+      447
+    ],
+    "object_centroid": [
+      1121,
+      500
+    ],
+    "relation_tier": "inter_region"
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "armchair chair couch",
+    "subject_name": "armchair chair couch",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9996,
+    "subject_centroid": [
+      263.0,
+      447.0
+    ],
+    "object_centroid": [
+      86.0,
+      246.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_5_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "inside_of",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "armchair chair couch",
+    "object_name": "armchair chair couch",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 0.9996,
+    "subject_centroid": [
+      86.0,
+      246.0
+    ],
+    "object_centroid": [
+      263.0,
+      447.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "subject_label": "armchair chair couch",
+    "subject_name": "armchair chair couch",
+    "predicate": "contains",
+    "object_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "object_label": "blue",
+    "object_name": "blue",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 1.0,
+    "subject_centroid": [
+      263.0,
+      447.0
+    ],
+    "object_centroid": [
+      175.0,
+      447.0
+    ]
+  },
+  {
+    "subject_id": "grounded_sam2_obj_6_GroundedSAM2",
+    "subject_label": "blue",
+    "subject_name": "blue",
+    "predicate": "inside_of",
+    "object_id": "grounded_sam2_obj_2_GroundedSAM2",
+    "object_label": "armchair chair couch",
+    "object_name": "armchair chair couch",
+    "object_caption": "",
+    "source": "mask_hierarchy",
+    "score": 1.0,
+    "subject_centroid": [
+      175.0,
+      447.0
+    ],
+    "object_centroid": [
+      263.0,
+      447.0
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "in_front_of",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "right_of",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "left_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "below",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "adjacent_to",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      168,
+      309
+    ],
+    "shared_border_px": 4183
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "adjacent_to",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      517,
+      427
+    ],
+    "shared_border_px": 4183
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "in_front_of",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "left_of",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "right_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "above",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "below",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "adjacent_to",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ],
+    "shared_border_px": 4582
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "adjacent_to",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      517,
+      427
+    ],
+    "shared_border_px": 4582
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "in_front_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "right_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "left_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "below",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "adjacent_to",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      258,
+      149
+    ],
+    "shared_border_px": 68
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "adjacent_to",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      517,
+      427
+    ],
+    "shared_border_px": 68
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "in_front_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "left_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "right_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "below",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "adjacent_to",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      977,
+      282
+    ],
+    "shared_border_px": 127
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "adjacent_to",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      517,
+      427
+    ],
+    "shared_border_px": 127
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "in_front_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "right_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "left_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "below",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "in_front_of",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "behind",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "left_of",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "right_of",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_1",
+    "subject_label": "region_foreground",
+    "subject_name": "armchair",
+    "predicate": "below",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      517,
+      427
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "above",
+    "object_id": "region_1",
+    "object_label": "region_foreground",
+    "object_name": "armchair",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      517,
+      427
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "left_of",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "right_of",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "above",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "below",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "in_front_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "behind",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "left_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "right_of",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "below",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "above",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "adjacent_to",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      258,
+      149
+    ],
+    "shared_border_px": 2426
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "adjacent_to",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      168,
+      309
+    ],
+    "shared_border_px": 2426
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "in_front_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "behind",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "left_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "right_of",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "below",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "above",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "in_front_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "behind",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "left_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "right_of",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "below",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "above",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "adjacent_to",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      368,
+      54
+    ],
+    "shared_border_px": 57
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "adjacent_to",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      168,
+      309
+    ],
+    "shared_border_px": 57
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "in_front_of",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "behind",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "left_of",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "right_of",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_2",
+    "subject_label": "region_midground",
+    "subject_name": "animal",
+    "predicate": "below",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      168,
+      309
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "above",
+    "object_id": "region_2",
+    "object_label": "region_midground",
+    "object_name": "animal",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      168,
+      309
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "in_front_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "behind",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "right_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "left_of",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "below",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "above",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "in_front_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "behind",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "right_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "left_of",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "below",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "above",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "adjacent_to",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      977,
+      282
+    ],
+    "shared_border_px": 3167
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "adjacent_to",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ],
+    "shared_border_px": 3167
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "in_front_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "behind",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "right_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "left_of",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "below",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "above",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "in_front_of",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "behind",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "left_of",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "right_of",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_3",
+    "subject_label": "region_midground",
+    "subject_name": "brush",
+    "predicate": "below",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1022,
+      536
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "above",
+    "object_id": "region_3",
+    "object_label": "region_midground",
+    "object_name": "brush",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      1022,
+      536
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "left_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "right_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "above",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "below",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "in_front_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "behind",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "left_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "right_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "below",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "above",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "adjacent_to",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      368,
+      54
+    ],
+    "shared_border_px": 1343
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "adjacent_to",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      258,
+      149
+    ],
+    "shared_border_px": 1343
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "in_front_of",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "behind",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "left_of",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "right_of",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_4",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "above",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      258,
+      149
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "below",
+    "object_id": "region_4",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      258,
+      149
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "in_front_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "behind",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "right_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "left_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "below",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "above",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "in_front_of",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "behind",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "left_of",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "right_of",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "below",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "above",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      977,
+      282
+    ]
+  },
+  {
+    "subject_id": "region_5",
+    "subject_label": "region_background",
+    "subject_name": "blanket",
+    "predicate": "adjacent_to",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      977,
+      282
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ],
+    "shared_border_px": 1738
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "adjacent_to",
+    "object_id": "region_5",
+    "object_label": "region_background",
+    "object_name": "blanket",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.6,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      977,
+      282
+    ],
+    "shared_border_px": 1738
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "in_front_of",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "behind",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.7,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "left_of",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "right_of",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  },
+  {
+    "subject_id": "region_6",
+    "subject_label": "region_background",
+    "subject_name": "cloud",
+    "predicate": "above",
+    "object_id": "region_7",
+    "object_label": "region_background",
+    "object_name": "floor",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      368,
+      54
+    ],
+    "object_centroid": [
+      1130,
+      171
+    ]
+  },
+  {
+    "subject_id": "region_7",
+    "subject_label": "region_background",
+    "subject_name": "floor",
+    "predicate": "below",
+    "object_id": "region_6",
+    "object_label": "region_background",
+    "object_name": "cloud",
+    "object_caption": "",
+    "source": "region_spatial",
+    "score": 0.65,
+    "relation_tier": "region_region",
+    "subject_centroid": [
+      1130,
+      171
+    ],
+    "object_centroid": [
+      368,
+      54
+    ]
+  }
+]
