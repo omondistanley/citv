@@ -1,0 +1,109 @@
+Loading models (first run downloads/caches are already done by setup.sh)...
+  [SceneClassifier] Loading CLIP (openai/clip-vit-base-patch32) for scene type detection...
+  [SceneClassifier] indoor=0.001  outdoor=0.333  → outdoor
+  [SceneClassifier] CLIP unloaded, VRAM reclaimed.
+Loading Depth Anything V2 Metric (outdoor): depth-anything/Depth-Anything-V2-Metric-Outdoor-Large-hf
+Depth estimator initialized: DepthAnythingV2-Metric-Outdoor
+Labellers (Florence-2, RAM++) will load on first image.
+Initializing Pix2SG...
+Pix2SG notice: No precomputed triplets dir at /Users/stanleyomondi/Downloads/uhnn/citv/pix2sg_triplets. Using spatial scaffold backend.
+=== Relation Source Diagnostics ===
+Pix2SG: ACTIVE (backend=spatial_scaffold)
+  reason: No precomputed triplets dir at /Users/stanleyomondi/Downloads/uhnn/citv/pix2sg_triplets. Using spatial scaffold backend.
+Initializing Grounding DINO (IDEA-Research/grounding-dino-base)...
+Grounding DINO ready.
+Initializing SAM2 predictor (prompted mode)...
+SAM2 predictor (prompted) ready.
+  models loaded in 11.3s
+
+Running _run_stage_chain on /Users/stanleyomondi/Downloads/uhnn/citv/images/IMG-6392.png ...
+  Resized to 1181x1280 (max_side=1280)
+  [Intrinsics] Using FOV estimate (60.0°): fx=fy=1022.8
+  [Timing] preprocess: 0.1s
+  [Timing] depth: 0.0s
+  [Regions] partitioned into 29 regions → IMG-6392_regions.png
+  [Timing] regions: 1.5s
+  [GroundedSAM2] GDINO detected 16 objects.
+  [Timing] segment: 15.4s
+/Users/stanleyomondi/Downloads/uhnn/citv/.venv/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/Users/stanleyomondi/Downloads/uhnn/citv/.venv/lib/python3.11/site-packages/timm/models/hub.py:4: FutureWarning: Importing from timm.models.hub is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/Users/stanleyomondi/Downloads/uhnn/citv/.venv/lib/python3.11/site-packages/timm/models/registry.py:4: FutureWarning: Importing from timm.models.registry is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/Users/stanleyomondi/Downloads/uhnn/citv/.venv/lib/python3.11/site-packages/timm/models/helpers.py:7: FutureWarning: Importing from timm.models.helpers is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/Users/stanleyomondi/Downloads/uhnn/citv/.venv/lib/python3.11/site-packages/fairscale/experimental/nn/offload.py:19: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  return torch.cuda.amp.custom_fwd(orig_func)  # type: ignore
+/Users/stanleyomondi/Downloads/uhnn/citv/.venv/lib/python3.11/site-packages/fairscale/experimental/nn/offload.py:30: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  return torch.cuda.amp.custom_bwd(orig_func)  # type: ignore
+Initializing RAM++...
+The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+--------------
+/Users/stanleyomondi/Downloads/uhnn/citv/checkpoints/ram_plus_swin_large_14m.pth
+--------------
+load checkpoint from /Users/stanleyomondi/Downloads/uhnn/citv/checkpoints/ram_plus_swin_large_14m.pth
+vit: swin_l
+RAM++ ready (ckpt=/Users/stanleyomondi/Downloads/uhnn/citv/checkpoints/ram_plus_swin_large_14m.pth).
+    [Timing]   labelling.load_labellers: 21.84s
+    [Labelling] 1/16: 'person' (1.63s)
+    [Labelling] 2/16: 'clothing' (0.88s)
+    [Labelling] 3/16: 'person' (0.93s)
+    [Labelling] 4/16: 'clothing' (0.91s)
+    [Labelling] 5/16: 'clothing' (0.79s)
+    [Labelling] 6/16: 'person' (0.77s)
+    [Labelling] 7/16: 'person' (0.78s)
+    [Labelling] 8/16: 'person' (0.84s)
+    [Labelling] 9/16: 'person' (0.79s)
+    [Labelling] 10/16: 'person' (0.75s)
+    [Labelling] 11/16: 'clothing' (0.81s)
+    [Labelling] 12/16: 'person' (0.81s)
+    [Labelling] 13/16: 'person' (0.80s)
+    [Labelling] 14/16: 'plant' (1.42s)
+    [Labelling] 15/16: 'clothing' (1.54s)
+    [Labelling] 16/16: 'person' (0.88s)
+    [Timing]   labelling.label_calls: 15.32s total over 16 detections (0.958s/det)
+    [Timing]   labelling.depth_stats: 0.24s total over 16 kept objects
+  [Timing] label_and_geometry: 37.7s
+  [DepthMaskFusion] wrote 16 matched objects -> IMG-6392_depth_mask_A.json
+  [Timing] depth_mask_fusion: 0.1s
+Initializing Pix2SG...
+Pix2SG notice: No precomputed triplets dir at /Users/stanleyomondi/Downloads/uhnn/citv/pix2sg_triplets. Using spatial scaffold backend.
+  [Timing] relations: 1.0s
+  [HierarchyExport] 7 containment edges, max depth 2 -> IMG-6392_mask_hierarchy_detailed.json
+  [Timing] hierarchy_export: 0.5s
+    [Timing]   paths_export.support_mask: 0.11s
+    [Timing]   paths_export.affordance_rasters: 3.22s
+    [Timing]   paths_export.cost_layers_fuse: 0.20s
+    [Timing]   paths_export.candidate_pairs: 1.31s
+    [Timing]   paths_export.fmm_and_hypotheses_loop: 17.83s total over 63 pairs (fmm_solve: 2.76s over 10 unique goals, hypothesis_build: 13.16s over 186 hypotheses)
+  [PathsExport] wrote 186 path hypotheses -> path_hypotheses.json
+  [Timing] paths_export: 23.9s
+Initializing Florence-2 (microsoft/Florence-2-large)...
+Florence-2 ready (microsoft/Florence-2-large).
+    [Timing]   captions_export.florence_scene_caption: 56.73s
+  [CaptionsExport] wrote caption bundle (generated_local_florence) -> IMG-6392_hybrid_caption_bundle.json
+  [Timing] captions_export: 56.8s
+  [Timing] TOTAL: 136.9s
+  stage chain finished in 136.9s
+
+=== Results ===
+objects detected:        16
+relations:                128
+mask_hierarchy edges:     7
+path hypotheses:          186
+  sample path_id:         staged_fmm_obj_0_to_obj_3_k00
+  sample polyline length: 162 points (>2 means non-degenerate)
+  sample kinematic tags:  ['fly', 'climb', 'fly']
+caption bundle:           written -> /Users/stanleyomondi/Downloads/uhnn/citv/output_scene_understanding/smoke_test/scene_graph/staged/IMG-6392_hybrid_caption_bundle.json
+
+=== Phase 3 custom-input flow (drawn path + free-text actor/action) ===
+Reuses this same real ctx (real masks/depth/relations) instead of a second model load --
+exercises exactly what a user does in the 'Custom inputs' section of app.py.
+  grounded ok. archetype=humanoid_blob, tier2_available=True
+  report: {'preserved': ["drawn_polyline_2d (skips path search entirely, per the plan's rule)", 'actor_object_id'], 'grounded': [], 'warnings': []}
+  Tier 2 rendered 36 frames -> /Users/stanleyomondi/Downloads/uhnn/citv/output_scene_understanding/smoke_test/phase3_smoke_test.gif
+
+Full output tree: /Users/stanleyomondi/Downloads/uhnn/citv/output_scene_understanding/smoke_test
+If everything above looks non-empty and non-degenerate, the real pipeline integration is solid --
+proceed to `python app.py` and test the Gradio UI golden path next.

@@ -1,0 +1,228 @@
+{
+  "ordering": [
+    {
+      "id": "region_1",
+      "label": "rendering",
+      "layer_type": "foreground",
+      "z_mean": 9.3973
+    },
+    {
+      "id": "region_3",
+      "label": "young",
+      "layer_type": "foreground",
+      "z_mean": 16.0198
+    },
+    {
+      "id": "region_2",
+      "label": "rendering",
+      "layer_type": "midground",
+      "z_mean": 21.8608
+    },
+    {
+      "id": "region_4",
+      "label": "digital",
+      "layer_type": "background",
+      "z_mean": 28.3709
+    },
+    {
+      "id": "region_17",
+      "label": "triangular",
+      "layer_type": "background",
+      "z_mean": 28.937
+    },
+    {
+      "id": "region_13",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 29.246
+    },
+    {
+      "id": "region_18",
+      "label": "blurred",
+      "layer_type": "background",
+      "z_mean": 29.8031
+    },
+    {
+      "id": "region_16",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 30.9968
+    },
+    {
+      "id": "region_14",
+      "label": "leaf",
+      "layer_type": "background",
+      "z_mean": 31.1359
+    },
+    {
+      "id": "region_15",
+      "label": "caterpillar",
+      "layer_type": "background",
+      "z_mean": 31.3749
+    },
+    {
+      "id": "region_11",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 32.4442
+    },
+    {
+      "id": "region_12",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 32.8724
+    },
+    {
+      "id": "region_10",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 32.9342
+    },
+    {
+      "id": "region_9",
+      "label": "leaf",
+      "layer_type": "background",
+      "z_mean": 32.9955
+    },
+    {
+      "id": "region_5",
+      "label": "leafy",
+      "layer_type": "background",
+      "z_mean": 33.0102
+    },
+    {
+      "id": "region_8",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 33.1914
+    },
+    {
+      "id": "region_7",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 33.2588
+    },
+    {
+      "id": "region_6",
+      "label": "fruit",
+      "layer_type": "background",
+      "z_mean": 33.284
+    },
+    {
+      "id": "region_27",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 34.3671
+    },
+    {
+      "id": "region_24",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 35.2064
+    },
+    {
+      "id": "region_29",
+      "label": "leafy",
+      "layer_type": "background",
+      "z_mean": 35.3662
+    },
+    {
+      "id": "region_28",
+      "label": "rendering",
+      "layer_type": "background",
+      "z_mean": 35.9209
+    },
+    {
+      "id": "region_19",
+      "label": "digital",
+      "layer_type": "background",
+      "z_mean": 36.3092
+    },
+    {
+      "id": "region_20",
+      "label": "digital",
+      "layer_type": "background",
+      "z_mean": 36.6667
+    },
+    {
+      "id": "region_23",
+      "label": "leafy",
+      "layer_type": "background",
+      "z_mean": 37.2417
+    },
+    {
+      "id": "region_21",
+      "label": "map",
+      "layer_type": "background",
+      "z_mean": 39.1582
+    },
+    {
+      "id": "region_22",
+      "label": "triangular",
+      "layer_type": "background",
+      "z_mean": 45.9404
+    },
+    {
+      "id": "region_26",
+      "label": "triangular",
+      "layer_type": "background",
+      "z_mean": 50.1136
+    },
+    {
+      "id": "region_25",
+      "label": "broccoli",
+      "layer_type": "background",
+      "z_mean": 57.8165
+    }
+  ],
+  "bands": [
+    {
+      "layer_type": "foreground",
+      "region_ids": [
+        "region_1",
+        "region_3"
+      ]
+    },
+    {
+      "layer_type": "midground",
+      "region_ids": [
+        "region_2"
+      ]
+    },
+    {
+      "layer_type": "background",
+      "region_ids": [
+        "region_4",
+        "region_5",
+        "region_6",
+        "region_7",
+        "region_8",
+        "region_9",
+        "region_10",
+        "region_11",
+        "region_12",
+        "region_13",
+        "region_14",
+        "region_15",
+        "region_16",
+        "region_17",
+        "region_18",
+        "region_19",
+        "region_20",
+        "region_21",
+        "region_22",
+        "region_23",
+        "region_24",
+        "region_25",
+        "region_26",
+        "region_27",
+        "region_28",
+        "region_29"
+      ]
+    }
+  ],
+  "depth_quantiles": {
+    "q1": 18.7493,
+    "q2": 27.4797
+  }
+}

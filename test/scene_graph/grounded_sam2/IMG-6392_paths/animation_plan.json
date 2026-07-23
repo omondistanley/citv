@@ -1,0 +1,849 @@
+{
+  "fps": 24,
+  "paths": [
+    {
+      "path_id": "rpath_IMG-6392_region_11_to_region_21_k01",
+      "path_num": 1,
+      "action_fit_confidence": 0.795876097888519,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 0.9436810482914513
+        }
+      ],
+      "trajectory_points": [
+        [
+          1085,
+          503
+        ],
+        [
+          1092,
+          502
+        ],
+        [
+          1035,
+          519
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG-6392_region_11_to_region_21_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG-6392_region_11_to_region_21_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 0.9436810482914513
+    },
+    {
+      "path_id": "rpath_IMG-6392_region_4_to_region_24_k01",
+      "path_num": 2,
+      "action_fit_confidence": 0.7955602905264635,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 3.172934792977408
+        }
+      ],
+      "trajectory_points": [
+        [
+          730,
+          321
+        ],
+        [
+          433,
+          587
+        ],
+        [
+          434,
+          585
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG-6392_region_4_to_region_24_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG-6392_region_4_to_region_24_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 3.172934792977408
+    },
+    {
+      "path_id": "rpath_IMG-6392_region_2_to_region_29_k01",
+      "path_num": 3,
+      "action_fit_confidence": 0.7890307573637566,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 6.107405476006589
+        }
+      ],
+      "trajectory_points": [
+        [
+          938,
+          441
+        ],
+        [
+          939,
+          440
+        ],
+        [
+          175,
+          786
+        ],
+        [
+          176,
+          786
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG-6392_region_2_to_region_29_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG-6392_region_2_to_region_29_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 6.107405476006589
+    },
+    {
+      "path_id": "rpath_IMG-6392_region_4_to_region_29_k01",
+      "path_num": 4,
+      "action_fit_confidence": 0.7705901901471162,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 5.3336740211255345
+        }
+      ],
+      "trajectory_points": [
+        [
+          730,
+          321
+        ],
+        [
+          175,
+          786
+        ],
+        [
+          176,
+          786
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG-6392_region_4_to_region_29_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG-6392_region_4_to_region_29_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 5.3336740211255345
+    },
+    {
+      "path_id": "rpath_IMG-6392_region_23_to_region_29_k02",
+      "path_num": 5,
+      "action_fit_confidence": 0.7587667269429896,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 3.2204990043047825
+        }
+      ],
+      "trajectory_points": [
+        [
+          471,
+          642
+        ],
+        [
+          491,
+          645
+        ],
+        [
+          160,
+          801
+        ],
+        [
+          176,
+          786
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG-6392_region_23_to_region_29_k02"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG-6392_region_23_to_region_29_k02"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 3.2204990043047825
+    },
+    {
+      "path_id": "rpath_IMG-6392_region_2_to_region_24_k01",
+      "path_num": 6,
+      "action_fit_confidence": 0.7564229211102457,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 4.037137194121126
+        }
+      ],
+      "trajectory_points": [
+        [
+          938,
+          441
+        ],
+        [
+          939,
+          440
+        ],
+        [
+          433,
+          587
+        ],
+        [
+          434,
+          585
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG-6392_region_2_to_region_24_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG-6392_region_2_to_region_24_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 4.037137194121126
+    },
+    {
+      "path_id": "rpath_IMG-6392_region_6_to_region_19_k01",
+      "path_num": 7,
+      "action_fit_confidence": 0.7554317498570335,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 1.4751834024998098
+        }
+      ],
+      "trajectory_points": [
+        [
+          236,
+          180
+        ],
+        [
+          236,
+          178
+        ],
+        [
+          340,
+          278
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG-6392_region_6_to_region_19_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG-6392_region_6_to_region_19_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 1.4751834024998098
+    },
+    {
+      "path_id": "rpath_IMG-6392_region_3_to_region_29_k02",
+      "path_num": 8,
+      "action_fit_confidence": 0.7541084432193524,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "run",
+          "t0_s": 0.5,
+          "t1_s": 3.67282668588603
+        }
+      ],
+      "trajectory_points": [
+        [
+          613,
+          831
+        ],
+        [
+          160,
+          801
+        ],
+        [
+          176,
+          786
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG-6392_region_3_to_region_29_k02"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "run",
+          "path_id": "rpath_IMG-6392_region_3_to_region_29_k02"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 3.67282668588603
+    },
+    {
+      "path_id": "rpath_IMG-6392_region_8_to_region_19_k01",
+      "path_num": 9,
+      "action_fit_confidence": 0.7492580096644876,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "walk",
+          "t0_s": 0.5,
+          "t1_s": 1.72703015594356
+        }
+      ],
+      "trajectory_points": [
+        [
+          253,
+          309
+        ],
+        [
+          250,
+          307
+        ],
+        [
+          340,
+          278
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "rpath_IMG-6392_region_8_to_region_19_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "walk",
+          "path_id": "rpath_IMG-6392_region_8_to_region_19_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 1.72703015594356
+    },
+    {
+      "path_id": "opath_IMG-6392_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_17_GroundedSAM2_k01",
+      "path_num": 10,
+      "action_fit_confidence": 0.7443676247951154,
+      "assumptions": "single-image inferred motion sequence",
+      "segments": [
+        {
+          "motion": "idle",
+          "t0_s": 0.0,
+          "t1_s": 0.5
+        },
+        {
+          "motion": "walk",
+          "t0_s": 0.5,
+          "t1_s": 0.5301776695296637
+        }
+      ],
+      "trajectory_points": [
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          619,
+          339
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          618,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ],
+        [
+          617,
+          340
+        ]
+      ],
+      "timeline_records": [
+        {
+          "time_s": 0.0,
+          "motion": "idle",
+          "path_id": "opath_IMG-6392_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_17_GroundedSAM2_k01"
+        },
+        {
+          "time_s": 0.5,
+          "motion": "walk",
+          "path_id": "opath_IMG-6392_grounded_sam2_obj_3_GroundedSAM2_to_grounded_sam2_obj_17_GroundedSAM2_k01"
+        }
+      ],
+      "fps": 24,
+      "duration_s": 0.5301776695296637
+    }
+  ]
+}

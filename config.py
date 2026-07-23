@@ -26,8 +26,16 @@ class PreprocessConfig:
     reuse_cached_depth: bool = True
     # When True, log per-stage wall times in process_image (also set env CITV_PROFILE=1 to force on).
     scene_pipeline_profile: bool = False
-    # When True and Grounding DINO already returned a specific class (not "object"), skip Florence-2 and
-    # RAM++ per-mask inference for that mask (large speedup). Region/fake-amg paths still run secondaries.
+    # RAM++ (a lighter open-vocab tagging model) always runs per mask, regardless of
+    # this flag -- GDINO's fixed, coarse text query (person/vehicle/furniture/...)
+    # should not be the final word on a mask's label, and RAM++'s labels feed the
+    # existing evidence-fusion scoring in _label_mask (canonical_name) cheaply.
+    # This flag only gates Florence-2 (a full VLM forward pass, the heavier of the
+    # two): when True and Grounding DINO already returned a specific class (not
+    # "object"), Florence-2's mask-crop pass is skipped for that mask. Default True
+    # -- a real run showed Florence-2+RAM++ on every one of 16 masks was measurably
+    # slow; this is the chosen middle ground (RAM++ always for richer labels,
+    # Florence-2 only when GDINO's own label needs the extra help).
     mask_label_skip_secondary_when_gdino_specific: bool = True
 
     # -------------------------------------------------------------------------
@@ -71,19 +79,44 @@ class PreprocessConfig:
     sam2_amg_box_nms_thresh: float = 0.7
 
     # -------------------------------------------------------------------------
-    # Post-hoc quality filters — ALL DISABLED
+    # Post-hoc quality filters
     #
-    # Filtering is fully disabled so every mask is retained:
-    #   small objects (buttons, coins, labels), background regions (sky, floor,
-    #   wall), part-level masks (from AMG), and object-level masks (from GDINO).
-    # Set thresholds to non-zero values to re-enable selective filtering.
+    # Re-enabled 2026-07 per SCENE_GRAPH_DEEP_DIVE.md §8 item 1, then
+    # RETUNED 2026-07-21 after real-pipeline validation (the whole point of
+    # flagging the first pass as "principled but unvalidated" -- this is
+    # that validation): the original min_stability=0.90/min_pred_iou=0.75
+    # were modeled on this file's own SAM2 AMG *generation-time* thresholds
+    # (sam2_amg_pred_iou_thresh=0.80, sam2_amg_stability_score_thresh=0.92),
+    # but that assumption doesn't hold -- AMG's thresholds calibrate an
+    # *exhaustive, automatic* multi-mask-then-filter process; GroundedSAM2
+    # instead does *box-prompted* single-mask decoding per GDINO detection
+    # (see scene_understanding/segmentation/grounded_sam2.py, which sets
+    # ``predicted_iou == stability_score == score``, i.e. the same one
+    # number reused for both fields, not two independent signals). Testing
+    # against a real photo confirmed this empirically: 0 of 16 real
+    # GroundedSAM2 detections survived the old thresholds -- the filter was
+    # silently deleting every detection, including large, clearly-real,
+    # specifically-labelled structures (e.g. an entire staircase) that
+    # should obviously have been kept.
+    #
+    # Current values: min_stability/min_pred_iou disabled (0.0) -- they were
+    # testing a false equivalence to begin with, not a real recall/precision
+    # tradeoff. min_area_px stays a small noise-speck floor. max_area_fraction
+    # raised to 0.98 so a single genuinely large real structure (a full
+    # staircase, a large wall, a big piece of furniture) isn't rejected just
+    # for being large -- only near-total-frame masks (the classic "whole
+    # scene detected as one blob") still get caught. The GDINO confidence
+    # gate stays at its own detector's floor (0.15) rather than adding a
+    # second, redundant cutoff on top of it.
     # -------------------------------------------------------------------------
-    sam2_post_filter_min_stability: float = 0.0    # 0.0 = disabled
-    sam2_post_filter_min_pred_iou: float = 0.0     # 0.0 = disabled
-    sam2_post_filter_min_area_px: int = 0           # 0 = allow all sizes
-    sam2_post_filter_max_area_fraction: float = 1.0 # 1.0 = allow background
-    # GroundedSAM2 confidence gate — disabled (0.0 keeps all GDINO detections)
-    grounded_sam2_min_conf_for_stage3: float = 0.0
+    sam2_post_filter_min_stability: float = 0.0
+    sam2_post_filter_min_pred_iou: float = 0.0
+    sam2_post_filter_min_area_px: int = 50
+    sam2_post_filter_max_area_fraction: float = 0.98
+    # GroundedSAM2 confidence gate — matches grounding_dino_box_thresh's own
+    # 0.15 floor exactly, so it can never reject a detection GDINO itself
+    # already accepted (no redundant second-guessing of the primary detector).
+    grounded_sam2_min_conf_for_stage3: float = 0.15
 
     # -------------------------------------------------------------------------
     # Relation pipeline

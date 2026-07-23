@@ -92,6 +92,21 @@ class GroundedSAM2Wrapper:
             print(f"SAM2 predictor init failed: {e}.")
             self.active = False
 
+    def unload(self) -> None:
+        """Free GDINO + SAM2 model weights to reclaim memory (mirrors
+        DepthEstimator.unload_backend()'s pattern) -- lets a caller release
+        these from RAM between requests on memory-constrained machines,
+        instead of keeping them resident for the whole process lifetime."""
+        self._gdino = None
+        self._gdino_processor = None
+        self._sam2_predictor = None
+        self.active = False
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        import gc
+        gc.collect()
+        print("  [GroundedSAM2Wrapper] GDINO/SAM2 unloaded, RAM reclaimed.")
+
     def _detect_objects(self, image_rgb: np.ndarray) -> Tuple[List[List[float]], List[str], List[float]]:
         """
         Run Grounding DINO on image_rgb.

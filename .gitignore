@@ -25,6 +25,9 @@ detectron2/
 output_scene/
 output_scenes/
 output/
+# app.py's Analyze runs write here -- path_hypotheses.json alone can hit
+# hundreds of MB per image, well past GitHub's 100MB hard limit.
+output_scene_understanding/
 
 # Sample bundle output_scenes3: keep PNG + JSON in git; omit dense arrays (regenerate locally)
 output_scenes3/**/*.npz
@@ -40,10 +43,6 @@ yolov8*.pt
 
 # Scratch / test artifacts
 dummy_test.png
-
-# Root-level ad-hoc pytest scripts and local fixture tree (do not push)
-/test/
-/test_*.py
 
 # Ad-hoc reviewer / validation scripts (not committed)
 local_reviewer_tests/

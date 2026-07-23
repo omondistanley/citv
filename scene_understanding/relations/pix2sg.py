@@ -46,6 +46,11 @@ class Pix2SGWrapper:
         self.backend = "spatial_scaffold"
         self.active = True
         self.disabled_reason = ""
+        # Populated per-call by predict() -- raw per-layer triplets before
+        # dedup, for debug/QA export (SCENE_GRAPH_DEEP_DIVE.md §8 item 5).
+        self.last_debug: Dict[str, List[Dict[str, Any]]] = {
+            "precomputed": [], "spatial_scaffold": [], "florence2": [], "final_deduped": [],
+        }
         if self.triplets_dir.exists():
             self.backend = "precomputed_triplets"
             print(f"Pix2SG precomputed triplets backend enabled: {self.triplets_dir.resolve()}")
@@ -160,23 +165,92 @@ class Pix2SGWrapper:
             return "left_of" if dx > 0 else "right_of"
         return "above" if dy > 0 else "below"
 
+    @staticmethod
+    def _resize_to_match(mask_bin: np.ndarray, shape_hw: Tuple[int, int]) -> np.ndarray:
+        if mask_bin.shape[:2] == shape_hw:
+            return mask_bin
+        return cv2.resize(mask_bin.astype(np.uint8), (shape_hw[1], shape_hw[0]), interpolation=cv2.INTER_NEAREST) > 0
+
+    @classmethod
+    def _containment_predicate(
+        cls, sub_m: np.ndarray, obj_m: np.ndarray, inter: int,
+        contain_ratio_thresh: float = 0.92, size_ratio_thresh: float = 1.1,
+    ) -> Optional[str]:
+        """``sub`` contains ``obj`` (or vice versa) when the smaller mask is
+        almost entirely inside the larger one -- same containment math as
+        ``regions/mask_hierarchy.py`` (kept independent/inline here rather than
+        imported, so this predicate doesn't depend on hierarchy-stage ordering)."""
+        sub_area, obj_area = int(sub_m.sum()), int(obj_m.sum())
+        if sub_area <= 0 or obj_area <= 0:
+            return None
+        if obj_area > int(sub_area * size_ratio_thresh) and (inter / max(sub_area, 1)) >= contain_ratio_thresh:
+            return "inside_of"  # sub is inside obj
+        if sub_area > int(obj_area * size_ratio_thresh) and (inter / max(obj_area, 1)) >= contain_ratio_thresh:
+            return "contains"  # sub contains obj
+        return None
+
+    @staticmethod
+    def _resting_on_predicate(sub_m: np.ndarray, obj_m: np.ndarray, contact_margin_px: int = 3) -> Optional[str]:
+        """``sub`` rests on ``obj`` when sub's mask sits directly above obj's
+        mask with real horizontal overlap and near-zero vertical gap between
+        sub's bottom edge and obj's top edge (contact, not just proximity)."""
+        sub_ys, sub_xs = np.nonzero(sub_m)
+        obj_ys, obj_xs = np.nonzero(obj_m)
+        if sub_ys.size == 0 or obj_ys.size == 0:
+            return None
+        x_lo, x_hi = max(sub_xs.min(), obj_xs.min()), min(sub_xs.max(), obj_xs.max())
+        if x_hi < x_lo:
+            return None  # no horizontal overlap at all
+        sub_bottom_by_col: Dict[int, int] = {}
+        for x, y in zip(sub_xs.tolist(), sub_ys.tolist()):
+            if x_lo <= x <= x_hi and (x not in sub_bottom_by_col or y > sub_bottom_by_col[x]):
+                sub_bottom_by_col[x] = y
+        obj_top_by_col: Dict[int, int] = {}
+        for x, y in zip(obj_xs.tolist(), obj_ys.tolist()):
+            if x_lo <= x <= x_hi and (x not in obj_top_by_col or y < obj_top_by_col[x]):
+                obj_top_by_col[x] = y
+        shared_cols = set(sub_bottom_by_col) & set(obj_top_by_col)
+        if not shared_cols:
+            return None
+        gaps = [obj_top_by_col[x] - sub_bottom_by_col[x] for x in shared_cols]
+        contact_cols = sum(1 for g in gaps if 0 <= g <= contact_margin_px)
+        # Require genuine contact along a meaningful fraction of the shared span,
+        # not just one accidental touching column.
+        if contact_cols >= max(3, int(0.15 * len(shared_cols))):
+            return "resting_on"
+        return None
+
     def _spatial_predicate_mask(self, sub: Dict[str, Any], obj: Dict[str, Any]) -> str:
-        """Return spatial predicate using pixel-mask IoU and depth-weighted centroids."""
+        """Return spatial predicate using pixel-mask IoU, containment,
+        contact, and depth-weighted centroids. Priority order: overlapping ->
+        containment -> resting_on -> touching (near-contact, no overlap) ->
+        depth-aware adjacency (in_front_of/behind) -> 2D positional fallback."""
         sub_mask = sub.get("_sam2_mask_array")
         obj_mask = obj.get("_sam2_mask_array")
 
-        # --- Overlap via pixel mask intersection (all objects have masks) ---
         if sub_mask is not None and obj_mask is not None:
             sub_m = np.asarray(sub_mask) > 0
-            obj_m = np.asarray(obj_mask) > 0
-            # Resize to match if sizes differ (e.g. if masks came from different resolutions)
-            if sub_m.shape != obj_m.shape:
-                obj_m = (cv2.resize(obj_m.astype(np.uint8), (sub_m.shape[1], sub_m.shape[0]),
-                                    interpolation=cv2.INTER_NEAREST) > 0)
+            obj_m = self._resize_to_match(np.asarray(obj_mask) > 0, sub_m.shape[:2])
             inter = int(np.logical_and(sub_m, obj_m).sum())
             union = int(np.logical_or(sub_m, obj_m).sum())
             if union > 0 and (inter / (union + 1e-8)) >= self._mask_overlap_thresh:
                 return "overlapping"
+
+            containment = self._containment_predicate(sub_m, obj_m, inter)
+            if containment is not None:
+                return containment
+
+            resting = self._resting_on_predicate(sub_m, obj_m)
+            if resting is not None:
+                return resting
+
+            # Near-contact ("touching"): no IoU overlap, but a small dilation
+            # of one mask reaches the other -- objects that sit right next to
+            # each other on a shelf/floor, not overlapping but not far apart either.
+            kernel = np.ones((11, 11), np.uint8)  # ~5px reach each direction
+            sub_dilated = cv2.dilate(sub_m.astype(np.uint8), kernel) > 0
+            if np.logical_and(sub_dilated, obj_m).any():
+                return "touching"
 
         sub_z = sub.get("coordinates_3d", {}).get("z")
         obj_z = obj.get("coordinates_3d", {}).get("z")
@@ -237,8 +311,14 @@ class Pix2SGWrapper:
                     pred = self._spatial_predicate_mask(sub, obj)
                 else:
                     pred = self._spatial_predicate_bbox(sub_box, obj_box, image_w, image_h, iou_func)
-                if pred == "overlapping":
+                if pred in {"contains", "inside_of"}:
+                    score = 0.90  # strongest geometric signal: near-total mask containment
+                elif pred == "resting_on":
+                    score = 0.85  # verified bottom/top contact + horizontal overlap
+                elif pred == "overlapping":
                     score = 0.85
+                elif pred == "touching":
+                    score = 0.72  # near-contact but no overlap/containment/support verified
                 elif pred in {"in_front_of", "behind"}:
                     score = 0.75
                 else:
@@ -295,6 +375,7 @@ class Pix2SGWrapper:
           and active (see ``PreprocessConfig.florence2_relation_enabled``); merged on
           top of layer 1 / precomputed triplets when enabled.
         """
+        self.last_debug = {"precomputed": [], "spatial_scaffold": [], "florence2": [], "final_deduped": []}
         if not self.is_active():
             return []
         if detections is None:
@@ -304,18 +385,23 @@ class Pix2SGWrapper:
             iou_func = lambda _a, _b: 0.0
 
         triplets: List[Dict[str, Any]] = []
-        if image_stem:
-            precomputed = self._load_precomputed_triplets(image_stem)
-            if precomputed:
-                triplets.extend(precomputed)
+        precomputed = self._load_precomputed_triplets(image_stem) if image_stem else []
+        self.last_debug["precomputed"] = list(precomputed)
+        if precomputed:
+            triplets.extend(precomputed)
         if not triplets:
-            triplets = self._build_spatial_scaffold_triplets(detections, h, w, iou_func)
+            scaffold = self._build_spatial_scaffold_triplets(detections, h, w, iou_func)
+            self.last_debug["spatial_scaffold"] = list(scaffold)
+            triplets = scaffold
 
         if self._florence2 is not None and self._florence2.active and len(detections) >= 2:
             florence_triplets = self._enrich_with_florence2(image, detections)
+            self.last_debug["florence2"] = list(florence_triplets)
             triplets.extend(florence_triplets)
 
-        return self._dedupe_triplets(triplets)
+        deduped = self._dedupe_triplets(triplets)
+        self.last_debug["final_deduped"] = list(deduped)
+        return deduped
 
     def _enrich_with_florence2(
         self,

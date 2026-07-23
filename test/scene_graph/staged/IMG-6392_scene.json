@@ -1,0 +1,2297 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-18 12:14:21",
+    "segmentor": "package_staged_pipeline",
+    "intrinsics": {
+      "fx": 1022.7760018694221,
+      "fy": 1022.7760018694221,
+      "cx": 590.5,
+      "cy": 640.0
+    },
+    "models": [
+      "DepthAnythingV2",
+      "GroundedSAM2",
+      "Florence2",
+      "RAM++",
+      "Pix2SG"
+    ],
+    "relation_sources": {
+      "Pix2SG": {
+        "active": true,
+        "backend": "package_staged"
+      }
+    },
+    "relation_debug": {
+      "num_detections": 16,
+      "num_objects": 16,
+      "num_relations": 149
+    },
+    "regions_enabled_staged": true,
+    "depth_map": "depth/IMG-6392_depth_metric.npy",
+    "segmentation_image": "scene_graph/staged/IMG-6392_segmentation.png",
+    "sam2_segmentation_image": "scene_graph/staged/IMG-6392_segmentation.png",
+    "sam2_tinted_overlay_image": "scene_graph/staged/IMG-6392_overlay.png"
+  },
+  "objects": [
+    {
+      "id": "obj_0",
+      "graph_id": "obj_0",
+      "label": "person",
+      "confidence": 0.4702,
+      "conf": 0.4702,
+      "bbox": [
+        555,
+        578,
+        658,
+        730
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 0.111,
+        "y": 0.505,
+        "z": 20.65
+      },
+      "depth_stats": {
+        "min": 18.1422,
+        "max": 23.1576,
+        "mean": 20.3563,
+        "median": 20.5827,
+        "std": 1.0358,
+        "num_pixels": 5675,
+        "z_val": 20.6504,
+        "z_val_pixels": 2396,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.8741
+      },
+      "mask_centroid_2d": [
+        596,
+        665
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "person",
+          "confidence": 0.4702,
+          "caption": "person"
+        },
+        "Florence2": {
+          "label": "person",
+          "caption": "person"
+        },
+        "RAM++": {
+          "label": "person",
+          "caption": "person",
+          "tags": [
+            "person"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_1",
+      "graph_id": "obj_1",
+      "label": "clothing",
+      "confidence": 0.2857,
+      "conf": 0.2857,
+      "bbox": [
+        559,
+        621,
+        618,
+        694
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -0.071,
+        "y": 0.242,
+        "z": 20.626
+      },
+      "depth_stats": {
+        "min": 20.2086,
+        "max": 23.2066,
+        "mean": 20.7405,
+        "median": 20.6783,
+        "std": 0.3466,
+        "num_pixels": 1979,
+        "z_val": 20.6258,
+        "z_val_pixels": 994,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.8133
+      },
+      "mask_centroid_2d": [
+        587,
+        652
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "clothing",
+          "confidence": 0.2857,
+          "caption": "clothing"
+        },
+        "Florence2": {
+          "label": "clothing",
+          "caption": "clothing"
+        },
+        "RAM++": {
+          "label": "clothing",
+          "caption": "clothing",
+          "tags": [
+            "clothing"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_2",
+      "graph_id": "obj_2",
+      "label": "person",
+      "confidence": 0.2449,
+      "conf": 0.2449,
+      "bbox": [
+        64,
+        818,
+        88,
+        857
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -14.102,
+        "y": 5.482,
+        "z": 28.033
+      },
+      "depth_stats": {
+        "min": 24.3114,
+        "max": 34.5097,
+        "mean": 29.2361,
+        "median": 28.8542,
+        "std": 1.7924,
+        "num_pixels": 596,
+        "z_val": 28.0326,
+        "z_val_pixels": 277,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.3767
+      },
+      "mask_centroid_2d": [
+        76,
+        840
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "person",
+          "confidence": 0.2449,
+          "caption": "person"
+        },
+        "Florence2": {
+          "label": "person",
+          "caption": "person"
+        },
+        "RAM++": {
+          "label": "person",
+          "caption": "person",
+          "tags": [
+            "person"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_3",
+      "graph_id": "obj_3",
+      "label": "clothing",
+      "confidence": 0.2216,
+      "conf": 0.2216,
+      "bbox": [
+        0,
+        838,
+        21,
+        888
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -12.793,
+        "y": 5.104,
+        "z": 22.502
+      },
+      "depth_stats": {
+        "min": 17.1731,
+        "max": 28.1198,
+        "mean": 23.0995,
+        "median": 23.3888,
+        "std": 2.4491,
+        "num_pixels": 657,
+        "z_val": 22.5018,
+        "z_val_pixels": 316,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.8822
+      },
+      "mask_centroid_2d": [
+        9,
+        872
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "clothing",
+          "confidence": 0.2216,
+          "caption": "clothing"
+        },
+        "Florence2": {
+          "label": "clothing",
+          "caption": "clothing"
+        },
+        "RAM++": {
+          "label": "clothing",
+          "caption": "clothing",
+          "tags": [
+            "clothing"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_4",
+      "graph_id": "obj_4",
+      "label": "clothing",
+      "confidence": 0.2316,
+      "conf": 0.2316,
+      "bbox": [
+        79,
+        802,
+        104,
+        830
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -15.293,
+        "y": 5.441,
+        "z": 31.439
+      },
+      "depth_stats": {
+        "min": 24.2691,
+        "max": 39.2194,
+        "mean": 32.2571,
+        "median": 31.7298,
+        "std": 3.0634,
+        "num_pixels": 583,
+        "z_val": 31.4392,
+        "z_val_pixels": 292,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 7.1456
+      },
+      "mask_centroid_2d": [
+        93,
+        817
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "clothing",
+          "confidence": 0.2316,
+          "caption": "clothing"
+        },
+        "Florence2": {
+          "label": "clothing",
+          "caption": "clothing"
+        },
+        "RAM++": {
+          "label": "clothing",
+          "caption": "clothing",
+          "tags": [
+            "clothing"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_5",
+      "graph_id": "obj_5",
+      "label": "person",
+      "confidence": 0.2433,
+      "conf": 0.2433,
+      "bbox": [
+        895,
+        786,
+        928,
+        810
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 6.579,
+        "y": 3.295,
+        "z": 21.061
+      },
+      "depth_stats": {
+        "min": 17.8539,
+        "max": 24.76,
+        "mean": 21.2126,
+        "median": 21.1761,
+        "std": 1.5526,
+        "num_pixels": 561,
+        "z_val": 21.0606,
+        "z_val_pixels": 269,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.6958
+      },
+      "mask_centroid_2d": [
+        910,
+        800
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "person",
+          "confidence": 0.2433,
+          "caption": "person"
+        },
+        "Florence2": {
+          "label": "person",
+          "caption": "person"
+        },
+        "RAM++": {
+          "label": "person",
+          "caption": "person",
+          "tags": [
+            "person"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_6",
+      "graph_id": "obj_6",
+      "label": "person",
+      "confidence": 0.2159,
+      "conf": 0.2159,
+      "bbox": [
+        9,
+        805,
+        39,
+        870
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -15.755,
+        "y": 5.45,
+        "z": 28.295
+      },
+      "depth_stats": {
+        "min": 23.3411,
+        "max": 40.6314,
+        "mean": 31.7089,
+        "median": 31.0639,
+        "std": 3.9293,
+        "num_pixels": 1024,
+        "z_val": 28.2951,
+        "z_val_pixels": 192,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 2.6853
+      },
+      "mask_centroid_2d": [
+        21,
+        837
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "person",
+          "confidence": 0.2159,
+          "caption": "person"
+        },
+        "Florence2": {
+          "label": "person",
+          "caption": "person"
+        },
+        "RAM++": {
+          "label": "person",
+          "caption": "person",
+          "tags": [
+            "person"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_7",
+      "graph_id": "obj_7",
+      "label": "person",
+      "confidence": 0.1982,
+      "conf": 0.1982,
+      "bbox": [
+        87,
+        831,
+        108,
+        855
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -13.256,
+        "y": 5.48,
+        "z": 27.473
+      },
+      "depth_stats": {
+        "min": 16.4357,
+        "max": 30.1313,
+        "mean": 25.3749,
+        "median": 26.6919,
+        "std": 3.2681,
+        "num_pixels": 486,
+        "z_val": 27.473,
+        "z_val_pixels": 241,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 3.5396
+      },
+      "mask_centroid_2d": [
+        97,
+        844
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "person",
+          "confidence": 0.1982,
+          "caption": "person"
+        },
+        "Florence2": {
+          "label": "person",
+          "caption": "person"
+        },
+        "RAM++": {
+          "label": "person",
+          "caption": "person",
+          "tags": [
+            "person"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_8",
+      "graph_id": "obj_8",
+      "label": "person",
+      "confidence": 0.2113,
+      "conf": 0.2113,
+      "bbox": [
+        0,
+        787,
+        15,
+        819
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -16.043,
+        "y": 4.556,
+        "z": 28.073
+      },
+      "depth_stats": {
+        "min": 26.3635,
+        "max": 39.1483,
+        "mean": 30.2891,
+        "median": 29.4635,
+        "std": 2.868,
+        "num_pixels": 356,
+        "z_val": 28.0727,
+        "z_val_pixels": 169,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 4.7591
+      },
+      "mask_centroid_2d": [
+        6,
+        806
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "person",
+          "confidence": 0.2113,
+          "caption": "person"
+        },
+        "Florence2": {
+          "label": "person",
+          "caption": "person"
+        },
+        "RAM++": {
+          "label": "person",
+          "caption": "person",
+          "tags": [
+            "person"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_9",
+      "graph_id": "obj_9",
+      "label": "person",
+      "confidence": 0.2683,
+      "conf": 0.2683,
+      "bbox": [
+        0,
+        814,
+        22,
+        889
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -11.314,
+        "y": 4.346,
+        "z": 19.934
+      },
+      "depth_stats": {
+        "min": 17.7606,
+        "max": 28.4059,
+        "mean": 24.505,
+        "median": 24.7678,
+        "std": 2.6597,
+        "num_pixels": 967,
+        "z_val": 19.9341,
+        "z_val_pixels": 167,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.3464
+      },
+      "mask_centroid_2d": [
+        10,
+        863
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "person",
+          "confidence": 0.2683,
+          "caption": "person"
+        },
+        "Florence2": {
+          "label": "person",
+          "caption": "person"
+        },
+        "RAM++": {
+          "label": "person",
+          "caption": "person",
+          "tags": [
+            "person"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_10",
+      "graph_id": "obj_10",
+      "label": "clothing",
+      "confidence": 0.1749,
+      "conf": 0.1749,
+      "bbox": [
+        0,
+        795,
+        14,
+        818
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -15.938,
+        "y": 4.554,
+        "z": 27.889
+      },
+      "depth_stats": {
+        "min": 26.6819,
+        "max": 36.2573,
+        "mean": 29.7383,
+        "median": 29.2465,
+        "std": 2.1264,
+        "num_pixels": 296,
+        "z_val": 27.8885,
+        "z_val_pixels": 140,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 3.9903
+      },
+      "mask_centroid_2d": [
+        6,
+        807
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "clothing",
+          "confidence": 0.1749,
+          "caption": "clothing"
+        },
+        "Florence2": {
+          "label": "clothing",
+          "caption": "clothing"
+        },
+        "RAM++": {
+          "label": "clothing",
+          "caption": "clothing",
+          "tags": [
+            "clothing"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_11",
+      "graph_id": "obj_11",
+      "label": "person",
+      "confidence": 0.1766,
+      "conf": 0.1766,
+      "bbox": [
+        0,
+        792,
+        41,
+        887
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -15.55,
+        "y": 5.411,
+        "z": 27.398
+      },
+      "depth_stats": {
+        "min": 19.8246,
+        "max": 37.3612,
+        "mean": 28.1821,
+        "median": 27.9008,
+        "std": 3.7078,
+        "num_pixels": 2160,
+        "z_val": 27.398,
+        "z_val_pixels": 471,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 1.2242
+      },
+      "mask_centroid_2d": [
+        10,
+        842
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "person",
+          "confidence": 0.1766,
+          "caption": "person"
+        },
+        "Florence2": {
+          "label": "person",
+          "caption": "person"
+        },
+        "RAM++": {
+          "label": "person",
+          "caption": "person",
+          "tags": [
+            "person"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_12",
+      "graph_id": "obj_12",
+      "label": "person",
+      "confidence": 0.2028,
+      "conf": 0.2028,
+      "bbox": [
+        141,
+        793,
+        163,
+        819
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -16.382,
+        "y": 6.314,
+        "z": 38.21
+      },
+      "depth_stats": {
+        "min": 17.4485,
+        "max": 38.9251,
+        "mean": 33.6032,
+        "median": 35.9615,
+        "std": 5.3806,
+        "num_pixels": 384,
+        "z_val": 38.2101,
+        "z_val_pixels": 183,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 8.7765
+      },
+      "mask_centroid_2d": [
+        152,
+        809
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "person",
+          "confidence": 0.2028,
+          "caption": "person"
+        },
+        "Florence2": {
+          "label": "person",
+          "caption": "person"
+        },
+        "RAM++": {
+          "label": "person",
+          "caption": "person",
+          "tags": [
+            "person"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_13",
+      "graph_id": "obj_13",
+      "label": "plant",
+      "confidence": 0.1708,
+      "conf": 0.1708,
+      "bbox": [
+        1087,
+        838,
+        1155,
+        873
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": 12.328,
+        "y": 4.973,
+        "z": 23.546
+      },
+      "depth_stats": {
+        "min": 22.3231,
+        "max": 24.9342,
+        "mean": 23.6328,
+        "median": 23.6333,
+        "std": 0.5859,
+        "num_pixels": 1874,
+        "z_val": 23.5461,
+        "z_val_pixels": 903,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.423
+      },
+      "mask_centroid_2d": [
+        1126,
+        856
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "plant",
+          "confidence": 0.1708,
+          "caption": "plant"
+        },
+        "Florence2": {
+          "label": "plant",
+          "caption": "plant"
+        },
+        "RAM++": {
+          "label": "plant",
+          "caption": "plant",
+          "tags": [
+            "plant"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_14",
+      "graph_id": "obj_14",
+      "label": "clothing",
+      "confidence": 0.1976,
+      "conf": 0.1976,
+      "bbox": [
+        67,
+        831,
+        87,
+        856
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -14.054,
+        "y": 5.583,
+        "z": 27.991
+      },
+      "depth_stats": {
+        "min": 25.2515,
+        "max": 31.3671,
+        "mean": 28.5048,
+        "median": 28.1685,
+        "std": 1.1603,
+        "num_pixels": 426,
+        "z_val": 27.9915,
+        "z_val_pixels": 214,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 0.6571
+      },
+      "mask_centroid_2d": [
+        77,
+        844
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "clothing",
+          "confidence": 0.1976,
+          "caption": "clothing"
+        },
+        "Florence2": {
+          "label": "clothing",
+          "caption": "clothing"
+        },
+        "RAM++": {
+          "label": "clothing",
+          "caption": "clothing",
+          "tags": [
+            "clothing"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    },
+    {
+      "id": "obj_15",
+      "graph_id": "obj_15",
+      "label": "person",
+      "confidence": 0.2527,
+      "conf": 0.2527,
+      "bbox": [
+        78,
+        793,
+        107,
+        837
+      ],
+      "segmentor": "GroundedSAM2",
+      "coordinates_3d": {
+        "x": -15.265,
+        "y": 5.503,
+        "z": 31.445
+      },
+      "depth_stats": {
+        "min": 18.2283,
+        "max": 39.2194,
+        "mean": 30.3567,
+        "median": 30.9489,
+        "std": 4.2916,
+        "num_pixels": 941,
+        "z_val": 31.4452,
+        "z_val_pixels": 464,
+        "possibly_transparent": false,
+        "depth_separation_from_background": 8.0218
+      },
+      "mask_centroid_2d": [
+        94,
+        819
+      ],
+      "sources": {
+        "GroundedSAM2": {
+          "label": "person",
+          "confidence": 0.2527,
+          "caption": "person"
+        },
+        "Florence2": {
+          "label": "person",
+          "caption": "person"
+        },
+        "RAM++": {
+          "label": "person",
+          "caption": "person",
+          "tags": [
+            "person"
+          ]
+        },
+        "Pix2SG": {
+          "relations": []
+        }
+      }
+    }
+  ],
+  "relations": [
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "clothing",
+      "sub_id": "obj_0",
+      "obj_id": "obj_1",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "left_of",
+      "obj": "person",
+      "sub_id": "obj_0",
+      "obj_id": "obj_5",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_0",
+      "obj_id": "obj_12",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_0",
+      "obj_id": "obj_15",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_0",
+      "obj_id": "obj_4",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_0",
+      "obj_id": "obj_7",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_0",
+      "obj_id": "obj_2",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_0",
+      "obj_id": "obj_14",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_1",
+      "obj_id": "obj_0",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "left_of",
+      "obj": "person",
+      "sub_id": "obj_1",
+      "obj_id": "obj_5",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_1",
+      "obj_id": "obj_12",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_1",
+      "obj_id": "obj_15",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_1",
+      "obj_id": "obj_4",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_1",
+      "obj_id": "obj_7",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_1",
+      "obj_id": "obj_2",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_1",
+      "obj_id": "obj_14",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "clothing",
+      "sub_id": "obj_2",
+      "obj_id": "obj_14",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "left_of",
+      "obj": "person",
+      "sub_id": "obj_2",
+      "obj_id": "obj_7",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_2",
+      "obj_id": "obj_15",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_2",
+      "obj_id": "obj_4",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "right_of",
+      "obj": "person",
+      "sub_id": "obj_2",
+      "obj_id": "obj_6",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "right_of",
+      "obj": "person",
+      "sub_id": "obj_2",
+      "obj_id": "obj_11",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_2",
+      "obj_id": "obj_9",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "clothing",
+      "sub_id": "obj_2",
+      "obj_id": "obj_3",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_3",
+      "obj_id": "obj_9",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_3",
+      "obj_id": "obj_11",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_3",
+      "obj_id": "obj_6",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_3",
+      "obj_id": "obj_10",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_3",
+      "obj_id": "obj_8",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_3",
+      "obj_id": "obj_14",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_3",
+      "obj_id": "obj_2",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_3",
+      "obj_id": "obj_7",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_4",
+      "obj_id": "obj_15",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_4",
+      "obj_id": "obj_7",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_4",
+      "obj_id": "obj_2",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "behind",
+      "obj": "clothing",
+      "sub_id": "obj_4",
+      "obj_id": "obj_14",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_4",
+      "obj_id": "obj_12",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_4",
+      "obj_id": "obj_6",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_4",
+      "obj_id": "obj_11",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "behind",
+      "obj": "clothing",
+      "sub_id": "obj_4",
+      "obj_id": "obj_10",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "left_of",
+      "obj": "plant",
+      "sub_id": "obj_5",
+      "obj_id": "obj_13",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "right_of",
+      "obj": "person",
+      "sub_id": "obj_5",
+      "obj_id": "obj_0",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "right_of",
+      "obj": "clothing",
+      "sub_id": "obj_5",
+      "obj_id": "obj_1",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_5",
+      "obj_id": "obj_12",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_5",
+      "obj_id": "obj_7",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_5",
+      "obj_id": "obj_15",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_5",
+      "obj_id": "obj_4",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_5",
+      "obj_id": "obj_14",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_6",
+      "obj_id": "obj_11",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_6",
+      "obj_id": "obj_9",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "below",
+      "obj": "clothing",
+      "sub_id": "obj_6",
+      "obj_id": "obj_10",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "below",
+      "obj": "person",
+      "sub_id": "obj_6",
+      "obj_id": "obj_8",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "clothing",
+      "sub_id": "obj_6",
+      "obj_id": "obj_3",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "left_of",
+      "obj": "person",
+      "sub_id": "obj_6",
+      "obj_id": "obj_2",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "left_of",
+      "obj": "clothing",
+      "sub_id": "obj_6",
+      "obj_id": "obj_14",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_6",
+      "obj_id": "obj_4",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "right_of",
+      "obj": "clothing",
+      "sub_id": "obj_7",
+      "obj_id": "obj_14",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "right_of",
+      "obj": "person",
+      "sub_id": "obj_7",
+      "obj_id": "obj_2",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_7",
+      "obj_id": "obj_15",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_7",
+      "obj_id": "obj_4",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_7",
+      "obj_id": "obj_12",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "right_of",
+      "obj": "person",
+      "sub_id": "obj_7",
+      "obj_id": "obj_6",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "right_of",
+      "obj": "person",
+      "sub_id": "obj_7",
+      "obj_id": "obj_11",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_7",
+      "obj_id": "obj_9",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "clothing",
+      "sub_id": "obj_8",
+      "obj_id": "obj_10",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "above",
+      "obj": "person",
+      "sub_id": "obj_8",
+      "obj_id": "obj_6",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_8",
+      "obj_id": "obj_11",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_8",
+      "obj_id": "obj_9",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "clothing",
+      "sub_id": "obj_8",
+      "obj_id": "obj_3",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "left_of",
+      "obj": "person",
+      "sub_id": "obj_8",
+      "obj_id": "obj_2",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "left_of",
+      "obj": "clothing",
+      "sub_id": "obj_8",
+      "obj_id": "obj_14",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_8",
+      "obj_id": "obj_4",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "clothing",
+      "sub_id": "obj_9",
+      "obj_id": "obj_3",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_9",
+      "obj_id": "obj_11",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_9",
+      "obj_id": "obj_6",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_9",
+      "obj_id": "obj_10",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_9",
+      "obj_id": "obj_8",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_9",
+      "obj_id": "obj_14",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_9",
+      "obj_id": "obj_2",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_9",
+      "obj_id": "obj_7",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_10",
+      "obj_id": "obj_8",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "above",
+      "obj": "person",
+      "sub_id": "obj_10",
+      "obj_id": "obj_6",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_10",
+      "obj_id": "obj_11",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_10",
+      "obj_id": "obj_9",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "behind",
+      "obj": "clothing",
+      "sub_id": "obj_10",
+      "obj_id": "obj_3",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "left_of",
+      "obj": "person",
+      "sub_id": "obj_10",
+      "obj_id": "obj_2",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "left_of",
+      "obj": "clothing",
+      "sub_id": "obj_10",
+      "obj_id": "obj_14",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_10",
+      "obj_id": "obj_4",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_11",
+      "obj_id": "obj_6",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_11",
+      "obj_id": "obj_9",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "clothing",
+      "sub_id": "obj_11",
+      "obj_id": "obj_3",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "clothing",
+      "sub_id": "obj_11",
+      "obj_id": "obj_10",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_11",
+      "obj_id": "obj_8",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "left_of",
+      "obj": "person",
+      "sub_id": "obj_11",
+      "obj_id": "obj_2",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "left_of",
+      "obj": "clothing",
+      "sub_id": "obj_11",
+      "obj_id": "obj_14",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_11",
+      "obj_id": "obj_4",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_12",
+      "obj_id": "obj_15",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "clothing",
+      "sub_id": "obj_12",
+      "obj_id": "obj_4",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_12",
+      "obj_id": "obj_7",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_12",
+      "obj_id": "obj_2",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "clothing",
+      "sub_id": "obj_12",
+      "obj_id": "obj_14",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_12",
+      "obj_id": "obj_6",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_12",
+      "obj_id": "obj_11",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "clothing",
+      "sub_id": "obj_12",
+      "obj_id": "obj_10",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "plant",
+      "pred": "right_of",
+      "obj": "person",
+      "sub_id": "obj_13",
+      "obj_id": "obj_5",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "plant",
+      "pred": "right_of",
+      "obj": "person",
+      "sub_id": "obj_13",
+      "obj_id": "obj_0",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "plant",
+      "pred": "right_of",
+      "obj": "clothing",
+      "sub_id": "obj_13",
+      "obj_id": "obj_1",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "plant",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_13",
+      "obj_id": "obj_12",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "plant",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_13",
+      "obj_id": "obj_7",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "plant",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_13",
+      "obj_id": "obj_15",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "plant",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_13",
+      "obj_id": "obj_4",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "plant",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_13",
+      "obj_id": "obj_14",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_14",
+      "obj_id": "obj_2",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "left_of",
+      "obj": "person",
+      "sub_id": "obj_14",
+      "obj_id": "obj_7",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_14",
+      "obj_id": "obj_15",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "in_front_of",
+      "obj": "clothing",
+      "sub_id": "obj_14",
+      "obj_id": "obj_4",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "right_of",
+      "obj": "person",
+      "sub_id": "obj_14",
+      "obj_id": "obj_6",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "right_of",
+      "obj": "person",
+      "sub_id": "obj_14",
+      "obj_id": "obj_11",
+      "score": 0.7,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_14",
+      "obj_id": "obj_9",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "behind",
+      "obj": "clothing",
+      "sub_id": "obj_14",
+      "obj_id": "obj_3",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "clothing",
+      "sub_id": "obj_15",
+      "obj_id": "obj_4",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "overlapping",
+      "obj": "person",
+      "sub_id": "obj_15",
+      "obj_id": "obj_7",
+      "score": 0.85,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_15",
+      "obj_id": "obj_2",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "clothing",
+      "sub_id": "obj_15",
+      "obj_id": "obj_14",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "in_front_of",
+      "obj": "person",
+      "sub_id": "obj_15",
+      "obj_id": "obj_12",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_15",
+      "obj_id": "obj_6",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "person",
+      "sub_id": "obj_15",
+      "obj_id": "obj_11",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "behind",
+      "obj": "clothing",
+      "sub_id": "obj_15",
+      "obj_id": "obj_10",
+      "score": 0.75,
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "on",
+      "obj": "clothing",
+      "sub_id": "obj_0",
+      "obj_id": "obj_1",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "on",
+      "obj": "person",
+      "sub_id": "obj_1",
+      "obj_id": "obj_0",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "on",
+      "obj": "clothing",
+      "sub_id": "obj_2",
+      "obj_id": "obj_14",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "inside_of",
+      "obj": "person",
+      "sub_id": "obj_3",
+      "obj_id": "obj_9",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "inside_of",
+      "obj": "person",
+      "sub_id": "obj_3",
+      "obj_id": "obj_11",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "inside_of",
+      "obj": "person",
+      "sub_id": "obj_4",
+      "obj_id": "obj_15",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "holds",
+      "obj": "person",
+      "sub_id": "obj_6",
+      "obj_id": "obj_11",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "inside_of",
+      "obj": "person",
+      "sub_id": "obj_7",
+      "obj_id": "obj_15",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "at",
+      "obj": "person",
+      "sub_id": "obj_8",
+      "obj_id": "obj_11",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "wears",
+      "obj": "clothing",
+      "sub_id": "obj_9",
+      "obj_id": "obj_3",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "at",
+      "obj": "person",
+      "sub_id": "obj_9",
+      "obj_id": "obj_11",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "inside_of",
+      "obj": "person",
+      "sub_id": "obj_10",
+      "obj_id": "obj_8",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "inside_of",
+      "obj": "person",
+      "sub_id": "obj_10",
+      "obj_id": "obj_11",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "inside_of",
+      "obj": "clothing",
+      "sub_id": "obj_11",
+      "obj_id": "obj_3",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "wears",
+      "obj": "person",
+      "sub_id": "obj_11",
+      "obj_id": "obj_6",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "inside_of",
+      "obj": "person",
+      "sub_id": "obj_11",
+      "obj_id": "obj_8",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "on",
+      "obj": "person",
+      "sub_id": "obj_11",
+      "obj_id": "obj_9",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "inside_of",
+      "obj": "clothing",
+      "sub_id": "obj_11",
+      "obj_id": "obj_10",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "clothing",
+      "pred": "on",
+      "obj": "person",
+      "sub_id": "obj_14",
+      "obj_id": "obj_2",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "inside_of",
+      "obj": "clothing",
+      "sub_id": "obj_15",
+      "obj_id": "obj_4",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    },
+    {
+      "sub": "person",
+      "pred": "inside_of",
+      "obj": "person",
+      "sub_id": "obj_15",
+      "obj_id": "obj_7",
+      "score": 0.75,
+      "source_layer": "florence2",
+      "relation_tier": "intra_region"
+    }
+  ]
+}

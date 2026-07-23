@@ -1,0 +1,566 @@
+{
+  "schema": "citv_trajectory_hypotheses_bundle_v1",
+  "version": "1.0",
+  "image_stem": "IMG-6392",
+  "track": "grounded_sam2",
+  "image_size": {
+    "width": 1181,
+    "height": 1280
+  },
+  "hypotheses": [
+    {
+      "trajectory_id": "traj_IMG-6392_grounded_sam2_obj_2_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_2_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "person"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG-6392_grounded_sam2_obj_2_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 8.210740089416504,
+              "y_px": 859.1661376953125,
+              "theta_rad": 2.414715875710074,
+              "z_m": 18.184
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 3.7272188101215677,
+              "y_px": 863.153371942019,
+              "theta_rad": 2.414715875710074,
+              "z_m": 18.184
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG-6392_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_16",
+          "relation_index_17",
+          "relation_index_18",
+          "relation_index_19",
+          "relation_index_20",
+          "relation_index_21",
+          "relation_index_22",
+          "relation_index_23",
+          "relation_index_46",
+          "relation_index_65",
+          "relation_index_87",
+          "relation_index_90",
+          "relation_index_121"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    },
+    {
+      "trajectory_id": "traj_IMG-6392_grounded_sam2_obj_4_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_4_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "person"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG-6392_grounded_sam2_obj_4_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 93.68586730957031,
+              "y_px": 826.7280883789062,
+              "theta_rad": 0.042472457641502856,
+              "z_m": 31.423
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 99.68045639406958,
+              "y_px": 826.9828465151888,
+              "theta_rad": 0.042472457641502856,
+              "z_m": 31.423
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG-6392_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_22",
+          "relation_index_32",
+          "relation_index_33",
+          "relation_index_34",
+          "relation_index_35",
+          "relation_index_36",
+          "relation_index_37",
+          "relation_index_38",
+          "relation_index_39",
+          "relation_index_41",
+          "relation_index_69",
+          "relation_index_80",
+          "relation_index_94",
+          "relation_index_104",
+          "relation_index_113",
+          "relation_index_125",
+          "relation_index_161",
+          "relation_index_174",
+          "relation_index_175"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    },
+    {
+      "trajectory_id": "traj_IMG-6392_grounded_sam2_obj_5_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_5_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "person"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG-6392_grounded_sam2_obj_5_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 75.47306060791016,
+              "y_px": 839.3956298828125,
+              "theta_rad": 0.8158715256105954,
+              "z_m": 28.033
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 79.58446401728423,
+              "y_px": 843.7655683269313,
+              "theta_rad": 0.8158715256105954,
+              "z_m": 28.033
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG-6392_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_19",
+          "relation_index_34",
+          "relation_index_40",
+          "relation_index_41",
+          "relation_index_42",
+          "relation_index_43",
+          "relation_index_44",
+          "relation_index_45",
+          "relation_index_46",
+          "relation_index_47",
+          "relation_index_67",
+          "relation_index_81",
+          "relation_index_92",
+          "relation_index_107",
+          "relation_index_116",
+          "relation_index_123",
+          "relation_index_162",
+          "relation_index_170",
+          "relation_index_171"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    },
+    {
+      "trajectory_id": "traj_IMG-6392_grounded_sam2_obj_6_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_6_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "person"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG-6392_grounded_sam2_obj_6_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 909.88037109375,
+              "y_px": 799.9892578125,
+              "theta_rad": -2.393821532912658,
+              "z_m": 21.061
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 905.481133049701,
+              "y_px": 795.9092204803433,
+              "theta_rad": -2.393821532912658,
+              "z_m": 21.061
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG-6392_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_6",
+          "relation_index_13",
+          "relation_index_30",
+          "relation_index_48",
+          "relation_index_49",
+          "relation_index_50",
+          "relation_index_51",
+          "relation_index_52",
+          "relation_index_53",
+          "relation_index_54",
+          "relation_index_55",
+          "relation_index_61",
+          "relation_index_76",
+          "relation_index_96",
+          "relation_index_133",
+          "relation_index_142",
+          "relation_index_149",
+          "relation_index_152"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    },
+    {
+      "trajectory_id": "traj_IMG-6392_grounded_sam2_obj_8_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_8_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "person"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG-6392_grounded_sam2_obj_8_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 25.594146728515625,
+              "y_px": 837.5902709960938,
+              "theta_rad": 0.10400281079571468,
+              "z_m": 28.47
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 31.56172621363729,
+              "y_px": 838.2131635139128,
+              "theta_rad": 0.10400281079571468,
+              "z_m": 28.47
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG-6392_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_17",
+          "relation_index_37",
+          "relation_index_44",
+          "relation_index_64",
+          "relation_index_65",
+          "relation_index_66",
+          "relation_index_67",
+          "relation_index_68",
+          "relation_index_69",
+          "relation_index_70",
+          "relation_index_71",
+          "relation_index_85",
+          "relation_index_88",
+          "relation_index_109",
+          "relation_index_117",
+          "relation_index_120",
+          "relation_index_164"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    },
+    {
+      "trajectory_id": "traj_IMG-6392_grounded_sam2_obj_10_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_10_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "person"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG-6392_grounded_sam2_obj_10_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 96.97950744628906,
+              "y_px": 843.71923828125,
+              "theta_rad": -0.2264573120343234,
+              "z_m": 27.473
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 102.8263150651941,
+              "y_px": 842.372078057849,
+              "theta_rad": -0.2264573120343234,
+              "z_m": 27.473
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG-6392_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_21",
+          "relation_index_33",
+          "relation_index_40",
+          "relation_index_71",
+          "relation_index_80",
+          "relation_index_81",
+          "relation_index_82",
+          "relation_index_83",
+          "relation_index_84",
+          "relation_index_85",
+          "relation_index_86",
+          "relation_index_87",
+          "relation_index_95",
+          "relation_index_106",
+          "relation_index_114",
+          "relation_index_126",
+          "relation_index_163"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    },
+    {
+      "trajectory_id": "traj_IMG-6392_grounded_sam2_obj_11_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_11_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "person"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG-6392_grounded_sam2_obj_11_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 6.627777576446533,
+              "y_px": 805.4055786132812,
+              "theta_rad": 0.9204054260428626,
+              "z_m": 28.046
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 10.260762871924815,
+              "y_px": 810.180661632752,
+              "theta_rad": 0.9204054260428626,
+              "z_m": 28.046
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG-6392_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_18",
+          "relation_index_39",
+          "relation_index_47",
+          "relation_index_66",
+          "relation_index_88",
+          "relation_index_89",
+          "relation_index_90",
+          "relation_index_91",
+          "relation_index_92",
+          "relation_index_93",
+          "relation_index_94",
+          "relation_index_95",
+          "relation_index_111",
+          "relation_index_118",
+          "relation_index_122",
+          "relation_index_165"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    },
+    {
+      "trajectory_id": "traj_IMG-6392_grounded_sam2_obj_13_GroundedSAM2_instant00",
+      "subject": {
+        "kind": "object",
+        "id": "grounded_sam2_obj_13_GroundedSAM2",
+        "role": "primary_actor",
+        "display_label": "person"
+      },
+      "counterpart": null,
+      "time_model": {
+        "type": "instant_prior",
+        "horizon_s": 0.04,
+        "dt_s": 0.04
+      },
+      "state_representation": "se2_root",
+      "samples": [
+        {
+          "sample_id": "traj_IMG-6392_grounded_sam2_obj_13_GroundedSAM2_instant00_s0",
+          "weight": 1.0,
+          "states_t": [
+            {
+              "t_s": 0.0,
+              "x_px": 93.44300842285156,
+              "y_px": 815.2824096679688,
+              "theta_rad": -2.961325677192994,
+              "z_m": 31.428
+            },
+            {
+              "t_s": 0.04,
+              "x_px": 87.54023325651653,
+              "y_px": 814.2066562874496,
+              "theta_rad": -2.961325677192994,
+              "z_m": 31.428
+            }
+          ],
+          "evidence": {
+            "mask_pca_heading": true,
+            "depth_heading_blend": true,
+            "depth_available": true
+          }
+        }
+      ],
+      "constraints_used": {
+        "path_cost_map_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_cost_map.npy",
+        "path_hypotheses_json": "scene_graph/grounded_sam2/IMG-6392_paths/path_hypotheses.json",
+        "relation_ids": [
+          "relation_index_23",
+          "relation_index_32",
+          "relation_index_42",
+          "relation_index_70",
+          "relation_index_82",
+          "relation_index_93",
+          "relation_index_104",
+          "relation_index_105",
+          "relation_index_106",
+          "relation_index_107",
+          "relation_index_108",
+          "relation_index_109",
+          "relation_index_110",
+          "relation_index_111",
+          "relation_index_112",
+          "relation_index_127",
+          "relation_index_160",
+          "relation_index_174",
+          "relation_index_175"
+        ],
+        "path_traversability_speed_npy": "scene_graph/grounded_sam2/IMG-6392_paths/path_traversability_speed.npy"
+      },
+      "confidence": 0.55,
+      "notes": "instant_prior: PCA heading optionally blended with depth isocontour tangent"
+    }
+  ]
+}

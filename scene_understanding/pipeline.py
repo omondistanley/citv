@@ -24,9 +24,13 @@ from .labeling import LabelingPipeline
 from .pipeline_context import PipelineContext
 from .relations import RelationsPipeline
 from .segmentation import SegmentationPipeline
+from .stages import captions_export as stage_captions_export
 from .stages import depth as stage_depth
+from .stages import depth_mask_fusion as stage_depth_mask_fusion
 from .stages import full_run as stage_full_run
+from .stages import hierarchy_export as stage_hierarchy_export
 from .stages import labelling as stage_labelling
+from .stages import paths_export as stage_paths_export
 from .stages import preprocess as stage_preprocess
 from .stages import regions as stage_regions
 from .stages import relations_stage as stage_relations
@@ -126,13 +130,38 @@ class SceneUnderstandingPipeline(LegacySceneUnderstandingPipeline):
         return self.process_image_staged(image_path, output_dir)
 
     def _run_stage_chain(self, image_path: str, output_dir: str) -> PipelineContext:
-        """Execute package-native stage chain (PR2 extraction path)."""
-        ctx = self._stage_preprocess(image_path, output_dir)
-        ctx = self._stage_depth(ctx)
-        ctx = self._stage_regions(ctx)
-        ctx = self._stage_segment(ctx)
-        ctx = self._stage_label_and_geometry(ctx)
-        ctx = self._stage_relations(ctx)
+        """Execute package-native stage chain (PR2 extraction path).
+
+        Each stage is timed and printed -- cheap, always-on visibility into
+        where wall-clock time actually goes, since "the whole chain is slow"
+        isn't actionable on its own (this is how the duplicate-model-loading
+        and per-object CLIP-call issues found in a real run got isolated
+        instead of guessed at).
+        """
+        import time
+
+        stages = [
+            ("preprocess", lambda _ctx: self._stage_preprocess(image_path, output_dir)),
+            ("depth", self._stage_depth),
+            ("regions", self._stage_regions),
+            ("segment", self._stage_segment),
+            ("label_and_geometry", self._stage_label_and_geometry),
+            ("depth_mask_fusion", self._stage_depth_mask_fusion),
+            ("relations", self._stage_relations),
+            ("unload_labellers", self._stage_unload_labellers),
+            ("hierarchy_export", self._stage_hierarchy_export),
+            ("paths_export", self._stage_paths_export),
+            ("captions_export", self._stage_captions_export),
+        ]
+        ctx = None
+        timings: Dict[str, float] = {}
+        for name, fn in stages:
+            t0 = time.time()
+            ctx = fn(ctx)
+            timings[name] = time.time() - t0
+            print(f"  [Timing] {name}: {timings[name]:.1f}s")
+        print(f"  [Timing] TOTAL: {sum(timings.values()):.1f}s")
+        ctx.extra["_stage_timings_s"] = timings
         return ctx
 
     def process_image_staged(self, image_path: str, output_dir: str) -> Dict[str, Any]:
@@ -180,6 +209,37 @@ class SceneUnderstandingPipeline(LegacySceneUnderstandingPipeline):
         """Predict relation triplets from staged objects."""
         return stage_relations.run(self, ctx)
 
+    def _stage_unload_labellers(self, ctx: PipelineContext) -> PipelineContext:
+        """Frees Florence-2 + RAM++ (real GBs of resident weights on an
+        already memory-constrained machine) once nothing further in the
+        chain needs them as a matter of course -- hierarchy_export/
+        paths_export don't touch either model, and captions_export lazily
+        reconstructs just a Florence2Wrapper if it genuinely needs one for
+        the scene caption (see captions_export.py's fallback). The legacy
+        monolith already has this exact method (used at the end of its own
+        process_image), it was simply never wired into the staged chain --
+        confirmed via a real kernel panic (watchdog timeout under severe
+        memory/swap pressure) on an 8GB machine that this is a genuine, not
+        theoretical, peak-memory problem."""
+        self._unload_labellers()
+        return ctx
+
+    def _stage_depth_mask_fusion(self, ctx: PipelineContext) -> PipelineContext:
+        """Pair each labelled object with its mask + depth stats into {stem}_depth_mask_A.json."""
+        return stage_depth_mask_fusion.run(self, ctx)
+
+    def _stage_hierarchy_export(self, ctx: PipelineContext) -> PipelineContext:
+        """Mask-containment parent/child edges + relation-derived occlusion bookkeeping."""
+        return stage_hierarchy_export.run(self, ctx)
+
+    def _stage_paths_export(self, ctx: PipelineContext) -> PipelineContext:
+        """Fused-cost FMM path hypotheses between object pairs, with 3D/kinematic/visibility enrichment."""
+        return stage_paths_export.run(self, ctx)
+
+    def _stage_captions_export(self, ctx: PipelineContext) -> PipelineContext:
+        """Florence/fusion/hybrid caption-variant bundle + comparison manifest."""
+        return stage_captions_export.run(self, ctx)
+
     def _stage_export_package(self, ctx: PipelineContext) -> Dict[str, Any]:
         """Write a package-staged scene graph JSON under scene_graph/staged/."""
         return scene_write.export_staged_package(ctx)
@@ -223,7 +283,17 @@ class SceneUnderstandingPipeline(LegacySceneUnderstandingPipeline):
 
     def _get_relations_pipeline(self) -> RelationsPipeline:
         if self._relations_pipeline is None:
-            florence2 = self._get_labeling_pipeline().florence2
+            # Reuse the legacy monolith's own already-managed self.florence2
+            # (loaded eagerly by _load_labellers() only when
+            # florence2_relation_enabled is set, else left None) instead of
+            # unconditionally building a whole separate LabelingPipeline
+            # just to read its .florence2 -- Pix2SGWrapper only ever uses
+            # this reference conditionally at prediction time (see
+            # pix2sg.py's `if self._florence2 is not None and .active`), so
+            # passing the real, already-correct legacy attribute is exactly
+            # as correct and skips a real, measured duplicate Florence-2 +
+            # RAM++ (+ a second Pix2SG init) load on every run.
+            florence2 = getattr(self, "florence2", None)
             self._relations_pipeline = RelationsPipeline(
                 device=self.device if isinstance(self.device, torch.device) else torch.device(str(self.device)),
                 triplets_dir=str(getattr(self.config, "pix2sg_triplets_dir", "pix2sg_triplets")) if self.config else "pix2sg_triplets",

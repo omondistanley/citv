@@ -230,7 +230,7 @@ dest_dir = os.path.join(root, "checkpoints")
 os.makedirs(dest_dir, exist_ok=True)
 
 path = hf_hub_download(
-    repo_id="xinyu1205/recognize-anything",
+    repo_id="xinyu1205/recognize-anything-plus-model",
     filename="ram_plus_swin_large_14m.pth",
     local_dir=dest_dir,
 )

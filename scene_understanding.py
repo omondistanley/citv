@@ -355,6 +355,34 @@ class SceneUnderstandingPipeline:
         "image",
         "photo",
         "picture",
+        # GDINO's own fixed text-query categories (config.py's
+        # grounding_dino_text_query) -- these are coarse supercategories,
+        # not real object names ("plant" covers tree/flower/grass/branch;
+        # "animal" covers lion/dog/etc; "bird" covers pigeon/goose/etc).
+        # Without these here, _is_generic_label treated GDINO's own coarse
+        # category word as already-specific, so the evidence-fusion scorer
+        # never deferred to a more specific RAM++/Florence-2 tag even when
+        # one existed -- confirmed via a real run where 18/37 objects were
+        # simply labelled "plant" with nothing more specific ever winning.
+        "person",
+        "animal",
+        "animals",
+        "vehicle",
+        "vehicles",
+        "furniture",
+        "appliance",
+        "appliances",
+        "food",
+        "clothing",
+        "container",
+        "containers",
+        "tool",
+        "tools",
+        "building",
+        "buildings",
+        "plant",
+        "plants",
+        "electronics",
     }
 
     _ATTRIBUTE_LIKE_LABELS = {
@@ -397,7 +425,20 @@ class SceneUnderstandingPipeline:
             chunk = cls._normalize_label_text(chunk)
             if chunk:
                 candidates.append(chunk)
-        if text and text not in candidates:
+        # Only keep the raw, unsplit text as its own candidate when there was
+        # nothing to actually split (a genuinely single label) -- previously
+        # this ran unconditionally, so a multi-tag string like RAM++'s
+        # "animal | bronze statue | green | lion | screen | sculpture" kept
+        # competing as ONE candidate alongside its own clean split chunks
+        # ("lion", "bronze statue", etc.), and _score_name_candidate's
+        # multi-word/length bonuses (meant to reward real specific labels
+        # like "bronze statue") accidentally favored that same raw joined
+        # garbage string over the individually-split, actually-clean tags --
+        # confirmed via a real run where the entire 8-tag joined string won
+        # as the canonical_name outright. Genuine multi-word compounds that
+        # already arrive as a single tag (like "bronze statue") are
+        # untouched by this -- they're their own chunk either way.
+        if len(candidates) <= 1 and text and text not in candidates:
             candidates.insert(0, text)
         deduped: List[str] = []
         seen = set()
@@ -538,6 +579,27 @@ class SceneUnderstandingPipeline:
         for source_name, raw_value, conf in candidate_sources:
             for candidate in cls._split_label_candidates(raw_value):
                 candidates.append((cls._score_name_candidate(candidate, source_name, conf), candidate))
+
+        # Compound-label construction: two separately-tagged single words
+        # (e.g. "lion" and "statue", both real RAM++ tags on their own) can
+        # legitimately describe the object better together ("lion statue")
+        # than either alone, but the candidates built above only ever see
+        # them as independent single-word entries -- there's no mechanism to
+        # combine them. Build a small, bounded set of 2-word compounds from
+        # the best-scoring single-word, non-generic, non-attribute-like
+        # candidates and let them compete on the same scoring, rather than
+        # only ever picking a single bare word when a real compound exists.
+        best_score_by_word: Dict[str, float] = {}
+        for score, cand in candidates:
+            if " " in cand or cls._is_generic_label(cand) or cls._is_attribute_like_label(cand):
+                continue
+            if score > best_score_by_word.get(cand, float("-inf")):
+                best_score_by_word[cand] = score
+        top_words = sorted(best_score_by_word, key=lambda w: -best_score_by_word[w])[:3]
+        for i, head in enumerate(top_words):
+            for modifier in top_words[i + 1 :]:
+                compound = f"{modifier} {head}"
+                candidates.append((cls._score_name_candidate(compound, "compound", 0.6), compound))
 
         fallback = cls._normalize_label_text(fallback_label) or "object"
         candidates.append((cls._score_name_candidate(fallback, "fallback", 0.0), fallback))
@@ -2704,6 +2766,28 @@ Output:
         coords_3d = self._back_project(cx, cy, z_val, K)
         return depth_stats, coords_3d, [cx, cy]
 
+    def _passes_post_filter(self, mask_bin: np.ndarray, det: Dict[str, Any], h: int, w: int) -> bool:
+        """Stage-3 post-hoc quality gate (config: ``sam2_post_filter_*``,
+        ``grounded_sam2_min_conf_for_stage3``). Applied per-mask right before
+        a detection is accepted into ``track_dets``; see config.py for the
+        threshold rationale. Returns True to keep the mask."""
+        area = int(np.asarray(mask_bin).sum())
+        if area < self.sam2_post_filter_min_area_px:
+            return False
+        frame_area = max(1, int(h) * int(w))
+        if area / frame_area > self.sam2_post_filter_max_area_fraction:
+            return False
+        stability = det.get("stability_score")
+        if stability is not None and float(stability) < self.sam2_post_filter_min_stability:
+            return False
+        pred_iou = det.get("predicted_iou")
+        if pred_iou is not None and float(pred_iou) < self.sam2_post_filter_min_pred_iou:
+            return False
+        conf = det.get("grounded_sam2_confidence", det.get("gdino_conf"))
+        if conf is not None and float(conf) < self.grounded_sam2_min_conf_for_stage3:
+            return False
+        return True
+
     def _label_mask(
         self,
         img_bgr: np.ndarray,
@@ -2715,9 +2799,11 @@ Output:
         """
         Label a mask via priority chain: GDINO → Florence-2 (optional) → RAM++.
 
-        When ``mask_label_skip_secondary_when_gdino_specific`` is enabled and GDINO
-        already returned a specific class (not ``object``), Florence-2 and RAM++
-        mask crops are skipped for speed.
+        RAM++ (a lighter open-vocab tagging model) always runs when active.
+        Florence-2 (a full VLM forward pass, the heavier of the two) is
+        additionally gated by ``mask_label_skip_secondary_when_gdino_specific``:
+        when enabled and GDINO already returned a specific class (not
+        ``object``), the Florence-2 mask-crop pass is skipped for speed.
         """
         h_img, w_img = img_bgr.shape[:2]
         x, y, bw, bh = amg_entry.get("bbox", [0, 0, w_img, h_img])
@@ -2751,7 +2837,14 @@ Output:
 
         gdino_label = str(amg_entry.get("label", "object")).strip().lower()
         gdino_conf = float(amg_entry.get("gdino_conf", 0.0))
-        skip_secondary = (
+        # Florence-2 (a full VLM forward pass) only runs when GDINO's own label
+        # was generic; RAM++ (a lighter open-vocab tagging model) always runs
+        # regardless. A real run showed Florence-2+RAM++ on every one of 16
+        # masks was measurably slow (previously both were skipped whenever
+        # GDINO was already specific) -- this is the chosen middle ground:
+        # RAM++'s richer labels still enrich every mask, while the heavier
+        # Florence-2 pass is skipped whenever GDINO's own label doesn't need it.
+        skip_florence2 = (
             bool(getattr(self, "_mask_label_skip_secondary_when_gdino_specific", True))
             and bool(gdino_label)
             and gdino_label != "object"
@@ -2761,7 +2854,8 @@ Output:
         rampp_label, rampp_caption, rampp_tags = "object", "object", []
         rampp_conf = 0.0
 
-        if not skip_secondary:
+        need_crop = (not skip_florence2 and self._florence2_label_enabled) or (self.rampp is not None and self.rampp.active)
+        if need_crop:
             # Mask-native tight crop: use actual mask extent rather than amg bbox for cleaner
             # foreground/background separation.  Falls back to amg bbox if mask is empty or
             # covers less than 5 % of the derived crop region.
@@ -2801,16 +2895,17 @@ Output:
             crop_filled = crop.copy()
             crop_filled[~mask_resized] = bg_mean
 
-            if self._florence2_label_enabled:
-                self._ensure_florence_for_labelling()
-            if (
-                self._florence2_label_enabled
-                and self.florence2 is not None
-                and self.florence2.active
-            ):
-                f2_result = self.florence2.label_crop(crop_filled)
-                f2_label = str(f2_result.get("label", "object")).strip().lower() or "object"
-                f2_caption = str(f2_result.get("caption", "object"))
+            if not skip_florence2:
+                if self._florence2_label_enabled:
+                    self._ensure_florence_for_labelling()
+                if (
+                    self._florence2_label_enabled
+                    and self.florence2 is not None
+                    and self.florence2.active
+                ):
+                    f2_result = self.florence2.label_crop(crop_filled)
+                    f2_label = str(f2_result.get("label", "object")).strip().lower() or "object"
+                    f2_caption = str(f2_result.get("caption", "object"))
 
             if self.rampp is not None and self.rampp.active:
                 rampp_result = self.rampp.label_crop(crop_filled)
@@ -2863,8 +2958,15 @@ Output:
             fallback_label=selected_label,
         )
 
+        # Evidence fusion is now the primary naming decision (SCENE_GRAPH_DEEP_DIVE.md
+        # §8 item 3), not just a narrow attribute-like-label patch: canonical_name
+        # already scores every source's candidates with GDINO/GroundedSAM2 weighted
+        # highest (_score_name_candidate's source_boost=3.0), so a genuinely
+        # specific GDINO label still wins on its own merit -- this only changes
+        # behavior when GDINO's label was generic/attribute-like/low-confidence
+        # and a more specific Florence-2/RAM++ candidate scored higher.
         canonical_name = str(name_fields.get("canonical_name", selected_label)).strip().lower() or selected_label
-        if self._is_attribute_like_label(selected_label) and not self._is_attribute_like_label(canonical_name):
+        if canonical_name and not self._is_generic_label(canonical_name) and canonical_name != selected_label:
             selected_label = canonical_name
             if selected_source == "GroundingDINO":
                 selected_source = "evidence_fusion"
@@ -6063,8 +6165,14 @@ Output:
                 det["grounded_sam2_confidence"] = float(amg.get("gdino_conf", amg.get("predicted_iou", 0.0)))
                 det["bbox"] = self._xywh_to_xyxy(amg.get("bbox", [0, 0, w, h]))
                 det["segmentor"] = str(amg.get("source_model", "GroundedSAM2"))
+                det.setdefault("stability_score", amg.get("stability_score"))
+                det.setdefault("predicted_iou", amg.get("predicted_iou"))
+                if not self._passes_post_filter(mask_bin, det, h, w):
+                    continue
                 track_dets.append(det)
-            print(f"Stage 3 [{track_key}]: {len(track_dets)} mask-objects labelled (no filtering — all masks kept)")
+            n_seen = len(track_masks)
+            n_kept = len(track_dets)
+            print(f"Stage 3 [{track_key}]: {n_kept}/{n_seen} mask-objects kept after post-hoc quality filter ({n_seen - n_kept} dropped)")
 
             matched_A_lookup: Dict[str, Dict[str, Any]] = {}
             for det in track_dets:

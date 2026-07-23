@@ -36,3 +36,25 @@ matplotlib
 einops
 protobuf
 fairscale==0.4.4
+
+# Pathing (FMM geodesic planner)
+scikit-fmm
+
+# Studio UI (app.py)
+# Pinned <6: gradio>=6.0 requires huggingface-hub>=1.0, which conflicts with
+# this project's transformers/Florence-2/RAM++ stack (setup.sh pins
+# huggingface_hub==0.26.5) -- confirmed empirically, an unpinned/6.x install
+# silently breaks CLIP/Florence-2 model loading with a huggingface-hub
+# version error rather than a hard failure.
+gradio>=4.0,<6
+
+# Freehand path drawing (app.py's ImageEditor -> MotionContract.drawn_polyline_2d
+# vectorization): skimage.morphology.skeletonize thins a brush stroke's alpha
+# mask to a 1px-wide curve before it's walked into an ordered polyline.
+scikit-image
+
+# Motion retargeting (Phase 3): CPU-only pose estimation from an uploaded
+# animation clip, via MediaPipe's Tasks API. The pose_landmarker_lite model
+# is downloaded/cached on first use (scene_understanding/animation/
+# motion_retargeting.py) rather than vendored here.
+mediapipe

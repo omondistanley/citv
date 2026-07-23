@@ -100,12 +100,25 @@ def build_mask_hierarchy(
             edges.append(best_edge)
 
     root_object_ids = [str(obj.get("id")) for obj in objects_3d if str(obj.get("id")) not in parent_for]
+
+    def _containment_depth(obj_id: str, _seen: Optional[frozenset] = None) -> int:
+        """Distance from ``obj_id`` up to its root ancestor (0 = root itself).
+        Cycle-guarded: ``parent_for`` is built from best-scoring single-parent
+        edges so cycles shouldn't occur, but a defensive guard is cheap and
+        this is the kind of bug that's silent (infinite loop) if it ever does."""
+        seen = _seen or frozenset()
+        parent_id = parent_for.get(obj_id)
+        if parent_id is None or obj_id in seen:
+            return 0
+        return 1 + _containment_depth(parent_id, seen | {obj_id})
+
     for obj in objects_3d:
         obj_id = str(obj.get("id"))
         child_ids = child_lists.get(obj_id, [])
         parent_id = parent_for.get(obj_id)
         obj["parent_object_id"] = parent_id
         obj["child_object_ids"] = child_ids
+        obj["containment_depth"] = _containment_depth(obj_id)
         obj["part_mask_ids"] = [
             child.get("sam2_mask_index")
             for child in objects_3d
@@ -116,4 +129,5 @@ def build_mask_hierarchy(
         "edges": edges,
         "root_object_ids": root_object_ids,
         "num_edges": len(edges),
+        "max_containment_depth": max((int(obj.get("containment_depth", 0)) for obj in objects_3d), default=0),
     }
