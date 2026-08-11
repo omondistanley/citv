@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CITV Motion Composer</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">CITV</p>
+        <h1>Motion Composer</h1>
+      </div>
+      <div class="topbar-actions">
+        <label class="file-button">Image<input id="imageInput" type="file" accept="image/*" /></label>
+        <label class="file-button">Scene JSON<input id="sceneInput" type="file" accept="application/json,.json" /></label>
+        <label class="file-button">Actor Asset<input id="actorAssetInput" type="file" accept="image/*,video/*" /></label>
+        <label class="file-button">Animation<input id="animationInput" type="file" accept="image/*,video/*,.gif,.json,.lottie" /></label>
+        <button id="exportBtn" type="button">Export Grounded Contract</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="rail" aria-label="Drawing tools">
+        <button class="tool active" data-tool="select" type="button">Select</button>
+        <button class="tool" data-tool="point" type="button">Point</button>
+        <button class="tool" data-tool="anchors" type="button">Start / End</button>
+        <button class="tool" data-tool="draw" type="button">Draw Path</button>
+        <button class="tool" data-tool="region" type="button">Region</button>
+        <button id="clearGeometryBtn" class="tool danger" type="button">Clear</button>
+      </aside>
+
+      <section class="stage-card">
+        <div class="stage-toolbar">
+          <div class="segmented">
+            <label><input id="showObjects" type="checkbox" checked /> Objects</label>
+            <label><input id="showRegions" type="checkbox" checked /> Regions</label>
+            <label><input id="showCorridor" type="checkbox" checked /> Corridor</label>
+            <label><input id="showOcclusion" type="checkbox" checked /> Occlusion</label>
+            <label><input id="showActor" type="checkbox" checked /> Actor</label>
+            <label><input id="showAnchors" type="checkbox" checked /> Start/End</label>
+          </div>
+          <span id="canvasHint">Set start/end, draw the route, then explain or upload the animation.</span>
+        </div>
+        <div id="canvasWrap" class="canvas-wrap">
+          <canvas id="stageCanvas" width="1280" height="720"></canvas>
+        </div>
+        <div class="timeline">
+          <button id="previewBtn" type="button">Generate Preview</button>
+          <button id="playBtn" type="button">Play</button>
+          <input id="timeSlider" type="range" min="0" max="100" value="0" />
+          <span id="timeLabel">0.0s</span>
+        </div>
+      </section>
+
+      <aside class="inspector">
+        <section class="panel">
+          <p class="eyebrow">Creative truth</p>
+          <label>Actor
+            <input id="actorText" type="text" value="photorealistic cobra" placeholder="cobra, Coke bottle, drawn mascot..." />
+          </label>
+          <label>Action / Animation Direction
+            <textarea id="actionText" rows="4" placeholder="Describe the motion exactly as the user wants it, including timing, interaction, and style">slithers from the start point to the end point, follows my drawn curve, passes behind foreground objects, then rears up</textarea>
+          </label>
+          <div id="uploadStatus" class="upload-status">No uploaded actor or animation yet.</div>
+          <div class="grid2">
+            <label>Manifold
+              <select id="manifoldType">
+                <option value="auto">Auto</option>
+                <option value="ribbon_path">Move along path</option>
+                <option value="volume_path">Fly / open volume</option>
+                <option value="blob_path">Area / liquid / drift</option>
+                <option value="occlusion_pulse">Peek / hide</option>
+                <option value="contact_patch">Touch / hold / bump</option>
+                <option value="portal_path">Enter / disappear</option>
+                <option value="effect_field">Surface effect</option>
+                <option value="contour_path">Around edge</option>
+              </select>
+            </label>
+            <label>Duration
+              <input id="duration" type="number" min="0.25" step="0.25" value="4" />
+            </label>
+          </div>
+        </section>
+
+        <section class="panel">
+          <p class="eyebrow">Geometry truth</p>
+          <div id="geometryStatus" class="geometry-status">No start/end/path yet.</div>
+          <button id="clearAnchorsBtn" type="button">Clear Start/End</button>
+          <button id="clearPathBtn" type="button">Clear Drawn Path</button>
+        </section>
+
+        <section class="panel">
+          <p class="eyebrow">Scene adaptation</p>
+          <label><input id="useBackend" type="checkbox" checked /> Use Python backend grounding when available</label>
+          <div id="apiStatus" class="api-status">Backend not checked yet.</div>
+          <label><input id="allowBending" type="checkbox" checked /> Allow path bending inside user corridor</label>
+          <label><input id="preserveGeometry" type="checkbox" checked /> Preserve raw user geometry</label>
+          <label>Corridor radius <span id="corridorValue">28px</span>
+            <input id="corridorRadius" type="range" min="0" max="100" value="28" />
+          </label>
+          <label>Max deviation <span id="deviationValue">36px</span>
+            <input id="maxDeviation" type="range" min="0" max="150" value="36" />
+          </label>
+        </section>
+
+        <section class="panel">
+          <p class="eyebrow">Objects and constraints</p>
+          <div id="objectList" class="object-list empty">Load a scene JSON to see objects.</div>
+        </section>
+
+        <section class="panel output-panel">
+          <div class="panel-heading">
+            <p class="eyebrow">Grounded contract</p>
+            <button id="copyBtn" type="button">Copy</button>
+          </div>
+          <pre id="contractPreview">No contract yet.</pre>
+        </section>
+      </aside>
+    </main>
+
+    <script src="./app.js"></script>
+    <script src="./backend-bridge.js"></script>
+  </body>
+</html>
